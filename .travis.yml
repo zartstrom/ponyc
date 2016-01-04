@@ -16,7 +16,7 @@ before_script:
   if [[ "$CC" == "gcc" ]]; then export CC=gcc && export CXX=g++; fi fi
 script:
 - make test;
-- |
+- |-
 if [[ $TRAVIS_OSNAME == "linux" && $CC == "gcc" && $TRAVIS_BRANCH == "release" ]]; then
   cat VERSION | xargs sh .bintray.sh debian $1;
   cat VERSION | xargs sh .bintray.sh rpm $1;
