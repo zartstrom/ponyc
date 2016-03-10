@@ -2,7 +2,7 @@ language:
   - c
   - c++
 
-sudo: false
+sudo: required
 
 addons:
   apt:
@@ -14,7 +14,6 @@ addons:
       - g++-4.9
       - llvm-3.7
       - llvm-3.7-dev
-      - pcre2-10.21
 
 matrix:
   include:
@@ -26,7 +25,11 @@ install:
     then
       export CC="gcc-4.9";
       export CXX="g++-4.9";
-    fi;
+      wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.21.tar.bz2;
+      tar -xjvf pcre2-10.21.tar.bz2;
+      cd pcre2-10.21 && ./configure --prefix=/usr && make && sudo make install;
+      cd -;
+      fi;
   - if [ "${TRAVIS_OS_NAME}" = "osx" ];
     then
       brew update;
