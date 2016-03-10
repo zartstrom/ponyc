@@ -448,10 +448,11 @@ void* ast_data(ast_t* ast)
   return ast->data;
 }
 
-void ast_setdata(ast_t* ast, void* data)
+ast_t* ast_setdata(ast_t* ast, void* data)
 {
   assert(ast != NULL);
   ast->data = data;
+  return ast;
 }
 
 bool ast_canerror(ast_t* ast)
@@ -544,6 +545,19 @@ const char* ast_name(ast_t* ast)
   assert(ast != NULL);
   return token_string(ast->t);
 }
+
+
+const char* ast_nice_name(ast_t* ast)
+{
+  assert(ast != NULL);
+  assert(ast_id(ast) == TK_ID);
+
+  if(ast->data != NULL)
+    return (const char*)ast->data;
+
+  return ast_name(ast);
+}
+
 
 size_t ast_name_len(ast_t* ast)
 {
@@ -1244,7 +1258,11 @@ static void print_type(printbuf_t* buffer, ast_t* type)
       if(origpkg != NULL && ast_id(origpkg) != TK_NONE)
         printbuf(buffer, "%s.", ast_name(origpkg));
 
-      printbuf(buffer, "%s", ast_name(id));
+      ast_t* def = (ast_t*)ast_data(type);
+      if(def != NULL)
+        id = ast_child(def);
+
+      printbuf(buffer, "%s", ast_nice_name(id));
 
       if(ast_id(typeargs) != TK_NONE)
         print_typeexpr(buffer, typeargs, ", ", true);
@@ -1273,7 +1291,7 @@ static void print_type(printbuf_t* buffer, ast_t* type)
     case TK_TYPEPARAMREF:
     {
       AST_GET_CHILDREN(type, id, cap, ephemeral);
-      printbuf(buffer, "%s", ast_name(id));
+      printbuf(buffer, "%s", ast_nice_name(id));
 
       if(ast_id(cap) != TK_NONE)
         printbuf(buffer, " %s", token_print(cap->t));
@@ -1342,6 +1360,19 @@ void ast_error(ast_t* ast, const char* fmt, ...)
   va_list ap;
   va_start(ap, fmt);
   errorv(token_source(ast->t), token_line_number(ast->t),
+    token_line_position(ast->t), fmt, ap);
+  va_end(ap);
+}
+
+void ast_error_frame(errorframe_t* frame, ast_t* ast, const char* fmt, ...)
+{
+  assert(frame != NULL);
+  assert(ast != NULL);
+  assert(fmt != NULL);
+
+  va_list ap;
+  va_start(ap, fmt);
+  errorframev(frame, token_source(ast->t), token_line_number(ast->t),
     token_line_position(ast->t), fmt, ap);
   va_end(ap);
 }

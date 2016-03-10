@@ -195,11 +195,16 @@ static bool parse_files_in_dir(ast_t* package, const char* dir_path,
 
   while(pony_dir_entry_next(dir, &dirent, &d) && (d != NULL))
   {
-    // Handle only files with the specified extension
+    // Handle only files with the specified extension that don't begin with
+    // a dot. This avoids including UNIX hidden files in a build.
     char* name = pony_dir_info_name(d);
+
+    if(name[0] == '.')
+      continue;
+
     const char* p = strrchr(name, '.');
 
-    if(p != NULL && strcmp(p, EXTENSION) == 0)
+    if((p != NULL) && (strcmp(p, EXTENSION) == 0))
     {
       char fullpath[FILENAME_MAX];
       path_cat(dir_path, name, fullpath);
@@ -364,7 +369,7 @@ static const char* id_to_string(const char* prefix, size_t id)
 
   size_t len = strlen(prefix);
   size_t buf_size = len + 32;
-  char* buffer = (char*)pool_alloc_size(buf_size);
+  char* buffer = (char*)ponyint_pool_alloc_size(buf_size);
   snprintf(buffer, buf_size, "%s$" __zu, prefix, id);
   return stringtab_consume(buffer, buf_size);
 }
@@ -401,7 +406,7 @@ static const char* string_to_symbol(const char* string)
 
   size_t len = strlen(string);
   size_t buf_size = len + prefix + 1;
-  char* buf = (char*)pool_alloc_size(buf_size);
+  char* buf = (char*)ponyint_pool_alloc_size(buf_size);
   memcpy(buf + prefix, string, len + 1);
 
   if(prefix)
@@ -433,7 +438,7 @@ static const char* symbol_suffix(const char* symbol, size_t suffix)
 {
   size_t len = strlen(symbol);
   size_t buf_size = len + 32;
-  char* buf = (char*)pool_alloc_size(buf_size);
+  char* buf = (char*)ponyint_pool_alloc_size(buf_size);
   snprintf(buf, buf_size, "%s" __zu, symbol, suffix);
 
   return stringtab_consume(buf, buf_size);
@@ -603,6 +608,14 @@ static void add_exec_dir()
   *p = '\0';
   add_path(path);
 
+  // Allow ponyc to find the lib directory when it is installed.
+#ifdef PLATFORM_IS_WINDOWS
+  strcpy(p, "..\\lib");
+#else
+  strcpy(p, "../lib");
+#endif
+  add_path(path);
+
   // Allow ponyc to find the packages directory when it is installed.
 #ifdef PLATFORM_IS_WINDOWS
   strcpy(p, "..\\packages");
@@ -632,6 +645,12 @@ bool package_init(pass_opt_t* opt)
   // that are relative to the compiler location on disk.
   package_add_paths(getenv("PONYPATH"));
   add_exec_dir();
+
+  // Finally we add OS specific paths.
+#ifdef PLATFORM_IS_POSIX_BASED
+  add_path("/usr/local/lib");
+  add_path("/opt/local/lib");
+#endif
 
   // Convert all the safe packages to their full paths.
   strlist_t* full_safe = NULL;
@@ -809,7 +828,7 @@ ast_t* package_load(ast_t* from, const char* path, pass_opt_t* options)
         size_t base_name_len = strlen(base_name);
         size_t path_len = strlen(path);
         size_t len = base_name_len + path_len + 2;
-        char* q_name = (char*)pool_alloc_size(len);
+        char* q_name = (char*)ponyint_pool_alloc_size(len);
         memcpy(q_name, base_name, base_name_len);
         q_name[base_name_len] = '/';
         memcpy(q_name + base_name_len + 1, path, path_len);
@@ -938,7 +957,7 @@ bool package_allow_ffi(typecheck_t* t)
 }
 
 
-void package_done(pass_opt_t* opt)
+void package_done(pass_opt_t* opt, bool handle_errors)
 {
   codegen_shutdown(opt);
 
@@ -950,8 +969,11 @@ void package_done(pass_opt_t* opt)
 
   package_clear_magic();
 
-  print_errors();
-  free_errors();
+  if(handle_errors)
+  {
+    print_errors();
+    free_errors();
+  }
 }
 
 

@@ -4,9 +4,11 @@
 #  pragma warning(disable:4244)
 #  pragma warning(disable:4800)
 #  pragma warning(disable:4267)
+#  pragma warning(disable:4624) //TODO: CHECK
 #endif
 
 #include "genopt.h"
+#include <string.h>
 
 #include <llvm/IR/Module.h>
 #include <llvm/IR/DataLayout.h>
@@ -53,7 +55,16 @@ static void print_transform(compile_t* c, Instruction* inst, const char* s)
 
   Instruction* i = inst;
 
+  /* Starting with LLVM 3.7.0-final getDebugLog may return a
+   * DebugLoc without a valid underlying MDNode* for instructions 
+   * that have no direct source location, instead of returning 0 
+   * for getLine().
+   */
+#if PONY_LLVM >= 307
+  while(!i->getDebugLoc())
+#else
   while(i->getDebugLoc().getLine() == 0)
+#endif
   {
     BasicBlock::iterator iter = i;
 
@@ -66,29 +77,43 @@ static void print_transform(compile_t* c, Instruction* inst, const char* s)
   DebugLoc loc = i->getDebugLoc();
 
 #if PONY_LLVM >= 307
-  DIScope scope = DIScope(cast_or_null<MDScope>(loc.getScope()));
+  DILocation* location = loc.get();
+  DIScope* scope = location->getScope();
+  DILocation* at = location->getInlinedAt();
+
 #else
   DIScope scope = DIScope(loc.getScope());
-#endif
-
   MDLocation* at = cast_or_null<MDLocation>(loc.getInlinedAt());
+#endif
 
   if(at != NULL)
   {
 #if PONY_LLVM >= 307
-    DIScope scope_at = DIScope(cast_or_null<MDScope>(at->getScope()));
+    DIScope* scope_at = at->getScope();
+
+    errorf(NULL, "[%s] %s:%u:%u@%s:%u:%u: %s",
+      i->getParent()->getParent()->getName().str().c_str(),
+      scope->getFilename().str().c_str(), loc.getLine(), loc.getCol(),
+      scope_at->getFilename().str().c_str(), at->getLine(), at->getColumn(), s);
 #else
     DIScope scope_at = DIScope(cast_or_null<MDNode>(at->getScope()));
-#endif
 
     errorf(NULL, "[%s] %s:%u:%u@%s:%u:%u: %s",
       i->getParent()->getParent()->getName().str().c_str(),
       scope.getFilename().str().c_str(), loc.getLine(), loc.getCol(),
       scope_at.getFilename().str().c_str(), at->getLine(), at->getColumn(), s);
-  } else {
+#endif
+  }
+  else {
+#if PONY_LLVM >= 307
+    errorf(NULL, "[%s] %s:%u:%u: %s",
+      i->getParent()->getParent()->getName().str().c_str(),
+      scope->getFilename().str().c_str(), loc.getLine(), loc.getCol(), s);
+#else
     errorf(NULL, "[%s] %s:%u:%u: %s",
       i->getParent()->getParent()->getName().str().c_str(),
       scope.getFilename().str().c_str(), loc.getLine(), loc.getCol(), s);
+#endif
   }
 }
 
@@ -514,7 +539,8 @@ static void optimise(compile_t* c)
 
   pmb.populateFunctionPassManager(fpm);
 
-#ifdef PLATFORM_IS_ARM
+  if(target_is_arm(c->opt->triple))
+  {
   // On ARM, without this, trace functions are being loaded with a double
   // indirection with a debug binary. An ldr r0, [LABEL] is done, loading
   // the trace function address, but then ldr r2, [r0] is done to move the
@@ -522,15 +548,17 @@ static void optimise(compile_t* c)
   // gives a garbage trace function. In release mode, a different path is used
   // and this error doesn't happen. Forcing an OptLevel of 1 for the MPM
   // results in the alternate (working) asm being used for a debug build.
-  if(!c->opt->release)
-    pmb.OptLevel = 1;
-#endif
+    if(!c->opt->release)
+      pmb.OptLevel = 1;
+  }
+
   pmb.populateModulePassManager(mpm);
 
-#ifdef PLATFORM_IS_ARM
-  if(!c->opt->release)
-    pmb.OptLevel = 0;
-#endif
+  if(target_is_arm(c->opt->triple))
+  {
+    if(!c->opt->release)
+      pmb.OptLevel = 0;
+  }
 
   pmb.populateLTOPassManager(lpm);
 
@@ -573,3 +601,85 @@ bool genopt(compile_t* c)
 
   return true;
 }
+
+bool target_is_linux(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isOSLinux();
+}
+
+bool target_is_freebsd(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isOSFreeBSD();
+}
+
+bool target_is_macosx(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isMacOSX();
+}
+
+bool target_is_windows(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isOSWindows();
+}
+
+bool target_is_posix(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isMacOSX() || triple.isOSFreeBSD() || triple.isOSLinux();
+}
+
+bool target_is_x86(char* t)
+{
+  Triple triple = Triple(t);
+
+  const char* arch = Triple::getArchTypePrefix(triple.getArch());
+
+  return !strcmp("x86", arch);
+}
+
+bool target_is_arm(char* t)
+{
+  Triple triple = Triple(t);
+
+  const char* arch = Triple::getArchTypePrefix(triple.getArch());
+
+  return !strcmp("arm", arch);
+}
+
+bool target_is_lp64(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isArch64Bit() && !triple.isOSWindows();
+}
+
+bool target_is_llp64(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isArch64Bit() && triple.isOSWindows();
+}
+
+bool target_is_ilp32(char* t)
+{
+  Triple triple = Triple(t);
+
+  return triple.isArch32Bit();
+}
+
+bool target_is_native128(char* t)
+{
+  Triple triple = Triple(t);
+
+  return !triple.isArch32Bit() && !triple.isKnownWindowsMSVCEnvironment();
+}
+

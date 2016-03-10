@@ -5,6 +5,7 @@
 #include "gendesc.h"
 #include "genfun.h"
 #include "genname.h"
+#include "genopt.h"
 #include "../pkg/platformfuns.h"
 #include "../type/subtype.h"
 #include "../ast/stringtab.h"
@@ -109,7 +110,7 @@ static LLVMValueRef special_case_platform(compile_t* c, ast_t* ast)
   const char* method_name = ast_name(method);
   bool is_target;
 
-  if(os_is_target(method_name, c->opt->release, &is_target))
+  if(os_is_target(method_name, c->opt->release, &is_target, c->opt))
     return LLVMConstInt(c->i1, is_target ? 1 : 0, false);
 
   ast_error(ast, "unknown Platform setting");
@@ -160,8 +161,7 @@ static bool special_case_call(compile_t* c, ast_t* ast, LLVMValueRef* value)
 
   if((name == c->str_I128) || (name == c->str_U128))
   {
-    bool native128;
-    os_is_target(OS_NATIVE128_NAME, c->opt->release, &native128);
+    bool native128 = target_is_native128(c->opt->triple);
     return special_case_operator(c, ast, value, false, native128);
   }
 
@@ -300,8 +300,6 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
   if(!gentype(c, type, &g))
     return NULL;
 
-  bool need_receiver = call_needs_receiver(postfix, &g);
-
   // Generate the arguments.
   LLVMTypeRef f_type = genfun_sig(c, &g, method_name, typeargs);
 
@@ -311,15 +309,15 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
     return NULL;
   }
 
-  size_t count = ast_childcount(positional) + need_receiver;
+  size_t count = ast_childcount(positional) + 1;
   size_t buf_size = count * sizeof(void*);
 
-  LLVMValueRef* args = (LLVMValueRef*)pool_alloc_size(buf_size);
-  LLVMTypeRef* params = (LLVMTypeRef*)pool_alloc_size(buf_size);
+  LLVMValueRef* args = (LLVMValueRef*)ponyint_pool_alloc_size(buf_size);
+  LLVMTypeRef* params = (LLVMTypeRef*)ponyint_pool_alloc_size(buf_size);
   LLVMGetParamTypes(f_type, params);
 
   ast_t* arg = ast_child(positional);
-  int i = need_receiver;
+  int i = 1;
 
   while(arg != NULL)
   {
@@ -327,8 +325,8 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
 
     if(value == NULL)
     {
-      pool_free_size(buf_size, args);
-      pool_free_size(buf_size, params);
+      ponyint_pool_free_size(buf_size, args);
+      ponyint_pool_free_size(buf_size, params);
       return NULL;
     }
 
@@ -339,7 +337,7 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
 
   // Generate the receiver. Must be done after the arguments because the args
   // could change things in the receiver expression that must be accounted for.
-  if(need_receiver)
+  if(call_needs_receiver(postfix, &g))
   {
     switch(ast_id(postfix))
     {
@@ -367,6 +365,9 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
         assert(0);
         return NULL;
     }
+  } else {
+    // Use a null for the receiver type.
+    args[0] = LLVMConstNull(g.use_type);
   }
 
   // Always emit location info for a call, to prevent inlining errors. This may
@@ -391,8 +392,8 @@ LLVMValueRef gen_call(compile_t* c, ast_t* ast)
       r = codegen_call(c, func, args, i);
   }
 
-  pool_free_size(buf_size, args);
-  pool_free_size(buf_size, params);
+  ponyint_pool_free_size(buf_size, args);
+  ponyint_pool_free_size(buf_size, params);
   return r;
 }
 
@@ -456,9 +457,85 @@ LLVMValueRef gen_pattern_eq(compile_t* c, ast_t* pattern, LLVMValueRef r_value)
   return codegen_call(c, func, args, 2);
 }
 
+static LLVMValueRef declare_ffi_vararg(compile_t* c, const char* f_name,
+  gentype_t* g, bool err)
+{
+  LLVMTypeRef f_type = LLVMFunctionType(g->use_type, NULL, 0, true);
+  LLVMValueRef func = LLVMAddFunction(c->module, f_name, f_type);
+
+  if(!err)
+    LLVMAddFunctionAttr(func, LLVMNoUnwindAttribute);
+
+  return func;
+}
+
+static LLVMValueRef declare_ffi(compile_t* c, const char* f_name,
+  gentype_t* g, ast_t* args, bool err)
+{
+  ast_t* last_arg = ast_childlast(args);
+
+  if((last_arg != NULL) && (ast_id(last_arg) == TK_ELLIPSIS))
+    return declare_ffi_vararg(c, f_name, g, err);
+
+  int count = (int)ast_childcount(args);
+  size_t buf_size = count * sizeof(LLVMTypeRef);
+  LLVMTypeRef* f_params = (LLVMTypeRef*)ponyint_pool_alloc_size(buf_size);
+  count = 0;
+
+  ast_t* arg = ast_child(args);
+
+  while(arg != NULL)
+  {
+    ast_t* p_type = ast_type(arg);
+
+    if(p_type == NULL)
+      p_type = ast_childidx(arg, 1);
+
+    gentype_t param_g;
+
+    if(!gentype(c, p_type, &param_g))
+      return NULL;
+
+    f_params[count++] = param_g.use_type;
+    arg = ast_sibling(arg);
+  }
+
+  // We may have generated the function by generating a parameter type.
+  LLVMValueRef func = LLVMGetNamedFunction(c->module, f_name);
+
+  if(func == NULL)
+  {
+    LLVMTypeRef r_type;
+
+    if(g->underlying == TK_TUPLETYPE)
+    {
+      // Can't use the named type. Build an unnamed type with the same
+      // elements.
+      unsigned int count = LLVMCountStructElementTypes(g->use_type);
+      size_t buf_size = count * sizeof(LLVMTypeRef);
+      LLVMTypeRef* e_types = (LLVMTypeRef*)ponyint_pool_alloc_size(buf_size);
+      LLVMGetStructElementTypes(g->use_type, e_types);
+      r_type = LLVMStructTypeInContext(c->context, e_types, count, false);
+      ponyint_pool_free_size(buf_size, e_types);
+    } else {
+      r_type = g->use_type;
+    }
+
+    LLVMTypeRef f_type = LLVMFunctionType(r_type, f_params, count, false);
+    func = LLVMAddFunction(c->module, f_name, f_type);
+
+    if(!err)
+      LLVMAddFunctionAttr(func, LLVMNoUnwindAttribute);
+  }
+
+  ponyint_pool_free_size(buf_size, f_params);
+  return func;
+}
+
 LLVMValueRef gen_ffi(compile_t* c, ast_t* ast)
 {
-  AST_GET_CHILDREN(ast, id, typeargs, args);
+  AST_GET_CHILDREN(ast, id, typeargs, args, named_args, can_err);
+  bool err = (ast_id(can_err) == TK_QUESTION);
 
   // Get the function name, +1 to skip leading @
   const char* f_name = ast_name(id) + 1;
@@ -479,81 +556,55 @@ LLVMValueRef gen_ffi(compile_t* c, ast_t* ast)
   if(func == NULL)
   {
     // If we have no prototype, declare one.
-    if(!strncmp(f_name, "llvm.", 5))
+    ast_t* decl = (ast_t*)ast_data(ast);
+
+    if(decl != NULL)
     {
+      // Define using the declared types.
+      AST_GET_CHILDREN(decl, decl_id, decl_ret, decl_params, decl_err);
+      err = (ast_id(decl_err) == TK_QUESTION);
+      func = declare_ffi(c, f_name, &g, decl_params, err);
+    } else if(!strncmp(f_name, "llvm.", 5)) {
       // Intrinsic, so use the exact types we supply.
-      int count = (int)ast_childcount(args);
-      size_t buf_size = count * sizeof(LLVMTypeRef);
-      LLVMTypeRef* f_params = (LLVMTypeRef*)pool_alloc_size(buf_size);
-      count = 0;
-
-      ast_t* arg = ast_child(args);
-
-      while(arg != NULL)
-      {
-        ast_t* p_type = ast_type(arg);
-        gentype_t param_g;
-
-        if(!gentype(c, p_type, &param_g))
-          return NULL;
-
-        f_params[count++] = param_g.use_type;
-        arg = ast_sibling(arg);
-      }
-
-      // We may have generated the function by generating a parameter type.
-      func = LLVMGetNamedFunction(c->module, f_name);
-
-      if(func == NULL)
-      {
-        LLVMTypeRef r_type;
-
-        if(g.underlying == TK_TUPLETYPE)
-        {
-          // Can't use the named type. Build an unnamed type with the same
-          // elements.
-          unsigned int count = LLVMCountStructElementTypes(g.use_type);
-          size_t buf_size = count * sizeof(LLVMTypeRef);
-          LLVMTypeRef* e_types = (LLVMTypeRef*)pool_alloc_size(buf_size);
-          LLVMGetStructElementTypes(g.use_type, e_types);
-          r_type = LLVMStructTypeInContext(c->context, e_types, count, false);
-          pool_free_size(buf_size, e_types);
-        } else {
-          r_type = g.use_type;
-        }
-
-        LLVMTypeRef f_type = LLVMFunctionType(r_type, f_params, count,
-          false);
-        func = LLVMAddFunction(c->module, f_name, f_type);
-
-        if(!ast_canerror(ast))
-          LLVMAddFunctionAttr(func, LLVMNoUnwindAttribute);
-      }
-
-      pool_free_size(buf_size, f_params);
+      func = declare_ffi(c, f_name, &g, args, err);
     } else {
       // Make it varargs.
-      LLVMTypeRef f_type = LLVMFunctionType(g.use_type, NULL, 0, true);
-      func = LLVMAddFunction(c->module, f_name, f_type);
-
-      if(!ast_canerror(ast))
-        LLVMAddFunctionAttr(func, LLVMNoUnwindAttribute);
+      func = declare_ffi_vararg(c, f_name, &g, err);
     }
   }
 
   // Generate the arguments.
   int count = (int)ast_childcount(args);
   size_t buf_size = count * sizeof(LLVMValueRef);
-  LLVMValueRef* f_args = (LLVMValueRef*)pool_alloc_size(buf_size);
+  LLVMValueRef* f_args = (LLVMValueRef*)ponyint_pool_alloc_size(buf_size);
+
+  LLVMTypeRef f_type = LLVMGetElementType(LLVMTypeOf(func));
+  LLVMTypeRef* f_params = NULL;
+  bool vararg = (LLVMIsFunctionVarArg(f_type) != 0);
+
+  if(!vararg)
+  {
+    f_params = (LLVMTypeRef*)ponyint_pool_alloc_size(buf_size);
+    LLVMGetParamTypes(f_type, f_params);
+  }
+
   ast_t* arg = ast_child(args);
 
   for(int i = 0; i < count; i++)
   {
     f_args[i] = gen_expr(c, arg);
 
+    if(!vararg && (LLVMGetTypeKind(f_params[i]) == LLVMPointerTypeKind))
+    {
+      if(LLVMGetTypeKind(LLVMTypeOf(f_args[i])) == LLVMIntegerTypeKind)
+        f_args[i] = LLVMBuildIntToPtr(c->builder, f_args[i], f_params[i], "");
+      else
+        f_args[i] = LLVMBuildBitCast(c->builder, f_args[i], f_params[i], "");
+    }
+
     if(f_args[i] == NULL)
     {
-      pool_free_size(buf_size, f_args);
+      ponyint_pool_free_size(buf_size, f_args);
       return NULL;
     }
 
@@ -564,12 +615,15 @@ LLVMValueRef gen_ffi(compile_t* c, ast_t* ast)
   // instead of a call.
   LLVMValueRef result;
 
-  if(ast_canerror(ast) && (c->frame->invoke_target != NULL))
+  if(err && (c->frame->invoke_target != NULL))
     result = invoke_fun(c, func, f_args, count, "", false);
   else
     result = LLVMBuildCall(c->builder, func, f_args, count, "");
 
-  pool_free_size(buf_size, f_args);
+  ponyint_pool_free_size(buf_size, f_args);
+
+  if(!vararg)
+    ponyint_pool_free_size(buf_size, f_params);
 
   // Special case a None return value, which is used for void functions.
   if(is_none(type))
@@ -648,7 +702,7 @@ LLVMValueRef gencall_allocstruct(compile_t* c, gentype_t* g)
   {
     if(size <= HEAP_MAX)
     {
-      uint32_t index = heap_index(size);
+      uint32_t index = ponyint_heap_index(size);
       args[1] = LLVMConstInt(c->i32, index, false);
       result = gencall_runtime(c, "pony_alloc_small", args, 2, "");
     } else {

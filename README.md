@@ -1,17 +1,21 @@
 # Getting help 
 
-* [Open an issue!](https://github.com/CausalityLtd/ponyc/issues)
-* Use the [mailing list](mailto:ponydev@lists.ponylang.org).
+* [Open an issue!](https://github.com/ponylang/ponyc/issues)
+* Use the [mailing list](mailto:pony+user@groups.io).
 * Join ```#ponylang``` on [freenode](http://freenode.net/irc_servers.shtml).
 * A tutorial is available [here](http://tutorial.ponylang.org).
+* Standard library docs are available [here](http://ponylang.github.io/ponyc/).
 
 # Editor support
 
 * Sublime Text: [Pony Language](https://packagecontrol.io/packages/Pony%20Language)
 * Atom: [language-pony](https://atom.io/packages/language-pony)
-* Visual Studio: [VS-pony](https://github.com/CausalityLtd/VS-pony)
+* Visual Studio: [VS-pony](https://github.com/ponylang/VS-pony)
 * Vim: [pony.vim](https://github.com/dleonard0/pony-vim-syntax)
-* Emacs: [ponylang-mode](https://github.com/abingham/ponylang-mode)
+* Emacs:
+    - [ponylang-mode](https://github.com/seantallen/ponylang-mode)
+    - [flycheck-pony](https://github.com/rmloveland/flycheck-pony)
+    - [pony-snippets](https://github.com/SeanTAllen/pony-snippets)
 * BBEdit: [bbedit-pony](https://github.com/TheMue/bbedit-pony)
 
 # Installation
@@ -25,6 +29,17 @@ $ brew install ponyc
 
 ## Linux
 
+### Gentoo
+
+```bash
+layman -a stefantalpalaru
+emerge dev-lang/pony
+```
+
+A live ebuild is also available in the [overlay](https://github.com/stefantalpalaru/gentoo-overlay) (dev-lang/pony-9999) and for Vim users there's app-vim/pony-syntax.
+
+### Other distributions
+
 We're transitioning to bintray. For now, please build from source.
 
 ## Windows
@@ -33,11 +48,9 @@ You will need to build from source.
 
 # Building ponyc from source
 
-## Building on Linux [![Linux and OS X](https://travis-ci.org/CausalityLtd/ponyc.svg?branch=master)](https://travis-ci.org/CausalityLtd/ponyc)
+## Building on Linux [![Linux and OS X](https://travis-ci.org/ponylang/ponyc.svg?branch=master)](https://travis-ci.org/ponylang/ponyc)
 
 First, install LLVM 3.6 using your package manager. You may need to install zlib, ncurses, pcre2, and ssl as well.
-
- > Note that Gentoo Linux users are currently affected by Gentoo [bug 457530](https://bugs.gentoo.org/show_bug.cgi?id=457530#c7) (hotfix linked.)
 
 This will build ponyc and compile helloworld:
 
@@ -46,7 +59,7 @@ $ make config=release
 $ ./build/release/ponyc examples/helloworld
 ```
 
-# Building on FreeBSD
+## Building on FreeBSD
 
 First, install the required dependencies:
 
@@ -64,24 +77,30 @@ $ make config=release
 $ ./build/release/ponyc examples/helloworld
 ```
 
-# Building on Mac OS X [![Linux and OS X](https://travis-ci.org/CausalityLtd/ponyc.svg?branch=master)](https://travis-ci.org/CausalityLtd/ponyc)
+## Building on Mac OS X [![Linux and OS X](https://travis-ci.org/ponylang/ponyc.svg?branch=master)](https://travis-ci.org/ponylang/ponyc)
 
-First, install [homebrew](http://brew.sh) if you haven't already. Then, brew the required dependencies:
+You'll need llvm 3.6 and the pcre2 library to build Pony.
 
+Either install them via [homebrew](http://brew.sh):
 ```
 $ brew update
 $ brew install llvm
 $ brew install pcre2
 ```
 
-This will build ponyc and compile helloworld:
+Or install them via macport:
+```
+$ sudo port install llvm-3.6 pcre2
+$ sudo port select --set llvm mp-llvm-3.6
+```
 
+Then launch the build with Make:
 ```
 $ make config=release
 $ ./build/release/ponyc examples/helloworld
 ```
 
-# Building on Windows [![Windows](https://ci.appveyor.com/api/projects/status/8q026e7byvaflvei?svg=true)](https://ci.appveyor.com/project/pony-buildbot/ponyc)
+## Building on Windows [![Windows](https://ci.appveyor.com/api/projects/status/8q026e7byvaflvei?svg=true)](https://ci.appveyor.com/project/pony-buildbot/ponyc)
 
 The LLVM 3.7 (not 3.6!) prebuilt binaries for Windows do NOT include the LLVM development tools and libraries. Instead, you will have to build and install LLVM 3.7 from source. You will need to make sure that the path to LLVM/bin (location of llvm-config) is in your PATH variable.
 

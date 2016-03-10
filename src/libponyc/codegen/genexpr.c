@@ -47,6 +47,7 @@ LLVMValueRef gen_expr(compile_t* c, ast_t* ast)
 
     case TK_VAR:
     case TK_LET:
+    case TK_MATCH_CAPTURE:
       ret = gen_localdecl(c, ast);
       break;
 
@@ -162,9 +163,15 @@ LLVMValueRef gen_expr(compile_t* c, ast_t* ast)
 
     case TK_COMPILE_INTRINSIC:
       ast_error(ast, "unimplemented compile intrinsic");
-      LLVMBuildUnreachable(c->builder);
-      ret = GEN_NOVALUE;
-      break;
+      return NULL;
+
+    case TK_COMPILE_ERROR:
+    {
+      ast_t* reason_seq = ast_child(ast);
+      ast_t* reason = ast_child(reason_seq);
+      ast_error(ast, "compile error: %s", ast_name(reason));
+      return NULL;
+    }
 
     default:
       ast_error(ast, "not implemented (codegen unknown)");
@@ -190,7 +197,7 @@ static LLVMValueRef assign_to_tuple(compile_t* c, LLVMTypeRef l_type,
 
   int count = LLVMCountStructElementTypes(l_type);
   size_t buf_size = count * sizeof(LLVMTypeRef);
-  LLVMTypeRef* elements = (LLVMTypeRef*)pool_alloc_size(buf_size);
+  LLVMTypeRef* elements = (LLVMTypeRef*)ponyint_pool_alloc_size(buf_size);
   LLVMGetStructElementTypes(l_type, elements);
 
   LLVMValueRef result = LLVMGetUndef(l_type);
@@ -206,7 +213,7 @@ static LLVMValueRef assign_to_tuple(compile_t* c, LLVMTypeRef l_type,
 
     if(cast_value == NULL)
     {
-      pool_free_size(buf_size, elements);
+      ponyint_pool_free_size(buf_size, elements);
       return NULL;
     }
 
@@ -215,7 +222,7 @@ static LLVMValueRef assign_to_tuple(compile_t* c, LLVMTypeRef l_type,
     i++;
   }
 
-  pool_free_size(buf_size, elements);
+  ponyint_pool_free_size(buf_size, elements);
   return result;
 }
 

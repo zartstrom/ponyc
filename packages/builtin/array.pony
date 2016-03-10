@@ -83,7 +83,7 @@ class Array[A] is Seq[A]
     the array.
     """
     if _alloc < len then
-      _alloc = len.max(8).next_pow2()
+      _alloc = len.max(8).ponyint_next_pow2()
       _ptr = _ptr._realloc(_alloc)
     end
     this
@@ -115,7 +115,7 @@ class Array[A] is Seq[A]
     An out of bounds index raises an error.
     The array is returned to allow call chaining.
     """
-    if i < _size then
+    if i <= _size then
       reserve(_size + 1)
       _ptr._offset(i)._insert(1, _size - i)
       _ptr._update(i, consume value)

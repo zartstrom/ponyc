@@ -19,9 +19,9 @@ class val Env
     actor is created.
     """
     root = AmbientAuth._create()
-    @os_stdout_setup[None]()
+    @pony_os_stdout_setup[None]()
 
-    input = Stdin._create(@os_stdin_setup[Bool]())
+    input = Stdin._create(@pony_os_stdin_setup[Bool]())
     out = StdStream._out()
     err = StdStream._err()
 
@@ -41,7 +41,7 @@ class val Env
     out = out'
     err = err'
     args = args'
-    _envp = recover val Pointer[Pointer[U8]]._alloc(0) end
+    _envp = recover Pointer[Pointer[U8]] end
     _vars = vars'
 
   fun vars(): Array[String] val =>

@@ -9,29 +9,74 @@
 #include <sys/timerfd.h>
 #include <unistd.h>
 #include <string.h>
+#include <signal.h>
 #include <stdbool.h>
+
+#define MAX_SIGNAL 128
 
 struct asio_backend_t
 {
   int epfd;
   int wakeup;    /* eventfd to break epoll loop */
   struct epoll_event events[MAX_EVENTS];
+  asio_event_t* sighandlers[MAX_SIGNAL];
+  bool terminate;
   messageq_t q;
 };
+
+static void send_request(asio_event_t* ev, int req)
+{
+  asio_backend_t* b = ponyint_asio_get_backend();
+
+  asio_msg_t* msg = (asio_msg_t*)pony_alloc_msg(
+    POOL_INDEX(sizeof(asio_msg_t)), 0);
+  msg->event = ev;
+  msg->flags = req;
+  ponyint_messageq_push(&b->q, (pony_msg_t*)msg);
+
+  eventfd_write(b->wakeup, 1);
+}
+
+static void signal_handler(int sig)
+{
+  if(sig >= MAX_SIGNAL)
+    return;
+
+  // Reset the signal handler.
+  signal(sig, signal_handler);
+  asio_backend_t* b = ponyint_asio_get_backend();
+  asio_event_t* ev = b->sighandlers[sig];
+
+  if(ev == NULL)
+    return;
+
+  eventfd_write(ev->fd, 1);
+}
 
 static void handle_queue(asio_backend_t* b)
 {
   asio_msg_t* msg;
 
-  while((msg = (asio_msg_t*)messageq_pop(&b->q)) != NULL)
-    asio_event_send(msg->event, ASIO_DISPOSABLE, 0);
+  while((msg = (asio_msg_t*)ponyint_messageq_pop(&b->q)) != NULL)
+  {
+    asio_event_t* ev = msg->event;
+
+    switch(msg->flags)
+    {
+      case ASIO_DISPOSABLE:
+        pony_asio_event_send(ev, ASIO_DISPOSABLE, 0);
+        break;
+
+      default: {}
+    }
+  }
 }
 
-asio_backend_t* asio_backend_init()
+asio_backend_t* ponyint_asio_backend_init()
 {
   asio_backend_t* b = POOL_ALLOC(asio_backend_t);
   memset(b, 0, sizeof(asio_backend_t));
-  messageq_init(&b->q);
+  ponyint_messageq_init(&b->q);
 
   b->epfd = epoll_create1(EPOLL_CLOEXEC);
   b->wakeup = eventfd(0, EFD_NONBLOCK);
@@ -51,17 +96,18 @@ asio_backend_t* asio_backend_init()
   return b;
 }
 
-void asio_backend_terminate(asio_backend_t* b)
+void ponyint_asio_backend_final(asio_backend_t* b)
 {
+  b->terminate = true;
   eventfd_write(b->wakeup, 1);
 }
 
-DECLARE_THREAD_FN(asio_backend_dispatch)
+DECLARE_THREAD_FN(ponyint_asio_backend_dispatch)
 {
   pony_register_thread();
   asio_backend_t* b = arg;
 
-  while(b->epfd != -1)
+  while(!b->terminate)
   {
     int event_cnt = epoll_wait(b->epfd, b->events, MAX_EVENTS, -1);
 
@@ -70,15 +116,11 @@ DECLARE_THREAD_FN(asio_backend_dispatch)
       struct epoll_event* ep = &(b->events[i]);
 
       if(ep->data.ptr == b)
-      {
-        close(b->epfd);
-        close(b->wakeup);
-        b->epfd = -1;
-        break;
-      }
+        continue;
 
       asio_event_t* ev = ep->data.ptr;
       uint32_t flags = 0;
+      uint32_t count = 0;
 
       if(ev->flags & ASIO_READ)
       {
@@ -103,14 +145,28 @@ DECLARE_THREAD_FN(asio_backend_dispatch)
         }
       }
 
+      if(ev->flags & ASIO_SIGNAL)
+      {
+        if(ep->events & (EPOLLIN | EPOLLRDHUP | EPOLLHUP | EPOLLERR))
+        {
+          uint64_t missed;
+          ssize_t rc = read(ev->fd, &missed, sizeof(uint64_t));
+          (void)rc;
+          flags |= ASIO_SIGNAL;
+          count = (uint32_t)missed;
+        }
+      }
+
       if(flags != 0)
-        asio_event_send(ev, flags, 0);
+        pony_asio_event_send(ev, flags, count);
     }
 
     handle_queue(b);
   }
 
-  messageq_destroy(&b->q);
+  close(b->epfd);
+  close(b->wakeup);
+  ponyint_messageq_destroy(&b->q);
   POOL_FREE(asio_backend_t, b);
   return NULL;
 }
@@ -127,17 +183,17 @@ static void timer_set_nsec(int fd, uint64_t nsec)
   timerfd_settime(fd, 0, &ts, NULL);
 }
 
-void asio_event_subscribe(asio_event_t* ev)
+void pony_asio_event_subscribe(asio_event_t* ev)
 {
   if((ev == NULL) ||
     (ev->flags == ASIO_DISPOSABLE) ||
     (ev->flags == ASIO_DESTROYED))
     return;
 
-  asio_backend_t* b = asio_get_backend();
+  asio_backend_t* b = ponyint_asio_get_backend();
 
   if(ev->noisy)
-    asio_noisy_add();
+    ponyint_asio_noisy_add();
 
   struct epoll_event ep;
   ep.data.ptr = ev;
@@ -156,10 +212,25 @@ void asio_event_subscribe(asio_event_t* ev)
     ep.events |= EPOLLIN;
   }
 
+  if(ev->flags & ASIO_SIGNAL)
+  {
+    int sig = (int)ev->nsec;
+    asio_event_t* prev = NULL;
+
+    if((sig < MAX_SIGNAL) && _atomic_cas(&b->sighandlers[sig], &prev, ev))
+    {
+      signal(sig, signal_handler);
+      ev->fd = eventfd(0, EFD_NONBLOCK);
+      ep.events |= EPOLLIN;
+    } else {
+      return;
+    }
+  }
+
   epoll_ctl(b->epfd, EPOLL_CTL_ADD, ev->fd, &ep);
 }
 
-void asio_event_setnsec(asio_event_t* ev, uint64_t nsec)
+void pony_asio_event_setnsec(asio_event_t* ev, uint64_t nsec)
 {
   if((ev == NULL) ||
     (ev->flags == ASIO_DISPOSABLE) ||
@@ -173,18 +244,18 @@ void asio_event_setnsec(asio_event_t* ev, uint64_t nsec)
   }
 }
 
-void asio_event_unsubscribe(asio_event_t* ev)
+void pony_asio_event_unsubscribe(asio_event_t* ev)
 {
   if((ev == NULL) ||
     (ev->flags == ASIO_DISPOSABLE) ||
     (ev->flags == ASIO_DESTROYED))
     return;
 
-  asio_backend_t* b = asio_get_backend();
+  asio_backend_t* b = ponyint_asio_get_backend();
 
   if(ev->noisy)
   {
-    asio_noisy_remove();
+    ponyint_asio_noisy_remove();
     ev->noisy = false;
   }
 
@@ -199,13 +270,21 @@ void asio_event_unsubscribe(asio_event_t* ev)
     }
   }
 
-  ev->flags = ASIO_DISPOSABLE;
+  if(ev->flags & ASIO_SIGNAL)
+  {
+    int sig = (int)ev->nsec;
+    asio_event_t* prev = ev;
 
-  asio_msg_t* msg = (asio_msg_t*)pony_alloc_msg(
-    POOL_INDEX(sizeof(asio_msg_t)), 0);
-  msg->event = ev;
-  msg->flags = ASIO_DISPOSABLE;
-  messageq_push(&b->q, (pony_msg_t*)msg);
+    if((sig < MAX_SIGNAL) && _atomic_cas(&b->sighandlers[sig], &prev, NULL))
+    {
+      signal(sig, SIG_DFL);
+      close(ev->fd);
+      ev->fd = -1;
+    }
+  }
+
+  ev->flags = ASIO_DISPOSABLE;
+  send_request(ev, ASIO_DISPOSABLE);
 }
 
 #endif

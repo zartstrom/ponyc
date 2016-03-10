@@ -667,7 +667,7 @@ static const char* _illegal_flags[] =
 // Check the given ast is a valid ifdef condition.
 // The context parameter is for error messages and should be a literal string
 // such as "ifdef condition" or "use guard".
-static bool syntax_ifdef_cond(ast_t* ast, const char* context)
+static bool syntax_ifdef_cond(ast_t* ast, const char* context, pass_opt_t* options)
 {
   assert(ast != NULL);
   assert(context != NULL);
@@ -687,21 +687,21 @@ static bool syntax_ifdef_cond(ast_t* ast, const char* context)
 
       // Create an all lower case version of the name for comparisons.
       size_t len = strlen(name) + 1;
-      char* lower_case = (char*)pool_alloc_size(len);
+      char* lower_case = (char*)ponyint_pool_alloc_size(len);
 
       for(size_t i = 0; i < len; i++)
         lower_case[i] = (char)tolower(name[i]);
 
       bool r = true;
       bool result;
-      if(os_is_target(lower_case, true, &result))
+      if(os_is_target(lower_case, true, &result, options))
         r = false;
 
       for(int i = 0; _illegal_flags[i] != NULL; i++)
         if(strcmp(lower_case, _illegal_flags[i]) == 0)
           r = false;
 
-      pool_free_size(len, lower_case);
+      ponyint_pool_free_size(len, lower_case);
 
       if(!r)
       {
@@ -717,7 +717,7 @@ static bool syntax_ifdef_cond(ast_t* ast, const char* context)
     {
       const char* name = ast_name(ast_child(ast));
       bool result;
-      if(!os_is_target(name, true, &result))
+      if(!os_is_target(name, true, &result, options))
       {
         ast_error(ast, "\"%s\" is not a valid platform flag\n", name);
         return false;
@@ -743,7 +743,7 @@ static bool syntax_ifdef_cond(ast_t* ast, const char* context)
 
   for(ast_t* p = ast_child(ast); p != NULL; p = ast_sibling(p))
   {
-    if(!syntax_ifdef_cond(p, context))
+    if(!syntax_ifdef_cond(p, context, options))
       return false;
   }
 
@@ -751,18 +751,18 @@ static bool syntax_ifdef_cond(ast_t* ast, const char* context)
 }
 
 
-static ast_result_t syntax_ifdef(ast_t* ast)
+static ast_result_t syntax_ifdef(ast_t* ast, pass_opt_t* options)
 {
   assert(ast != NULL);
 
-  if(!syntax_ifdef_cond(ast_child(ast), "ifdef condition"))
+  if(!syntax_ifdef_cond(ast_child(ast), "ifdef condition", options))
     return AST_ERROR;
 
   return AST_OK;
 }
 
 
-static ast_result_t syntax_use(ast_t* ast)
+static ast_result_t syntax_use(ast_t* ast, pass_opt_t* options)
 {
   assert(ast != NULL);
   AST_GET_CHILDREN(ast, id, url, guard);
@@ -770,7 +770,7 @@ static ast_result_t syntax_use(ast_t* ast)
   if(ast_id(id) != TK_NONE && !check_id_package(id))
     return AST_ERROR;
 
-  if(ast_id(guard) != TK_NONE && !syntax_ifdef_cond(guard, "use guard"))
+  if(ast_id(guard) != TK_NONE && !syntax_ifdef_cond(guard, "use guard", options))
     return AST_ERROR;
 
   return AST_OK;
@@ -867,6 +867,37 @@ static ast_result_t syntax_compile_error(ast_t* ast)
 }
 
 
+static ast_result_t syntax_cap(ast_t* ast)
+{
+  switch(ast_id(ast_parent(ast)))
+  {
+    case TK_NOMINAL:
+    case TK_ARROW:
+    case TK_OBJECT:
+    case TK_LAMBDA:
+    case TK_RECOVER:
+    case TK_CONSUME:
+    case TK_FUN:
+    case TK_BE:
+    case TK_NEW:
+    case TK_TYPE:
+    case TK_INTERFACE:
+    case TK_TRAIT:
+    case TK_PRIMITIVE:
+    case TK_STRUCT:
+    case TK_CLASS:
+    case TK_ACTOR:
+    case TK_LAMBDATYPE:
+      return AST_OK;
+
+    default: {}
+  }
+
+  ast_error(ast, "a type cannot be only a capability");
+  return AST_ERROR;
+}
+
+
 static ast_result_t syntax_cap_set(typecheck_t* t, ast_t* ast)
 {
   // Cap sets can only appear in type parameter constraints.
@@ -916,18 +947,37 @@ ast_result_t pass_syntax(ast_t** astp, pass_opt_t* options)
     case TK_VAR:        r = syntax_local(ast); break;
     case TK_EMBED:      r = syntax_embed(ast); break;
     case TK_TYPEPARAM:  r = syntax_type_param(ast); break;
-    case TK_IFDEF:      r = syntax_ifdef(ast); break;
-    case TK_USE:        r = syntax_use(ast); break;
+    case TK_IFDEF:      r = syntax_ifdef(ast, options); break;
+    case TK_USE:        r = syntax_use(ast, options); break;
     case TK_LAMBDACAPTURE:
                         r = syntax_lambda_capture(ast); break;
     case TK_COMPILE_INTRINSIC:
                         r = syntax_compile_intrinsic(ast); break;
     case TK_COMPILE_ERROR:
                         r = syntax_compile_error(ast); break;
+
+    case TK_ISO:
+    case TK_TRN:
+    case TK_REF:
+    case TK_VAL:
+    case TK_BOX:
+    case TK_TAG:        r = syntax_cap(ast); break;
+
     case TK_CAP_READ:
     case TK_CAP_SEND:
     case TK_CAP_SHARE:
     case TK_CAP_ANY:    r = syntax_cap_set(t, ast); break;
+
+    case TK_VALUEFORMALARG:
+    case TK_VALUEFORMALPARAM:
+      ast_error(ast, "Value formal parameters not yet supported");
+      r = AST_ERROR;
+      break;
+
+    case TK_CONSTANT:
+      ast_error(ast, "Compile time expressions not yet supported");
+      r = AST_ERROR;
+      break;
 
     default: break;
   }

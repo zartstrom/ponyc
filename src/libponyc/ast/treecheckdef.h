@@ -16,7 +16,7 @@ RULE(package,
   IS_SCOPE  // name -> entity
   HAS_DATA  // package_t
   ZERO_OR_MORE(module)
-  OPTIONAL(string),
+  OPTIONAL(string), // Package doc string
   TK_PACKAGE);
 
 RULE(module,
@@ -108,7 +108,7 @@ RULE(param,
   TK_PARAM);
 
 RULE(seq,
-  IS_SCOPE
+  IS_SCOPE  // name -> local ID node
   HAS_TYPE(type)
   ONE_OR_MORE(jump, intrinsic, compile_error, expr, semi),
   TK_SEQ);
@@ -135,10 +135,10 @@ RULE(compile_error,
 
 GROUP(expr,
   local, infix, asop, tuple, consume, recover, prefix, dot, tilde,
-  qualify, call, ffi_call,
+  qualify, call, ffi_call, match_capture,
   if_expr, ifdef, whileloop, repeat, for_loop, with, match, try_expr, lambda,
   array_literal, object_literal, int_literal, float_literal, string,
-  bool_literal, id, rawseq, package_ref,
+  bool_literal, id, rawseq, package_ref, location,
   this_ref, ref, fun_ref, type_ref, flet_ref, field_ref, local_ref);
 
 RULE(local,
@@ -146,6 +146,12 @@ RULE(local,
   CHILD(id)
   CHILD(type, none),
   TK_LET, TK_VAR);
+
+RULE(match_capture,
+  HAS_TYPE(type)
+  CHILD(id)
+  CHILD(type),
+  TK_MATCH_CAPTURE);
 
 RULE(infix,
   HAS_TYPE(type)
@@ -211,6 +217,7 @@ RULE(call,
 
 RULE(ffi_call,
   HAS_TYPE(type)
+  HAS_DATA  // FFI declaration to use.
   CHILD(id, string)
   CHILD(type_args, none)
   CHILD(positional_args, none)
@@ -307,10 +314,12 @@ RULE(cases,
 
 RULE(match_case,
   IS_SCOPE
-  CHILD(expr, none)
+  CHILD(expr, no_case_expr)
   CHILD(rawseq, none)   // Guard
   CHILD(rawseq, none),  // Body
   TK_CASE);
+
+RULE(no_case_expr, HAS_TYPE(dont_care), TK_NONE);
 
 RULE(try_expr,
   HAS_TYPE(type)
@@ -322,6 +331,7 @@ RULE(try_expr,
 RULE(lambda,
   HAS_TYPE(type)
   CHILD(cap, none)
+  CHILD(id, none)
   CHILD(type_params, none)
   CHILD(params, none)
   CHILD(lambda_captures, none)
@@ -344,6 +354,7 @@ RULE(array_literal,
   TK_ARRAY);
 
 RULE(object_literal,
+  HAS_DATA  // Nice name to use for anonymous type, optional.
   CHILD(cap, none)
   CHILD(provides, none)
   CHILD(members),
@@ -391,7 +402,7 @@ RULE(local_ref,
 
 GROUP(type,
   type_infix, type_tuple, type_arrow, type_this, cap, nominal,
-  type_param_ref, dont_care, fun_type, error_type,
+  type_param_ref, dont_care, fun_type, error_type, lambda_type,
   literal_type, opliteral_type, control_type, dont_care);
 
 RULE(type_infix, ONE_OR_MORE(type), TK_UNIONTYPE, TK_ISECTTYPE);
@@ -409,6 +420,19 @@ RULE(fun_type,
   CHILD(params, none)
   CHILD(type, none), // Return type
   TK_FUNTYPE);
+
+RULE(lambda_type,
+  CHILD(cap, none)  // Apply function cap
+  CHILD(id, none)
+  CHILD(type_params, none)
+  CHILD(type_list, none)  // Params
+  CHILD(type, none) // Return type
+  CHILD(question, none)
+  CHILD(cap, gencap, none)  // Type reference cap
+  CHILD(borrowed, ephemeral, none),
+  TK_LAMBDATYPE);
+
+RULE(type_list, ONE_OR_MORE(type), TK_PARAMS);
 
 RULE(nominal,
   HAS_DATA  // Definition of referred type
@@ -439,9 +463,10 @@ RULE(ephemeral, LEAF, TK_EPHEMERAL);
 RULE(error_type, LEAF, TK_ERRORTYPE);
 RULE(float_literal, HAS_TYPE(type), TK_FLOAT);
 RULE(gencap, LEAF, TK_CAP_READ, TK_CAP_SEND, TK_CAP_SHARE, TK_CAP_ANY);
-RULE(id, HAS_TYPE(type), TK_ID);
+RULE(id, HAS_TYPE(type) HAS_DATA, TK_ID);
 RULE(int_literal, HAS_TYPE(type), TK_INT);
 RULE(literal_type, LEAF, TK_LITERAL, TK_LITERALBRANCH);
+RULE(location, HAS_TYPE(nominal), TK_LOCATION);
 RULE(none, LEAF, TK_NONE);
 RULE(opliteral_type, HAS_DATA, TK_OPERATORLITERAL);
 RULE(question, LEAF, TK_QUESTION);

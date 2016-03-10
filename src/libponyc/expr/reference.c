@@ -12,6 +12,7 @@
 #include "../type/cap.h"
 #include "../type/reify.h"
 #include "../type/lookup.h"
+#include "../ast/astbuild.h"
 #include "../../libponyrt/mem/pool.h"
 #include <string.h>
 #include <assert.h>
@@ -147,12 +148,18 @@ bool expr_field(pass_opt_t* opt, ast_t* ast)
 
     init_type = alias(init_type);
 
-    if(!is_subtype(init_type, type, true))
+    errorframe_t info = NULL;
+    if(!is_subtype(init_type, type, &info))
     {
-      ast_error(init,
+      errorframe_t frame = NULL;
+      ast_error_frame(&frame, init,
         "default argument is not a subtype of the parameter type");
-      ast_error(type, "parameter type: %s", ast_print_type(type));
-      ast_error(init, "default argument type: %s", ast_print_type(init_type));
+      ast_error_frame(&frame, type, "parameter type: %s",
+        ast_print_type(type));
+      ast_error_frame(&frame, init, "default argument type: %s",
+        ast_print_type(init_type));
+      errorframe_append(&frame, &info);
+      errorframe_report(&frame);
       ast_free_unattached(init_type);
       return false;
     }
@@ -177,10 +184,17 @@ bool expr_fieldref(pass_opt_t* opt, ast_t* ast, ast_t* find, token_id tid)
   // Viewpoint adapted type of the field.
   ast_t* type = viewpoint_type(l_type, f_type);
 
-  if(type == NULL)
+  if(ast_id(type) == TK_ARROW)
   {
-    ast_error(ast, "can't read a field from a tag");
-    return false;
+    ast_t* upper = viewpoint_upper(type);
+
+    if(upper == NULL)
+    {
+      ast_error(ast, "can't read a field through %s", ast_print_type(l_type));
+      return false;
+    }
+
+    ast_free_unattached(upper);
   }
 
   // Set the unadapted field type.
@@ -339,6 +353,7 @@ bool expr_typeref(pass_opt_t* opt, ast_t** astp)
       {
         ast_settype(ast, ast_from(type, TK_ERRORTYPE));
         ast_free_unattached(type);
+        return false;
       }
       break;
     }
@@ -365,7 +380,7 @@ static const char* suggest_alt_name(ast_t* ast, const char* name)
   else
   {
     // Try with a leading underscore
-    char* buf = (char*)pool_alloc_size(name_len + 2);
+    char* buf = (char*)ponyint_pool_alloc_size(name_len + 2);
     buf[0] = '_';
     strncpy(buf + 1, name, name_len + 1);
     const char* try_name = stringtab_consume(buf, name_len + 2);
@@ -378,8 +393,13 @@ static const char* suggest_alt_name(ast_t* ast, const char* name)
   ast_t* case_ast = ast_get_case(ast, name, NULL);
   if(case_ast != NULL)
   {
-    assert(ast_child(case_ast) != NULL);
-    const char* try_name = ast_name(ast_child(case_ast));
+    ast_t* id = case_ast;
+
+    if(ast_id(id) != TK_ID)
+      id = ast_child(id);
+
+    assert(ast_id(id) == TK_ID);
+    const char* try_name = ast_name(id);
 
     if(ast_get(ast, try_name, NULL) != NULL)
       return try_name;
@@ -537,7 +557,7 @@ bool expr_reference(pass_opt_t* opt, ast_t** astp)
 
       if(type != NULL && ast_id(type) == TK_INFERTYPE)
       {
-        ast_error(ast, "cannot infer type of %s\n", name);
+        ast_error(ast, "cannot infer type of %s\n", ast_nice_name(def));
         ast_settype(def, ast_from(def, TK_ERRORTYPE));
         ast_settype(ast, ast_from(ast, TK_ERRORTYPE));
         return false;
@@ -558,6 +578,7 @@ bool expr_reference(pass_opt_t* opt, ast_t** astp)
           break;
 
         case TK_LET:
+        case TK_MATCH_CAPTURE:
           ast_setid(ast, TK_LETREF);
           break;
 
@@ -599,9 +620,8 @@ bool expr_reference(pass_opt_t* opt, ast_t** astp)
   return false;
 }
 
-bool expr_local(typecheck_t* t, ast_t* ast)
+bool expr_local(ast_t* ast)
 {
-  assert(t != NULL);
   assert(ast != NULL);
   assert(ast_type(ast) != NULL);
 
@@ -613,15 +633,11 @@ bool expr_local(typecheck_t* t, ast_t* ast)
     // No type specified, infer it later
     if(!is_assigned_to(ast, false))
     {
-      if(t->frame->pattern != NULL)
-        ast_error(ast, "cannot infer type of capture variables");
-      else
-        ast_error(ast, "locals must specify a type or be assigned a value");
-
+      ast_error(ast, "locals must specify a type or be assigned a value");
       return false;
     }
   }
-  else if(ast_id(ast) == TK_LET && t->frame->pattern == NULL)
+  else if(ast_id(ast) == TK_LET)
   {
     // Let, check we have a value assigned
     if(!is_assigned_to(ast, false))
@@ -800,7 +816,21 @@ bool expr_this(pass_opt_t* opt, ast_t* ast)
   if(!cap_sendable(cap) && (t->frame->recover != NULL))
     cap = TK_TAG;
 
+  bool make_arrow = false;
+
+  if(cap == TK_BOX)
+  {
+    cap = TK_REF;
+    make_arrow = true;
+  }
+
   ast_t* type = type_for_this(opt, ast, cap, TK_NONE, false);
+
+  if(make_arrow)
+  {
+    BUILD(arrow, ast, NODE(TK_ARROW, NODE(TK_THISTYPE) TREE(type)));
+    type = arrow;
+  }
 
   if(t->frame->def_arg != NULL)
   {
@@ -932,6 +962,43 @@ bool expr_nominal(pass_opt_t* opt, ast_t** astp)
   if(!reify_defaults(typeparams, typeargs, true))
     return false;
 
+  if(!strcmp(name, "Maybe"))
+  {
+    // Maybe[A] must be bound to a struct.
+    assert(ast_childcount(typeargs) == 1);
+    ast_t* typeparam = ast_child(typeparams);
+    ast_t* typearg = ast_child(typeargs);
+    bool ok = false;
+
+    switch(ast_id(typearg))
+    {
+      case TK_NOMINAL:
+      {
+        ast_t* def = (ast_t*)ast_data(typearg);
+        ok = ast_id(def) == TK_STRUCT;
+        break;
+      }
+
+      case TK_TYPEPARAMREF:
+      {
+        ast_t* def = (ast_t*)ast_data(typearg);
+        ok = def == typeparam;
+        break;
+      }
+
+      default: {}
+    }
+
+    if(!ok)
+    {
+      ast_error(ast,
+        "%s is not allowed: the type argument to Maybe must be a struct",
+        ast_print_type(ast));
+
+      return false;
+    }
+  }
+
   return check_constraints(typeargs, typeparams, typeargs, true);
 }
 
@@ -1003,7 +1070,6 @@ static bool check_fields_defined(ast_t* ast)
 
 static bool check_return_type(ast_t* ast)
 {
-  assert(ast_id(ast) == TK_FUN);
   AST_GET_CHILDREN(ast, cap, id, typeparams, params, type, can_error, body);
   ast_t* body_type = ast_type(body);
 
@@ -1025,13 +1091,19 @@ static bool check_return_type(ast_t* ast)
   ast_t* a_body_type = alias(body_type);
   bool ok = true;
 
-  if(!is_subtype(body_type, type, true) ||
-    !is_subtype(a_body_type, a_type, true))
+  errorframe_t info = NULL;
+  if(!is_subtype(body_type, type, &info) ||
+    !is_subtype(a_body_type, a_type, &info))
   {
+    errorframe_t frame = NULL;
     ast_t* last = ast_childlast(body);
-    ast_error(last, "function body isn't the result type");
-    ast_error(type, "function return type: %s", ast_print_type(type));
-    ast_error(body_type, "function body type: %s", ast_print_type(body_type));
+    ast_error_frame(&frame, last, "function body isn't the result type");
+    ast_error_frame(&frame, type, "function return type: %s",
+      ast_print_type(type));
+    ast_error_frame(&frame, body_type, "function body type: %s",
+      ast_print_type(body_type));
+    errorframe_append(&frame, &info);
+    errorframe_report(&frame);
     ok = false;
   }
 
@@ -1100,6 +1172,12 @@ static bool check_primitive_init(typecheck_t* t, ast_t* ast)
 
   bool ok = true;
 
+  if(ast_id(ast_childidx(t->frame->type, 1)) != TK_NONE)
+  {
+    ast_error(ast, "a primitive with type parameters cannot have an _init");
+    ok = false;
+  }
+
   if(ast_id(ast) != TK_FUN)
   {
     ast_error(ast, "a primitive _init must be a function");
@@ -1152,7 +1230,7 @@ static bool check_primitive_init(typecheck_t* t, ast_t* ast)
   return ok;
 }
 
-static bool check_finaliser(ast_t* ast)
+static bool check_finaliser(typecheck_t* t, ast_t* ast)
 {
   AST_GET_CHILDREN(ast, cap, id, typeparams, params, result, can_error, body);
 
@@ -1160,6 +1238,13 @@ static bool check_finaliser(ast_t* ast)
     return true;
 
   bool ok = true;
+
+  if((ast_id(t->frame->type) == TK_PRIMITIVE) &&
+    (ast_id(ast_childidx(t->frame->type, 1)) != TK_NONE))
+  {
+    ast_error(ast, "a primitive with type parameters cannot have a _final");
+    ok = false;
+  }
 
   if(ast_id(ast) != TK_FUN)
   {
@@ -1249,13 +1334,29 @@ bool expr_fun(pass_opt_t* opt, ast_t* ast)
     }
   }
 
-  if(!check_primitive_init(t, ast) || !check_finaliser(ast))
+  if(!check_primitive_init(t, ast) || !check_finaliser(t, ast))
     return false;
 
   switch(ast_id(ast))
   {
     case TK_NEW:
-      return check_fields_defined(ast) && check_main_create(t, ast);
+    {
+      bool ok = true;
+
+      if(is_machine_word(type))
+      {
+        if(!check_return_type(ast))
+         ok = false;
+      }
+
+      if(!check_fields_defined(ast))
+        ok = false;
+
+      if(!check_main_create(t, ast))
+        ok = false;
+
+      return ok;
+    }
 
     case TK_FUN:
       return check_return_type(ast);

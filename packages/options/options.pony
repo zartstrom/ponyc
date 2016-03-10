@@ -81,6 +81,9 @@ class Options is Iterator[(ParsedOption | ParseError | None)]
       if matched.size() == 0 then
         _arguments.delete(_index)
       end
+      if (matched.size() == 1) and (matched(0) == '-') then
+        _arguments.delete(_index)
+      end
     end
 
   fun ref _select(candidate: String ref, start: ISize, offset: ISize,
@@ -90,8 +93,8 @@ class Options is Iterator[(ParsedOption | ParseError | None)]
     Selects an option from the configuration depending on the current command
     line argument.
     """
-    let name: String box = candidate.substring(start, finish + 1)
-    var matches = Array[_Option]
+    let name: String box = candidate.substring(start, finish)
+    let matches = Array[_Option]
     var selected: (_Option | None) = None
 
     for opt in _configuration.values() do
@@ -181,19 +184,18 @@ class Options is Iterator[(ParsedOption | ParseError | None)]
         (let start: ISize, let offset: ISize) =
           match (candidate(0), candidate(1))
           | ('-', '-') => (2, 0)
-          | ('-', var char: U8) => (1, 1)
+          | ('-', let char: U8) => (1, 1)
           else
             (0, 0) // unreachable
           end
 
-        let finish: ISize =
+        let last = candidate.size().isize()
+        (let finish: ISize, let combined: Bool) =
           try
-            candidate.find("=") - 1
+            (candidate.find("="), true)
           else
-            if start == 1 then start else -1 end
+            (if start == 1 then start+1 else last end, false)
           end
-
-        let combined = (finish != start) and (finish != -1)
 
         match _select(candidate, start, offset, finish)
         | let err: ParseError => _error = true ; _index = _index + 1 ; err
@@ -219,7 +221,7 @@ class _Option
 
   fun matches(name: String box, shortmatch: Bool): Bool =>
     match (short, shortmatch)
-    | (var x: String, true) => return name.compare_sub(x, 1) is Equal
+    | (let x: String, true) => return name.compare_sub(x, 1) is Equal
     end
 
     long == name

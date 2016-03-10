@@ -1,11 +1,11 @@
 primitive U8 is _UnsignedInteger[U8]
-  new create(value: U8 = 0) => compile_intrinsic
+  new create(value: U8 = 0) => value
   fun tag from[B: (Number & Real[B] val)](a: B): U8 => a.u8()
 
   fun tag min_value(): U8 => 0
   fun tag max_value(): U8 => 0xFF
 
-  fun next_pow2(): U8 =>
+  fun ponyint_next_pow2(): U8 =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -29,13 +29,13 @@ primitive U8 is _UnsignedInteger[U8]
     @"llvm.umul.with.overflow.i8"[(U8, Bool)](this, y)
 
 primitive U16 is _UnsignedInteger[U16]
-  new create(value: U16 = 0) => compile_intrinsic
+  new create(value: U16 = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): U16 => a.u16()
 
   fun tag min_value(): U16 => 0
   fun tag max_value(): U16 => 0xFFFF
 
-  fun next_pow2(): U16 =>
+  fun ponyint_next_pow2(): U16 =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -60,13 +60,13 @@ primitive U16 is _UnsignedInteger[U16]
     @"llvm.umul.with.overflow.i16"[(U16, Bool)](this, y)
 
 primitive U32 is _UnsignedInteger[U32]
-  new create(value: U32 = 0) => compile_intrinsic
+  new create(value: U32 = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): U32 => a.u32()
 
   fun tag min_value(): U32 => 0
   fun tag max_value(): U32 => 0xFFFF_FFFF
 
-  fun next_pow2(): U32 =>
+  fun ponyint_next_pow2(): U32 =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -92,13 +92,13 @@ primitive U32 is _UnsignedInteger[U32]
     @"llvm.umul.with.overflow.i32"[(U32, Bool)](this, y)
 
 primitive U64 is _UnsignedInteger[U64]
-  new create(value: U64 = 0) => compile_intrinsic
+  new create(value: U64 = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): U64 => a.u64()
 
   fun tag min_value(): U64 => 0
   fun tag max_value(): U64 => 0xFFFF_FFFF_FFFF_FFFF
 
-  fun next_pow2(): U64 =>
+  fun ponyint_next_pow2(): U64 =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -125,7 +125,7 @@ primitive U64 is _UnsignedInteger[U64]
     @"llvm.umul.with.overflow.i64"[(U64, Bool)](this, y)
 
 primitive ULong is _UnsignedInteger[ULong]
-  new create(value: ULong = 0) => compile_intrinsic
+  new create(value: ULong = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): ULong => a.ulong()
 
   fun tag min_value(): ULong => 0
@@ -137,7 +137,7 @@ primitive ULong is _UnsignedInteger[ULong]
       0xFFFF_FFFF_FFFF_FFFF
     end
 
-  fun next_pow2(): ULong =>
+  fun ponyint_next_pow2(): ULong =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -207,7 +207,7 @@ primitive ULong is _UnsignedInteger[ULong]
     end
 
 primitive USize is _UnsignedInteger[USize]
-  new create(value: USize = 0) => compile_intrinsic
+  new create(value: USize = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): USize => a.usize()
 
   fun tag min_value(): USize => 0
@@ -219,7 +219,7 @@ primitive USize is _UnsignedInteger[USize]
       0xFFFF_FFFF_FFFF_FFFF
     end
 
-  fun next_pow2(): USize =>
+  fun ponyint_next_pow2(): USize =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -289,13 +289,13 @@ primitive USize is _UnsignedInteger[USize]
     end
 
 primitive U128 is _UnsignedInteger[U128]
-  new create(value: U128 = 0) => compile_intrinsic
+  new create(value: U128 = 0) => value
   fun tag from[A: (Number & Real[A] val)](a: A): U128 => a.u128()
 
   fun tag min_value(): U128 => 0
   fun tag max_value(): U128 => 0xFFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF
 
-  fun next_pow2(): U128 =>
+  fun ponyint_next_pow2(): U128 =>
     var x = this - 1
     x = x or (x >> 1)
     x = x or (x >> 2)
@@ -315,12 +315,12 @@ primitive U128 is _UnsignedInteger[U128]
   fun min(y: U128): U128 => if this < y then this else y end
   fun max(y: U128): U128 => if this > y then this else y end
   fun hash(): U64 => ((this >> 64).u64() xor this.u64()).hash()
-
-  fun string(fmt: FormatInt = FormatDefault,
-    prefix: PrefixNumber = PrefixDefault, prec: USize = 1, width: USize = 0,
-    align: Align = AlignRight, fill: U32 = ' '): String iso^
+    
+  fun string(
+    fmt: FormatSettings[FormatInt, PrefixNumber] = FormatDefaultNumber)
+    : String iso^
   =>
-    _ToString._u128(this, false, fmt, prefix, prec, width, align, fill)
+    _ToString._u128(this, false, fmt)
 
   fun mul(y: U128): U128 =>
     ifdef native128 then

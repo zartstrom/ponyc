@@ -18,31 +18,48 @@ using std::string;
 
 static const char* _builtin =
   "primitive U8\n"
+  "  new create() => 0\n"
   "primitive I8\n"
-  "  fun neg():I8 => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():I8 => -this\n"
   "primitive U16\n"
+  "  new create() => 0\n"
   "primitive I16\n"
-  "  fun neg():I16 => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():I16 => -this\n"
   "primitive U32\n"
+  "  new create() => 0\n"
   "primitive I32\n"
-  "  fun neg():I32 => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():I32 => -this\n"
   "primitive U64\n"
+  "  new create() => 0\n"
   "primitive I64\n"
-  "  fun neg():I64 => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():I64 => -this\n"
   "primitive U128\n"
+  "  new create() => 0\n"
   "primitive I128\n"
-  "  fun neg():I128 => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():I128 => -this\n"
   "primitive ULong\n"
+  "  new create() => 0\n"
   "primitive ILong\n"
-  "  fun neg():ILong => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():ILong => -this\n"
   "primitive USize\n"
+  "  new create() => 0\n"
   "primitive ISize\n"
-  "  fun neg():ISize => compile_intrinsic\n"
+  "  new create() => 0\n"
+  "  fun neg():ISize => -this\n"
   "primitive F32\n"
+  "  new create() => 0\n"
   "primitive F64\n"
+  "  new create() => 0\n"
   "primitive None\n"
   "primitive Bool\n"
-  "class Pointer[A]";
+  "class val String\n"
+  "class Pointer[A]\n";
 
 
 // Check whether the 2 given ASTs are identical
@@ -226,7 +243,6 @@ void PassTest::check_ast_same(ast_t* expect, ast_t* actual)
 
 void PassTest::test_compile(const char* src, const char* pass)
 {
-  package_add_magic("builtin", _builtin_src);
   DO(build_package(pass, src, _first_pkg_path, true, &program));
 
   package = ast_child(program);
@@ -236,7 +252,6 @@ void PassTest::test_compile(const char* src, const char* pass)
 
 void PassTest::test_error(const char* src, const char* pass)
 {
-  package_add_magic("builtin", _builtin_src);
   DO(build_package(pass, src, _first_pkg_path, false, &program));
 
   package = NULL;
@@ -308,16 +323,22 @@ void PassTest::build_package(const char* pass, const char* src,
   ASSERT_NE((void*)NULL, package_name);
   ASSERT_NE((void*)NULL, out_package);
 
-  lexer_allow_test_symbols();
-  package_add_magic(package_name, src);
-
-  free_errors();
-  package_suppress_build_message();
-
   pass_opt_t opt;
   pass_opt_init(&opt);
+  package_init(&opt);
+
+  lexer_allow_test_symbols();
+
+  package_add_magic("builtin", _builtin_src);
+
+  package_add_magic(package_name, src);
+
+  package_suppress_build_message();
+
   limit_passes(&opt, pass);
   *out_package = program_load(stringtab(package_name), &opt);
+
+  package_done(&opt, false);
   pass_opt_done(&opt);
 
   if(check_good)
@@ -327,6 +348,7 @@ void PassTest::build_package(const char* pass, const char* src,
 
     ASSERT_NE((void*)NULL, *out_package);
   }
+
 }
 
 

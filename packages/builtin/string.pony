@@ -1,6 +1,8 @@
 use @memcmp[I32](dst: Pointer[U8] box, src: Pointer[U8] box, len: USize)
 use @memset[Pointer[None]](dst: Pointer[None], set: U32, len: USize)
 use @memmove[Pointer[None]](dst: Pointer[None], src: Pointer[None], len: USize)
+use @strtof[F32](nptr: Pointer[U8] box, endptr: USize)
+use @strtod[F64](nptr: Pointer[U8] box, endptr: USize)
 
 class val String is (Seq[U8] & Comparable[String box] & Stringable)
   """
@@ -130,9 +132,15 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     """
     _ptr
 
+  fun _cstring(): Pointer[U8] box =>
+    """
+    Returns a C compatible pointer to a null terminated string.
+    """
+    _ptr
+
   fun size(): USize =>
     """
-    Returns the length of the string.
+    Returns the length of the string data in bytes.
     """
     _size
 
@@ -584,13 +592,11 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
       error
     end
 
-  fun ref append(seq: ReadSeq[U8], offset: USize = 0, len: USize = -1):
-    String ref^
+  fun ref append(seq: (ReadSeq[U8] | ByteSeq box), offset: USize = 0, len:
+    USize = -1): String ref^
   =>
     """
     Append the elements from a sequence, starting from the given offset.
-
-    TODO: optimise when it is a string or an array
     """
     if offset >= seq.size() then
       return this
@@ -599,13 +605,20 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     let copy_len = len.min(seq.size() - offset)
     reserve(_size + copy_len)
 
-    let cap = copy_len + offset
-    var i = offset
+    match seq
+    | let s: (String box | Array[U8] box) =>
+      s._cstring()._offset(offset)._copy_to(_ptr._offset(_size), copy_len)
+      _size = _size + copy_len
+      _set(_size, 0)
+    else
+      let cap = copy_len + offset
+      var i = offset
 
-    try
-      while i < cap do
-        push(seq(i))
-        i = i + 1
+      try
+        while i < cap do
+          push(seq(i))
+          i = i + 1
+        end
       end
     end
 
@@ -977,6 +990,14 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
   fun offset_to_index(i: ISize): USize =>
     if i < 0 then i.usize() + _size else i.usize() end
 
+  fun bool(): Bool ? =>
+    match lower()
+    | "true" => true
+    | "false" => false
+    else
+      error
+    end
+
   fun i8(base: U8 = 0): I8 ? => _to_int[I8](base)
   fun i16(base: U8 = 0): I16 ? => _to_int[I16](base)
   fun i32(base: U8 = 0): I32 ? => _to_int[I32](base)
@@ -1125,7 +1146,7 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     var index = offset_to_index(offset)
 
     if index < _size then
-      @strtof[F32](_ptr.usize() + index, USize(0))
+      @strtof(_ptr._offset(index), 0)
     else
       F32(0)
     end
@@ -1134,24 +1155,22 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     var index = offset_to_index(offset)
 
     if index < _size then
-      @strtod[F64](_ptr.usize() + index, USize(0))
+      @strtod(_ptr._offset(index), 0)
     else
       F64(0)
     end
 
   fun hash(): U64 =>
-    @hash_block[U64](_ptr, _size)
+    @ponyint_hash_block[U64](_ptr, _size)
 
-  fun string(fmt: FormatDefault = FormatDefault,
-    prefix: PrefixDefault = PrefixDefault, prec: USize = -1, width: USize = 0,
-    align: Align = AlignLeft, fill: U32 = ' '): String iso^
+  fun string(fmt: FormatSettings = FormatSettingsDefault): String iso^
   =>
     // TODO: fill character
-    let copy_len = _size.min(prec.usize())
-    let len = copy_len.max(width.usize())
+    let copy_len = _size.min(fmt.precision().usize())
+    let len = copy_len.max(fmt.width().usize())
     let str = recover String(len) end
 
-    match align
+    match fmt.align()
     | AlignLeft =>
       _ptr._copy_to(str._ptr, copy_len)
       @memset(str._ptr.usize() + copy_len, U32(' '), len - copy_len)

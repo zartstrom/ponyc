@@ -95,6 +95,7 @@ nextterm
   | 'recover' cap? rawseq 'end'
   | 'consume' cap? term
   | nextpattern
+  | '#' postfix
   ;
 
 term
@@ -109,6 +110,7 @@ term
   | 'recover' cap? rawseq 'end'
   | 'consume' cap? term
   | pattern
+  | '#' postfix
   ;
 
 withelem
@@ -130,7 +132,12 @@ elseif
 idseq
   : ID
   | '_'
-  | ('(' | LPAREN_NEW) idseq (',' idseq)* ')'
+  | ('(' | LPAREN_NEW) (idseq_in_seq | '_') (',' (idseq_in_seq | '_'))* ')'
+  ;
+
+idseq_in_seq
+  : ID
+  | ('(' | LPAREN_NEW) (idseq_in_seq | '_') (',' (idseq_in_seq | '_'))* ')'
   ;
 
 nextpattern
@@ -175,31 +182,24 @@ dot
 
 nextatom
   : ID
+  | 'this'
   | literal
   | LPAREN_NEW (rawseq | '_') tuple? ')'
   | LSQUARE_NEW ('as' type ':')? rawseq (',' rawseq)* ']'
   | 'object' cap? ('is' type)? members 'end'
-  | 'lambda' cap? typeparams? ('(' | LPAREN_NEW) params? ')' lambdacaptures? (':' type)? '?'? '=>' rawseq 'end'
+  | 'lambda' cap? ID? typeparams? ('(' | LPAREN_NEW) params? ')' lambdacaptures? (':' type)? '?'? '=>' rawseq 'end'
   | '@' (ID | STRING) typeargs? ('(' | LPAREN_NEW) positional? named? ')' '?'?
   ;
 
 atom
   : ID
+  | 'this'
   | literal
   | ('(' | LPAREN_NEW) (rawseq | '_') tuple? ')'
   | ('[' | LSQUARE_NEW) ('as' type ':')? rawseq (',' rawseq)* ']'
   | 'object' cap? ('is' type)? members 'end'
-  | 'lambda' cap? typeparams? ('(' | LPAREN_NEW) params? ')' lambdacaptures? (':' type)? '?'? '=>' rawseq 'end'
+  | 'lambda' cap? ID? typeparams? ('(' | LPAREN_NEW) params? ')' lambdacaptures? (':' type)? '?'? '=>' rawseq 'end'
   | '@' (ID | STRING) typeargs? ('(' | LPAREN_NEW) positional? named? ')' '?'?
-  ;
-
-literal
-  : 'this'
-  | 'true'
-  | 'false'
-  | INT
-  | FLOAT
-  | STRING
   ;
 
 tuple
@@ -232,9 +232,14 @@ type
 
 atomtype
   : 'this'
-  | 'box'
+  | cap
   | ('(' | LPAREN_NEW) (infixtype | '_') tupletype? ')'
   | nominal
+  | lambdatype
+  ;
+
+lambdatype
+  : '{' cap? ID? typeparams? ('(' | LPAREN_NEW) (type (',' type)*)? ')' (':' type)? '?'? '}' (cap | gencap)? ('^' | '!')?
   ;
 
 tupletype
@@ -274,7 +279,7 @@ cap
   ;
 
 typeargs
-  : '[' type (',' type)* ']'
+  : '[' typearg (',' typearg)* ']'
   ;
 
 typeparams
@@ -286,7 +291,21 @@ params
   ;
 
 typeparam
-  : ID (':' type)? ('=' type)?
+  : ID (':' type)? ('=' typearg)?
+  ;
+
+typearg
+  : type
+  | literal
+  | '#' postfix
+  ;
+
+literal
+  : 'true'
+  | 'false'
+  | INT
+  | FLOAT
+  | STRING
   ;
 
 param

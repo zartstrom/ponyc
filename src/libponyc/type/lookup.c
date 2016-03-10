@@ -193,7 +193,7 @@ static ast_t* lookup_base(pass_opt_t* opt, ast_t* from, ast_t* orig,
 
       while(child != NULL)
       {
-        ast_t* r = lookup_base(opt, from, orig, child, name, errors);
+        ast_t* r = lookup_base(opt, from, child, child, name, errors);
 
         if(r == NULL)
         {
@@ -226,8 +226,8 @@ static ast_t* lookup_base(pass_opt_t* opt, ast_t* from, ast_t* orig,
               {
                 // If we don't have a result yet, use this one.
                 result = r;
-              } else if(!is_subtype(r, result, false)) {
-                if(is_subtype(result, r, false))
+              } else if(!is_subtype(r, result, NULL)) {
+                if(is_subtype(result, r, NULL))
                 {
                   // Use the supertype function. Require the most specific
                   // arguments and return the least specific result.
@@ -273,7 +273,7 @@ static ast_t* lookup_base(pass_opt_t* opt, ast_t* from, ast_t* orig,
 
       while(child != NULL)
       {
-        ast_t* r = lookup_base(opt, from, orig, child, name, false);
+        ast_t* r = lookup_base(opt, from, child, child, name, false);
 
         if(r != NULL)
         {
@@ -290,8 +290,8 @@ static ast_t* lookup_base(pass_opt_t* opt, ast_t* from, ast_t* orig,
               {
                 // If we don't have a result yet, use this one.
                 result = r;
-              } else if(!is_subtype(result, r, false)) {
-                if(is_subtype(r, result, false))
+              } else if(!is_subtype(result, r, NULL)) {
+                if(is_subtype(r, result, NULL))
                 {
                   // Use the subtype function. Require the least specific
                   // arguments and return the most specific result.

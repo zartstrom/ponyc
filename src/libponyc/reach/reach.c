@@ -10,8 +10,10 @@
 #include <string.h>
 #include <assert.h>
 
-DECLARE_STACK(reachable_method_stack, reachable_method_t);
-DEFINE_STACK(reachable_method_stack, reachable_method_t);
+DECLARE_STACK(reachable_method_stack, reachable_method_stack_t,
+  reachable_method_t);
+DEFINE_STACK(reachable_method_stack, reachable_method_stack_t,
+  reachable_method_t);
 
 static reachable_type_t* add_type(reachable_method_stack_t** s,
   reachable_types_t* r, uint32_t* next_type_id, ast_t* type);
@@ -25,7 +27,7 @@ static void reachable_expr(reachable_method_stack_t** s,
 
 static size_t reachable_method_hash(reachable_method_t* m)
 {
-  return hash_ptr(m->name);
+  return ponyint_hash_ptr(m->name);
 }
 
 static bool reachable_method_cmp(reachable_method_t* a, reachable_method_t* b)
@@ -40,13 +42,13 @@ static void reachable_method_free(reachable_method_t* m)
   POOL_FREE(reachable_method_t, m);
 }
 
-DEFINE_HASHMAP(reachable_methods, reachable_method_t, reachable_method_hash,
-  reachable_method_cmp, pool_alloc_size, pool_free_size, reachable_method_free
-  );
+DEFINE_HASHMAP(reachable_methods, reachable_methods_t, reachable_method_t,
+  reachable_method_hash, reachable_method_cmp, ponyint_pool_alloc_size,
+  ponyint_pool_free_size, reachable_method_free);
 
 static size_t reachable_method_name_hash(reachable_method_name_t* m)
 {
-  return hash_ptr(m->name);
+  return ponyint_hash_ptr(m->name);
 }
 
 static bool reachable_method_name_cmp(reachable_method_name_t* a,
@@ -61,13 +63,14 @@ static void reachable_method_name_free(reachable_method_name_t* m)
   POOL_FREE(reachable_method_name_t, m);
 }
 
-DEFINE_HASHMAP(reachable_method_names, reachable_method_name_t,
-  reachable_method_name_hash, reachable_method_name_cmp, pool_alloc_size,
-  pool_free_size, reachable_method_name_free);
+DEFINE_HASHMAP(reachable_method_names, reachable_method_names_t,
+  reachable_method_name_t, reachable_method_name_hash,
+  reachable_method_name_cmp, ponyint_pool_alloc_size, ponyint_pool_free_size,
+  reachable_method_name_free);
 
 static size_t reachable_type_hash(reachable_type_t* t)
 {
-  return hash_ptr(t->name);
+  return ponyint_hash_ptr(t->name);
 }
 
 static bool reachable_type_cmp(reachable_type_t* a, reachable_type_t* b)
@@ -83,11 +86,13 @@ static void reachable_type_free(reachable_type_t* t)
   POOL_FREE(reachable_type_t, t);
 }
 
-DEFINE_HASHMAP(reachable_types, reachable_type_t, reachable_type_hash,
-  reachable_type_cmp, pool_alloc_size, pool_free_size, reachable_type_free);
+DEFINE_HASHMAP(reachable_types, reachable_types_t, reachable_type_t,
+  reachable_type_hash, reachable_type_cmp, ponyint_pool_alloc_size,
+  ponyint_pool_free_size, reachable_type_free);
 
-DEFINE_HASHMAP(reachable_type_cache, reachable_type_t, reachable_type_hash,
-  reachable_type_cmp, pool_alloc_size, pool_free_size, NULL);
+DEFINE_HASHMAP(reachable_type_cache, reachable_type_cache_t, reachable_type_t,
+  reachable_type_hash, reachable_type_cmp, ponyint_pool_alloc_size,
+  ponyint_pool_free_size, NULL);
 
 static void add_rmethod(reachable_method_stack_t** s,
   reachable_type_t* t, reachable_method_name_t* n, ast_t* typeargs)
@@ -198,7 +203,7 @@ static void add_types_to_trait(reachable_method_stack_t** s,
       case TK_INTERFACE:
       {
         // Use the same typeid.
-        if(interface && is_eqtype(t->type, t2->type, false))
+        if(interface && is_eqtype(t->type, t2->type, NULL))
           t->type_id = t2->type_id;
         break;
       }
@@ -206,7 +211,7 @@ static void add_types_to_trait(reachable_method_stack_t** s,
       case TK_PRIMITIVE:
       case TK_CLASS:
       case TK_ACTOR:
-        if(is_subtype(t2->type, t->type, false))
+        if(is_subtype(t2->type, t->type, NULL))
         {
           reachable_type_cache_put(&t->subtypes, t2);
           reachable_type_cache_put(&t2->subtypes, t);
@@ -236,7 +241,7 @@ static void add_traits_to_type(reachable_method_stack_t** s,
     {
       case TK_INTERFACE:
       case TK_TRAIT:
-        if(is_subtype(t->type, t2->type, false))
+        if(is_subtype(t->type, t2->type, NULL))
         {
           reachable_type_cache_put(&t->subtypes, t2);
           reachable_type_cache_put(&t2->subtypes, t);
@@ -441,8 +446,7 @@ static void reachable_pattern(reachable_method_stack_t** s,
     case TK_NONE:
       break;
 
-    case TK_VAR:
-    case TK_LET:
+    case TK_MATCH_CAPTURE:
     {
       AST_GET_CHILDREN(ast, idseq, type);
       add_type(s, r, next_type_id, type);
@@ -525,18 +529,36 @@ static void reachable_ffi(reachable_method_stack_t** s, reachable_types_t* r,
   uint32_t* next_type_id, ast_t* ast)
 {
   AST_GET_CHILDREN(ast, name, return_typeargs, args, namedargs, question);
-  ast_t* decl = ast_get(ast, ast_name(name), NULL);
+  ast_t* decl = (ast_t*)ast_data(ast);
 
   if(decl != NULL)
   {
     AST_GET_CHILDREN(decl, decl_name, decl_ret_typeargs, params, named_params,
       decl_error);
 
+    args = params;
     return_typeargs = decl_ret_typeargs;
   }
 
   ast_t* return_type = ast_child(return_typeargs);
   add_type(s, r, next_type_id, return_type);
+
+  ast_t* arg = ast_child(args);
+
+  while(arg != NULL)
+  {
+    if(ast_id(arg) != TK_ELLIPSIS)
+    {
+      ast_t* type = ast_type(arg);
+
+      if(type == NULL)
+        type = ast_childidx(arg, 1);
+
+      add_type(s, r, next_type_id, type);
+    }
+
+    arg = ast_sibling(arg);
+  }
 }
 
 static void reachable_expr(reachable_method_stack_t** s, reachable_types_t* r,

@@ -229,13 +229,13 @@ int main(int argc, char* argv[])
   bool print_package_ast = false;
 
   opt_state_t s;
-  opt_init(args, &s, &argc, argv);
+  ponyint_opt_init(args, &s, &argc, argv);
 
   bool ok = true;
   bool print_usage = false;
   int id;
 
-  while((id = opt_next(&s)) != -1)
+  while((id = ponyint_opt_next(&s)) != -1)
   {
     switch(id)
     {
@@ -297,7 +297,7 @@ int main(int argc, char* argv[])
     }
   }
 
-#ifdef PLATFORM_IS_WINDOWS
+#if defined(PLATFORM_IS_WINDOWS)
   opt.strip_debug = true;
 #endif
 
@@ -326,7 +326,7 @@ int main(int argc, char* argv[])
   if(!ok && get_error_count() == 0)
     printf("Error: internal failure not reported\n");
 
-  package_done(&opt);
+  package_done(&opt, true);
   pass_opt_done(&opt);
   stringtab_done();
 

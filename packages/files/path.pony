@@ -22,7 +22,7 @@ primitive Path
       c == '/'
     end
 
-  fun sep(): String =>
+  fun tag sep(): String =>
     """
     Return the path separator as a string.
     """
@@ -185,12 +185,24 @@ primitive Path
       "."
     end
 
+  fun normcase(path: String): String =>
+    """
+    Normalizes the case of path for the runtime platform.
+    """
+    if Platform.windows() then
+      recover val path.lower().replace("/", "\\") end
+    elseif Platform.osx() then
+      path.lower()
+    else
+      path
+    end
+
   fun cwd(): String =>
     """
     Returns the program's working directory. Setting the working directory is
     not supported, as it is not concurrency-safe.
     """
-    recover String.from_cstring(@os_cwd[Pointer[U8]]()) end
+    recover String.from_cstring(@pony_os_cwd[Pointer[U8]]()) end
 
   fun abs(path: String): String =>
     """
@@ -290,6 +302,23 @@ primitive Path
       result
     else
       target_clean.substring(target_0)
+    end
+
+  fun split(path: String, separator: String = Path.sep()): (String, String) =>
+    """
+    Splits the path into a pair, (head, tail) where tail is the last pathname
+    component and head is everything leading up to that. The tail part will
+    never contain a slash; if path ends in a slash, tail will be empty. If
+    there is no slash in path, head will be empty. If path is empty, both head
+    and tail are empty. The path in head will be cleaned before it is returned.
+    In all cases, join(head, tail) returns a path to the same location as path
+    (but the strings may differ). Also see the functions dir() and base().
+    """
+    try
+      var i = path.rfind(separator)
+      (clean(path.substring(0, i)), path.substring(i+separator.size().isize()))
+    else
+      ("", path)
     end
 
   fun base(path: String): String =>
@@ -451,7 +480,7 @@ primitive Path
     Return the equivalent canonical absolute path. Raise an error if there
     isn't one.
     """
-    var cstring = @os_realpath[Pointer[U8] iso^](path.cstring())
+    var cstring = @pony_os_realpath[Pointer[U8] iso^](path.cstring())
 
     if cstring.is_null() then
       error
@@ -489,3 +518,24 @@ primitive Path
     end
 
     array
+
+  fun random(len: USize = 6): String =>
+    """
+    Returns a pseudo-random base, suitable as a temporary file name or
+    directory name, but not guaranteed to not already exist.
+    """
+    let letters =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    let s = recover String(len) end
+    var n = USize(0)
+    var r = Time.nanos().usize()
+
+    try
+      while n < len do
+        let c = letters(r % letters.size())
+        r = r / letters.size()
+        s.push(c)
+        n = n + 1
+      end
+    end
+    s

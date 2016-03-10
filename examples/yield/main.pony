@@ -195,7 +195,7 @@ actor Main
     var err : Bool = false 
 
     let options = Options(env) +
-      ("punk", "l", None) +
+      ("punk", "p", None) +
       ("lonely", "l", None) +
       ("bench", "b", I64Argument) +
       ("debug", "d", None)
@@ -242,10 +242,10 @@ actor Main
   fun usage() =>
     _env.out.print(
     """
-      yield ( --punk | --lonely | --bench ) [ OPTIONS ]
+      yield ( --punk | --lonely | --bench NUM ) [ OPTIONS ]
         --punk, -p      Run a punctuated stream demonstration
         --lonely, -l    Run a non-interruptible behaviour with logic that runs forever
-        --bench, -b     Run an instrumented behaviour to guesstimate overhead of non/interruptive
+        --bench, -b NUM Run an instrumented behaviour to guesstimate overhead of non/interruptive
 
       OPTIONS
         --debug, -d     Run in debug mode with verbose output

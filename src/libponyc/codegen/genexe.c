@@ -164,7 +164,7 @@ static void gen_main(compile_t* c, gentype_t* main_g, gentype_t* env_g)
   uint32_t index = genfun_vtable_index(c, main_g, stringtab("create"), NULL);
 
   size_t msg_size = (size_t)LLVMABISizeOfType(c->target_data, msg_type);
-  args[0] = LLVMConstInt(c->i32, pool_index(msg_size), false);
+  args[0] = LLVMConstInt(c->i32, ponyint_pool_index(msg_size), false);
   args[1] = LLVMConstInt(c->i32, index, false);
   LLVMValueRef msg = gencall_runtime(c, "pony_alloc_msg", args, 2, "");
   LLVMValueRef msg_ptr = LLVMBuildBitCast(c->builder, msg, msg_type_ptr, "");
@@ -181,7 +181,8 @@ static void gen_main(compile_t* c, gentype_t* main_g, gentype_t* env_g)
   args[0] = ctx;
   args[1] = LLVMBuildBitCast(c->builder, env, c->object_ptr, "");
   args[2] = LLVMGetNamedFunction(c->module, env_trace);
-  gencall_runtime(c, "pony_traceobject", args, 3, "");
+  args[3] = LLVMConstInt(c->i32, 1, false);
+  gencall_runtime(c, "pony_traceobject", args, 4, "");
 
   args[0] = ctx;
   gencall_runtime(c, "pony_send_done", args, 1, "");
@@ -203,7 +204,7 @@ static void gen_main(compile_t* c, gentype_t* main_g, gentype_t* env_g)
     LLVMValueRef final_actor = create_main(c, main_g, ctx);
     primitive_call(c, stringtab("_final"), NULL);
     args[0] = final_actor;
-    gencall_runtime(c, "pony_destroy", args, 1, "");
+    gencall_runtime(c, "ponyint_destroy", args, 1, "");
   }
 
   // Return the runtime exit code.
@@ -236,27 +237,28 @@ static bool link_exe(compile_t* c, ast_t* program,
   size_t arch_len = arch - c->opt->triple;
   size_t ld_len = 128 + arch_len + strlen(file_exe) + strlen(file_o) +
     strlen(lib_args);
-  char* ld_cmd = (char*)pool_alloc_size(ld_len);
+  char* ld_cmd = (char*)ponyint_pool_alloc_size(ld_len);
 
+  // Avoid incorrect ld, eg from macports.
   snprintf(ld_cmd, ld_len,
-    "ld -execute -no_pie -dead_strip -arch %.*s -macosx_version_min 10.8 "
-    "-o %s %s %s -lponyrt -lSystem",
+    "/usr/bin/ld -execute -no_pie -dead_strip -arch %.*s "
+    "-macosx_version_min 10.8 -o %s %s %s -lponyrt -lSystem",
     (int)arch_len, c->opt->triple, file_exe, file_o, lib_args
     );
 
   if(system(ld_cmd) != 0)
   {
-    errorf(NULL, "unable to link");
-    pool_free_size(ld_len, ld_cmd);
+    errorf(NULL, "unable to link: %s", ld_cmd);
+    ponyint_pool_free_size(ld_len, ld_cmd);
     return false;
   }
 
-  pool_free_size(ld_len, ld_cmd);
+  ponyint_pool_free_size(ld_len, ld_cmd);
 
   if(!c->opt->strip_debug)
   {
     size_t dsym_len = 16 + strlen(file_exe);
-    char* dsym_cmd = (char*)pool_alloc_size(dsym_len);
+    char* dsym_cmd = (char*)ponyint_pool_alloc_size(dsym_len);
 
     snprintf(dsym_cmd, dsym_len, "rm -rf %s.dSYM", file_exe);
     system(dsym_cmd);
@@ -266,20 +268,19 @@ static bool link_exe(compile_t* c, ast_t* program,
     if(system(dsym_cmd) != 0)
       errorf(NULL, "unable to create dsym");
 
-    pool_free_size(dsym_len, dsym_cmd);
+    ponyint_pool_free_size(dsym_len, dsym_cmd);
   }
 
 #elif defined(PLATFORM_IS_LINUX) || defined(PLATFORM_IS_FREEBSD)
   const char* file_exe = suffix_filename(c->opt->output, "", c->filename, "");
   printf("Linking %s\n", file_exe);
 
-  use_path(program, "/usr/local/lib", NULL, NULL);
   program_lib_build_args(program, "-L", "-Wl,--start-group ",
     "-Wl,--end-group ", "-l", "");
   const char* lib_args = program_lib_args(program);
 
   size_t ld_len = 512 + strlen(file_exe) + strlen(file_o) + strlen(lib_args);
-  char* ld_cmd = (char*)pool_alloc_size(ld_len);
+  char* ld_cmd = (char*)ponyint_pool_alloc_size(ld_len);
 
   snprintf(ld_cmd, ld_len, PONY_COMPILER " -o %s -O3 -march=" PONY_ARCH " "
 #ifndef PLATFORM_IS_ILP32
@@ -303,18 +304,18 @@ static bool link_exe(compile_t* c, ast_t* program,
 
   if(system(ld_cmd) != 0)
   {
-    errorf(NULL, "unable to link");
-    pool_free_size(ld_len, ld_cmd);
+    errorf(NULL, "unable to link: %s", ld_cmd);
+    ponyint_pool_free_size(ld_len, ld_cmd);
     return false;
   }
 
-  pool_free_size(ld_len, ld_cmd);
+  ponyint_pool_free_size(ld_len, ld_cmd);
 #elif defined(PLATFORM_IS_WINDOWS)
   vcvars_t vcvars;
 
   if(!vcvars_get(&vcvars))
   {
-    errorf(NULL, "unable to link");
+    errorf(NULL, "unable to link: no vcvars");
     return false;
   }
 
@@ -327,7 +328,7 @@ static bool link_exe(compile_t* c, ast_t* program,
 
   size_t ld_len = 256 + strlen(file_exe) + strlen(file_o) +
     strlen(vcvars.kernel32) + strlen(vcvars.msvcrt) + strlen(lib_args);
-  char* ld_cmd = (char*)pool_alloc_size(ld_len);
+  char* ld_cmd = (char*)ponyint_pool_alloc_size(ld_len);
 
   snprintf(ld_cmd, ld_len,
     "cmd /C \"\"%s\" /DEBUG /NOLOGO /MACHINE:X64 "
@@ -341,12 +342,12 @@ static bool link_exe(compile_t* c, ast_t* program,
 
   if(system(ld_cmd) == -1)
   {
-    errorf(NULL, "unable to link");
-    pool_free_size(ld_len, ld_cmd);
+    errorf(NULL, "unable to link: %s", ld_cmd);
+    ponyint_pool_free_size(ld_len, ld_cmd);
     return false;
   }
 
-  pool_free_size(ld_len, ld_cmd);
+  ponyint_pool_free_size(ld_len, ld_cmd);
 #endif
 
   return true;

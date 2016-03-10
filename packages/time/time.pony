@@ -8,6 +8,26 @@ use @clock_gettime[I32](clock: U32, ts: Pointer[(I32, I32)])
 
 use @mach_absolute_time[U64]() if osx
 
+type _Clock is (_ClockRealtime | _ClockMonotonic)
+
+primitive _ClockRealtime
+  fun apply(): U32 =>
+    ifdef linux or freebsd then
+      0
+    else
+      compile_error "no clock_gettime realtime clock"
+    end
+
+primitive _ClockMonotonic
+  fun apply(): U32 =>
+    ifdef linux then
+      1
+    elseif freebsd then
+      4
+    else
+      compile_error "no clock_gettime monotonic clock"
+    end
+
 primitive Time
   """
   A collection of ways to fetch the current time.
@@ -22,7 +42,7 @@ primitive Time
       @gettimeofday[I32](addressof ts, U64(0))
       (ts._1, ts._2 * 1000)
     elseif linux or freebsd then
-      _clock_gettime(0)
+      _clock_gettime(_ClockRealtime)
     elseif windows then
       var ft: (U32, U32) = (0, 0)
       @GetSystemTimeAsFileTime[None](addressof ft)
@@ -32,7 +52,7 @@ primitive Time
       var nsec = (epoch - (sec * 10000000)) * 100
       (sec, nsec)
     else
-      (0, 0)
+      compile_error "unsupported platform"
     end
 
   fun seconds(): I64 =>
@@ -48,13 +68,13 @@ primitive Time
     ifdef osx then
       @mach_absolute_time() / 1000000
     elseif linux or freebsd then
-      var ts = _clock_gettime(1)
+      var ts = _clock_gettime(_ClockMonotonic)
       ((ts._1 * 1000) + (ts._2 / 1000000)).u64()
     elseif windows then
       (let qpc, let qpf) = _query_performance_counter()
       (qpc * 1000) / qpf
     else
-      0
+      compile_error "unsupported platform"
     end
 
   fun micros(): U64 =>
@@ -64,13 +84,13 @@ primitive Time
     ifdef osx then
       @mach_absolute_time() / 1000
     elseif linux or freebsd then
-      var ts = _clock_gettime(1)
+      var ts = _clock_gettime(_ClockMonotonic)
       ((ts._1 * 1000000) + (ts._2 / 1000)).u64()
     elseif windows then
       (let qpc, let qpf) = _query_performance_counter()
       (qpc * 1000000) / qpf
     else
-      0
+      compile_error "unsupported platform"
     end
 
   fun nanos(): U64 =>
@@ -80,13 +100,13 @@ primitive Time
     ifdef osx then
       @mach_absolute_time()
     elseif linux or freebsd then
-      var ts = _clock_gettime(1)
+      var ts = _clock_gettime(_ClockMonotonic)
       ((ts._1 * 1000000000) + ts._2).u64()
     elseif windows then
       (let qpc, let qpf) = _query_performance_counter()
       (qpc * 1000000000) / qpf
     else
-      0
+      compile_error "unsupported platform"
     end
 
   fun wall_to_nanos(wall: (I64, I64)): U64 =>
@@ -116,7 +136,7 @@ primitive Time
       @"internal.x86.cpuid"[(I32, I32, I32, I32)](I32(0))
       @"llvm.x86.rdtsc"[U64]()
     else
-      0
+      compile_error "perf_begin only supported on x86"
     end
 
   fun perf_end(): U64 =>
@@ -131,23 +151,23 @@ primitive Time
       @"internal.x86.cpuid"[(I32, I32, I32, I32)](I32(0))
       ts
     else
-      0
+      compile_error "perf_end only supported on x86"
     end
 
-  fun _clock_gettime(clock: U32): (I64, I64) =>
+  fun _clock_gettime(clock: _Clock): (I64, I64) =>
     """
     Return a clock time on linux and freebsd.
     """
     ifdef lp64 and (linux or freebsd) then
       var ts: (I64, I64) = (0, 0)
-      @clock_gettime(clock, addressof ts)
+      @clock_gettime(clock(), addressof ts)
       ts
     elseif ilp32 and (linux or freebsd) then
       var ts: (I32, I32) = (0, 0)
-      @clock_gettime(clock, addressof ts)
+      @clock_gettime(clock(), addressof ts)
       (ts._1.i64(), ts._2.i64())
     else
-      (0, 0)
+      compile_error "no clock_gettime"
     end
 
   fun _query_performance_counter(): (U64 /* qpc */, U64 /* qpf */) =>
@@ -163,5 +183,5 @@ primitive Time
       let qpc = pc._1.u64() or (pc._2.u64() << 32)
       (qpc, qpf)
     else
-      (0, 0)
+      compile_error "no QueryPerformanceCounter"
     end

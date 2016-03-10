@@ -74,31 +74,6 @@ bool expr_seq(pass_opt_t* opt, ast_t* ast)
   return ok;
 }
 
-// Check whether the given ifdef clause is a compile_error.
-static bool check_compile_error(ast_t* ast)
-{
-  assert(ast != NULL);
-
-  if(ast_id(ast) != TK_SEQ)
-    return true;
-
-  ast_t* clause_cmd = ast_child(ast);
-  if(ast_id(clause_cmd) == TK_COMPILE_ERROR)
-  {
-    // We've hit a compile error.
-    ast_t* reason_seq = ast_child(clause_cmd);
-    assert(ast_id(reason_seq) == TK_SEQ);
-
-    ast_t* reason = ast_child(reason_seq);
-    assert(ast_id(reason) == TK_STRING);
-
-    ast_error(clause_cmd, "compile error \"%s\"", ast_name(reason));
-    return false;
-  }
-
-  return true;
-}
-
 // Determine which branch of the given ifdef to use and convert the ifdef into
 // an if.
 static bool resolve_ifdef(pass_opt_t* opt, ast_t* ast)
@@ -111,14 +86,8 @@ static bool resolve_ifdef(pass_opt_t* opt, ast_t* ast)
   // adds the conditions of outer ifdefs (if any) it may be that BOTH our then
   // and else conditions fail. In this case we can pick either one, since an
   // outer ifdef will throw away the whole branch this ifdef is in anyway.
-  // If both conditions fail we must NOT check for compile_errors in either
-  // clause.
-  // It is not possible for both conditions to be true.
   AST_GET_CHILDREN(ast, cond, then_clause, else_clause, else_cond);
   bool then_value = ifdef_cond_eval(cond, opt);
-  bool else_value = ifdef_cond_eval(else_cond, opt);
-
-  assert(!then_value || !else_value);
 
   ast_setid(ast, TK_IF);
   REPLACE(&cond, NODE(TK_SEQ, NODE(then_value ? TK_TRUE : TK_FALSE)));
@@ -126,14 +95,6 @@ static bool resolve_ifdef(pass_opt_t* opt, ast_t* ast)
 
   // Don't need else condition any more.
   ast_remove(else_cond);
-
-  // Check for compile_errors.
-  if(then_value && !check_compile_error(then_clause))
-    return false;
-
-  if(else_value && !check_compile_error(else_clause))
-    return false;
-
   return true;
 }
 
@@ -390,6 +351,12 @@ bool expr_recover(ast_t* ast)
   if(is_typecheck_error(type))
     return false;
 
+  if(is_type_literal(type))
+  {
+    make_literal_type(ast);
+    return true;
+  }
+
   ast_t* r_type = recover_type(type, ast_id(cap));
 
   if(r_type == NULL)
@@ -514,14 +481,19 @@ bool expr_return(pass_opt_t* opt, ast_t* ast)
       ast_t* a_type = alias(type);
       ast_t* a_body_type = alias(body_type);
 
-      if(!is_subtype(body_type, type, true) ||
-        !is_subtype(a_body_type, a_type, true))
+      errorframe_t info = NULL;
+      if(!is_subtype(body_type, type, &info) ||
+        !is_subtype(a_body_type, a_type, &info))
       {
+        errorframe_t frame = NULL;
         ast_t* last = ast_childlast(body);
-        ast_error(last, "returned value isn't the return type");
-        ast_error(type, "function return type: %s", ast_print_type(type));
-        ast_error(body_type, "returned value type: %s",
+        ast_error_frame(&frame, last, "returned value isn't the return type");
+        ast_error_frame(&frame, type, "function return type: %s",
+          ast_print_type(type));
+        ast_error_frame(&frame, body_type, "returned value type: %s",
           ast_print_type(body_type));
+        errorframe_append(&frame, &info);
+        errorframe_report(&frame);
         ok = false;
       }
 
@@ -550,6 +522,12 @@ bool expr_compile_error(ast_t* ast)
   // compile_error is always the last expression in a sequence
   assert(ast_sibling(ast) == NULL);
 
-  ast_settype(ast, ast_from(ast, TK_ERROR));
+  ast_settype(ast, ast_from(ast, TK_COMPILE_ERROR));
+  return true;
+}
+
+bool expr_location(pass_opt_t* opt, ast_t* ast)
+{
+  ast_settype(ast, type_builtin(opt, ast, "SourceLoc"));
   return true;
 }
