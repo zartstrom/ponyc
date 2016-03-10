@@ -37,7 +37,7 @@ install:
     fi;
 
 script:
-  - make test;
+  - make verbose=1 test;
   - if [[ $TRAVIS_OSNAME == "linux" && $CC == "gcc" && $TRAVIS_BRANCH == "release" ]];
     then
       cat VERSION | xargs sh .bintray.sh debian $1;
