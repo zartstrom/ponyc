@@ -3602,20 +3602,20 @@
 define the name() and apply() functions. The remaining functions specify
 additional test options.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-applyh-testhelper-val-none-val-may-raise-an-error">fun ref  apply(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-applyh-testhelper-val-none-val">fun ref  <strong>apply</strong>(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>Run the test.
 Raising an error is interpreted as a test failure.</p>
-<h3 id="fun-box-exclusion_group-string-val">fun box  exclusion_group(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-exclusion_group-string-val">fun box  <strong>exclusion_group</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Report the test exclusion group, returning an empty string for none.
 The default body returns an empty string.</p>
-<h3 id="fun-box-name-string-val">fun box  name(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-name-string-val">fun box  <strong>name</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Report the test name, which is used when printing test results and on the
 command line to select tests to run.</p>
-<h3 id="fun-ref-tear_downh-testhelper-val-none-val">fun ref  tear_down(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-tear_downh-testhelper-val-none-val">fun ref  <strong>tear_down</strong>(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Tidy up after the test has completed.
 Called for each run test, whether that test passed, succeeded or timed out.
 The default is to do nothing.</p>
-<h3 id="fun-ref-timed_outh-testhelper-val-none-val">fun ref  timed_out(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-timed_outh-testhelper-val-none-val">fun ref  <strong>timed_out</strong>(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Tear down a possibly hanging test.
 Called when the timeout specified by to long_test() expires.
 There is no need for this function to call complete(false).

@@ -3606,18 +3606,18 @@
 be fulfilled or rejected.</p>
 <p>Any number of promises can be</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="behaviours">Behaviours</h2>
-<h3 id="be-applyvalue-a-share">be apply(value: A #share)</h3>
+<h3 id="be-applyvalue-a-share">be <strong>apply</strong>(value: A #share)</h3>
 <p>Fulfill the promise.</p>
-<h3 id="be-_attachattach-_ithen91a-share93-iso">be _attach(attach: <a href="../promises-_IThen">_IThen</a>[A #share] iso)</h3>
+<h3 id="be-_attachattach-_ithen91a-share93-iso">be <strong>_attach</strong>(attach: <a href="../promises-_IThen">_IThen</a>[A #share] iso)</h3>
 <p>Attaches a step asynchronously. If this promise has already been fulfilled
 or rejected, immediately fulfill or reject the incoming step. Otherwise,
 keep it in a list.</p>
-<h3 id="be-reject">be reject()</h3>
+<h3 id="be-reject">be <strong>reject</strong>()</h3>
 <p>Reject the promise.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-tag-next91b-any-share93fulfill-fulfill91a-share-b-share93-iso-optional-rejected-reject91b-share93-iso-promise91b-share93-tag">fun tag  next[B: <a href="../builtin-Any">Any</a> #share](fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, optional rejected: <a href="../promises-Reject">Reject</a>[B #share] iso): <a href="../promises-Promise">Promise</a>[B #share] tag</h3>
+<h3 id="fun-tag-next91b-any-share93fulfill-fulfill91a-share-b-share93-iso-optional-rejected-reject91b-share93-iso-promise91b-share93-tag">fun tag  <strong>next</strong>[B: <a href="../builtin-Any">Any</a> #share](fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, optional rejected: <a href="../promises-Reject">Reject</a>[B #share] iso): <a href="../promises-Promise">Promise</a>[B #share] tag</h3>
 <p>Chain a promise after this one.</p>
 <p>When this promise is fulfilled, the result of type A is passed to the
 fulfill function, generating in an intermediate result of type B. This

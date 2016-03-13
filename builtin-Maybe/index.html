@@ -3605,18 +3605,18 @@ for structs that need to be passed to and from the C FFI.</p>
 <p>An optional type for anything that isn't a struct should be encoded as a
 union type, for example (A | None).</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createthat-a">new create(that: A)</h3>
+<h3 id="new-createthat-a">new <strong>create</strong>(that: A)</h3>
 <p>This re-encodes the type of <code>that</code> from A to Maybe[A], allowing <code>that</code> to
 be assigned to a field or variable of type Maybe[A]. It doesn't allocate a
 wrapper object: there is no containing object for <code>that</code>.</p>
-<h3 id="new-none">new none()</h3>
+<h3 id="new-none">new <strong>none</strong>()</h3>
 <p>This returns a null pointer typed as a Maybe[A].</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-apply-this-a-may-raise-an-error">fun box  apply(): this-&gt;A ?, may raise an error</h3>
+<h3 id="fun-box-apply-this-a">fun box  <strong>apply</strong>(): this-&gt;A ?</h3>
 <p>This re-encodes the type of <code>this</code> from Maybe[A] to A, allowing <code>this</code> to
 be assigned to a field of variable of type A. If <code>this</code> is a null pointer,
 an error is raised.</p>
-<h3 id="fun-box-is_none-bool-val">fun box  is_none(): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_none-bool-val">fun box  <strong>is_none</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if <code>this</code> is null (ie apply would raise an error).</p>
               
             </div>

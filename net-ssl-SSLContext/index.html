@@ -3602,39 +3602,39 @@
 <p><strong>Default capability</strong>: <em>val</em></p>
 <p>An SSL context is used to create SSL sessions.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-allow_tls_v1state-bool-val-sslcontext-ref">fun ref  allow_tls_v1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-allow_tls_v1state-bool-val-sslcontext-ref">fun ref  <strong>allow_tls_v1</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1. Defaults to true.</p>
-<h3 id="fun-ref-allow_tls_v1_1state-bool-val-sslcontext-ref">fun ref  allow_tls_v1_1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-allow_tls_v1_1state-bool-val-sslcontext-ref">fun ref  <strong>allow_tls_v1_1</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1.1. Defaults to true.</p>
-<h3 id="fun-ref-allow_tls_v1_2state-bool-val-sslcontext-ref">fun ref  allow_tls_v1_2(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-allow_tls_v1_2state-bool-val-sslcontext-ref">fun ref  <strong>allow_tls_v1_2</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1.2. Defaults to true.</p>
-<h3 id="fun-box-clientoptional-hostname-string-val-ssl-iso-may-raise-an-error">fun box  client(optional hostname: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSL">SSL</a> iso^ ?, may raise an error</h3>
+<h3 id="fun-box-clientoptional-hostname-string-val-ssl-iso">fun box  <strong>client</strong>(optional hostname: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSL">SSL</a> iso^ ?</h3>
 <p>Create a client-side SSL session. If a hostname is supplied, the server
 side certificate must be valid for that hostname.</p>
-<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the SSL context.</p>
-<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the SSL context.</p>
-<h3 id="fun-box-server-ssl-iso-may-raise-an-error">fun box  server(): <a href="../net-ssl-SSL">SSL</a> iso^ ?, may raise an error</h3>
+<h3 id="fun-box-server-ssl-iso">fun box  <strong>server</strong>(): <a href="../net-ssl-SSL">SSL</a> iso^ ?</h3>
 <p>Create a server-side SSL session.</p>
-<h3 id="fun-ref-set_authorityfile-string-val-optional-path-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_authority(file: <a href="../builtin-String">String</a> val, optional path: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
+<h3 id="fun-ref-set_authorityfile-string-val-optional-path-string-val-sslcontext-ref">fun ref  <strong>set_authority</strong>(file: <a href="../builtin-String">String</a> val, optional path: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</h3>
 <p>Use a PEM file and/or a directory of PEM files to specify certificate
 authorities. Clients must set this. For servers, it is optional. Use an
 empty string to indicate no file or no path. Raises an error if these
 verify locations aren't valid, or if both are empty strings.</p>
-<h3 id="fun-ref-set_certcert-string-val-key-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_cert(cert: <a href="../builtin-String">String</a> val, key: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
+<h3 id="fun-ref-set_certcert-string-val-key-string-val-sslcontext-ref">fun ref  <strong>set_cert</strong>(cert: <a href="../builtin-String">String</a> val, key: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</h3>
 <p>The cert file is a PEM certificate chain. The key file is a private key.
 Servers must set this. For clients, it is optional.</p>
-<h3 id="fun-ref-set_ciphersciphers-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_ciphers(ciphers: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
+<h3 id="fun-ref-set_ciphersciphers-string-val-sslcontext-ref">fun ref  <strong>set_ciphers</strong>(ciphers: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</h3>
 <p>Set the accepted ciphers. This replaces the existing list. Raises an error
 if the cipher list is invalid.</p>
-<h3 id="fun-ref-set_client_verifystate-bool-val-sslcontext-ref">fun ref  set_client_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-set_client_verifystate-bool-val-sslcontext-ref">fun ref  <strong>set_client_verify</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set to true to require verification. Defaults to true.</p>
-<h3 id="fun-ref-set_server_verifystate-bool-val-sslcontext-ref">fun ref  set_server_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-set_server_verifystate-bool-val-sslcontext-ref">fun ref  <strong>set_server_verify</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set to true to require verification. Defaults to false.</p>
-<h3 id="fun-ref-set_verify_depthdepth-u32-val-sslcontext-ref">fun ref  set_verify_depth(depth: <a href="../builtin-U32">U32</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
+<h3 id="fun-ref-set_verify_depthdepth-u32-val-sslcontext-ref">fun ref  <strong>set_verify_depth</strong>(depth: <a href="../builtin-U32">U32</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set the verify depth. Defaults to 6.</p>
               
             </div>

@@ -3613,43 +3613,43 @@ request, the status is meaningless.</p>
 <li>var url: <a href="../net-http-URL">URL</a> val</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-_emptyoptional-response-bool-val">new _empty(optional response': <a href="../builtin-Bool">Bool</a> val)</h3>
-<h3 id="new-requestoptional-method-string-val-optional-url-url-val-optional-handler-responsehandler-val-none-val">new request(optional method': <a href="../builtin-String">String</a> val, optional url': <a href="../net-http-URL">URL</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
-<h3 id="new-responseoptional-status-u16-val-optional-description-string-val-optional-handler-responsehandler-val-none-val">new response(optional status': <a href="../builtin-U16">U16</a> val, optional description: <a href="../builtin-String">String</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
+<h3 id="new-_emptyoptional-response-bool-val">new <strong>_empty</strong>(optional response': <a href="../builtin-Bool">Bool</a> val)</h3>
+<h3 id="new-requestoptional-method-string-val-optional-url-url-val-optional-handler-responsehandler-val-none-val">new <strong>request</strong>(optional method': <a href="../builtin-String">String</a> val, optional url': <a href="../net-http-URL">URL</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
+<h3 id="new-responseoptional-status-u16-val-optional-description-string-val-optional-handler-responsehandler-val-none-val">new <strong>response</strong>(optional status': <a href="../builtin-U16">U16</a> val, optional description: <a href="../builtin-String">String</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-_add_bodylist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  _add_body(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
+<h3 id="fun-box-addbodylist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  <strong><em>add</em>body</strong>(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
 <p>Add the body to the list.
 TODO: don't include the body for HEAD, 204, 304 or 1xx</p>
-<h3 id="fun-ref-add_chunkdata-byteseq-val-payload-ref">fun ref  add_chunk(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../net-http-Payload">Payload</a> ref^</h3>
+<h3 id="fun-ref-add_chunkdata-byteseq-val-payload-ref">fun ref  <strong>add_chunk</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../net-http-Payload">Payload</a> ref^</h3>
 <p>Add a chunk to the body.</p>
-<h3 id="fun-box-_add_headerslist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  _add_headers(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
+<h3 id="fun-box-addheaderslist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  <strong><em>add</em>headers</strong>(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
 <p>Add the headers to the list.</p>
-<h3 id="fun-box-applykey-string-val-string-val-may-raise-an-error">fun box  apply(key: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-box-applykey-string-val-string-val">fun box  <strong>apply</strong>(key: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Get a header.</p>
-<h3 id="fun-box-body-this-array91byteseq-val93-ref">fun box  body(): this-&gt;<a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] ref</h3>
+<h3 id="fun-box-body-this-array91byteseq-val93-ref">fun box  <strong>body</strong>(): this-&gt;<a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] ref</h3>
 <p>Get the body.</p>
-<h3 id="fun-box-body_size-usize-val">fun box  body_size(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-body_size-usize-val">fun box  <strong>body_size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Get the total size of the body.</p>
-<h3 id="fun-val-_client_fail-none-val">fun val  _client_fail(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-val-clientfail-none-val">fun val  <strong><em>client</em>fail</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Trigger the response handler with an error payload. This is private to
 prevent request handlers from responding to a request more than once.</p>
-<h3 id="fun-val-_client_respondresponse-payload-iso-none-val">fun val  _client_respond(response': <a href="../net-http-Payload">Payload</a> iso): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-val-clientrespondresponse-payload-iso-none-val">fun val  <strong><em>client</em>respond</strong>(response': <a href="../net-http-Payload">Payload</a> iso): <a href="../builtin-None">None</a> val</h3>
 <p>Trigger the response handler. This is private to prevent request handlers
 from responding to a request more than once.</p>
-<h3 id="fun-iso-fail-none-val">fun iso  fail(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-iso-fail-none-val">fun iso  <strong>fail</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Trigger the response handler with an error payload.</p>
-<h3 id="fun-box-headers-this-hashmap91string-val-string-val-hasheq91string-val93-val93-ref">fun box  headers(): this-&gt;<a href="../collections-HashMap">HashMap</a>[<a href="../builtin-String">String</a> val, <a href="../builtin-String">String</a> val, <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-String">String</a> val] val] ref</h3>
+<h3 id="fun-box-headers-this-hashmap91string-val-string-val-hasheq91string-val93-val93-ref">fun box  <strong>headers</strong>(): this-&gt;<a href="../collections-HashMap">HashMap</a>[<a href="../builtin-String">String</a> val, <a href="../builtin-String">String</a> val, <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-String">String</a> val] val] ref</h3>
 <p>Get the headers.</p>
-<h3 id="fun-iso-respondresponse-payload-iso-none-val">fun iso  respond(response': <a href="../net-http-Payload">Payload</a> iso): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-iso-respondresponse-payload-iso-none-val">fun iso  <strong>respond</strong>(response': <a href="../net-http-Payload">Payload</a> iso): <a href="../builtin-None">None</a> val</h3>
 <p>Trigger the response handler.</p>
-<h3 id="fun-ref-updatekey-string-val-value-string-val-payload-ref">fun ref  update(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-String">String</a> val): <a href="../net-http-Payload">Payload</a> ref^</h3>
+<h3 id="fun-ref-updatekey-string-val-value-string-val-payload-ref">fun ref  <strong>update</strong>(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-String">String</a> val): <a href="../net-http-Payload">Payload</a> ref^</h3>
 <p>Set a header. If we've already received the header, append the value as a
 comma separated list, as per RFC 2616 section 4.2.</p>
-<h3 id="fun-box-_writeconn-tcpconnection-tag-optional-keepalive-bool-val-none-val">fun box  _write(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, optional keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_writeconn-tcpconnection-tag-optional-keepalive-bool-val-none-val">fun box  <strong>_write</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, optional keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Writes the payload to a TCP connection.</p>
-<h3 id="fun-box-_write_requestconn-tcpconnection-tag-keepalive-bool-val-none-val">fun box  _write_request(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-writerequestconn-tcpconnection-tag-keepalive-bool-val-none-val">fun box  <strong><em>write</em>request</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Writes an an HTTP request.</p>
-<h3 id="fun-box-_write_responseconn-tcpconnection-tag-keepalive-bool-val-none-val">fun box  _write_response(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-writeresponseconn-tcpconnection-tag-keepalive-bool-val-none-val">fun box  <strong><em>write</em>response</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag, keepalive: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Write as an HTTP response.</p>
               
             </div>

@@ -3602,30 +3602,30 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>A Mersenne Twister. This is a non-cryptographic random number generator.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createoptional-seed-u64-val">new create(optional seed: <a href="../builtin-U64">U64</a> val)</h3>
+<h3 id="new-createoptional-seed-u64-val">new <strong>create</strong>(optional seed: <a href="../builtin-U64">U64</a> val)</h3>
 <p>Create with the specified seed. Returned values are deterministic for a
 given seed.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-tag-has_next-bool-val">fun tag  has_next(): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-ref-intn-u64-val-u64-val">fun ref  int(n: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-ref-_loweri-usize-val-x-u64-val-u64-val-may-raise-an-error">fun ref  _lower(i: <a href="../builtin-USize">USize</a> val, x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val ?, may raise an error</h3>
-<h3 id="fun-tag-_m-usize-val">fun tag  _m(): <a href="../builtin-USize">USize</a> val</h3>
-<h3 id="fun-tag-_maskx-u64-val-y-u64-val-u64-val">fun tag  _mask(x: <a href="../builtin-U64">U64</a> val, y: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-tag-_matrixx-u64-val-u64-val">fun tag  _matrix(x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-tag-_mixx-u64-val-y-u64-val-u64-val">fun tag  _mix(x: <a href="../builtin-U64">U64</a> val, y: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-tag-_n-usize-val">fun tag  _n(): <a href="../builtin-USize">USize</a> val</h3>
-<h3 id="fun-tag-_n1-usize-val">fun tag  _n1(): <a href="../builtin-USize">USize</a> val</h3>
-<h3 id="fun-ref-next-u64-val">fun ref  next(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-has_next-bool-val">fun tag  <strong>has_next</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-ref-intn-u64-val-u64-val">fun ref  <strong>int</strong>(n: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-ref-_loweri-usize-val-x-u64-val-u64-val">fun ref  <strong>_lower</strong>(i: <a href="../builtin-USize">USize</a> val, x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val ?</h3>
+<h3 id="fun-tag-_m-usize-val">fun tag  <strong>_m</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-tag-_maskx-u64-val-y-u64-val-u64-val">fun tag  <strong>_mask</strong>(x: <a href="../builtin-U64">U64</a> val, y: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-_matrixx-u64-val-u64-val">fun tag  <strong>_matrix</strong>(x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-_mixx-u64-val-y-u64-val-u64-val">fun tag  <strong>_mix</strong>(x: <a href="../builtin-U64">U64</a> val, y: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-_n-usize-val">fun tag  <strong>_n</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-tag-_n1-usize-val">fun tag  <strong>_n1</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-ref-next-u64-val">fun ref  <strong>next</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>A random integer in [0, 2^64 - 1]</p>
-<h3 id="fun-ref-_populate-none-val">fun ref  _populate(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_populate-none-val">fun ref  <strong>_populate</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Repopulates the state array.</p>
-<h3 id="fun-ref-real-f64-val">fun ref  real(): <a href="../builtin-F64">F64</a> val</h3>
-<h3 id="fun-ref-u128-u128-val">fun ref  u128(): <a href="../builtin-U128">U128</a> val</h3>
-<h3 id="fun-ref-u16-u16-val">fun ref  u16(): <a href="../builtin-U16">U16</a> val</h3>
-<h3 id="fun-ref-u32-u32-val">fun ref  u32(): <a href="../builtin-U32">U32</a> val</h3>
-<h3 id="fun-ref-u64-u64-val">fun ref  u64(): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-ref-u8-u8-val">fun ref  u8(): <a href="../builtin-U8">U8</a> val</h3>
-<h3 id="fun-ref-_upperi-usize-val-x-u64-val-u64-val-may-raise-an-error">fun ref  _upper(i: <a href="../builtin-USize">USize</a> val, x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-real-f64-val">fun ref  <strong>real</strong>(): <a href="../builtin-F64">F64</a> val</h3>
+<h3 id="fun-ref-u128-u128-val">fun ref  <strong>u128</strong>(): <a href="../builtin-U128">U128</a> val</h3>
+<h3 id="fun-ref-u16-u16-val">fun ref  <strong>u16</strong>(): <a href="../builtin-U16">U16</a> val</h3>
+<h3 id="fun-ref-u32-u32-val">fun ref  <strong>u32</strong>(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-ref-u64-u64-val">fun ref  <strong>u64</strong>(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-ref-u8-u8-val">fun ref  <strong>u8</strong>(): <a href="../builtin-U8">U8</a> val</h3>
+<h3 id="fun-ref-_upperi-usize-val-x-u64-val-u64-val">fun ref  <strong>_upper</strong>(i: <a href="../builtin-USize">USize</a> val, x: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val ?</h3>
               
             </div>
           </div>

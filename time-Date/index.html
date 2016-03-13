@@ -3618,16 +3618,16 @@ indexed from 1, i.e. January is 1, Monday is 1.</p>
 <li>var year: <a href="../builtin-I32">I32</a> val</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createoptional-seconds-i64-val-optional-nanoseconds-i64-val">new create(optional seconds: <a href="../builtin-I64">I64</a> val, optional nanoseconds: <a href="../builtin-I64">I64</a> val)</h3>
+<h3 id="new-createoptional-seconds-i64-val-optional-nanoseconds-i64-val">new <strong>create</strong>(optional seconds: <a href="../builtin-I64">I64</a> val, optional nanoseconds: <a href="../builtin-I64">I64</a> val)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-formatfmt-string-val-string-val">fun box  format(fmt: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-formatfmt-string-val-string-val">fun box  <strong>format</strong>(fmt: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Format the time as for strftime.</p>
-<h3 id="fun-ref-normal-date-ref">fun ref  normal(): <a href="../time-Date">Date</a> ref^</h3>
+<h3 id="fun-ref-normal-date-ref">fun ref  <strong>normal</strong>(): <a href="../time-Date">Date</a> ref^</h3>
 <p>Normalise all the fields of the date. For example, if the hour is 24, it is
 set to 0 and the day is advanced. This allows fields to be changed naively,
 eg. adding 1000 to hours to advance the time by 1000 hours, and then
 normalising the date.</p>
-<h3 id="fun-box-time-i64-val">fun box  time(): <a href="../builtin-I64">I64</a> val</h3>
+<h3 id="fun-box-time-i64-val">fun box  <strong>time</strong>(): <a href="../builtin-I64">I64</a> val</h3>
 <p>Return a POSIX time. Treats the date as UTC.</p>
               
             </div>

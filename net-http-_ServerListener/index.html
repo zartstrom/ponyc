@@ -3602,16 +3602,16 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>Manages the listening socket for an HTTP server.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createserver-server-tag-sslctx-sslcontext-val-none-val-handler-requesthandler-val-logger-logger-val">new create(server: <a href="../net-http-Server">Server</a> tag, sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val)</h3>
+<h3 id="new-createserver-server-tag-sslctx-sslcontext-val-none-val-handler-requesthandler-val-logger-logger-val">new <strong>create</strong>(server: <a href="../net-http-Server">Server</a> tag, sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val)</h3>
 <p>Creates a new listening socket manager.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-closedlisten-tcplistener-ref-none-val">fun ref  closed(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-closedlisten-tcplistener-ref-none-val">fun ref  <strong>closed</strong>(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the server we have stopped listening.</p>
-<h3 id="fun-ref-connectedlisten-tcplistener-ref-tcpconnectionnotify-iso">fun ref  connected(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso^</h3>
+<h3 id="fun-ref-connectedlisten-tcplistener-ref-tcpconnectionnotify-iso">fun ref  <strong>connected</strong>(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso^</h3>
 <p>Create a notifier for a specific HTTP socket.</p>
-<h3 id="fun-ref-listeninglisten-tcplistener-ref-none-val">fun ref  listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-listeninglisten-tcplistener-ref-none-val">fun ref  <strong>listening</strong>(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the server of the bound IP address.</p>
-<h3 id="fun-ref-not_listeninglisten-tcplistener-ref-none-val">fun ref  not_listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-not_listeninglisten-tcplistener-ref-none-val">fun ref  <strong>not_listening</strong>(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the server we failed to listen.</p>
               
             </div>

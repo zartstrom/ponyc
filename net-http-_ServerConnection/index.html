@@ -3604,23 +3604,23 @@
 <p><strong>Default capability</strong>: <em>tag</em></p>
 <p>Manages a stream of requests to a server, ordering the responses.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createhandler-requesthandler-val-logger-logger-val-conn-tcpconnection-tag-client_ip-string-val">new create(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val, conn: <a href="../net-TCPConnection">TCPConnection</a> tag, client_ip: <a href="../builtin-String">String</a> val)</h3>
+<h3 id="new-createhandler-requesthandler-val-logger-logger-val-conn-tcpconnection-tag-client_ip-string-val">new <strong>create</strong>(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val, conn: <a href="../net-TCPConnection">TCPConnection</a> tag, client_ip: <a href="../builtin-String">String</a> val)</h3>
 <h2 id="behaviours">Behaviours</h2>
-<h3 id="be-answerrequest-payload-val-response-payload-val">be answer(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val)</h3>
+<h3 id="be-answerrequest-payload-val-response-payload-val">be <strong>answer</strong>(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Associate a response with the given request and send responses in the
 correct order.</p>
-<h3 id="be-dispatchrequest-payload-iso">be dispatch(request: <a href="../net-http-Payload">Payload</a> iso)</h3>
+<h3 id="be-dispatchrequest-payload-iso">be <strong>dispatch</strong>(request: <a href="../net-http-Payload">Payload</a> iso)</h3>
 <p>Dispatch requests. We can have many safe requests dispatched at once, or a
 single unsafe request, since the client may expect an initial unsafe
 request to alter the answer to following requests.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-_dispatch_pending-none-val">fun ref  _dispatch_pending(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-dispatchpending-none-val">fun ref  <strong><em>dispatch</em>pending</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>If we have pending requests, dispatch as many as we can.</p>
-<h3 id="fun-box-is_safemethod-string-val-bool-val">fun box  is_safe(method: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_safemethod-string-val-bool-val">fun box  <strong>is_safe</strong>(method: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true for a safe request method, false otherwise.</p>
-<h3 id="fun-ref-_sendrequest-payload-val-response-payload-val-none-val">fun ref  _send(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_sendrequest-payload-val-response-payload-val-none-val">fun ref  <strong>_send</strong>(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Send a single response.</p>
-<h3 id="fun-ref-_send_responses-none-val">fun ref  _send_responses(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-sendresponses-none-val">fun ref  <strong><em>send</em>responses</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Send available responses in the correct order.</p>
               
             </div>

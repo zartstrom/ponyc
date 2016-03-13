@@ -3616,39 +3616,39 @@ values.</p>
 <li>var user: <a href="../builtin-String">String</a> val</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-buildfrom-string-val-optional-percent_encoded-bool-val-may-raise-an-error">new build(from: <a href="../builtin-String">String</a> val, optional percent_encoded: <a href="../builtin-Bool">Bool</a> val) ?, may raise an error</h3>
-<h3 id="new-create">new create()</h3>
-<h3 id="new-validfrom-string-val-may-raise-an-error">new valid(from: <a href="../builtin-String">String</a> val) ?, may raise an error</h3>
+<h3 id="new-buildfrom-string-val-optional-percent_encoded-bool-val">new <strong>build</strong>(from: <a href="../builtin-String">String</a> val, optional percent_encoded: <a href="../builtin-Bool">Bool</a> val) ?</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
+<h3 id="new-validfrom-string-val">new <strong>valid</strong>(from: <a href="../builtin-String">String</a> val) ?</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-default_port-u16-val">fun box  default_port(): <a href="../builtin-U16">U16</a> val</h3>
+<h3 id="fun-box-default_port-u16-val">fun box  <strong>default_port</strong>(): <a href="../builtin-U16">U16</a> val</h3>
 <p>Report the default port for our scheme.
 Returns 0 for unrecognised schemes.</p>
-<h3 id="fun-box-is_valid-bool-val">fun box  is_valid(): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_valid-bool-val">fun box  <strong>is_valid</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if all elements are correctly URL encoded.</p>
-<h3 id="fun-val-jointhat-url-val-url-val">fun val  join(that: <a href="../net-http-URL">URL</a> val): <a href="../net-http-URL">URL</a> val</h3>
+<h3 id="fun-val-jointhat-url-val-url-val">fun val  <strong>join</strong>(that: <a href="../net-http-URL">URL</a> val): <a href="../net-http-URL">URL</a> val</h3>
 <p>Using this as a base URL, concatenate with another, possibly relative, URL
 in the same way a browser does for a link.</p>
-<h3 id="fun-ref-_parsefrom-string-val-none-val-may-raise-an-error">fun ref  _parse(from: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-_parsefrom-string-val-none-val">fun ref  <strong>_parse</strong>(from: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>Parse the given string as a URL.
 Raises an error on invalid port number.</p>
-<h3 id="fun-box-_parse_hostporthostport-string-val-string-val-string-val">fun box  _parse_hostport(hostport: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-parsehostporthostport-string-val-string-val-string-val">fun box  <strong><em>parse</em>hostport</strong>(hostport: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Split the given "host and port" string into the host and port parts.</p>
-<h3 id="fun-box-_parse_partfrom-string-val-prefix-string-val-terminators-string-val-offset-isize-val-isize-val-string-val">fun box  _parse_part(from: <a href="../builtin-String">String</a> val, prefix: <a href="../builtin-String">String</a> val, terminators: <a href="../builtin-String">String</a> val, offset: <a href="../builtin-ISize">ISize</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-parsepartfrom-string-val-prefix-string-val-terminators-string-val-offset-isize-val-isize-val-string-val">fun box  <strong><em>parse</em>part</strong>(from: <a href="../builtin-String">String</a> val, prefix: <a href="../builtin-String">String</a> val, terminators: <a href="../builtin-String">String</a> val, offset: <a href="../builtin-ISize">ISize</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Attempt to parse the specified part out of the given string.
 Only attempt the parse if the given prefix is found first. Pass "" if no
 prefix is needed.
 The part ends when any one of the given terminator characters is found, or
 the end of the input is reached.
 The offset of the terminator is returned, if one is found.</p>
-<h3 id="fun-box-_parse_schemefrom-string-val-isize-val-string-val">fun box  _parse_scheme(from: <a href="../builtin-String">String</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-parseschemefrom-string-val-isize-val-string-val">fun box  <strong><em>parse</em>scheme</strong>(from: <a href="../builtin-String">String</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Find the scheme, if any, at the start of the given string.
 The offset of the part following the scheme is returned.</p>
-<h3 id="fun-box-_splitsrc-string-val-separator-u8-val-string-val-string-val">fun box  _split(src: <a href="../builtin-String">String</a> val, separator: <a href="../builtin-U8">U8</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-_splitsrc-string-val-separator-u8-val-string-val-string-val">fun box  <strong>_split</strong>(src: <a href="../builtin-String">String</a> val, separator: <a href="../builtin-U8">U8</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Split the given string in 2 around the first instance of the specified
 separator.
 If the string does not contain the separator then the first resulting
 string is the whole src and the second is empty.</p>
-<h3 id="fun-box-stringoptional-fmt-formatdefault-val-optional-prefix-prefixdefault-val-optional-prec-usize-val-optional-width-usize-val-optional-align-alignleft-val-alignright-val-aligncenter-val-optional-fill-u32-val-string-iso">fun box  string(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</h3>
+<h3 id="fun-box-stringoptional-fmt-formatdefault-val-optional-prefix-prefixdefault-val-optional-prec-usize-val-optional-width-usize-val-optional-align-alignleft-val-alignright-val-aligncenter-val-optional-fill-u32-val-string-iso">fun box  <strong>string</strong>(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Combine the components into a string.</p>
               
             </div>

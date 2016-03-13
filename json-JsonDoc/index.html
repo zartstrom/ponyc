@@ -3609,58 +3609,58 @@ A JSON document consists of exactly 1 value.</p>
 <li>var data: ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref)</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-_dump_whitespace-none-val">fun ref  _dump_whitespace(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-dumpwhitespace-none-val">fun ref  <strong><em>dump</em>whitespace</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Dump all whitespace at the current read location in source, if any.</p>
-<h3 id="fun-ref-_errormsg-string-val-none-val">fun ref  _error(msg: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_errormsg-string-val-none-val">fun ref  <strong>_error</strong>(msg: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Record an error with the given message.</p>
-<h3 id="fun-ref-_get_charoptional-eof_context-string-val-none-val-u8-val-may-raise-an-error">fun ref  _get_char(optional eof_context: (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)): <a href="../builtin-U8">U8</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-getcharoptional-eof_context-string-val-none-val-u8-val">fun ref  <strong><em>get</em>char</strong>(optional eof_context: (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Get and consume the next char in the source.
 If an eof_context is given then an error is thrown on eof, setting a
 suitable message.
 If eof_context is None then 0 is returned on EOF. It up to the caller to
 handle this appropriately.</p>
-<h3 id="fun-ref-_last_char-string-val">fun ref  _last_char(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-ref-lastchar-string-val">fun ref  <strong><em>last</em>char</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Get the last character peeked or got from the source as a String.
 For use generating error messages.</p>
-<h3 id="fun-ref-parsesource-string-val-none-val-may-raise-an-error">fun ref  parse(source: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-parsesource-string-val-none-val">fun ref  <strong>parse</strong>(source: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>Parse the given string as a JSON file, building a document.
 Raise error on invalid JSON in given source.</p>
-<h3 id="fun-ref-_parse_array-jsonarray-ref-may-raise-an-error">fun ref  _parse_array(): <a href="../json-JsonArray">JsonArray</a> ref ?, may raise an error</h3>
+<h3 id="fun-ref-parsearray-jsonarray-ref">fun ref  <strong><em>parse</em>array</strong>(): <a href="../json-JsonArray">JsonArray</a> ref ?</h3>
 <p>Parse an array, the leading [ of which has already been peeked.</p>
-<h3 id="fun-ref-_parse_decimal-i64-val-u8-val-may-raise-an-error">fun ref  _parse_decimal(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-U8">U8</a> val) ?, may raise an error</h3>
+<h3 id="fun-ref-parsedecimal-i64-val-u8-val">fun ref  <strong><em>parse</em>decimal</strong>(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-U8">U8</a> val) ?</h3>
 <p>Parse a decimal integer which must appear immediately in the source.</p>
-<h3 id="fun-ref-_parse_escape-string-val-may-raise-an-error">fun ref  _parse_escape(): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-parseescape-string-val">fun ref  <strong><em>parse</em>escape</strong>(): <a href="../builtin-String">String</a> val ?</h3>
 <p>Process a string escape sequence, the leading \ of which has already been
 consumed.</p>
-<h3 id="fun-ref-_parse_keyword-bool-val-none-val-may-raise-an-error">fun ref  _parse_keyword(): (<a href="../builtin-Bool">Bool</a> val | <a href="../builtin-None">None</a> val) ?, may raise an error</h3>
+<h3 id="fun-ref-parsekeyword-bool-val-none-val">fun ref  <strong><em>parse</em>keyword</strong>(): (<a href="../builtin-Bool">Bool</a> val | <a href="../builtin-None">None</a> val) ?</h3>
 <p>Parse a keyword, the first letter of which has already been peeked.</p>
-<h3 id="fun-ref-_parse_number-f64-val-i64-val-may-raise-an-error">fun ref  _parse_number(): (<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) ?, may raise an error</h3>
+<h3 id="fun-ref-parsenumber-f64-val-i64-val">fun ref  <strong><em>parse</em>number</strong>(): (<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) ?</h3>
 <p>Parse a number, the leading character of which has already been peeked.</p>
-<h3 id="fun-ref-_parse_object-jsonobject-ref-may-raise-an-error">fun ref  _parse_object(): <a href="../json-JsonObject">JsonObject</a> ref ?, may raise an error</h3>
+<h3 id="fun-ref-parseobject-jsonobject-ref">fun ref  <strong><em>parse</em>object</strong>(): <a href="../json-JsonObject">JsonObject</a> ref ?</h3>
 <p>Parse a JSON object, the leading { of which has already been peeked.</p>
-<h3 id="fun-box-parse_report-usize-val-string-val">fun box  parse_report(): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-parse_report-usize-val-string-val">fun box  <strong>parse_report</strong>(): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Give details of the error that occured last time we attempted to parse.
 If parse was successful returns (0, "").</p>
-<h3 id="fun-ref-_parse_stringcontext-string-val-string-val-may-raise-an-error">fun ref  _parse_string(context: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-parsestringcontext-string-val-string-val">fun ref  <strong><em>parse</em>string</strong>(context: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Parse a string, which must be the next thing found, other than whitesapce.</p>
-<h3 id="fun-ref-_parse_unicode_digits-u32-val-may-raise-an-error">fun ref  _parse_unicode_digits(): <a href="../builtin-U32">U32</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-parseunicode_digits-u32-val">fun ref  <strong><em>parse</em>unicode_digits</strong>(): <a href="../builtin-U32">U32</a> val ?</h3>
 <p>Parse the hex digits of a Unicode escape sequence, the leading \u of which
 has already been consumed, and return the encoded character value.</p>
-<h3 id="fun-ref-_parse_unicode_escape-string-val-may-raise-an-error">fun ref  _parse_unicode_escape(): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-parseunicode_escape-string-val">fun ref  <strong><em>parse</em>unicode_escape</strong>(): <a href="../builtin-String">String</a> val ?</h3>
 <p>Process a Unicode escape sequence, the leading \u of which has already been
 consumed.</p>
-<h3 id="fun-ref-_parse_valuecontext-string-val-f64-val-i64-val-bool-val-none-val-string-val-jsonarray-ref-jsonobject-ref-may-raise-an-error">fun ref  _parse_value(context: <a href="../builtin-String">String</a> val): ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref) ?, may raise an error</h3>
+<h3 id="fun-ref-parsevaluecontext-string-val-f64-val-i64-val-bool-val-none-val-string-val-jsonarray-ref-jsonobject-ref">fun ref  <strong><em>parse</em>value</strong>(context: <a href="../builtin-String">String</a> val): ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref) ?</h3>
 <p>Parse a single JSON value of any type, which MUST be present.
 Raise error on invalid or missing value.</p>
-<h3 id="fun-ref-_peek_charoptional-eof_context-string-val-none-val-u8-val-may-raise-an-error">fun ref  _peek_char(optional eof_context: (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)): <a href="../builtin-U8">U8</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-peekcharoptional-eof_context-string-val-none-val-u8-val">fun ref  <strong><em>peek</em>char</strong>(optional eof_context: (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Peek the next char in the source, without consuming it.
 If an eof_context is given then an error is thrown on eof, setting a
 suitable message.
 If eof_context is None then 0 is returned on EOF. It up to the caller to
 handle this appropriately.</p>
-<h3 id="fun-box-string-string-val">fun box  string(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-string-string-val">fun box  <strong>string</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Generate string representation of this document.</p>
               
             </div>

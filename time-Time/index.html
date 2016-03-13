@@ -3602,37 +3602,37 @@
 <p><strong>Default capability</strong>: <em>val</em></p>
 <p>A collection of ways to fetch the current time.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-_clock_gettimeclock-_clockrealtime-val-_clockmonotonic-val-i64-val-i64-val">fun box  _clock_gettime(clock: (<a href="../time-_ClockRealtime">_ClockRealtime</a> val | <a href="../time-_ClockMonotonic">_ClockMonotonic</a> val)): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
+<h3 id="fun-box-clockgettimeclock-_clockrealtime-val-_clockmonotonic-val-i64-val-i64-val">fun box  <strong><em>clock</em>gettime</strong>(clock: (<a href="../time-_ClockRealtime">_ClockRealtime</a> val | <a href="../time-_ClockMonotonic">_ClockMonotonic</a> val)): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
 <p>Return a clock time on linux and freebsd.</p>
-<h3 id="fun-box-cycles-u64-val">fun box  cycles(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-cycles-u64-val">fun box  <strong>cycles</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Processor cycle count. Don't use this for performance timing, as it does
 not control for out-of-order execution.</p>
-<h3 id="fun-box-eqthat-time-val-bool-val">fun box  eq(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-micros-u64-val">fun box  micros(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-eqthat-time-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-micros-u64-val">fun box  <strong>micros</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted microseconds.</p>
-<h3 id="fun-box-millis-u64-val">fun box  millis(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-millis-u64-val">fun box  <strong>millis</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted milliseconds.</p>
-<h3 id="fun-box-nanos-u64-val">fun box  nanos(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-nanos-u64-val">fun box  <strong>nanos</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted nanoseconds.</p>
-<h3 id="fun-box-nethat-time-val-bool-val">fun box  ne(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-now-i64-val-i64-val">fun box  now(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
+<h3 id="fun-box-nethat-time-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-now-i64-val-i64-val">fun box  <strong>now</strong>(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
 <p>The wall-clock adjusted system time with nanoseconds.
 Return: (seconds, nanoseconds)</p>
-<h3 id="fun-box-perf_begin-u64-val">fun box  perf_begin(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-perf_begin-u64-val">fun box  <strong>perf_begin</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Get a cycle count for beginning a performance testing block. This will
 will prevent instructions from before this call leaking into the block and
 instructions after this call being executed earlier.</p>
-<h3 id="fun-box-perf_end-u64-val">fun box  perf_end(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-perf_end-u64-val">fun box  <strong>perf_end</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Get a cycle count for ending a performance testing block. This will
 will prevent instructions from after this call leaking into the block and
 instructions before this call being executed later.</p>
-<h3 id="fun-box-_query_performance_counter-u64-val-u64-val">fun box  _query_performance_counter(): (<a href="../builtin-U64">U64</a> val , <a href="../builtin-U64">U64</a> val)</h3>
+<h3 id="fun-box-queryperformance_counter-u64-val-u64-val">fun box  <strong><em>query</em>performance_counter</strong>(): (<a href="../builtin-U64">U64</a> val , <a href="../builtin-U64">U64</a> val)</h3>
 <p>Return QPC and QPF.</p>
-<h3 id="fun-box-seconds-i64-val">fun box  seconds(): <a href="../builtin-I64">I64</a> val</h3>
+<h3 id="fun-box-seconds-i64-val">fun box  <strong>seconds</strong>(): <a href="../builtin-I64">I64</a> val</h3>
 <p>The wall-clock adjusted system time.</p>
-<h3 id="fun-box-wall_to_nanoswall-i64-val-i64-val-u64-val">fun box  wall_to_nanos(wall: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-wall_to_nanoswall-i64-val-i64-val-u64-val">fun box  <strong>wall_to_nanos</strong>(wall: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-U64">U64</a> val</h3>
 <p>Converts a wall-clock adjusted system time to monotonic unadjusted
 nanoseconds.</p>
               

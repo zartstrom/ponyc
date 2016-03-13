@@ -3603,63 +3603,63 @@
 <p>Operations on paths that do not require a capability. The operations can be
 used to manipulate path names, but give no access to the resulting paths.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-abspath-string-val-string-val">fun box  abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-abspath-string-val-string-val">fun box  <strong>abs</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Returns a cleaned, absolute path.</p>
-<h3 id="fun-box-basepath-string-val-string-val">fun box  base(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-basepath-string-val-string-val">fun box  <strong>base</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path after the last separator, or the whole path if there is no
 separator.</p>
-<h3 id="fun-box-canonicalpath-string-val-string-val-may-raise-an-error">fun box  canonical(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-box-canonicalpath-string-val-string-val">fun box  <strong>canonical</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Return the equivalent canonical absolute path. Raise an error if there
 isn't one.</p>
-<h3 id="fun-box-cleanpath-string-val-string-val">fun box  clean(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-cleanpath-string-val-string-val">fun box  <strong>clean</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Replace multiple separators with a single separator.
 Convert / to the OS separator.
 Remove instances of . from the path.
 Remove instances of .. and the preceding path element from the path.
 The result will have no trailing slash unless it is a root directory.
 If the result would be empty, "." will be returned instead.</p>
-<h3 id="fun-box-cwd-string-val">fun box  cwd(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-cwd-string-val">fun box  <strong>cwd</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Returns the program's working directory. Setting the working directory is
 not supported, as it is not concurrency-safe.</p>
-<h3 id="fun-box-dirpath-string-val-string-val">fun box  dir(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-dirpath-string-val-string-val">fun box  <strong>dir</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return a cleaned path before the last separator, or the whole path if there
 is no separator.</p>
-<h3 id="fun-box-_drive_letterpath-string-val-optional-offset-isize-val-bool-val">fun box  _drive_letter(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-driveletterpath-string-val-optional-offset-isize-val-bool-val">fun box  <strong><em>drive</em>letter</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Look for a drive letter followed by a ':', returning true if we find it.</p>
-<h3 id="fun-box-eqthat-path-val-bool-val">fun box  eq(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-extpath-string-val-string-val">fun box  ext(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-eqthat-path-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-extpath-string-val-string-val">fun box  <strong>ext</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return the file extension, i.e. the part after the last dot as long as that
 dot is after all separators. Return an empty string for no extension.</p>
-<h3 id="fun-box-from_slashpath-string-val-string-val">fun box  from_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-from_slashpath-string-val-string-val">fun box  <strong>from_slash</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Changes each / in the path to the OS specific separator.</p>
-<h3 id="fun-box-is_abspath-string-val-bool-val">fun box  is_abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_abspath-string-val-bool-val">fun box  <strong>is_abs</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if the path is an absolute path.</p>
-<h3 id="fun-box-is_list_sepc-u8-val-bool-val">fun box  is_list_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_list_sepc-u8-val-bool-val">fun box  <strong>is_list_sep</strong>(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine if a byte is a path list separator.</p>
-<h3 id="fun-box-is_sepc-u8-val-bool-val">fun box  is_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-is_sepc-u8-val-bool-val">fun box  <strong>is_sep</strong>(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine if a byte is a path separator.</p>
-<h3 id="fun-box-joinpath-string-val-next_path-string-val-string-val">fun box  join(path: <a href="../builtin-String">String</a> val, next_path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-joinpath-string-val-next_path-string-val-string-val">fun box  <strong>join</strong>(path: <a href="../builtin-String">String</a> val, next_path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Join two paths together. If the next_path is absolute, simply return it.
 The returned path will be cleaned.</p>
-<h3 id="fun-box-list_sep-string-val">fun box  list_sep(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-list_sep-string-val">fun box  <strong>list_sep</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path list separator as a string.</p>
-<h3 id="fun-box-nethat-path-val-bool-val">fun box  ne(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-_network_sharepath-string-val-optional-offset-isize-val-string-val">fun box  _network_share(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-nethat-path-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-networksharepath-string-val-optional-offset-isize-val-string-val">fun box  <strong><em>network</em>share</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Look for a host, a \, and a resource. Return the path up to that point if
 we found one, otherwise an empty String.</p>
-<h3 id="fun-box-normcasepath-string-val-string-val">fun box  normcase(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-normcasepath-string-val-string-val">fun box  <strong>normcase</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Normalizes the case of path for the runtime platform.</p>
-<h3 id="fun-box-randomoptional-len-usize-val-string-val">fun box  random(optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-randomoptional-len-usize-val-string-val">fun box  <strong>random</strong>(optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Returns a pseudo-random base, suitable as a temporary file name or
 directory name, but not guaranteed to not already exist.</p>
-<h3 id="fun-box-relto-string-val-target-string-val-string-val-may-raise-an-error">fun box  rel(to: <a href="../builtin-String">String</a> val, target: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
+<h3 id="fun-box-relto-string-val-target-string-val-string-val">fun box  <strong>rel</strong>(to: <a href="../builtin-String">String</a> val, target: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Returns a path such that Path.join(to, Path.rel(to, target)) == target.
 Raises an error if this isn't possible.</p>
-<h3 id="fun-tag-sep-string-val">fun tag  sep(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-tag-sep-string-val">fun tag  <strong>sep</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path separator as a string.</p>
-<h3 id="fun-box-splitpath-string-val-optional-separator-string-val-string-val-string-val">fun box  split(path: <a href="../builtin-String">String</a> val, optional separator: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-splitpath-string-val-optional-separator-string-val-string-val-string-val">fun box  <strong>split</strong>(path: <a href="../builtin-String">String</a> val, optional separator: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Splits the path into a pair, (head, tail) where tail is the last pathname
 component and head is everything leading up to that. The tail part will
 never contain a slash; if path ends in a slash, tail will be empty. If
@@ -3667,11 +3667,11 @@ there is no slash in path, head will be empty. If path is empty, both head
 and tail are empty. The path in head will be cleaned before it is returned.
 In all cases, join(head, tail) returns a path to the same location as path
 (but the strings may differ). Also see the functions dir() and base().</p>
-<h3 id="fun-box-split_listpath-string-val-array91string-val93-iso">fun box  split_list(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>
+<h3 id="fun-box-split_listpath-string-val-array91string-val93-iso">fun box  <strong>split_list</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>
 <p>Separate a list of paths into an array of cleaned paths.</p>
-<h3 id="fun-box-to_slashpath-string-val-string-val">fun box  to_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-to_slashpath-string-val-string-val">fun box  <strong>to_slash</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Changes each OS specific separator in the path to /.</p>
-<h3 id="fun-box-volumepath-string-val-string-val">fun box  volume(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-volumepath-string-val-string-val">fun box  <strong>volume</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>On Windows, this returns the drive letter or UNC base at the beginning of
 the path, if there is one. Otherwise, this returns an empty string.</p>
               

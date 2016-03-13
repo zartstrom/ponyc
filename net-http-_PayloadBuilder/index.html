@@ -3602,34 +3602,34 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>This builds a Payload using received chunks of data.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-request">new request()</h3>
-<h3 id="new-response">new response()</h3>
+<h3 id="new-request">new <strong>request</strong>()</h3>
+<h3 id="new-response">new <strong>response</strong>()</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-closedbuffer-buffer-ref-none-val">fun ref  closed(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-closedbuffer-buffer-ref-none-val">fun ref  <strong>closed</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>The connection has closed, which may signal that all remaining data is the
 payload body.</p>
-<h3 id="fun-ref-done-payload-iso">fun ref  done(): <a href="../net-http-Payload">Payload</a> iso^</h3>
+<h3 id="fun-ref-done-payload-iso">fun ref  <strong>done</strong>(): <a href="../net-http-Payload">Payload</a> iso^</h3>
 <p>Finish parsing. Returns the payload if it is ready, otherwise an empty
 payload.</p>
-<h3 id="fun-ref-parsebuffer-buffer-ref-none-val">fun ref  parse(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parsebuffer-buffer-ref-none-val">fun ref  <strong>parse</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Parse available data based on our state. _ResponseBody is not listed here.
 In that state, we wait for the connection to close and treat all pending
 data as the response body.</p>
-<h3 id="fun-ref-_parse_chunkbuffer-buffer-ref-none-val">fun ref  _parse_chunk(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parsechunkbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>chunk</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for a chunk.</p>
-<h3 id="fun-ref-_parse_chunk_endbuffer-buffer-ref-none-val">fun ref  _parse_chunk_end(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parsechunk_endbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>chunk_end</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for a blank line.</p>
-<h3 id="fun-ref-_parse_chunk_startbuffer-buffer-ref-none-val">fun ref  _parse_chunk_start(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parsechunk_startbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>chunk_start</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for the beginning of a chunk.</p>
-<h3 id="fun-ref-_parse_content_lengthbuffer-buffer-ref-none-val">fun ref  _parse_content_length(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parsecontent_lengthbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>content_length</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for _content_length available bytes.</p>
-<h3 id="fun-ref-_parse_headersbuffer-buffer-ref-none-val">fun ref  _parse_headers(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parseheadersbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>headers</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for: "<Key>:<Value>" or an empty line.</p>
-<h3 id="fun-ref-_parse_requestbuffer-buffer-ref-none-val">fun ref  _parse_request(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parserequestbuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>request</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for: "<Method> <URL> <Proto>".</p>
-<h3 id="fun-ref-_parse_responsebuffer-buffer-ref-none-val">fun ref  _parse_response(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-parseresponsebuffer-buffer-ref-none-val">fun ref  <strong><em>parse</em>response</strong>(buffer: <a href="../net-Buffer">Buffer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Look for: "<Proto> <Code> <Description>".</p>
-<h3 id="fun-box-state-_payloadrequest-val-_payloadresponse-val-_payloadheaders-val-_payloadcontentlength-val-_payloadchunkstart-val-_payloadchunk-val-_payloadchunkend-val-_payloadbody-val-_payloadready-val-_payloaderror-val">fun box  state(): (((((((((<a href="../net-http-_PayloadRequest">_PayloadRequest</a> val | <a href="../net-http-_PayloadResponse">_PayloadResponse</a> val) | <a href="../net-http-_PayloadHeaders">_PayloadHeaders</a> val) | <a href="../net-http-_PayloadContentLength">_PayloadContentLength</a> val) | <a href="../net-http-_PayloadChunkStart">_PayloadChunkStart</a> val) | <a href="../net-http-_PayloadChunk">_PayloadChunk</a> val) | <a href="../net-http-_PayloadChunkEnd">_PayloadChunkEnd</a> val) | <a href="../net-http-_PayloadBody">_PayloadBody</a> val) | <a href="../net-http-_PayloadReady">_PayloadReady</a> val) | <a href="../net-http-_PayloadError">_PayloadError</a> val)</h3>
+<h3 id="fun-box-state-_payloadrequest-val-_payloadresponse-val-_payloadheaders-val-_payloadcontentlength-val-_payloadchunkstart-val-_payloadchunk-val-_payloadchunkend-val-_payloadbody-val-_payloadready-val-_payloaderror-val">fun box  <strong>state</strong>(): (((((((((<a href="../net-http-_PayloadRequest">_PayloadRequest</a> val | <a href="../net-http-_PayloadResponse">_PayloadResponse</a> val) | <a href="../net-http-_PayloadHeaders">_PayloadHeaders</a> val) | <a href="../net-http-_PayloadContentLength">_PayloadContentLength</a> val) | <a href="../net-http-_PayloadChunkStart">_PayloadChunkStart</a> val) | <a href="../net-http-_PayloadChunk">_PayloadChunk</a> val) | <a href="../net-http-_PayloadChunkEnd">_PayloadChunkEnd</a> val) | <a href="../net-http-_PayloadBody">_PayloadBody</a> val) | <a href="../net-http-_PayloadReady">_PayloadReady</a> val) | <a href="../net-http-_PayloadError">_PayloadError</a> val)</h3>
 <p>Returns the parse state.</p>
               
             </div>

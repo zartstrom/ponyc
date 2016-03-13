@@ -3602,23 +3602,23 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>Version 0 of the capsicum cap_rights_t structure.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-create">new create()</h3>
-<h3 id="new-descriptorfd-i32-val">new descriptor(fd: <a href="../builtin-I32">I32</a> val)</h3>
-<h3 id="new-fromcaps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-box">new from(caps: <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] box)</h3>
+<h3 id="new-create">new <strong>create</strong>()</h3>
+<h3 id="new-descriptorfd-i32-val">new <strong>descriptor</strong>(fd: <a href="../builtin-I32">I32</a> val)</h3>
+<h3 id="new-fromcaps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-box">new <strong>from</strong>(caps: <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] box)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-clear-none-val">fun ref  clear(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-clear-none-val">fun ref  <strong>clear</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Clear all rights.</p>
-<h3 id="fun-box-containsthat-caprights0-ref-bool-val">fun box  contains(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-containsthat-caprights0-ref-bool-val">fun box  <strong>contains</strong>(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Check that this is a superset of the rights in that.</p>
-<h3 id="fun-box-limitfd-i32-val-bool-val">fun box  limit(fd: <a href="../builtin-I32">I32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-limitfd-i32-val-bool-val">fun box  <strong>limit</strong>(fd: <a href="../builtin-I32">I32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Limits the fd to the encoded rights.</p>
-<h3 id="fun-ref-mergethat-caprights0-ref-none-val">fun ref  merge(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-mergethat-caprights0-ref-none-val">fun ref  <strong>merge</strong>(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Merge the rights in that into this.</p>
-<h3 id="fun-ref-removethat-caprights0-ref-none-val">fun ref  remove(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-removethat-caprights0-ref-none-val">fun ref  <strong>remove</strong>(that: <a href="../capsicum-CapRights0">CapRights0</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Remove the rights in that from this.</p>
-<h3 id="fun-ref-setcap-u64-val-caprights0-ref">fun ref  set(cap: <a href="../builtin-U64">U64</a> val): <a href="../capsicum-CapRights0">CapRights0</a> ref^</h3>
-<h3 id="fun-ref-unsetcap-u64-val-caprights0-ref">fun ref  unset(cap: <a href="../builtin-U64">U64</a> val): <a href="../capsicum-CapRights0">CapRights0</a> ref^</h3>
-<h3 id="fun-box-_version-i32-val">fun box  _version(): <a href="../builtin-I32">I32</a> val</h3>
+<h3 id="fun-ref-setcap-u64-val-caprights0-ref">fun ref  <strong>set</strong>(cap: <a href="../builtin-U64">U64</a> val): <a href="../capsicum-CapRights0">CapRights0</a> ref^</h3>
+<h3 id="fun-ref-unsetcap-u64-val-caprights0-ref">fun ref  <strong>unset</strong>(cap: <a href="../builtin-U64">U64</a> val): <a href="../capsicum-CapRights0">CapRights0</a> ref^</h3>
+<h3 id="fun-box-_version-i32-val">fun box  <strong>_version</strong>(): <a href="../builtin-I32">I32</a> val</h3>
               
             </div>
           </div>

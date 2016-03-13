@@ -3603,25 +3603,25 @@
 <p>A timing wheel in a hierarchical set of timing wheels. Each wheel covers 6
 bits of precision.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createindex-usize-val">new create(index: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-createindex-usize-val">new <strong>create</strong>(index: <a href="../builtin-USize">USize</a> val)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-advancelist-list91timer-ref93-ref-current-u64-val-elapsed-u64-val-bool-val">fun ref  advance(list: <a href="../collections-List">List</a>[<a href="../time-Timer">Timer</a> ref] ref, current: <a href="../builtin-U64">U64</a> val, elapsed: <a href="../builtin-U64">U64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-ref-advancelist-list91timer-ref93-ref-current-u64-val-elapsed-u64-val-bool-val">fun ref  <strong>advance</strong>(list: <a href="../collections-List">List</a>[<a href="../time-Timer">Timer</a> ref] ref, current: <a href="../builtin-U64">U64</a> val, elapsed: <a href="../builtin-U64">U64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Remove pending timers from this timing wheel and put them on the pending
 list supplied. Needs the current time and the elapsed time since the
 previous advance. Returns true if the next timing wheel in the hierarchy
 should be advanced.</p>
-<h3 id="fun-tag-_bits-usize-val">fun tag  _bits(): <a href="../builtin-USize">USize</a> val</h3>
-<h3 id="fun-ref-clear-none-val">fun ref  clear(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-tag-_bits-usize-val">fun tag  <strong>_bits</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-ref-clear-none-val">fun ref  <strong>clear</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Cancels all pending timers.</p>
-<h3 id="fun-tag-_mask-u64-val">fun tag  _mask(): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-tag-_max-usize-val">fun tag  _max(): <a href="../builtin-USize">USize</a> val</h3>
-<h3 id="fun-box-nextcurrent-u64-val-u64-val">fun box  next(current: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-_mask-u64-val">fun tag  <strong>_mask</strong>(): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-tag-_max-usize-val">fun tag  <strong>_max</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-nextcurrent-u64-val-u64-val">fun box  <strong>next</strong>(current: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
 <p>Given a current time, return the next time at which this timing wheel
 should be advanced. Returns -1 if no timers are on this timing wheel.</p>
-<h3 id="fun-ref-scheduletimer-timer-ref-none-val">fun ref  schedule(timer: <a href="../time-Timer">Timer</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-scheduletimer-timer-ref-none-val">fun ref  <strong>schedule</strong>(timer: <a href="../time-Timer">Timer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Schedule a timer on this wheel. Mark the bit indicating that the given slot
 has timers in its list.</p>
-<h3 id="fun-box-_slottime-u64-val-u64-val">fun box  _slot(time: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<h3 id="fun-box-_slottime-u64-val-u64-val">fun box  <strong>_slot</strong>(time: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
 <p>Return the slot for a given time.</p>
               
             </div>

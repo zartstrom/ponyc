@@ -3602,22 +3602,22 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>A ring buffer.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createlen-usize-val">new create(len: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-createlen-usize-val">new <strong>create</strong>(len: <a href="../builtin-USize">USize</a> val)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-applyi-usize-val-this-a-may-raise-an-error">fun box  apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?, may raise an error</h3>
+<h3 id="fun-box-applyi-usize-val-this-a">fun box  <strong>apply</strong>(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?</h3>
 <p>Get the i-th element from the ring. If the i-th element has not yet been
 added or is no longer available, this will raise an error.</p>
-<h3 id="fun-ref-clear-ringbuffer91a93-ref">fun ref  clear(): <a href="../collections-RingBuffer">RingBuffer</a>[A] ref^</h3>
+<h3 id="fun-ref-clear-ringbuffer91a93-ref">fun ref  <strong>clear</strong>(): <a href="../collections-RingBuffer">RingBuffer</a>[A] ref^</h3>
 <p>Clear the queue.</p>
-<h3 id="fun-box-head-usize-val-may-raise-an-error">fun box  head(): <a href="../builtin-USize">USize</a> val ?, may raise an error</h3>
+<h3 id="fun-box-head-usize-val">fun box  <strong>head</strong>(): <a href="../builtin-USize">USize</a> val ?</h3>
 <p>The first read that will succeed. If nothing has been written to the ring,
 this will raise an error.</p>
-<h3 id="fun-ref-pushvalue-a-ringbuffer91a93-ref">fun ref  push(value: A): <a href="../collections-RingBuffer">RingBuffer</a>[A] ref^</h3>
+<h3 id="fun-ref-pushvalue-a-ringbuffer91a93-ref">fun ref  <strong>push</strong>(value: A): <a href="../collections-RingBuffer">RingBuffer</a>[A] ref^</h3>
 <p>Add an element to the ring. If the ring is full, this will drop the oldest
 element in the ring.</p>
-<h3 id="fun-box-size-usize-val">fun box  size(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-size-usize-val">fun box  <strong>size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The number of elements that have been added to the ring.</p>
-<h3 id="fun-box-space-usize-val">fun box  space(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-space-usize-val">fun box  <strong>space</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The available space in the ring.</p>
               
             </div>

@@ -3604,28 +3604,28 @@
 <p><strong>Default capability</strong>: <em>tag</em></p>
 <p>Manages a persistent and possibly pipelined TCP connection to an HTTP server.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createhost-string-val-service-string-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val">new create(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</h3>
+<h3 id="new-createhost-string-val-service-string-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val">new <strong>create</strong>(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</h3>
 <h2 id="behaviours">Behaviours</h2>
-<h3 id="be-applyrequest-payload-val">be apply(request: <a href="../net-http-Payload">Payload</a> val)</h3>
+<h3 id="be-applyrequest-payload-val">be <strong>apply</strong>(request: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Schedule a request.</p>
-<h3 id="be-_auth_failedconn-tcpconnection-tag">be _auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
+<h3 id="be-authfailedconn-tcpconnection-tag">be <strong><em>auth</em>failed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection couldn't be authenticated. Cancel all pending requests.</p>
-<h3 id="be-cancelrequest-payload-tag">be cancel(request: <a href="../net-http-Payload">Payload</a> tag)</h3>
+<h3 id="be-cancelrequest-payload-tag">be <strong>cancel</strong>(request: <a href="../net-http-Payload">Payload</a> tag)</h3>
 <p>Cancel a request.</p>
-<h3 id="be-_closedconn-tcpconnection-tag">be _closed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
+<h3 id="be-_closedconn-tcpconnection-tag">be <strong>_closed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection to the server has closed prematurely. Cancel everything.</p>
-<h3 id="be-_connect_failedconn-tcpconnection-tag">be _connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
+<h3 id="be-connectfailedconn-tcpconnection-tag">be <strong><em>connect</em>failed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection couldn't be established. Cancel all pending requests.</p>
-<h3 id="be-_connectedconn-tcpconnection-tag">be _connected(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
+<h3 id="be-_connectedconn-tcpconnection-tag">be <strong>_connected</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection to the server has been established. Send pending requests.</p>
-<h3 id="be-_responseresponse-payload-iso">be _response(response: <a href="../net-http-Payload">Payload</a> iso)</h3>
+<h3 id="be-_responseresponse-payload-iso">be <strong>_response</strong>(response: <a href="../net-http-Payload">Payload</a> iso)</h3>
 <p>Call the request's handler and supply the response.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-_cancel_all-none-val">fun ref  _cancel_all(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-cancelall-none-val">fun ref  <strong><em>cancel</em>all</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Cancel all pending requests.</p>
-<h3 id="fun-ref-_new_conn-none-val">fun ref  _new_conn(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-newconn-none-val">fun ref  <strong><em>new</em>conn</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Creates a new connection.</p>
-<h3 id="fun-ref-_send-none-val">fun ref  _send(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_send-none-val">fun ref  <strong>_send</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Send pending requests. If the connection is closed, open it. If we have
 nothing to send and we aren't waiting on any responses, close the
 connection.</p>

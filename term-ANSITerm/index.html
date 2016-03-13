@@ -3604,48 +3604,48 @@
 <p><strong>Default capability</strong>: <em>tag</em></p>
 <p>Handles ANSI escape codes from stdin.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createnotify-ansinotify-iso-source-disposableactor-tag-optional-timers-timers-tag">new create(notify: <a href="../term-ANSINotify">ANSINotify</a> iso, source: <a href="../builtin-DisposableActor">DisposableActor</a> tag, optional timers: <a href="../time-Timers">Timers</a> tag)</h3>
+<h3 id="new-createnotify-ansinotify-iso-source-disposableactor-tag-optional-timers-timers-tag">new <strong>create</strong>(notify: <a href="../term-ANSINotify">ANSINotify</a> iso, source: <a href="../builtin-DisposableActor">DisposableActor</a> tag, optional timers: <a href="../time-Timers">Timers</a> tag)</h3>
 <h2 id="behaviours">Behaviours</h2>
-<h3 id="be-applydata-array91u8-val93-iso">be apply(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso)</h3>
+<h3 id="be-applydata-array91u8-val93-iso">be <strong>apply</strong>(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso)</h3>
 <p>Receives input from stdin.</p>
-<h3 id="be-dispose">be dispose()</h3>
+<h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Stop accepting input, inform the notifier we have closed, and dispose of
 our source.</p>
-<h3 id="be-promptvalue-string-val">be prompt(value: <a href="../builtin-String">String</a> val)</h3>
+<h3 id="be-promptvalue-string-val">be <strong>prompt</strong>(value: <a href="../builtin-String">String</a> val)</h3>
 <p>Pass a prompt along to the notifier.</p>
-<h3 id="be-_timeout">be _timeout()</h3>
+<h3 id="be-_timeout">be <strong>_timeout</strong>()</h3>
 <p>Our timer since receiving an ESC has expired. Send the buffered data as if
 it was not an escape sequence.</p>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-_delete-none-val">fun ref  _delete(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_delete-none-val">fun ref  <strong>_delete</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Delete key.</p>
-<h3 id="fun-ref-_down-none-val">fun ref  _down(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_down-none-val">fun ref  <strong>_down</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Down arrow.</p>
-<h3 id="fun-ref-_end-none-val">fun ref  _end(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_end-none-val">fun ref  <strong>_end</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>End key.</p>
-<h3 id="fun-ref-_esc_clear-none-val">fun ref  _esc_clear(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-escclear-none-val">fun ref  <strong><em>esc</em>clear</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Clear the escape state.</p>
-<h3 id="fun-ref-_esc_flush-none-val">fun ref  _esc_flush(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-escflush-none-val">fun ref  <strong><em>esc</em>flush</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Pass a partial or unrecognised escape sequence to the notifier.</p>
-<h3 id="fun-ref-_fn_keyi-u8-val-none-val">fun ref  _fn_key(i: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-fnkeyi-u8-val-none-val">fun ref  <strong><em>fn</em>key</strong>(i: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Function key.</p>
-<h3 id="fun-ref-_home-none-val">fun ref  _home(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_home-none-val">fun ref  <strong>_home</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Home key.</p>
-<h3 id="fun-ref-_insert-none-val">fun ref  _insert(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_insert-none-val">fun ref  <strong>_insert</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Insert key.</p>
-<h3 id="fun-ref-_keypad-none-val">fun ref  _keypad(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_keypad-none-val">fun ref  <strong>_keypad</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>An extended key.</p>
-<h3 id="fun-ref-_left-none-val">fun ref  _left(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_left-none-val">fun ref  <strong>_left</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Left arrow.</p>
-<h3 id="fun-ref-_mod-bool-val-bool-val-bool-val">fun ref  _mod(): (<a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val)</h3>
+<h3 id="fun-ref-_mod-bool-val-bool-val-bool-val">fun ref  <strong>_mod</strong>(): (<a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>Set the modifier bools.</p>
-<h3 id="fun-ref-_page_down-none-val">fun ref  _page_down(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-pagedown-none-val">fun ref  <strong><em>page</em>down</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Page down key.</p>
-<h3 id="fun-ref-_page_up-none-val">fun ref  _page_up(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-pageup-none-val">fun ref  <strong><em>page</em>up</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Page up key.</p>
-<h3 id="fun-ref-_right-none-val">fun ref  _right(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_right-none-val">fun ref  <strong>_right</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Right arrow.</p>
-<h3 id="fun-ref-_up-none-val">fun ref  _up(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_up-none-val">fun ref  <strong>_up</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Up arrow.</p>
               
             </div>

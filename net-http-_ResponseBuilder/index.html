@@ -3602,24 +3602,24 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>This builds a response payload using received chunks of data.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createclient-_clientconnection-tag">new create(client: <a href="../net-http-_ClientConnection">_ClientConnection</a> tag)</h3>
+<h3 id="new-createclient-_clientconnection-tag">new <strong>create</strong>(client: <a href="../net-http-_ClientConnection">_ClientConnection</a> tag)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-acceptedconn-tcpconnection-ref-none-val">fun ref  accepted(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
-<h3 id="fun-ref-auth_failedconn-tcpconnection-ref-none-val">fun ref  auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-acceptedconn-tcpconnection-ref-none-val">fun ref  <strong>accepted</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-auth_failedconn-tcpconnection-ref-none-val">fun ref  <strong>auth_failed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>SSL authentication failed. Tell the client not to proceed.</p>
-<h3 id="fun-ref-closedconn-tcpconnection-ref-none-val">fun ref  closed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-closedconn-tcpconnection-ref-none-val">fun ref  <strong>closed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>The connection has closed, possibly prematurely.</p>
-<h3 id="fun-ref-connect_failedconn-tcpconnection-ref-none-val">fun ref  connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connect_failedconn-tcpconnection-ref-none-val">fun ref  <strong>connect_failed</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>The connection could not be established. Tell the client not to proceed.</p>
-<h3 id="fun-ref-connectedconn-tcpconnection-ref-none-val">fun ref  connected(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connectedconn-tcpconnection-ref-none-val">fun ref  <strong>connected</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Tell the client we have connected.</p>
-<h3 id="fun-ref-connectingconn-tcpconnection-ref-count-u32-val-none-val">fun ref  connecting(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
-<h3 id="fun-ref-_dispatchconn-tcpconnection-ref-none-val">fun ref  _dispatch(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connectingconn-tcpconnection-ref-count-u32-val-none-val">fun ref  <strong>connecting</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_dispatchconn-tcpconnection-ref-none-val">fun ref  <strong>_dispatch</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Dispatch responses if we have any.</p>
-<h3 id="fun-ref-receivedconn-tcpconnection-ref-data-array91u8-val93-iso-none-val">fun ref  received(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-receivedconn-tcpconnection-ref-data-array91u8-val93-iso-none-val">fun ref  <strong>received</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</h3>
 <p>Assemble chunks of data into a response. When we have a whole response,
 give it to the client and start a new one.</p>
-<h3 id="fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val-may-raise-an-error">fun ref  sent(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val">fun ref  <strong>sent</strong>(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?</h3>
               
             </div>
           </div>

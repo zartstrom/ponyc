@@ -3603,25 +3603,25 @@
 <p>An SSL session manages handshakes, encryption and decryption. It is not tied
 to any transport layer.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-_createctx-pointer91_sslcontext-val93-tag-server-bool-val-verify-bool-val-optional-hostname-string-val-may-raise-an-error">new _create(ctx: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-_SSLContext">_SSLContext</a> val] tag, server: <a href="../builtin-Bool">Bool</a> val, verify: <a href="../builtin-Bool">Bool</a> val, optional hostname: <a href="../builtin-String">String</a> val) ?, may raise an error</h3>
+<h3 id="new-_createctx-pointer91_sslcontext-val93-tag-server-bool-val-verify-bool-val-optional-hostname-string-val">new <strong>_create</strong>(ctx: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-_SSLContext">_SSLContext</a> val] tag, server: <a href="../builtin-Bool">Bool</a> val, verify: <a href="../builtin-Bool">Bool</a> val, optional hostname: <a href="../builtin-String">String</a> val) ?</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the session.</p>
-<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the session.</p>
-<h3 id="fun-ref-read-array91u8-val93-iso-may-raise-an-error">fun ref  read(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?, may raise an error</h3>
+<h3 id="fun-ref-read-array91u8-val93-iso">fun ref  <strong>read</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?</h3>
 <p>Returns unencrypted bytes to be passed to the application. Raises an error
 if no data is available.</p>
-<h3 id="fun-ref-receivedata-byteseq-val-none-val">fun ref  receive(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-receivedata-byteseq-val-none-val">fun ref  <strong>receive</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>When data is received, add it to the SSL session.</p>
-<h3 id="fun-ref-send-array91u8-val93-val-may-raise-an-error">fun ref  send(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?, may raise an error</h3>
+<h3 id="fun-ref-send-array91u8-val93-val">fun ref  <strong>send</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?</h3>
 <p>Returns encrypted bytes to be passed to the destination. Raises an error
 if no data is available.</p>
-<h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  state(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
+<h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  <strong>state</strong>(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
 <p>Returns the SSL session state.</p>
-<h3 id="fun-ref-_verify_hostname-none-val">fun ref  _verify_hostname(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-verifyhostname-none-val">fun ref  <strong><em>verify</em>hostname</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Verify that the certificate is valid for the given hostname.</p>
-<h3 id="fun-ref-writedata-byteseq-val-none-val-may-raise-an-error">fun ref  write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
+<h3 id="fun-ref-writedata-byteseq-val-none-val">fun ref  <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>When application data is sent, add it to the SSL session. Raises an error
 if the handshake is not complete.</p>
               

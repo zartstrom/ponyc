@@ -3612,60 +3612,60 @@ Capsicum.</p>
 <li>let path: <a href="../files-FilePath">FilePath</a> val</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createfrom-filepath-val-may-raise-an-error">new create(from: <a href="../files-FilePath">FilePath</a> val) ?, may raise an error</h3>
-<h3 id="new-_relativepath-filepath-val-fd-i32-val">new _relative(path': <a href="../files-FilePath">FilePath</a> val, fd': <a href="../builtin-I32">I32</a> val)</h3>
+<h3 id="new-createfrom-filepath-val">new <strong>create</strong>(from: <a href="../files-FilePath">FilePath</a> val) ?</h3>
+<h3 id="new-_relativepath-filepath-val-fd-i32-val">new <strong>_relative</strong>(path': <a href="../files-FilePath">FilePath</a> val, fd': <a href="../builtin-I32">I32</a> val)</h3>
 <h2 id="functions">Functions</h2>
-<h3 id="fun-box-chmodmode-filemode-box-bool-val">fun box  chmod(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-chmodmode-filemode-box-bool-val">fun box  <strong>chmod</strong>(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for this directory.</p>
-<h3 id="fun-box-chmodattarget-string-val-mode-filemode-box-bool-val">fun box  chmodat(target: <a href="../builtin-String">String</a> val, mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-chmodattarget-string-val-mode-filemode-box-bool-val">fun box  <strong>chmodat</strong>(target: <a href="../builtin-String">String</a> val, mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for some path relative to this directory.</p>
-<h3 id="fun-box-chownuid-u32-val-gid-u32-val-bool-val">fun box  chown(uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-chownuid-u32-val-gid-u32-val-bool-val">fun box  <strong>chown</strong>(uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the owner and group for this directory. Does nothing on Windows.</p>
-<h3 id="fun-box-chownattarget-string-val-uid-u32-val-gid-u32-val-bool-val">fun box  chownat(target: <a href="../builtin-String">String</a> val, uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-chownattarget-string-val-uid-u32-val-gid-u32-val-bool-val">fun box  <strong>chownat</strong>(target: <a href="../builtin-String">String</a> val, uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for some path relative to this directory.</p>
-<h3 id="fun-box-create_filetarget-string-val-file-iso-may-raise-an-error">fun box  create_file(target: <a href="../builtin-String">String</a> val): <a href="../files-File">File</a> iso^ ?, may raise an error</h3>
+<h3 id="fun-box-create_filetarget-string-val-file-iso">fun box  <strong>create_file</strong>(target: <a href="../builtin-String">String</a> val): <a href="../files-File">File</a> iso^ ?</h3>
 <p>Open for read/write, creating if it doesn't exist, preserving the contents
 if it does exist.</p>
-<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the directory.</p>
-<h3 id="fun-box-entries-array91string-val93-iso-may-raise-an-error">fun box  entries(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^ ?, may raise an error</h3>
+<h3 id="fun-box-entries-array91string-val93-iso">fun box  <strong>entries</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^ ?</h3>
 <p>The entries will include everything in the directory, but it is not
 recursive. The path for the entry will be relative to the directory, so it
 will contain no directory separators. The entries will not include "." or
 "..".</p>
-<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the file descriptor.</p>
-<h3 id="fun-box-info-fileinfo-val-may-raise-an-error">fun box  info(): <a href="../files-FileInfo">FileInfo</a> val ?, may raise an error</h3>
+<h3 id="fun-box-info-fileinfo-val">fun box  <strong>info</strong>(): <a href="../files-FileInfo">FileInfo</a> val ?</h3>
 <p>Return a FileInfo for this directory. Raise an error if the fd is invalid
 or if we don't have FileStat permission.</p>
-<h3 id="fun-box-infoattarget-string-val-fileinfo-val-may-raise-an-error">fun box  infoat(target: <a href="../builtin-String">String</a> val): <a href="../files-FileInfo">FileInfo</a> val ?, may raise an error</h3>
+<h3 id="fun-box-infoattarget-string-val-fileinfo-val">fun box  <strong>infoat</strong>(target: <a href="../builtin-String">String</a> val): <a href="../files-FileInfo">FileInfo</a> val ?</h3>
 <p>Return a FileInfo for some path relative to this directory.</p>
-<h3 id="fun-box-mkdirtarget-string-val-bool-val">fun box  mkdir(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-mkdirtarget-string-val-bool-val">fun box  <strong>mkdir</strong>(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Creates a directory relative to this one. Returns false if the path is
 not within this directory hierarchy or if FileMkdir permission is missing.</p>
-<h3 id="fun-box-opentarget-string-val-directory-iso-may-raise-an-error">fun box  open(target: <a href="../builtin-String">String</a> val): <a href="../files-Directory">Directory</a> iso^ ?, may raise an error</h3>
+<h3 id="fun-box-opentarget-string-val-directory-iso">fun box  <strong>open</strong>(target: <a href="../builtin-String">String</a> val): <a href="../files-Directory">Directory</a> iso^ ?</h3>
 <p>Open a directory relative to this one. Raises an error if the path is not
 within this directory hierarchy.</p>
-<h3 id="fun-box-open_filetarget-string-val-file-iso-may-raise-an-error">fun box  open_file(target: <a href="../builtin-String">String</a> val): <a href="../files-File">File</a> iso^ ?, may raise an error</h3>
+<h3 id="fun-box-open_filetarget-string-val-file-iso">fun box  <strong>open_file</strong>(target: <a href="../builtin-String">String</a> val): <a href="../files-File">File</a> iso^ ?</h3>
 <p>Open for read only, failing if it doesn't exist.</p>
-<h3 id="fun-box-removetarget-string-val-bool-val">fun box  remove(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-removetarget-string-val-bool-val">fun box  <strong>remove</strong>(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Remove the file or directory. The directory contents will be removed as
 well, recursively. Symlinks will be removed but not traversed.</p>
-<h3 id="fun-box-renamesource-string-val-to-directory-box-target-string-val-bool-val">fun box  rename(source: <a href="../builtin-String">String</a> val, to: <a href="../files-Directory">Directory</a> box, target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-renamesource-string-val-to-directory-box-target-string-val-bool-val">fun box  <strong>rename</strong>(source: <a href="../builtin-String">String</a> val, to: <a href="../files-Directory">Directory</a> box, target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Rename source (which is relative to this directory) to target (which is
 relative to the <code>to</code> directory).</p>
-<h3 id="fun-box-set_timeatime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  set_time(atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-set_timeatime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  <strong>set_time</strong>(atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to the given
 values.</p>
-<h3 id="fun-box-set_time_attarget-string-val-atime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  set_time_at(target: <a href="../builtin-String">String</a> val, atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-set_time_attarget-string-val-atime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  <strong>set_time_at</strong>(target: <a href="../builtin-String">String</a> val, atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to the given
 values.</p>
-<h3 id="fun-box-symlinksource-filepath-val-link_name-string-val-bool-val">fun box  symlink(source: <a href="../files-FilePath">FilePath</a> val, link_name: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-symlinksource-filepath-val-link_name-string-val-bool-val">fun box  <strong>symlink</strong>(source: <a href="../files-FilePath">FilePath</a> val, link_name: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Link the source path to the link_name, where the link_name is relative to
 this directory.</p>
-<h3 id="fun-box-touch-bool-val">fun box  touch(): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-touch-bool-val">fun box  <strong>touch</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to now.</p>
-<h3 id="fun-box-touchattarget-string-val-bool-val">fun box  touchat(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-touchattarget-string-val-bool-val">fun box  <strong>touchat</strong>(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to now.</p>
               
             </div>
