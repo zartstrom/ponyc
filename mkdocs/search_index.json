@@ -7,13 +7,18 @@
         }, 
         {
             "location": "/packages-stdlib--index/", 
-            "text": "Pony Standard Library\n\n\nThis package represents the test suite for the Pony standard library.\n\n\nFor every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.\n\n\nAll tests can be run by compiling and running packages/stdlib.", 
+            "text": "Pony Standard Library\n\n\nThis package represents the test suite for the Pony standard library.\n\n\nFor every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.\n\n\nAll tests can be run by compiling and running packages/stdlib.\n\n\nEntities\n\n\n\n\nactor Main", 
             "title": "Package"
         }, 
         {
             "location": "/packages-stdlib--index/#pony-standard-library", 
             "text": "This package represents the test suite for the Pony standard library.  For every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.  All tests can be run by compiling and running packages/stdlib.", 
             "title": "Pony Standard Library"
+        }, 
+        {
+            "location": "/packages-stdlib--index/#entities", 
+            "text": "actor Main", 
+            "title": "Entities"
         }, 
         {
             "location": "/packages-stdlib-Main/", 
@@ -52,8 +57,13 @@
         }, 
         {
             "location": "/assert--index/", 
-            "text": "No package doc string provided for assert.", 
+            "text": "No package doc string provided for assert.\n\n\nEntities\n\n\n\n\nprimitive Assert\n\n\nprimitive Fact", 
             "title": "Package"
+        }, 
+        {
+            "location": "/assert--index/#entities", 
+            "text": "primitive Assert  primitive Fact", 
+            "title": "Entities"
         }, 
         {
             "location": "/assert-Assert/", 
@@ -137,8 +147,13 @@
         }, 
         {
             "location": "/builtin--index/", 
-            "text": "No package doc string provided for builtin.", 
+            "text": "No package doc string provided for builtin.\n\n\nEntities\n\n\n\n\ntype Align\n\n\nprimitive AlignCenter\n\n\nprimitive AlignLeft\n\n\nprimitive AlignRight\n\n\nprimitive AmbientAuth\n\n\ninterface Any\n\n\ntrait _ArithmeticConvertible\n\n\nclass Array\n\n\nclass ArrayKeys\n\n\nclass ArrayPairs\n\n\nclass ArrayValues\n\n\nprimitive AsioEvent\n\n\ntype AsioEventID\n\n\ninterface AsioEventNotify\n\n\nprimitive Bool\n\n\ninterface ByteSeq\n\n\ninterface ByteSeqIter\n\n\ninterface Comparable\n\n\ntype Compare\n\n\ninterface Creatable\n\n\ninterface DisposableActor\n\n\nclass Env\n\n\nprimitive Equal\n\n\ninterface Equatable\n\n\nprimitive F32\n\n\nprimitive F64\n\n\ntype Float\n\n\ntrait FloatingPoint\n\n\nprimitive FormatBinary\n\n\nprimitive FormatBinaryBare\n\n\nprimitive FormatDefault\n\n\nprimitive FormatDefaultNumber\n\n\nprimitive FormatExp\n\n\nprimitive FormatExpLarge\n\n\nprimitive FormatFix\n\n\nprimitive FormatFixLarge\n\n\ntype FormatFloat\n\n\nprimitive FormatGeneral\n\n\nprimitive FormatGeneralLarge\n\n\nprimitive FormatHex\n\n\nprimitive FormatHexBare\n\n\nprimitive FormatHexSmall\n\n\nprimitive FormatHexSmallBare\n\n\ntype FormatInt\n\n\nprimitive FormatOctal\n\n\nprimitive FormatOctalBare\n\n\ninterface FormatSettings\n\n\nprimitive FormatSettingsDefault\n\n\ntype FormatSettingsFloat\n\n\nclass FormatSettingsHolder\n\n\ntype FormatSettingsInt\n\n\ntrait FormatSpec\n\n\nprimitive FormatUTF32\n\n\nprimitive Greater\n\n\ninterface HasEq\n\n\nprimitive I128\n\n\nprimitive I16\n\n\nprimitive I32\n\n\nprimitive I64\n\n\nprimitive I8\n\n\nprimitive ILong\n\n\nprimitive ISize\n\n\ntrait Integer\n\n\ninterface Iterator\n\n\nprimitive Less\n\n\nstruct Maybe\n\n\nprimitive None\n\n\ntype Number\n\n\ninterface OutStream\n\n\nprimitive Platform\n\n\nstruct Pointer\n\n\nprimitive PrefixDefault\n\n\ntype PrefixNumber\n\n\nprimitive PrefixSign\n\n\nprimitive PrefixSpace\n\n\ntrait PrefixSpec\n\n\ninterface ReadSeq\n\n\ntrait Real\n\n\ninterface Seq\n\n\ntype Signed\n\n\ntrait _SignedInteger\n\n\ninterface SourceLoc\n\n\nactor StdStream\n\n\nactor Stdin\n\n\ninterface StdinNotify\n\n\nclass String\n\n\nclass StringBytes\n\n\nclass StringRunes\n\n\ninterface Stringable\n\n\nprimitive _ToString\n\n\nprimitive U128\n\n\nprimitive U16\n\n\nprimitive U32\n\n\nprimitive U64\n\n\nprimitive U8\n\n\nprimitive ULong\n\n\nprimitive USize\n\n\ntype Unsigned\n\n\ntrait _UnsignedInteger", 
             "title": "Package"
+        }, 
+        {
+            "location": "/builtin--index/#entities", 
+            "text": "type Align  primitive AlignCenter  primitive AlignLeft  primitive AlignRight  primitive AmbientAuth  interface Any  trait _ArithmeticConvertible  class Array  class ArrayKeys  class ArrayPairs  class ArrayValues  primitive AsioEvent  type AsioEventID  interface AsioEventNotify  primitive Bool  interface ByteSeq  interface ByteSeqIter  interface Comparable  type Compare  interface Creatable  interface DisposableActor  class Env  primitive Equal  interface Equatable  primitive F32  primitive F64  type Float  trait FloatingPoint  primitive FormatBinary  primitive FormatBinaryBare  primitive FormatDefault  primitive FormatDefaultNumber  primitive FormatExp  primitive FormatExpLarge  primitive FormatFix  primitive FormatFixLarge  type FormatFloat  primitive FormatGeneral  primitive FormatGeneralLarge  primitive FormatHex  primitive FormatHexBare  primitive FormatHexSmall  primitive FormatHexSmallBare  type FormatInt  primitive FormatOctal  primitive FormatOctalBare  interface FormatSettings  primitive FormatSettingsDefault  type FormatSettingsFloat  class FormatSettingsHolder  type FormatSettingsInt  trait FormatSpec  primitive FormatUTF32  primitive Greater  interface HasEq  primitive I128  primitive I16  primitive I32  primitive I64  primitive I8  primitive ILong  primitive ISize  trait Integer  interface Iterator  primitive Less  struct Maybe  primitive None  type Number  interface OutStream  primitive Platform  struct Pointer  primitive PrefixDefault  type PrefixNumber  primitive PrefixSign  primitive PrefixSpace  trait PrefixSpec  interface ReadSeq  trait Real  interface Seq  type Signed  trait _SignedInteger  interface SourceLoc  actor StdStream  actor Stdin  interface StdinNotify  class String  class StringBytes  class StringRunes  interface Stringable  primitive _ToString  primitive U128  primitive U16  primitive U32  primitive U64  primitive U8  primitive ULong  primitive USize  type Unsigned  trait _UnsignedInteger", 
+            "title": "Entities"
         }, 
         {
             "location": "/builtin-Align/", 
@@ -9992,13 +10007,18 @@
         }, 
         {
             "location": "/builtin_test--index/", 
-            "text": "Builtin Tests\n\n\nThis package contains the unit tests for the \nbuiltin\n package. These are here\nso \nbuiltin\n doesn't have to depend on the \nPonyTest\n package.", 
+            "text": "Builtin Tests\n\n\nThis package contains the unit tests for the \nbuiltin\n package. These are here\nso \nbuiltin\n doesn't have to depend on the \nPonyTest\n package.\n\n\nEntities\n\n\n\n\nactor Main\n\n\nclass _TestAbs\n\n\nclass _TestArrayInsert\n\n\nclass _TestArraySlice\n\n\nclass _TestDivMod\n\n\nclass _TestFloatToString\n\n\nclass _TestIntToString\n\n\nclass _TestMath128\n\n\nclass _TestMaybe\n\n\nclass _TestSpecialValuesF32\n\n\nclass _TestSpecialValuesF64\n\n\nclass _TestStringCompare\n\n\nclass _TestStringCount\n\n\nclass _TestStringCut\n\n\nclass _TestStringJoin\n\n\nclass _TestStringLstrip\n\n\nclass _TestStringRemove\n\n\nclass _TestStringReplace\n\n\nclass _TestStringRstrip\n\n\nclass _TestStringRunes\n\n\nclass _TestStringSplit\n\n\nclass _TestStringStrip\n\n\nclass _TestStringSubstring\n\n\nclass _TestStringToBool\n\n\nclass _TestStringToFloat\n\n\nclass _TestStringToI8\n\n\nclass _TestStringToIntLarge\n\n\nclass _TestStringToU8\n\n\nstruct _TestStruct\n\n\nclass _TestValtrace\n\n\nactor _Valtrace", 
             "title": "Package"
         }, 
         {
             "location": "/builtin_test--index/#builtin-tests", 
             "text": "This package contains the unit tests for the  builtin  package. These are here\nso  builtin  doesn't have to depend on the  PonyTest  package.", 
             "title": "Builtin Tests"
+        }, 
+        {
+            "location": "/builtin_test--index/#entities", 
+            "text": "actor Main  class _TestAbs  class _TestArrayInsert  class _TestArraySlice  class _TestDivMod  class _TestFloatToString  class _TestIntToString  class _TestMath128  class _TestMaybe  class _TestSpecialValuesF32  class _TestSpecialValuesF64  class _TestStringCompare  class _TestStringCount  class _TestStringCut  class _TestStringJoin  class _TestStringLstrip  class _TestStringRemove  class _TestStringReplace  class _TestStringRstrip  class _TestStringRunes  class _TestStringSplit  class _TestStringStrip  class _TestStringSubstring  class _TestStringToBool  class _TestStringToFloat  class _TestStringToI8  class _TestStringToIntLarge  class _TestStringToU8  struct _TestStruct  class _TestValtrace  actor _Valtrace", 
+            "title": "Entities"
         }, 
         {
             "location": "/builtin_test-Main/", 
@@ -11522,13 +11542,18 @@
         }, 
         {
             "location": "/bureaucracy--index/", 
-            "text": "Bureaucracy package", 
+            "text": "Bureaucracy package\n\n\nEntities\n\n\n\n\nactor Custodian\n\n\nactor Main\n\n\nactor Registrar\n\n\nclass _TestCustodian\n\n\nactor _TestDisposable\n\n\nclass _TestRegistrar", 
             "title": "Package"
         }, 
         {
             "location": "/bureaucracy--index/#bureaucracy-package", 
             "text": "", 
             "title": "Bureaucracy package"
+        }, 
+        {
+            "location": "/bureaucracy--index/#entities", 
+            "text": "actor Custodian  actor Main  actor Registrar  class _TestCustodian  actor _TestDisposable  class _TestRegistrar", 
+            "title": "Entities"
         }, 
         {
             "location": "/bureaucracy-Custodian/", 
@@ -11792,8 +11817,13 @@
         }, 
         {
             "location": "/capsicum--index/", 
-            "text": "No package doc string provided for capsicum.", 
+            "text": "No package doc string provided for capsicum.\n\n\nEntities\n\n\n\n\nprimitive Cap\n\n\ntype CapRights\n\n\nclass CapRights0", 
             "title": "Package"
+        }, 
+        {
+            "location": "/capsicum--index/#entities", 
+            "text": "primitive Cap  type CapRights  class CapRights0", 
+            "title": "Entities"
         }, 
         {
             "location": "/capsicum-Cap/", 
@@ -12327,8 +12357,13 @@
         }, 
         {
             "location": "/collections--index/", 
-            "text": "No package doc string provided for collections.", 
+            "text": "No package doc string provided for collections.\n\n\nEntities\n\n\n\n\ninterface Flag\n\n\nclass Flags\n\n\nprimitive HashByteSeq\n\n\nprimitive HashEq\n\n\ninterface HashFunction\n\n\nprimitive HashIs\n\n\nclass HashMap\n\n\nclass HashSet\n\n\ninterface Hashable\n\n\nclass List\n\n\nclass ListNode\n\n\nclass ListNodes\n\n\nclass ListValues\n\n\nprimitive Lists\n\n\nactor Main\n\n\ntype Map\n\n\nprimitive _MapDeleted\n\n\nprimitive _MapEmpty\n\n\ntype MapIs\n\n\nclass MapKeys\n\n\nclass MapPairs\n\n\nclass MapValues\n\n\nclass Range\n\n\nclass Reverse\n\n\nclass RingBuffer\n\n\ntype Set\n\n\ntype SetIs\n\n\nclass SetValues\n\n\nclass _TestList\n\n\nclass _TestListsContains\n\n\nclass _TestListsDrop\n\n\nclass _TestListsEvery\n\n\nclass _TestListsExists\n\n\nclass _TestListsFilter\n\n\nclass _TestListsFlatMap\n\n\nclass _TestListsFlatten\n\n\nclass _TestListsFold\n\n\nclass _TestListsFrom\n\n\nclass _TestListsMap\n\n\nclass _TestListsPartition\n\n\nclass _TestListsReverse\n\n\nclass _TestListsTake\n\n\nclass _TestListsTakeWhile\n\n\nclass _TestMap\n\n\nclass _TestRing", 
             "title": "Package"
+        }, 
+        {
+            "location": "/collections--index/#entities", 
+            "text": "interface Flag  class Flags  primitive HashByteSeq  primitive HashEq  interface HashFunction  primitive HashIs  class HashMap  class HashSet  interface Hashable  class List  class ListNode  class ListNodes  class ListValues  primitive Lists  actor Main  type Map  primitive _MapDeleted  primitive _MapEmpty  type MapIs  class MapKeys  class MapPairs  class MapValues  class Range  class Reverse  class RingBuffer  type Set  type SetIs  class SetValues  class _TestList  class _TestListsContains  class _TestListsDrop  class _TestListsEvery  class _TestListsExists  class _TestListsFilter  class _TestListsFlatMap  class _TestListsFlatten  class _TestListsFold  class _TestListsFrom  class _TestListsMap  class _TestListsPartition  class _TestListsReverse  class _TestListsTake  class _TestListsTakeWhile  class _TestMap  class _TestRing", 
+            "title": "Entities"
         }, 
         {
             "location": "/collections-Flag/", 
@@ -12962,7 +12997,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew create(optional len: \nUSize\n val)\n\n\nnew from(seq: \nArray\n[A^] ref)\n\n\nnew unit(a: A)\n\n\nFunctions\n\n\nfun ref  append(seq: \nReadSeq\n[A] box, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun ref  append_list(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  append_node(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  apply(optional i: \nUSize\n val): this-\nA ?, may raise an error\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  clear(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  clone(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun box  contains[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  _contains[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  _decrement(): \nNone\n val\n\n\nfun box  drop(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  every(f: \n$4$55\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  _every(ln: this-\nListNode\n[A] ref, f: \n$4$56\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  exists(f: \n$4$58\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  _exists(ln: this-\nListNode\n[A] ref, f: \n$4$59\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  filter(f: \n$4$49\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  _filter(ln: this-\nListNode\n[A] ref, f: \n$4$50\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  flat_map[B: B](f: \n$4$46\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  _flat_map[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$47\n[A, B] box, acc: \nList\n[\nList\n[B] ref] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  fold[B: B](f: \n$4$52\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  _fold[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$53\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun box  head(): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGet the head of the list.\n\n\nfun ref  _increment(): \nNone\n val\n\n\nfun box  index(i: \nUSize\n val): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  map[B: B](f: \n$4$43\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  _map[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  nodes(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  partition(f: \n$4$61\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  pop(): A^ ?, may raise an error\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  prepend_list(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  prepend_node(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  push(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  remove(i: \nUSize\n val): \nList\n[A] ref^ ?, may raise an error\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  reserve(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  reverse(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  _reverse(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun box  rnodes(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  rvalues(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  _set_both(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  _set_head(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  _set_tail(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  shift(): A^ ?, may raise an error\n\n\nRemoves a value from the head of the list.\n\n\nfun box  size(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  tail(): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGet the tail of the list.\n\n\nfun box  take(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  take_while(f: \n$4$67\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  truncate(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  unshift(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  update(i: \nUSize\n val, value: A): A^ ?, may raise an error\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  values(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew create(optional len: \nUSize\n val)\n\n\nnew from(seq: \nArray\n[A^] ref)\n\n\nnew unit(a: A)\n\n\nFunctions\n\n\nfun ref  append(seq: \nReadSeq\n[A] box, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun ref  append_list(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  append_node(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  apply(optional i: \nUSize\n val): this-\nA ?, may raise an error\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  clear(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  clone(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun box  contains[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  _contains[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  _decrement(): \nNone\n val\n\n\nfun box  drop(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  every(f: \n$4$41\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  _every(ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  exists(f: \n$4$44\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  _exists(ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  filter(f: \n$4$35\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  _filter(ln: this-\nListNode\n[A] ref, f: \n$4$36\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  flat_map[B: B](f: \n$4$32\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  _flat_map[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$33\n[A, B] box, acc: \nList\n[\nList\n[B] ref] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  fold[B: B](f: \n$4$38\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  _fold[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$39\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun box  head(): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGet the head of the list.\n\n\nfun ref  _increment(): \nNone\n val\n\n\nfun box  index(i: \nUSize\n val): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  map[B: B](f: \n$4$29\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  _map[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$30\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  nodes(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  partition(f: \n$4$47\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  pop(): A^ ?, may raise an error\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  prepend_list(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  prepend_node(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  push(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  remove(i: \nUSize\n val): \nList\n[A] ref^ ?, may raise an error\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  reserve(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  reverse(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  _reverse(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun box  rnodes(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  rvalues(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  _set_both(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  _set_head(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  _set_tail(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  shift(): A^ ?, may raise an error\n\n\nRemoves a value from the head of the list.\n\n\nfun box  size(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  tail(): this-\nListNode\n[A] ref ?, may raise an error\n\n\nGet the tail of the list.\n\n\nfun box  take(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  take_while(f: \n$4$53\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  truncate(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  unshift(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  update(i: \nUSize\n val, value: A): A^ ?, may raise an error\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  values(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.", 
             "title": "class List"
         }, 
         {
@@ -13046,54 +13081,54 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45591a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44191a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$55[A] box): Bool val"
+            "title": "fun box  every(f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44291a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$56[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$42[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45891a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44491a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$58[A] box): Bool val"
+            "title": "fun box  exists(f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45991a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44591a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$59[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$45[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44991a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43591a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$49[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$35[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-45091a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43691a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$50[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$36[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44691a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43291a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$46[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$32[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_flat_map91b-b93ln-this-listnode91a93-ref-f-44791a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_flat_map91b-b93ln-this-listnode91a93-ref-f-43391a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  _flat_map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$47[A, B] box, acc: List[List[B] ref] ref): List[B] ref^"
+            "title": "fun box  _flat_map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$33[A, B] box, acc: List[List[B] ref] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45291a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43891a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$52[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$38[A, B] box, acc: B): B"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45391a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43991a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$53[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$39[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref-may-raise-an-error", 
@@ -13111,14 +13146,14 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?, may raise an error"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44391a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42991a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$43[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$29[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44491a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-43091a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$44[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$30[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13126,9 +13161,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-46191a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44791a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$61[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$47[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a-may-raise-an-error", 
@@ -13216,9 +13251,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45391a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$67[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$53[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -14702,8 +14737,13 @@
         }, 
         {
             "location": "/debug--index/", 
-            "text": "No package doc string provided for debug.", 
+            "text": "No package doc string provided for debug.\n\n\nEntities\n\n\n\n\nprimitive Debug\n\n\nprimitive DebugErr\n\n\nprimitive DebugOut\n\n\ntype DebugStream", 
             "title": "Package"
+        }, 
+        {
+            "location": "/debug--index/#entities", 
+            "text": "primitive Debug  primitive DebugErr  primitive DebugOut  type DebugStream", 
+            "title": "Entities"
         }, 
         {
             "location": "/debug-Debug/", 
@@ -14847,8 +14887,13 @@
         }, 
         {
             "location": "/encode-base64--index/", 
-            "text": "No package doc string provided for encode/base64.", 
+            "text": "No package doc string provided for encode/base64.\n\n\nEntities\n\n\n\n\nprimitive Base64\n\n\nactor Main\n\n\nclass _TestBase64Decode\n\n\nclass _TestBase64Encode\n\n\nclass _TestBase64EncodeDecode\n\n\nclass _TestBase64Quote", 
             "title": "Package"
+        }, 
+        {
+            "location": "/encode-base64--index/#entities", 
+            "text": "primitive Base64  actor Main  class _TestBase64Decode  class _TestBase64Encode  class _TestBase64EncodeDecode  class _TestBase64Quote", 
+            "title": "Entities"
         }, 
         {
             "location": "/encode-base64-Base64/", 
@@ -15157,8 +15202,13 @@
         }, 
         {
             "location": "/files--index/", 
-            "text": "No package doc string provided for files.", 
+            "text": "No package doc string provided for files.\n\n\nEntities\n\n\n\n\nprimitive CreateFile\n\n\nclass Directory\n\n\nprimitive _DirectoryEntry\n\n\nprimitive _DirectoryHandle\n\n\nclass File\n\n\ntype FileCaps\n\n\nprimitive FileChmod\n\n\nprimitive FileChown\n\n\nprimitive FileCreate\n\n\nprimitive _FileDes\n\n\ntype FileErrNo\n\n\nprimitive FileError\n\n\nprimitive _FileHandle\n\n\nprimitive _FileHelper\n\n\nclass FileInfo\n\n\nclass FileLines\n\n\nprimitive FileLink\n\n\nprimitive FileLookup\n\n\nprimitive FileMkdir\n\n\nclass FileMode\n\n\nprimitive FileOK\n\n\nclass FilePath\n\n\nprimitive FileRead\n\n\nprimitive FileRemove\n\n\nprimitive FileRename\n\n\nprimitive FileSeek\n\n\nprimitive FileStat\n\n\nactor FileStream\n\n\nprimitive FileSync\n\n\nprimitive FileTime\n\n\nprimitive FileTruncate\n\n\nprimitive FileWrite\n\n\nactor Main\n\n\nprimitive OpenFile\n\n\nprimitive Path\n\n\nprimitive _PathDot\n\n\nprimitive _PathDot2\n\n\nprimitive _PathOther\n\n\nprimitive _PathSep\n\n\ntype _PathState\n\n\nclass _TestDirectoryOpen\n\n\nclass _TestMkdtemp\n\n\nclass _TestWalk\n\n\ninterface WalkHandler", 
             "title": "Package"
+        }, 
+        {
+            "location": "/files--index/#entities", 
+            "text": "primitive CreateFile  class Directory  primitive _DirectoryEntry  primitive _DirectoryHandle  class File  type FileCaps  primitive FileChmod  primitive FileChown  primitive FileCreate  primitive _FileDes  type FileErrNo  primitive FileError  primitive _FileHandle  primitive _FileHelper  class FileInfo  class FileLines  primitive FileLink  primitive FileLookup  primitive FileMkdir  class FileMode  primitive FileOK  class FilePath  primitive FileRead  primitive FileRemove  primitive FileRename  primitive FileSeek  primitive FileStat  actor FileStream  primitive FileSync  primitive FileTime  primitive FileTruncate  primitive FileWrite  actor Main  primitive OpenFile  primitive Path  primitive _PathDot  primitive _PathDot2  primitive _PathOther  primitive _PathSep  type _PathState  class _TestDirectoryOpen  class _TestMkdtemp  class _TestWalk  interface WalkHandler", 
+            "title": "Entities"
         }, 
         {
             "location": "/files-CreateFile/", 
@@ -17227,8 +17277,13 @@
         }, 
         {
             "location": "/glob--index/", 
-            "text": "No package doc string provided for glob.", 
+            "text": "No package doc string provided for glob.\n\n\nEntities\n\n\n\n\nprimitive _FileHelper\n\n\nprimitive Glob\n\n\ninterface GlobHandler\n\n\nactor Main\n\n\nclass _TestFilter\n\n\nclass _TestFnMatch\n\n\nclass _TestFnMatchCase\n\n\nclass _TestGlob\n\n\nclass _TestIGlob", 
             "title": "Package"
+        }, 
+        {
+            "location": "/glob--index/#entities", 
+            "text": "primitive _FileHelper  primitive Glob  interface GlobHandler  actor Main  class _TestFilter  class _TestFnMatch  class _TestFnMatchCase  class _TestGlob  class _TestIGlob", 
+            "title": "Entities"
         }, 
         {
             "location": "/glob-_FileHelper/", 
@@ -17657,8 +17712,13 @@
         }, 
         {
             "location": "/json--index/", 
-            "text": "No package doc string provided for json.", 
+            "text": "No package doc string provided for json.\n\n\nEntities\n\n\n\n\nclass JsonArray\n\n\nclass JsonDoc\n\n\nclass JsonObject\n\n\nprimitive _JsonPrint\n\n\ntype JsonType\n\n\nactor Main\n\n\nclass _TestParseArray\n\n\nclass _TestParseBasic\n\n\nclass _TestParseKeyword\n\n\nclass _TestParseNumber\n\n\nclass _TestParseObject\n\n\nclass _TestParsePrint\n\n\nclass _TestParseRFC1\n\n\nclass _TestParseRFC2\n\n\nclass _TestParseString\n\n\nclass _TestPrintArray\n\n\nclass _TestPrintKeyword\n\n\nclass _TestPrintNumber\n\n\nclass _TestPrintObject\n\n\nclass _TestPrintString", 
             "title": "Package"
+        }, 
+        {
+            "location": "/json--index/#entities", 
+            "text": "class JsonArray  class JsonDoc  class JsonObject  primitive _JsonPrint  type JsonType  actor Main  class _TestParseArray  class _TestParseBasic  class _TestParseKeyword  class _TestParseNumber  class _TestParseObject  class _TestParsePrint  class _TestParseRFC1  class _TestParseRFC2  class _TestParseString  class _TestPrintArray  class _TestPrintKeyword  class _TestPrintNumber  class _TestPrintObject  class _TestPrintString", 
+            "title": "Entities"
         }, 
         {
             "location": "/json-JsonArray/", 
@@ -18652,8 +18712,13 @@
         }, 
         {
             "location": "/math--index/", 
-            "text": "No package doc string provided for math.", 
+            "text": "No package doc string provided for math.\n\n\nEntities\n\n\n\n\nclass Fibonacci", 
             "title": "Package"
+        }, 
+        {
+            "location": "/math--index/#entities", 
+            "text": "class Fibonacci", 
+            "title": "Entities"
         }, 
         {
             "location": "/math-Fibonacci/", 
@@ -18697,8 +18762,13 @@
         }, 
         {
             "location": "/net--index/", 
-            "text": "No package doc string provided for net.", 
+            "text": "No package doc string provided for net.\n\n\nEntities\n\n\n\n\nclass Buffer\n\n\nprimitive DNS\n\n\nclass IPAddress\n\n\nactor Main\n\n\nactor TCPConnection\n\n\ninterface TCPConnectionNotify\n\n\ninterface TCPListenNotify\n\n\nactor TCPListener\n\n\nclass _TestBroadcast\n\n\nactor _TestBroadcastMgr\n\n\nclass _TestBuffer\n\n\nclass _TestPing\n\n\nclass _TestPong\n\n\ninterface UDPNotify\n\n\nactor UDPSocket", 
             "title": "Package"
+        }, 
+        {
+            "location": "/net--index/#entities", 
+            "text": "class Buffer  primitive DNS  class IPAddress  actor Main  actor TCPConnection  interface TCPConnectionNotify  interface TCPListenNotify  actor TCPListener  class _TestBroadcast  actor _TestBroadcastMgr  class _TestBuffer  class _TestPing  class _TestPong  interface UDPNotify  actor UDPSocket", 
+            "title": "Entities"
         }, 
         {
             "location": "/net-Buffer/", 
@@ -19872,8 +19942,13 @@
         }, 
         {
             "location": "/net-http--index/", 
-            "text": "No package doc string provided for net/http.", 
+            "text": "No package doc string provided for net/http.\n\n\nEntities\n\n\n\n\nclass _BuildBad\n\n\nclass _BuildBasic\n\n\nclass _BuildMissingParts\n\n\nclass _BuildNoEncoding\n\n\nclass _Check\n\n\nclass _CheckBad\n\n\nclass _CheckIPv6\n\n\nclass _CheckScheme\n\n\nactor Client\n\n\nactor _ClientConnection\n\n\nclass CommonLog\n\n\nclass ContentsLog\n\n\nclass _Decode\n\n\nclass _DecodeBad\n\n\nprimitive DiscardLog\n\n\nclass _Encode\n\n\nclass _EncodeBad\n\n\nclass _EncodeClean\n\n\nclass _EncodeIPv6\n\n\nclass _HostService\n\n\ninterface Logger\n\n\nactor Main\n\n\nclass Payload\n\n\nprimitive _PayloadBody\n\n\nclass _PayloadBuilder\n\n\nprimitive _PayloadChunk\n\n\nprimitive _PayloadChunkEnd\n\n\nprimitive _PayloadChunkStart\n\n\nprimitive _PayloadContentLength\n\n\nprimitive _PayloadError\n\n\nprimitive _PayloadHeaders\n\n\nprimitive _PayloadReady\n\n\nprimitive _PayloadRequest\n\n\nprimitive _PayloadResponse\n\n\ntype _PayloadState\n\n\nclass _RequestBuilder\n\n\ninterface RequestHandler\n\n\nclass _ResponseBuilder\n\n\ninterface ResponseHandler\n\n\nactor Server\n\n\nactor _ServerConnection\n\n\nclass _ServerListener\n\n\ninterface ServerNotify\n\n\nprimitive _Test\n\n\nclass _ToStringFun\n\n\nclass URL\n\n\nprimitive URLEncode\n\n\ntype URLPart\n\n\nprimitive URLPartFragment\n\n\nprimitive URLPartHost\n\n\nprimitive URLPartPassword\n\n\nprimitive URLPartPath\n\n\nprimitive URLPartQuery\n\n\nprimitive URLPartUser\n\n\nclass _Valid", 
             "title": "Package"
+        }, 
+        {
+            "location": "/net-http--index/#entities", 
+            "text": "class _BuildBad  class _BuildBasic  class _BuildMissingParts  class _BuildNoEncoding  class _Check  class _CheckBad  class _CheckIPv6  class _CheckScheme  actor Client  actor _ClientConnection  class CommonLog  class ContentsLog  class _Decode  class _DecodeBad  primitive DiscardLog  class _Encode  class _EncodeBad  class _EncodeClean  class _EncodeIPv6  class _HostService  interface Logger  actor Main  class Payload  primitive _PayloadBody  class _PayloadBuilder  primitive _PayloadChunk  primitive _PayloadChunkEnd  primitive _PayloadChunkStart  primitive _PayloadContentLength  primitive _PayloadError  primitive _PayloadHeaders  primitive _PayloadReady  primitive _PayloadRequest  primitive _PayloadResponse  type _PayloadState  class _RequestBuilder  interface RequestHandler  class _ResponseBuilder  interface ResponseHandler  actor Server  actor _ServerConnection  class _ServerListener  interface ServerNotify  primitive _Test  class _ToStringFun  class URL  primitive URLEncode  type URLPart  primitive URLPartFragment  primitive URLPartHost  primitive URLPartPassword  primitive URLPartPath  primitive URLPartQuery  primitive URLPartUser  class _Valid", 
+            "title": "Entities"
         }, 
         {
             "location": "/net-http-_BuildBad/", 
@@ -22367,8 +22442,13 @@
         }, 
         {
             "location": "/net-ssl--index/", 
-            "text": "No package doc string provided for net/ssl.", 
+            "text": "No package doc string provided for net/ssl.\n\n\nEntities\n\n\n\n\nprimitive _BIO\n\n\nprimitive _GeneralName\n\n\nprimitive _GeneralNameStack\n\n\nprimitive _SSL\n\n\nclass SSL\n\n\nprimitive SSLAuthFail\n\n\nclass SSLConnection\n\n\nprimitive _SSLContext\n\n\nclass SSLContext\n\n\nprimitive SSLError\n\n\nprimitive SSLHandshake\n\n\nprimitive _SSLInit\n\n\nprimitive SSLReady\n\n\ntype SSLState\n\n\nprimitive X509\n\n\nprimitive _X509Name", 
             "title": "Package"
+        }, 
+        {
+            "location": "/net-ssl--index/#entities", 
+            "text": "primitive _BIO  primitive _GeneralName  primitive _GeneralNameStack  primitive _SSL  class SSL  primitive SSLAuthFail  class SSLConnection  primitive _SSLContext  class SSLContext  primitive SSLError  primitive SSLHandshake  primitive _SSLInit  primitive SSLReady  type SSLState  primitive X509  primitive _X509Name", 
+            "title": "Entities"
         }, 
         {
             "location": "/net-ssl-_BIO/", 
@@ -23052,13 +23132,18 @@
         }, 
         {
             "location": "/options--index/", 
-            "text": "PonyOptions package", 
+            "text": "PonyOptions package\n\n\nEntities\n\n\n\n\nprimitive AmbiguousMatch\n\n\ntype ArgumentType\n\n\nprimitive EnvVars\n\n\nclass _ErrorPrinter\n\n\ntype ErrorReason\n\n\nprimitive F64Argument\n\n\nprimitive I64Argument\n\n\nprimitive InvalidArgument\n\n\nactor Main\n\n\nprimitive MissingArgument\n\n\nclass _Option\n\n\nprimitive Optional\n\n\nclass Options\n\n\ninterface ParseError\n\n\ntype ParsedOption\n\n\nprimitive Required\n\n\nprimitive StringArgument\n\n\nclass _TestArgLeadingDash\n\n\nclass _TestCombineShortArg\n\n\nclass _TestCombineShortOptions\n\n\nclass _TestLongOptions\n\n\nprimitive TestOptions\n\n\nclass _TestShortOptions\n\n\nprimitive UnrecognisedOption", 
             "title": "Package"
         }, 
         {
             "location": "/options--index/#ponyoptions-package", 
             "text": "", 
             "title": "PonyOptions package"
+        }, 
+        {
+            "location": "/options--index/#entities", 
+            "text": "primitive AmbiguousMatch  type ArgumentType  primitive EnvVars  class _ErrorPrinter  type ErrorReason  primitive F64Argument  primitive I64Argument  primitive InvalidArgument  actor Main  primitive MissingArgument  class _Option  primitive Optional  class Options  interface ParseError  type ParsedOption  primitive Required  primitive StringArgument  class _TestArgLeadingDash  class _TestCombineShortArg  class _TestCombineShortOptions  class _TestLongOptions  primitive TestOptions  class _TestShortOptions  primitive UnrecognisedOption", 
+            "title": "Entities"
         }, 
         {
             "location": "/options-AmbiguousMatch/", 
@@ -23962,7 +24047,7 @@
         }, 
         {
             "location": "/ponytest--index/", 
-            "text": "PonyTest package\n\n\nThe PonyTest package provides a unit testing framework. It is designed to be as\nsimple as possible to use, both for the unit test writer and the user running\nthe tests.\n\n\nTo help simplify test writing and distribution this package depends on as few\nother packages as possible. Currently the required packages are:\n  builtin\n  time\n  collections\n\n\nEach unit test is a class, with a single test function. By default all tests\nrun concurrently.\n\n\nEach test run is provided with a helper object. This provides logging and\nassertion functions. By default log messages are only shown for tests that\nfail.\n\n\nWhen any assertion function fails the test is counted as a fail. However, tests\ncan also indicate failure by raising an error in the test function.\n\n\nExample program\n\n\nTo use PonyTest simply write a class for each test and a TestList type that\ntells the PonyTest object about the tests. Typically the TestList will be Main\nfor the package.\n\n\nThe following is a complete program with 2 trivial tests.\n\n\nuse \nponytest\n\n\nactor Main is TestList\n  new create(env: Env) =\n\n    PonyTest(env, this)\n\n  new make() =\n\n    None\n\n  fun tag tests(test: PonyTest) =\n\n    test(_TestAdd)\n    test(_TestSub)\n\nclass iso _TestAdd is UnitTest\n  fun name():String =\n \naddition\n\n\n  fun apply(h: TestHelper) =\n\n    h.assert_eq[U32](4, 2 + 2)\n\nclass iso _TestSub is UnitTest\n  fun name():String =\n \nsubtraction\n\n\n  fun apply(h: TestHelper) =\n\n    h.assert_eq[U32](2, 4 - 2)\n\n\n\n\nThe make() constructor is not needed for this example. However, it allows for\neasy aggregation of tests (see below) so it is recommended that all test Mains\nprovide it.\n\n\nMain.create() is called only for program invocations on the current package.\nMain.make() is called during aggregation. If so desired extra code can be added\nto either of these constructors to perform additional tasks.\n\n\nTest names\n\n\nTests are identified by names, which are used when printing test results and on\nthe command line to select which tests to run. These names are independent of\nthe names of the test classes in the Pony source code.\n\n\nArbitrary strings can be used for these names, but for large projects it is\nstrongly recommended to use a hierarchical naming scheme to make it easier to\nselect groups of tests.\n\n\nAggregation\n\n\nOften it is desirable to run a collection of unit tests from multiple different\nsource files. For example, if several packages within a bundle each have their\nown unit tests it may be useful to run all tests for the bundle together.\n\n\nThis can be achieved by writing an aggregate test list class, which calls the\nlist function for each package. The following is an example that aggregates the\ntests from packages \nfoo\n and \nbar\n.\n\n\nuse \nponytest\n\nuse foo = \nfoo\n\nuse bar = \nbar\n\n\nactor Main is TestList\n  new create(env: Env) =\n\n    PonyTest(env, this)\n\n  new make() =\n\n    None\n\n  fun tag tests(test: PonyTest) =\n\n    foo.Main.make().tests(test)\n    bar.Main.make().tests(test)\n\n\n\n\nAggregate test classes may themselves be aggregated. Every test list class may\ncontain any combination of its own tests and aggregated lists.\n\n\nLong tests\n\n\nSimple tests run within a single function. When that function exits, either\nreturning or raising an error, the test is complete. This is not viable for\ntests that need to use actors.\n\n\nLong tests allow for delayed completion. Any test can call long_test() on its\nTestHelper to indicate that it needs to keep running. When the test is finally\ncomplete it calls complete() on its TestHelper.\n\n\nThe complete() function takes a Bool parameter to specify whether the test was\na success. If any asserts fail then the test will be considered a failure\nregardless of the value of this parameter. However, complete() must still be\ncalled.\n\n\nSince failing tests may hang, a timeout must be specified for each long test.\nWhen the test function exits a timer is started with the specified timeout. If\nthis timer fires before complete() is called the test is marked as a failure\nand the timeout is reported.\n\n\nOn a timeout the timed_out() function is called on the unit test object. This\nshould perform whatever test specific tidy up is required to allow the program\nto exit. There is no need to call complete() if a timeout occurs, although it\nis not an error to do so.\n\n\nNote that the timeout is only relevant when a test hangs and would otherwise\nprevent the test program from completing. Setting a very long timeout on tests\nthat should not be able to hang is perfectly acceptable and will not make the\ntest take any longer if successful.\n\n\nTimeouts should not be used as the standard method of detecting if a test has\nfailed.\n\n\nExclusion groups\n\n\nBy default all tests are run concurrently. This may be a problem for some\ntests, eg if they manipulate an external file or use a system resource. To fix\nthis issue any number of tests may be put into an exclusion group.\n\n\nNo tests that are in the same exclusion group will be run concurrently.\n\n\nExclusion groups are identified by name, arbitrary strings may be used.\nMultiple exclusion groups may be used and tests in different groups may run\nconcurrently. Tests that do not specify an exclusion group may be run\nconcurrently with any other tests.\n\n\nThe command line option \"--sequential\" prevents any tests from running\nconcurrently, regardless of exclusion groups. This is intended for debugging\nrather than standard use.\n\n\nTear down\n\n\nEach unit test object may define a tear_down() function. This is called after\nthe test has finished to allow tearing down of any complex environment that had\nto be set up for the test.\n\n\nThe tear_down() function is called for each test regardless of whether it\npassed or failed. If a test times out tear_down() will be called after\ntimed_out() returns.\n\n\nWhen a test is in an exclusion group, the tear_down() call is considered part\nof the tests run. The next test in the exclusion group will not start until\nafter tear_down() returns on the current test.\n\n\nThe test's TestHelper is handed to tear_down() and it is permitted to log\nmessages and call assert functions during tear down.", 
+            "text": "PonyTest package\n\n\nThe PonyTest package provides a unit testing framework. It is designed to be as\nsimple as possible to use, both for the unit test writer and the user running\nthe tests.\n\n\nTo help simplify test writing and distribution this package depends on as few\nother packages as possible. Currently the required packages are:\n  builtin\n  time\n  collections\n\n\nEach unit test is a class, with a single test function. By default all tests\nrun concurrently.\n\n\nEach test run is provided with a helper object. This provides logging and\nassertion functions. By default log messages are only shown for tests that\nfail.\n\n\nWhen any assertion function fails the test is counted as a fail. However, tests\ncan also indicate failure by raising an error in the test function.\n\n\nExample program\n\n\nTo use PonyTest simply write a class for each test and a TestList type that\ntells the PonyTest object about the tests. Typically the TestList will be Main\nfor the package.\n\n\nThe following is a complete program with 2 trivial tests.\n\n\nuse \nponytest\n\n\nactor Main is TestList\n  new create(env: Env) =\n\n    PonyTest(env, this)\n\n  new make() =\n\n    None\n\n  fun tag tests(test: PonyTest) =\n\n    test(_TestAdd)\n    test(_TestSub)\n\nclass iso _TestAdd is UnitTest\n  fun name():String =\n \naddition\n\n\n  fun apply(h: TestHelper) =\n\n    h.assert_eq[U32](4, 2 + 2)\n\nclass iso _TestSub is UnitTest\n  fun name():String =\n \nsubtraction\n\n\n  fun apply(h: TestHelper) =\n\n    h.assert_eq[U32](2, 4 - 2)\n\n\n\n\nThe make() constructor is not needed for this example. However, it allows for\neasy aggregation of tests (see below) so it is recommended that all test Mains\nprovide it.\n\n\nMain.create() is called only for program invocations on the current package.\nMain.make() is called during aggregation. If so desired extra code can be added\nto either of these constructors to perform additional tasks.\n\n\nTest names\n\n\nTests are identified by names, which are used when printing test results and on\nthe command line to select which tests to run. These names are independent of\nthe names of the test classes in the Pony source code.\n\n\nArbitrary strings can be used for these names, but for large projects it is\nstrongly recommended to use a hierarchical naming scheme to make it easier to\nselect groups of tests.\n\n\nAggregation\n\n\nOften it is desirable to run a collection of unit tests from multiple different\nsource files. For example, if several packages within a bundle each have their\nown unit tests it may be useful to run all tests for the bundle together.\n\n\nThis can be achieved by writing an aggregate test list class, which calls the\nlist function for each package. The following is an example that aggregates the\ntests from packages \nfoo\n and \nbar\n.\n\n\nuse \nponytest\n\nuse foo = \nfoo\n\nuse bar = \nbar\n\n\nactor Main is TestList\n  new create(env: Env) =\n\n    PonyTest(env, this)\n\n  new make() =\n\n    None\n\n  fun tag tests(test: PonyTest) =\n\n    foo.Main.make().tests(test)\n    bar.Main.make().tests(test)\n\n\n\n\nAggregate test classes may themselves be aggregated. Every test list class may\ncontain any combination of its own tests and aggregated lists.\n\n\nLong tests\n\n\nSimple tests run within a single function. When that function exits, either\nreturning or raising an error, the test is complete. This is not viable for\ntests that need to use actors.\n\n\nLong tests allow for delayed completion. Any test can call long_test() on its\nTestHelper to indicate that it needs to keep running. When the test is finally\ncomplete it calls complete() on its TestHelper.\n\n\nThe complete() function takes a Bool parameter to specify whether the test was\na success. If any asserts fail then the test will be considered a failure\nregardless of the value of this parameter. However, complete() must still be\ncalled.\n\n\nSince failing tests may hang, a timeout must be specified for each long test.\nWhen the test function exits a timer is started with the specified timeout. If\nthis timer fires before complete() is called the test is marked as a failure\nand the timeout is reported.\n\n\nOn a timeout the timed_out() function is called on the unit test object. This\nshould perform whatever test specific tidy up is required to allow the program\nto exit. There is no need to call complete() if a timeout occurs, although it\nis not an error to do so.\n\n\nNote that the timeout is only relevant when a test hangs and would otherwise\nprevent the test program from completing. Setting a very long timeout on tests\nthat should not be able to hang is perfectly acceptable and will not make the\ntest take any longer if successful.\n\n\nTimeouts should not be used as the standard method of detecting if a test has\nfailed.\n\n\nExclusion groups\n\n\nBy default all tests are run concurrently. This may be a problem for some\ntests, eg if they manipulate an external file or use a system resource. To fix\nthis issue any number of tests may be put into an exclusion group.\n\n\nNo tests that are in the same exclusion group will be run concurrently.\n\n\nExclusion groups are identified by name, arbitrary strings may be used.\nMultiple exclusion groups may be used and tests in different groups may run\nconcurrently. Tests that do not specify an exclusion group may be run\nconcurrently with any other tests.\n\n\nThe command line option \"--sequential\" prevents any tests from running\nconcurrently, regardless of exclusion groups. This is intended for debugging\nrather than standard use.\n\n\nTear down\n\n\nEach unit test object may define a tear_down() function. This is called after\nthe test has finished to allow tearing down of any complex environment that had\nto be set up for the test.\n\n\nThe tear_down() function is called for each test regardless of whether it\npassed or failed. If a test times out tear_down() will be called after\ntimed_out() returns.\n\n\nWhen a test is in an exclusion group, the tear_down() call is considered part\nof the tests run. The next test in the exclusion group will not start until\nafter tear_down() returns on the current test.\n\n\nThe test's TestHelper is handed to tear_down() and it is permitted to log\nmessages and call assert functions during tear down.\n\n\nEntities\n\n\n\n\nprimitive _Color\n\n\nactor _ExclusiveGroup\n\n\ntrait _Group\n\n\ninterface ITest\n\n\nactor PonyTest\n\n\nactor _SimultaneousGroup\n\n\nclass TestHelper\n\n\ntrait TestList\n\n\nclass _TestRecord\n\n\nactor _TestRunner\n\n\ntrait UnitTest", 
             "title": "Package"
         }, 
         {
@@ -23999,6 +24084,11 @@
             "location": "/ponytest--index/#tear-down", 
             "text": "Each unit test object may define a tear_down() function. This is called after\nthe test has finished to allow tearing down of any complex environment that had\nto be set up for the test.  The tear_down() function is called for each test regardless of whether it\npassed or failed. If a test times out tear_down() will be called after\ntimed_out() returns.  When a test is in an exclusion group, the tear_down() call is considered part\nof the tests run. The next test in the exclusion group will not start until\nafter tear_down() returns on the current test.  The test's TestHelper is handed to tear_down() and it is permitted to log\nmessages and call assert functions during tear down.", 
             "title": "Tear down"
+        }, 
+        {
+            "location": "/ponytest--index/#entities", 
+            "text": "primitive _Color  actor _ExclusiveGroup  trait _Group  interface ITest  actor PonyTest  actor _SimultaneousGroup  class TestHelper  trait TestList  class _TestRecord  actor _TestRunner  trait UnitTest", 
+            "title": "Entities"
         }, 
         {
             "location": "/ponytest-_Color/", 
@@ -24537,8 +24627,13 @@
         }, 
         {
             "location": "/promises--index/", 
-            "text": "No package doc string provided for promises.", 
+            "text": "No package doc string provided for promises.\n\n\nEntities\n\n\n\n\ninterface Fulfill\n\n\nclass FulfillIdentity\n\n\ninterface _IThen\n\n\nprimitive _Pending\n\n\nactor Promise\n\n\nprimitive _Reject\n\n\ninterface Reject\n\n\nclass RejectAlways\n\n\nclass _Then", 
             "title": "Package"
+        }, 
+        {
+            "location": "/promises--index/#entities", 
+            "text": "interface Fulfill  class FulfillIdentity  interface _IThen  primitive _Pending  actor Promise  primitive _Reject  interface Reject  class RejectAlways  class _Then", 
+            "title": "Entities"
         }, 
         {
             "location": "/promises-Fulfill/", 
@@ -24827,8 +24922,13 @@
         }, 
         {
             "location": "/random--index/", 
-            "text": "No package doc string provided for random.", 
+            "text": "No package doc string provided for random.\n\n\nEntities\n\n\n\n\nclass Dice\n\n\nclass MT\n\n\ntrait Random", 
             "title": "Package"
+        }, 
+        {
+            "location": "/random--index/#entities", 
+            "text": "class Dice  class MT  trait Random", 
+            "title": "Entities"
         }, 
         {
             "location": "/random-Dice/", 
@@ -25042,7 +25142,7 @@
         }, 
         {
             "location": "/regex--index/", 
-            "text": "Regex package\n\n\nThe Regex package provides support for Perl compatible regular expressions.\n\n\nExample program\n\n\nuse \nregex\n\n\nactor Main\n  new create(env: Env) =\n\n    try\n      let r = Regex(\n\\\\d+\n)\n\n      if r == \n1234\n then\n        env.out.print(\n1234 is a series of numbers\n)\n      end\n\n      if r != \nNot a number\n then\n        env.out.print(\n'Not a number' is not a series of numbers\n)\n      end\n\n      let matched = r(\nThere are 02 numbers in here.\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe match started at \n + matched.start_pos().string())\n      env.out.print(\nThe match ended at \n + matched.end_pos().string())\n    end\n\n    try\n      let r = Regex(\n(\\\\d+)?\\\\.(\\\\d+)?\n)\n      let matched = r(\n123.456\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe first match was \n + matched(1))\n      env.out.print(\nThe second match was \n + matched(2))\n    end", 
+            "text": "Regex package\n\n\nThe Regex package provides support for Perl compatible regular expressions.\n\n\nExample program\n\n\nuse \nregex\n\n\nactor Main\n  new create(env: Env) =\n\n    try\n      let r = Regex(\n\\\\d+\n)\n\n      if r == \n1234\n then\n        env.out.print(\n1234 is a series of numbers\n)\n      end\n\n      if r != \nNot a number\n then\n        env.out.print(\n'Not a number' is not a series of numbers\n)\n      end\n\n      let matched = r(\nThere are 02 numbers in here.\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe match started at \n + matched.start_pos().string())\n      env.out.print(\nThe match ended at \n + matched.end_pos().string())\n    end\n\n    try\n      let r = Regex(\n(\\\\d+)?\\\\.(\\\\d+)?\n)\n      let matched = r(\n123.456\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe first match was \n + matched(1))\n      env.out.print(\nThe second match was \n + matched(2))\n    end\n\n\n\n\nEntities\n\n\n\n\nactor Main\n\n\nprimitive _Match\n\n\nclass Match\n\n\nprimitive _PCRE2\n\n\nprimitive _Pattern\n\n\nclass Regex\n\n\nclass _TestApply\n\n\nclass _TestEq\n\n\nclass _TestError\n\n\nclass _TestGroups\n\n\nclass _TestSplit", 
             "title": "Package"
         }, 
         {
@@ -25054,6 +25154,11 @@
             "location": "/regex--index/#example-program", 
             "text": "use  regex \n\nactor Main\n  new create(env: Env) = \n    try\n      let r = Regex( \\\\d+ )\n\n      if r ==  1234  then\n        env.out.print( 1234 is a series of numbers )\n      end\n\n      if r !=  Not a number  then\n        env.out.print( 'Not a number' is not a series of numbers )\n      end\n\n      let matched = r( There are 02 numbers in here. )\n      env.out.print(matched(0) +   was matched )\n      env.out.print( The match started at   + matched.start_pos().string())\n      env.out.print( The match ended at   + matched.end_pos().string())\n    end\n\n    try\n      let r = Regex( (\\\\d+)?\\\\.(\\\\d+)? )\n      let matched = r( 123.456 )\n      env.out.print(matched(0) +   was matched )\n      env.out.print( The first match was   + matched(1))\n      env.out.print( The second match was   + matched(2))\n    end", 
             "title": "Example program"
+        }, 
+        {
+            "location": "/regex--index/#entities", 
+            "text": "actor Main  primitive _Match  class Match  primitive _PCRE2  primitive _Pattern  class Regex  class _TestApply  class _TestEq  class _TestError  class _TestGroups  class _TestSplit", 
+            "title": "Entities"
         }, 
         {
             "location": "/regex-Main/", 
@@ -25597,7 +25702,7 @@
         }, 
         {
             "location": "/signals--index/", 
-            "text": "Signals package\n\n\nThe Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a \nSignalHandler\n\nand a corresponding \nSignalNotify\n object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding \nSignalNotify\n's\napply method.\n\n\nExample program\n\n\nThe following program will listen for the TERM signal and output a message to\nstandard out if it is received.\n\n\nuse \nsignals\n\n\nactor Main\n  new create(env: Env) =\n\n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) =\n\n    _env = env\n\n  fun ref apply(count: U32): Bool =\n\n    _env.out.print(\nTERM signal received\n)\n    true\n\n\n\n\nSignal portability\n\n\nThe \nSig\n primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.\n\n\nShutting down handlers\n\n\nUnlike a \nTCPConnection\n and other forms of input receiving, creating a\n\nSignalHandler\n will not keep your program running. As such, you are not required\nto call \ndispose\n on your signal handlers in order to shutdown your program.", 
+            "text": "Signals package\n\n\nThe Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a \nSignalHandler\n\nand a corresponding \nSignalNotify\n object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding \nSignalNotify\n's\napply method.\n\n\nExample program\n\n\nThe following program will listen for the TERM signal and output a message to\nstandard out if it is received.\n\n\nuse \nsignals\n\n\nactor Main\n  new create(env: Env) =\n\n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) =\n\n    _env = env\n\n  fun ref apply(count: U32): Bool =\n\n    _env.out.print(\nTERM signal received\n)\n    true\n\n\n\n\nSignal portability\n\n\nThe \nSig\n primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.\n\n\nShutting down handlers\n\n\nUnlike a \nTCPConnection\n and other forms of input receiving, creating a\n\nSignalHandler\n will not keep your program running. As such, you are not required\nto call \ndispose\n on your signal handlers in order to shutdown your program.\n\n\nEntities\n\n\n\n\nactor Main\n\n\nprimitive Sig\n\n\nactor SignalHandler\n\n\ninterface SignalNotify\n\n\nprimitive SignalRaise\n\n\nclass _TestSighupNotify\n\n\nclass _TestSignalINT", 
             "title": "Package"
         }, 
         {
@@ -25619,6 +25724,11 @@
             "location": "/signals--index/#shutting-down-handlers", 
             "text": "Unlike a  TCPConnection  and other forms of input receiving, creating a SignalHandler  will not keep your program running. As such, you are not required\nto call  dispose  on your signal handlers in order to shutdown your program.", 
             "title": "Shutting down handlers"
+        }, 
+        {
+            "location": "/signals--index/#entities", 
+            "text": "actor Main  primitive Sig  actor SignalHandler  interface SignalNotify  primitive SignalRaise  class _TestSighupNotify  class _TestSignalINT", 
+            "title": "Entities"
         }, 
         {
             "location": "/signals-Main/", 
@@ -26067,8 +26177,13 @@
         }, 
         {
             "location": "/strings--index/", 
-            "text": "No package doc string provided for strings.", 
+            "text": "No package doc string provided for strings.\n\n\nEntities\n\n\n\n\nprimitive CommonPrefix\n\n\nactor Main\n\n\nclass _TestStringsCommonPrefix", 
             "title": "Package"
+        }, 
+        {
+            "location": "/strings--index/#entities", 
+            "text": "primitive CommonPrefix  actor Main  class _TestStringsCommonPrefix", 
+            "title": "Entities"
         }, 
         {
             "location": "/strings-CommonPrefix/", 
@@ -26197,8 +26312,13 @@
         }, 
         {
             "location": "/term--index/", 
-            "text": "No package doc string provided for term.", 
+            "text": "No package doc string provided for term.\n\n\nEntities\n\n\n\n\nprimitive ANSI\n\n\ninterface ANSINotify\n\n\nactor ANSITerm\n\n\nprimitive _EscapeCSI\n\n\nprimitive _EscapeMod\n\n\nprimitive _EscapeNone\n\n\nprimitive _EscapeSS3\n\n\nprimitive _EscapeStart\n\n\ntype _EscapeState\n\n\nclass Readline\n\n\ninterface ReadlineNotify", 
             "title": "Package"
+        }, 
+        {
+            "location": "/term--index/#entities", 
+            "text": "primitive ANSI  interface ANSINotify  actor ANSITerm  primitive _EscapeCSI  primitive _EscapeMod  primitive _EscapeNone  primitive _EscapeSS3  primitive _EscapeStart  type _EscapeState  class Readline  interface ReadlineNotify", 
+            "title": "Entities"
         }, 
         {
             "location": "/term-ANSI/", 
@@ -27037,8 +27157,13 @@
         }, 
         {
             "location": "/time--index/", 
-            "text": "No package doc string provided for time.", 
+            "text": "No package doc string provided for time.\n\n\nEntities\n\n\n\n\ntype _Clock\n\n\nprimitive _ClockMonotonic\n\n\nprimitive _ClockRealtime\n\n\nclass Date\n\n\nprimitive Time\n\n\nclass Timer\n\n\ninterface TimerNotify\n\n\nactor Timers\n\n\nclass _TimingWheel", 
             "title": "Package"
+        }, 
+        {
+            "location": "/time--index/#entities", 
+            "text": "type _Clock  primitive _ClockMonotonic  primitive _ClockRealtime  class Date  primitive Time  class Timer  interface TimerNotify  actor Timers  class _TimingWheel", 
+            "title": "Entities"
         }, 
         {
             "location": "/time-_Clock/", 
