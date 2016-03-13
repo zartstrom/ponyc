@@ -3292,6 +3292,15 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#signals-package">Signals package</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-program">Example program</a></li>
+                
+                    <li><a class="toctree-l4" href="#signal-portability">Signal portability</a></li>
+                
+                    <li><a class="toctree-l4" href="#shutting-down-handlers">Shutting down handlers</a></li>
+                
+            
             </ul>
         
     </li>
@@ -3591,7 +3600,43 @@
           <div role="main">
             <div class="section">
               
-                <p>No package doc string provided for signals.</p>
+                <h1 id="signals-package">Signals package</h1>
+<p>The Signals package provides support for handling Unix style signals.
+For each signal that you want to handle, you need to create a SignalHandler
+and a corresponding SignalNotify object. Each SignalHandler runs as it own
+actor and upon receiving the signal will call its corresponding SignalNotify's
+apply method.</p>
+<h2 id="example-program">Example program</h2>
+<p>The following program will listen for the TERM signal and output a message to
+standard out if it is received.</p>
+<pre><code>use &quot;signals&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    // Create a TERM handler
+    let signal = SignalHandler(TermHandler(env), Sig.term())
+    // Raise TERM signal
+    signal.raise()
+
+class TermHandler is SignalNotify
+  let _env: Env
+
+  new iso create(env: Env) =&gt;
+    _env = env
+
+  fun ref apply(count: U32): Bool =&gt;
+    _env.out.print(&quot;TERM signal received&quot;)
+    true
+</code></pre>
+
+<h2 id="signal-portability">Signal portability</h2>
+<p>The Sig primitive provides support for portable signal handling across Linux,
+FreeBSD and OSX. Signals are not supported on Windows and attempting to use them
+will cause a compilation error.</p>
+<h2 id="shutting-down-handlers">Shutting down handlers</h2>
+<p>Unlike a TCPConnection and other forms of input receiving, creating a
+SignalHandler will not keep your program running. As such, you are not required
+to call <code>dispose</code> on your signal handlers in order to shutdown your program.</p>
               
             </div>
           </div>

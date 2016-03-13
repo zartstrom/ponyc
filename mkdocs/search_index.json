@@ -23022,8 +23022,18 @@
         }, 
         {
             "location": "/regex--index/", 
-            "text": "No package doc string provided for regex.", 
+            "text": "Regex package\n\n\nThe Regex package provides support for Perl compatible regular expressions.\n\n\nExample program\n\n\nuse \nregex\n\n\nactor Main\n  new create(env: Env) =\n\n    try\n      let r = Regex(\n\\\\d+\n)\n\n      if r == \n1234\n then\n        env.out.print(\n1234 is a series of numbers\n)\n      end\n\n      if r != \nNot a number\n then\n        env.out.print(\n'Not a number' is not a series of numbers\n)\n      end\n\n      let matched = r(\nThere are 02 numbers in here.\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe match started at \n + matched.start_pos().string())\n      env.out.print(\nThe match ended at \n + matched.end_pos().string())\n    end\n\n    try\n      let r = Regex(\n(\\\\d+)?\\\\.(\\\\d+)?\n)\n      let matched = r(\n123.456\n)\n      env.out.print(matched(0) + \n was matched\n)\n      env.out.print(\nThe first match was \n + matched(1))\n      env.out.print(\nThe second match was \n + matched(2))\n    end", 
             "title": "Package"
+        }, 
+        {
+            "location": "/regex--index/#regex-package", 
+            "text": "The Regex package provides support for Perl compatible regular expressions.", 
+            "title": "Regex package"
+        }, 
+        {
+            "location": "/regex--index/#example-program", 
+            "text": "use  regex \n\nactor Main\n  new create(env: Env) = \n    try\n      let r = Regex( \\\\d+ )\n\n      if r ==  1234  then\n        env.out.print( 1234 is a series of numbers )\n      end\n\n      if r !=  Not a number  then\n        env.out.print( 'Not a number' is not a series of numbers )\n      end\n\n      let matched = r( There are 02 numbers in here. )\n      env.out.print(matched(0) +   was matched )\n      env.out.print( The match started at   + matched.start_pos().string())\n      env.out.print( The match ended at   + matched.end_pos().string())\n    end\n\n    try\n      let r = Regex( (\\\\d+)?\\\\.(\\\\d+)? )\n      let matched = r( 123.456 )\n      env.out.print(matched(0) +   was matched )\n      env.out.print( The first match was   + matched(1))\n      env.out.print( The second match was   + matched(2))\n    end", 
+            "title": "Example program"
         }, 
         {
             "location": "/regex-Main/", 
@@ -23512,8 +23522,28 @@
         }, 
         {
             "location": "/signals--index/", 
-            "text": "No package doc string provided for signals.", 
+            "text": "Signals package\n\n\nThe Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a SignalHandler\nand a corresponding SignalNotify object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding SignalNotify's\napply method.\n\n\nExample program\n\n\nThe following program will listen for the TERM signal and output a message to\nstandard out if it is received.\n\n\nuse \nsignals\n\n\nactor Main\n  new create(env: Env) =\n\n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) =\n\n    _env = env\n\n  fun ref apply(count: U32): Bool =\n\n    _env.out.print(\nTERM signal received\n)\n    true\n\n\n\n\nSignal portability\n\n\nThe Sig primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.\n\n\nShutting down handlers\n\n\nUnlike a TCPConnection and other forms of input receiving, creating a\nSignalHandler will not keep your program running. As such, you are not required\nto call \ndispose\n on your signal handlers in order to shutdown your program.", 
             "title": "Package"
+        }, 
+        {
+            "location": "/signals--index/#signals-package", 
+            "text": "The Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a SignalHandler\nand a corresponding SignalNotify object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding SignalNotify's\napply method.", 
+            "title": "Signals package"
+        }, 
+        {
+            "location": "/signals--index/#example-program", 
+            "text": "The following program will listen for the TERM signal and output a message to\nstandard out if it is received.  use  signals \n\nactor Main\n  new create(env: Env) = \n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) = \n    _env = env\n\n  fun ref apply(count: U32): Bool = \n    _env.out.print( TERM signal received )\n    true", 
+            "title": "Example program"
+        }, 
+        {
+            "location": "/signals--index/#signal-portability", 
+            "text": "The Sig primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.", 
+            "title": "Signal portability"
+        }, 
+        {
+            "location": "/signals--index/#shutting-down-handlers", 
+            "text": "Unlike a TCPConnection and other forms of input receiving, creating a\nSignalHandler will not keep your program running. As such, you are not required\nto call  dispose  on your signal handlers in order to shutdown your program.", 
+            "title": "Shutting down handlers"
         }, 
         {
             "location": "/signals-Main/", 
