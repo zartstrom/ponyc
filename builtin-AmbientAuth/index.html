@@ -158,16 +158,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-primitive-ambientauth">builtin &gt;&gt; primitive AmbientAuth</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_create">new _create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3603,8 +3598,7 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive AmbientAuth</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-primitive-ambientauth">builtin &gt;&gt; primitive AmbientAuth</h1>
 <p>Public, default capability val.</p>
 <p>This type represents the root capability. When a Pony program starts, the
 Env passed to the Main actor contains an instance of the root capability.</p>
@@ -3615,19 +3609,11 @@ principle of least authority. A typical usage is to have a parameter on a
 constructor for some resource that expects a limiting capability specific to
 the package, but will also accept the root capability as representing
 unlimited access.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_create">new _create()</h2>
-<p>new _create()</p>
-<p>Private.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../builtin-AmbientAuth">AmbientAuth</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../builtin-AmbientAuth">AmbientAuth</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_create">new _create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-eqthat-ambientauth-val-bool-val">fun box  eq(that: <a href="../builtin-AmbientAuth">AmbientAuth</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-nethat-ambientauth-val-bool-val">fun box  ne(that: <a href="../builtin-AmbientAuth">AmbientAuth</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
               
             </div>
           </div>

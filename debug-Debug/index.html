@@ -1493,26 +1493,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#debug-primitive-debug">debug &gt;&gt; primitive Debug</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-err">fun err()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-out">fun out()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_print">fun _print()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_stream">fun _stream()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3613,45 +3598,21 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive Debug</p>
-<p>In package "debug".</p>
+                <h1 id="debug-primitive-debug">debug &gt;&gt; primitive Debug</h1>
 <p>Public, default capability val.</p>
 <p>This is a debug only print utility.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(msg: (<a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box | <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box] box), optional sep: (<a href="../builtin-String">String</a> val | <a href="../builtin-String">String</a> val), optional stream: ((<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val) | (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val))): ((<a href="../builtin-None">None</a> val | <a href="../builtin-None">None</a> val) | <a href="../builtin-None">None</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../debug-Debug">Debug</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-err">fun err()</h2>
-<p>fun box
- err(optional msg: <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-applymsg-stringable91formatdefault-val-prefixdefault-val93-box-readseq91stringable91formatdefault-val-prefixdefault-val93-box93-box-optional-sep-string-val-string-val-optional-stream-debugout-val-debugerr-val-debugout-val-debugerr-val-none-val-none-val-none-val">fun box  apply(msg: (<a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box | <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box] box), optional sep: (<a href="../builtin-String">String</a> val | <a href="../builtin-String">String</a> val), optional stream: ((<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val) | (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val))): ((<a href="../builtin-None">None</a> val | <a href="../builtin-None">None</a> val) | <a href="../builtin-None">None</a> val)</h3>
+<h3 id="fun-box-eqthat-debug-val-bool-val">fun box  eq(that: <a href="../debug-Debug">Debug</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-erroptional-msg-stringable91formatdefault-val-prefixdefault-val93-box-none-val">fun box  err(optional msg: <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box): <a href="../builtin-None">None</a> val</h3>
 <p>If platform is debug configured, print message to standard error</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../debug-Debug">Debug</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-out">fun out()</h2>
-<p>fun box
- out(optional msg: <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-debug-val-bool-val">fun box  ne(that: <a href="../debug-Debug">Debug</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-outoptional-msg-stringable91formatdefault-val-prefixdefault-val93-box-none-val">fun box  out(optional msg: <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] box): <a href="../builtin-None">None</a> val</h3>
 <p>If platform is debug configured, print message to standard output</p>
-<h2 id="fun-_print">fun _print()</h2>
-<p>fun box
- _print(msg: <a href="../builtin-String">String</a> val, stream: (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val)): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_stream">fun _stream()</h2>
-<p>fun box
- _stream(stream: (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val)): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-box-_printmsg-string-val-stream-debugout-val-debugerr-val-none-val">fun box  _print(msg: <a href="../builtin-String">String</a> val, stream: (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val)): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_streamstream-debugout-val-debugerr-val-pointer91u8-val93-ref-may-raise-an-error">fun box  _stream(stream: (<a href="../debug-DebugOut">DebugOut</a> val | <a href="../debug-DebugErr">DebugErr</a> val)): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref ?, may raise an error</h3>
               
             </div>
           </div>

@@ -1656,26 +1656,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#files-primitive-_filedes">files &gt;&gt; primitive _FileDes</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-chmod">fun chmod()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-chown">fun chown()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_rights">fun set_rights()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_time">fun set_time()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-touch">fun touch()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3613,47 +3598,23 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive _FileDes</p>
-<p>In package "files".</p>
+                <h1 id="files-primitive-_filedes">files &gt;&gt; primitive _FileDes</h1>
 <p>Private, default capability val.</p>
 <p>Convenience operations on file descriptors.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-chmod">fun chmod()</h2>
-<p>fun box
- chmod(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-chmodfd-i32-val-path-filepath-val-mode-filemode-box-bool-val">fun box  chmod(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for this fd.</p>
-<h2 id="fun-chown">fun chown()</h2>
-<p>fun box
- chown(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-chownfd-i32-val-path-filepath-val-uid-u32-val-gid-u32-val-bool-val">fun box  chown(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the owner and group for this file. Does nothing on Windows.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../files-_FileDes">_FileDes</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../files-_FileDes">_FileDes</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-set_rights">fun set_rights()</h2>
-<p>fun box
- set_rights(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, optional writeable: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-eqthat-_filedes-val-bool-val">fun box  eq(that: <a href="../files-_FileDes">_FileDes</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-nethat-_filedes-val-bool-val">fun box  ne(that: <a href="../files-_FileDes">_FileDes</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-set_rightsfd-i32-val-path-filepath-val-optional-writeable-bool-val-none-val-may-raise-an-error">fun box  set_rights(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, optional writeable: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
 <p>Set the Capsicum rights on the file descriptor.</p>
-<h2 id="fun-set_time">fun set_time()</h2>
-<p>fun box
- set_time(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-set_timefd-i32-val-path-filepath-val-atime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  set_time(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the file to the given values.</p>
-<h2 id="fun-touch">fun touch()</h2>
-<p>fun box
- touch(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-touchfd-i32-val-path-filepath-val-bool-val">fun box  touch(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the file to now.</p>
               
             </div>

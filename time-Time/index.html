@@ -3519,38 +3519,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#time-primitive-time">time &gt;&gt; primitive Time</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_clock_gettime">fun _clock_gettime()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-cycles">fun cycles()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-micros">fun micros()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-millis">fun millis()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-nanos">fun nanos()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-now">fun now()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-perf_begin">fun perf_begin()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-perf_end">fun perf_end()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_query_performance_counter">fun _query_performance_counter()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-seconds">fun seconds()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-wall_to_nanos">fun wall_to_nanos()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3625,83 +3598,41 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive Time</p>
-<p>In package "time".</p>
+                <h1 id="time-primitive-time">time &gt;&gt; primitive Time</h1>
 <p>Public, default capability val.</p>
 <p>A collection of ways to fetch the current time.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_clock_gettime">fun _clock_gettime()</h2>
-<p>fun box
- _clock_gettime(clock: (<a href="../time-_ClockRealtime">_ClockRealtime</a> val | <a href="../time-_ClockMonotonic">_ClockMonotonic</a> val)): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-_clock_gettimeclock-_clockrealtime-val-_clockmonotonic-val-i64-val-i64-val">fun box  _clock_gettime(clock: (<a href="../time-_ClockRealtime">_ClockRealtime</a> val | <a href="../time-_ClockMonotonic">_ClockMonotonic</a> val)): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
 <p>Return a clock time on linux and freebsd.</p>
-<h2 id="fun-cycles">fun cycles()</h2>
-<p>fun box
- cycles(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-cycles-u64-val">fun box  cycles(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Processor cycle count. Don't use this for performance timing, as it does
 not control for out-of-order execution.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-micros">fun micros()</h2>
-<p>fun box
- micros(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-time-val-bool-val">fun box  eq(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-micros-u64-val">fun box  micros(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted microseconds.</p>
-<h2 id="fun-millis">fun millis()</h2>
-<p>fun box
- millis(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-millis-u64-val">fun box  millis(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted milliseconds.</p>
-<h2 id="fun-nanos">fun nanos()</h2>
-<p>fun box
- nanos(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-nanos-u64-val">fun box  nanos(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Monotonic unadjusted nanoseconds.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-now">fun now()</h2>
-<p>fun box
- now(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-time-val-bool-val">fun box  ne(that: <a href="../time-Time">Time</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-now-i64-val-i64-val">fun box  now(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</h3>
 <p>The wall-clock adjusted system time with nanoseconds.
 Return: (seconds, nanoseconds)</p>
-<h2 id="fun-perf_begin">fun perf_begin()</h2>
-<p>fun box
- perf_begin(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-perf_begin-u64-val">fun box  perf_begin(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Get a cycle count for beginning a performance testing block. This will
 will prevent instructions from before this call leaking into the block and
 instructions after this call being executed earlier.</p>
-<h2 id="fun-perf_end">fun perf_end()</h2>
-<p>fun box
- perf_end(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-perf_end-u64-val">fun box  perf_end(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Get a cycle count for ending a performance testing block. This will
 will prevent instructions from after this call leaking into the block and
 instructions before this call being executed later.</p>
-<h2 id="fun-_query_performance_counter">fun _query_performance_counter()</h2>
-<p>fun box
- _query_performance_counter(): (<a href="../builtin-U64">U64</a> val , <a href="../builtin-U64">U64</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-box-_query_performance_counter-u64-val-u64-val">fun box  _query_performance_counter(): (<a href="../builtin-U64">U64</a> val , <a href="../builtin-U64">U64</a> val)</h3>
 <p>Return QPC and QPF.</p>
-<h2 id="fun-seconds">fun seconds()</h2>
-<p>fun box
- seconds(): <a href="../builtin-I64">I64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-seconds-i64-val">fun box  seconds(): <a href="../builtin-I64">I64</a> val</h3>
 <p>The wall-clock adjusted system time.</p>
-<h2 id="fun-wall_to_nanos">fun wall_to_nanos()</h2>
-<p>fun box
- wall_to_nanos(wall: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-wall_to_nanoswall-i64-val-i64-val-u64-val">fun box  wall_to_nanos(wall: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-U64">U64</a> val</h3>
 <p>Converts a wall-clock adjusted system time to monotonic unadjusted
 nanoseconds.</p>
               

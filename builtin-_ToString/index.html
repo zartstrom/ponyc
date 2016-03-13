@@ -753,34 +753,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-primitive-_tostring">builtin &gt;&gt; primitive _ToString</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_extend_digits">fun _extend_digits()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_f64">fun _f64()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_fmt_int">fun _fmt_int()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_large">fun _large()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_pad">fun _pad()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_prefix">fun _prefix()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_small">fun _small()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_u128">fun _u128()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_u64">fun _u64()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3621,59 +3598,23 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive _ToString</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-primitive-_tostring">builtin &gt;&gt; primitive _ToString</h1>
 <p>Private, default capability val.</p>
 <p>Worker type providing to string conversions for numbers.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_extend_digits">fun _extend_digits()</h2>
-<p>fun box
- _extend_digits(s: <a href="../builtin-String">String</a> ref, digits: <a href="../builtin-USize">USize</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_f64">fun _f64()</h2>
-<p>fun box
- _f64(x: <a href="../builtin-F64">F64</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatExp">FormatExp</a> val) | <a href="../builtin-FormatExpLarge">FormatExpLarge</a> val) | <a href="../builtin-FormatFix">FormatFix</a> val) | <a href="../builtin-FormatFixLarge">FormatFixLarge</a> val) | <a href="../builtin-FormatGeneral">FormatGeneral</a> val) | <a href="../builtin-FormatGeneralLarge">FormatGeneralLarge</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</p>
-<p>Private.</p>
-<h2 id="fun-_fmt_int">fun _fmt_int()</h2>
-<p>fun box
- _fmt_int(fmt: (((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val)): (<a href="../builtin-U32">U32</a> val , <a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Private.</p>
-<h2 id="fun-_large">fun _large()</h2>
-<p>fun box
- _large(): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_pad">fun _pad()</h2>
-<p>fun box
- _pad(s: <a href="../builtin-String">String</a> ref, width: <a href="../builtin-USize">USize</a> val, align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_prefix">fun _prefix()</h2>
-<p>fun box
- _prefix(neg: <a href="../builtin-Bool">Bool</a> val, prefix: ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_small">fun _small()</h2>
-<p>fun box
- _small(): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_u128">fun _u128()</h2>
-<p>fun box
- _u128(x: <a href="../builtin-U128">U128</a> val, neg: <a href="../builtin-Bool">Bool</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</p>
-<p>Private.</p>
-<h2 id="fun-_u64">fun _u64()</h2>
-<p>fun box
- _u64(x: <a href="../builtin-U64">U64</a> val, neg: <a href="../builtin-Bool">Bool</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-eqthat-_tostring-val-bool-val">fun box  eq(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_extend_digitss-string-ref-digits-usize-val-none-val">fun box  _extend_digits(s: <a href="../builtin-String">String</a> ref, digits: <a href="../builtin-USize">USize</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_f64x-f64-val-optional-fmt-formatsettings91formatdefault-val-formatexp-val-formatexplarge-val-formatfix-val-formatfixlarge-val-formatgeneral-val-formatgenerallarge-val-prefixdefault-val-prefixspace-val-prefixsign-val93-box-string-iso">fun box  _f64(x: <a href="../builtin-F64">F64</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatExp">FormatExp</a> val) | <a href="../builtin-FormatExpLarge">FormatExpLarge</a> val) | <a href="../builtin-FormatFix">FormatFix</a> val) | <a href="../builtin-FormatFixLarge">FormatFixLarge</a> val) | <a href="../builtin-FormatGeneral">FormatGeneral</a> val) | <a href="../builtin-FormatGeneralLarge">FormatGeneralLarge</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</h3>
+<h3 id="fun-box-_fmt_intfmt-formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-u32-val-string-val-string-val">fun box  _fmt_int(fmt: (((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val)): (<a href="../builtin-U32">U32</a> val , <a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
+<h3 id="fun-box-_large-string-val">fun box  _large(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-nethat-_tostring-val-bool-val">fun box  ne(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_pads-string-ref-width-usize-val-align-alignleft-val-alignright-val-aligncenter-val-fill-u32-val-none-val">fun box  _pad(s: <a href="../builtin-String">String</a> ref, width: <a href="../builtin-USize">USize</a> val, align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_prefixneg-bool-val-prefix-prefixdefault-val-prefixspace-val-prefixsign-val-string-val">fun box  _prefix(neg: <a href="../builtin-Bool">Bool</a> val, prefix: ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-_small-string-val">fun box  _small(): <a href="../builtin-String">String</a> val</h3>
+<h3 id="fun-box-_u128x-u128-val-neg-bool-val-optional-fmt-formatsettings91formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-prefixdefault-val-prefixspace-val-prefixsign-val93-box-string-iso">fun box  _u128(x: <a href="../builtin-U128">U128</a> val, neg: <a href="../builtin-Bool">Bool</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</h3>
+<h3 id="fun-box-_u64x-u64-val-neg-bool-val-optional-fmt-formatsettings91formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-prefixdefault-val-prefixspace-val-prefixsign-val93-box-string-iso">fun box  _u64(x: <a href="../builtin-U64">U64</a> val, neg: <a href="../builtin-Bool">Bool</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</h3>
               
             </div>
           </div>

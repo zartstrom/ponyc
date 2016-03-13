@@ -2206,23 +2206,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#net-interface-tcpconnectionnotify">net &gt;&gt; interface TCPConnectionNotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-accepted">fun accepted()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-auth_failed">fun auth_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connect_failed">fun connect_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connected">fun connected()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connecting">fun connecting()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-received">fun received()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sent">fun sent()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3610,56 +3596,31 @@
           <div role="main">
             <div class="section">
               
-                <p>interface TCPConnectionNotify</p>
-<p>In package "net".</p>
+                <h1 id="net-interface-tcpconnectionnotify">net &gt;&gt; interface TCPConnectionNotify</h1>
 <p>Public, default capability ref.</p>
 <p>Notifications for TCP connections.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-accepted">fun accepted()</h2>
-<p>fun ref
- accepted(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-acceptedconn-tcpconnection-ref-none-val">fun ref  accepted(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when a TCPConnection is accepted by a TCPListener.</p>
-<h2 id="fun-auth_failed">fun auth_failed()</h2>
-<p>fun ref
- auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-auth_failedconn-tcpconnection-ref-none-val">fun ref  auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>A raw TCPConnection has no authentication mechanism. However, when
 protocols are wrapped in other protocols, this can be used to report an
 authentication failure in a lower level protocol (eg. SSL).</p>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-closedconn-tcpconnection-ref-none-val">fun ref  closed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the connection is closed.</p>
-<h2 id="fun-connect_failed">fun connect_failed()</h2>
-<p>fun ref
- connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-connect_failedconn-tcpconnection-ref-none-val">fun ref  connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when we have failed to connect to all possible addresses for the
 server. At this point, the connection will never be established.</p>
-<h2 id="fun-connected">fun connected()</h2>
-<p>fun ref
- connected(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-connectedconn-tcpconnection-ref-none-val">fun ref  connected(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when we have successfully connected to the server.</p>
-<h2 id="fun-connecting">fun connecting()</h2>
-<p>fun ref
- connecting(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-connectingconn-tcpconnection-ref-count-u32-val-none-val">fun ref  connecting(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Called if name resolution succeeded for a TCPConnection and we are now
 waiting for a connection to the server to succeed. The count is the number
 of connections we're trying. The notifier will be informed each time the
 count changes, until a connection is made or connect_failed() is called.</p>
-<h2 id="fun-received">fun received()</h2>
-<p>fun ref
- received(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-receivedconn-tcpconnection-ref-data-array91u8-val93-iso-none-val">fun ref  received(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</h3>
 <p>Called when new data is received on the connection.</p>
-<h2 id="fun-sent">fun sent()</h2>
-<p>fun ref
- sent(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val-may-raise-an-error">fun ref  sent(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?, may raise an error</h3>
 <p>Called when data is sent on the connection. This gives the notifier an
 opportunity to modify sent data before it is written. The notifier can
 raise an error if the data is swallowed entirely.</p>

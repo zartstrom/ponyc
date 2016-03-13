@@ -1240,16 +1240,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#collections-class-listnodes91a-a-n-listnode91a93-read93-is-iterator91n-read93-ref">collections &gt;&gt; class ListNodes[A: A, N: ListNode[A] #read] is Iterator[N #read] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-has_next">fun has_next()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-next">fun next()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3603,25 +3598,16 @@
           <div role="main">
             <div class="section">
               
-                <p>class ListNodes[A: A, N: <a href="../collections-ListNode">ListNode</a>[A] #read] is <a href="../builtin-Iterator">Iterator</a>[N #read] ref</p>
-<p>In package "collections".</p>
+                <h1 id="collections-class-listnodes91a-a-n-listnode91a93-read93-is-iterator91n-read93-ref">collections &gt;&gt; class ListNodes[A: A, N: <a href="../collections-ListNode">ListNode</a>[A] #read] is <a href="../builtin-Iterator">Iterator</a>[N #read] ref</h1>
 <p>Public, default capability ref.</p>
 <p>Iterate over the nodes in a list.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(head: (N #read | <a href="../builtin-None">None</a> val), optional reverse: <a href="../builtin-Bool">Bool</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createhead-n-read-none-val-optional-reverse-bool-val">new create(head: (N #read | <a href="../builtin-None">None</a> val), optional reverse: <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>Keep the next list node to be examined.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-has_next">fun has_next()</h2>
-<p>fun box
- has_next(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-has_next-bool-val">fun box  has_next(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>If we have a list node, we have more values.</p>
-<h2 id="fun-next">fun next()</h2>
-<p>fun ref
- next(): N #read ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-next-n-read-may-raise-an-error">fun ref  next(): N #read ?, may raise an error</h3>
 <p>Get the list node and replace it with the next one.</p>
               
             </div>

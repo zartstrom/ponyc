@@ -697,15 +697,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#builtin-interface-sourceloc">builtin &gt;&gt; interface SourceLoc</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-file">fun file()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-line">fun line()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-method">fun method()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-pos">fun pos()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3602,31 +3596,18 @@
           <div role="main">
             <div class="section">
               
-                <p>interface SourceLoc</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-interface-sourceloc">builtin &gt;&gt; interface SourceLoc</h1>
 <p>Public, default capability val.</p>
 <p>Represents a location in a Pony source file, as reported by <code>__loc</code>.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-file">fun file()</h2>
-<p>fun box
- file(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-file-string-val">fun box  file(): <a href="../builtin-String">String</a> val</h3>
 <p>Name and path of source file.</p>
-<h2 id="fun-line">fun line()</h2>
-<p>fun box
- line(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-line-usize-val">fun box  line(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Line number within file.
 Line numbers start at 1.</p>
-<h2 id="fun-method">fun method()</h2>
-<p>fun box
- method(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-method-string-val">fun box  method(): <a href="../builtin-String">String</a> val</h3>
 <p>Name of containing method.</p>
-<h2 id="fun-pos">fun pos()</h2>
-<p>fun box
- pos(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-pos-usize-val">fun box  pos(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Character position on line.
 Character positions start at 1.</p>
               

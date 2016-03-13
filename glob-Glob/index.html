@@ -1923,30 +1923,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#glob-primitive-glob">glob &gt;&gt; primitive Glob</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_apply_glob_to_walk">fun _apply_glob_to_walk()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-filter">fun filter()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-fnmatch">fun fnmatch()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-fnmatchcase">fun fnmatchcase()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-glob">fun glob()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-iglob">fun iglob()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-translate">fun translate()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3617,8 +3598,7 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive Glob</p>
-<p>In package "glob".</p>
+                <h1 id="glob-primitive-glob">glob &gt;&gt; primitive Glob</h1>
 <p>Public, default capability val.</p>
 <p>Filename matching and globbing with shell patterns.</p>
 <p><code>fnmatch(file_name, pattern)</code> matches according to the local convention.
@@ -3632,61 +3612,32 @@ PATTERN.</p>
     ?       | matches any single character
     [seq]   | matches any character in seq
     [!seq]  | matches any char not in seq</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_apply_glob_to_walk">fun _apply_glob_to_walk()</h2>
-<p>fun box
- _apply_glob_to_walk(pattern: <a href="../builtin-String">String</a> val, compiled_pattern: <a href="../regex-Regex">Regex</a> ref, root: <a href="../files-FilePath">FilePath</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref, dir: <a href="../files-FilePath">FilePath</a> val, entries: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../glob-Glob">Glob</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-filter">fun filter()</h2>
-<p>fun box
- filter(names: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val , <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref)] val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-_apply_glob_to_walkpattern-string-val-compiled_pattern-regex-ref-root-filepath-val-glob_handler-globhandler-ref-dir-filepath-val-entries-array91string-val93-ref-none-val">fun box  _apply_glob_to_walk(pattern: <a href="../builtin-String">String</a> val, compiled_pattern: <a href="../regex-Regex">Regex</a> ref, root: <a href="../files-FilePath">FilePath</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref, dir: <a href="../files-FilePath">FilePath</a> val, entries: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-eqthat-glob-val-bool-val">fun box  eq(that: <a href="../glob-Glob">Glob</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-filternames-array91string-val93-ref-pattern-string-val-array91string-val-array91string-val93-ref93-val">fun box  filter(names: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val , <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref)] val</h3>
 <p>Returns <code>name</code> and the matching subgroups for <code>names</code> that match <code>pattern</code>.</p>
 <p>All strings are first case-normalized if the operating system requires it.</p>
-<h2 id="fun-fnmatch">fun fnmatch()</h2>
-<p>fun box
- fnmatch(name: <a href="../builtin-String">String</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-fnmatchname-string-val-pattern-string-val-bool-val">fun box  fnmatch(name: <a href="../builtin-String">String</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Tests whether <code>name</code> matches <code>pattern</code>.</p>
 <p>An initial period in <code>name</code> is not special.</p>
 <p>Both <code>name</code> and <code>pattern</code> are first case-normalized if the operating system
 requires it.  If you don't want this, use <code>fnmatchcase</code>.</p>
-<h2 id="fun-fnmatchcase">fun fnmatchcase()</h2>
-<p>fun box
- fnmatchcase(name: <a href="../builtin-String">String</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-fnmatchcasename-string-val-pattern-string-val-bool-val">fun box  fnmatchcase(name: <a href="../builtin-String">String</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Tests whether <code>name</code> matches <code>pattern</code>, including case.</p>
-<h2 id="fun-glob">fun glob()</h2>
-<p>fun box
- glob(root_path: <a href="../files-FilePath">FilePath</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../files-FilePath">FilePath</a> val] ref</p>
-<p>Public.</p>
+<h3 id="fun-box-globroot_path-filepath-val-pattern-string-val-array91filepath-val93-ref">fun box  glob(root_path: <a href="../files-FilePath">FilePath</a> val, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../files-FilePath">FilePath</a> val] ref</h3>
 <p>Returns an Array[FilePath] for each path below <code>root_path</code> that matches
 <code>pattern</code>.</p>
 <p>The pattern may contain shell-style wildcards.  See the type documentation
 on <code>Glob</code> for details.</p>
-<h2 id="fun-iglob">fun iglob()</h2>
-<p>fun box
- iglob(root: <a href="../files-FilePath">FilePath</a> val, pattern: <a href="../builtin-String">String</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-iglobroot-filepath-val-pattern-string-val-glob_handler-globhandler-ref-none-val">fun box  iglob(root: <a href="../files-FilePath">FilePath</a> val, pattern: <a href="../builtin-String">String</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Calls <code>GlobHandler.apply</code> for each path below <code>root</code> that matches <code>pattern</code>.</p>
 <p>The pattern may contain shell-style wildcards.  See the type documentation
 on <code>Glob</code> for details.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../glob-Glob">Glob</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-translate">fun translate()</h2>
-<p>fun box
- translate(pat: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-glob-val-bool-val">fun box  ne(that: <a href="../glob-Glob">Glob</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-translatepat-string-val-string-ref">fun box  translate(pat: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Translates a shell <code>pattern</code> to a regular expression.
 There is no way to quote meta-characters.</p>
               

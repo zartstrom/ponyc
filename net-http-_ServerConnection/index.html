@@ -2571,27 +2571,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-actor-_serverconnection">net/http &gt;&gt; actor _ServerConnection</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-answer">be answer()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispatch">be dispatch()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_dispatch_pending">fun _dispatch_pending()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_safe">fun is_safe()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_send">fun _send()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_send_responses">fun _send_responses()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3614,46 +3600,27 @@
           <div role="main">
             <div class="section">
               
-                <p>actor _ServerConnection</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-actor-_serverconnection">net/http &gt;&gt; actor _ServerConnection</h1>
 <p>Private, default capability tag.</p>
 <p>Manages a stream of requests to a server, ordering the responses.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val, conn: <a href="../net-TCPConnection">TCPConnection</a> tag, client_ip: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-answer">be answer()</h2>
-<p>be answer(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createhandler-requesthandler-val-logger-logger-val-conn-tcpconnection-tag-client_ip-string-val">new create(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val, conn: <a href="../net-TCPConnection">TCPConnection</a> tag, client_ip: <a href="../builtin-String">String</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-answerrequest-payload-val-response-payload-val">be answer(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Associate a response with the given request and send responses in the
 correct order.</p>
-<h2 id="be-dispatch">be dispatch()</h2>
-<p>be dispatch(request: <a href="../net-http-Payload">Payload</a> iso)</p>
-<p>Public.</p>
+<h3 id="be-dispatchrequest-payload-iso">be dispatch(request: <a href="../net-http-Payload">Payload</a> iso)</h3>
 <p>Dispatch requests. We can have many safe requests dispatched at once, or a
 single unsafe request, since the client may expect an initial unsafe
 request to alter the answer to following requests.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_dispatch_pending">fun _dispatch_pending()</h2>
-<p>fun ref
- _dispatch_pending(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_dispatch_pending-none-val">fun ref  _dispatch_pending(): <a href="../builtin-None">None</a> val</h3>
 <p>If we have pending requests, dispatch as many as we can.</p>
-<h2 id="fun-is_safe">fun is_safe()</h2>
-<p>fun box
- is_safe(method: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_safemethod-string-val-bool-val">fun box  is_safe(method: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true for a safe request method, false otherwise.</p>
-<h2 id="fun-_send">fun _send()</h2>
-<p>fun ref
- _send(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_sendrequest-payload-val-response-payload-val-none-val">fun ref  _send(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Send a single response.</p>
-<h2 id="fun-_send_responses">fun _send_responses()</h2>
-<p>fun ref
- _send_responses(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_send_responses-none-val">fun ref  _send_responses(): <a href="../builtin-None">None</a> val</h3>
 <p>Send available responses in the correct order.</p>
               
             </div>

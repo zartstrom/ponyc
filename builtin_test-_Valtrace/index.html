@@ -1048,27 +1048,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#builtin_test-actor-_valtrace">builtin_test &gt;&gt; actor _Valtrace</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-done">be done()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-four">be four()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-gc">be gc()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-one">be one()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-three">be three()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-two">be two()</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
             
             </ul>
@@ -3614,40 +3600,25 @@
           <div role="main">
             <div class="section">
               
-                <p>actor _Valtrace</p>
-<p>In package "builtin_test".</p>
+                <h1 id="builtin_test-actor-_valtrace">builtin_test &gt;&gt; actor _Valtrace</h1>
 <p>Private, default capability tag.</p>
 <p>No doc string provided.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var count: <a href="../builtin-U32">U32</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-done">be done()</h2>
-<p>be done(h: <a href="../ponytest-TestHelper">TestHelper</a> val)</p>
-<p>Public.</p>
-<h2 id="be-four">be four()</h2>
-<p>be four(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a2: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a3: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-doneh-testhelper-val">be done(h: <a href="../ponytest-TestHelper">TestHelper</a> val)</h3>
+<h3 id="be-foura1-_valtrace-tag-a2-_valtrace-tag-a3-_valtrace-tag-h-testhelper-val-s-string-val">be four(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a2: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a3: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</h3>
 <p>Ask all actors to test the string.</p>
-<h2 id="be-gc">be gc()</h2>
-<p>be gc(a: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
-<h2 id="be-one">be one()</h2>
-<p>be one(h: <a href="../ponytest-TestHelper">TestHelper</a> val)</p>
-<p>Public.</p>
+<h3 id="be-gca-_valtrace-tag-h-testhelper-val-s-string-val">be gc(a: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</h3>
+<h3 id="be-oneh-testhelper-val">be one(h: <a href="../ponytest-TestHelper">TestHelper</a> val)</h3>
 <p>Create a String iso, send it to a new actor.</p>
-<h2 id="be-three">be three()</h2>
-<p>be three(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a2: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
+<h3 id="be-threea1-_valtrace-tag-a2-_valtrace-tag-h-testhelper-val-s-string-val">be three(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, a2: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> val)</h3>
 <p>Receive a String that was an iso that passed through another actor.</p>
-<h2 id="be-two">be two()</h2>
-<p>be two(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> iso)</p>
-<p>Public.</p>
+<h3 id="be-twoa1-_valtrace-tag-h-testhelper-val-s-string-iso">be two(a1: <a href="../builtin_test-_Valtrace">_Valtrace</a> tag, h: <a href="../ponytest-TestHelper">TestHelper</a> val, s: <a href="../builtin-String">String</a> iso)</h3>
 <p>Receive a String iso allocated by a different actor.
 Append to it.
 Send it as a val to a third actor.</p>

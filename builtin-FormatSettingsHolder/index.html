@@ -473,39 +473,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#builtin-class-formatsettingsholder91optional-f-formatspec-val-optional-p-prefixspec-val-optional-d-formatsettings91f-val-p-val93-read-creatable-read93">builtin &gt;&gt; class FormatSettingsHolder[optional F: FormatSpec val, optional P: PrefixSpec val, optional D: (FormatSettings[F val, P val] #read &amp; Creatable #read)]</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-align">fun align()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-fill">fun fill()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-format">fun format()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-precision">fun precision()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-prefix">fun prefix()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_align">fun set_align()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_fill">fun set_fill()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_format">fun set_format()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_precision">fun set_precision()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_prefix">fun set_prefix()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_width">fun set_width()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-width">fun width()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3626,8 +3600,7 @@
           <div role="main">
             <div class="section">
               
-                <p>class FormatSettingsHolder[optional F: <a href="../builtin-FormatSpec">FormatSpec</a> val, optional P: <a href="../builtin-PrefixSpec">PrefixSpec</a> val, optional D: (<a href="../builtin-FormatSettings">FormatSettings</a>[F val, P val] #read &amp; <a href="../builtin-Creatable">Creatable</a> #read)]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-class-formatsettingsholder91optional-f-formatspec-val-optional-p-prefixspec-val-optional-d-formatsettings91f-val-p-val93-read-creatable-read93">builtin &gt;&gt; class FormatSettingsHolder[optional F: <a href="../builtin-FormatSpec">FormatSpec</a> val, optional P: <a href="../builtin-PrefixSpec">PrefixSpec</a> val, optional D: (<a href="../builtin-FormatSettings">FormatSettings</a>[F val, P val] #read &amp; <a href="../builtin-Creatable">Creatable</a> #read)]</h1>
 <p>Public, default capability ref.</p>
 <p>Modifiable format settings holder.</p>
 <p>Each setting should be set as appropriate and then the holder can be passed
@@ -3637,7 +3610,7 @@ the holder reused for other <code>string()</code> calls if required.</p>
 aren't, defaults are specified by an instance of the <code>D</code> type parameter.</p>
 <p>Settings may be read and written directly or the provided accessors may be
 used. The write accessors return <code>this</code> to allow call chaining.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var align': ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</li>
 <li>var fill': <a href="../builtin-U32">U32</a> val</li>
@@ -3646,60 +3619,22 @@ used. The write accessors return <code>this</code> to allow call chaining.</p>
 <li>var prefix': (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</li>
 <li>var width': <a href="../builtin-USize">USize</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional defaults: <a href="../builtin-FormatSettings">FormatSettings</a>[F val, P val] box)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-defaults-formatsettings91f-val-p-val93-box">new create(optional defaults: <a href="../builtin-FormatSettings">FormatSettings</a>[F val, P val] box)</h3>
 <p>Initialise fields using the given default source.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-align">fun align()</h2>
-<p>fun box
- align(): ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-fill">fun fill()</h2>
-<p>fun box
- fill(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-format">fun format()</h2>
-<p>fun box
- format(): (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-precision">fun precision()</h2>
-<p>fun box
- precision(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
-<h2 id="fun-prefix">fun prefix()</h2>
-<p>fun box
- prefix(): (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-set_align">fun set_align()</h2>
-<p>fun ref
- set_align(a: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-set_fill">fun set_fill()</h2>
-<p>fun ref
- set_fill(f: <a href="../builtin-U32">U32</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-set_format">fun set_format()</h2>
-<p>fun ref
- set_format(f: (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-set_precision">fun set_precision()</h2>
-<p>fun ref
- set_precision(p: <a href="../builtin-USize">USize</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-set_prefix">fun set_prefix()</h2>
-<p>fun ref
- set_prefix(p: (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-set_width">fun set_width()</h2>
-<p>fun ref
- set_width(w: <a href="../builtin-USize">USize</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</p>
-<p>Public.</p>
-<h2 id="fun-width">fun width()</h2>
-<p>fun box
- width(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-align-alignleft-val-alignright-val-aligncenter-val">fun box  align(): ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</h3>
+<h3 id="fun-box-fill-u32-val">fun box  fill(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-format-f-val-formatdefault-val">fun box  format(): (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</h3>
+<h3 id="fun-box-precision-usize-val">fun box  precision(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-prefix-p-val-prefixdefault-val">fun box  prefix(): (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</h3>
+<h3 id="fun-ref-set_aligna-alignleft-val-alignright-val-aligncenter-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_align(a: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_fillf-u32-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_fill(f: <a href="../builtin-U32">U32</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_formatf-f-val-formatdefault-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_format(f: (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_precisionp-usize-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_precision(p: <a href="../builtin-USize">USize</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_prefixp-p-val-prefixdefault-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_prefix(p: (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_widthw-usize-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  set_width(w: <a href="../builtin-USize">USize</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-box-width-usize-val">fun box  width(): <a href="../builtin-USize">USize</a> val</h3>
               
             </div>
           </div>

@@ -3029,31 +3029,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#ponytest-actor-ponytest">ponytest &gt;&gt; actor PonyTest</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-_all_tests_applied">be _all_tests_applied()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_test_complete">be _test_complete()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_test_started">be _test_started()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_find_group">fun _find_group()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_plural">fun _plural()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_print_report">fun _print_report()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_process_opts">fun _process_opts()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3618,58 +3600,35 @@
           <div role="main">
             <div class="section">
               
-                <p>actor PonyTest</p>
-<p>In package "ponytest".</p>
+                <h1 id="ponytest-actor-ponytest">ponytest &gt;&gt; actor PonyTest</h1>
 <p>Public, default capability tag.</p>
 <p>Main test framework actor that organises tests, collates information and
 prints results.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(env: <a href="../builtin-Env">Env</a> val, list: <a href="../ponytest-TestList">TestList</a> tag)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-_all_tests_applied">be _all_tests_applied()</h2>
-<p>be _all_tests_applied()</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createenv-env-val-list-testlist-tag">new create(env: <a href="../builtin-Env">Env</a> val, list: <a href="../ponytest-TestList">TestList</a> tag)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-_all_tests_applied">be _all_tests_applied()</h3>
 <p>All our tests have been handed to apply(), setup for finishing</p>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(test: <a href="../ponytest-UnitTest">UnitTest</a> iso)</p>
-<p>Public.</p>
+<h3 id="be-applytest-unittest-iso">be apply(test: <a href="../ponytest-UnitTest">UnitTest</a> iso)</h3>
 <p>Run the given test, subject to our filter and options.</p>
-<h2 id="be-_test_complete">be _test_complete()</h2>
-<p>be _test_complete(id: <a href="../builtin-USize">USize</a> val, pass: <a href="../builtin-Bool">Bool</a> val, log: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val)</p>
-<p>Private.</p>
+<h3 id="be-_test_completeid-usize-val-pass-bool-val-log-array91string-val93-val">be _test_complete(id: <a href="../builtin-USize">USize</a> val, pass: <a href="../builtin-Bool">Bool</a> val, log: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val)</h3>
 <p>A test has completed, restore its result and update our status info.
 The id parameter is the test identifier handed out when we created the test
 helper.</p>
-<h2 id="be-_test_started">be _test_started()</h2>
-<p>be _test_started(id: <a href="../builtin-USize">USize</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_test_startedid-usize-val">be _test_started(id: <a href="../builtin-USize">USize</a> val)</h3>
 <p>A test has started running, update status info.
 The id parameter is the test identifier handed out when we created the test
 helper.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_find_group">fun _find_group()</h2>
-<p>fun ref
- _find_group(group_name: <a href="../builtin-String">String</a> val): <a href="../ponytest-_Group">_Group</a> tag</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_find_groupgroup_name-string-val-_group-tag">fun ref  _find_group(group_name: <a href="../builtin-String">String</a> val): <a href="../ponytest-_Group">_Group</a> tag</h3>
 <p>Find the group to use for the given group name, subject to the
 --sequential flag.</p>
-<h2 id="fun-_plural">fun _plural()</h2>
-<p>fun box
- _plural(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_pluraln-usize-val-string-val">fun box  _plural(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return a "s" or an empty string depending on whether the given number is 1.
 For use when printing possibly plural words, eg "test" or "tests".</p>
-<h2 id="fun-_print_report">fun _print_report()</h2>
-<p>fun box
- _print_report(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_print_report-none-val">fun box  _print_report(): <a href="../builtin-None">None</a> val</h3>
 <p>The tests are all complete, print out the results.</p>
-<h2 id="fun-_process_opts">fun _process_opts()</h2>
-<p>fun ref
- _process_opts(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_process_opts-none-val">fun ref  _process_opts(): <a href="../builtin-None">None</a> val</h3>
 <p>Process our command line options.
 All command line arguments given must be recognised and make sense.
 State for specified options is stored in object fields.

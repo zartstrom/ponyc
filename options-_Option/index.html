@@ -2888,23 +2888,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#options-class-_option">options &gt;&gt; class _Option</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-accepts">fun accepts()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-has_argument">fun has_argument()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-matches">fun matches()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-requires_argument">fun requires_argument()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3610,38 +3600,23 @@
           <div role="main">
             <div class="section">
               
-                <p>class _Option</p>
-<p>In package "options".</p>
+                <h1 id="options-class-_option">options &gt;&gt; class _Option</h1>
 <p>Private, default capability ref.</p>
 <p>No doc string provided.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>let arg: (((<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val) | <a href="../options-I64Argument">I64Argument</a> val) | <a href="../options-F64Argument">F64Argument</a> val)</li>
 <li>let long: <a href="../builtin-String">String</a> val</li>
 <li>let mode: (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val)</li>
 <li>let short: (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(long': <a href="../builtin-String">String</a> val, short': (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val), arg': (((<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val) | <a href="../options-I64Argument">I64Argument</a> val) | <a href="../options-F64Argument">F64Argument</a> val), mode': (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val))</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-accepts">fun accepts()</h2>
-<p>fun box
- accepts(argument: <a href="../builtin-String">String</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-has_argument">fun has_argument()</h2>
-<p>fun box
- has_argument(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-matches">fun matches()</h2>
-<p>fun box
- matches(name: <a href="../builtin-String">String</a> box, shortmatch: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-requires_argument">fun requires_argument()</h2>
-<p>fun box
- requires_argument(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createlong-string-val-short-string-val-none-val-arg-none-val-stringargument-val-i64argument-val-f64argument-val-mode-required-val-optional-val">new create(long': <a href="../builtin-String">String</a> val, short': (<a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val), arg': (((<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val) | <a href="../options-I64Argument">I64Argument</a> val) | <a href="../options-F64Argument">F64Argument</a> val), mode': (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val))</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-acceptsargument-string-box-bool-val">fun box  accepts(argument: <a href="../builtin-String">String</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-has_argument-bool-val">fun box  has_argument(): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-matchesname-string-box-shortmatch-bool-val-bool-val">fun box  matches(name: <a href="../builtin-String">String</a> box, shortmatch: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-requires_argument-bool-val">fun box  requires_argument(): <a href="../builtin-Bool">Bool</a> val</h3>
               
             </div>
           </div>

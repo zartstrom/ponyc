@@ -2536,28 +2536,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-class-_requestbuilder-is-tcpconnectionnotify-ref">net/http &gt;&gt; class _RequestBuilder is TCPConnectionNotify ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-accepted">fun accepted()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-auth_failed">fun auth_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connect_failed">fun connect_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connected">fun connected()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connecting">fun connecting()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-received">fun received()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sent">fun sent()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3615,50 +3598,23 @@
           <div role="main">
             <div class="section">
               
-                <p>class _RequestBuilder is <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> ref</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-class-_requestbuilder-is-tcpconnectionnotify-ref">net/http &gt;&gt; class _RequestBuilder is <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> ref</h1>
 <p>Private, default capability ref.</p>
 <p>This builds a request payload using received chunks of data.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-accepted">fun accepted()</h2>
-<p>fun ref
- accepted(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createhandler-requesthandler-val-logger-logger-val">new create(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-acceptedconn-tcpconnection-ref-none-val">fun ref  accepted(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Create a server connection to handle response ordering.</p>
-<h2 id="fun-auth_failed">fun auth_failed()</h2>
-<p>fun ref
- auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-connect_failed">fun connect_failed()</h2>
-<p>fun ref
- connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-connected">fun connected()</h2>
-<p>fun ref
- connected(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-connecting">fun connecting()</h2>
-<p>fun ref
- connecting(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-received">fun received()</h2>
-<p>fun ref
- received(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-auth_failedconn-tcpconnection-ref-none-val">fun ref  auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-closedconn-tcpconnection-ref-none-val">fun ref  closed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connect_failedconn-tcpconnection-ref-none-val">fun ref  connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connectedconn-tcpconnection-ref-none-val">fun ref  connected(conn: <a href="../net-TCPConnection">TCPConnection</a> ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-connectingconn-tcpconnection-ref-count-u32-val-none-val">fun ref  connecting(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, count: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-receivedconn-tcpconnection-ref-data-array91u8-val93-iso-none-val">fun ref  received(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso): <a href="../builtin-None">None</a> val</h3>
 <p>Assemble chunks of data into a request. When we have a whole request,
 dispatch it.</p>
-<h2 id="fun-sent">fun sent()</h2>
-<p>fun ref
- sent(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val-may-raise-an-error">fun ref  sent(conn: <a href="../net-TCPConnection">TCPConnection</a> ref, data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-ByteSeq">ByteSeq</a> val ?, may raise an error</h3>
               
             </div>
           </div>

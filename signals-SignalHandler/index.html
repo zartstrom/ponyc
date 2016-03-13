@@ -3313,23 +3313,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#signals-actor-signalhandler">signals &gt;&gt; actor SignalHandler</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_event_notify">be _event_notify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-raise">be raise()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_dispose">fun _dispose()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3610,34 +3600,22 @@
           <div role="main">
             <div class="section">
               
-                <p>actor SignalHandler</p>
-<p>In package "signals".</p>
+                <h1 id="signals-actor-signalhandler">signals &gt;&gt; actor SignalHandler</h1>
 <p>Public, default capability tag.</p>
 <p>Listen for a specific signal.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(notify: <a href="../signals-SignalNotify">SignalNotify</a> iso, sig: <a href="../builtin-U32">U32</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createnotify-signalnotify-iso-sig-u32-val">new create(notify: <a href="../signals-SignalNotify">SignalNotify</a> iso, sig: <a href="../builtin-U32">U32</a> val)</h3>
 <p>Create a signal handler.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Dispose of the signal handler.</p>
-<h2 id="be-_event_notify">be _event_notify()</h2>
-<p>be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_event_notifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>Called when the signal is received, or when the AsioEventID can be
 destroyed.</p>
-<h2 id="be-raise">be raise()</h2>
-<p>be raise()</p>
-<p>Public.</p>
+<h3 id="be-raise">be raise()</h3>
 <p>Raise the signal.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_dispose">fun _dispose()</h2>
-<p>fun ref
- _dispose(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_dispose-none-val">fun ref  _dispose(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the AsioEventID.</p>
               
             </div>

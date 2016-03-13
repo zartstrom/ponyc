@@ -277,25 +277,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#builtin-class-env">builtin &gt;&gt; class Env</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_create">new _create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_count_strings">fun _count_strings()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-exitcode">fun exitcode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_strings_from_pointers">fun _strings_from_pointers()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-vars">fun vars()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3612,12 +3600,11 @@
           <div role="main">
             <div class="section">
               
-                <p>class Env</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-class-env">builtin &gt;&gt; class Env</h1>
 <p>Public, default capability val.</p>
 <p>An environment holds the command line and other values injected into the
 program by default by the runtime.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>let args: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val</li>
 <li>let err: <a href="../builtin-StdStream">StdStream</a> tag</li>
@@ -3625,35 +3612,19 @@ program by default by the runtime.</p>
 <li>let out: <a href="../builtin-StdStream">StdStream</a> tag</li>
 <li>let root: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../builtin-None">None</a> val)</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_create">new _create()</h2>
-<p>new _create(argc: <a href="../builtin-U32">U32</a> val, argv: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val, envp: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val)</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_createargc-u32-val-argv-pointer91pointer91u8-val93-ref93-val-envp-pointer91pointer91u8-val93-ref93-val">new _create(argc: <a href="../builtin-U32">U32</a> val, argv: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val, envp: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val)</h3>
 <p>Builds an environment from the command line. This is done before the Main
 actor is created.</p>
-<h2 id="new-create">new create()</h2>
-<p>new create(root': (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../builtin-None">None</a> val), input': <a href="../builtin-Stdin">Stdin</a> tag, out': <a href="../builtin-StdStream">StdStream</a> tag, err': <a href="../builtin-StdStream">StdStream</a> tag, args': <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val, vars': (<a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val | <a href="../builtin-None">None</a> val))</p>
-<p>Public.</p>
+<h3 id="new-createroot-ambientauth-val-none-val-input-stdin-tag-out-stdstream-tag-err-stdstream-tag-args-array91string-val93-val-vars-array91string-val93-val-none-val">new create(root': (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../builtin-None">None</a> val), input': <a href="../builtin-Stdin">Stdin</a> tag, out': <a href="../builtin-StdStream">StdStream</a> tag, err': <a href="../builtin-StdStream">StdStream</a> tag, args': <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val, vars': (<a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val | <a href="../builtin-None">None</a> val))</h3>
 <p>Build an artificial environment. A root capability may be supplied.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_count_strings">fun _count_strings()</h2>
-<p>fun tag
- _count_strings(data: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val): <a href="../builtin-USize">USize</a> val</p>
-<p>Private.</p>
-<h2 id="fun-exitcode">fun exitcode()</h2>
-<p>fun tag
- exitcode(code: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-tag-_count_stringsdata-pointer91pointer91u8-val93-ref93-val-usize-val">fun tag  _count_strings(data: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-tag-exitcodecode-i32-val-none-val">fun tag  exitcode(code: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Sets the application exit code. If this is called more than once, the last
 value set will be the exit code. The exit code defaults to 0.</p>
-<h2 id="fun-_strings_from_pointers">fun _strings_from_pointers()</h2>
-<p>fun tag
- _strings_from_pointers(data: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val, len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</p>
-<p>Private.</p>
-<h2 id="fun-vars">fun vars()</h2>
-<p>fun box
- vars(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val</p>
-<p>Public.</p>
+<h3 id="fun-tag-_strings_from_pointersdata-pointer91pointer91u8-val93-ref93-val-len-usize-val-array91string-val93-iso">fun tag  _strings_from_pointers(data: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref] val, len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>
+<h3 id="fun-box-vars-array91string-val93-val">fun box  vars(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val</h3>
 <p>Return the environment variables as an array of strings of the form
 "key=value".</p>
               

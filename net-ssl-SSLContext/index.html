@@ -2747,38 +2747,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#netssl-class-sslcontext">net/ssl &gt;&gt; class SSLContext</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-allow_tls_v1">fun allow_tls_v1()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-allow_tls_v1_1">fun allow_tls_v1_1()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-allow_tls_v1_2">fun allow_tls_v1_2()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-client">fun client()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dispose">fun dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_final">fun _final()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-server">fun server()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_authority">fun set_authority()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_cert">fun set_cert()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_ciphers">fun set_ciphers()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_client_verify">fun set_client_verify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_server_verify">fun set_server_verify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_verify_depth">fun set_verify_depth()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3625,85 +3598,43 @@
           <div role="main">
             <div class="section">
               
-                <p>class SSLContext</p>
-<p>In package "net/ssl".</p>
+                <h1 id="netssl-class-sslcontext">net/ssl &gt;&gt; class SSLContext</h1>
 <p>Public, default capability val.</p>
 <p>An SSL context is used to create SSL sessions.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-allow_tls_v1">fun allow_tls_v1()</h2>
-<p>fun ref
- allow_tls_v1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-allow_tls_v1state-bool-val-sslcontext-ref">fun ref  allow_tls_v1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1. Defaults to true.</p>
-<h2 id="fun-allow_tls_v1_1">fun allow_tls_v1_1()</h2>
-<p>fun ref
- allow_tls_v1_1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-allow_tls_v1_1state-bool-val-sslcontext-ref">fun ref  allow_tls_v1_1(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1.1. Defaults to true.</p>
-<h2 id="fun-allow_tls_v1_2">fun allow_tls_v1_2()</h2>
-<p>fun ref
- allow_tls_v1_2(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-allow_tls_v1_2state-bool-val-sslcontext-ref">fun ref  allow_tls_v1_2(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1.2. Defaults to true.</p>
-<h2 id="fun-client">fun client()</h2>
-<p>fun box
- client(optional hostname: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSL">SSL</a> iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-clientoptional-hostname-string-val-ssl-iso-may-raise-an-error">fun box  client(optional hostname: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSL">SSL</a> iso^ ?, may raise an error</h3>
 <p>Create a client-side SSL session. If a hostname is supplied, the server
 side certificate must be valid for that hostname.</p>
-<h2 id="fun-dispose">fun dispose()</h2>
-<p>fun ref
- dispose(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the SSL context.</p>
-<h2 id="fun-_final">fun _final()</h2>
-<p>fun box
- _final(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the SSL context.</p>
-<h2 id="fun-server">fun server()</h2>
-<p>fun box
- server(): <a href="../net-ssl-SSL">SSL</a> iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-server-ssl-iso-may-raise-an-error">fun box  server(): <a href="../net-ssl-SSL">SSL</a> iso^ ?, may raise an error</h3>
 <p>Create a server-side SSL session.</p>
-<h2 id="fun-set_authority">fun set_authority()</h2>
-<p>fun ref
- set_authority(file: <a href="../builtin-String">String</a> val, optional path: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-set_authorityfile-string-val-optional-path-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_authority(file: <a href="../builtin-String">String</a> val, optional path: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
 <p>Use a PEM file and/or a directory of PEM files to specify certificate
 authorities. Clients must set this. For servers, it is optional. Use an
 empty string to indicate no file or no path. Raises an error if these
 verify locations aren't valid, or if both are empty strings.</p>
-<h2 id="fun-set_cert">fun set_cert()</h2>
-<p>fun ref
- set_cert(cert: <a href="../builtin-String">String</a> val, key: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-set_certcert-string-val-key-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_cert(cert: <a href="../builtin-String">String</a> val, key: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
 <p>The cert file is a PEM certificate chain. The key file is a private key.
 Servers must set this. For clients, it is optional.</p>
-<h2 id="fun-set_ciphers">fun set_ciphers()</h2>
-<p>fun ref
- set_ciphers(ciphers: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-set_ciphersciphers-string-val-sslcontext-ref-may-raise-an-error">fun ref  set_ciphers(ciphers: <a href="../builtin-String">String</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^ ?, may raise an error</h3>
 <p>Set the accepted ciphers. This replaces the existing list. Raises an error
 if the cipher list is invalid.</p>
-<h2 id="fun-set_client_verify">fun set_client_verify()</h2>
-<p>fun ref
- set_client_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_client_verifystate-bool-val-sslcontext-ref">fun ref  set_client_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set to true to require verification. Defaults to true.</p>
-<h2 id="fun-set_server_verify">fun set_server_verify()</h2>
-<p>fun ref
- set_server_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_server_verifystate-bool-val-sslcontext-ref">fun ref  set_server_verify(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set to true to require verification. Defaults to false.</p>
-<h2 id="fun-set_verify_depth">fun set_verify_depth()</h2>
-<p>fun ref
- set_verify_depth(depth: <a href="../builtin-U32">U32</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_verify_depthdepth-u32-val-sslcontext-ref">fun ref  set_verify_depth(depth: <a href="../builtin-U32">U32</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set the verify depth. Defaults to 6.</p>
               
             </div>

@@ -3540,39 +3540,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#time-actor-timers">time &gt;&gt; actor Timers</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-cancel">be cancel()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_event_notify">be _event_notify()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_advance">fun _advance()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_bits">fun _bits()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_expiration_max">fun _expiration_max()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_fire">fun _fire()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_get_wheel">fun _get_wheel()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_next">fun _next()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_set_time">fun _set_time()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_wheels">fun _wheels()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3626,77 +3600,42 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Timers</p>
-<p>In package "time".</p>
+                <h1 id="time-actor-timers">time &gt;&gt; actor Timers</h1>
 <p>Public, default capability tag.</p>
 <p>A hierarchical set of timing wheels.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional slop: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(timer: <a href="../time-Timer">Timer</a> iso)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-slop-usize-val">new create(optional slop: <a href="../builtin-USize">USize</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applytimer-timer-iso">be apply(timer: <a href="../time-Timer">Timer</a> iso)</h3>
 <p>Sets a timer. Fire it if need be, schedule it on the right timing wheel,
 then rearm the timer.</p>
-<h2 id="be-cancel">be cancel()</h2>
-<p>be cancel(timer: <a href="../time-Timer">Timer</a> tag)</p>
-<p>Public.</p>
+<h3 id="be-canceltimer-timer-tag">be cancel(timer: <a href="../time-Timer">Timer</a> tag)</h3>
 <p>Cancels a timer.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Dipose of this set of timing wheels.</p>
-<h2 id="be-_event_notify">be _event_notify()</h2>
-<p>be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_event_notifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>When the event fires, advance the timing wheels.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_advance">fun _advance()</h2>
-<p>fun ref
- _advance(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_advance-none-val">fun ref  _advance(): <a href="../builtin-None">None</a> val</h3>
 <p>Update the current time, process all the timing wheels, and set the event
 for the next time we need to advance.</p>
-<h2 id="fun-_bits">fun _bits()</h2>
-<p>fun tag
- _bits(): <a href="../builtin-USize">USize</a> val</p>
-<p>Private.</p>
-<h2 id="fun-_expiration_max">fun _expiration_max()</h2>
-<p>fun tag
- _expiration_max(): <a href="../builtin-U64">U64</a> val</p>
-<p>Private.</p>
+<h3 id="fun-tag-_bits-usize-val">fun tag  _bits(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-tag-_expiration_max-u64-val">fun tag  _expiration_max(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Get the maximum time the timing wheels cover. Anything beyond this is
 scheduled on the last timing wheel.</p>
-<h2 id="fun-_fire">fun _fire()</h2>
-<p>fun ref
- _fire(timer: <a href="../time-Timer">Timer</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_firetimer-timer-ref-none-val">fun ref  _fire(timer: <a href="../time-Timer">Timer</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Fire a timer if necessary, then schedule it on the correct timing wheel
 based on how long it is until it expires.</p>
-<h2 id="fun-_get_wheel">fun _get_wheel()</h2>
-<p>fun ref
- _get_wheel(rem: <a href="../builtin-U64">U64</a> val): <a href="../time-_TimingWheel">_TimingWheel</a> ref ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-ref-_get_wheelrem-u64-val-_timingwheel-ref-may-raise-an-error">fun ref  _get_wheel(rem: <a href="../builtin-U64">U64</a> val): <a href="../time-_TimingWheel">_TimingWheel</a> ref ?, may raise an error</h3>
 <p>Get the hierarchical timing wheel for the given time until expiration.</p>
-<h2 id="fun-_next">fun _next()</h2>
-<p>fun box
- _next(): <a href="../builtin-U64">U64</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_next-u64-val">fun box  _next(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Return the next time at which the timing wheels should be advanced. This is
 adjusted for slop, so it yields nanoseconds. If no events are pending, this
 returns -1.</p>
-<h2 id="fun-_set_time">fun _set_time()</h2>
-<p>fun ref
- _set_time(): <a href="../builtin-U64">U64</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_set_time-u64-val">fun ref  _set_time(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Set the current time with precision reduced by the slop bits. Return the
 elapsed time.</p>
-<h2 id="fun-_wheels">fun _wheels()</h2>
-<p>fun tag
- _wheels(): <a href="../builtin-USize">USize</a> val</p>
-<p>Private.</p>
+<h3 id="fun-tag-_wheels-usize-val">fun tag  _wheels(): <a href="../builtin-USize">USize</a> val</h3>
               
             </div>
           </div>

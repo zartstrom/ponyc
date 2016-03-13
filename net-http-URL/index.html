@@ -2606,37 +2606,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#nethttp-class-url">net/http &gt;&gt; class URL</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-build">new build()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-valid">new valid()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-default_port">fun default_port()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_valid">fun is_valid()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-join">fun join()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_parse">fun _parse()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_parse_hostport">fun _parse_hostport()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_parse_part">fun _parse_part()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_parse_scheme">fun _parse_scheme()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_split">fun _split()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-string">fun string()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3624,12 +3600,11 @@
           <div role="main">
             <div class="section">
               
-                <p>class URL</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-class-url">net/http &gt;&gt; class URL</h1>
 <p>Public, default capability val.</p>
 <p>Holds the components of a URL. These are always stored as valid, URL-encoded
 values.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var fragment: <a href="../builtin-String">String</a> val</li>
 <li>var host: <a href="../builtin-String">String</a> val</li>
@@ -3640,73 +3615,40 @@ values.</p>
 <li>var scheme: <a href="../builtin-String">String</a> val</li>
 <li>var user: <a href="../builtin-String">String</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-build">new build()</h2>
-<p>new build(from: <a href="../builtin-String">String</a> val, optional percent_encoded: <a href="../builtin-Bool">Bool</a> val) ?</p>
-<p>Public, may raise an error.</p>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h2 id="new-valid">new valid()</h2>
-<p>new valid(from: <a href="../builtin-String">String</a> val) ?</p>
-<p>Public, may raise an error.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-default_port">fun default_port()</h2>
-<p>fun box
- default_port(): <a href="../builtin-U16">U16</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-buildfrom-string-val-optional-percent_encoded-bool-val-may-raise-an-error">new build(from: <a href="../builtin-String">String</a> val, optional percent_encoded: <a href="../builtin-Bool">Bool</a> val) ?, may raise an error</h3>
+<h3 id="new-create">new create()</h3>
+<h3 id="new-validfrom-string-val-may-raise-an-error">new valid(from: <a href="../builtin-String">String</a> val) ?, may raise an error</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-default_port-u16-val">fun box  default_port(): <a href="../builtin-U16">U16</a> val</h3>
 <p>Report the default port for our scheme.
 Returns 0 for unrecognised schemes.</p>
-<h2 id="fun-is_valid">fun is_valid()</h2>
-<p>fun box
- is_valid(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_valid-bool-val">fun box  is_valid(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if all elements are correctly URL encoded.</p>
-<h2 id="fun-join">fun join()</h2>
-<p>fun val
- join(that: <a href="../net-http-URL">URL</a> val): <a href="../net-http-URL">URL</a> val</p>
-<p>Public.</p>
+<h3 id="fun-val-jointhat-url-val-url-val">fun val  join(that: <a href="../net-http-URL">URL</a> val): <a href="../net-http-URL">URL</a> val</h3>
 <p>Using this as a base URL, concatenate with another, possibly relative, URL
 in the same way a browser does for a link.</p>
-<h2 id="fun-_parse">fun _parse()</h2>
-<p>fun ref
- _parse(from: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-ref-_parsefrom-string-val-none-val-may-raise-an-error">fun ref  _parse(from: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
 <p>Parse the given string as a URL.
 Raises an error on invalid port number.</p>
-<h2 id="fun-_parse_hostport">fun _parse_hostport()</h2>
-<p>fun box
- _parse_hostport(hostport: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-box-_parse_hostporthostport-string-val-string-val-string-val">fun box  _parse_hostport(hostport: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Split the given "host and port" string into the host and port parts.</p>
-<h2 id="fun-_parse_part">fun _parse_part()</h2>
-<p>fun box
- _parse_part(from: <a href="../builtin-String">String</a> val, prefix: <a href="../builtin-String">String</a> val, terminators: <a href="../builtin-String">String</a> val, offset: <a href="../builtin-ISize">ISize</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-box-_parse_partfrom-string-val-prefix-string-val-terminators-string-val-offset-isize-val-isize-val-string-val">fun box  _parse_part(from: <a href="../builtin-String">String</a> val, prefix: <a href="../builtin-String">String</a> val, terminators: <a href="../builtin-String">String</a> val, offset: <a href="../builtin-ISize">ISize</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Attempt to parse the specified part out of the given string.
 Only attempt the parse if the given prefix is found first. Pass "" if no
 prefix is needed.
 The part ends when any one of the given terminator characters is found, or
 the end of the input is reached.
 The offset of the terminator is returned, if one is found.</p>
-<h2 id="fun-_parse_scheme">fun _parse_scheme()</h2>
-<p>fun box
- _parse_scheme(from: <a href="../builtin-String">String</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-box-_parse_schemefrom-string-val-isize-val-string-val">fun box  _parse_scheme(from: <a href="../builtin-String">String</a> val): (<a href="../builtin-ISize">ISize</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Find the scheme, if any, at the start of the given string.
 The offset of the part following the scheme is returned.</p>
-<h2 id="fun-_split">fun _split()</h2>
-<p>fun box
- _split(src: <a href="../builtin-String">String</a> val, separator: <a href="../builtin-U8">U8</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-box-_splitsrc-string-val-separator-u8-val-string-val-string-val">fun box  _split(src: <a href="../builtin-String">String</a> val, separator: <a href="../builtin-U8">U8</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Split the given string in 2 around the first instance of the specified
 separator.
 If the string does not contain the separator then the first resulting
 string is the whole src and the second is empty.</p>
-<h2 id="fun-string">fun string()</h2>
-<p>fun box
- string(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-stringoptional-fmt-formatdefault-val-optional-prefix-prefixdefault-val-optional-prec-usize-val-optional-width-usize-val-optional-align-alignleft-val-alignright-val-aligncenter-val-optional-fill-u32-val-string-iso">fun box  string(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Combine the components into a string.</p>
               
             </div>

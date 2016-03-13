@@ -2354,35 +2354,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-actor-_clientconnection">net/http &gt;&gt; actor _ClientConnection</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_auth_failed">be _auth_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-cancel">be cancel()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_closed">be _closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_connect_failed">be _connect_failed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_connected">be _connected()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_response">be _response()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_cancel_all">fun _cancel_all()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_new_conn">fun _new_conn()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_send">fun _send()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3622,58 +3600,32 @@
           <div role="main">
             <div class="section">
               
-                <p>actor _ClientConnection</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-actor-_clientconnection">net/http &gt;&gt; actor _ClientConnection</h1>
 <p>Private, default capability tag.</p>
 <p>Manages a persistent and possibly pipelined TCP connection to an HTTP server.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(request: <a href="../net-http-Payload">Payload</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createhost-string-val-service-string-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val">new create(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applyrequest-payload-val">be apply(request: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Schedule a request.</p>
-<h2 id="be-_auth_failed">be _auth_failed()</h2>
-<p>be _auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</p>
-<p>Private.</p>
+<h3 id="be-_auth_failedconn-tcpconnection-tag">be _auth_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection couldn't be authenticated. Cancel all pending requests.</p>
-<h2 id="be-cancel">be cancel()</h2>
-<p>be cancel(request: <a href="../net-http-Payload">Payload</a> tag)</p>
-<p>Public.</p>
+<h3 id="be-cancelrequest-payload-tag">be cancel(request: <a href="../net-http-Payload">Payload</a> tag)</h3>
 <p>Cancel a request.</p>
-<h2 id="be-_closed">be _closed()</h2>
-<p>be _closed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</p>
-<p>Private.</p>
+<h3 id="be-_closedconn-tcpconnection-tag">be _closed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection to the server has closed prematurely. Cancel everything.</p>
-<h2 id="be-_connect_failed">be _connect_failed()</h2>
-<p>be _connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</p>
-<p>Private.</p>
+<h3 id="be-_connect_failedconn-tcpconnection-tag">be _connect_failed(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection couldn't be established. Cancel all pending requests.</p>
-<h2 id="be-_connected">be _connected()</h2>
-<p>be _connected(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</p>
-<p>Private.</p>
+<h3 id="be-_connectedconn-tcpconnection-tag">be _connected(conn: <a href="../net-TCPConnection">TCPConnection</a> tag)</h3>
 <p>The connection to the server has been established. Send pending requests.</p>
-<h2 id="be-_response">be _response()</h2>
-<p>be _response(response: <a href="../net-http-Payload">Payload</a> iso)</p>
-<p>Private.</p>
+<h3 id="be-_responseresponse-payload-iso">be _response(response: <a href="../net-http-Payload">Payload</a> iso)</h3>
 <p>Call the request's handler and supply the response.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_cancel_all">fun _cancel_all()</h2>
-<p>fun ref
- _cancel_all(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_cancel_all-none-val">fun ref  _cancel_all(): <a href="../builtin-None">None</a> val</h3>
 <p>Cancel all pending requests.</p>
-<h2 id="fun-_new_conn">fun _new_conn()</h2>
-<p>fun ref
- _new_conn(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_new_conn-none-val">fun ref  _new_conn(): <a href="../builtin-None">None</a> val</h3>
 <p>Creates a new connection.</p>
-<h2 id="fun-_send">fun _send()</h2>
-<p>fun ref
- _send(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_send-none-val">fun ref  _send(): <a href="../builtin-None">None</a> val</h3>
 <p>Send pending requests. If the connection is closed, open it. If we have
 nothing to send and we aren't waiting on any responses, close the
 connection.</p>

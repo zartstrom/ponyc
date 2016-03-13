@@ -2789,24 +2789,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#netssl-primitive-x509">net/ssl &gt;&gt; primitive X509</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-all_names">fun all_names()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-common_name">fun common_name()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_match_name">fun _match_name()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-valid_for_host">fun valid_for_host()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3611,46 +3598,25 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive X509</p>
-<p>In package "net/ssl".</p>
+                <h1 id="netssl-primitive-x509">net/ssl &gt;&gt; primitive X509</h1>
 <p>Public, default capability val.</p>
 <p>No doc string provided.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-all_names">fun all_names()</h2>
-<p>fun box
- all_names(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-all_namescert-pointer91x509-val93-ref-array91string-val93-val">fun box  all_names(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val</h3>
 <p>Returns an array of all names for the certificate. Any names containing
 NULL bytes are not included. This includes the common name and all subject
 alternate names.</p>
-<h2 id="fun-common_name">fun common_name()</h2>
-<p>fun box
- common_name(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref): <a href="../builtin-String">String</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-common_namecert-pointer91x509-val93-ref-string-val-may-raise-an-error">fun box  common_name(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
 <p>Get the common name for the certificate. Raises an error if the common name
 contains any NULL bytes.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../net-ssl-X509">X509</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_match_name">fun _match_name()</h2>
-<p>fun box
- _match_name(host: <a href="../builtin-String">String</a> val, name: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-eqthat-x509-val-bool-val">fun box  eq(that: <a href="../net-ssl-X509">X509</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_match_namehost-string-val-name-string-val-bool-val">fun box  _match_name(host: <a href="../builtin-String">String</a> val, name: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the name extracted from the certificate is valid for the
 given host.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../net-ssl-X509">X509</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-valid_for_host">fun valid_for_host()</h2>
-<p>fun box
- valid_for_host(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref, host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-x509-val-bool-val">fun box  ne(that: <a href="../net-ssl-X509">X509</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-valid_for_hostcert-pointer91x509-val93-ref-host-string-val-bool-val">fun box  valid_for_host(cert: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-X509">X509</a> val] ref, host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Checks if an OpenSSL X509 certificate is valid for a given host.</p>
               
             </div>

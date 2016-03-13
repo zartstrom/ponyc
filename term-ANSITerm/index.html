@@ -3413,53 +3413,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#term-actor-ansiterm">term &gt;&gt; actor ANSITerm</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-prompt">be prompt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_timeout">be _timeout()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_delete">fun _delete()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_down">fun _down()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_end">fun _end()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_esc_clear">fun _esc_clear()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_esc_flush">fun _esc_flush()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_fn_key">fun _fn_key()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_home">fun _home()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_insert">fun _insert()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_keypad">fun _keypad()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_left">fun _left()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_mod">fun _mod()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_page_down">fun _page_down()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_page_up">fun _page_up()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_right">fun _right()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_up">fun _up()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3640,108 +3600,52 @@
           <div role="main">
             <div class="section">
               
-                <p>actor ANSITerm</p>
-<p>In package "term".</p>
+                <h1 id="term-actor-ansiterm">term &gt;&gt; actor ANSITerm</h1>
 <p>Public, default capability tag.</p>
 <p>Handles ANSI escape codes from stdin.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(notify: <a href="../term-ANSINotify">ANSINotify</a> iso, source: <a href="../builtin-DisposableActor">DisposableActor</a> tag, optional timers: <a href="../time-Timers">Timers</a> tag)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createnotify-ansinotify-iso-source-disposableactor-tag-optional-timers-timers-tag">new create(notify: <a href="../term-ANSINotify">ANSINotify</a> iso, source: <a href="../builtin-DisposableActor">DisposableActor</a> tag, optional timers: <a href="../time-Timers">Timers</a> tag)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applydata-array91u8-val93-iso">be apply(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso)</h3>
 <p>Receives input from stdin.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Stop accepting input, inform the notifier we have closed, and dispose of
 our source.</p>
-<h2 id="be-prompt">be prompt()</h2>
-<p>be prompt(value: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
+<h3 id="be-promptvalue-string-val">be prompt(value: <a href="../builtin-String">String</a> val)</h3>
 <p>Pass a prompt along to the notifier.</p>
-<h2 id="be-_timeout">be _timeout()</h2>
-<p>be _timeout()</p>
-<p>Private.</p>
+<h3 id="be-_timeout">be _timeout()</h3>
 <p>Our timer since receiving an ESC has expired. Send the buffered data as if
 it was not an escape sequence.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_delete">fun _delete()</h2>
-<p>fun ref
- _delete(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_delete-none-val">fun ref  _delete(): <a href="../builtin-None">None</a> val</h3>
 <p>Delete key.</p>
-<h2 id="fun-_down">fun _down()</h2>
-<p>fun ref
- _down(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_down-none-val">fun ref  _down(): <a href="../builtin-None">None</a> val</h3>
 <p>Down arrow.</p>
-<h2 id="fun-_end">fun _end()</h2>
-<p>fun ref
- _end(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_end-none-val">fun ref  _end(): <a href="../builtin-None">None</a> val</h3>
 <p>End key.</p>
-<h2 id="fun-_esc_clear">fun _esc_clear()</h2>
-<p>fun ref
- _esc_clear(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_esc_clear-none-val">fun ref  _esc_clear(): <a href="../builtin-None">None</a> val</h3>
 <p>Clear the escape state.</p>
-<h2 id="fun-_esc_flush">fun _esc_flush()</h2>
-<p>fun ref
- _esc_flush(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_esc_flush-none-val">fun ref  _esc_flush(): <a href="../builtin-None">None</a> val</h3>
 <p>Pass a partial or unrecognised escape sequence to the notifier.</p>
-<h2 id="fun-_fn_key">fun _fn_key()</h2>
-<p>fun ref
- _fn_key(i: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_fn_keyi-u8-val-none-val">fun ref  _fn_key(i: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Function key.</p>
-<h2 id="fun-_home">fun _home()</h2>
-<p>fun ref
- _home(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_home-none-val">fun ref  _home(): <a href="../builtin-None">None</a> val</h3>
 <p>Home key.</p>
-<h2 id="fun-_insert">fun _insert()</h2>
-<p>fun ref
- _insert(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_insert-none-val">fun ref  _insert(): <a href="../builtin-None">None</a> val</h3>
 <p>Insert key.</p>
-<h2 id="fun-_keypad">fun _keypad()</h2>
-<p>fun ref
- _keypad(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_keypad-none-val">fun ref  _keypad(): <a href="../builtin-None">None</a> val</h3>
 <p>An extended key.</p>
-<h2 id="fun-_left">fun _left()</h2>
-<p>fun ref
- _left(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_left-none-val">fun ref  _left(): <a href="../builtin-None">None</a> val</h3>
 <p>Left arrow.</p>
-<h2 id="fun-_mod">fun _mod()</h2>
-<p>fun ref
- _mod(): (<a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val)</p>
-<p>Private.</p>
+<h3 id="fun-ref-_mod-bool-val-bool-val-bool-val">fun ref  _mod(): (<a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val , <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>Set the modifier bools.</p>
-<h2 id="fun-_page_down">fun _page_down()</h2>
-<p>fun ref
- _page_down(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_page_down-none-val">fun ref  _page_down(): <a href="../builtin-None">None</a> val</h3>
 <p>Page down key.</p>
-<h2 id="fun-_page_up">fun _page_up()</h2>
-<p>fun ref
- _page_up(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_page_up-none-val">fun ref  _page_up(): <a href="../builtin-None">None</a> val</h3>
 <p>Page up key.</p>
-<h2 id="fun-_right">fun _right()</h2>
-<p>fun ref
- _right(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_right-none-val">fun ref  _right(): <a href="../builtin-None">None</a> val</h3>
 <p>Right arrow.</p>
-<h2 id="fun-_up">fun _up()</h2>
-<p>fun ref
- _up(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_up-none-val">fun ref  _up(): <a href="../builtin-None">None</a> val</h3>
 <p>Up arrow.</p>
               
             </div>

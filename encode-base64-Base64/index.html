@@ -1536,30 +1536,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#encodebase64-primitive-base64">encode/base64 &gt;&gt; primitive Base64</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-decode">fun decode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-decode_url">fun decode_url()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_enc_byte">fun _enc_byte()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-encode">fun encode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-encode_mime">fun encode_mime()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-encode_pem">fun encode_pem()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-encode_url">fun encode_url()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3617,60 +3598,30 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive Base64</p>
-<p>In package "encode/base64".</p>
+                <h1 id="encodebase64-primitive-base64">encode/base64 &gt;&gt; primitive Base64</h1>
 <p>Public, default capability val.</p>
 <p>No doc string provided.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-decode">fun decode()</h2>
-<p>fun box
- decode[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional at62: <a href="../builtin-U8">U8</a> val, optional at63: <a href="../builtin-U8">U8</a> val, optional pad: <a href="../builtin-U8">U8</a> val): A iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-decode91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-a-iso-may-raise-an-error">fun box  decode[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional at62: <a href="../builtin-U8">U8</a> val, optional at63: <a href="../builtin-U8">U8</a> val, optional pad: <a href="../builtin-U8">U8</a> val): A iso^ ?, may raise an error</h3>
 <p>Configurable decoding. The defaults are for RFC 4648. Missing padding is
 not an error. Non-base64 data, other than whitespace (which can appear at
 any time), is an error.</p>
-<h2 id="fun-decode_url">fun decode_url()</h2>
-<p>fun box
- decode_url[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box): A iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-decode_url91optional-a-seq91u8-val93-iso93data-byteseq-box-a-iso-may-raise-an-error">fun box  decode_url[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box): A iso^ ?, may raise an error</h3>
 <p>Decode for URLs (RFC 4648).</p>
-<h2 id="fun-_enc_byte">fun _enc_byte()</h2>
-<p>fun box
- _enc_byte(i: <a href="../builtin-U8">U8</a> val, at62: <a href="../builtin-U8">U8</a> val, at63: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-box-_enc_bytei-u8-val-at62-u8-val-at63-u8-val-u8-val-may-raise-an-error">fun box  _enc_byte(i: <a href="../builtin-U8">U8</a> val, at62: <a href="../builtin-U8">U8</a> val, at63: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?, may raise an error</h3>
 <p>Encode a single byte.</p>
-<h2 id="fun-encode">fun encode()</h2>
-<p>fun box
- encode[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional at62: <a href="../builtin-U8">U8</a> val, optional at63: <a href="../builtin-U8">U8</a> val, optional pad: <a href="../builtin-U8">U8</a> val, optional linelen: <a href="../builtin-USize">USize</a> val, optional linesep: <a href="../builtin-String">String</a> val): A iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-encode91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-optional-linelen-usize-val-optional-linesep-string-val-a-iso">fun box  encode[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional at62: <a href="../builtin-U8">U8</a> val, optional at63: <a href="../builtin-U8">U8</a> val, optional pad: <a href="../builtin-U8">U8</a> val, optional linelen: <a href="../builtin-USize">USize</a> val, optional linesep: <a href="../builtin-String">String</a> val): A iso^</h3>
 <p>Configurable encoding. The defaults are for RFC 4648.</p>
-<h2 id="fun-encode_mime">fun encode_mime()</h2>
-<p>fun box
- encode_mime(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-String">String</a> iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-encode_mimedata-byteseq-box-string-iso">fun box  encode_mime(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-String">String</a> iso^</h3>
 <p>Encode for MIME (RFC 2045).</p>
-<h2 id="fun-encode_pem">fun encode_pem()</h2>
-<p>fun box
- encode_pem(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-String">String</a> iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-encode_pemdata-byteseq-box-string-iso">fun box  encode_pem(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-String">String</a> iso^</h3>
 <p>Encode for PEM (RFC 1421).</p>
-<h2 id="fun-encode_url">fun encode_url()</h2>
-<p>fun box
- encode_url(data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional pad: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-encode_urldata-byteseq-box-optional-pad-bool-val-string-iso">fun box  encode_url(data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional pad: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Encode for URLs (RFC 4648). Padding characters are stripped by default.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-base64-val-bool-val">fun box  eq(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-nethat-base64-val-bool-val">fun box  ne(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
               
             </div>
           </div>

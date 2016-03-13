@@ -3121,23 +3121,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#promises-actor-promise91a-any-share93">promises &gt;&gt; actor Promise[A: Any #share]</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_attach">be _attach()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-reject">be reject()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-next">fun next()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3610,36 +3600,24 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Promise[A: <a href="../builtin-Any">Any</a> #share]</p>
-<p>In package "promises".</p>
+                <h1 id="promises-actor-promise91a-any-share93">promises &gt;&gt; actor Promise[A: <a href="../builtin-Any">Any</a> #share]</h1>
 <p>Public, default capability tag.</p>
 <p>A promise to eventually produce a result of type A. This promise can either
 be fulfilled or rejected.</p>
 <p>Any number of promises can be</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(value: A #share)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applyvalue-a-share">be apply(value: A #share)</h3>
 <p>Fulfill the promise.</p>
-<h2 id="be-_attach">be _attach()</h2>
-<p>be _attach(attach: <a href="../promises-_IThen">_IThen</a>[A #share] iso)</p>
-<p>Private.</p>
+<h3 id="be-_attachattach-_ithen91a-share93-iso">be _attach(attach: <a href="../promises-_IThen">_IThen</a>[A #share] iso)</h3>
 <p>Attaches a step asynchronously. If this promise has already been fulfilled
 or rejected, immediately fulfill or reject the incoming step. Otherwise,
 keep it in a list.</p>
-<h2 id="be-reject">be reject()</h2>
-<p>be reject()</p>
-<p>Public.</p>
+<h3 id="be-reject">be reject()</h3>
 <p>Reject the promise.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-next">fun next()</h2>
-<p>fun tag
- next[B: <a href="../builtin-Any">Any</a> #share](fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, optional rejected: <a href="../promises-Reject">Reject</a>[B #share] iso): <a href="../promises-Promise">Promise</a>[B #share] tag</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-tag-next91b-any-share93fulfill-fulfill91a-share-b-share93-iso-optional-rejected-reject91b-share93-iso-promise91b-share93-tag">fun tag  next[B: <a href="../builtin-Any">Any</a> #share](fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, optional rejected: <a href="../promises-Reject">Reject</a>[B #share] iso): <a href="../promises-Promise">Promise</a>[B #share] tag</h3>
 <p>Chain a promise after this one.</p>
 <p>When this promise is fulfilled, the result of type A is passed to the
 fulfill function, generating in an intermediate result of type B. This

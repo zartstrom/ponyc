@@ -2008,19 +2008,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#json-class-jsonobject">json &gt;&gt; class JsonObject</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-from_map">new from_map()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-string">fun string()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3606,29 +3600,21 @@
           <div role="main">
             <div class="section">
               
-                <p>class JsonObject</p>
-<p>In package "json".</p>
+                <h1 id="json-class-jsonobject">json &gt;&gt; class JsonObject</h1>
 <p>Public, default capability ref.</p>
 <p>No doc string provided.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var data: <a href="../collections-HashMap">HashMap</a>[<a href="../builtin-String">String</a> val, ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref), <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-String">String</a> val] val] ref</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional prealloc: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-prealloc-usize-val">new create(optional prealloc: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create a map with space for prealloc elements without triggering a
 resize. Defaults to 6.</p>
-<h2 id="new-from_map">new from_map()</h2>
-<p>new from_map(data': <a href="../collections-HashMap">HashMap</a>[<a href="../builtin-String">String</a> val, ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref), <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-String">String</a> val] val] ref)</p>
-<p>Public.</p>
+<h3 id="new-from_mapdata-hashmap91string-val-f64-val-i64-val-bool-val-none-val-string-val-jsonarray-ref-jsonobject-ref-hasheq91string-val93-val93-ref">new from_map(data': <a href="../collections-HashMap">HashMap</a>[<a href="../builtin-String">String</a> val, ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> ref) | <a href="../json-JsonObject">JsonObject</a> ref), <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-String">String</a> val] val] ref)</h3>
 <p>Create a Json object from a map.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-string">fun string()</h2>
-<p>fun box
- string(optional indent: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-stringoptional-indent-string-val-string-val">fun box  string(optional indent: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Generate string representation of this object.</p>
               
             </div>

@@ -3149,18 +3149,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#promises-class-_then91a-any-share-b-any-share93">promises &gt;&gt; class _Then[A: Any #share, B: Any #share]</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-promise">fun promise()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-reject">fun reject()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3605,29 +3598,17 @@
           <div role="main">
             <div class="section">
               
-                <p>class _Then[A: <a href="../builtin-Any">Any</a> #share, B: <a href="../builtin-Any">Any</a> #share]</p>
-<p>In package "promises".</p>
+                <h1 id="promises-class-_then91a-any-share-b-any-share93">promises &gt;&gt; class _Then[A: <a href="../builtin-Any">Any</a> #share, B: <a href="../builtin-Any">Any</a> #share]</h1>
 <p>Private, default capability ref.</p>
 <p>A step in a promise pipeline.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, rejected: <a href="../promises-Reject">Reject</a>[B #share] iso)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun ref
- apply(value: A #share): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createfulfill-fulfill91a-share-b-share93-iso-rejected-reject91b-share93-iso">new create(fulfill: <a href="../promises-Fulfill">Fulfill</a>[A #share, B #share] iso, rejected: <a href="../promises-Reject">Reject</a>[B #share] iso)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-applyvalue-a-share-none-val">fun ref  apply(value: A #share): <a href="../builtin-None">None</a> val</h3>
 <p>Called with the result of the previous promise when it is fulfilled.</p>
-<h2 id="fun-promise">fun promise()</h2>
-<p>fun box
- promise(): <a href="../promises-Promise">Promise</a>[B #share] tag</p>
-<p>Public.</p>
+<h3 id="fun-box-promise-promise91b-share93-tag">fun box  promise(): <a href="../promises-Promise">Promise</a>[B #share] tag</h3>
 <p>Returns the next promise in the chain.</p>
-<h2 id="fun-reject">fun reject()</h2>
-<p>fun ref
- reject(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-reject-none-val">fun ref  reject(): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the previous promise is rejected.</p>
               
             </div>

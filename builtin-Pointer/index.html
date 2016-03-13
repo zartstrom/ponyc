@@ -620,48 +620,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-struct-pointer91a-a93">builtin &gt;&gt; struct Pointer[A: A]</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_alloc">new _alloc()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_apply">fun _apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_copy_to">fun _copy_to()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_delete">fun _delete()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ge">fun ge()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-gt">fun gt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-hash">fun hash()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_insert">fun _insert()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_null">fun is_null()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-le">fun le()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-lt">fun lt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_offset">fun _offset()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_offset_tag">fun _offset_tag()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_realloc">fun _realloc()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_update">fun _update()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-usize">fun usize()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3635,106 +3598,50 @@
           <div role="main">
             <div class="section">
               
-                <p>struct Pointer[A: A]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-struct-pointer91a-a93">builtin &gt;&gt; struct Pointer[A: A]</h1>
 <p>Public, default capability ref.</p>
 <p>A Pointer[A] is a raw memory pointer. It has no descriptor and thus can't be
 included in a union or intersection, or be a subtype of any interface. Most
 functions on a Pointer[A] are private to maintain memory safety.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_alloc">new _alloc()</h2>
-<p>new _alloc(len: <a href="../builtin-USize">USize</a> val)</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_alloclen-usize-val">new _alloc(len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Space for len instances of A.</p>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
+<h3 id="new-create">new create()</h3>
 <p>A null pointer.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_apply">fun _apply()</h2>
-<p>fun box
- _apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-_applyi-usize-val-this-a">fun box  _apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A</h3>
 <p>Retrieve index i.</p>
-<h2 id="fun-_copy_to">fun _copy_to()</h2>
-<p>fun box
- _copy_to(that: <a href="../builtin-Pointer">Pointer</a>[this-&gt;A!] tag, n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</p>
-<p>Private.</p>
+<h3 id="fun-box-_copy_tothat-pointer91this-a93-tag-n-usize-val-this-pointer91a93-ref">fun box  _copy_to(that: <a href="../builtin-Pointer">Pointer</a>[this-&gt;A!] tag, n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Copy n elements from this to that.</p>
-<h2 id="fun-_delete">fun _delete()</h2>
-<p>fun ref
- _delete(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): A^</p>
-<p>Private.</p>
+<h3 id="fun-ref-_deleten-usize-val-len-usize-val-a">fun ref  _delete(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): A^</h3>
 <p>Delete n elements from the head of pointer, compact remaining elements of
 the underlying array. The array length before this should be n + len.
 Returns the first deleted element.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun tag
- eq(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-eqthat-pointer91a93-tag-bool-val">fun tag  eq(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if this address is that address.</p>
-<h2 id="fun-ge">fun ge()</h2>
-<p>fun tag
- ge(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-gt">fun gt()</h2>
-<p>fun tag
- gt(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-hash">fun hash()</h2>
-<p>fun tag
- hash(): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-gethat-pointer91a93-tag-bool-val">fun tag  ge(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-gtthat-pointer91a93-tag-bool-val">fun tag  gt(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-hash-u64-val">fun tag  hash(): <a href="../builtin-U64">U64</a> val</h3>
 <p>Returns a hash of the address.</p>
-<h2 id="fun-_insert">fun _insert()</h2>
-<p>fun ref
- _insert(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</p>
-<p>Private.</p>
+<h3 id="fun-ref-_insertn-usize-val-len-usize-val-pointer91a93-ref">fun ref  _insert(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Creates space for n new elements at the head, moving following elements.
 The array length before this should be len, and the available space should
 be at least n + len.</p>
-<h2 id="fun-is_null">fun is_null()</h2>
-<p>fun tag
- is_null(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-is_null-bool-val">fun tag  is_null(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true for a null pointer, false for anything else.</p>
-<h2 id="fun-le">fun le()</h2>
-<p>fun tag
- le(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-lt">fun lt()</h2>
-<p>fun tag
- lt(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-lethat-pointer91a93-tag-bool-val">fun tag  le(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-ltthat-pointer91a93-tag-bool-val">fun tag  lt(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if this address is less than that address.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun tag
- ne(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_offset">fun _offset()</h2>
-<p>fun box
- _offset(n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</p>
-<p>Private.</p>
+<h3 id="fun-tag-nethat-pointer91a93-tag-bool-val">fun tag  ne(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_offsetn-usize-val-this-pointer91a93-ref">fun box  _offset(n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Return a pointer to the n-th element.</p>
-<h2 id="fun-_offset_tag">fun _offset_tag()</h2>
-<p>fun tag
- _offset_tag(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] tag</p>
-<p>Private.</p>
+<h3 id="fun-tag-_offset_tagn-usize-val-pointer91a93-tag">fun tag  _offset_tag(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] tag</h3>
 <p>Return a pointer to the n-th element.</p>
-<h2 id="fun-_realloc">fun _realloc()</h2>
-<p>fun ref
- _realloc(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</p>
-<p>Private.</p>
+<h3 id="fun-ref-_realloclen-usize-val-pointer91a93-ref">fun ref  _realloc(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Keep the contents, but reserve space for len instances of A.</p>
-<h2 id="fun-_update">fun _update()</h2>
-<p>fun ref
- _update(i: <a href="../builtin-USize">USize</a> val, value: A!): A^</p>
-<p>Private.</p>
+<h3 id="fun-ref-_updatei-usize-val-value-a-a">fun ref  _update(i: <a href="../builtin-USize">USize</a> val, value: A!): A^</h3>
 <p>Set index i and return the previous value.</p>
-<h2 id="fun-usize">fun usize()</h2>
-<p>fun tag
- usize(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-usize-usize-val">fun tag  usize(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Convert the pointer into an integer.</p>
               
             </div>

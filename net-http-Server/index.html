@@ -2564,29 +2564,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-actor-server">net/http &gt;&gt; actor Server</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-_closed">be _closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_listening">be _listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_not_listening">be _not_listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-set_handler">be set_handler()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-set_logger">be set_logger()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-local_address">fun local_address()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3616,45 +3600,27 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Server</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-actor-server">net/http &gt;&gt; actor Server</h1>
 <p>Public, default capability tag.</p>
 <p>Runs an HTTP server. When routes are changed, the changes are only reflected
 for new connections. Existing connections continue to use the old routes.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(notify: <a href="../net-http-ServerNotify">ServerNotify</a> iso, handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, optional logger: <a href="../net-http-Logger">Logger</a> val, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val))</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-_closed">be _closed()</h2>
-<p>be _closed()</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createnotify-servernotify-iso-handler-requesthandler-val-optional-logger-logger-val-optional-host-string-val-optional-service-string-val-optional-limit-usize-val-optional-sslctx-sslcontext-val-none-val">new create(notify: <a href="../net-http-ServerNotify">ServerNotify</a> iso, handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, optional logger: <a href="../net-http-Logger">Logger</a> val, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val))</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-_closed">be _closed()</h3>
 <p>Called when we stop listening.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Shut down the server.</p>
-<h2 id="be-_listening">be _listening()</h2>
-<p>be _listening(address: <a href="../net-IPAddress">IPAddress</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_listeningaddress-ipaddress-val">be _listening(address: <a href="../net-IPAddress">IPAddress</a> val)</h3>
 <p>Called when we are listening.</p>
-<h2 id="be-_not_listening">be _not_listening()</h2>
-<p>be _not_listening()</p>
-<p>Private.</p>
+<h3 id="be-_not_listening">be _not_listening()</h3>
 <p>Called when we fail to listen.</p>
-<h2 id="be-set_handler">be set_handler()</h2>
-<p>be set_handler(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val)</p>
-<p>Public.</p>
+<h3 id="be-set_handlerhandler-requesthandler-val">be set_handler(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val)</h3>
 <p>Replace the request handler.</p>
-<h2 id="be-set_logger">be set_logger()</h2>
-<p>be set_logger(logger: <a href="../net-http-Logger">Logger</a> val)</p>
-<p>Public.</p>
+<h3 id="be-set_loggerlogger-logger-val">be set_logger(logger: <a href="../net-http-Logger">Logger</a> val)</h3>
 <p>Replace the logger.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-local_address">fun local_address()</h2>
-<p>fun box
- local_address(): <a href="../net-IPAddress">IPAddress</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-local_address-ipaddress-val">fun box  local_address(): <a href="../net-IPAddress">IPAddress</a> val</h3>
 <p>Returns the locally bound address.</p>
               
             </div>

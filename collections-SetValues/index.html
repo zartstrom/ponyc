@@ -1352,16 +1352,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#collections-class-setvalues91a-a-h-hashfunction91a93-val-s-hashset91a-h-val93-read93-is-iterator91s-read-a93-ref">collections &gt;&gt; class SetValues[A: A, H: HashFunction[A!] val, S: HashSet[A, H val] #read] is Iterator[S #read-&gt;A] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-has_next">fun has_next()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-next">fun next()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3603,25 +3598,16 @@
           <div role="main">
             <div class="section">
               
-                <p>class SetValues[A: A, H: <a href="../collections-HashFunction">HashFunction</a>[A!] val, S: <a href="../collections-HashSet">HashSet</a>[A, H val] #read] is <a href="../builtin-Iterator">Iterator</a>[S #read-&gt;A] ref</p>
-<p>In package "collections".</p>
+                <h1 id="collections-class-setvalues91a-a-h-hashfunction91a93-val-s-hashset91a-h-val93-read93-is-iterator91s-read-a93-ref">collections &gt;&gt; class SetValues[A: A, H: <a href="../collections-HashFunction">HashFunction</a>[A!] val, S: <a href="../collections-HashSet">HashSet</a>[A, H val] #read] is <a href="../builtin-Iterator">Iterator</a>[S #read-&gt;A] ref</h1>
 <p>Public, default capability ref.</p>
 <p>An iterator over the values in a set.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(set: S #read)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-has_next">fun has_next()</h2>
-<p>fun box
- has_next(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createset-s-read">new create(set: S #read)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-has_next-bool-val">fun box  has_next(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>True if it believes there are remaining entries. May not be right if values
 were added or removed from the set.</p>
-<h2 id="fun-next">fun next()</h2>
-<p>fun ref
- next(): S #read-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-next-s-read-a-may-raise-an-error">fun ref  next(): S #read-&gt;A ?, may raise an error</h3>
 <p>Returns the next value, or raises an error if there isn't one. If values
 are added during iteration, this may not return all values.</p>
               

@@ -2178,32 +2178,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#net-primitive-dns">net &gt;&gt; primitive DNS</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-broadcast_ip4">fun broadcast_ip4()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-broadcast_ip6">fun broadcast_ip6()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ip4">fun ip4()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ip6">fun ip6()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_ip4">fun is_ip4()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_ip6">fun is_ip6()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_resolve">fun _resolve()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3619,62 +3598,29 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive DNS</p>
-<p>In package "net".</p>
+                <h1 id="net-primitive-dns">net &gt;&gt; primitive DNS</h1>
 <p>Public, default capability val.</p>
 <p>Helper functions for resolving DNS queries.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-applyhost-string-val-service-string-val-array91ipaddress-val93-iso">fun box  apply(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 and IPv6 addresses for a host and service.</p>
-<h2 id="fun-broadcast_ip4">fun broadcast_ip4()</h2>
-<p>fun box
- broadcast_ip4(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-broadcast_ip4service-string-val-array91ipaddress-val93-iso">fun box  broadcast_ip4(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP4 broadcast address.</p>
-<h2 id="fun-broadcast_ip6">fun broadcast_ip6()</h2>
-<p>fun box
- broadcast_ip6(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-broadcast_ip6service-string-val-array91ipaddress-val93-iso">fun box  broadcast_ip6(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP6 broadcast address.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ip4">fun ip4()</h2>
-<p>fun box
- ip4(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-dns-val-bool-val">fun box  eq(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-ip4host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  ip4(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 addresses for a host and service.</p>
-<h2 id="fun-ip6">fun ip6()</h2>
-<p>fun box
- ip6(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-ip6host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  ip6(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv6 addresses for a host and service.</p>
-<h2 id="fun-is_ip4">fun is_ip4()</h2>
-<p>fun box
- is_ip4(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_ip4host-string-val-bool-val">fun box  is_ip4(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the host is a literal IPv4 address.</p>
-<h2 id="fun-is_ip6">fun is_ip6()</h2>
-<p>fun box
- is_ip6(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_ip6host-string-val-bool-val">fun box  is_ip6(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the host is a literal IPv6 address.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_resolve">fun _resolve()</h2>
-<p>fun box
- _resolve(family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</p>
-<p>Private.</p>
+<h3 id="fun-box-nethat-dns-val-bool-val">fun box  ne(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_resolvefamily-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  _resolve(family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Turns an addrinfo pointer into an array of addresses.</p>
               
             </div>

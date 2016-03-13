@@ -1296,16 +1296,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#collections-class-mapkeys91k-k-v-v-h-hashfunction91k93-val-m-hashmap91k-v-h-val93-read93-is-iterator91m-read-k93-ref">collections &gt;&gt; class MapKeys[K: K, V: V, H: HashFunction[K] val, M: HashMap[K, V, H val] #read] is Iterator[M #read-&gt;K] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-has_next">fun has_next()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-next">fun next()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3603,25 +3598,16 @@
           <div role="main">
             <div class="section">
               
-                <p>class MapKeys[K: K, V: V, H: <a href="../collections-HashFunction">HashFunction</a>[K] val, M: <a href="../collections-HashMap">HashMap</a>[K, V, H val] #read] is <a href="../builtin-Iterator">Iterator</a>[M #read-&gt;K] ref</p>
-<p>In package "collections".</p>
+                <h1 id="collections-class-mapkeys91k-k-v-v-h-hashfunction91k93-val-m-hashmap91k-v-h-val93-read93-is-iterator91m-read-k93-ref">collections &gt;&gt; class MapKeys[K: K, V: V, H: <a href="../collections-HashFunction">HashFunction</a>[K] val, M: <a href="../collections-HashMap">HashMap</a>[K, V, H val] #read] is <a href="../builtin-Iterator">Iterator</a>[M #read-&gt;K] ref</h1>
 <p>Public, default capability ref.</p>
 <p>An iterator over the keys in a map.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(map: M #read)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-has_next">fun has_next()</h2>
-<p>fun box
- has_next(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createmap-m-read">new create(map: M #read)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-has_next-bool-val">fun box  has_next(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>True if it believes there are remaining entries. May not be right if values
 were added or removed from the map.</p>
-<h2 id="fun-next">fun next()</h2>
-<p>fun ref
- next(): M #read-&gt;K ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-next-m-read-k-may-raise-an-error">fun ref  next(): M #read-&gt;K ?, may raise an error</h3>
 <p>Returns the next key, or raises an error if there isn't one. If keys are
 added during iteration, this may not return all keys.</p>
               

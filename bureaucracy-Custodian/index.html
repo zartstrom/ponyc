@@ -1070,21 +1070,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#example-program">Example program</a></li>
+                <li class="toctree-l3"><a href="#bureaucracy-actor-custodian">bureaucracy &gt;&gt; actor Custodian</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#example-program">Example program</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-remove">be remove()</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
             
             </ul>
@@ -3608,8 +3600,7 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Custodian</p>
-<p>In package "bureaucracy".</p>
+                <h1 id="bureaucracy-actor-custodian">bureaucracy &gt;&gt; actor Custodian</h1>
 <p>Public, default capability tag.</p>
 <p>A Custodian keeps a set of actors to dispose. When the Custodian is disposed,
 it disposes of the actors in its set and then clears the set.</p>
@@ -3642,22 +3633,14 @@ class TermHandler is SignalNotify
     true
 </code></pre>
 
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(worker: <a href="../builtin-DisposableActor">DisposableActor</a> tag)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applyworker-disposableactor-tag">be apply(worker: <a href="../builtin-DisposableActor">DisposableActor</a> tag)</h3>
 <p>Add an actor to be disposed of.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Dispose of the actors in the set and then clear the set.</p>
-<h2 id="be-remove">be remove()</h2>
-<p>be remove(worker: <a href="../builtin-DisposableActor">DisposableActor</a> tag)</p>
-<p>Public.</p>
+<h3 id="be-removeworker-disposableactor-tag">be remove(worker: <a href="../builtin-DisposableActor">DisposableActor</a> tag)</h3>
 <p>Removes an actor from the set of things to be disposed.</p>
               
             </div>

@@ -585,18 +585,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-struct-maybe91a-a93">builtin &gt;&gt; struct Maybe[A: A]</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-none">new none()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_none">fun is_none()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3605,36 +3598,25 @@
           <div role="main">
             <div class="section">
               
-                <p>struct Maybe[A: A]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-struct-maybe91a-a93">builtin &gt;&gt; struct Maybe[A: A]</h1>
 <p>Public, default capability ref.</p>
 <p>A Maybe[A] is used to encode a possibly-null type. It should <em>only</em> be used
 for structs that need to be passed to and from the C FFI.</p>
 <p>An optional type for anything that isn't a struct should be encoded as a
 union type, for example (A | None).</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(that: A)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createthat-a">new create(that: A)</h3>
 <p>This re-encodes the type of <code>that</code> from A to Maybe[A], allowing <code>that</code> to
 be assigned to a field or variable of type Maybe[A]. It doesn't allocate a
 wrapper object: there is no containing object for <code>that</code>.</p>
-<h2 id="new-none">new none()</h2>
-<p>new none()</p>
-<p>Public.</p>
+<h3 id="new-none">new none()</h3>
 <p>This returns a null pointer typed as a Maybe[A].</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(): this-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-apply-this-a-may-raise-an-error">fun box  apply(): this-&gt;A ?, may raise an error</h3>
 <p>This re-encodes the type of <code>this</code> from Maybe[A] to A, allowing <code>this</code> to
 be assigned to a field of variable of type A. If <code>this</code> is a null pointer,
 an error is raised.</p>
-<h2 id="fun-is_none">fun is_none()</h2>
-<p>fun box
- is_none(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_none-bool-val">fun box  is_none(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if <code>this</code> is null (ie apply would raise an error).</p>
               
             </div>

@@ -662,13 +662,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#builtin-interface-readseq91a-a93">builtin &gt;&gt; interface ReadSeq[A: A]</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-values">fun values()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3600,26 +3596,16 @@
           <div role="main">
             <div class="section">
               
-                <p>interface ReadSeq[A: A]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-interface-readseq91a-a93">builtin &gt;&gt; interface ReadSeq[A: A]</h1>
 <p>Public, default capability box.</p>
 <p>The readable interface of a sequence.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(i: <a href="../builtin-USize">USize</a> val): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-applyi-usize-val-a-may-raise-an-error">fun box  apply(i: <a href="../builtin-USize">USize</a> val): A^ ?, may raise an error</h3>
 <p>Returns the i-th element of the sequence. Raises an error if the index
 is out of bounds. Note that this returns A^, not this-&gt;A.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun box
- size(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-size-usize-val">fun box  size(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the number of elements in the sequence.</p>
-<h2 id="fun-values">fun values()</h2>
-<p>fun box
- values(): <a href="../builtin-Iterator">Iterator</a>[A^] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-values-iterator91a93-ref">fun box  values(): <a href="../builtin-Iterator">Iterator</a>[A^] ref^</h3>
 <p>Returns an iterator over the elements of the sequence. Note that this
 iterates over A^, not this-&gt;A.</p>
               

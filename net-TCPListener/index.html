@@ -2220,37 +2220,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#net-actor-tcplistener">net &gt;&gt; actor TCPListener</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-ip4">new ip4()</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-ip6">new ip6()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_conn_closed">be _conn_closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_event_notify">be _event_notify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-set_notify">be set_notify()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_accept">fun _accept()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-close">fun close()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-local_address">fun local_address()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_notify_listening">fun _notify_listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_spawn">fun _spawn()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3624,63 +3600,33 @@
           <div role="main">
             <div class="section">
               
-                <p>actor TCPListener</p>
-<p>In package "net".</p>
+                <h1 id="net-actor-tcplistener">net &gt;&gt; actor TCPListener</h1>
 <p>Public, default capability tag.</p>
 <p>Listens for new network connections.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
-<h2 id="new-ip4">new ip4()</h2>
-<p>new ip4(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
-<h2 id="new-ip6">new ip6()</h2>
-<p>new ip6(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-_conn_closed">be _conn_closed()</h2>
-<p>be _conn_closed()</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createnotify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val">new create(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip4notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val">new ip4(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip6notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val">new ip6(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-_conn_closed">be _conn_closed()</h3>
 <p>An accepted connection has closed. If we have dropped below the limit, try
 to accept new connections.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Stop listening.</p>
-<h2 id="be-_event_notify">be _event_notify()</h2>
-<p>be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_event_notifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>When we are readable, we accept new connections until none remain.</p>
-<h2 id="be-set_notify">be set_notify()</h2>
-<p>be set_notify(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso)</p>
-<p>Public.</p>
+<h3 id="be-set_notifynotify-tcplistennotify-iso">be set_notify(notify: <a href="../net-TCPListenNotify">TCPListenNotify</a> iso)</h3>
 <p>Change the notifier.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_accept">fun _accept()</h2>
-<p>fun ref
- _accept(optional ns: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_acceptoptional-ns-u32-val-none-val">fun ref  _accept(optional ns: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Accept connections as long as we have spawned fewer than our limit.</p>
-<h2 id="fun-close">fun close()</h2>
-<p>fun ref
- close(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-close-none-val">fun ref  close(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of resources.</p>
-<h2 id="fun-local_address">fun local_address()</h2>
-<p>fun box
- local_address(): <a href="../net-IPAddress">IPAddress</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-local_address-ipaddress-val">fun box  local_address(): <a href="../net-IPAddress">IPAddress</a> val</h3>
 <p>Return the bound IP address.</p>
-<h2 id="fun-_notify_listening">fun _notify_listening()</h2>
-<p>fun ref
- _notify_listening(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_notify_listening-none-val">fun ref  _notify_listening(): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the notifier that we're listening.</p>
-<h2 id="fun-_spawn">fun _spawn()</h2>
-<p>fun ref
- _spawn(ns: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_spawnns-u32-val-none-val">fun ref  _spawn(ns: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Spawn a new connection.</p>
               
             </div>

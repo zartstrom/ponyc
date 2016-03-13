@@ -1831,62 +1831,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#files-primitive-path">files &gt;&gt; primitive Path</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-abs">fun abs()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-base">fun base()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-canonical">fun canonical()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clean">fun clean()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-cwd">fun cwd()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dir">fun dir()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_drive_letter">fun _drive_letter()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ext">fun ext()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-from_slash">fun from_slash()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_abs">fun is_abs()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_list_sep">fun is_list_sep()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-is_sep">fun is_sep()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-join">fun join()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-list_sep">fun list_sep()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_network_share">fun _network_share()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-normcase">fun normcase()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-random">fun random()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-rel">fun rel()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sep">fun sep()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-split">fun split()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-split_list">fun split_list()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-to_slash">fun to_slash()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-volume">fun volume()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3649,137 +3598,68 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive Path</p>
-<p>In package "files".</p>
+                <h1 id="files-primitive-path">files &gt;&gt; primitive Path</h1>
 <p>Public, default capability val.</p>
 <p>Operations on paths that do not require a capability. The operations can be
 used to manipulate path names, but give no access to the resulting paths.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-abs">fun abs()</h2>
-<p>fun box
- abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-abspath-string-val-string-val">fun box  abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Returns a cleaned, absolute path.</p>
-<h2 id="fun-base">fun base()</h2>
-<p>fun box
- base(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-basepath-string-val-string-val">fun box  base(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path after the last separator, or the whole path if there is no
 separator.</p>
-<h2 id="fun-canonical">fun canonical()</h2>
-<p>fun box
- canonical(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-canonicalpath-string-val-string-val-may-raise-an-error">fun box  canonical(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
 <p>Return the equivalent canonical absolute path. Raise an error if there
 isn't one.</p>
-<h2 id="fun-clean">fun clean()</h2>
-<p>fun box
- clean(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-cleanpath-string-val-string-val">fun box  clean(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Replace multiple separators with a single separator.
 Convert / to the OS separator.
 Remove instances of . from the path.
 Remove instances of .. and the preceding path element from the path.
 The result will have no trailing slash unless it is a root directory.
 If the result would be empty, "." will be returned instead.</p>
-<h2 id="fun-cwd">fun cwd()</h2>
-<p>fun box
- cwd(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-cwd-string-val">fun box  cwd(): <a href="../builtin-String">String</a> val</h3>
 <p>Returns the program's working directory. Setting the working directory is
 not supported, as it is not concurrency-safe.</p>
-<h2 id="fun-dir">fun dir()</h2>
-<p>fun box
- dir(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-dirpath-string-val-string-val">fun box  dir(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return a cleaned path before the last separator, or the whole path if there
 is no separator.</p>
-<h2 id="fun-_drive_letter">fun _drive_letter()</h2>
-<p>fun box
- _drive_letter(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_drive_letterpath-string-val-optional-offset-isize-val-bool-val">fun box  _drive_letter(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Look for a drive letter followed by a ':', returning true if we find it.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ext">fun ext()</h2>
-<p>fun box
- ext(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-path-val-bool-val">fun box  eq(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-extpath-string-val-string-val">fun box  ext(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return the file extension, i.e. the part after the last dot as long as that
 dot is after all separators. Return an empty string for no extension.</p>
-<h2 id="fun-from_slash">fun from_slash()</h2>
-<p>fun box
- from_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-from_slashpath-string-val-string-val">fun box  from_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Changes each / in the path to the OS specific separator.</p>
-<h2 id="fun-is_abs">fun is_abs()</h2>
-<p>fun box
- is_abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_abspath-string-val-bool-val">fun box  is_abs(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true if the path is an absolute path.</p>
-<h2 id="fun-is_list_sep">fun is_list_sep()</h2>
-<p>fun box
- is_list_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_list_sepc-u8-val-bool-val">fun box  is_list_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine if a byte is a path list separator.</p>
-<h2 id="fun-is_sep">fun is_sep()</h2>
-<p>fun box
- is_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-is_sepc-u8-val-bool-val">fun box  is_sep(c: <a href="../builtin-U8">U8</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine if a byte is a path separator.</p>
-<h2 id="fun-join">fun join()</h2>
-<p>fun box
- join(path: <a href="../builtin-String">String</a> val, next_path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-joinpath-string-val-next_path-string-val-string-val">fun box  join(path: <a href="../builtin-String">String</a> val, next_path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Join two paths together. If the next_path is absolute, simply return it.
 The returned path will be cleaned.</p>
-<h2 id="fun-list_sep">fun list_sep()</h2>
-<p>fun box
- list_sep(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-list_sep-string-val">fun box  list_sep(): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path list separator as a string.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_network_share">fun _network_share()</h2>
-<p>fun box
- _network_share(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-nethat-path-val-bool-val">fun box  ne(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_network_sharepath-string-val-optional-offset-isize-val-string-val">fun box  _network_share(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Look for a host, a \, and a resource. Return the path up to that point if
 we found one, otherwise an empty String.</p>
-<h2 id="fun-normcase">fun normcase()</h2>
-<p>fun box
- normcase(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-normcasepath-string-val-string-val">fun box  normcase(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Normalizes the case of path for the runtime platform.</p>
-<h2 id="fun-random">fun random()</h2>
-<p>fun box
- random(optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-randomoptional-len-usize-val-string-val">fun box  random(optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Returns a pseudo-random base, suitable as a temporary file name or
 directory name, but not guaranteed to not already exist.</p>
-<h2 id="fun-rel">fun rel()</h2>
-<p>fun box
- rel(to: <a href="../builtin-String">String</a> val, target: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-relto-string-val-target-string-val-string-val-may-raise-an-error">fun box  rel(to: <a href="../builtin-String">String</a> val, target: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
 <p>Returns a path such that Path.join(to, Path.rel(to, target)) == target.
 Raises an error if this isn't possible.</p>
-<h2 id="fun-sep">fun sep()</h2>
-<p>fun tag
- sep(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-tag-sep-string-val">fun tag  sep(): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path separator as a string.</p>
-<h2 id="fun-split">fun split()</h2>
-<p>fun box
- split(path: <a href="../builtin-String">String</a> val, optional separator: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
+<h3 id="fun-box-splitpath-string-val-optional-separator-string-val-string-val-string-val">fun box  split(path: <a href="../builtin-String">String</a> val, optional separator: <a href="../builtin-String">String</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <p>Splits the path into a pair, (head, tail) where tail is the last pathname
 component and head is everything leading up to that. The tail part will
 never contain a slash; if path ends in a slash, tail will be empty. If
@@ -3787,20 +3667,11 @@ there is no slash in path, head will be empty. If path is empty, both head
 and tail are empty. The path in head will be cleaned before it is returned.
 In all cases, join(head, tail) returns a path to the same location as path
 (but the strings may differ). Also see the functions dir() and base().</p>
-<h2 id="fun-split_list">fun split_list()</h2>
-<p>fun box
- split_list(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-split_listpath-string-val-array91string-val93-iso">fun box  split_list(path: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>
 <p>Separate a list of paths into an array of cleaned paths.</p>
-<h2 id="fun-to_slash">fun to_slash()</h2>
-<p>fun box
- to_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-to_slashpath-string-val-string-val">fun box  to_slash(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Changes each OS specific separator in the path to /.</p>
-<h2 id="fun-volume">fun volume()</h2>
-<p>fun box
- volume(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-volumepath-string-val-string-val">fun box  volume(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>On Windows, this returns the drive letter or UNC base at the beginning of
 the path, if there is one. Otherwise, this returns an empty string.</p>
               

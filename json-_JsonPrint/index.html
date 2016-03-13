@@ -2015,20 +2015,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#json-primitive-_jsonprint">json &gt;&gt; primitive _JsonPrint</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_escaped_string">fun _escaped_string()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_string">fun _string()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3607,33 +3598,18 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive _JsonPrint</p>
-<p>In package "json".</p>
+                <h1 id="json-primitive-_jsonprint">json &gt;&gt; primitive _JsonPrint</h1>
 <p>Private, default capability val.</p>
 <p>No doc string provided.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../json-_JsonPrint">_JsonPrint</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_escaped_string">fun _escaped_string()</h2>
-<p>fun box
- _escaped_string(s: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-eqthat-_jsonprint-val-bool-val">fun box  eq(that: <a href="../json-_JsonPrint">_JsonPrint</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_escaped_strings-string-val-string-val">fun box  _escaped_string(s: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Generate a version of the given string with escapes for all non-printable
 and non-ASCII characters.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../json-_JsonPrint">_JsonPrint</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_string">fun _string()</h2>
-<p>fun box
- _string(d: ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> box) | <a href="../json-JsonObject">JsonObject</a> box), indent: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-nethat-_jsonprint-val-bool-val">fun box  ne(that: <a href="../json-_JsonPrint">_JsonPrint</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_stringd-f64-val-i64-val-bool-val-none-val-string-val-jsonarray-box-jsonobject-box-indent-string-val-string-val">fun box  _string(d: ((((((<a href="../builtin-F64">F64</a> val | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-Bool">Bool</a> val) | <a href="../builtin-None">None</a> val) | <a href="../builtin-String">String</a> val) | <a href="../json-JsonArray">JsonArray</a> box) | <a href="../json-JsonObject">JsonObject</a> box), indent: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Generate string representation of the given data.</p>
               
             </div>

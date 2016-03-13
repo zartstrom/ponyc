@@ -711,31 +711,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-actor-stdin">builtin &gt;&gt; actor Stdin</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_create">new _create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_event_notify">be _event_notify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_loop_read">be _loop_read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_read_again">be _read_again()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_close_event">fun _close_event()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_read">fun _read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_set_notify">fun _set_notify()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3618,52 +3600,30 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Stdin</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-actor-stdin">builtin &gt;&gt; actor Stdin</h1>
 <p>Public, default capability tag.</p>
 <p>Asynchronous access to stdin. The constructor is private to ensure that
 access is provided only via an environment.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_create">new _create()</h2>
-<p>new _create(use_event: <a href="../builtin-Bool">Bool</a> val)</p>
-<p>Private.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(notify: (<a href="../builtin-StdinNotify">StdinNotify</a> iso | <a href="../builtin-None">None</a> val))</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_createuse_event-bool-val">new _create(use_event: <a href="../builtin-Bool">Bool</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applynotify-stdinnotify-iso-none-val">be apply(notify: (<a href="../builtin-StdinNotify">StdinNotify</a> iso | <a href="../builtin-None">None</a> val))</h3>
 <p>Set the notifier.</p>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Clear the notifier in order to shut down input.</p>
-<h2 id="be-_event_notify">be _event_notify()</h2>
-<p>be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_event_notifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>When the event fires, read from stdin.</p>
-<h2 id="be-_loop_read">be _loop_read()</h2>
-<p>be _loop_read()</p>
-<p>Private.</p>
+<h3 id="be-_loop_read">be _loop_read()</h3>
 <p>If we are able to read from stdin, schedule another read.</p>
-<h2 id="be-_read_again">be _read_again()</h2>
-<p>be _read_again()</p>
-<p>Private.</p>
+<h3 id="be-_read_again">be _read_again()</h3>
 <p>Resume reading.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_close_event">fun _close_event()</h2>
-<p>fun ref
- _close_event(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_close_event-none-val">fun ref  _close_event(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the event.</p>
-<h2 id="fun-_read">fun _read()</h2>
-<p>fun ref
- _read(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_read-bool-val">fun ref  _read(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Read a chunk of data from stdin. If we read 4 kb of data, send ourself a
 resume message and stop reading, to avoid starving other actors.</p>
-<h2 id="fun-_set_notify">fun _set_notify()</h2>
-<p>fun ref
- _set_notify(notify: (<a href="../builtin-StdinNotify">StdinNotify</a> iso | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_set_notifynotify-stdinnotify-iso-none-val-none-val">fun ref  _set_notify(notify: (<a href="../builtin-StdinNotify">StdinNotify</a> iso | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</h3>
 <p>Set the notifier.</p>
               
             </div>

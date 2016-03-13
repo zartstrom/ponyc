@@ -606,15 +606,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                <li class="toctree-l3"><a href="#builtin-interface-outstream">builtin &gt;&gt; interface OutStream</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-print">be print()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-printv">be printv()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-write">be write()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-writev">be writev()</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
             
             </ul>
@@ -3602,26 +3596,17 @@
           <div role="main">
             <div class="section">
               
-                <p>interface OutStream</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-interface-outstream">builtin &gt;&gt; interface OutStream</h1>
 <p>Public, default capability tag.</p>
 <p>Asnychronous access to some output stream.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-print">be print()</h2>
-<p>be print(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</p>
-<p>Public.</p>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-printdata-byteseq-val">be print(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</h3>
 <p>Print some bytes and insert a newline afterwards.</p>
-<h2 id="be-printv">be printv()</h2>
-<p>be printv(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</p>
-<p>Public.</p>
+<h3 id="be-printvdata-byteseqiter-val">be printv(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</h3>
 <p>Print an iterable collection of ByteSeqs.</p>
-<h2 id="be-write">be write()</h2>
-<p>be write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</p>
-<p>Public.</p>
+<h3 id="be-writedata-byteseq-val">be write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</h3>
 <p>Print some bytes without inserting a newline afterwards.</p>
-<h2 id="be-writev">be writev()</h2>
-<p>be writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</p>
-<p>Public.</p>
+<h3 id="be-writevdata-byteseqiter-val">be writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</h3>
 <p>Write an iterable collection of ByteSeqs.</p>
               
             </div>

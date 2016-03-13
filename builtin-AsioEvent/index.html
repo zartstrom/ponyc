@@ -207,36 +207,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-primitive-asioevent">builtin &gt;&gt; primitive AsioEvent</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-disposable">fun disposable()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dispose">fun dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-none">fun none()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-read">fun read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-read_write">fun read_write()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-readable">fun readable()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-signal">fun signal()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-timer">fun timer()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-write">fun write()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-writeable">fun writeable()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3623,66 +3598,27 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive AsioEvent</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-primitive-asioevent">builtin &gt;&gt; primitive AsioEvent</h1>
 <p>Public, default capability val.</p>
 <p>Functions for asynchronous event notification.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-disposable">fun disposable()</h2>
-<p>fun box
- disposable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-disposableflags-u32-val-bool-val">fun box  disposable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the event should be disposed of.</p>
-<h2 id="fun-dispose">fun dispose()</h2>
-<p>fun box
- dispose(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../builtin-AsioEvent">AsioEvent</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../builtin-AsioEvent">AsioEvent</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-none">fun none()</h2>
-<p>fun box
- none(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag</p>
-<p>Public.</p>
+<h3 id="fun-box-dispose-u32-val">fun box  dispose(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-eqthat-asioevent-val-bool-val">fun box  eq(that: <a href="../builtin-AsioEvent">AsioEvent</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-nethat-asioevent-val-bool-val">fun box  ne(that: <a href="../builtin-AsioEvent">AsioEvent</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-none-pointer91asioevent-val93-tag">fun box  none(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag</h3>
 <p>An empty event.</p>
-<h2 id="fun-read">fun read()</h2>
-<p>fun box
- read(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-read_write">fun read_write()</h2>
-<p>fun box
- read_write(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-readable">fun readable()</h2>
-<p>fun box
- readable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-read-u32-val">fun box  read(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-read_write-u32-val">fun box  read_write(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-readableflags-u32-val-bool-val">fun box  readable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags contain the readable flag.</p>
-<h2 id="fun-signal">fun signal()</h2>
-<p>fun box
- signal(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-timer">fun timer()</h2>
-<p>fun box
- timer(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-write">fun write()</h2>
-<p>fun box
- write(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-writeable">fun writeable()</h2>
-<p>fun box
- writeable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-signal-u32-val">fun box  signal(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-timer-u32-val">fun box  timer(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-write-u32-val">fun box  write(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-writeableflags-u32-val-bool-val">fun box  writeable(flags: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags contain the writeable flag.</p>
               
             </div>

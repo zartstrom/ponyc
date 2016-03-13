@@ -2199,61 +2199,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#net-actor-tcpconnection">net &gt;&gt; actor TCPConnection</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_accept">new _accept()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-ip4">new ip4()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-ip6">new ip6()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-dispose">be dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_event_notify">be _event_notify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-_read_again">be _read_again()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-set_notify">be set_notify()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-write">be write()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-writev">be writev()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-close">fun close()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_complete_reads">fun _complete_reads()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_complete_writes">fun _complete_writes()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_hard_close">fun _hard_close()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-local_address">fun local_address()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_notify_connecting">fun _notify_connecting()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_pending_reads">fun _pending_reads()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_pending_writes">fun _pending_writes()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_queue_read">fun _queue_read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-remote_address">fun remote_address()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_keepalive">fun set_keepalive()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_nodelay">fun set_nodelay()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_try_shutdown">fun _try_shutdown()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-write_final">fun write_final()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3648,128 +3600,65 @@
           <div role="main">
             <div class="section">
               
-                <p>actor TCPConnection</p>
-<p>In package "net".</p>
+                <h1 id="net-actor-tcpconnection">net &gt;&gt; actor TCPConnection</h1>
 <p>Public, default capability tag.</p>
 <p>A TCP connection. When connecting, the Happy Eyeballs algorithm is used.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_accept">new _accept()</h2>
-<p>new _accept(listen: <a href="../net-TCPListener">TCPListener</a> tag, notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, fd: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
-<h2 id="new-create">new create()</h2>
-<p>new create(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
-<h2 id="new-ip4">new ip4()</h2>
-<p>new ip4(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
-<h2 id="new-ip6">new ip6()</h2>
-<p>new ip6(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-dispose">be dispose()</h2>
-<p>be dispose()</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_acceptlisten-tcplistener-tag-notify-tcpconnectionnotify-iso-fd-u32-val">new _accept(listen: <a href="../net-TCPListener">TCPListener</a> tag, notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, fd: <a href="../builtin-U32">U32</a> val)</h3>
+<h3 id="new-createnotify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new create(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
+<h3 id="new-ip4notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new ip4(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
+<h3 id="new-ip6notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new ip6(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-dispose">be dispose()</h3>
 <p>Close the connection gracefully once all writes are sent.</p>
-<h2 id="be-_event_notify">be _event_notify()</h2>
-<p>be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</p>
-<p>Private.</p>
+<h3 id="be-_event_notifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be _event_notify(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>Handle socket events.</p>
-<h2 id="be-_read_again">be _read_again()</h2>
-<p>be _read_again()</p>
-<p>Private.</p>
+<h3 id="be-_read_again">be _read_again()</h3>
 <p>Resume reading.</p>
-<h2 id="be-set_notify">be set_notify()</h2>
-<p>be set_notify(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso)</p>
-<p>Public.</p>
+<h3 id="be-set_notifynotify-tcpconnectionnotify-iso">be set_notify(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso)</h3>
 <p>Change the notifier.</p>
-<h2 id="be-write">be write()</h2>
-<p>be write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</p>
-<p>Public.</p>
+<h3 id="be-writedata-byteseq-val">be write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</h3>
 <p>Write a single sequence of bytes.</p>
-<h2 id="be-writev">be writev()</h2>
-<p>be writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</p>
-<p>Public.</p>
+<h3 id="be-writevdata-byteseqiter-val">be writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</h3>
 <p>Write a sequence of sequences of bytes.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-close">fun close()</h2>
-<p>fun ref
- close(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-close-none-val">fun ref  close(): <a href="../builtin-None">None</a> val</h3>
 <p>Perform a graceful shutdown. Don't accept new writes, but don't finish
 closing until we get a zero length read.</p>
-<h2 id="fun-_complete_reads">fun _complete_reads()</h2>
-<p>fun ref
- _complete_reads(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_complete_readslen-u32-val-none-val">fun ref  _complete_reads(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>The OS has informed as that len bytes of pending reads have completed.
 This occurs only with IOCP on Windows.</p>
-<h2 id="fun-_complete_writes">fun _complete_writes()</h2>
-<p>fun ref
- _complete_writes(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_complete_writeslen-u32-val-none-val">fun ref  _complete_writes(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>The OS has informed as that len bytes of pending writes have completed.
 This occurs only with IOCP on Windows.</p>
-<h2 id="fun-_hard_close">fun _hard_close()</h2>
-<p>fun ref
- _hard_close(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_hard_close-none-val">fun ref  _hard_close(): <a href="../builtin-None">None</a> val</h3>
 <p>When an error happens, do a non-graceful close.</p>
-<h2 id="fun-local_address">fun local_address()</h2>
-<p>fun box
- local_address(): <a href="../net-IPAddress">IPAddress</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-local_address-ipaddress-val">fun box  local_address(): <a href="../net-IPAddress">IPAddress</a> val</h3>
 <p>Return the local IP address.</p>
-<h2 id="fun-_notify_connecting">fun _notify_connecting()</h2>
-<p>fun ref
- _notify_connecting(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_notify_connecting-none-val">fun ref  _notify_connecting(): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the notifier that we're connecting.</p>
-<h2 id="fun-_pending_reads">fun _pending_reads()</h2>
-<p>fun ref
- _pending_reads(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_pending_reads-none-val">fun ref  _pending_reads(): <a href="../builtin-None">None</a> val</h3>
 <p>Read while data is available, guessing the next packet length as we go. If
 we read 4 kb of data, send ourself a resume message and stop reading, to
 avoid starving other actors.</p>
-<h2 id="fun-_pending_writes">fun _pending_writes()</h2>
-<p>fun ref
- _pending_writes(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_pending_writes-none-val">fun ref  _pending_writes(): <a href="../builtin-None">None</a> val</h3>
 <p>Send pending data. If any data can't be sent, keep it and mark as not
 writeable. On an error, dispose of the connection.</p>
-<h2 id="fun-_queue_read">fun _queue_read()</h2>
-<p>fun ref
- _queue_read(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_queue_read-none-val">fun ref  _queue_read(): <a href="../builtin-None">None</a> val</h3>
 <p>Queue an IOCP read on Windows.</p>
-<h2 id="fun-remote_address">fun remote_address()</h2>
-<p>fun box
- remote_address(): <a href="../net-IPAddress">IPAddress</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-remote_address-ipaddress-val">fun box  remote_address(): <a href="../net-IPAddress">IPAddress</a> val</h3>
 <p>Return the remote IP address.</p>
-<h2 id="fun-set_keepalive">fun set_keepalive()</h2>
-<p>fun ref
- set_keepalive(secs: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_keepalivesecs-u32-val-none-val">fun ref  set_keepalive(secs: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Sets the TCP keepalive timeout to approximately secs seconds. Exact timing
 is OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive
 is disabled by default. This can only be set on a connected socket.</p>
-<h2 id="fun-set_nodelay">fun set_nodelay()</h2>
-<p>fun ref
- set_nodelay(state: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_nodelaystate-bool-val-none-val">fun ref  set_nodelay(state: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Turn Nagle on/off. Defaults to on. This can only be set on a connected
 socket.</p>
-<h2 id="fun-_try_shutdown">fun _try_shutdown()</h2>
-<p>fun ref
- _try_shutdown(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_try_shutdown-none-val">fun ref  _try_shutdown(): <a href="../builtin-None">None</a> val</h3>
 <p>If we have closed and we have no remaining writes or pending connections,
 then shutdown.</p>
-<h2 id="fun-write_final">fun write_final()</h2>
-<p>fun ref
- write_final(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-write_finaldata-byteseq-val-none-val">fun ref  write_final(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Write as much as possible to the socket. Set _writeable to false if not
 everything was written. On an error, close the connection. This is for
 data that has already been transformed by the notifier.</p>

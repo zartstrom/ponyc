@@ -2613,34 +2613,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-primitive-urlencode">net/http &gt;&gt; primitive URLEncode</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-check">fun check()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-check_scheme">fun check_scheme()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-decode">fun decode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-encode">fun encode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_hex">fun _hex()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_is_char_legal">fun _is_char_legal()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_is_host_ipv6">fun _is_host_ipv6()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_normal_decode">fun _normal_decode()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_unhex">fun _unhex()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3621,36 +3598,21 @@
           <div role="main">
             <div class="section">
               
-                <p>primitive URLEncode</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-primitive-urlencode">net/http &gt;&gt; primitive URLEncode</h1>
 <p>Public, default capability val.</p>
 <p>Functions for checking, encoding, and decoding parts of URLs.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-check">fun check()</h2>
-<p>fun box
- check(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-checkfrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  check(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Check that the given string is valid to be the given URL part without
 further encoding.
 Canonical form is not checked for, merely validity.</p>
-<h2 id="fun-check_scheme">fun check_scheme()</h2>
-<p>fun box
- check_scheme(scheme: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-check_schemescheme-string-val-bool-val">fun box  check_scheme(scheme: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Check that the given string is a valid scheme.</p>
-<h2 id="fun-decode">fun decode()</h2>
-<p>fun box
- decode(from: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-decodefrom-string-val-string-val-may-raise-an-error">fun box  decode(from: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
 <p>URL decode a string. Raise an error on invalid URL encoded.</p>
-<h2 id="fun-encode">fun encode()</h2>
-<p>fun box
- encode(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val), optional percent_encoded: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-encodefrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-optional-percent_encoded-bool-val-string-val-may-raise-an-error">fun box  encode(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val), optional percent_encoded: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> val ?, may raise an error</h3>
 <p>URL encode and normilase the given string.
 The percent_encoded parameter indicates how '%' characters should be
 interpretted.
@@ -3659,47 +3621,26 @@ true =&gt; given string is already at least partially encoded, so '%'s
 false =&gt; given string is not yet encoded at all, so '%'s are just '%'s.
 An error is raised on invalid existing encoding or illegal characters that
 cannot be encoded.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../net-http-URLEncode">URLEncode</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_hex">fun _hex()</h2>
-<p>fun box
- _hex(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-box-eqthat-urlencode-val-bool-val">fun box  eq(that: <a href="../net-http-URLEncode">URLEncode</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_hexvalue-u8-val-u8-val-may-raise-an-error">fun box  _hex(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?, may raise an error</h3>
 <p>Turn 4 bits into a hex value.</p>
-<h2 id="fun-_is_char_legal">fun _is_char_legal()</h2>
-<p>fun box
- _is_char_legal(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_is_char_legalvalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  _is_char_legal(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine whether the given character is legal to appear in the specified
 URL part.</p>
-<h2 id="fun-_is_host_ipv6">fun _is_host_ipv6()</h2>
-<p>fun box
- _is_host_ipv6(host: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-box-_is_host_ipv6host-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val-may-raise-an-error">fun box  _is_host_ipv6(host: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val ?, may raise an error</h3>
 <p>Check whether the given string is a valid IPv6 format host.
 Returns:
   true if string is a valid IPv6 format host.
   false if string is not an IPv6 foramt host at all.
   Raises an error if string is an invalid IPv6 format host.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../net-http-URLEncode">URLEncode</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-_normal_decode">fun _normal_decode()</h2>
-<p>fun box
- _normal_decode(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-nethat-urlencode-val-bool-val">fun box  ne(that: <a href="../net-http-URLEncode">URLEncode</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-_normal_decodevalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  _normal_decode(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine whether the given character should be decoded to give normal
 form.
 Some characters, such as sub-delims, are valid to have either in encoded or
 unencoded form. These should be left as they are when normalising. This
 will return false for such characters.</p>
-<h2 id="fun-_unhex">fun _unhex()</h2>
-<p>fun box
- _unhex(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?</p>
-<p>Private, may raise an error.</p>
+<h3 id="fun-box-_unhexvalue-u8-val-u8-val-may-raise-an-error">fun box  _unhex(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?, may raise an error</h3>
 <p>Turn a hex value into 4 bits.</p>
               
             </div>

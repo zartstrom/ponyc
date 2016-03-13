@@ -2719,28 +2719,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#netssl-class-ssl">net/ssl &gt;&gt; class SSL</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_create">new _create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dispose">fun dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_final">fun _final()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-read">fun read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-receive">fun receive()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-send">fun send()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-state">fun state()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_verify_hostname">fun _verify_hostname()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-write">fun write()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3615,57 +3598,30 @@
           <div role="main">
             <div class="section">
               
-                <p>class SSL</p>
-<p>In package "net/ssl".</p>
+                <h1 id="netssl-class-ssl">net/ssl &gt;&gt; class SSL</h1>
 <p>Public, default capability ref.</p>
 <p>An SSL session manages handshakes, encryption and decryption. It is not tied
 to any transport layer.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_create">new _create()</h2>
-<p>new _create(ctx: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-_SSLContext">_SSLContext</a> val] tag, server: <a href="../builtin-Bool">Bool</a> val, verify: <a href="../builtin-Bool">Bool</a> val, optional hostname: <a href="../builtin-String">String</a> val) ?</p>
-<p>Private, may raise an error.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-dispose">fun dispose()</h2>
-<p>fun ref
- dispose(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_createctx-pointer91_sslcontext-val93-tag-server-bool-val-verify-bool-val-optional-hostname-string-val-may-raise-an-error">new _create(ctx: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-_SSLContext">_SSLContext</a> val] tag, server: <a href="../builtin-Bool">Bool</a> val, verify: <a href="../builtin-Bool">Bool</a> val, optional hostname: <a href="../builtin-String">String</a> val) ?, may raise an error</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the session.</p>
-<h2 id="fun-_final">fun _final()</h2>
-<p>fun box
- _final(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the session.</p>
-<h2 id="fun-read">fun read()</h2>
-<p>fun ref
- read(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-read-array91u8-val93-iso-may-raise-an-error">fun ref  read(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?, may raise an error</h3>
 <p>Returns unencrypted bytes to be passed to the application. Raises an error
 if no data is available.</p>
-<h2 id="fun-receive">fun receive()</h2>
-<p>fun ref
- receive(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-receivedata-byteseq-val-none-val">fun ref  receive(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>When data is received, add it to the SSL session.</p>
-<h2 id="fun-send">fun send()</h2>
-<p>fun ref
- send(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-send-array91u8-val93-val-may-raise-an-error">fun ref  send(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?, may raise an error</h3>
 <p>Returns encrypted bytes to be passed to the destination. Raises an error
 if no data is available.</p>
-<h2 id="fun-state">fun state()</h2>
-<p>fun box
- state(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</p>
-<p>Public.</p>
+<h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  state(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
 <p>Returns the SSL session state.</p>
-<h2 id="fun-_verify_hostname">fun _verify_hostname()</h2>
-<p>fun ref
- _verify_hostname(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_verify_hostname-none-val">fun ref  _verify_hostname(): <a href="../builtin-None">None</a> val</h3>
 <p>Verify that the certificate is valid for the given hostname.</p>
-<h2 id="fun-write">fun write()</h2>
-<p>fun ref
- write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-writedata-byteseq-val-none-val-may-raise-an-error">fun ref  write(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
 <p>When application data is sent, add it to the SSL session. Raises an error
 if the handshake is not complete.</p>
               

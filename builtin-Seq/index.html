@@ -676,36 +676,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-interface-seq91a-a93">builtin &gt;&gt; interface Seq[A: A]</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-append">fun append()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clear">fun clear()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-pop">fun pop()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-push">fun push()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-reserve">fun reserve()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-shift">fun shift()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-truncate">fun truncate()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-unshift">fun unshift()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-update">fun update()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-values">fun values()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3623,78 +3598,39 @@
           <div role="main">
             <div class="section">
               
-                <p>interface Seq[A: A]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-interface-seq91a-a93">builtin &gt;&gt; interface Seq[A: A]</h1>
 <p>Public, default capability ref.</p>
 <p>A sequence of elements.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional len: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-len-usize-val">new create(optional len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create a sequence, reserving space for len elements.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-append">fun append()</h2>
-<p>fun ref
- append(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-appendseq-readseq91a93-box-optional-offset-usize-val-optional-len-usize-val-seq91a93-ref">fun ref  append(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Append the elements from a sequence, starting from the given offset.</p>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-applyi-usize-val-this-a-may-raise-an-error">fun box  apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?, may raise an error</h3>
 <p>Returns the i-th element of the sequence. Raises an error if the index
 is out of bounds.</p>
-<h2 id="fun-clear">fun clear()</h2>
-<p>fun ref
- clear(): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-clear-seq91a93-ref">fun ref  clear(): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Removes all elements from the sequence.</p>
-<h2 id="fun-pop">fun pop()</h2>
-<p>fun ref
- pop(): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-pop-a-may-raise-an-error">fun ref  pop(): A^ ?, may raise an error</h3>
 <p>Removes an element from the end of the sequence.</p>
-<h2 id="fun-push">fun push()</h2>
-<p>fun ref
- push(value: A): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-pushvalue-a-seq91a93-ref">fun ref  push(value: A): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Adds an element to the end of the sequence.</p>
-<h2 id="fun-reserve">fun reserve()</h2>
-<p>fun ref
- reserve(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-reservelen-usize-val-seq91a93-ref">fun ref  reserve(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Reserve space for len elements.</p>
-<h2 id="fun-shift">fun shift()</h2>
-<p>fun ref
- shift(): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-shift-a-may-raise-an-error">fun ref  shift(): A^ ?, may raise an error</h3>
 <p>Removes an element from the beginning of the sequence.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun box
- size(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-size-usize-val">fun box  size(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the number of elements in the sequence.</p>
-<h2 id="fun-truncate">fun truncate()</h2>
-<p>fun ref
- truncate(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-truncatelen-usize-val-seq91a93-ref">fun ref  truncate(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Truncate the sequence to the given length, discarding excess elements.
 If the sequence is already smaller than len, do nothing.</p>
-<h2 id="fun-unshift">fun unshift()</h2>
-<p>fun ref
- unshift(value: A): <a href="../builtin-Seq">Seq</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unshiftvalue-a-seq91a93-ref">fun ref  unshift(value: A): <a href="../builtin-Seq">Seq</a>[A] ref^</h3>
 <p>Adds an element to the beginning of the sequence.</p>
-<h2 id="fun-update">fun update()</h2>
-<p>fun ref
- update(i: <a href="../builtin-USize">USize</a> val, value: A): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-updatei-usize-val-value-a-a-may-raise-an-error">fun ref  update(i: <a href="../builtin-USize">USize</a> val, value: A): A^ ?, may raise an error</h3>
 <p>Replaces the i-th element of the sequence. Returns the previous value.
 Raises an error if the index is out of bounds.</p>
-<h2 id="fun-values">fun values()</h2>
-<p>fun box
- values(): <a href="../builtin-Iterator">Iterator</a>[this-&gt;A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-values-iterator91this-a93-ref">fun box  values(): <a href="../builtin-Iterator">Iterator</a>[this-&gt;A] ref^</h3>
 <p>Returns an iterator over the elements of the sequence.</p>
               
             </div>

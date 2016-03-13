@@ -3469,11 +3469,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#term-interface-readlinenotify">term &gt;&gt; interface ReadlineNotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-tab">fun tab()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3598,22 +3596,15 @@
           <div role="main">
             <div class="section">
               
-                <p>interface ReadlineNotify</p>
-<p>In package "term".</p>
+                <h1 id="term-interface-readlinenotify">term &gt;&gt; interface ReadlineNotify</h1>
 <p>Public, default capability ref.</p>
 <p>Notifier for readline.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun ref
- apply(line: <a href="../builtin-String">String</a> val, prompt: <a href="../promises-Promise">Promise</a>[<a href="../builtin-String">String</a> val] tag): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-applyline-string-val-prompt-promise91string-val93-tag-none-val">fun ref  apply(line: <a href="../builtin-String">String</a> val, prompt: <a href="../promises-Promise">Promise</a>[<a href="../builtin-String">String</a> val] tag): <a href="../builtin-None">None</a> val</h3>
 <p>Receives finished lines. The returned string is the next prompt. This may
 be called with an empty line to get the current prompt. If this raises an
 error, readline will stop handling input.</p>
-<h2 id="fun-tab">fun tab()</h2>
-<p>fun ref
- tab(line: <a href="../builtin-String">String</a> val): <a href="../builtin-Seq">Seq</a>[<a href="../builtin-String">String</a> val] box</p>
-<p>Public.</p>
+<h3 id="fun-ref-tabline-string-val-seq91string-val93-box">fun ref  tab(line: <a href="../builtin-String">String</a> val): <a href="../builtin-Seq">Seq</a>[<a href="../builtin-String">String</a> val] box</h3>
 <p>Return tab completion possibilities.</p>
               
             </div>

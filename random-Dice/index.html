@@ -3171,17 +3171,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#random-class-dice">random &gt;&gt; class Dice</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3604,24 +3600,18 @@
           <div role="main">
             <div class="section">
               
-                <p>class Dice</p>
-<p>In package "random".</p>
+                <h1 id="random-class-dice">random &gt;&gt; class Dice</h1>
 <p>Public, default capability ref.</p>
 <p>A simple dice roller.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var r: <a href="../random-Random">Random</a> ref</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(from: <a href="../random-Random">Random</a> ref)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createfrom-random-ref">new create(from: <a href="../random-Random">Random</a> ref)</h3>
 <p>Initialise with a random number generator.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun ref
- apply(count: <a href="../builtin-U64">U64</a> val, sides: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-applycount-u64-val-sides-u64-val-u64-val">fun ref  apply(count: <a href="../builtin-U64">U64</a> val, sides: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
 <p>Return the sum of <code>count</code> rolls of a die with the given number of <code>sides</code>.
 The die is numbered from 1 to <code>sides</code>. For example, count = 2 and
 sides = 6 will return a value between 2 and 12.</p>

@@ -179,76 +179,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#builtin-class-array91a-a93-is-seq91a93-ref">builtin &gt;&gt; class Array[A: A] is Seq[A] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-from_cstring">new from_cstring()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-init">new init()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-undefined">new undefined()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-append">fun append()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clear">fun clear()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clone">fun clone()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-concat">fun concat()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-copy_to">fun copy_to()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-cstring">fun cstring()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_cstring">fun _cstring()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-delete">fun delete()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-find">fun find()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-insert">fun insert()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-keys">fun keys()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-pairs">fun pairs()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-permute">fun permute()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-pop">fun pop()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-push">fun push()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-remove">fun remove()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-reserve">fun reserve()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-reverse">fun reverse()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-reverse_in_place">fun reverse_in_place()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-rfind">fun rfind()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-shift">fun shift()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-slice">fun slice()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-space">fun space()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-truncate">fun truncate()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-unshift">fun unshift()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-update">fun update()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-values">fun values()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3663,204 +3598,108 @@
           <div role="main">
             <div class="section">
               
-                <p>class Array[A: A] is <a href="../builtin-Seq">Seq</a>[A] ref</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-class-array91a-a93-is-seq91a93-ref">builtin &gt;&gt; class Array[A: A] is <a href="../builtin-Seq">Seq</a>[A] ref</h1>
 <p>Public, default capability ref.</p>
 <p>Contiguous, resizable memory to store elements of type A.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional len: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-len-usize-val">new create(optional len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create an array with zero elements, but space for len elements.</p>
-<h2 id="new-from_cstring">new from_cstring()</h2>
-<p>new from_cstring(ptr: <a href="../builtin-Pointer">Pointer</a>[A] ref, len: <a href="../builtin-USize">USize</a> val, optional alloc: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h3 id="new-from_cstringptr-pointer91a93-ref-len-usize-val-optional-alloc-usize-val">new from_cstring(ptr: <a href="../builtin-Pointer">Pointer</a>[A] ref, len: <a href="../builtin-USize">USize</a> val, optional alloc: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create an array from a C-style pointer and length. The contents are not
 copied.</p>
-<h2 id="new-init">new init()</h2>
-<p>new init(from: A^, len: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h3 id="new-initfrom-a-len-usize-val">new init(from: A^, len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create an array of len elements, all initialised to the given value.</p>
-<h2 id="new-undefined">new undefined()</h2>
-<p>new undefined[optional B: ((A &amp; <a href="../builtin-Real">Real</a>[B val] val) &amp; ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) | (<a href="../builtin-F32">F32</a> val | <a href="../builtin-F64">F64</a> val)))](len: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h3 id="new-undefined91optional-b-a-real91b-val93-val-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-f32-val-f64-val93len-usize-val">new undefined[optional B: ((A &amp; <a href="../builtin-Real">Real</a>[B val] val) &amp; ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) | (<a href="../builtin-F32">F32</a> val | <a href="../builtin-F64">F64</a> val)))](len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Create an array of len elements, populating them with random memory. This
 is only allowed for an array of numbers.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-append">fun append()</h2>
-<p>fun ref
- append(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-appendseq-readseq91a93-box-optional-offset-usize-val-optional-len-usize-val-array91a93-ref">fun ref  append(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Append the elements from a sequence, starting from the given offset.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-applyi-usize-val-this-a-may-raise-an-error">fun box  apply(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?, may raise an error</h3>
 <p>Get the i-th element, raising an error if the index is out of bounds.</p>
-<h2 id="fun-clear">fun clear()</h2>
-<p>fun ref
- clear(): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-clear-array91a93-ref">fun ref  clear(): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Remove all elements from the array.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-clone">fun clone()</h2>
-<p>fun box
- clone(): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-clone-array91this-a93-ref">fun box  clone(): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</h3>
 <p>Clone the array.
 The new array contains references to the same elements that the old array
 contains, the elements themselves are not copied.</p>
-<h2 id="fun-concat">fun concat()</h2>
-<p>fun ref
- concat(iter: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-concatiter-iterator91a93-ref-array91a93-ref">fun ref  concat(iter: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Add iterated elements to the end of the array.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-copy_to">fun copy_to()</h2>
-<p>fun box
- copy_to(dst: <a href="../builtin-Array">Array</a>[this-&gt;A!] ref, src_idx: <a href="../builtin-USize">USize</a> val, dst_idx: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-copy_todst-array91this-a93-ref-src_idx-usize-val-dst_idx-usize-val-len-usize-val-this-array91a93-ref">fun box  copy_to(dst: <a href="../builtin-Array">Array</a>[this-&gt;A!] ref, src_idx: <a href="../builtin-USize">USize</a> val, dst_idx: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Copy len elements from this(src_idx) to dst(dst_idx).
 The array is returned to allow call chaining.</p>
-<h2 id="fun-cstring">fun cstring()</h2>
-<p>fun box
- cstring(): <a href="../builtin-Pointer">Pointer</a>[A] tag</p>
-<p>Public.</p>
+<h3 id="fun-box-cstring-pointer91a93-tag">fun box  cstring(): <a href="../builtin-Pointer">Pointer</a>[A] tag</h3>
 <p>Return the underlying C-style pointer.</p>
-<h2 id="fun-_cstring">fun _cstring()</h2>
-<p>fun box
- _cstring(): <a href="../builtin-Pointer">Pointer</a>[A] box</p>
-<p>Private.</p>
+<h3 id="fun-box-_cstring-pointer91a93-box">fun box  _cstring(): <a href="../builtin-Pointer">Pointer</a>[A] box</h3>
 <p>Internal cstring.</p>
-<h2 id="fun-delete">fun delete()</h2>
-<p>fun ref
- delete(i: <a href="../builtin-USize">USize</a> val): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-deletei-usize-val-a-may-raise-an-error">fun ref  delete(i: <a href="../builtin-USize">USize</a> val): A^ ?, may raise an error</h3>
 <p>Delete an element from the array. Elements after this are moved down by one
 index, compacting the array.
 An out of bounds index raises an error.
 The deleted element is returned.</p>
-<h2 id="fun-find">fun find()</h2>
-<p>fun box
- find(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-findvalue-a-optional-offset-usize-val-optional-nth-usize-val-usize-val-may-raise-an-error">fun box  find(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?, may raise an error</h3>
 <p>Find the n-th appearance of value in the array, by identity. Return the
 index, or raise an error if value isn't present.</p>
-<h2 id="fun-insert">fun insert()</h2>
-<p>fun ref
- insert(i: <a href="../builtin-USize">USize</a> val, value: A): <a href="../builtin-Array">Array</a>[A] ref^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-inserti-usize-val-value-a-array91a93-ref-may-raise-an-error">fun ref  insert(i: <a href="../builtin-USize">USize</a> val, value: A): <a href="../builtin-Array">Array</a>[A] ref^ ?, may raise an error</h3>
 <p>Insert an element into the array. Elements after this are moved up by one
 index, extending the array.
 An out of bounds index raises an error.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-keys">fun keys()</h2>
-<p>fun box
- keys(): <a href="../builtin-ArrayKeys">ArrayKeys</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-keys-arraykeys91a-this-array91a93-ref93-ref">fun box  keys(): <a href="../builtin-ArrayKeys">ArrayKeys</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</h3>
 <p>Return an iterator over the indices in the array.</p>
-<h2 id="fun-pairs">fun pairs()</h2>
-<p>fun box
- pairs(): <a href="../builtin-ArrayPairs">ArrayPairs</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-pairs-arraypairs91a-this-array91a93-ref93-ref">fun box  pairs(): <a href="../builtin-ArrayPairs">ArrayPairs</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</h3>
 <p>Return an iterator over the (index, value) pairs in the array.</p>
-<h2 id="fun-permute">fun permute()</h2>
-<p>fun box
- permute(indices: <a href="../builtin-Iterator">Iterator</a>[<a href="../builtin-USize">USize</a> val] ref): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-permuteindices-iterator91usize-val93-ref-array91this-a93-ref-may-raise-an-error">fun box  permute(indices: <a href="../builtin-Iterator">Iterator</a>[<a href="../builtin-USize">USize</a> val] ref): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^ ?, may raise an error</h3>
 <p>Create a new array with the elements permuted.
 Permute to an arbitrary order that may include duplicates. An out of bounds
 index raises an error.
 The new array contains references to the same elements that the old array
 contains, the elements themselves are not copied.</p>
-<h2 id="fun-pop">fun pop()</h2>
-<p>fun ref
- pop(): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-pop-a-may-raise-an-error">fun ref  pop(): A^ ?, may raise an error</h3>
 <p>Remove an element from the end of the array.
 The removed element is returned.</p>
-<h2 id="fun-push">fun push()</h2>
-<p>fun ref
- push(value: A): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-pushvalue-a-array91a93-ref">fun ref  push(value: A): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Add an element to the end of the array.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-remove">fun remove()</h2>
-<p>fun ref
- remove(i: <a href="../builtin-USize">USize</a> val, n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-removei-usize-val-n-usize-val-array91a93-ref">fun ref  remove(i: <a href="../builtin-USize">USize</a> val, n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Remove n elements from the array, beginning at index i.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-reserve">fun reserve()</h2>
-<p>fun ref
- reserve(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-reservelen-usize-val-array91a93-ref">fun ref  reserve(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Reserve space for len elements, including whatever elements are already in
 the array.</p>
-<h2 id="fun-reverse">fun reverse()</h2>
-<p>fun box
- reverse(): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-reverse-array91this-a93-ref">fun box  reverse(): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</h3>
 <p>Create a new array with the elements in reverse order.
 The new array contains references to the same elements that the old array
 contains, the elements themselves are not copied.</p>
-<h2 id="fun-reverse_in_place">fun reverse_in_place()</h2>
-<p>fun ref
- reverse_in_place(): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-reverse_in_place-array91a93-ref">fun ref  reverse_in_place(): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Reverse the array in place.</p>
-<h2 id="fun-rfind">fun rfind()</h2>
-<p>fun box
- rfind(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-rfindvalue-a-optional-offset-usize-val-optional-nth-usize-val-usize-val-may-raise-an-error">fun box  rfind(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?, may raise an error</h3>
 <p>As find, but search backwards in the array.</p>
-<h2 id="fun-shift">fun shift()</h2>
-<p>fun ref
- shift(): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-shift-a-may-raise-an-error">fun ref  shift(): A^ ?, may raise an error</h3>
 <p>Remove an element from the beginning of the array.
 The removed element is returned.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun box
- size(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-size-usize-val">fun box  size(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The number of elements in the array.</p>
-<h2 id="fun-slice">fun slice()</h2>
-<p>fun box
- slice(optional from: <a href="../builtin-USize">USize</a> val, optional to: <a href="../builtin-USize">USize</a> val, optional step: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-sliceoptional-from-usize-val-optional-to-usize-val-optional-step-usize-val-array91this-a93-ref">fun box  slice(optional from: <a href="../builtin-USize">USize</a> val, optional to: <a href="../builtin-USize">USize</a> val, optional step: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</h3>
 <p>Create a new array that is a clone of a portion of this array. The range is
 exclusive and saturated.
 The new array contains references to the same elements that the old array
 contains, the elements themselves are not copied.</p>
-<h2 id="fun-space">fun space()</h2>
-<p>fun box
- space(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-space-usize-val">fun box  space(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The available space in the array.</p>
-<h2 id="fun-truncate">fun truncate()</h2>
-<p>fun ref
- truncate(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-truncatelen-usize-val-array91a93-ref">fun ref  truncate(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Truncate an array to the given length, discarding excess elements. If the
 array is already smaller than len, do nothing.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-unshift">fun unshift()</h2>
-<p>fun ref
- unshift(value: A): <a href="../builtin-Array">Array</a>[A] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unshiftvalue-a-array91a93-ref">fun ref  unshift(value: A): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Add an element to the beginning of the array.
 The array is returned to allow call chaining.</p>
-<h2 id="fun-update">fun update()</h2>
-<p>fun ref
- update(i: <a href="../builtin-USize">USize</a> val, value: A): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-updatei-usize-val-value-a-a-may-raise-an-error">fun ref  update(i: <a href="../builtin-USize">USize</a> val, value: A): A^ ?, may raise an error</h3>
 <p>Change the i-th element, raising an error if the index is out of bounds.</p>
-<h2 id="fun-values">fun values()</h2>
-<p>fun box
- values(): <a href="../builtin-ArrayValues">ArrayValues</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-values-arrayvalues91a-this-array91a93-ref93-ref">fun box  values(): <a href="../builtin-ArrayValues">ArrayValues</a>[A, this-&gt;<a href="../builtin-Array">Array</a>[A] ref] ref^</h3>
 <p>Return an iterator over the values in the array.</p>
               
             </div>

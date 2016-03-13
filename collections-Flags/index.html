@@ -1170,62 +1170,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#collections-class-flags91a-flag91b-val93-val-optional-b-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91b-val93-val93-is-comparable91flags91a-val-b-val93-box93-ref">collections &gt;&gt; class Flags[A: Flag[B val] val, optional B: (((((((U8 val | U16 val) | U32 val) | U64 val) | U128 val) | ULong val) | USize val) &amp; Integer[B val] val)] is Comparable[Flags[A val, B val] box] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-add">fun add()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-all">fun all()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clear">fun clear()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clone">fun clone()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-compare">fun compare()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-difference">fun difference()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-flip">fun flip()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ge">fun ge()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-gt">fun gt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-intersect">fun intersect()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-le">fun le()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-lt">fun lt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_and">fun op_and()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_or">fun op_or()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_xor">fun op_xor()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-remove">fun remove()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set">fun set()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sub">fun sub()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-union">fun union()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-unset">fun unset()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-value">fun value()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-without">fun without()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3649,8 +3598,7 @@
           <div role="main">
             <div class="section">
               
-                <p>class Flags[A: <a href="../collections-Flag">Flag</a>[B val] val, optional B: (((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val) &amp; <a href="../builtin-Integer">Integer</a>[B val] val)] is <a href="../builtin-Comparable">Comparable</a>[<a href="../collections-Flags">Flags</a>[A val, B val] box] ref</p>
-<p>In package "collections".</p>
+                <h1 id="collections-class-flags91a-flag91b-val93-val-optional-b-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91b-val93-val93-is-comparable91flags91a-val-b-val93-box93-ref">collections &gt;&gt; class Flags[A: <a href="../collections-Flag">Flag</a>[B val] val, optional B: (((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val) &amp; <a href="../builtin-Integer">Integer</a>[B val] val)] is <a href="../builtin-Comparable">Comparable</a>[<a href="../collections-Flags">Flags</a>[A val, B val] box] ref</h1>
 <p>Public, default capability ref.</p>
 <p>Flags is a set of flags. The flags that are recognised should be passed as
 a union type for type parameter A. For example:</p>
@@ -3662,140 +3610,63 @@ a union type for type parameter A. For example:</p>
   fun value(): U64 =&gt; 4</p>
 <p>type Features is Flags[(SSE | AVX | RDTSCP)]</p>
 <p>Type parameter B is the unlying field used to store the flags.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-add">fun add()</h2>
-<p>fun box
- add(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-addflag-a-val-flags91a-val-b-val93-iso">fun box  add(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>This with the flag set.</p>
-<h2 id="fun-all">fun all()</h2>
-<p>fun ref
- all(): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-all-flags91a-val-b-val93-ref">fun ref  all(): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Sets all bits, including undefined flags.</p>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(flag: A val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-applyflag-a-val-bool-val">fun box  apply(flag: A val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flag is set.</p>
-<h2 id="fun-clear">fun clear()</h2>
-<p>fun ref
- clear(): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-clear-flags91a-val-b-val93-ref">fun ref  clear(): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Unsets all flags.</p>
-<h2 id="fun-clone">fun clone()</h2>
-<p>fun box
- clone(): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-clone-flags91a-val-b-val93-iso">fun box  clone(): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>Create a clone.</p>
-<h2 id="fun-compare">fun compare()</h2>
-<p>fun box
- compare(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-difference">fun difference()</h2>
-<p>fun ref
- difference(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-comparethat-flags91a-val-b-val93-box-less-val-equal-val-greater-val">fun box  compare(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
+<h3 id="fun-ref-differencethat-flags91a-val-b-val93-box-flags91a-val-b-val93-ref">fun ref  difference(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>The symmetric difference of this and that.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-flags91a-val-b-val93-box-bool-val">fun box  eq(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if this has the same flags set as that.</p>
-<h2 id="fun-flip">fun flip()</h2>
-<p>fun ref
- flip(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-flipflag-a-val-flags91a-val-b-val93-ref">fun ref  flip(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Sets the flag if it is unset, unsets the flag if it is set.</p>
-<h2 id="fun-ge">fun ge()</h2>
-<p>fun box
- ge(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-gethat-flags91a-val-b-val93-box-bool-val">fun box  ge(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags set on this are a superset of the flags set on
 that or they are the same. Flags is only partially ordered, so ge is not
 the opposite of lt.</p>
-<h2 id="fun-gt">fun gt()</h2>
-<p>fun box
- gt(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-gtthat-flags91a-val-b-val93-box-bool-val">fun box  gt(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags set on this are a struct superset of the flags
 set on that. Flags is only partially ordered, so gt is not the opposite of
 le.</p>
-<h2 id="fun-intersect">fun intersect()</h2>
-<p>fun ref
- intersect(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-intersectthat-flags91a-val-b-val93-box-flags91a-val-b-val93-ref">fun ref  intersect(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>The intersection of this and that.</p>
-<h2 id="fun-le">fun le()</h2>
-<p>fun box
- le(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-lethat-flags91a-val-b-val93-box-bool-val">fun box  le(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags set on this are a subset of the flags set on
 that or they are the same. Flags is only partially ordered, so le is not
 the opposite of te.</p>
-<h2 id="fun-lt">fun lt()</h2>
-<p>fun box
- lt(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-ltthat-flags91a-val-b-val93-box-bool-val">fun box  lt(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the flags set on this are a strict subset of the flags set
 on that. Flags is only partially ordered, so lt is not the opposite of ge.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
-<h2 id="fun-op_and">fun op_and()</h2>
-<p>fun box
- op_and(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-flags91a-val-b-val93-box-bool-val">fun box  ne(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-op_andthat-flags91a-val-b-val93-box-flags91a-val-b-val93-iso">fun box  op_and(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>The intersection of this and that.</p>
-<h2 id="fun-op_or">fun op_or()</h2>
-<p>fun box
- op_or(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-op_orthat-flags91a-val-b-val93-box-flags91a-val-b-val93-iso">fun box  op_or(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>The union of this and that.</p>
-<h2 id="fun-op_xor">fun op_xor()</h2>
-<p>fun box
- op_xor(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-op_xorthat-flags91a-val-b-val93-box-flags91a-val-b-val93-iso">fun box  op_xor(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>The symmetric difference of this and that.</p>
-<h2 id="fun-remove">fun remove()</h2>
-<p>fun ref
- remove(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-removethat-flags91a-val-b-val93-box-flags91a-val-b-val93-ref">fun ref  remove(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Unset flags that are set in that.</p>
-<h2 id="fun-set">fun set()</h2>
-<p>fun ref
- set(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-setflag-a-val-flags91a-val-b-val93-ref">fun ref  set(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Sets the flag.</p>
-<h2 id="fun-sub">fun sub()</h2>
-<p>fun box
- sub(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-subflag-a-val-flags91a-val-b-val93-iso">fun box  sub(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>This with the flag unset.</p>
-<h2 id="fun-union">fun union()</h2>
-<p>fun ref
- union(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unionthat-flags91a-val-b-val93-box-flags91a-val-b-val93-ref">fun ref  union(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>The union of this and that.</p>
-<h2 id="fun-unset">fun unset()</h2>
-<p>fun ref
- unset(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unsetflag-a-val-flags91a-val-b-val93-ref">fun ref  unset(flag: A val): <a href="../collections-Flags">Flags</a>[A val, B val] ref^</h3>
 <p>Unsets the flag.</p>
-<h2 id="fun-value">fun value()</h2>
-<p>fun box
- value(): B val</p>
-<p>Public.</p>
+<h3 id="fun-box-value-b-val">fun box  value(): B val</h3>
 <p>Returns the bit encoding of the set flags.</p>
-<h2 id="fun-without">fun without()</h2>
-<p>fun box
- without(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-withoutthat-flags91a-val-b-val93-box-flags91a-val-b-val93-iso">fun box  without(that: <a href="../collections-Flags">Flags</a>[A val, B val] box): <a href="../collections-Flags">Flags</a>[A val, B val] iso^</h3>
 <p>The flags in this that are not in that.</p>
               
             </div>

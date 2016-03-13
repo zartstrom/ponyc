@@ -452,19 +452,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#builtin-interface-formatsettings91optional-f-formatspec-val-optional-p-prefixspec-val93">builtin &gt;&gt; interface FormatSettings[optional F: FormatSpec val, optional P: PrefixSpec val]</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-align">fun align()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-fill">fun fill()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-format">fun format()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-precision">fun precision()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-prefix">fun prefix()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-width">fun width()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3606,8 +3596,7 @@
           <div role="main">
             <div class="section">
               
-                <p>interface FormatSettings[optional F: <a href="../builtin-FormatSpec">FormatSpec</a> val, optional P: <a href="../builtin-PrefixSpec">PrefixSpec</a> val]</p>
-<p>In package "builtin".</p>
+                <h1 id="builtin-interface-formatsettings91optional-f-formatspec-val-optional-p-prefixspec-val93">builtin &gt;&gt; interface FormatSettings[optional F: <a href="../builtin-FormatSpec">FormatSpec</a> val, optional P: <a href="../builtin-PrefixSpec">PrefixSpec</a> val]</h1>
 <p>Public, default capability box.</p>
 <p>Provide the settings to be used when converting objects to strings.</p>
 <p>The <code>format</code> and <code>prefix</code> settings are effectively enums. The <code>FormatDefault</code>
@@ -3629,31 +3618,13 @@ make it long enough.</li>
 the generated string, or both.</li>
 <li>fill: The character to pad a string with if it is shorter than width.</li>
 </ul>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-align">fun align()</h2>
-<p>fun box
- align(): ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-fill">fun fill()</h2>
-<p>fun box
- fill(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
-<h2 id="fun-format">fun format()</h2>
-<p>fun box
- format(): (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-precision">fun precision()</h2>
-<p>fun box
- precision(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
-<h2 id="fun-prefix">fun prefix()</h2>
-<p>fun box
- prefix(): (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-width">fun width()</h2>
-<p>fun box
- width(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-align-alignleft-val-alignright-val-aligncenter-val">fun box  align(): ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</h3>
+<h3 id="fun-box-fill-u32-val">fun box  fill(): <a href="../builtin-U32">U32</a> val</h3>
+<h3 id="fun-box-format-f-val-formatdefault-val">fun box  format(): (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</h3>
+<h3 id="fun-box-precision-usize-val">fun box  precision(): <a href="../builtin-USize">USize</a> val</h3>
+<h3 id="fun-box-prefix-p-val-prefixdefault-val">fun box  prefix(): (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</h3>
+<h3 id="fun-box-width-usize-val">fun box  width(): <a href="../builtin-USize">USize</a> val</h3>
               
             </div>
           </div>

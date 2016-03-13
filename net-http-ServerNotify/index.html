@@ -2585,13 +2585,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#nethttp-interface-servernotify">net/http &gt;&gt; interface ServerNotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-listening">fun listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-not_listening">fun not_listening()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3600,25 +3596,15 @@
           <div role="main">
             <div class="section">
               
-                <p>interface ServerNotify</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-interface-servernotify">net/http &gt;&gt; interface ServerNotify</h1>
 <p>Public, default capability ref.</p>
 <p>Notifications for HTTP servers.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-closedserver-server-ref-none-val">fun ref  closed(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when we stop listening.</p>
-<h2 id="fun-listening">fun listening()</h2>
-<p>fun ref
- listening(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-listeningserver-server-ref-none-val">fun ref  listening(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when we are listening.</p>
-<h2 id="fun-not_listening">fun not_listening()</h2>
-<p>fun ref
- not_listening(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-not_listeningserver-server-ref-none-val">fun ref  not_listening(server: <a href="../net-http-Server">Server</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when we fail to listen.</p>
               
             </div>

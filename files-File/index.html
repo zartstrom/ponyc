@@ -1621,75 +1621,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#files-class-file">files &gt;&gt; class File</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_descriptor">new _descriptor()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-open">new open()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-chmod">fun chmod()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-chown">fun chown()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dispose">fun dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-errno">fun errno()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_final">fun _final()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-flush">fun flush()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-get_fd">fun get_fd()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_get_fd">fun _get_fd()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-info">fun info()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-line">fun line()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-lines">fun lines()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-position">fun position()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-print">fun print()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-printv">fun printv()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-read">fun read()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-read_string">fun read_string()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-seek">fun seek()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_seek">fun _seek()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-seek_end">fun seek_end()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-seek_start">fun seek_start()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_length">fun set_length()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set_time">fun set_time()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sync">fun sync()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-touch">fun touch()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-valid">fun valid()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-write">fun write()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-writev">fun writev()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3662,171 +3600,80 @@
           <div role="main">
             <div class="section">
               
-                <p>class File</p>
-<p>In package "files".</p>
+                <h1 id="files-class-file">files &gt;&gt; class File</h1>
 <p>Public, default capability ref.</p>
 <p>Operations on a file.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>let path: <a href="../files-FilePath">FilePath</a> val</li>
 <li>let writeable: <a href="../builtin-Bool">Bool</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(from: <a href="../files-FilePath">FilePath</a> val)</p>
-<p>Public.</p>
-<h2 id="new-_descriptor">new _descriptor()</h2>
-<p>new _descriptor(fd: <a href="../builtin-I32">I32</a> val, from: <a href="../files-FilePath">FilePath</a> val) ?</p>
-<p>Private, may raise an error.</p>
-<h2 id="new-open">new open()</h2>
-<p>new open(from: <a href="../files-FilePath">FilePath</a> val)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-chmod">fun chmod()</h2>
-<p>fun box
- chmod(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createfrom-filepath-val">new create(from: <a href="../files-FilePath">FilePath</a> val)</h3>
+<h3 id="new-_descriptorfd-i32-val-from-filepath-val-may-raise-an-error">new _descriptor(fd: <a href="../builtin-I32">I32</a> val, from: <a href="../files-FilePath">FilePath</a> val) ?, may raise an error</h3>
+<h3 id="new-openfrom-filepath-val">new open(from: <a href="../files-FilePath">FilePath</a> val)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-chmodmode-filemode-box-bool-val">fun box  chmod(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for this directory.</p>
-<h2 id="fun-chown">fun chown()</h2>
-<p>fun box
- chown(uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-chownuid-u32-val-gid-u32-val-bool-val">fun box  chown(uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the owner and group for this directory. Does nothing on Windows.</p>
-<h2 id="fun-dispose">fun dispose()</h2>
-<p>fun ref
- dispose(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the file. Future operations will do nothing.</p>
-<h2 id="fun-errno">fun errno()</h2>
-<p>fun box
- errno(): (<a href="../files-FileOK">FileOK</a> val | <a href="../files-FileError">FileError</a> val)</p>
-<p>Public.</p>
+<h3 id="fun-box-errno-fileok-val-fileerror-val">fun box  errno(): (<a href="../files-FileOK">FileOK</a> val | <a href="../files-FileError">FileError</a> val)</h3>
 <p>Returns the last error code set for this File</p>
-<h2 id="fun-_final">fun _final()</h2>
-<p>fun box
- _final(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the file.</p>
-<h2 id="fun-flush">fun flush()</h2>
-<p>fun ref
- flush(): <a href="../files-File">File</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-flush-file-ref">fun ref  flush(): <a href="../files-File">File</a> ref</h3>
 <p>Flush the file.</p>
-<h2 id="fun-get_fd">fun get_fd()</h2>
-<p>fun box
- get_fd(): <a href="../builtin-I32">I32</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-get_fd-i32-val-may-raise-an-error">fun box  get_fd(): <a href="../builtin-I32">I32</a> val ?, may raise an error</h3>
 <p>Returns the underlying file descriptor.
 Raises an error if the file is not currently open.</p>
-<h2 id="fun-_get_fd">fun _get_fd()</h2>
-<p>fun tag
- _get_fd(handle: <a href="../builtin-Pointer">Pointer</a>[<a href="../files-_FileHandle">_FileHandle</a> val] ref): <a href="../builtin-I32">I32</a> val</p>
-<p>Private.</p>
+<h3 id="fun-tag-_get_fdhandle-pointer91_filehandle-val93-ref-i32-val">fun tag  _get_fd(handle: <a href="../builtin-Pointer">Pointer</a>[<a href="../files-_FileHandle">_FileHandle</a> val] ref): <a href="../builtin-I32">I32</a> val</h3>
 <p>Get the file descriptor associated with the file handle.</p>
-<h2 id="fun-info">fun info()</h2>
-<p>fun box
- info(): <a href="../files-FileInfo">FileInfo</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-info-fileinfo-val-may-raise-an-error">fun box  info(): <a href="../files-FileInfo">FileInfo</a> val ?, may raise an error</h3>
 <p>Return a FileInfo for this directory. Raise an error if the fd is invalid
 or if we don't have FileStat permission.</p>
-<h2 id="fun-line">fun line()</h2>
-<p>fun ref
- line(): <a href="../builtin-String">String</a> iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-line-string-iso-may-raise-an-error">fun ref  line(): <a href="../builtin-String">String</a> iso^ ?, may raise an error</h3>
 <p>Returns a line as a String. The newline is not included in the string. If
 there is no more data, this raises an error.</p>
-<h2 id="fun-lines">fun lines()</h2>
-<p>fun ref
- lines(): <a href="../files-FileLines">FileLines</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-lines-filelines-ref">fun ref  lines(): <a href="../files-FileLines">FileLines</a> ref</h3>
 <p>Returns an iterator for reading lines from the file.</p>
-<h2 id="fun-position">fun position()</h2>
-<p>fun box
- position(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-position-usize-val">fun box  position(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Return the current cursor position in the file.</p>
-<h2 id="fun-print">fun print()</h2>
-<p>fun ref
- print(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-printdata-byteseq-box-bool-val">fun ref  print(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Same as write, buts adds a newline.</p>
-<h2 id="fun-printv">fun printv()</h2>
-<p>fun ref
- printv(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-printvdata-byteseqiter-box-bool-val">fun ref  printv(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Print an iterable collection of ByteSeqs.</p>
-<h2 id="fun-read">fun read()</h2>
-<p>fun ref
- read(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-ref-readlen-usize-val-array91u8-val93-iso">fun ref  read(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^</h3>
 <p>Returns up to len bytes.</p>
-<h2 id="fun-read_string">fun read_string()</h2>
-<p>fun ref
- read_string(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> iso^</p>
-<p>Public.</p>
+<h3 id="fun-ref-read_stringlen-usize-val-string-iso">fun ref  read_string(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Returns up to len bytes. The resulting string may have internal null
 characters.</p>
-<h2 id="fun-seek">fun seek()</h2>
-<p>fun ref
- seek(offset: <a href="../builtin-ISize">ISize</a> val): <a href="../files-File">File</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-seekoffset-isize-val-file-ref">fun ref  seek(offset: <a href="../builtin-ISize">ISize</a> val): <a href="../files-File">File</a> ref</h3>
 <p>Move the cursor position.</p>
-<h2 id="fun-_seek">fun _seek()</h2>
-<p>fun ref
- _seek(offset: <a href="../builtin-ISize">ISize</a> val, base: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-ref-_seekoffset-isize-val-base-i32-val-none-val">fun ref  _seek(offset: <a href="../builtin-ISize">ISize</a> val, base: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Move the cursor position.</p>
-<h2 id="fun-seek_end">fun seek_end()</h2>
-<p>fun ref
- seek_end(offset: <a href="../builtin-USize">USize</a> val): <a href="../files-File">File</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-seek_endoffset-usize-val-file-ref">fun ref  seek_end(offset: <a href="../builtin-USize">USize</a> val): <a href="../files-File">File</a> ref</h3>
 <p>Set the cursor position relative to the end of the file.</p>
-<h2 id="fun-seek_start">fun seek_start()</h2>
-<p>fun ref
- seek_start(offset: <a href="../builtin-USize">USize</a> val): <a href="../files-File">File</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-seek_startoffset-usize-val-file-ref">fun ref  seek_start(offset: <a href="../builtin-USize">USize</a> val): <a href="../files-File">File</a> ref</h3>
 <p>Set the cursor position relative to the start of the file.</p>
-<h2 id="fun-set_length">fun set_length()</h2>
-<p>fun ref
- set_length(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-set_lengthlen-usize-val-bool-val">fun ref  set_length(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Change the file size. If it is made larger, the new contents are undefined.</p>
-<h2 id="fun-set_time">fun set_time()</h2>
-<p>fun box
- set_time(atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-set_timeatime-i64-val-i64-val-mtime-i64-val-i64-val-bool-val">fun box  set_time(atime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val), mtime: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to the given
 values.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun ref
- size(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-size-usize-val">fun ref  size(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Return the total length of the file.</p>
-<h2 id="fun-sync">fun sync()</h2>
-<p>fun ref
- sync(): <a href="../files-File">File</a> ref</p>
-<p>Public.</p>
+<h3 id="fun-ref-sync-file-ref">fun ref  sync(): <a href="../files-File">File</a> ref</h3>
 <p>Sync the file contents to physical storage.</p>
-<h2 id="fun-touch">fun touch()</h2>
-<p>fun box
- touch(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-touch-bool-val">fun box  touch(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to now.</p>
-<h2 id="fun-valid">fun valid()</h2>
-<p>fun box
- valid(): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-valid-bool-val">fun box  valid(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the file is currently open.</p>
-<h2 id="fun-write">fun write()</h2>
-<p>fun ref
- write(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-writedata-byteseq-box-bool-val">fun ref  write(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns false if the file wasn't opened with write permission.
 Returns false and closes the file if not all the bytes were written.</p>
-<h2 id="fun-writev">fun writev()</h2>
-<p>fun ref
- writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-writevdata-byteseqiter-box-bool-val">fun ref  writev(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Write an iterable collection of ByteSeqs.</p>
               
             </div>

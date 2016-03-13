@@ -2262,15 +2262,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#net-interface-udpnotify">net &gt;&gt; interface UDPNotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-listening">fun listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-not_listening">fun not_listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-received">fun received()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3602,30 +3596,17 @@
           <div role="main">
             <div class="section">
               
-                <p>interface UDPNotify</p>
-<p>In package "net".</p>
+                <h1 id="net-interface-udpnotify">net &gt;&gt; interface UDPNotify</h1>
 <p>Public, default capability ref.</p>
 <p>No doc string provided.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-closedsock-udpsocket-ref-none-val">fun ref  closed(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the socket is closed.</p>
-<h2 id="fun-listening">fun listening()</h2>
-<p>fun ref
- listening(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-listeningsock-udpsocket-ref-none-val">fun ref  listening(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the socket has been bound to an address.</p>
-<h2 id="fun-not_listening">fun not_listening()</h2>
-<p>fun ref
- not_listening(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-not_listeningsock-udpsocket-ref-none-val">fun ref  not_listening(sock: <a href="../net-UDPSocket">UDPSocket</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called if it wasn't possible to bind the socket to an address.</p>
-<h2 id="fun-received">fun received()</h2>
-<p>fun ref
- received(sock: <a href="../net-UDPSocket">UDPSocket</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso, from: <a href="../net-IPAddress">IPAddress</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-receivedsock-udpsocket-ref-data-array91u8-val93-iso-from-ipaddress-val-none-val">fun ref  received(sock: <a href="../net-UDPSocket">UDPSocket</a> ref, data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso, from: <a href="../net-IPAddress">IPAddress</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Called when new data is received on the socket.</p>
               
             </div>

@@ -3071,17 +3071,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#ponytest-trait-unittest">ponytest &gt;&gt; trait UnitTest</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-exclusion_group">fun exclusion_group()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-name">fun name()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-tear_down">fun tear_down()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-timed_out">fun timed_out()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3604,42 +3596,26 @@
           <div role="main">
             <div class="section">
               
-                <p>trait UnitTest</p>
-<p>In package "ponytest".</p>
+                <h1 id="ponytest-trait-unittest">ponytest &gt;&gt; trait UnitTest</h1>
 <p>Public, default capability ref.</p>
 <p>Each unit test class must provide this trait. Simple tests only need to
 define the name() and apply() functions. The remaining functions specify
 additional test options.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun ref
- apply(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-applyh-testhelper-val-none-val-may-raise-an-error">fun ref  apply(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val ?, may raise an error</h3>
 <p>Run the test.
 Raising an error is interpreted as a test failure.</p>
-<h2 id="fun-exclusion_group">fun exclusion_group()</h2>
-<p>fun box
- exclusion_group(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-exclusion_group-string-val">fun box  exclusion_group(): <a href="../builtin-String">String</a> val</h3>
 <p>Report the test exclusion group, returning an empty string for none.
 The default body returns an empty string.</p>
-<h2 id="fun-name">fun name()</h2>
-<p>fun box
- name(): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-name-string-val">fun box  name(): <a href="../builtin-String">String</a> val</h3>
 <p>Report the test name, which is used when printing test results and on the
 command line to select tests to run.</p>
-<h2 id="fun-tear_down">fun tear_down()</h2>
-<p>fun ref
- tear_down(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-tear_downh-testhelper-val-none-val">fun ref  tear_down(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Tidy up after the test has completed.
 Called for each run test, whether that test passed, succeeded or timed out.
 The default is to do nothing.</p>
-<h2 id="fun-timed_out">fun timed_out()</h2>
-<p>fun ref
- timed_out(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-timed_outh-testhelper-val-none-val">fun ref  timed_out(h: <a href="../ponytest-TestHelper">TestHelper</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Tear down a possibly hanging test.
 Called when the timeout specified by to long_test() expires.
 There is no need for this function to call complete(false).

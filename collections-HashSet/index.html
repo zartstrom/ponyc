@@ -1212,68 +1212,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#collections-class-hashset91a-a-h-hashfunction91a93-val93-is-comparable91hashset91a-h-val93-box93-ref">collections &gt;&gt; class HashSet[A: A, H: HashFunction[A!] val] is Comparable[HashSet[A, H val] box] ref</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-add">fun add()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clear">fun clear()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-clone">fun clone()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-compare">fun compare()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-difference">fun difference()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-eq">fun eq()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-extract">fun extract()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ge">fun ge()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-gt">fun gt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-index">fun index()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-intersect">fun intersect()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-le">fun le()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-lt">fun lt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-ne">fun ne()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-next_index">fun next_index()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_and">fun op_and()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_or">fun op_or()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-op_xor">fun op_xor()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-remove">fun remove()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-set">fun set()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-space">fun space()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-sub">fun sub()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-union">fun union()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-unset">fun unset()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-values">fun values()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-without">fun without()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3655,162 +3598,75 @@
           <div role="main">
             <div class="section">
               
-                <p>class HashSet[A: A, H: <a href="../collections-HashFunction">HashFunction</a>[A!] val] is <a href="../builtin-Comparable">Comparable</a>[<a href="../collections-HashSet">HashSet</a>[A, H val] box] ref</p>
-<p>In package "collections".</p>
+                <h1 id="collections-class-hashset91a-a-h-hashfunction91a93-val93-is-comparable91hashset91a-h-val93-box93-ref">collections &gt;&gt; class HashSet[A: A, H: <a href="../collections-HashFunction">HashFunction</a>[A!] val] is <a href="../builtin-Comparable">Comparable</a>[<a href="../collections-HashSet">HashSet</a>[A, H val] box] ref</h1>
 <p>Public, default capability ref.</p>
 <p>A set, built on top of a HashMap. This is implemented as map of an alias of
 a type to itself</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional prealloc: <a href="../builtin-USize">USize</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-prealloc-usize-val">new create(optional prealloc: <a href="../builtin-USize">USize</a> val)</h3>
 <p>Defaults to a prealloc of 8.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-add">fun add()</h2>
-<p>fun box
- add[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](value: this-&gt;A!): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-add91optional-k-hashfunction91this-a93-val93value-this-a-hashset91this-a-k-val93-ref">fun box  add[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](value: this-&gt;A!): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Add a value to the set.</p>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply(value: box-&gt;A!): this-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-applyvalue-box-a-this-a-may-raise-an-error">fun box  apply(value: box-&gt;A!): this-&gt;A ?, may raise an error</h3>
 <p>Return the value if its in the set, otherwise raise an error.</p>
-<h2 id="fun-clear">fun clear()</h2>
-<p>fun ref
- clear(): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-clear-hashset91a-h-val93-ref">fun ref  clear(): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Remove all elements from the set.</p>
-<h2 id="fun-clone">fun clone()</h2>
-<p>fun box
- clone[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-clone91optional-k-hashfunction91this-a93-val93-hashset91this-a-k-val93-ref">fun box  clone[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Create a clone. The element type may be different due to aliasing and
 viewpoint adaptation.</p>
-<h2 id="fun-compare">fun compare()</h2>
-<p>fun box
- compare(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</p>
-<p>Public.</p>
-<h2 id="fun-difference">fun difference()</h2>
-<p>fun ref
- difference(that: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-comparethat-hashset91a-h-val93-box-less-val-equal-val-greater-val">fun box  compare(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
+<h3 id="fun-ref-differencethat-iterator91a93-ref-hashset91a-h-val93-ref">fun ref  difference(that: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Remove elements in this which are also in that. Add elements in that which
 are not in this.</p>
-<h2 id="fun-eq">fun eq()</h2>
-<p>fun box
- eq(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-eqthat-hashset91a-h-val93-box-bool-val">fun box  eq(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the sets contain the same elements.</p>
-<h2 id="fun-extract">fun extract()</h2>
-<p>fun ref
- extract(value: box-&gt;A!): A^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-extractvalue-box-a-a-may-raise-an-error">fun ref  extract(value: box-&gt;A!): A^ ?, may raise an error</h3>
 <p>Remove a value from the set and return it. Raises an error if the value
 wasn't in the set.</p>
-<h2 id="fun-ge">fun ge()</h2>
-<p>fun box
- ge(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-gethat-hashset91a-h-val93-box-bool-val">fun box  ge(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if every element in that is also in this.</p>
-<h2 id="fun-gt">fun gt()</h2>
-<p>fun box
- gt(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-gtthat-hashset91a-h-val93-box-bool-val">fun box  gt(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if every element in that is also in this, and this has more
 elements than that.</p>
-<h2 id="fun-index">fun index()</h2>
-<p>fun box
- index(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-indexi-usize-val-this-a-may-raise-an-error">fun box  index(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?, may raise an error</h3>
 <p>Returns the value at a given index. Raise an error if the index is not
 populated.</p>
-<h2 id="fun-intersect">fun intersect()</h2>
-<p>fun ref
- intersect[optional K: <a href="../collections-HashFunction">HashFunction</a>[box-&gt;A!] val](that: <a href="../collections-HashSet">HashSet</a>[box-&gt;A!, K val] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-intersect91optional-k-hashfunction91box-a93-val93that-hashset91box-a-k-val93-ref-hashset91a-h-val93-ref">fun ref  intersect[optional K: <a href="../collections-HashFunction">HashFunction</a>[box-&gt;A!] val](that: <a href="../collections-HashSet">HashSet</a>[box-&gt;A!, K val] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Remove everything that isn't in that.</p>
-<h2 id="fun-le">fun le()</h2>
-<p>fun box
- le(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-lethat-hashset91a-h-val93-box-bool-val">fun box  le(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if every element in this is also in that.</p>
-<h2 id="fun-lt">fun lt()</h2>
-<p>fun box
- lt(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-ltthat-hashset91a-h-val93-box-bool-val">fun box  lt(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if every element in this is also in that, and this has fewer
 elements than that.</p>
-<h2 id="fun-ne">fun ne()</h2>
-<p>fun box
- ne(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-nethat-hashset91a-h-val93-box-bool-val">fun box  ne(that: <a href="../collections-HashSet">HashSet</a>[A, H val] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns false if the sets contain the same elements.</p>
-<h2 id="fun-next_index">fun next_index()</h2>
-<p>fun box
- next_index(optional prev: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-next_indexoptional-prev-usize-val-usize-val-may-raise-an-error">fun box  next_index(optional prev: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?, may raise an error</h3>
 <p>Given an index, return the next index that has a populated value. Raise an
 error if there is no next populated index.</p>
-<h2 id="fun-op_and">fun op_and()</h2>
-<p>fun box
- op_and[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-op_and91optional-k-hashfunction91this-a93-val93that-this-hashset91a-h-val93-ref-hashset91this-a-k-val93-ref">fun box  op_and[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Create a set with the elements that are in both this and that.</p>
-<h2 id="fun-op_or">fun op_or()</h2>
-<p>fun box
- op_or[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-op_or91optional-k-hashfunction91this-a93-val93that-this-hashset91a-h-val93-ref-hashset91this-a-k-val93-ref">fun box  op_or[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Create a set with the elements of both this and that.</p>
-<h2 id="fun-op_xor">fun op_xor()</h2>
-<p>fun box
- op_xor[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-op_xor91optional-k-hashfunction91this-a93-val93that-this-hashset91a-h-val93-ref-hashset91this-a-k-val93-ref">fun box  op_xor[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Create a set with the elements that are in either set but not both.</p>
-<h2 id="fun-remove">fun remove()</h2>
-<p>fun ref
- remove(that: <a href="../builtin-Iterator">Iterator</a>[box-&gt;A!] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-removethat-iterator91box-a93-ref-hashset91a-h-val93-ref">fun ref  remove(that: <a href="../builtin-Iterator">Iterator</a>[box-&gt;A!] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Remove everything that is in that.</p>
-<h2 id="fun-set">fun set()</h2>
-<p>fun ref
- set(value: A): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-setvalue-a-hashset91a-h-val93-ref">fun ref  set(value: A): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Add a value to the set.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun box
- size(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-size-usize-val">fun box  size(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The number of items in the set.</p>
-<h2 id="fun-space">fun space()</h2>
-<p>fun box
- space(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-space-usize-val">fun box  space(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The available space in the set.</p>
-<h2 id="fun-sub">fun sub()</h2>
-<p>fun box
- sub[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](value: box-&gt;this-&gt;A!): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-sub91optional-k-hashfunction91this-a93-val93value-box-this-a-hashset91this-a-k-val93-ref">fun box  sub[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](value: box-&gt;this-&gt;A!): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Remove a value from the set.</p>
-<h2 id="fun-union">fun union()</h2>
-<p>fun ref
- union(that: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unionthat-iterator91a93-ref-hashset91a-h-val93-ref">fun ref  union(that: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Add everything in that to the set.</p>
-<h2 id="fun-unset">fun unset()</h2>
-<p>fun ref
- unset(value: box-&gt;A!): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-unsetvalue-box-a-hashset91a-h-val93-ref">fun ref  unset(value: box-&gt;A!): <a href="../collections-HashSet">HashSet</a>[A, H val] ref^</h3>
 <p>Remove a value from the set.</p>
-<h2 id="fun-values">fun values()</h2>
-<p>fun box
- values(): <a href="../collections-SetValues">SetValues</a>[A, H val, this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-values-setvalues91a-h-val-this-hashset91a-h-val93-ref93-ref">fun box  values(): <a href="../collections-SetValues">SetValues</a>[A, H val, this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref] ref^</h3>
 <p>Return an iterator over the values.</p>
-<h2 id="fun-without">fun without()</h2>
-<p>fun box
- without[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</p>
-<p>Public.</p>
+<h3 id="fun-box-without91optional-k-hashfunction91this-a93-val93that-this-hashset91a-h-val93-ref-hashset91this-a-k-val93-ref">fun box  without[optional K: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;A!] val](that: this-&gt;<a href="../collections-HashSet">HashSet</a>[A, H val] ref): <a href="../collections-HashSet">HashSet</a>[this-&gt;A!, K val] ref^</h3>
 <p>Create a set with the elements of this that are not in that.</p>
               
             </div>

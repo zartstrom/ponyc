@@ -3221,28 +3221,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#regex-class-match">regex &gt;&gt; class Match</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-_create">new _create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-dispose">fun dispose()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-end_pos">fun end_pos()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_final">fun _final()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-find">fun find()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-groups">fun groups()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-size">fun size()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-start_pos">fun start_pos()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3615,57 +3598,30 @@
           <div role="main">
             <div class="section">
               
-                <p>class Match</p>
-<p>In package "regex".</p>
+                <h1 id="regex-class-match">regex &gt;&gt; class Match</h1>
 <p>Public, default capability ref.</p>
 <p>Contains match data for a combination of a regex and a subject.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-_create">new _create()</h2>
-<p>new _create(subject: <a href="../builtin-ByteSeq">ByteSeq</a> val, m: <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref)</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-_createsubject-byteseq-val-m-pointer91_match-val93-ref">new _create(subject: <a href="../builtin-ByteSeq">ByteSeq</a> val, m: <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref)</h3>
 <p>Store a match, a subject, and a size.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun box
- apply[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](i: <a href="../builtin-U32">U32</a> val): A iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-apply91optional-a-byteseq-iso-seq91u8-val93-iso93i-u32-val-a-iso-may-raise-an-error">fun box  apply[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](i: <a href="../builtin-U32">U32</a> val): A iso^ ?, may raise an error</h3>
 <p>Returns a capture by number. Raises an error if the index is out of bounds.</p>
-<h2 id="fun-dispose">fun dispose()</h2>
-<p>fun ref
- dispose(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-dispose-none-val">fun ref  dispose(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the underlying PCRE2 data.</p>
-<h2 id="fun-end_pos">fun end_pos()</h2>
-<p>fun box
- end_pos(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-end_pos-usize-val">fun box  end_pos(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the character position of the last character in the match.</p>
-<h2 id="fun-_final">fun _final()</h2>
-<p>fun box
- _final(): <a href="../builtin-None">None</a> val</p>
-<p>Private.</p>
+<h3 id="fun-box-_final-none-val">fun box  _final(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the underlying PCRE2 data.</p>
-<h2 id="fun-find">fun find()</h2>
-<p>fun box
- find[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](name: <a href="../builtin-String">String</a> box): A iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-box-find91optional-a-byteseq-iso-seq91u8-val93-iso93name-string-box-a-iso-may-raise-an-error">fun box  find[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](name: <a href="../builtin-String">String</a> box): A iso^ ?, may raise an error</h3>
 <p>Returns a capture by name. Raises an error if the named capture does not
 exist.</p>
-<h2 id="fun-groups">fun groups()</h2>
-<p>fun box
- groups(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</p>
-<p>Public.</p>
+<h3 id="fun-box-groups-array91string-val93-iso">fun box  groups(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>
 <p>Returns all of the captured subgroups.  Groups that failed to capture
 anything will contain the empty string.</p>
-<h2 id="fun-size">fun size()</h2>
-<p>fun box
- size(): <a href="../builtin-U32">U32</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-size-u32-val">fun box  size(): <a href="../builtin-U32">U32</a> val</h3>
 <p>Returns the capture size of the match.</p>
-<h2 id="fun-start_pos">fun start_pos()</h2>
-<p>fun box
- start_pos(): <a href="../builtin-USize">USize</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-start_pos-usize-val">fun box  start_pos(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the character position of the first character in the match.</p>
               
             </div>

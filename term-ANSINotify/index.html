@@ -3406,35 +3406,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#term-interface-ansinotify">term &gt;&gt; interface ANSINotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-delete">fun delete()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-down">fun down()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-end_key">fun end_key()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-fn_key">fun fn_key()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-home">fun home()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-insert">fun insert()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-left">fun left()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-page_down">fun page_down()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-page_up">fun page_up()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-prompt">fun prompt()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-right">fun right()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-up">fun up()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3622,67 +3596,24 @@
           <div role="main">
             <div class="section">
               
-                <p>interface ANSINotify</p>
-<p>In package "term".</p>
+                <h1 id="term-interface-ansinotify">term &gt;&gt; interface ANSINotify</h1>
 <p>Public, default capability ref.</p>
 <p>Receive input from an ANSITerm.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun ref
- apply(term: <a href="../term-ANSITerm">ANSITerm</a> ref, input: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-delete">fun delete()</h2>
-<p>fun ref
- delete(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-down">fun down()</h2>
-<p>fun ref
- down(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-end_key">fun end_key()</h2>
-<p>fun ref
- end_key(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-fn_key">fun fn_key()</h2>
-<p>fun ref
- fn_key(i: <a href="../builtin-U8">U8</a> val, ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-home">fun home()</h2>
-<p>fun ref
- home(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-insert">fun insert()</h2>
-<p>fun ref
- insert(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-left">fun left()</h2>
-<p>fun ref
- left(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-page_down">fun page_down()</h2>
-<p>fun ref
- page_down(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-page_up">fun page_up()</h2>
-<p>fun ref
- page_up(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-prompt">fun prompt()</h2>
-<p>fun ref
- prompt(term: <a href="../term-ANSITerm">ANSITerm</a> ref, value: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-right">fun right()</h2>
-<p>fun ref
- right(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
-<h2 id="fun-up">fun up()</h2>
-<p>fun ref
- up(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-applyterm-ansiterm-ref-input-u8-val-none-val">fun ref  apply(term: <a href="../term-ANSITerm">ANSITerm</a> ref, input: <a href="../builtin-U8">U8</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-closed-none-val">fun ref  closed(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-deletectrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  delete(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-downctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  down(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-end_keyctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  end_key(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-fn_keyi-u8-val-ctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  fn_key(i: <a href="../builtin-U8">U8</a> val, ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-homectrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  home(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-insertctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  insert(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-leftctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  left(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-page_downctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  page_down(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-page_upctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  page_up(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-promptterm-ansiterm-ref-value-string-val-none-val">fun ref  prompt(term: <a href="../term-ANSITerm">ANSITerm</a> ref, value: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-rightctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  right(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-upctrl-bool-val-alt-bool-val-shift-bool-val-none-val">fun ref  up(ctrl: <a href="../builtin-Bool">Bool</a> val, alt: <a href="../builtin-Bool">Bool</a> val, shift: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
               
             </div>
           </div>

@@ -1691,16 +1691,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#files-class-fileinfo">files &gt;&gt; class FileInfo</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-_descriptor">new _descriptor()</a></li>
-                
-                    <li><a class="toctree-l4" href="#new-_relative">new _relative()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
             
             </ul>
@@ -3603,8 +3598,7 @@
           <div role="main">
             <div class="section">
               
-                <p>class FileInfo</p>
-<p>In package "files".</p>
+                <h1 id="files-class-fileinfo">files &gt;&gt; class FileInfo</h1>
 <p>Public, default capability val.</p>
 <p>This contains file system metadata for a path. The times are in the same
 format as Time.now(), i.e. seconds and nanoseconds since the epoch.</p>
@@ -3613,7 +3607,7 @@ Windows. The change_time will actually be the file creation time on Windows.</p>
 <p>A symlink will report information about itself, other than the size which
 will be the size of the target. A broken symlink will report as much as it
 can and will set the broken flag.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>let access_time: (<a href="../builtin-I64">I64</a> val , <a href="../builtin-I64">I64</a> val)</li>
 <li>let broken: <a href="../builtin-Bool">Bool</a> val</li>
@@ -3630,16 +3624,10 @@ can and will set the broken flag.</p>
 <li>let symlink: <a href="../builtin-Bool">Bool</a> val</li>
 <li>let uid: <a href="../builtin-U32">U32</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(from: <a href="../files-FilePath">FilePath</a> val) ?</p>
-<p>Public, may raise an error.</p>
-<h2 id="new-_descriptor">new _descriptor()</h2>
-<p>new _descriptor(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val) ?</p>
-<p>Private, may raise an error.</p>
-<h2 id="new-_relative">new _relative()</h2>
-<p>new _relative(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, from: <a href="../builtin-String">String</a> val) ?</p>
-<p>Private, may raise an error.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createfrom-filepath-val-may-raise-an-error">new create(from: <a href="../files-FilePath">FilePath</a> val) ?, may raise an error</h3>
+<h3 id="new-_descriptorfd-i32-val-path-filepath-val-may-raise-an-error">new _descriptor(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val) ?, may raise an error</h3>
+<h3 id="new-_relativefd-i32-val-path-filepath-val-from-string-val-may-raise-an-error">new _relative(fd: <a href="../builtin-I32">I32</a> val, path: <a href="../files-FilePath">FilePath</a> val, from: <a href="../builtin-String">String</a> val) ?, may raise an error</h3>
               
             </div>
           </div>

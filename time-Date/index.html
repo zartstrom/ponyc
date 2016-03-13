@@ -3512,21 +3512,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-fields">Public fields</a></li>
+                <li class="toctree-l3"><a href="#time-class-date">time &gt;&gt; class Date</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                    <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-format">fun format()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-normal">fun normal()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-time">fun time()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3608,13 +3600,12 @@
           <div role="main">
             <div class="section">
               
-                <p>class Date</p>
-<p>In package "time".</p>
+                <h1 id="time-class-date">time &gt;&gt; class Date</h1>
 <p>Public, default capability ref.</p>
 <p>Represents a proleptic Gregorian date and time, without specifying a
 time zone. The day of month, month, day of week, and day of year are all
 indexed from 1, i.e. January is 1, Monday is 1.</p>
-<h1 id="public-fields">Public fields</h1>
+<h2 id="public-fields">Public fields</h2>
 <ul>
 <li>var day_of_month: <a href="../builtin-I32">I32</a> val</li>
 <li>var day_of_week: <a href="../builtin-I32">I32</a> val</li>
@@ -3626,28 +3617,17 @@ indexed from 1, i.e. January is 1, Monday is 1.</p>
 <li>var sec: <a href="../builtin-I32">I32</a> val</li>
 <li>var year: <a href="../builtin-I32">I32</a> val</li>
 </ul>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional seconds: <a href="../builtin-I64">I64</a> val, optional nanoseconds: <a href="../builtin-I64">I64</a> val)</p>
-<p>Public.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-format">fun format()</h2>
-<p>fun box
- format(fmt: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-seconds-i64-val-optional-nanoseconds-i64-val">new create(optional seconds: <a href="../builtin-I64">I64</a> val, optional nanoseconds: <a href="../builtin-I64">I64</a> val)</h3>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-box-formatfmt-string-val-string-val">fun box  format(fmt: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Format the time as for strftime.</p>
-<h2 id="fun-normal">fun normal()</h2>
-<p>fun ref
- normal(): <a href="../time-Date">Date</a> ref^</p>
-<p>Public.</p>
+<h3 id="fun-ref-normal-date-ref">fun ref  normal(): <a href="../time-Date">Date</a> ref^</h3>
 <p>Normalise all the fields of the date. For example, if the hour is 24, it is
 set to 0 and the day is advanced. This allows fields to be changed naively,
 eg. adding 1000 to hours to advance the time by 1000 hours, and then
 normalising the date.</p>
-<h2 id="fun-time">fun time()</h2>
-<p>fun box
- time(): <a href="../builtin-I64">I64</a> val</p>
-<p>Public.</p>
+<h3 id="fun-box-time-i64-val">fun box  time(): <a href="../builtin-I64">I64</a> val</h3>
 <p>Return a POSIX time. Treats the date as UTC.</p>
               
             </div>

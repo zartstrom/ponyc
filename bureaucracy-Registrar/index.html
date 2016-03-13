@@ -1084,23 +1084,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#bureaucracy-actor-registrar">bureaucracy &gt;&gt; actor Registrar</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-_fetch">be _fetch()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-remove">be remove()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-update">be update()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-apply">fun apply()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3610,36 +3600,24 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Registrar</p>
-<p>In package "bureaucracy".</p>
+                <h1 id="bureaucracy-actor-registrar">bureaucracy &gt;&gt; actor Registrar</h1>
 <p>Public, default capability tag.</p>
 <p>A Registrar keeps a map of lookup string to anything. Generally, this is used
 to keep a directory of long-lived service-providing actors that can be
 looked up name.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create()</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-_fetch">be _fetch()</h2>
-<p>be _fetch[A: <a href="../builtin-Any">Any</a> tag](key: <a href="../builtin-String">String</a> val, promise: <a href="../promises-Promise">Promise</a>[A tag] tag)</p>
-<p>Private.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-create">new create()</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-_fetch91a-any-tag93key-string-val-promise-promise91a-tag93-tag">be _fetch[A: <a href="../builtin-Any">Any</a> tag](key: <a href="../builtin-String">String</a> val, promise: <a href="../promises-Promise">Promise</a>[A tag] tag)</h3>
 <p>Fulfills or rejects the promise.</p>
-<h2 id="be-remove">be remove()</h2>
-<p>be remove(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-Any">Any</a> tag)</p>
-<p>Public.</p>
+<h3 id="be-removekey-string-val-value-any-tag">be remove(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-Any">Any</a> tag)</h3>
 <p>Remove a mapping. This only takes effect if provided key currently maps to
 the provided value. If the key maps to some other value (perhaps after
 updating), the mapping won't be removed.</p>
-<h2 id="be-update">be update()</h2>
-<p>be update(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-Any">Any</a> tag)</p>
-<p>Public.</p>
+<h3 id="be-updatekey-string-val-value-any-tag">be update(key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-Any">Any</a> tag)</h3>
 <p>Add, or change, a lookup mapping.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-apply">fun apply()</h2>
-<p>fun tag
- apply[optional A: <a href="../builtin-Any">Any</a> tag](key: <a href="../builtin-String">String</a> val): <a href="../promises-Promise">Promise</a>[A tag] tag</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-tag-apply91optional-a-any-tag93key-string-val-promise91a-tag93-tag">fun tag  apply[optional A: <a href="../builtin-Any">Any</a> tag](key: <a href="../builtin-String">String</a> val): <a href="../promises-Promise">Promise</a>[A tag] tag</h3>
 <p>Lookup by name. Returns a promise that will be fulfilled with the mapped
 value if it exists and is a subtype of A. Otherwise, the promise will be
 rejected.</p>

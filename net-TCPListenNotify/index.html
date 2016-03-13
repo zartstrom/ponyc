@@ -2213,15 +2213,9 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
+                <li class="toctree-l3"><a href="#net-interface-tcplistennotify">net &gt;&gt; interface TCPListenNotify</a></li>
                 
-                    <li><a class="toctree-l4" href="#fun-closed">fun closed()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-connected">fun connected()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-listening">fun listening()</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-not_listening">fun not_listening()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3602,31 +3596,18 @@
           <div role="main">
             <div class="section">
               
-                <p>interface TCPListenNotify</p>
-<p>In package "net".</p>
+                <h1 id="net-interface-tcplistennotify">net &gt;&gt; interface TCPListenNotify</h1>
 <p>Public, default capability ref.</p>
 <p>Notifications for TCP listeners.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-closed">fun closed()</h2>
-<p>fun ref
- closed(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-closedlisten-tcplistener-ref-none-val">fun ref  closed(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the listener is closed.</p>
-<h2 id="fun-connected">fun connected()</h2>
-<p>fun ref
- connected(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso^ ?</p>
-<p>Public, may raise an error.</p>
+<h3 id="fun-ref-connectedlisten-tcplistener-ref-tcpconnectionnotify-iso-may-raise-an-error">fun ref  connected(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso^ ?, may raise an error</h3>
 <p>Create a new TCPConnectionNotify to attach to a new TCPConnection for a
 newly established connection to the server.</p>
-<h2 id="fun-listening">fun listening()</h2>
-<p>fun ref
- listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-listeninglisten-tcplistener-ref-none-val">fun ref  listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called when the listener has been bound to an address.</p>
-<h2 id="fun-not_listening">fun not_listening()</h2>
-<p>fun ref
- not_listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</p>
-<p>Public.</p>
+<h3 id="fun-ref-not_listeninglisten-tcplistener-ref-none-val">fun ref  not_listening(listen: <a href="../net-TCPListener">TCPListener</a> ref): <a href="../builtin-None">None</a> val</h3>
 <p>Called if it wasn't possible to bind the listener to an address.</p>
               
             </div>

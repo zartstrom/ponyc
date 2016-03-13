@@ -2347,21 +2347,13 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
+                <li class="toctree-l3"><a href="#nethttp-actor-client">net/http &gt;&gt; actor Client</a></li>
                 
-                    <li><a class="toctree-l4" href="#new-create">new create()</a></li>
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#be-apply">be apply()</a></li>
-                
-                    <li><a class="toctree-l4" href="#be-cancel">be cancel()</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#functions">Functions</a></li>
-                
-                    <li><a class="toctree-l4" href="#fun-_get_client">fun _get_client()</a></li>
+                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
                 
             
             </ul>
@@ -3608,28 +3600,18 @@
           <div role="main">
             <div class="section">
               
-                <p>actor Client</p>
-<p>In package "net/http".</p>
+                <h1 id="nethttp-actor-client">net/http &gt;&gt; actor Client</h1>
 <p>Public, default capability tag.</p>
 <p>Manages a collection of client connections.</p>
-<h1 id="constructors">Constructors</h1>
-<h2 id="new-create">new create()</h2>
-<p>new create(optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</p>
-<p>Public.</p>
-<h1 id="behaviours">Behaviours</h1>
-<h2 id="be-apply">be apply()</h2>
-<p>be apply(request: <a href="../net-http-Payload">Payload</a> val)</p>
-<p>Public.</p>
+<h2 id="constructors">Constructors</h2>
+<h3 id="new-createoptional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val">new create(optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional pipeline: <a href="../builtin-Bool">Bool</a> val)</h3>
+<h2 id="behaviours">Behaviours</h2>
+<h3 id="be-applyrequest-payload-val">be apply(request: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Schedule a request.</p>
-<h2 id="be-cancel">be cancel()</h2>
-<p>be cancel(request: <a href="../net-http-Payload">Payload</a> val)</p>
-<p>Public.</p>
+<h3 id="be-cancelrequest-payload-val">be cancel(request: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Cancel a request.</p>
-<h1 id="functions">Functions</h1>
-<h2 id="fun-_get_client">fun _get_client()</h2>
-<p>fun ref
- _get_client(url: <a href="../net-http-URL">URL</a> val): <a href="../net-http-_ClientConnection">_ClientConnection</a> tag ?</p>
-<p>Private, may raise an error.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="fun-ref-_get_clienturl-url-val-_clientconnection-tag-may-raise-an-error">fun ref  _get_client(url: <a href="../net-http-URL">URL</a> val): <a href="../net-http-_ClientConnection">_ClientConnection</a> tag ?, may raise an error</h3>
 <p>Gets or creates a client for the given URL.</p>
               
             </div>
