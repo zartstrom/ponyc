@@ -3602,9 +3602,9 @@
               
                 <h1 id="signals-package">Signals package</h1>
 <p>The Signals package provides support for handling Unix style signals.
-For each signal that you want to handle, you need to create a SignalHandler
-and a corresponding SignalNotify object. Each SignalHandler runs as it own
-actor and upon receiving the signal will call its corresponding SignalNotify's
+For each signal that you want to handle, you need to create a <code>SignalHandler</code>
+and a corresponding <code>SignalNotify</code> object. Each SignalHandler runs as it own
+actor and upon receiving the signal will call its corresponding <code>SignalNotify</code>'s
 apply method.</p>
 <h2 id="example-program">Example program</h2>
 <p>The following program will listen for the TERM signal and output a message to
@@ -3630,12 +3630,12 @@ class TermHandler is SignalNotify
 </code></pre>
 
 <h2 id="signal-portability">Signal portability</h2>
-<p>The Sig primitive provides support for portable signal handling across Linux,
+<p>The <code>Sig</code> primitive provides support for portable signal handling across Linux,
 FreeBSD and OSX. Signals are not supported on Windows and attempting to use them
 will cause a compilation error.</p>
 <h2 id="shutting-down-handlers">Shutting down handlers</h2>
-<p>Unlike a TCPConnection and other forms of input receiving, creating a
-SignalHandler will not keep your program running. As such, you are not required
+<p>Unlike a <code>TCPConnection</code> and other forms of input receiving, creating a
+<code>SignalHandler</code> will not keep your program running. As such, you are not required
 to call <code>dispose</code> on your signal handlers in order to shutdown your program.</p>
               
             </div>
