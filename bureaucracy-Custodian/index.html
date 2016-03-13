@@ -1070,6 +1070,9 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#example-program">Example program</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#constructors">Constructors</a></li>
                 
                     <li><a class="toctree-l4" href="#new-create">new create()</a></li>
@@ -3610,6 +3613,35 @@
 <p>Public, default capability tag.</p>
 <p>A Custodian keeps a set of actors to dispose. When the Custodian is disposed,
 it disposes of the actors in its set and then clears the set.</p>
+<h2 id="example-program">Example program</h2>
+<p>Imagine you have a program with 3 actors that you need to shutdown when it
+receives a TERM signal. We can set up a Custodian that knows about each
+of our actors and when a TERM signal is received, is disposed of.</p>
+<pre><code>use &quot;bureaucracy&quot;
+use &quot;signals&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    let actor1 = Actor1
+    let actor2 = Actor2
+    let actor3 = Actor3
+
+    let custodian = Custodian
+    custodian(actor1)(actor2)(actor2)
+
+    SignalHandler(TermHandler(custodian), Sig.term())
+
+class TermHandler is SignalNotify
+  let _custodian: Custodian
+
+  new iso create(custodian: Custodian) =&gt;
+    _custodian = custodian
+
+  fun ref apply(count: U32): Bool =&gt;
+    _custodian.dispose()
+    true
+</code></pre>
+
 <h1 id="constructors">Constructors</h1>
 <h2 id="new-create">new create()</h2>
 <p>new create()</p>

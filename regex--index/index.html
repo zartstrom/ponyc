@@ -3200,6 +3200,11 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#regex-package">Regex package</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-program">Example program</a></li>
+                
+            
             </ul>
         
     </li>
@@ -3591,7 +3596,38 @@
           <div role="main">
             <div class="section">
               
-                <p>No package doc string provided for regex.</p>
+                <h1 id="regex-package">Regex package</h1>
+<p>The Regex package provides support for Perl compatible regular expressions.</p>
+<h2 id="example-program">Example program</h2>
+<pre><code>use &quot;regex&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    try
+      let r = Regex(&quot;\\d+&quot;)
+
+      if r == &quot;1234&quot; then
+        env.out.print(&quot;1234 is a series of numbers&quot;)
+      end
+
+      if r != &quot;Not a number&quot; then
+        env.out.print(&quot;'Not a number' is not a series of numbers&quot;)
+      end
+
+      let matched = r(&quot;There are 02 numbers in here.&quot;)
+      env.out.print(matched(0) + &quot; was matched&quot;)
+      env.out.print(&quot;The match started at &quot; + matched.start_pos().string())
+      env.out.print(&quot;The match ended at &quot; + matched.end_pos().string())
+    end
+
+    try
+      let r = Regex(&quot;(\\d+)?\\.(\\d+)?&quot;)
+      let matched = r(&quot;123.456&quot;)
+      env.out.print(matched(0) + &quot; was matched&quot;)
+      env.out.print(&quot;The first match was &quot; + matched(1))
+      env.out.print(&quot;The second match was &quot; + matched(2))
+    end
+</code></pre>
               
             </div>
           </div>
