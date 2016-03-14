@@ -12997,7 +12997,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nFunctions\n\n\nfun ref  \nappend\n(seq: \nReadSeq\n[A] box, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$55\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$56\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \nexists\n(f: \n$4$58\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$59\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \nfilter\n(f: \n$4$49\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$50\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$46\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$47\n[A, B] box, acc: \nList\n[\nList\n[B] ref] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \nfold\n[B: B](f: \n$4$52\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$53\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$43\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$61\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$67\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nFunctions\n\n\nfun ref  \nappend\n(seq: \nReadSeq\n[A] box, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$41\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \nexists\n(f: \n$4$44\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \nfilter\n(f: \n$4$35\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$36\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$32\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$33\n[A, B] box, acc: \nList\n[\nList\n[B] ref] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \nfold\n[B: B](f: \n$4$38\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$39\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$29\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$30\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$47\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$53\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.", 
             "title": "class List"
         }, 
         {
@@ -13081,54 +13081,54 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45591a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44191a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$55[A] box): Bool val"
+            "title": "fun box  every(f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44291a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$56[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$42[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45891a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44491a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$58[A] box): Bool val"
+            "title": "fun box  exists(f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45991a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44591a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$59[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$45[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44991a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43591a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$49[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$35[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-45091a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43691a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$50[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$36[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44691a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43291a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$46[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$32[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44791a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43391a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$47[A, B] box, acc: List[List[B] ref] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$33[A, B] box, acc: List[List[B] ref] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45291a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43891a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$52[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$38[A, B] box, acc: B): B"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45391a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43991a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$53[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$39[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13146,14 +13146,14 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44391a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42991a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$43[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$29[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44491a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-43091a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$44[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$30[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13161,9 +13161,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-46191a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44791a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$61[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$47[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13251,9 +13251,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45391a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$67[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$53[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
