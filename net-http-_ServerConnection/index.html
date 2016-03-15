@@ -2575,9 +2575,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@
 <p>Manages a stream of requests to a server, ordering the responses.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createhandler-requesthandler-val-logger-logger-val-conn-tcpconnection-tag-client_ip-string-val">new <strong>create</strong>(handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, logger: <a href="../net-http-Logger">Logger</a> val, conn: <a href="../net-TCPConnection">TCPConnection</a> tag, client_ip: <a href="../builtin-String">String</a> val)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-answerrequest-payload-val-response-payload-val">be <strong>answer</strong>(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val)</h3>
 <p>Associate a response with the given request and send responses in the
 correct order.</p>
@@ -3613,11 +3615,12 @@ correct order.</p>
 <p>Dispatch requests. We can have many safe requests dispatched at once, or a
 single unsafe request, since the client may expect an initial unsafe
 request to alter the answer to following requests.</p>
-<h2 id="functions">Functions</h2>
-<h3 id="fun-ref-dispatchpending-none-val">fun ref  <strong><em>dispatch</em>pending</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>If we have pending requests, dispatch as many as we can.</p>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-is_safemethod-string-val-bool-val">fun box  <strong>is_safe</strong>(method: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true for a safe request method, false otherwise.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-ref-dispatchpending-none-val">fun ref  <strong><em>dispatch</em>pending</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>If we have pending requests, dispatch as many as we can.</p>
 <h3 id="fun-ref-_sendrequest-payload-val-response-payload-val-none-val">fun ref  <strong>_send</strong>(request: <a href="../net-http-Payload">Payload</a> val, response: <a href="../net-http-Payload">Payload</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Send a single response.</p>
 <h3 id="fun-ref-sendresponses-none-val">fun ref  <strong><em>send</em>responses</strong>(): <a href="../builtin-None">None</a> val</h3>

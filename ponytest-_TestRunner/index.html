@@ -3068,9 +3068,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,9 +3607,7 @@
 <p>Per unit test actor that runs the test and keeps the log for it.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createponytest-ponytest-tag-id-usize-val-test-unittest-iso-group-_group-tag-verbose-bool-val-env-env-val-timers-timers-tag">new <strong>create</strong>(ponytest: <a href="../ponytest-PonyTest">PonyTest</a> tag, id: <a href="../builtin-USize">USize</a> val, test: <a href="../ponytest-UnitTest">UnitTest</a> iso, group: <a href="../ponytest-_Group">_Group</a> tag, verbose: <a href="../builtin-Bool">Bool</a> val, env: <a href="../builtin-Env">Env</a> val, timers: <a href="../time-Timers">Timers</a> tag)</h3>
-<h2 id="behaviours">Behaviours</h2>
-<h3 id="be-_close">be <strong>_close</strong>()</h3>
-<p>Close down this test and send a report.</p>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-completesuccess-bool-val">be <strong>complete</strong>(success: <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>MUST be called by each long test to indicate the test has finished, unless
 a timeout occurs.</p>
@@ -3617,9 +3617,6 @@ failure, regardless of the value of this parameter.</p>
 <p>Once this is called tear_down() may be called at any time.</p>
 <h3 id="be-failmsg-string-val">be <strong>fail</strong>(msg: <a href="../builtin-String">String</a> val)</h3>
 <p>Flag the test as having failed.</p>
-<h3 id="be-_finished">be <strong>_finished</strong>()</h3>
-<p>Called when the test function completes.
-If long_test() is going to be called, it must have been by now.</p>
 <h3 id="be-logmsg-string-val-verbose-bool-val">be <strong>log</strong>(msg: <a href="../builtin-String">String</a> val, verbose: <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>Log the given message.</p>
 <p>The verbose parameter allows messages to be printed only when the --verbose
@@ -3630,9 +3627,15 @@ concurrent tests.</p>
 <p>The test has been flagged as a long test.</p>
 <h3 id="be-run">be <strong>run</strong>()</h3>
 <p>Run our test.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
+<h3 id="be-_close">be <strong>_close</strong>()</h3>
+<p>Close down this test and send a report.</p>
+<h3 id="be-_finished">be <strong>_finished</strong>()</h3>
+<p>Called when the test function completes.
+If long_test() is going to be called, it must have been by now.</p>
 <h3 id="be-_timeout">be <strong>_timeout</strong>()</h3>
 <p>Called when the long test timeout expires.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_logmsg-string-val-verbose-bool-val-none-val">fun ref  <strong>_log</strong>(msg: <a href="../builtin-String">String</a> val, verbose: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Write the given message direct to our log.</p>
 <h3 id="fun-ref-teardown-none-val">fun ref  <strong><em>tear</em>down</strong>(): <a href="../builtin-None">None</a> val</h3>

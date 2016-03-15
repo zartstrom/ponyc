@@ -3417,9 +3417,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@
 <p>Handles ANSI escape codes from stdin.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createnotify-ansinotify-iso-source-disposableactor-tag-optional-timers-timers-tag">new <strong>create</strong>(notify: <a href="../term-ANSINotify">ANSINotify</a> iso, source: <a href="../builtin-DisposableActor">DisposableActor</a> tag, optional timers: <a href="../time-Timers">Timers</a> tag)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-applydata-array91u8-val93-iso">be <strong>apply</strong>(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso)</h3>
 <p>Receives input from stdin.</p>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
@@ -3613,10 +3615,11 @@
 our source.</p>
 <h3 id="be-promptvalue-string-val">be <strong>prompt</strong>(value: <a href="../builtin-String">String</a> val)</h3>
 <p>Pass a prompt along to the notifier.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
 <h3 id="be-_timeout">be <strong>_timeout</strong>()</h3>
 <p>Our timer since receiving an ESC has expired. Send the buffered data as if
 it was not an escape sequence.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_delete-none-val">fun ref  <strong>_delete</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Delete key.</p>
 <h3 id="fun-ref-_down-none-val">fun ref  <strong>_down</strong>(): <a href="../builtin-None">None</a> val</h3>

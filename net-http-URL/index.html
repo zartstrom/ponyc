@@ -2612,7 +2612,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3619,7 +3621,7 @@ values.</p>
 <h3 id="new-buildfrom-string-val-optional-percent_encoded-bool-val">new <strong>build</strong>(from: <a href="../builtin-String">String</a> val, optional percent_encoded: <a href="../builtin-Bool">Bool</a> val) ?</h3>
 <h3 id="new-create">new <strong>create</strong>()</h3>
 <h3 id="new-validfrom-string-val">new <strong>valid</strong>(from: <a href="../builtin-String">String</a> val) ?</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-default_port-u16-val">fun box  <strong>default_port</strong>(): <a href="../builtin-U16">U16</a> val</h3>
 <p>Report the default port for our scheme.
 Returns 0 for unrecognised schemes.</p>
@@ -3628,6 +3630,9 @@ Returns 0 for unrecognised schemes.</p>
 <h3 id="fun-val-jointhat-url-val-url-val">fun val  <strong>join</strong>(that: <a href="../net-http-URL">URL</a> val): <a href="../net-http-URL">URL</a> val</h3>
 <p>Using this as a base URL, concatenate with another, possibly relative, URL
 in the same way a browser does for a link.</p>
+<h3 id="fun-box-stringoptional-fmt-formatdefault-val-optional-prefix-prefixdefault-val-optional-prec-usize-val-optional-width-usize-val-optional-align-alignleft-val-alignright-val-aligncenter-val-optional-fill-u32-val-string-iso">fun box  <strong>string</strong>(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</h3>
+<p>Combine the components into a string.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_parsefrom-string-val-none-val">fun ref  <strong>_parse</strong>(from: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>Parse the given string as a URL.
 Raises an error on invalid port number.</p>
@@ -3648,8 +3653,6 @@ The offset of the part following the scheme is returned.</p>
 separator.
 If the string does not contain the separator then the first resulting
 string is the whole src and the second is empty.</p>
-<h3 id="fun-box-stringoptional-fmt-formatdefault-val-optional-prefix-prefixdefault-val-optional-prec-usize-val-optional-width-usize-val-optional-align-alignleft-val-alignright-val-aligncenter-val-optional-fill-u32-val-string-iso">fun box  <strong>string</strong>(optional fmt: <a href="../builtin-FormatDefault">FormatDefault</a> val, optional prefix: <a href="../builtin-PrefixDefault">PrefixDefault</a> val, optional prec: <a href="../builtin-USize">USize</a> val, optional width: <a href="../builtin-USize">USize</a> val, optional align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), optional fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-String">String</a> iso^</h3>
-<p>Combine the components into a string.</p>
               
             </div>
           </div>

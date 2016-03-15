@@ -2175,7 +2175,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,13 +3605,11 @@
 <p>Store network data and provide a parsing interface.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-appenddata-array91u8-val93-val-buffer-ref">fun ref  <strong>append</strong>(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val): <a href="../net-Buffer">Buffer</a> ref^</h3>
 <p>Add a chunk of data.</p>
 <h3 id="fun-ref-blocklen-usize-val-array91u8-val93-iso">fun ref  <strong>block</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?</h3>
 <p>Return a block as a contiguous chunk of memory.</p>
-<h3 id="fun-ref-_byte-u8-val">fun ref  <strong>_byte</strong>(): <a href="../builtin-U8">U8</a> val ?</h3>
-<p>Get a single byte.</p>
 <h3 id="fun-ref-clear-buffer-ref">fun ref  <strong>clear</strong>(): <a href="../net-Buffer">Buffer</a> ref^</h3>
 <p>Discard all pending data.</p>
 <h3 id="fun-ref-f32_be-f32-val">fun ref  <strong>f32_be</strong>(): <a href="../builtin-F32">F32</a> val ?</h3>
@@ -3641,12 +3641,6 @@
 <h3 id="fun-ref-line-string-val">fun ref  <strong>line</strong>(): <a href="../builtin-String">String</a> val ?</h3>
 <p>Return a \n or \r\n terminated line as a string. The newline is not
 included in the returned string, but it is removed from the network buffer.</p>
-<h3 id="fun-ref-linelength-usize-val">fun ref  <strong><em>line</em>length</strong>(): <a href="../builtin-USize">USize</a> val ?</h3>
-<p>Get the length of a pending line. Raise an error if there is no pending
-line.</p>
-<h3 id="fun-box-peekbyteoptional-offset-usize-val-u8-val">fun box  <strong><em>peek</em>byte</strong>(optional offset: <a href="../builtin-USize">USize</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
-<p>Get the byte at the given offset without moving the cursor forward.
-Raise an error if the given offset is not yet available.</p>
 <h3 id="fun-box-peek_f32_beoptional-offset-usize-val-f32-val">fun box  <strong>peek_f32_be</strong>(optional offset: <a href="../builtin-USize">USize</a> val): <a href="../builtin-F32">F32</a> val ?</h3>
 <p>Peek at a big-endian F32.</p>
 <h3 id="fun-box-peek_f32_leoptional-offset-usize-val-f32-val">fun box  <strong>peek_f32_le</strong>(optional offset: <a href="../builtin-USize">USize</a> val): <a href="../builtin-F32">F32</a> val ?</h3>
@@ -3714,6 +3708,15 @@ data.</p>
 <p>Get a little-endian U64.</p>
 <h3 id="fun-ref-u8-u8-val">fun ref  <strong>u8</strong>(): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Get a U8. Raise an error if there isn't enough data.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-ref-_byte-u8-val">fun ref  <strong>_byte</strong>(): <a href="../builtin-U8">U8</a> val ?</h3>
+<p>Get a single byte.</p>
+<h3 id="fun-ref-linelength-usize-val">fun ref  <strong><em>line</em>length</strong>(): <a href="../builtin-USize">USize</a> val ?</h3>
+<p>Get the length of a pending line. Raise an error if there is no pending
+line.</p>
+<h3 id="fun-box-peekbyteoptional-offset-usize-val-u8-val">fun box  <strong><em>peek</em>byte</strong>(optional offset: <a href="../builtin-USize">USize</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
+<p>Get the byte at the given offset without moving the cursor forward.
+Raise an error if the given offset is not yet available.</p>
               
             </div>
           </div>

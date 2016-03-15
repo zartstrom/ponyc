@@ -624,7 +624,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3608,7 +3610,22 @@ functions on a Pointer[A] are private to maintain memory safety.</p>
 <p>Space for len instances of A.</p>
 <h3 id="new-create">new <strong>create</strong>()</h3>
 <p>A null pointer.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
+<h3 id="fun-tag-eqthat-pointer91a93-tag-bool-val">fun tag  <strong>eq</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Return true if this address is that address.</p>
+<h3 id="fun-tag-gethat-pointer91a93-tag-bool-val">fun tag  <strong>ge</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-gtthat-pointer91a93-tag-bool-val">fun tag  <strong>gt</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-hash-u64-val">fun tag  <strong>hash</strong>(): <a href="../builtin-U64">U64</a> val</h3>
+<p>Returns a hash of the address.</p>
+<h3 id="fun-tag-is_null-bool-val">fun tag  <strong>is_null</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Return true for a null pointer, false for anything else.</p>
+<h3 id="fun-tag-lethat-pointer91a93-tag-bool-val">fun tag  <strong>le</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-ltthat-pointer91a93-tag-bool-val">fun tag  <strong>lt</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Return true if this address is less than that address.</p>
+<h3 id="fun-tag-nethat-pointer91a93-tag-bool-val">fun tag  <strong>ne</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-tag-usize-usize-val">fun tag  <strong>usize</strong>(): <a href="../builtin-USize">USize</a> val</h3>
+<p>Convert the pointer into an integer.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-box-_applyi-usize-val-this-a">fun box  <strong>_apply</strong>(i: <a href="../builtin-USize">USize</a> val): this-&gt;A</h3>
 <p>Retrieve index i.</p>
 <h3 id="fun-box-copytothat-pointer91this-a93-tag-n-usize-val-this-pointer91a93-ref">fun box  <strong><em>copy</em>to</strong>(that: <a href="../builtin-Pointer">Pointer</a>[this-&gt;A!] tag, n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
@@ -3617,22 +3634,10 @@ functions on a Pointer[A] are private to maintain memory safety.</p>
 <p>Delete n elements from the head of pointer, compact remaining elements of
 the underlying array. The array length before this should be n + len.
 Returns the first deleted element.</p>
-<h3 id="fun-tag-eqthat-pointer91a93-tag-bool-val">fun tag  <strong>eq</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Return true if this address is that address.</p>
-<h3 id="fun-tag-gethat-pointer91a93-tag-bool-val">fun tag  <strong>ge</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-tag-gtthat-pointer91a93-tag-bool-val">fun tag  <strong>gt</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-tag-hash-u64-val">fun tag  <strong>hash</strong>(): <a href="../builtin-U64">U64</a> val</h3>
-<p>Returns a hash of the address.</p>
 <h3 id="fun-ref-_insertn-usize-val-len-usize-val-pointer91a93-ref">fun ref  <strong>_insert</strong>(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Creates space for n new elements at the head, moving following elements.
 The array length before this should be len, and the available space should
 be at least n + len.</p>
-<h3 id="fun-tag-is_null-bool-val">fun tag  <strong>is_null</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Return true for a null pointer, false for anything else.</p>
-<h3 id="fun-tag-lethat-pointer91a93-tag-bool-val">fun tag  <strong>le</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-tag-ltthat-pointer91a93-tag-bool-val">fun tag  <strong>lt</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Return true if this address is less than that address.</p>
-<h3 id="fun-tag-nethat-pointer91a93-tag-bool-val">fun tag  <strong>ne</strong>(that: <a href="../builtin-Pointer">Pointer</a>[A] tag): <a href="../builtin-Bool">Bool</a> val</h3>
 <h3 id="fun-box-_offsetn-usize-val-this-pointer91a93-ref">fun box  <strong>_offset</strong>(n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Return a pointer to the n-th element.</p>
 <h3 id="fun-tag-offsettagn-usize-val-pointer91a93-tag">fun tag  <strong><em>offset</em>tag</strong>(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] tag</h3>
@@ -3641,8 +3646,6 @@ be at least n + len.</p>
 <p>Keep the contents, but reserve space for len instances of A.</p>
 <h3 id="fun-ref-_updatei-usize-val-value-a-a">fun ref  <strong>_update</strong>(i: <a href="../builtin-USize">USize</a> val, value: A!): A^</h3>
 <p>Set index i and return the previous value.</p>
-<h3 id="fun-tag-usize-usize-val">fun tag  <strong>usize</strong>(): <a href="../builtin-USize">USize</a> val</h3>
-<p>Convert the pointer into an integer.</p>
               
             </div>
           </div>

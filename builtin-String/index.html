@@ -729,7 +729,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3613,12 +3615,11 @@ a pointer.</p>
 return null-terminated pony_alloc'd character arrays.</p>
 <h3 id="new-from_utf32value-u32-val">new <strong>from_utf32</strong>(value: <a href="../builtin-U32">U32</a> val)</h3>
 <p>Create a UTF-8 string from a single UTF-32 code point.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-addthat-string-box-string-val">fun box  <strong>add</strong>(that: <a href="../builtin-String">String</a> box): <a href="../builtin-String">String</a> val</h3>
 <p>Return a string that is a concatenation of this and that.</p>
 <h3 id="fun-ref-appendseq-readseq91u8-val93-box-byteseq-box-optional-offset-usize-val-optional-len-usize-val-string-ref">fun ref  <strong>append</strong>(seq: (<a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../builtin-U8">U8</a> val] box | <a href="../builtin-ByteSeq">ByteSeq</a> box), optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Append the elements from a sequence, starting from the given offset.</p>
-<h3 id="fun-iso-_appends-string-box-string-iso">fun iso  <strong>_append</strong>(s: <a href="../builtin-String">String</a> box): <a href="../builtin-String">String</a> iso^</h3>
 <h3 id="fun-box-applyi-usize-val-u8-val">fun box  <strong>apply</strong>(i: <a href="../builtin-USize">USize</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Returns the i-th byte. Raise an error if the index is out of bounds.</p>
 <h3 id="fun-box-ats-string-box-optional-offset-isize-val-bool-val">fun box  <strong>at</strong>(s: <a href="../builtin-String">String</a> box, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
@@ -3641,8 +3642,6 @@ offsets. Index range [<code>from</code> .. <code>to</code>) is half-open.</p>
 <h3 id="fun-box-counts-string-box-optional-offset-isize-val-usize-val">fun box  <strong>count</strong>(s: <a href="../builtin-String">String</a> box, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-USize">USize</a> val</h3>
 <p>Counts the non-overlapping occurrences of s in the string.</p>
 <h3 id="fun-box-cstring-pointer91u8-val93-tag">fun box  <strong>cstring</strong>(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] tag</h3>
-<p>Returns a C compatible pointer to a null terminated string.</p>
-<h3 id="fun-box-_cstring-pointer91u8-val93-box">fun box  <strong>_cstring</strong>(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] box</h3>
 <p>Returns a C compatible pointer to a null terminated string.</p>
 <h3 id="fun-box-cutfrom-isize-val-optional-to-isize-val-string-iso">fun box  <strong>cut</strong>(from: <a href="../builtin-ISize">ISize</a> val, optional to: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Returns a version of the string with the given range deleted.
@@ -3709,13 +3708,6 @@ since no characters have been used.
 An integer out of range for the target type throws an error.
 A leading minus is allowed for signed integer types.
 Underscore characters are allowed throughout the integer and are ignored.</p>
-<h3 id="fun-box-readint_base91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-index-usize-val-a-val-usize-val">fun box  <strong><em>read</em>int_base</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val, index: <a href="../builtin-USize">USize</a> val): (A val , <a href="../builtin-USize">USize</a> val)</h3>
-<p>Determine the base of an integer starting at the specified index.
-If a non-0 base is given use that. If given base is 0 read the base
-specifying prefix, if any, to detect base 2 or 16.
-If no base is specified and no prefix is found default to decimal.
-Note that a leading 0 does NOT imply octal.
-Report the base found and the number of characters in the prefix.</p>
 <h3 id="fun-ref-recalc-string-ref">fun ref  <strong>recalc</strong>(): <a href="../builtin-String">String</a> ref^</h3>
 <p>Recalculates the string length. This is only needed if the string is
 changed via an FFI call. If the string is not null terminated at the
@@ -3742,8 +3734,6 @@ Raise an error if there is no n-th occurence of s or s is empty.</p>
 trailing whitespace is removed.</p>
 <h3 id="fun-box-runes-stringrunes-ref">fun box  <strong>runes</strong>(): <a href="../builtin-StringRunes">StringRunes</a> ref^</h3>
 <p>Return an iterator over the codepoints in the string.</p>
-<h3 id="fun-ref-_seti-usize-val-value-u8-val-u8-val">fun ref  <strong>_set</strong>(i: <a href="../builtin-USize">USize</a> val, value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val</h3>
-<p>Unsafe update, used internally.</p>
 <h3 id="fun-ref-shift-u8-val">fun ref  <strong>shift</strong>(): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Removes a byte from the beginning of the string.</p>
 <h3 id="fun-box-size-usize-val">fun box  <strong>size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
@@ -3762,10 +3752,6 @@ example, <code>"1,,2".split(",") =&gt; ["1", "", "2"]</code>.</p>
 <h3 id="fun-box-substringfrom-isize-val-optional-to-isize-val-string-iso">fun box  <strong>substring</strong>(from: <a href="../builtin-ISize">ISize</a> val, optional to: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> iso^</h3>
 <p>Returns a substring. Index range [<code>from</code> .. <code>to</code>) is half-open.
 Returns an empty string if nothing is in the range.</p>
-<h3 id="fun-box-toint91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-a-val">fun box  <strong><em>to</em>int</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val): A val ?</h3>
-<p>Convert the <em>whole</em> string to the specified type.
-If there are any other characters in the string, or the integer found is
-out of range for the target type then an error is thrown.</p>
 <h3 id="fun-ref-truncatelen-usize-val-string-ref">fun ref  <strong>truncate</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Truncates the string at the minimum of len and space. Ensures there is a
 null terminator. Does not check for null terminators inside the string.</p>
@@ -3796,6 +3782,23 @@ replacement character) and a length of one. Raise an error if the offset is
 out of bounds.</p>
 <h3 id="fun-box-values-stringbytes-ref">fun box  <strong>values</strong>(): <a href="../builtin-StringBytes">StringBytes</a> ref^</h3>
 <p>Return an iterator over the bytes in the string.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-iso-_appends-string-box-string-iso">fun iso  <strong>_append</strong>(s: <a href="../builtin-String">String</a> box): <a href="../builtin-String">String</a> iso^</h3>
+<h3 id="fun-box-_cstring-pointer91u8-val93-box">fun box  <strong>_cstring</strong>(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] box</h3>
+<p>Returns a C compatible pointer to a null terminated string.</p>
+<h3 id="fun-box-readint_base91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-index-usize-val-a-val-usize-val">fun box  <strong><em>read</em>int_base</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val, index: <a href="../builtin-USize">USize</a> val): (A val , <a href="../builtin-USize">USize</a> val)</h3>
+<p>Determine the base of an integer starting at the specified index.
+If a non-0 base is given use that. If given base is 0 read the base
+specifying prefix, if any, to detect base 2 or 16.
+If no base is specified and no prefix is found default to decimal.
+Note that a leading 0 does NOT imply octal.
+Report the base found and the number of characters in the prefix.</p>
+<h3 id="fun-ref-_seti-usize-val-value-u8-val-u8-val">fun ref  <strong>_set</strong>(i: <a href="../builtin-USize">USize</a> val, value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val</h3>
+<p>Unsafe update, used internally.</p>
+<h3 id="fun-box-toint91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-a-val">fun box  <strong><em>to</em>int</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val): A val ?</h3>
+<p>Convert the <em>whole</em> string to the specified type.
+If there are any other characters in the string, or the integer found is
+out of range for the target type then an error is thrown.</p>
               
             </div>
           </div>

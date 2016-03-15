@@ -1237,7 +1237,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,7 +3605,7 @@
 <p>A node in a list.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createoptional-item-a-none-val">new <strong>create</strong>(optional item: (A | <a href="../builtin-None">None</a> val))</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-appendthat-listnode91a93-ref-listnode91a93-ref">fun ref  <strong>append</strong>(that: <a href="../collections-ListNode">ListNode</a>[A] ref): <a href="../collections-ListNode">ListNode</a>[A] ref^</h3>
 <p>Append a node to this one. If <code>that</code> is already in a list, it is removed
 before it is appended.</p>
@@ -3624,11 +3626,12 @@ before it is prepended.</p>
 <p>Return the previous node.</p>
 <h3 id="fun-ref-remove-listnode91a93-ref">fun ref  <strong>remove</strong>(): <a href="../collections-ListNode">ListNode</a>[A] ref^</h3>
 <p>Remove a node from a list.</p>
-<h3 id="fun-ref-setlistlist-list91a93-ref-listnode91a93-ref">fun ref  <strong><em>set</em>list</strong>(list: <a href="../collections-List">List</a>[A] ref): <a href="../collections-ListNode">ListNode</a>[A] ref^</h3>
-<p>Make this node the only node on the given list.</p>
 <h3 id="fun-ref-updatevalue-a-none-val-a">fun ref  <strong>update</strong>(value: (A | <a href="../builtin-None">None</a> val)): A^ ?</h3>
 <p>Replace the item and return the previous one. Raise an error if we have no
 previous value.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-ref-setlistlist-list91a93-ref-listnode91a93-ref">fun ref  <strong><em>set</em>list</strong>(list: <a href="../collections-List">List</a>[A] ref): <a href="../collections-ListNode">ListNode</a>[A] ref^</h3>
+<p>Make this node the only node on the given list.</p>
               
             </div>
           </div>

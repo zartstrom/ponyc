@@ -3049,7 +3049,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3619,7 +3621,7 @@ It is intended to aid identifying what failed.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-_createrunner-_testrunner-tag-env-env-val">new <strong>_create</strong>(runner: <a href="../ponytest-_TestRunner">_TestRunner</a> tag, env': <a href="../builtin-Env">Env</a> val)</h3>
 <p>Create a new TestHelper.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-assert_array_eq91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val93-read93expect-readseq91a-read93-box-actual-readseq91a-read93-box-optional-msg-string-val-optional-loc-sourceloc-val-bool-val">fun box  <strong>assert_array_eq</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] #read)](expect: <a href="../builtin-ReadSeq">ReadSeq</a>[A #read] box, actual: <a href="../builtin-ReadSeq">ReadSeq</a>[A #read] box, optional msg: <a href="../builtin-String">String</a> val, optional loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Assert that the contents of the 2 given ReadSeqs are equal.</p>
 <h3 id="fun-box-assert_array_eq_unordered91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val93-read93expect-readseq91a-read93-box-actual-readseq91a-read93-box-optional-msg-string-val-optional-loc-sourceloc-val-bool-val">fun box  <strong>assert_array_eq_unordered</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] #read)](expect: <a href="../builtin-ReadSeq">ReadSeq</a>[A #read] box, actual: <a href="../builtin-ReadSeq">ReadSeq</a>[A #read] box, optional msg: <a href="../builtin-String">String</a> val, optional loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
@@ -3638,10 +3640,6 @@ It is intended to aid identifying what failed.</p>
 <p>Assert that the 2 given expressions are not equal.</p>
 <h3 id="fun-box-assert_trueactual-bool-val-optional-msg-string-val-optional-loc-sourceloc-val-bool-val">fun box  <strong>assert_true</strong>(actual: <a href="../builtin-Bool">Bool</a> val, optional msg: <a href="../builtin-String">String</a> val, optional loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Assert that the given expression is true.</p>
-<h3 id="fun-box-checkeq91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val9393check-string-val-expect-a-read-actual-a-read-msg-string-val-loc-sourceloc-val-bool-val">fun box  <strong><em>check</em>eq</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val])](check: <a href="../builtin-String">String</a> val, expect: A #read, actual: A #read, msg: <a href="../builtin-String">String</a> val, loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Check that the 2 given expressions are equal.</p>
-<h3 id="fun-box-checkne91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val9393check-string-val-not_expect-a-read-actual-a-read-msg-string-val-loc-sourceloc-val-bool-val">fun box  <strong><em>check</em>ne</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val])](check: <a href="../builtin-String">String</a> val, not_expect: A #read, actual: A #read, msg: <a href="../builtin-String">String</a> val, loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Check that the 2 given expressions are not equal.</p>
 <h3 id="fun-box-completesuccess-bool-val-none-val">fun box  <strong>complete</strong>(success: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>MUST be called by each long test to indicate the test has finished, unless
 a timeout occurs.</p>
@@ -3651,7 +3649,6 @@ value of this parameter.</p>
 <p>Once this is called tear_down() may be called at any time.</p>
 <h3 id="fun-box-failoptional-msg-string-val-none-val">fun box  <strong>fail</strong>(optional msg: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Flag the test as having failed.</p>
-<h3 id="fun-box-formatlocloc-sourceloc-val-string-val">fun box  <strong><em>format</em>loc</strong>(loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-String">String</a> val</h3>
 <h3 id="fun-box-logmsg-string-val-optional-verbose-bool-val-none-val">fun box  <strong>log</strong>(msg: <a href="../builtin-String">String</a> val, optional verbose: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Log the given message.</p>
 <p>The verbose parameter allows messages to be printed only when the --verbose
@@ -3666,6 +3663,12 @@ test function exits.
 Once this function is called, complete() must be called to finish the test,
 unless a timeout occurs.
 The timeout is specified in nanseconds.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-checkeq91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val9393check-string-val-expect-a-read-actual-a-read-msg-string-val-loc-sourceloc-val-bool-val">fun box  <strong><em>check</em>eq</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val])](check: <a href="../builtin-String">String</a> val, expect: A #read, actual: A #read, msg: <a href="../builtin-String">String</a> val, loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Check that the 2 given expressions are equal.</p>
+<h3 id="fun-box-checkne91a-equatable91a-read93-read-stringable91formatdefault-val-prefixdefault-val9393check-string-val-not_expect-a-read-actual-a-read-msg-string-val-loc-sourceloc-val-bool-val">fun box  <strong><em>check</em>ne</strong>[A: (<a href="../builtin-Equatable">Equatable</a>[A #read] #read &amp; <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val])](check: <a href="../builtin-String">String</a> val, not_expect: A #read, actual: A #read, msg: <a href="../builtin-String">String</a> val, loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Check that the 2 given expressions are not equal.</p>
+<h3 id="fun-box-formatlocloc-sourceloc-val-string-val">fun box  <strong><em>format</em>loc</strong>(loc: <a href="../builtin-SourceLoc">SourceLoc</a> val): <a href="../builtin-String">String</a> val</h3>
 <h3 id="fun-box-printarray91a-stringable91formatdefault-val-prefixdefault-val93-read93array-readseq91a-read93-box-string-val">fun box  <strong><em>print</em>array</strong>[A: <a href="../builtin-Stringable">Stringable</a>[<a href="../builtin-FormatDefault">FormatDefault</a> val, <a href="../builtin-PrefixDefault">PrefixDefault</a> val] #read](array: <a href="../builtin-ReadSeq">ReadSeq</a>[A #read] box): <a href="../builtin-String">String</a> val</h3>
 <p>Generate a printable string of the contents of the given readseq to use in
 error messages.</p>

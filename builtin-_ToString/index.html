@@ -757,7 +757,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,13 +3605,14 @@
 <p>Worker type providing to string conversions for numbers.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-eqthat-_tostring-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-nethat-_tostring-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-box-extenddigitss-string-ref-digits-usize-val-none-val">fun box  <strong><em>extend</em>digits</strong>(s: <a href="../builtin-String">String</a> ref, digits: <a href="../builtin-USize">USize</a> val): <a href="../builtin-None">None</a> val</h3>
 <h3 id="fun-box-_f64x-f64-val-optional-fmt-formatsettings91formatdefault-val-formatexp-val-formatexplarge-val-formatfix-val-formatfixlarge-val-formatgeneral-val-formatgenerallarge-val-prefixdefault-val-prefixspace-val-prefixsign-val93-box-string-iso">fun box  <strong>_f64</strong>(x: <a href="../builtin-F64">F64</a> val, optional fmt: <a href="../builtin-FormatSettings">FormatSettings</a>[((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatExp">FormatExp</a> val) | <a href="../builtin-FormatExpLarge">FormatExpLarge</a> val) | <a href="../builtin-FormatFix">FormatFix</a> val) | <a href="../builtin-FormatFixLarge">FormatFixLarge</a> val) | <a href="../builtin-FormatGeneral">FormatGeneral</a> val) | <a href="../builtin-FormatGeneralLarge">FormatGeneralLarge</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)] box): <a href="../builtin-String">String</a> iso^</h3>
 <h3 id="fun-box-fmtintfmt-formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-u32-val-string-val-string-val">fun box  <strong><em>fmt</em>int</strong>(fmt: (((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val)): (<a href="../builtin-U32">U32</a> val , <a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val)</h3>
 <h3 id="fun-box-_large-string-val">fun box  <strong>_large</strong>(): <a href="../builtin-String">String</a> val</h3>
-<h3 id="fun-box-nethat-_tostring-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../builtin-_ToString">_ToString</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h3 id="fun-box-_pads-string-ref-width-usize-val-align-alignleft-val-alignright-val-aligncenter-val-fill-u32-val-none-val">fun box  <strong>_pad</strong>(s: <a href="../builtin-String">String</a> ref, width: <a href="../builtin-USize">USize</a> val, align: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val), fill: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <h3 id="fun-box-_prefixneg-bool-val-prefix-prefixdefault-val-prefixspace-val-prefixsign-val-string-val">fun box  <strong>_prefix</strong>(neg: <a href="../builtin-Bool">Bool</a> val, prefix: ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val)): <a href="../builtin-String">String</a> val</h3>
 <h3 id="fun-box-_small-string-val">fun box  <strong>_small</strong>(): <a href="../builtin-String">String</a> val</h3>

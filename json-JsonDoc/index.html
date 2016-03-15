@@ -2007,7 +2007,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3610,7 +3612,16 @@ A JSON document consists of exactly 1 value.</p>
 </ul>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
+<h3 id="fun-ref-parsesource-string-val-none-val">fun ref  <strong>parse</strong>(source: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</h3>
+<p>Parse the given string as a JSON file, building a document.
+Raise error on invalid JSON in given source.</p>
+<h3 id="fun-box-parse_report-usize-val-string-val">fun box  <strong>parse_report</strong>(): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-String">String</a> val)</h3>
+<p>Give details of the error that occured last time we attempted to parse.
+If parse was successful returns (0, "").</p>
+<h3 id="fun-box-string-string-val">fun box  <strong>string</strong>(): <a href="../builtin-String">String</a> val</h3>
+<p>Generate string representation of this document.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-dumpwhitespace-none-val">fun ref  <strong><em>dump</em>whitespace</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Dump all whitespace at the current read location in source, if any.</p>
 <h3 id="fun-ref-_errormsg-string-val-none-val">fun ref  <strong>_error</strong>(msg: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val</h3>
@@ -3624,9 +3635,6 @@ handle this appropriately.</p>
 <h3 id="fun-ref-lastchar-string-val">fun ref  <strong><em>last</em>char</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Get the last character peeked or got from the source as a String.
 For use generating error messages.</p>
-<h3 id="fun-ref-parsesource-string-val-none-val">fun ref  <strong>parse</strong>(source: <a href="../builtin-String">String</a> val): <a href="../builtin-None">None</a> val ?</h3>
-<p>Parse the given string as a JSON file, building a document.
-Raise error on invalid JSON in given source.</p>
 <h3 id="fun-ref-parsearray-jsonarray-ref">fun ref  <strong><em>parse</em>array</strong>(): <a href="../json-JsonArray">JsonArray</a> ref ?</h3>
 <p>Parse an array, the leading [ of which has already been peeked.</p>
 <h3 id="fun-ref-parsedecimal-i64-val-u8-val">fun ref  <strong><em>parse</em>decimal</strong>(): (<a href="../builtin-I64">I64</a> val , <a href="../builtin-U8">U8</a> val) ?</h3>
@@ -3640,9 +3648,6 @@ consumed.</p>
 <p>Parse a number, the leading character of which has already been peeked.</p>
 <h3 id="fun-ref-parseobject-jsonobject-ref">fun ref  <strong><em>parse</em>object</strong>(): <a href="../json-JsonObject">JsonObject</a> ref ?</h3>
 <p>Parse a JSON object, the leading { of which has already been peeked.</p>
-<h3 id="fun-box-parse_report-usize-val-string-val">fun box  <strong>parse_report</strong>(): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-String">String</a> val)</h3>
-<p>Give details of the error that occured last time we attempted to parse.
-If parse was successful returns (0, "").</p>
 <h3 id="fun-ref-parsestringcontext-string-val-string-val">fun ref  <strong><em>parse</em>string</strong>(context: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Parse a string, which must be the next thing found, other than whitesapce.</p>
 <h3 id="fun-ref-parseunicode_digits-u32-val">fun ref  <strong><em>parse</em>unicode_digits</strong>(): <a href="../builtin-U32">U32</a> val ?</h3>
@@ -3660,8 +3665,6 @@ If an eof_context is given then an error is thrown on eof, setting a
 suitable message.
 If eof_context is None then 0 is returned on EOF. It up to the caller to
 handle this appropriately.</p>
-<h3 id="fun-box-string-string-val">fun box  <strong>string</strong>(): <a href="../builtin-String">String</a> val</h3>
-<p>Generate string representation of this document.</p>
               
             </div>
           </div>

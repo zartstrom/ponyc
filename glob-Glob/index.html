@@ -1927,7 +1927,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3614,8 +3616,7 @@ PATTERN.</p>
     [!seq]  | matches any char not in seq</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
-<h3 id="fun-box-applyglob_to_walkpattern-string-val-compiled_pattern-regex-ref-root-filepath-val-glob_handler-globhandler-ref-dir-filepath-val-entries-array91string-val93-ref-none-val">fun box  <strong><em>apply</em>glob_to_walk</strong>(pattern: <a href="../builtin-String">String</a> val, compiled_pattern: <a href="../regex-Regex">Regex</a> ref, root: <a href="../files-FilePath">FilePath</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref, dir: <a href="../files-FilePath">FilePath</a> val, entries: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref): <a href="../builtin-None">None</a> val</h3>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-eqthat-glob-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../glob-Glob">Glob</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h3 id="fun-box-filternames-array91string-val93-ref-pattern-string-val-array91string-val-array91string-val93-ref93-val">fun box  <strong>filter</strong>(names: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref, pattern: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val , <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref)] val</h3>
 <p>Returns <code>name</code> and the matching subgroups for <code>names</code> that match <code>pattern</code>.</p>
@@ -3640,6 +3641,8 @@ on <code>Glob</code> for details.</p>
 <h3 id="fun-box-translatepat-string-val-string-ref">fun box  <strong>translate</strong>(pat: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Translates a shell <code>pattern</code> to a regular expression.
 There is no way to quote meta-characters.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-applyglob_to_walkpattern-string-val-compiled_pattern-regex-ref-root-filepath-val-glob_handler-globhandler-ref-dir-filepath-val-entries-array91string-val93-ref-none-val">fun box  <strong><em>apply</em>glob_to_walk</strong>(pattern: <a href="../builtin-String">String</a> val, compiled_pattern: <a href="../regex-Regex">Regex</a> ref, root: <a href="../files-FilePath">FilePath</a> val, glob_handler: <a href="../glob-GlobHandler">GlobHandler</a> ref, dir: <a href="../files-FilePath">FilePath</a> val, entries: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] ref): <a href="../builtin-None">None</a> val</h3>
               
             </div>
           </div>

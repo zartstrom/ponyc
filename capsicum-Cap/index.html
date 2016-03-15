@@ -1131,7 +1131,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,7 +3605,7 @@
 <p>The Capsicum rights.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-accept-u64-val">fun box  <strong>accept</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-acl_check-u64-val">fun box  <strong>acl_check</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-acl_delete-u64-val">fun box  <strong>acl_delete</strong>(): <a href="../builtin-U64">U64</a> val</h3>
@@ -3647,8 +3649,6 @@ spaces, such as file system or IPC name spaces, is prevented.</p>
 <h3 id="fun-box-getpeername-u64-val">fun box  <strong>getpeername</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-getsockname-u64-val">fun box  <strong>getsockname</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-getsockopt-u64-val">fun box  <strong>getsockopt</strong>(): <a href="../builtin-U64">U64</a> val</h3>
-<h3 id="fun-box-_ididx-u64-val-bit-u64-val-u64-val">fun box  <strong>_id</strong>(idx: <a href="../builtin-U64">U64</a> val, bit: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
-<p>Build a Capsicum ID from an index and a bit position.</p>
 <h3 id="fun-box-ioctl-u64-val">fun box  <strong>ioctl</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-kqueue-u64-val">fun box  <strong>kqueue</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-kqueue_change-u64-val">fun box  <strong>kqueue_change</strong>(): <a href="../builtin-U64">U64</a> val</h3>
@@ -3693,6 +3693,9 @@ spaces, such as file system or IPC name spaces, is prevented.</p>
 <h3 id="fun-box-ttyhook-u64-val">fun box  <strong>ttyhook</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-unlinkat-u64-val">fun box  <strong>unlinkat</strong>(): <a href="../builtin-U64">U64</a> val</h3>
 <h3 id="fun-box-write-u64-val">fun box  <strong>write</strong>(): <a href="../builtin-U64">U64</a> val</h3>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_ididx-u64-val-bit-u64-val-u64-val">fun box  <strong>_id</strong>(idx: <a href="../builtin-U64">U64</a> val, bit: <a href="../builtin-U64">U64</a> val): <a href="../builtin-U64">U64</a> val</h3>
+<p>Build a Capsicum ID from an index and a bit position.</p>
               
             </div>
           </div>

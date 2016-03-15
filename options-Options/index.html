@@ -2906,7 +2906,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,7 +3605,7 @@
 <p>No doc string provided.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createenv-env-val-optional-fatal-bool-val">new <strong>create</strong>(env: <a href="../builtin-Env">Env</a> val, optional fatal: <a href="../builtin-Bool">Bool</a> val)</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-addlong-string-val-optional-short-none-val-string-val-optional-arg-none-val-stringargument-val-i64argument-val-f64argument-val-optional-mode-required-val-optional-val-options-ref">fun ref  <strong>add</strong>(long: <a href="../builtin-String">String</a> val, optional short: (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val), optional arg: (((<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val) | <a href="../options-I64Argument">I64Argument</a> val) | <a href="../options-F64Argument">F64Argument</a> val), optional mode: (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val)): <a href="../options-Options">Options</a> ref</h3>
 <p>Adds a new named option to the parser configuration.</p>
 <h3 id="fun-box-has_next-bool-val">fun box  <strong>has_next</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
@@ -3617,6 +3619,7 @@ options are found.</p>
 <p>Returns all unprocessed command line arguments. After parsing all options,
 this will only include positional arguments, potentially unrecognised and
 ambiguous options and invalid arguments.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_selectcandidate-string-ref-start-isize-val-offset-isize-val-finish-isize-val-_option-ref-parseerror-ref">fun ref  <strong>_select</strong>(candidate: <a href="../builtin-String">String</a> ref, start: <a href="../builtin-ISize">ISize</a> val, offset: <a href="../builtin-ISize">ISize</a> val, finish: <a href="../builtin-ISize">ISize</a> val): (<a href="../options-_Option">_Option</a> ref | <a href="../options-ParseError">ParseError</a> ref)</h3>
 <p>Selects an option from the configuration depending on the current command
 line argument.</p>

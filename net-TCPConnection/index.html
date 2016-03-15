@@ -2203,9 +2203,13 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3608,23 +3612,40 @@
 <h3 id="new-createnotify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new <strong>create</strong>(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
 <h3 id="new-ip4notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new <strong>ip4</strong>(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
 <h3 id="new-ip6notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val">new <strong>ip6</strong>(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Close the connection gracefully once all writes are sent.</p>
-<h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
-<p>Handle socket events.</p>
-<h3 id="be-readagain">be <strong><em>read</em>again</strong>()</h3>
-<p>Resume reading.</p>
 <h3 id="be-set_notifynotify-tcpconnectionnotify-iso">be <strong>set_notify</strong>(notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso)</h3>
 <p>Change the notifier.</p>
 <h3 id="be-writedata-byteseq-val">be <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val)</h3>
 <p>Write a single sequence of bytes.</p>
 <h3 id="be-writevdata-byteseqiter-val">be <strong>writev</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val)</h3>
 <p>Write a sequence of sequences of bytes.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-close-none-val">fun ref  <strong>close</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Perform a graceful shutdown. Don't accept new writes, but don't finish
 closing until we get a zero length read.</p>
+<h3 id="fun-box-local_address-ipaddress-val">fun box  <strong>local_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
+<p>Return the local IP address.</p>
+<h3 id="fun-box-remote_address-ipaddress-val">fun box  <strong>remote_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
+<p>Return the remote IP address.</p>
+<h3 id="fun-ref-set_keepalivesecs-u32-val-none-val">fun ref  <strong>set_keepalive</strong>(secs: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
+<p>Sets the TCP keepalive timeout to approximately secs seconds. Exact timing
+is OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive
+is disabled by default. This can only be set on a connected socket.</p>
+<h3 id="fun-ref-set_nodelaystate-bool-val-none-val">fun ref  <strong>set_nodelay</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
+<p>Turn Nagle on/off. Defaults to on. This can only be set on a connected
+socket.</p>
+<h3 id="fun-ref-write_finaldata-byteseq-val-none-val">fun ref  <strong>write_final</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
+<p>Write as much as possible to the socket. Set _writeable to false if not
+everything was written. On an error, close the connection. This is for
+data that has already been transformed by the notifier.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
+<h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
+<p>Handle socket events.</p>
+<h3 id="be-readagain">be <strong><em>read</em>again</strong>()</h3>
+<p>Resume reading.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-completereadslen-u32-val-none-val">fun ref  <strong><em>complete</em>reads</strong>(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>The OS has informed as that len bytes of pending reads have completed.
 This occurs only with IOCP on Windows.</p>
@@ -3633,8 +3654,6 @@ This occurs only with IOCP on Windows.</p>
 This occurs only with IOCP on Windows.</p>
 <h3 id="fun-ref-hardclose-none-val">fun ref  <strong><em>hard</em>close</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>When an error happens, do a non-graceful close.</p>
-<h3 id="fun-box-local_address-ipaddress-val">fun box  <strong>local_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
-<p>Return the local IP address.</p>
 <h3 id="fun-ref-notifyconnecting-none-val">fun ref  <strong><em>notify</em>connecting</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the notifier that we're connecting.</p>
 <h3 id="fun-ref-pendingreads-none-val">fun ref  <strong><em>pending</em>reads</strong>(): <a href="../builtin-None">None</a> val</h3>
@@ -3646,22 +3665,9 @@ avoid starving other actors.</p>
 writeable. On an error, dispose of the connection.</p>
 <h3 id="fun-ref-queueread-none-val">fun ref  <strong><em>queue</em>read</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Queue an IOCP read on Windows.</p>
-<h3 id="fun-box-remote_address-ipaddress-val">fun box  <strong>remote_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
-<p>Return the remote IP address.</p>
-<h3 id="fun-ref-set_keepalivesecs-u32-val-none-val">fun ref  <strong>set_keepalive</strong>(secs: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
-<p>Sets the TCP keepalive timeout to approximately secs seconds. Exact timing
-is OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive
-is disabled by default. This can only be set on a connected socket.</p>
-<h3 id="fun-ref-set_nodelaystate-bool-val-none-val">fun ref  <strong>set_nodelay</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-None">None</a> val</h3>
-<p>Turn Nagle on/off. Defaults to on. This can only be set on a connected
-socket.</p>
 <h3 id="fun-ref-tryshutdown-none-val">fun ref  <strong><em>try</em>shutdown</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>If we have closed and we have no remaining writes or pending connections,
 then shutdown.</p>
-<h3 id="fun-ref-write_finaldata-byteseq-val-none-val">fun ref  <strong>write_final</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
-<p>Write as much as possible to the socket. Set _writeable to false if not
-everything was written. On an error, close the connection. This is for
-data that has already been transformed by the notifier.</p>
               
             </div>
           </div>

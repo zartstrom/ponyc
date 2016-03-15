@@ -3544,9 +3544,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@
 <p>A hierarchical set of timing wheels.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createoptional-slop-usize-val">new <strong>create</strong>(optional slop: <a href="../builtin-USize">USize</a> val)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-applytimer-timer-iso">be <strong>apply</strong>(timer: <a href="../time-Timer">Timer</a> iso)</h3>
 <p>Sets a timer. Fire it if need be, schedule it on the right timing wheel,
 then rearm the timer.</p>
@@ -3613,9 +3615,10 @@ then rearm the timer.</p>
 <p>Cancels a timer.</p>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Dipose of this set of timing wheels.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
 <h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>When the event fires, advance the timing wheels.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_advance-none-val">fun ref  <strong>_advance</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Update the current time, process all the timing wheels, and set the event
 for the next time we need to advance.</p>

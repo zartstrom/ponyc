@@ -2723,7 +2723,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3604,10 +3606,8 @@
 to any transport layer.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-_createctx-pointer91_sslcontext-val93-tag-server-bool-val-verify-bool-val-optional-hostname-string-val">new <strong>_create</strong>(ctx: <a href="../builtin-Pointer">Pointer</a>[<a href="../net-ssl-_SSLContext">_SSLContext</a> val] tag, server: <a href="../builtin-Bool">Bool</a> val, verify: <a href="../builtin-Bool">Bool</a> val, optional hostname: <a href="../builtin-String">String</a> val) ?</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Dispose of the session.</p>
-<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Dispose of the session.</p>
 <h3 id="fun-ref-read-array91u8-val93-iso">fun ref  <strong>read</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?</h3>
 <p>Returns unencrypted bytes to be passed to the application. Raises an error
@@ -3619,11 +3619,14 @@ if no data is available.</p>
 if no data is available.</p>
 <h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  <strong>state</strong>(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
 <p>Returns the SSL session state.</p>
-<h3 id="fun-ref-verifyhostname-none-val">fun ref  <strong><em>verify</em>hostname</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Verify that the certificate is valid for the given hostname.</p>
 <h3 id="fun-ref-writedata-byteseq-val-none-val">fun ref  <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?</h3>
 <p>When application data is sent, add it to the SSL session. Raises an error
 if the handshake is not complete.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Dispose of the session.</p>
+<h3 id="fun-ref-verifyhostname-none-val">fun ref  <strong><em>verify</em>hostname</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Verify that the certificate is valid for the given hostname.</p>
               
             </div>
           </div>

@@ -1835,7 +1835,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3604,7 +3606,7 @@
 used to manipulate path names, but give no access to the resulting paths.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-abspath-string-val-string-val">fun box  <strong>abs</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Returns a cleaned, absolute path.</p>
 <h3 id="fun-box-basepath-string-val-string-val">fun box  <strong>base</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
@@ -3626,8 +3628,6 @@ not supported, as it is not concurrency-safe.</p>
 <h3 id="fun-box-dirpath-string-val-string-val">fun box  <strong>dir</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return a cleaned path before the last separator, or the whole path if there
 is no separator.</p>
-<h3 id="fun-box-driveletterpath-string-val-optional-offset-isize-val-bool-val">fun box  <strong><em>drive</em>letter</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Look for a drive letter followed by a ':', returning true if we find it.</p>
 <h3 id="fun-box-eqthat-path-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h3 id="fun-box-extpath-string-val-string-val">fun box  <strong>ext</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Return the file extension, i.e. the part after the last dot as long as that
@@ -3646,9 +3646,6 @@ The returned path will be cleaned.</p>
 <h3 id="fun-box-list_sep-string-val">fun box  <strong>list_sep</strong>(): <a href="../builtin-String">String</a> val</h3>
 <p>Return the path list separator as a string.</p>
 <h3 id="fun-box-nethat-path-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../files-Path">Path</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-networksharepath-string-val-optional-offset-isize-val-string-val">fun box  <strong><em>network</em>share</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</h3>
-<p>Look for a host, a \, and a resource. Return the path up to that point if
-we found one, otherwise an empty String.</p>
 <h3 id="fun-box-normcasepath-string-val-string-val">fun box  <strong>normcase</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>Normalizes the case of path for the runtime platform.</p>
 <h3 id="fun-box-randomoptional-len-usize-val-string-val">fun box  <strong>random</strong>(optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> val</h3>
@@ -3674,6 +3671,12 @@ In all cases, join(head, tail) returns a path to the same location as path
 <h3 id="fun-box-volumepath-string-val-string-val">fun box  <strong>volume</strong>(path: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val</h3>
 <p>On Windows, this returns the drive letter or UNC base at the beginning of
 the path, if there is one. Otherwise, this returns an empty string.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-driveletterpath-string-val-optional-offset-isize-val-bool-val">fun box  <strong><em>drive</em>letter</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Look for a drive letter followed by a ':', returning true if we find it.</p>
+<h3 id="fun-box-networksharepath-string-val-optional-offset-isize-val-string-val">fun box  <strong><em>network</em>share</strong>(path: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-String">String</a> val</h3>
+<p>Look for a host, a \, and a resource. Return the path up to that point if
+we found one, otherwise an empty String.</p>
               
             </div>
           </div>

@@ -2273,9 +2273,13 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3607,11 +3611,9 @@
 <h3 id="new-createnotify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>create</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
 <h3 id="new-ip4notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip4</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
 <h3 id="new-ip6notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip6</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Stop listening.</p>
-<h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
-<p>When we are readable, we accept new connections until none remain.</p>
 <h3 id="be-multicast_joingroup-string-val-optional-to-string-val">be <strong>multicast_join</strong>(group: <a href="../builtin-String">String</a> val, optional to: <a href="../builtin-String">String</a> val)</h3>
 <p>Add a multicast group. This can be limited to packets arriving on a
 specific interface.</p>
@@ -3619,8 +3621,6 @@ specific interface.</p>
 <p>Drop a multicast group. This can be limited to packets arriving on a
 specific interface. No attempt is made to check that this socket has
 previously added this group.</p>
-<h3 id="be-readagain">be <strong><em>read</em>again</strong>()</h3>
-<p>Resume reading.</p>
 <h3 id="be-set_broadcaststate-bool-val">be <strong>set_broadcast</strong>(state: <a href="../builtin-Bool">Bool</a> val)</h3>
 <p>Enable or disable broadcasting from this socket.</p>
 <h3 id="be-set_multicast_interfaceoptional-from-string-val">be <strong>set_multicast_interface</strong>(optional from: <a href="../builtin-String">String</a> val)</h3>
@@ -3639,14 +3639,20 @@ prevents this.</p>
 <p>Write a single sequence of bytes.</p>
 <h3 id="be-writevdata-byteseqiter-val-to-ipaddress-val">be <strong>writev</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val, to: <a href="../net-IPAddress">IPAddress</a> val)</h3>
 <p>Write a sequence of sequences of bytes.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
+<h3 id="fun-box-local_address-ipaddress-val">fun box  <strong>local_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
+<p>Return the bound IP address.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
+<h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
+<p>When we are readable, we accept new connections until none remain.</p>
+<h3 id="be-readagain">be <strong><em>read</em>again</strong>()</h3>
+<p>Resume reading.</p>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-_close-none-val">fun ref  <strong>_close</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the notifier that we've closed.</p>
 <h3 id="fun-ref-completereadslen-u32-val-none-val">fun ref  <strong><em>complete</em>reads</strong>(len: <a href="../builtin-U32">U32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>The OS has informed as that len bytes of pending reads have completed.
 This occurs only with IOCP on Windows.</p>
-<h3 id="fun-box-local_address-ipaddress-val">fun box  <strong>local_address</strong>(): <a href="../net-IPAddress">IPAddress</a> val</h3>
-<p>Return the bound IP address.</p>
 <h3 id="fun-ref-notifylistening-none-val">fun ref  <strong><em>notify</em>listening</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Inform the notifier that we're listening.</p>
 <h3 id="fun-ref-pendingreads-none-val">fun ref  <strong><em>pending</em>reads</strong>(): <a href="../builtin-None">None</a> val</h3>

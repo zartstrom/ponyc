@@ -1606,7 +1606,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3614,7 +3616,7 @@ Capsicum.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createfrom-filepath-val">new <strong>create</strong>(from: <a href="../files-FilePath">FilePath</a> val) ?</h3>
 <h3 id="new-_relativepath-filepath-val-fd-i32-val">new <strong>_relative</strong>(path': <a href="../files-FilePath">FilePath</a> val, fd': <a href="../builtin-I32">I32</a> val)</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-chmodmode-filemode-box-bool-val">fun box  <strong>chmod</strong>(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for this directory.</p>
 <h3 id="fun-box-chmodattarget-string-val-mode-filemode-box-bool-val">fun box  <strong>chmodat</strong>(target: <a href="../builtin-String">String</a> val, mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
@@ -3633,8 +3635,6 @@ if it does exist.</p>
 recursive. The path for the entry will be relative to the directory, so it
 will contain no directory separators. The entries will not include "." or
 "..".</p>
-<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Close the file descriptor.</p>
 <h3 id="fun-box-info-fileinfo-val">fun box  <strong>info</strong>(): <a href="../files-FileInfo">FileInfo</a> val ?</h3>
 <p>Return a FileInfo for this directory. Raise an error if the fd is invalid
 or if we don't have FileStat permission.</p>
@@ -3667,6 +3667,9 @@ this directory.</p>
 <p>Set the last access and modification times of the directory to now.</p>
 <h3 id="fun-box-touchattarget-string-val-bool-val">fun box  <strong>touchat</strong>(target: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the last access and modification times of the directory to now.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Close the file descriptor.</p>
               
             </div>
           </div>

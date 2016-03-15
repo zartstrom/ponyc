@@ -3246,7 +3246,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@ attempts to enable JIT matching whenever possible.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createfrom-byteseq-box-optional-jit-bool-val">new <strong>create</strong>(from: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional jit: <a href="../builtin-Bool">Bool</a> val) ?</h3>
 <p>Compile a regular expression. Raises an error for an invalid expression.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-applysubject-byteseq-val-optional-offset-usize-val-match-ref">fun box  <strong>apply</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> val, optional offset: <a href="../builtin-USize">USize</a> val): <a href="../regex-Match">Match</a> ref^ ?</h3>
 <p>Match the supplied string, starting at the given offset. Returns a Match
 object that can give precise match details. Raises an error if there is no
@@ -3615,14 +3617,9 @@ match.</p>
 <p>Free the underlying PCRE2 data.</p>
 <h3 id="fun-box-eqsubject-byteseq-box-bool-val">fun box  <strong>eq</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return true on a successful match, false otherwise.</p>
-<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Free the underlying PCRE2 data.</p>
 <h3 id="fun-box-indexname-string-box-usize-val">fun box  <strong>index</strong>(name: <a href="../builtin-String">String</a> box): <a href="../builtin-USize">USize</a> val ?</h3>
 <p>Returns the index of a named capture. Raises an error if the named capture
 does not exist.</p>
-<h3 id="fun-box-_matchsubject-byteseq-box-offset-usize-val-options-u32-val-pointer91_match-val93-ref">fun box  <strong>_match</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> box, offset: <a href="../builtin-USize">USize</a> val, options: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref ?</h3>
-<p>Match the subject and keep the capture results. Raises an error if there
-is no match.</p>
 <h3 id="fun-box-nesubject-byteseq-box-bool-val">fun box  <strong>ne</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Return false on a successful match, true otherwise.</p>
 <h3 id="fun-box-replace91optional-a-seq91u8-val93-iso-byteseq-iso93subject-byteseq-val-value-byteseq-box-optional-offset-usize-val-optional-global-bool-val-a-iso">fun box  <strong>replace</strong>[optional A: (<a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso &amp; <a href="../builtin-ByteSeq">ByteSeq</a> iso)](subject: <a href="../builtin-ByteSeq">ByteSeq</a> val, value: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional offset: <a href="../builtin-USize">USize</a> val, optional global: <a href="../builtin-Bool">Bool</a> val): A iso^ ?</h3>
@@ -3632,6 +3629,12 @@ an error if there is no match.</p>
 <h3 id="fun-box-splitsubject-string-val-optional-offset-usize-val-array91string-val93-iso">fun box  <strong>split</strong>(subject: <a href="../builtin-String">String</a> val, optional offset: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^ ?</h3>
 <p>Split subject by non-empty occurrences of this pattern, returning a list
 of the substrings.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Free the underlying PCRE2 data.</p>
+<h3 id="fun-box-_matchsubject-byteseq-box-offset-usize-val-options-u32-val-pointer91_match-val93-ref">fun box  <strong>_match</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> box, offset: <a href="../builtin-USize">USize</a> val, options: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref ?</h3>
+<p>Match the subject and keep the capture results. Raises an error if there
+is no match.</p>
               
             </div>
           </div>

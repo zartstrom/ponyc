@@ -2751,7 +2751,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,7 +3605,7 @@
 <p>An SSL context is used to create SSL sessions.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-allow_tls_v1state-bool-val-sslcontext-ref">fun ref  <strong>allow_tls_v1</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Allow TLS v1. Defaults to true.</p>
 <h3 id="fun-ref-allow_tls_v1_1state-bool-val-sslcontext-ref">fun ref  <strong>allow_tls_v1_1</strong>(state: <a href="../builtin-Bool">Bool</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
@@ -3614,8 +3616,6 @@
 <p>Create a client-side SSL session. If a hostname is supplied, the server
 side certificate must be valid for that hostname.</p>
 <h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Free the SSL context.</p>
-<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the SSL context.</p>
 <h3 id="fun-box-server-ssl-iso">fun box  <strong>server</strong>(): <a href="../net-ssl-SSL">SSL</a> iso^ ?</h3>
 <p>Create a server-side SSL session.</p>
@@ -3636,6 +3636,9 @@ if the cipher list is invalid.</p>
 <p>Set to true to require verification. Defaults to false.</p>
 <h3 id="fun-ref-set_verify_depthdepth-u32-val-sslcontext-ref">fun ref  <strong>set_verify_depth</strong>(depth: <a href="../builtin-U32">U32</a> val): <a href="../net-ssl-SSLContext">SSLContext</a> ref^</h3>
 <p>Set the verify depth. Defaults to 6.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Free the SSL context.</p>
               
             </div>
           </div>

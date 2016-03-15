@@ -2182,7 +2182,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3603,7 +3605,7 @@
 <p>Helper functions for resolving DNS queries.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-applyhost-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>apply</strong>(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 and IPv6 addresses for a host and service.</p>
 <h3 id="fun-box-broadcast_ip4service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip4</strong>(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
@@ -3620,6 +3622,7 @@
 <h3 id="fun-box-is_ip6host-string-val-bool-val">fun box  <strong>is_ip6</strong>(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the host is a literal IPv6 address.</p>
 <h3 id="fun-box-nethat-dns-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-box-_resolvefamily-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>_resolve</strong>(family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Turns an addrinfo pointer into an array of addresses.</p>
               

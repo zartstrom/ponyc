@@ -715,9 +715,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3606,18 +3608,19 @@
 access is provided only via an environment.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createuseevent-bool-val">new <em><strong>create</strong>(use</em>event: <a href="../builtin-Bool">Bool</a> val)</h3>
-<h2 id="behaviours">Behaviours</h2>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-applynotify-stdinnotify-iso-none-val">be <strong>apply</strong>(notify: (<a href="../builtin-StdinNotify">StdinNotify</a> iso | <a href="../builtin-None">None</a> val))</h3>
 <p>Set the notifier.</p>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Clear the notifier in order to shut down input.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
 <h3 id="be-eventnotifyevent-pointer91asioevent-val93-tag-flags-u32-val-arg-u32-val">be <strong><em>event</em>notify</strong>(event: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-AsioEvent">AsioEvent</a> val] tag, flags: <a href="../builtin-U32">U32</a> val, arg: <a href="../builtin-U32">U32</a> val)</h3>
 <p>When the event fires, read from stdin.</p>
 <h3 id="be-loopread">be <strong><em>loop</em>read</strong>()</h3>
 <p>If we are able to read from stdin, schedule another read.</p>
 <h3 id="be-readagain">be <strong><em>read</em>again</strong>()</h3>
 <p>Resume reading.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-closeevent-none-val">fun ref  <strong><em>close</em>event</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Close the event.</p>
 <h3 id="fun-ref-_read-bool-val">fun ref  <strong>_read</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>

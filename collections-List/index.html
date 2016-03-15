@@ -1230,7 +1230,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@
 <h3 id="new-createoptional-len-usize-val">new <strong>create</strong>(optional len: <a href="../builtin-USize">USize</a> val)</h3>
 <h3 id="new-fromseq-array91a93-ref">new <strong>from</strong>(seq: <a href="../builtin-Array">Array</a>[A^] ref)</h3>
 <h3 id="new-unita-a">new <strong>unit</strong>(a: A)</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-ref-appendseq-readseq91a93-box-optional-offset-usize-val-optional-len-usize-val-list91a93-ref">fun ref  <strong>append</strong>(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../collections-List">List</a>[A] ref^</h3>
 <p>Append the elements from a sequence, starting from the given offset.</p>
 <h3 id="fun-ref-append_listthat-list91a93-ref-list91a93-ref">fun ref  <strong>append_list</strong>(that: <a href="../collections-List">List</a>[A] ref): <a href="../collections-List">List</a>[A] ref^</h3>
@@ -3620,46 +3622,30 @@
 <p>Clone the list.</p>
 <h3 id="fun-box-contains91optional-b-a-haseq91a93-read93a-box-b-read-bool-val">fun box  <strong>contains</strong>[optional B: (A &amp; <a href="../builtin-HasEq">HasEq</a>[A!] #read)](a: box-&gt;B #read): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the list contains the provided element, false otherwise.</p>
-<h3 id="fun-box-_contains91optional-b-a-haseq91a93-read93ln-this-listnode91a93-ref-a-box-b-read-bool-val">fun box  <strong>_contains</strong>[optional B: (A &amp; <a href="../builtin-HasEq">HasEq</a>[A!] #read)](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, a: box-&gt;B #read): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Private helper for contains, recursively working with ListNodes.</p>
-<h3 id="fun-ref-_decrement-none-val">fun ref  <strong>_decrement</strong>(): <a href="../builtin-None">None</a> val</h3>
 <h3 id="fun-box-dropn-usize-val-list91this-a93-ref">fun box  <strong>drop</strong>(n: <a href="../builtin-USize">USize</a> val): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
 <p>Builds a list by dropping the first n elements.</p>
-<h3 id="fun-box-everyf-45591a93-box-bool-val">fun box  <strong>every</strong>(f: <a href="../collections-$4$55">$4$55</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-everyf-44191a93-box-bool-val">fun box  <strong>every</strong>(f: <a href="../collections-$4$41">$4$41</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if every element satisfies the provided predicate, false
 otherwise.</p>
-<h3 id="fun-box-_everyln-this-listnode91a93-ref-f-45691a93-box-bool-val">fun box  <strong>_every</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$56">$4$56</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Private helper for every, recursively working with ListNodes.</p>
-<h3 id="fun-box-existsf-45891a93-box-bool-val">fun box  <strong>exists</strong>(f: <a href="../collections-$4$58">$4$58</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-existsf-44491a93-box-bool-val">fun box  <strong>exists</strong>(f: <a href="../collections-$4$44">$4$44</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if at least one element satisfies the provided predicate,
 false otherwise.</p>
-<h3 id="fun-box-_existsln-this-listnode91a93-ref-f-45991a93-box-bool-val">fun box  <strong>_exists</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$59">$4$59</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>Private helper for exists, recursively working with ListNodes.</p>
-<h3 id="fun-box-filterf-44991a93-box-list91this-a93-ref">fun box  <strong>filter</strong>(f: <a href="../collections-$4$49">$4$49</a>[A] box): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
+<h3 id="fun-box-filterf-43591a93-box-list91this-a93-ref">fun box  <strong>filter</strong>(f: <a href="../collections-$4$35">$4$35</a>[A] box): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
 <p>Builds a new list with those elements that satisfy a provided predicate.</p>
-<h3 id="fun-box-_filterln-this-listnode91a93-ref-f-45091a93-box-acc-list91this-a93-ref-list91this-a93-ref">fun box  <strong>_filter</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$50">$4$50</a>[A] box, acc: <a href="../collections-List">List</a>[this-&gt;A!] ref): <a href="../collections-List">List</a>[this-&gt;A!] ref</h3>
-<p>Private helper for filter, recursively working with ListNodes.</p>
-<h3 id="fun-box-flat_map91b-b93f-44691a-b93-box-list91b93-ref">fun box  <strong>flat_map</strong>[B: B](f: <a href="../collections-$4$46">$4$46</a>[A, B] box): <a href="../collections-List">List</a>[B] ref^</h3>
+<h3 id="fun-box-flat_map91b-b93f-43291a-b93-box-list91b93-ref">fun box  <strong>flat_map</strong>[B: B](f: <a href="../collections-$4$32">$4$32</a>[A, B] box): <a href="../collections-List">List</a>[B] ref^</h3>
 <p>Builds a new list by applying a function to every member of the list and
 using the elements of the resulting lists.</p>
-<h3 id="fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44791a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref">fun box  <strong><em>flat</em>map</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$47">$4$47</a>[A, B] box, acc: <a href="../collections-List">List</a>[<a href="../collections-List">List</a>[B] ref] ref): <a href="../collections-List">List</a>[B] ref^</h3>
-<p>Private helper for flat_map, recursively working with ListNodes.</p>
-<h3 id="fun-box-fold91b-b93f-45291a-b93-box-acc-b-b">fun box  <strong>fold</strong>[B: B](f: <a href="../collections-$4$52">$4$52</a>[A, B] box, acc: B): B</h3>
+<h3 id="fun-box-fold91b-b93f-43891a-b93-box-acc-b-b">fun box  <strong>fold</strong>[B: B](f: <a href="../collections-$4$38">$4$38</a>[A, B] box, acc: B): B</h3>
 <p>Folds the elements of the list using the supplied function.</p>
-<h3 id="fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45391a-b93-box-acc-b-b">fun box  <strong>_fold</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$53">$4$53</a>[A, B] box, acc: B): B</h3>
-<p>Private helper for fold, recursively working with ListNodes.</p>
 <h3 id="fun-box-head-this-listnode91a93-ref">fun box  <strong>head</strong>(): this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref ?</h3>
 <p>Get the head of the list.</p>
-<h3 id="fun-ref-_increment-none-val">fun ref  <strong>_increment</strong>(): <a href="../builtin-None">None</a> val</h3>
 <h3 id="fun-box-indexi-usize-val-this-listnode91a93-ref">fun box  <strong>index</strong>(i: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref ?</h3>
 <p>Gets the i-th node, raising an error if the index is out of bounds.</p>
-<h3 id="fun-box-map91b-b93f-44391a-b93-box-list91b93-ref">fun box  <strong>map</strong>[B: B](f: <a href="../collections-$4$43">$4$43</a>[A, B] box): <a href="../collections-List">List</a>[B] ref^</h3>
+<h3 id="fun-box-map91b-b93f-42991a-b93-box-list91b93-ref">fun box  <strong>map</strong>[B: B](f: <a href="../collections-$4$29">$4$29</a>[A, B] box): <a href="../collections-List">List</a>[B] ref^</h3>
 <p>Builds a new list by applying a function to every member of the list.</p>
-<h3 id="fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44491a-b93-box-acc-list91b93-ref-list91b93-ref">fun box  <strong>_map</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$44">$4$44</a>[A, B] box, acc: <a href="../collections-List">List</a>[B] ref): <a href="../collections-List">List</a>[B] ref^</h3>
-<p>Private helper for map, recursively working with ListNodes.</p>
 <h3 id="fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref">fun box  <strong>nodes</strong>(): <a href="../collections-ListNodes">ListNodes</a>[A, this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref] ref^</h3>
 <p>Return an iterator on the nodes in the list.</p>
-<h3 id="fun-box-partitionf-46191a93-box-list91this-a93-ref-list91this-a93-ref">fun box  <strong>partition</strong>(f: <a href="../collections-$4$61">$4$61</a>[A] box): (<a href="../collections-List">List</a>[this-&gt;A!] ref^ , <a href="../collections-List">List</a>[this-&gt;A!] ref^)</h3>
+<h3 id="fun-box-partitionf-44791a93-box-list91this-a93-ref-list91this-a93-ref">fun box  <strong>partition</strong>(f: <a href="../collections-$4$47">$4$47</a>[A] box): (<a href="../collections-List">List</a>[this-&gt;A!] ref^ , <a href="../collections-List">List</a>[this-&gt;A!] ref^)</h3>
 <p>Builds a pair of lists, the first of which is made up of the elements
 satisfying the supplied predicate and the second of which is made up of
 those that do not.</p>
@@ -3677,15 +3663,10 @@ those that do not.</p>
 <p>Do nothing, but be compatible with Seq.</p>
 <h3 id="fun-box-reverse-list91this-a93-ref">fun box  <strong>reverse</strong>(): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
 <p>Builds a new list by reversing the elements in the list.</p>
-<h3 id="fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref">fun box  <strong>_reverse</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, acc: <a href="../collections-List">List</a>[this-&gt;A!] ref): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
-<p>Private helper for reverse, recursively working with ListNodes.</p>
 <h3 id="fun-box-rnodes-listnodes91a-this-listnode91a93-ref93-ref">fun box  <strong>rnodes</strong>(): <a href="../collections-ListNodes">ListNodes</a>[A, this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref] ref^</h3>
 <p>Return an iterator on the nodes in the list.</p>
 <h3 id="fun-box-rvalues-listvalues91a-this-listnode91a93-ref93-ref">fun box  <strong>rvalues</strong>(): <a href="../collections-ListValues">ListValues</a>[A, this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref] ref^</h3>
 <p>Return an iterator on the values in the list.</p>
-<h3 id="fun-ref-setbothnode-listnode91a93-ref-none-val">fun ref  <strong><em>set</em>both</strong>(node: <a href="../collections-ListNode">ListNode</a>[A] ref): <a href="../builtin-None">None</a> val</h3>
-<h3 id="fun-ref-setheadhead-listnode91a93-ref-none-val-none-val">fun ref  <strong><em>set</em>head</strong>(head': (<a href="../collections-ListNode">ListNode</a>[A] ref | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</h3>
-<h3 id="fun-ref-settailtail-listnode91a93-ref-none-val-none-val">fun ref  <strong><em>set</em>tail</strong>(tail': (<a href="../collections-ListNode">ListNode</a>[A] ref | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</h3>
 <h3 id="fun-ref-shift-a">fun ref  <strong>shift</strong>(): A^ ?</h3>
 <p>Removes a value from the head of the list.</p>
 <h3 id="fun-box-size-usize-val">fun box  <strong>size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
@@ -3694,7 +3675,7 @@ those that do not.</p>
 <p>Get the tail of the list.</p>
 <h3 id="fun-box-taken-usize-val-list91this-a93-ref">fun box  <strong>take</strong>(n: <a href="../builtin-USize">USize</a> val): <a href="../collections-List">List</a>[this-&gt;A!] ref</h3>
 <p>Builds a list of the first n elements.</p>
-<h3 id="fun-box-take_whilef-46791a93-box-list91this-a93-ref">fun box  <strong>take_while</strong>(f: <a href="../collections-$4$67">$4$67</a>[A] box): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
+<h3 id="fun-box-take_whilef-45391a93-box-list91this-a93-ref">fun box  <strong>take_while</strong>(f: <a href="../collections-$4$53">$4$53</a>[A] box): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
 <p>Builds a list of elements satisfying the provided predicate until one does
 not.</p>
 <h3 id="fun-ref-truncatelen-usize-val-list91a93-ref">fun ref  <strong>truncate</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../collections-List">List</a>[A] ref^</h3>
@@ -3708,6 +3689,28 @@ Returns the previous value, which may be None if the node has been popped
 but left on the list.</p>
 <h3 id="fun-box-values-listvalues91a-this-listnode91a93-ref93-ref">fun box  <strong>values</strong>(): <a href="../collections-ListValues">ListValues</a>[A, this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref] ref^</h3>
 <p>Return an iterator on the values in the list.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_contains91optional-b-a-haseq91a93-read93ln-this-listnode91a93-ref-a-box-b-read-bool-val">fun box  <strong>_contains</strong>[optional B: (A &amp; <a href="../builtin-HasEq">HasEq</a>[A!] #read)](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, a: box-&gt;B #read): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Private helper for contains, recursively working with ListNodes.</p>
+<h3 id="fun-ref-_decrement-none-val">fun ref  <strong>_decrement</strong>(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_everyln-this-listnode91a93-ref-f-44291a93-box-bool-val">fun box  <strong>_every</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$42">$4$42</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Private helper for every, recursively working with ListNodes.</p>
+<h3 id="fun-box-_existsln-this-listnode91a93-ref-f-44591a93-box-bool-val">fun box  <strong>_exists</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$45">$4$45</a>[A] box): <a href="../builtin-Bool">Bool</a> val</h3>
+<p>Private helper for exists, recursively working with ListNodes.</p>
+<h3 id="fun-box-_filterln-this-listnode91a93-ref-f-43691a93-box-acc-list91this-a93-ref-list91this-a93-ref">fun box  <strong>_filter</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$36">$4$36</a>[A] box, acc: <a href="../collections-List">List</a>[this-&gt;A!] ref): <a href="../collections-List">List</a>[this-&gt;A!] ref</h3>
+<p>Private helper for filter, recursively working with ListNodes.</p>
+<h3 id="fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43391a-b93-box-acc-list91list91b93-ref93-ref-list91b93-ref">fun box  <strong><em>flat</em>map</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$33">$4$33</a>[A, B] box, acc: <a href="../collections-List">List</a>[<a href="../collections-List">List</a>[B] ref] ref): <a href="../collections-List">List</a>[B] ref^</h3>
+<p>Private helper for flat_map, recursively working with ListNodes.</p>
+<h3 id="fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43991a-b93-box-acc-b-b">fun box  <strong>_fold</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$39">$4$39</a>[A, B] box, acc: B): B</h3>
+<p>Private helper for fold, recursively working with ListNodes.</p>
+<h3 id="fun-ref-_increment-none-val">fun ref  <strong>_increment</strong>(): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-box-_map91b-b93ln-this-listnode91a93-ref-f-43091a-b93-box-acc-list91b93-ref-list91b93-ref">fun box  <strong>_map</strong>[B: B](ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, f: <a href="../collections-$4$30">$4$30</a>[A, B] box, acc: <a href="../collections-List">List</a>[B] ref): <a href="../collections-List">List</a>[B] ref^</h3>
+<p>Private helper for map, recursively working with ListNodes.</p>
+<h3 id="fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref">fun box  <strong>_reverse</strong>(ln: this-&gt;<a href="../collections-ListNode">ListNode</a>[A] ref, acc: <a href="../collections-List">List</a>[this-&gt;A!] ref): <a href="../collections-List">List</a>[this-&gt;A!] ref^</h3>
+<p>Private helper for reverse, recursively working with ListNodes.</p>
+<h3 id="fun-ref-setbothnode-listnode91a93-ref-none-val">fun ref  <strong><em>set</em>both</strong>(node: <a href="../collections-ListNode">ListNode</a>[A] ref): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-setheadhead-listnode91a93-ref-none-val-none-val">fun ref  <strong><em>set</em>head</strong>(head': (<a href="../collections-ListNode">ListNode</a>[A] ref | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-settailtail-listnode91a93-ref-none-val-none-val">fun ref  <strong><em>set</em>tail</strong>(tail': (<a href="../collections-ListNode">ListNode</a>[A] ref | <a href="../builtin-None">None</a> val)): <a href="../builtin-None">None</a> val</h3>
               
             </div>
           </div>

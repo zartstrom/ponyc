@@ -1627,7 +1627,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3612,7 +3614,7 @@
 <h3 id="new-createfrom-filepath-val">new <strong>create</strong>(from: <a href="../files-FilePath">FilePath</a> val)</h3>
 <h3 id="new-_descriptorfd-i32-val-from-filepath-val">new <strong>_descriptor</strong>(fd: <a href="../builtin-I32">I32</a> val, from: <a href="../files-FilePath">FilePath</a> val) ?</h3>
 <h3 id="new-openfrom-filepath-val">new <strong>open</strong>(from: <a href="../files-FilePath">FilePath</a> val)</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-chmodmode-filemode-box-bool-val">fun box  <strong>chmod</strong>(mode: <a href="../files-FileMode">FileMode</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Set the FileMode for this directory.</p>
 <h3 id="fun-box-chownuid-u32-val-gid-u32-val-bool-val">fun box  <strong>chown</strong>(uid: <a href="../builtin-U32">U32</a> val, gid: <a href="../builtin-U32">U32</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
@@ -3621,15 +3623,11 @@
 <p>Close the file. Future operations will do nothing.</p>
 <h3 id="fun-box-errno-fileok-val-fileerror-val">fun box  <strong>errno</strong>(): (<a href="../files-FileOK">FileOK</a> val | <a href="../files-FileError">FileError</a> val)</h3>
 <p>Returns the last error code set for this File</p>
-<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
-<p>Close the file.</p>
 <h3 id="fun-ref-flush-file-ref">fun ref  <strong>flush</strong>(): <a href="../files-File">File</a> ref</h3>
 <p>Flush the file.</p>
 <h3 id="fun-box-get_fd-i32-val">fun box  <strong>get_fd</strong>(): <a href="../builtin-I32">I32</a> val ?</h3>
 <p>Returns the underlying file descriptor.
 Raises an error if the file is not currently open.</p>
-<h3 id="fun-tag-getfdhandle-pointer91_filehandle-val93-ref-i32-val">fun tag  <strong><em>get</em>fd</strong>(handle: <a href="../builtin-Pointer">Pointer</a>[<a href="../files-_FileHandle">_FileHandle</a> val] ref): <a href="../builtin-I32">I32</a> val</h3>
-<p>Get the file descriptor associated with the file handle.</p>
 <h3 id="fun-box-info-fileinfo-val">fun box  <strong>info</strong>(): <a href="../files-FileInfo">FileInfo</a> val ?</h3>
 <p>Return a FileInfo for this directory. Raise an error if the fd is invalid
 or if we don't have FileStat permission.</p>
@@ -3650,8 +3648,6 @@ there is no more data, this raises an error.</p>
 <p>Returns up to len bytes. The resulting string may have internal null
 characters.</p>
 <h3 id="fun-ref-seekoffset-isize-val-file-ref">fun ref  <strong>seek</strong>(offset: <a href="../builtin-ISize">ISize</a> val): <a href="../files-File">File</a> ref</h3>
-<p>Move the cursor position.</p>
-<h3 id="fun-ref-_seekoffset-isize-val-base-i32-val-none-val">fun ref  <strong>_seek</strong>(offset: <a href="../builtin-ISize">ISize</a> val, base: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Move the cursor position.</p>
 <h3 id="fun-ref-seek_endoffset-usize-val-file-ref">fun ref  <strong>seek_end</strong>(offset: <a href="../builtin-USize">USize</a> val): <a href="../files-File">File</a> ref</h3>
 <p>Set the cursor position relative to the end of the file.</p>
@@ -3675,6 +3671,13 @@ values.</p>
 Returns false and closes the file if not all the bytes were written.</p>
 <h3 id="fun-ref-writevdata-byteseqiter-box-bool-val">fun ref  <strong>writev</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Write an iterable collection of ByteSeqs.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-box-_final-none-val">fun box  <strong>_final</strong>(): <a href="../builtin-None">None</a> val</h3>
+<p>Close the file.</p>
+<h3 id="fun-tag-getfdhandle-pointer91_filehandle-val93-ref-i32-val">fun tag  <strong><em>get</em>fd</strong>(handle: <a href="../builtin-Pointer">Pointer</a>[<a href="../files-_FileHandle">_FileHandle</a> val] ref): <a href="../builtin-I32">I32</a> val</h3>
+<p>Get the file descriptor associated with the file handle.</p>
+<h3 id="fun-ref-_seekoffset-isize-val-base-i32-val-none-val">fun ref  <strong>_seek</strong>(offset: <a href="../builtin-ISize">ISize</a> val, base: <a href="../builtin-I32">I32</a> val): <a href="../builtin-None">None</a> val</h3>
+<p>Move the cursor position.</p>
               
             </div>
           </div>

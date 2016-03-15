@@ -1209,7 +1209,9 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3605,7 +3607,7 @@ resized map has 2 times the space. The hash function can be plugged in to the
 type to create different kinds of maps.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createoptional-prealloc-usize-val">new <strong>create</strong>(optional prealloc: <a href="../builtin-USize">USize</a> val)</h3>
-<h2 id="functions">Functions</h2>
+<h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-box-add91optional-h2-hashfunction91this-k93-val93key-this-k-value-this-v-hashmap91this-k-this-v-h2-val93-ref">fun box  <strong>add</strong>[optional H2: <a href="../collections-HashFunction">HashFunction</a>[this-&gt;K!] val](key: this-&gt;K!, value: this-&gt;V!): <a href="../collections-HashMap">HashMap</a>[this-&gt;K!, this-&gt;V!, H2 val] ref^</h3>
 <p>This with the new (key, value) mapping.</p>
 <h3 id="fun-box-applykey-box-k-this-v">fun box  <strong>apply</strong>(key: box-&gt;K!): this-&gt;V ?</h3>
@@ -3634,10 +3636,6 @@ Raise an error if there is no next populated index.</p>
 <h3 id="fun-ref-removekey-box-k-k-v">fun ref  <strong>remove</strong>(key: box-&gt;K!): (K^ , V^) ?</h3>
 <p>Delete a value from the map and return it. Raises an error if there was no
 value for the given key.</p>
-<h3 id="fun-ref-_resizelen-usize-val-none-val">fun ref  <strong>_resize</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-None">None</a> val</h3>
-<p>Change the available space.</p>
-<h3 id="fun-box-_searchkey-box-k-usize-val-bool-val">fun box  <strong>_search</strong>(key: box-&gt;K!): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-Bool">Bool</a> val)</h3>
-<p>Return a slot number and whether or not it's currently occupied.</p>
 <h3 id="fun-box-size-usize-val">fun box  <strong>size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The number of items in the map.</p>
 <h3 id="fun-box-space-usize-val">fun box  <strong>space</strong>(): <a href="../builtin-USize">USize</a> val</h3>
@@ -3650,6 +3648,11 @@ size / space &gt;= 0.75.</p>
 returns None. If there was no previous value, this may trigger a resize.</p>
 <h3 id="fun-box-values-mapvalues91k-v-h-val-this-hashmap91k-v-h-val93-ref93-ref">fun box  <strong>values</strong>(): <a href="../collections-MapValues">MapValues</a>[K, V, H val, this-&gt;<a href="../collections-HashMap">HashMap</a>[K, V, H val] ref] ref^</h3>
 <p>Return an iterator over the values.</p>
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="fun-ref-_resizelen-usize-val-none-val">fun ref  <strong>_resize</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-None">None</a> val</h3>
+<p>Change the available space.</p>
+<h3 id="fun-box-_searchkey-box-k-usize-val-bool-val">fun box  <strong>_search</strong>(key: box-&gt;K!): (<a href="../builtin-USize">USize</a> val , <a href="../builtin-Bool">Bool</a> val)</h3>
+<p>Return a slot number and whether or not it's currently occupied.</p>
               
             </div>
           </div>

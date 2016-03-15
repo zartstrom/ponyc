@@ -3033,9 +3033,11 @@
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
-                    <li><a class="toctree-l4" href="#behaviours">Behaviours</a></li>
+                    <li><a class="toctree-l4" href="#public-behaviours">Public Behaviours</a></li>
                 
-                    <li><a class="toctree-l4" href="#functions">Functions</a></li>
+                    <li><a class="toctree-l4" href="#private-behaviours">Private Behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-functions">Private Functions</a></li>
                 
             
             </ul>
@@ -3606,11 +3608,12 @@
 prints results.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createenv-env-val-list-testlist-tag">new <strong>create</strong>(env: <a href="../builtin-Env">Env</a> val, list: <a href="../ponytest-TestList">TestList</a> tag)</h3>
-<h2 id="behaviours">Behaviours</h2>
-<h3 id="be-alltests_applied">be <strong><em>all</em>tests_applied</strong>()</h3>
-<p>All our tests have been handed to apply(), setup for finishing</p>
+<h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-applytest-unittest-iso">be <strong>apply</strong>(test: <a href="../ponytest-UnitTest">UnitTest</a> iso)</h3>
 <p>Run the given test, subject to our filter and options.</p>
+<h2 id="private-behaviours">Private Behaviours</h2>
+<h3 id="be-alltests_applied">be <strong><em>all</em>tests_applied</strong>()</h3>
+<p>All our tests have been handed to apply(), setup for finishing</p>
 <h3 id="be-testcompleteid-usize-val-pass-bool-val-log-array91string-val93-val">be <strong><em>test</em>complete</strong>(id: <a href="../builtin-USize">USize</a> val, pass: <a href="../builtin-Bool">Bool</a> val, log: <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] val)</h3>
 <p>A test has completed, restore its result and update our status info.
 The id parameter is the test identifier handed out when we created the test
@@ -3619,7 +3622,7 @@ helper.</p>
 <p>A test has started running, update status info.
 The id parameter is the test identifier handed out when we created the test
 helper.</p>
-<h2 id="functions">Functions</h2>
+<h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-ref-findgroupgroup_name-string-val-_group-tag">fun ref  <strong><em>find</em>group</strong>(group_name: <a href="../builtin-String">String</a> val): <a href="../ponytest-_Group">_Group</a> tag</h3>
 <p>Find the group to use for the given group name, subject to the
 --sequential flag.</p>
