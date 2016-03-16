@@ -10052,7 +10052,7 @@
         }, 
         {
             "location": "/builtin_test--index/", 
-            "text": "Builtin Tests\n\n\nThis package contains the unit tests for the \nbuiltin\n package. These are here\nso \nbuiltin\n doesn't have to depend on the \nPonyTest\n package.\n\n\nEntities\n\n\n\n\nactor Main\n\n\nclass _TestAbs\n\n\nclass _TestArrayInsert\n\n\nclass _TestArraySlice\n\n\nclass _TestDivMod\n\n\nclass _TestFloatToString\n\n\nclass _TestIntToString\n\n\nclass _TestMath128\n\n\nclass _TestMaybePointer\n\n\nclass _TestSpecialValuesF32\n\n\nclass _TestSpecialValuesF64\n\n\nclass _TestStringCompare\n\n\nclass _TestStringCount\n\n\nclass _TestStringCut\n\n\nclass _TestStringJoin\n\n\nclass _TestStringLstrip\n\n\nclass _TestStringRemove\n\n\nclass _TestStringReplace\n\n\nclass _TestStringRstrip\n\n\nclass _TestStringRunes\n\n\nclass _TestStringSplit\n\n\nclass _TestStringStrip\n\n\nclass _TestStringSubstring\n\n\nclass _TestStringToBool\n\n\nclass _TestStringToFloat\n\n\nclass _TestStringToI8\n\n\nclass _TestStringToIntLarge\n\n\nclass _TestStringToU8\n\n\nstruct _TestStruct\n\n\nclass _TestValtrace\n\n\nactor _Valtrace", 
+            "text": "Builtin Tests\n\n\nThis package contains the unit tests for the \nbuiltin\n package. These are here\nso \nbuiltin\n doesn't have to depend on the \nPonyTest\n package.\n\n\nEntities\n\n\n\n\nclass Callback\n\n\nactor Main\n\n\nclass _TestAbs\n\n\nclass _TestArrayInsert\n\n\nclass _TestArraySlice\n\n\nclass _TestCCallback\n\n\nclass _TestDivMod\n\n\nclass _TestFloatToString\n\n\nclass _TestIntToString\n\n\nclass _TestMath128\n\n\nclass _TestMaybePointer\n\n\nclass _TestSpecialValuesF32\n\n\nclass _TestSpecialValuesF64\n\n\nclass _TestStringCompare\n\n\nclass _TestStringCount\n\n\nclass _TestStringCut\n\n\nclass _TestStringJoin\n\n\nclass _TestStringLstrip\n\n\nclass _TestStringRemove\n\n\nclass _TestStringReplace\n\n\nclass _TestStringRstrip\n\n\nclass _TestStringRunes\n\n\nclass _TestStringSplit\n\n\nclass _TestStringStrip\n\n\nclass _TestStringSubstring\n\n\nclass _TestStringToBool\n\n\nclass _TestStringToFloat\n\n\nclass _TestStringToI8\n\n\nclass _TestStringToIntLarge\n\n\nclass _TestStringToU8\n\n\nstruct _TestStruct\n\n\nclass _TestValtrace\n\n\nactor _Valtrace", 
             "title": "Package"
         }, 
         {
@@ -10062,8 +10062,38 @@
         }, 
         {
             "location": "/builtin_test--index/#entities", 
-            "text": "actor Main  class _TestAbs  class _TestArrayInsert  class _TestArraySlice  class _TestDivMod  class _TestFloatToString  class _TestIntToString  class _TestMath128  class _TestMaybePointer  class _TestSpecialValuesF32  class _TestSpecialValuesF64  class _TestStringCompare  class _TestStringCount  class _TestStringCut  class _TestStringJoin  class _TestStringLstrip  class _TestStringRemove  class _TestStringReplace  class _TestStringRstrip  class _TestStringRunes  class _TestStringSplit  class _TestStringStrip  class _TestStringSubstring  class _TestStringToBool  class _TestStringToFloat  class _TestStringToI8  class _TestStringToIntLarge  class _TestStringToU8  struct _TestStruct  class _TestValtrace  actor _Valtrace", 
+            "text": "class Callback  actor Main  class _TestAbs  class _TestArrayInsert  class _TestArraySlice  class _TestCCallback  class _TestDivMod  class _TestFloatToString  class _TestIntToString  class _TestMath128  class _TestMaybePointer  class _TestSpecialValuesF32  class _TestSpecialValuesF64  class _TestStringCompare  class _TestStringCount  class _TestStringCut  class _TestStringJoin  class _TestStringLstrip  class _TestStringRemove  class _TestStringReplace  class _TestStringRstrip  class _TestStringRunes  class _TestStringSplit  class _TestStringStrip  class _TestStringSubstring  class _TestStringToBool  class _TestStringToFloat  class _TestStringToI8  class _TestStringToIntLarge  class _TestStringToU8  struct _TestStruct  class _TestValtrace  actor _Valtrace", 
             "title": "Entities"
+        }, 
+        {
+            "location": "/builtin_test-Callback/", 
+            "text": "class builtin_test/Callback\n\n\nDefault capability\n: \nref\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(value: \nI32\n val): \nI32\n val", 
+            "title": "class Callback"
+        }, 
+        {
+            "location": "/builtin_test-Callback/#class-builtin_testcallback", 
+            "text": "Default capability :  ref  No doc string provided.", 
+            "title": "class builtin_test/Callback"
+        }, 
+        {
+            "location": "/builtin_test-Callback/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/builtin_test-Callback/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/builtin_test-Callback/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/builtin_test-Callback/#fun-box-applyvalue-i32-val-i32-val", 
+            "text": "", 
+            "title": "fun box  apply(value: I32 val): I32 val"
         }, 
         {
             "location": "/builtin_test-Main/", 
@@ -10247,6 +10277,56 @@
         }, 
         {
             "location": "/builtin_test-_TestArraySlice/#fun-ref-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/", 
+            "text": "class builtin_test/_TestCCallback is \nUnitTest\n ref\n\n\nDefault capability\n: \niso\n\n\nTest C callbacks.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun ref  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val", 
+            "title": "class _TestCCallback"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#class-builtin_test_testccallback-is-unittest-ref", 
+            "text": "Default capability :  iso  Test C callbacks.", 
+            "title": "class builtin_test/_TestCCallback is UnitTest ref"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/builtin_test-_TestCCallback/#fun-ref-timed_outh-testhelper-val-none-val", 
             "text": "", 
             "title": "fun ref  timed_out(h: TestHelper val): None val"
         }, 

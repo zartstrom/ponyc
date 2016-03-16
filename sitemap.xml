@@ -666,6 +666,12 @@
     </url>
         
     <url>
+     <loc>None/builtin_test-Callback/</loc>
+     <lastmod>2016-03-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/builtin_test-Main/</loc>
      <lastmod>2016-03-16</lastmod>
      <changefreq>daily</changefreq>
@@ -685,6 +691,12 @@
         
     <url>
      <loc>None/builtin_test-_TestArraySlice/</loc>
+     <lastmod>2016-03-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/builtin_test-_TestCCallback/</loc>
      <lastmod>2016-03-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
