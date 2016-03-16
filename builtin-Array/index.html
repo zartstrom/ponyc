@@ -671,6 +671,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadElement/">interface ReadElement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../builtin-ReadSeq/">interface ReadSeq</a>
         
     </li>
@@ -1263,13 +1270,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../collections-Lists/">primitive Lists</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../collections-Main/">actor Main</a>
         
     </li>
@@ -1411,13 +1411,6 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../collections-_TestListsFlatMap/">class _TestListsFlatMap</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../collections-_TestListsFlatten/">class _TestListsFlatten</a>
         
     </li>
 
@@ -3615,7 +3608,7 @@ copied.</p>
 <p>Create an array of len elements, populating them with random memory. This
 is only allowed for an array of numbers.</p>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-ref-appendseq-readseq91a93-box-optional-offset-usize-val-optional-len-usize-val-array91a93-ref">fun ref  <strong>append</strong>(seq: <a href="../builtin-ReadSeq">ReadSeq</a>[A] box, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
+<h3 id="fun-ref-appendseq-readseq91a93-box-readelement91a93-box-optional-offset-usize-val-optional-len-usize-val-array91a93-ref">fun ref  <strong>append</strong>(seq: (<a href="../builtin-ReadSeq">ReadSeq</a>[A] box &amp; <a href="../builtin-ReadElement">ReadElement</a>[A^] box), optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Append the elements from a sequence, starting from the given offset.
 The array is returned to allow call chaining.</p>
 <h3 id="fun-box-applyi-usize-val-this-a">fun box  <strong>apply</strong>(i: <a href="../builtin-USize">USize</a> val): this-&gt;A ?</h3>
@@ -3626,10 +3619,10 @@ The array is returned to allow call chaining.</p>
 <h3 id="fun-box-clone-array91this-a93-ref">fun box  <strong>clone</strong>(): <a href="../builtin-Array">Array</a>[this-&gt;A!] ref^</h3>
 <p>Clone the array.
 The new array contains references to the same elements that the old array
-contains, the elements themselves are not copied.</p>
-<h3 id="fun-ref-concatiter-iterator91a93-ref-array91a93-ref">fun ref  <strong>concat</strong>(iter: <a href="../builtin-Iterator">Iterator</a>[A^] ref): <a href="../builtin-Array">Array</a>[A] ref^</h3>
-<p>Add iterated elements to the end of the array.
-The array is returned to allow call chaining.</p>
+contains, the elements themselves are not cloned.</p>
+<h3 id="fun-ref-concatiter-iterator91a93-ref-optional-offset-usize-val-optional-len-usize-val-array91a93-ref">fun ref  <strong>concat</strong>(iter: <a href="../builtin-Iterator">Iterator</a>[A^] ref, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>
+<p>Add len iterated elements to the end of the array, starting from the given
+offset. The array is returned to allow call chaining.</p>
 <h3 id="fun-box-copy_todst-array91this-a93-ref-src_idx-usize-val-dst_idx-usize-val-len-usize-val-this-array91a93-ref">fun box  <strong>copy_to</strong>(dst: <a href="../builtin-Array">Array</a>[this-&gt;A!] ref, src_idx: <a href="../builtin-USize">USize</a> val, dst_idx: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Copy len elements from this(src_idx) to dst(dst_idx).
 The array is returned to allow call chaining.</p>
@@ -3687,7 +3680,7 @@ The removed element is returned.</p>
 <p>Create a new array that is a clone of a portion of this array. The range is
 exclusive and saturated.
 The new array contains references to the same elements that the old array
-contains, the elements themselves are not copied.</p>
+contains, the elements themselves are not cloned.</p>
 <h3 id="fun-box-space-usize-val">fun box  <strong>space</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>The available space in the array.</p>
 <h3 id="fun-ref-truncatelen-usize-val-array91a93-ref">fun ref  <strong>truncate</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Array">Array</a>[A] ref^</h3>

@@ -658,6 +658,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadElement/">interface ReadElement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../builtin-ReadSeq/">interface ReadSeq</a>
         
     </li>
@@ -1263,13 +1270,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../collections-Lists/">primitive Lists</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../collections-Main/">actor Main</a>
         
     </li>
@@ -1411,13 +1411,6 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../collections-_TestListsFlatMap/">class _TestListsFlatMap</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../collections-_TestListsFlatten/">class _TestListsFlatten</a>
         
     </li>
 
@@ -3610,6 +3603,9 @@ can crash. This will only occur if the C-FFI has been used to craft such
 a pointer.</p>
 <h3 id="new-createoptional-len-usize-val">new <strong>create</strong>(optional len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>An empty string. Enough space for len bytes is reserved.</p>
+<h3 id="new-from_arraydata-array91u8-val93-val">new <strong>from_array</strong>(data: <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)</h3>
+<p>Create a string from an array, reusing the underlying data pointer if the
+array is null terminated, or copying the data if it is not.</p>
 <h3 id="new-from_cstringstr-pointer91u8-val93-ref-optional-len-usize-val">new <strong>from_cstring</strong>(str: <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] ref, optional len: <a href="../builtin-USize">USize</a> val)</h3>
 <p>The cstring is not copied. This must be done only with C-FFI functions that
 return null-terminated pony_alloc'd character arrays.</p>
@@ -3622,6 +3618,8 @@ return null-terminated pony_alloc'd character arrays.</p>
 <p>Append the elements from a sequence, starting from the given offset.</p>
 <h3 id="fun-box-applyi-usize-val-u8-val">fun box  <strong>apply</strong>(i: <a href="../builtin-USize">USize</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Returns the i-th byte. Raise an error if the index is out of bounds.</p>
+<h3 id="fun-val-array-array91u8-val93-val">fun val  <strong>array</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val</h3>
+<p>Returns an Array[U8] that that reuses the underlying data pointer.</p>
 <h3 id="fun-box-ats-string-box-optional-offset-isize-val-bool-val">fun box  <strong>at</strong>(s: <a href="../builtin-String">String</a> box, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the substring s is present at the given offset.</p>
 <h3 id="fun-box-at_offsetoffset-isize-val-u8-val">fun box  <strong>at_offset</strong>(offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
@@ -3639,6 +3637,9 @@ offsets. Index range [<code>from</code> .. <code>to</code>) is half-open.</p>
 <p>Lexically compare two strings.</p>
 <h3 id="fun-box-compare_subthat-string-box-n-usize-val-optional-offset-isize-val-optional-that_offset-isize-val-optional-ignore_case-bool-val-less-val-equal-val-greater-val">fun box  <strong>compare_sub</strong>(that: <a href="../builtin-String">String</a> box, n: <a href="../builtin-USize">USize</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val, optional that_offset: <a href="../builtin-ISize">ISize</a> val, optional ignore_case: <a href="../builtin-Bool">Bool</a> val): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
 <p>Starting at this + offset, compare n bytes with that + offset.</p>
+<h3 id="fun-ref-concatiter-iterator91u8-val93-ref-optional-offset-usize-val-optional-len-usize-val-string-ref">fun ref  <strong>concat</strong>(iter: <a href="../builtin-Iterator">Iterator</a>[<a href="../builtin-U8">U8</a> val] ref, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> ref^</h3>
+<p>Add len iterated bytes to the end of the string, starting from the given
+offset. The string is returned to allow call chaining.</p>
 <h3 id="fun-box-counts-string-box-optional-offset-isize-val-usize-val">fun box  <strong>count</strong>(s: <a href="../builtin-String">String</a> box, optional offset: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-USize">USize</a> val</h3>
 <p>Counts the non-overlapping occurrences of s in the string.</p>
 <h3 id="fun-box-cstring-pointer91u8-val93-tag">fun box  <strong>cstring</strong>(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] tag</h3>

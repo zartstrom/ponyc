@@ -658,6 +658,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadElement/">interface ReadElement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../builtin-ReadSeq/">interface ReadSeq</a>
         
     </li>
@@ -1250,13 +1257,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../collections-Lists/">primitive Lists</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../collections-Main/">actor Main</a>
         
     </li>
@@ -1398,13 +1398,6 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../collections-_TestListsFlatMap/">class _TestListsFlatMap</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../collections-_TestListsFlatten/">class _TestListsFlatten</a>
         
     </li>
 
@@ -3618,7 +3611,7 @@ any time), is an error.</p>
 <p>Encode for MIME (RFC 2045).</p>
 <h3 id="fun-box-encode_pemdata-byteseq-box-string-iso">fun box  <strong>encode_pem</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-String">String</a> iso^</h3>
 <p>Encode for PEM (RFC 1421).</p>
-<h3 id="fun-box-encode_urldata-byteseq-box-optional-pad-bool-val-string-iso">fun box  <strong>encode_url</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional pad: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> iso^</h3>
+<h3 id="fun-box-encode_url91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-pad-bool-val-a-iso">fun box  <strong>encode_url</strong>[optional A: <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso](data: <a href="../builtin-ByteSeq">ByteSeq</a> box, optional pad: <a href="../builtin-Bool">Bool</a> val): A iso^</h3>
 <p>Encode for URLs (RFC 4648). Padding characters are stripped by default.</p>
 <h3 id="fun-box-eqthat-base64-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h3 id="fun-box-nethat-base64-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../encode-base64-Base64">Base64</a> val): <a href="../builtin-Bool">Bool</a> val</h3>

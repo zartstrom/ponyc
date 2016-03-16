@@ -671,6 +671,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadElement/">interface ReadElement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../builtin-ReadSeq/">interface ReadSeq</a>
         
     </li>
@@ -1263,13 +1270,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../collections-Lists/">primitive Lists</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../collections-Main/">actor Main</a>
         
     </li>
@@ -1411,13 +1411,6 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../collections-_TestListsFlatMap/">class _TestListsFlatMap</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../collections-_TestListsFlatten/">class _TestListsFlatten</a>
         
     </li>
 
@@ -3628,7 +3621,7 @@ functions on a Pointer[A] are private to maintain memory safety.</p>
 <h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-box-_applyi-usize-val-this-a">fun box  <strong>_apply</strong>(i: <a href="../builtin-USize">USize</a> val): this-&gt;A</h3>
 <p>Retrieve index i.</p>
-<h3 id="fun-box-copytothat-pointer91this-a93-tag-n-usize-val-this-pointer91a93-ref">fun box  <strong><em>copy</em>to</strong>(that: <a href="../builtin-Pointer">Pointer</a>[this-&gt;A!] tag, n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
+<h3 id="fun-box-copytothat-pointer91this-a93-ref-n-usize-val-this-pointer91a93-ref">fun box  <strong><em>copy</em>to</strong>(that: <a href="../builtin-Pointer">Pointer</a>[this-&gt;A!] ref, n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Copy n elements from this to that.</p>
 <h3 id="fun-ref-_deleten-usize-val-len-usize-val-a">fun ref  <strong>_delete</strong>(n: <a href="../builtin-USize">USize</a> val, len: <a href="../builtin-USize">USize</a> val): A^</h3>
 <p>Delete n elements from the head of pointer, compact remaining elements of
@@ -3640,10 +3633,10 @@ The array length before this should be len, and the available space should
 be at least n + len.</p>
 <h3 id="fun-box-_offsetn-usize-val-this-pointer91a93-ref">fun box  <strong>_offset</strong>(n: <a href="../builtin-USize">USize</a> val): this-&gt;<a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Return a pointer to the n-th element.</p>
-<h3 id="fun-tag-offsettagn-usize-val-pointer91a93-tag">fun tag  <strong><em>offset</em>tag</strong>(n: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] tag</h3>
-<p>Return a pointer to the n-th element.</p>
 <h3 id="fun-ref-_realloclen-usize-val-pointer91a93-ref">fun ref  <strong>_realloc</strong>(len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
 <p>Keep the contents, but reserve space for len instances of A.</p>
+<h3 id="fun-tag-_unsafe-pointer91a93-ref">fun tag  <strong>_unsafe</strong>(): <a href="../builtin-Pointer">Pointer</a>[A] ref</h3>
+<p>Unsafe change in reference capability.</p>
 <h3 id="fun-ref-_updatei-usize-val-value-a-a">fun ref  <strong>_update</strong>(i: <a href="../builtin-USize">USize</a> val, value: A!): A^</h3>
 <p>Set index i and return the previous value.</p>
               
