@@ -231,7 +231,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../builtin-ByteSeq/">interface ByteSeq</a>
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
         
     </li>
 
@@ -3597,16 +3597,16 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>Contains match data for a combination of a regex and a subject.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-_createsubject-byteseq-val-m-pointer91_match-val93-ref">new <strong>_create</strong>(subject: <a href="../builtin-ByteSeq">ByteSeq</a> val, m: <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref)</h3>
+<h3 id="new-_createsubject-string-val-array91u8-val93-val-m-pointer91_match-val93-ref">new <strong>_create</strong>(subject: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val), m: <a href="../builtin-Pointer">Pointer</a>[<a href="../regex-_Match">_Match</a> val] ref)</h3>
 <p>Store a match, a subject, and a size.</p>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-box-apply91optional-a-byteseq-iso-seq91u8-val93-iso93i-u32-val-a-iso">fun box  <strong>apply</strong>[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](i: <a href="../builtin-U32">U32</a> val): A iso^ ?</h3>
+<h3 id="fun-box-apply91optional-a-string-iso-array91u8-val93-iso-seq91u8-val93-iso93i-u32-val-a-iso">fun box  <strong>apply</strong>[optional A: ((<a href="../builtin-String">String</a> iso | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso) &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](i: <a href="../builtin-U32">U32</a> val): A iso^ ?</h3>
 <p>Returns a capture by number. Raises an error if the index is out of bounds.</p>
 <h3 id="fun-ref-dispose-none-val">fun ref  <strong>dispose</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Free the underlying PCRE2 data.</p>
 <h3 id="fun-box-end_pos-usize-val">fun box  <strong>end_pos</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the character position of the last character in the match.</p>
-<h3 id="fun-box-find91optional-a-byteseq-iso-seq91u8-val93-iso93name-string-box-a-iso">fun box  <strong>find</strong>[optional A: (<a href="../builtin-ByteSeq">ByteSeq</a> iso &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](name: <a href="../builtin-String">String</a> box): A iso^ ?</h3>
+<h3 id="fun-box-find91optional-a-string-iso-array91u8-val93-iso-seq91u8-val93-iso93name-string-box-a-iso">fun box  <strong>find</strong>[optional A: ((<a href="../builtin-String">String</a> iso | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso) &amp; <a href="../builtin-Seq">Seq</a>[<a href="../builtin-U8">U8</a> val] iso)](name: <a href="../builtin-String">String</a> box): A iso^ ?</h3>
 <p>Returns a capture by name. Raises an error if the named capture does not
 exist.</p>
 <h3 id="fun-box-groups-array91string-val93-iso">fun box  <strong>groups</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-String">String</a> val] iso^</h3>

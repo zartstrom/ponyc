@@ -231,7 +231,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../builtin-ByteSeq/">interface ByteSeq</a>
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
         
     </li>
 
@@ -3628,7 +3628,7 @@ prevents this.</p>
 <p>Set the TTL for multicast sends. Defaults to 1.</p>
 <h3 id="be-set_notifynotify-udpnotify-iso">be <strong>set_notify</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso)</h3>
 <p>Change the notifier.</p>
-<h3 id="be-writedata-byteseq-val-to-ipaddress-val">be <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val, to: <a href="../net-IPAddress">IPAddress</a> val)</h3>
+<h3 id="be-writedata-string-val-array91u8-val93-val-to-ipaddress-val">be <strong>write</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val), to: <a href="../net-IPAddress">IPAddress</a> val)</h3>
 <p>Write a single sequence of bytes.</p>
 <h3 id="be-writevdata-byteseqiter-val-to-ipaddress-val">be <strong>writev</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> val, to: <a href="../net-IPAddress">IPAddress</a> val)</h3>
 <p>Write a sequence of sequences of bytes.</p>
@@ -3655,7 +3655,7 @@ avoid starving other actors.</p>
 <h3 id="fun-ref-startnext_read-none-val">fun ref  <strong><em>start</em>next_read</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Start our next receive.
 This is used only with IOCP on Windows.</p>
-<h3 id="fun-ref-_writedata-byteseq-val-to-ipaddress-val-none-val">fun ref  <strong>_write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val, to: <a href="../net-IPAddress">IPAddress</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-_writedata-string-val-array91u8-val93-val-to-ipaddress-val-none-val">fun ref  <strong>_write</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val), to: <a href="../net-IPAddress">IPAddress</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Write the datagram to the socket.</p>
               
             </div>

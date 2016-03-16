@@ -231,7 +231,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../builtin-ByteSeq/">interface ByteSeq</a>
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
         
     </li>
 
@@ -3605,14 +3605,14 @@ to any transport layer.</p>
 <h3 id="fun-ref-read-array91u8-val93-iso">fun ref  <strong>read</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] iso^ ?</h3>
 <p>Returns unencrypted bytes to be passed to the application. Raises an error
 if no data is available.</p>
-<h3 id="fun-ref-receivedata-byteseq-val-none-val">fun ref  <strong>receive</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val</h3>
+<h3 id="fun-ref-receivedata-string-val-array91u8-val93-val-none-val">fun ref  <strong>receive</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)): <a href="../builtin-None">None</a> val</h3>
 <p>When data is received, add it to the SSL session.</p>
 <h3 id="fun-ref-send-array91u8-val93-val">fun ref  <strong>send</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?</h3>
 <p>Returns encrypted bytes to be passed to the destination. Raises an error
 if no data is available.</p>
 <h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  <strong>state</strong>(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
 <p>Returns the SSL session state.</p>
-<h3 id="fun-ref-writedata-byteseq-val-none-val">fun ref  <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../builtin-None">None</a> val ?</h3>
+<h3 id="fun-ref-writedata-string-val-array91u8-val93-val-none-val">fun ref  <strong>write</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)): <a href="../builtin-None">None</a> val ?</h3>
 <p>When application data is sent, add it to the SSL session. Raises an error
 if the handshake is not complete.</p>
 <h2 id="private-functions">Private Functions</h2>

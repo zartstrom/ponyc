@@ -231,7 +231,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../builtin-ByteSeq/">interface ByteSeq</a>
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
         
     </li>
 
@@ -3631,7 +3631,7 @@ there is no more data, this raises an error.</p>
 <p>Returns an iterator for reading lines from the file.</p>
 <h3 id="fun-box-position-usize-val">fun box  <strong>position</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Return the current cursor position in the file.</p>
-<h3 id="fun-ref-printdata-byteseq-box-bool-val">fun ref  <strong>print</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-ref-printdata-string-box-array91u8-val93-box-bool-val">fun ref  <strong>print</strong>(data: (<a href="../builtin-String">String</a> box | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] box)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Same as write, buts adds a newline.</p>
 <h3 id="fun-ref-printvdata-byteseqiter-box-bool-val">fun ref  <strong>printv</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Print an iterable collection of ByteSeqs.</p>
@@ -3659,7 +3659,7 @@ values.</p>
 <p>Set the last access and modification times of the directory to now.</p>
 <h3 id="fun-box-valid-bool-val">fun box  <strong>valid</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the file is currently open.</p>
-<h3 id="fun-ref-writedata-byteseq-box-bool-val">fun ref  <strong>write</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> box): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-ref-writedata-string-box-array91u8-val93-box-bool-val">fun ref  <strong>write</strong>(data: (<a href="../builtin-String">String</a> box | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] box)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns false if the file wasn't opened with write permission.
 Returns false and closes the file if not all the bytes were written.</p>
 <h3 id="fun-ref-writevdata-byteseqiter-box-bool-val">fun ref  <strong>writev</strong>(data: <a href="../builtin-ByteSeqIter">ByteSeqIter</a> box): <a href="../builtin-Bool">Bool</a> val</h3>

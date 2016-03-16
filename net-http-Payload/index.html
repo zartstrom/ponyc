@@ -231,7 +231,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../builtin-ByteSeq/">interface ByteSeq</a>
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
         
     </li>
 
@@ -3612,11 +3612,11 @@ request, the status is meaningless.</p>
 <h3 id="new-requestoptional-method-string-val-optional-url-url-val-optional-handler-responsehandler-val-none-val">new <strong>request</strong>(optional method': <a href="../builtin-String">String</a> val, optional url': <a href="../net-http-URL">URL</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
 <h3 id="new-responseoptional-status-u16-val-optional-description-string-val-optional-handler-responsehandler-val-none-val">new <strong>response</strong>(optional status': <a href="../builtin-U16">U16</a> val, optional description: <a href="../builtin-String">String</a> val, optional handler': (<a href="../net-http-ResponseHandler">ResponseHandler</a> val | <a href="../builtin-None">None</a> val))</h3>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-ref-add_chunkdata-byteseq-val-payload-ref">fun ref  <strong>add_chunk</strong>(data: <a href="../builtin-ByteSeq">ByteSeq</a> val): <a href="../net-http-Payload">Payload</a> ref^</h3>
+<h3 id="fun-ref-add_chunkdata-string-val-array91u8-val93-val-payload-ref">fun ref  <strong>add_chunk</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)): <a href="../net-http-Payload">Payload</a> ref^</h3>
 <p>Add a chunk to the body.</p>
 <h3 id="fun-box-applykey-string-val-string-val">fun box  <strong>apply</strong>(key: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>Get a header.</p>
-<h3 id="fun-box-body-this-array91byteseq-val93-ref">fun box  <strong>body</strong>(): this-&gt;<a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] ref</h3>
+<h3 id="fun-box-body-this-array91string-val-array91u8-val93-val93-ref">fun box  <strong>body</strong>(): this-&gt;<a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)] ref</h3>
 <p>Get the body.</p>
 <h3 id="fun-box-body_size-usize-val">fun box  <strong>body_size</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <p>Get the total size of the body.</p>
@@ -3630,10 +3630,10 @@ request, the status is meaningless.</p>
 <p>Set a header. If we've already received the header, append the value as a
 comma separated list, as per RFC 2616 section 4.2.</p>
 <h2 id="private-functions">Private Functions</h2>
-<h3 id="fun-box-addbodylist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  <strong><em>add</em>body</strong>(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
+<h3 id="fun-box-addbodylist-array91string-val-array91u8-val93-val93-iso-array91string-val-array91u8-val93-val93-iso">fun box  <strong><em>add</em>body</strong>(list: <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)] iso): <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)] iso^</h3>
 <p>Add the body to the list.
 TODO: don't include the body for HEAD, 204, 304 or 1xx</p>
-<h3 id="fun-box-addheaderslist-array91byteseq-val93-iso-array91byteseq-val93-iso">fun box  <strong><em>add</em>headers</strong>(list: <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso): <a href="../builtin-Array">Array</a>[<a href="../builtin-ByteSeq">ByteSeq</a> val] iso^</h3>
+<h3 id="fun-box-addheaderslist-array91string-val-array91u8-val93-val93-iso-array91string-val-array91u8-val93-val93-iso">fun box  <strong><em>add</em>headers</strong>(list: <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)] iso): <a href="../builtin-Array">Array</a>[(<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)] iso^</h3>
 <p>Add the headers to the list.</p>
 <h3 id="fun-val-clientfail-none-val">fun val  <strong><em>client</em>fail</strong>(): <a href="../builtin-None">None</a> val</h3>
 <p>Trigger the response handler with an error payload. This is private to

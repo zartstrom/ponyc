@@ -147,12 +147,12 @@
         }, 
         {
             "location": "/builtin--index/", 
-            "text": "No package doc string provided for builtin.\n\n\nEntities\n\n\n\n\ntype Align\n\n\nprimitive AlignCenter\n\n\nprimitive AlignLeft\n\n\nprimitive AlignRight\n\n\nprimitive AmbientAuth\n\n\ninterface Any\n\n\ntrait _ArithmeticConvertible\n\n\nclass Array\n\n\nclass ArrayKeys\n\n\nclass ArrayPairs\n\n\nclass ArrayValues\n\n\nprimitive AsioEvent\n\n\ntype AsioEventID\n\n\ninterface AsioEventNotify\n\n\nprimitive Bool\n\n\ninterface ByteSeq\n\n\ninterface ByteSeqIter\n\n\ninterface Comparable\n\n\ntype Compare\n\n\ninterface Creatable\n\n\ninterface DisposableActor\n\n\nclass Env\n\n\nprimitive Equal\n\n\ninterface Equatable\n\n\nprimitive F32\n\n\nprimitive F64\n\n\ntype Float\n\n\ntrait FloatingPoint\n\n\nprimitive FormatBinary\n\n\nprimitive FormatBinaryBare\n\n\nprimitive FormatDefault\n\n\nprimitive FormatDefaultNumber\n\n\nprimitive FormatExp\n\n\nprimitive FormatExpLarge\n\n\nprimitive FormatFix\n\n\nprimitive FormatFixLarge\n\n\ntype FormatFloat\n\n\nprimitive FormatGeneral\n\n\nprimitive FormatGeneralLarge\n\n\nprimitive FormatHex\n\n\nprimitive FormatHexBare\n\n\nprimitive FormatHexSmall\n\n\nprimitive FormatHexSmallBare\n\n\ntype FormatInt\n\n\nprimitive FormatOctal\n\n\nprimitive FormatOctalBare\n\n\ninterface FormatSettings\n\n\nprimitive FormatSettingsDefault\n\n\ntype FormatSettingsFloat\n\n\nclass FormatSettingsHolder\n\n\ntype FormatSettingsInt\n\n\ntrait FormatSpec\n\n\nprimitive FormatUTF32\n\n\nprimitive Greater\n\n\ninterface HasEq\n\n\nprimitive I128\n\n\nprimitive I16\n\n\nprimitive I32\n\n\nprimitive I64\n\n\nprimitive I8\n\n\nprimitive ILong\n\n\nprimitive ISize\n\n\ntrait Integer\n\n\ninterface Iterator\n\n\nprimitive Less\n\n\nstruct MaybePointer\n\n\nprimitive None\n\n\ntype Number\n\n\ninterface OutStream\n\n\nprimitive Platform\n\n\nstruct Pointer\n\n\nprimitive PrefixDefault\n\n\ntype PrefixNumber\n\n\nprimitive PrefixSign\n\n\nprimitive PrefixSpace\n\n\ntrait PrefixSpec\n\n\ninterface ReadElement\n\n\ninterface ReadSeq\n\n\ntrait Real\n\n\ninterface Seq\n\n\ntype Signed\n\n\ntrait _SignedInteger\n\n\ninterface SourceLoc\n\n\nactor StdStream\n\n\nactor Stdin\n\n\ninterface StdinNotify\n\n\nclass String\n\n\nclass StringBytes\n\n\nclass StringRunes\n\n\ninterface Stringable\n\n\nprimitive _ToString\n\n\nprimitive U128\n\n\nprimitive U16\n\n\nprimitive U32\n\n\nprimitive U64\n\n\nprimitive U8\n\n\nprimitive ULong\n\n\nprimitive USize\n\n\ntype Unsigned\n\n\ntrait _UnsignedInteger", 
+            "text": "No package doc string provided for builtin.\n\n\nEntities\n\n\n\n\ntype Align\n\n\nprimitive AlignCenter\n\n\nprimitive AlignLeft\n\n\nprimitive AlignRight\n\n\nprimitive AmbientAuth\n\n\ninterface Any\n\n\ntrait _ArithmeticConvertible\n\n\nclass Array\n\n\nclass ArrayKeys\n\n\nclass ArrayPairs\n\n\nclass ArrayValues\n\n\nprimitive AsioEvent\n\n\ntype AsioEventID\n\n\ninterface AsioEventNotify\n\n\nprimitive Bool\n\n\ntype ByteSeq\n\n\ninterface ByteSeqIter\n\n\ninterface Comparable\n\n\ntype Compare\n\n\ninterface Creatable\n\n\ninterface DisposableActor\n\n\nclass Env\n\n\nprimitive Equal\n\n\ninterface Equatable\n\n\nprimitive F32\n\n\nprimitive F64\n\n\ntype Float\n\n\ntrait FloatingPoint\n\n\nprimitive FormatBinary\n\n\nprimitive FormatBinaryBare\n\n\nprimitive FormatDefault\n\n\nprimitive FormatDefaultNumber\n\n\nprimitive FormatExp\n\n\nprimitive FormatExpLarge\n\n\nprimitive FormatFix\n\n\nprimitive FormatFixLarge\n\n\ntype FormatFloat\n\n\nprimitive FormatGeneral\n\n\nprimitive FormatGeneralLarge\n\n\nprimitive FormatHex\n\n\nprimitive FormatHexBare\n\n\nprimitive FormatHexSmall\n\n\nprimitive FormatHexSmallBare\n\n\ntype FormatInt\n\n\nprimitive FormatOctal\n\n\nprimitive FormatOctalBare\n\n\ninterface FormatSettings\n\n\nprimitive FormatSettingsDefault\n\n\ntype FormatSettingsFloat\n\n\nclass FormatSettingsHolder\n\n\ntype FormatSettingsInt\n\n\ntrait FormatSpec\n\n\nprimitive FormatUTF32\n\n\nprimitive Greater\n\n\ninterface HasEq\n\n\nprimitive I128\n\n\nprimitive I16\n\n\nprimitive I32\n\n\nprimitive I64\n\n\nprimitive I8\n\n\nprimitive ILong\n\n\nprimitive ISize\n\n\ntrait Integer\n\n\ninterface Iterator\n\n\nprimitive Less\n\n\nstruct MaybePointer\n\n\nprimitive None\n\n\ntype Number\n\n\ninterface OutStream\n\n\nprimitive Platform\n\n\nstruct Pointer\n\n\nprimitive PrefixDefault\n\n\ntype PrefixNumber\n\n\nprimitive PrefixSign\n\n\nprimitive PrefixSpace\n\n\ntrait PrefixSpec\n\n\ninterface ReadElement\n\n\ninterface ReadSeq\n\n\ntrait Real\n\n\ninterface Seq\n\n\ntype Signed\n\n\ntrait _SignedInteger\n\n\ninterface SourceLoc\n\n\nactor StdStream\n\n\nactor Stdin\n\n\ninterface StdinNotify\n\n\nclass String\n\n\nclass StringBytes\n\n\nclass StringRunes\n\n\ninterface Stringable\n\n\nprimitive _ToString\n\n\nprimitive U128\n\n\nprimitive U16\n\n\nprimitive U32\n\n\nprimitive U64\n\n\nprimitive U8\n\n\nprimitive ULong\n\n\nprimitive USize\n\n\ntype Unsigned\n\n\ntrait _UnsignedInteger", 
             "title": "Package"
         }, 
         {
             "location": "/builtin--index/#entities", 
-            "text": "type Align  primitive AlignCenter  primitive AlignLeft  primitive AlignRight  primitive AmbientAuth  interface Any  trait _ArithmeticConvertible  class Array  class ArrayKeys  class ArrayPairs  class ArrayValues  primitive AsioEvent  type AsioEventID  interface AsioEventNotify  primitive Bool  interface ByteSeq  interface ByteSeqIter  interface Comparable  type Compare  interface Creatable  interface DisposableActor  class Env  primitive Equal  interface Equatable  primitive F32  primitive F64  type Float  trait FloatingPoint  primitive FormatBinary  primitive FormatBinaryBare  primitive FormatDefault  primitive FormatDefaultNumber  primitive FormatExp  primitive FormatExpLarge  primitive FormatFix  primitive FormatFixLarge  type FormatFloat  primitive FormatGeneral  primitive FormatGeneralLarge  primitive FormatHex  primitive FormatHexBare  primitive FormatHexSmall  primitive FormatHexSmallBare  type FormatInt  primitive FormatOctal  primitive FormatOctalBare  interface FormatSettings  primitive FormatSettingsDefault  type FormatSettingsFloat  class FormatSettingsHolder  type FormatSettingsInt  trait FormatSpec  primitive FormatUTF32  primitive Greater  interface HasEq  primitive I128  primitive I16  primitive I32  primitive I64  primitive I8  primitive ILong  primitive ISize  trait Integer  interface Iterator  primitive Less  struct MaybePointer  primitive None  type Number  interface OutStream  primitive Platform  struct Pointer  primitive PrefixDefault  type PrefixNumber  primitive PrefixSign  primitive PrefixSpace  trait PrefixSpec  interface ReadElement  interface ReadSeq  trait Real  interface Seq  type Signed  trait _SignedInteger  interface SourceLoc  actor StdStream  actor Stdin  interface StdinNotify  class String  class StringBytes  class StringRunes  interface Stringable  primitive _ToString  primitive U128  primitive U16  primitive U32  primitive U64  primitive U8  primitive ULong  primitive USize  type Unsigned  trait _UnsignedInteger", 
+            "text": "type Align  primitive AlignCenter  primitive AlignLeft  primitive AlignRight  primitive AmbientAuth  interface Any  trait _ArithmeticConvertible  class Array  class ArrayKeys  class ArrayPairs  class ArrayValues  primitive AsioEvent  type AsioEventID  interface AsioEventNotify  primitive Bool  type ByteSeq  interface ByteSeqIter  interface Comparable  type Compare  interface Creatable  interface DisposableActor  class Env  primitive Equal  interface Equatable  primitive F32  primitive F64  type Float  trait FloatingPoint  primitive FormatBinary  primitive FormatBinaryBare  primitive FormatDefault  primitive FormatDefaultNumber  primitive FormatExp  primitive FormatExpLarge  primitive FormatFix  primitive FormatFixLarge  type FormatFloat  primitive FormatGeneral  primitive FormatGeneralLarge  primitive FormatHex  primitive FormatHexBare  primitive FormatHexSmall  primitive FormatHexSmallBare  type FormatInt  primitive FormatOctal  primitive FormatOctalBare  interface FormatSettings  primitive FormatSettingsDefault  type FormatSettingsFloat  class FormatSettingsHolder  type FormatSettingsInt  trait FormatSpec  primitive FormatUTF32  primitive Greater  interface HasEq  primitive I128  primitive I16  primitive I32  primitive I64  primitive I8  primitive ILong  primitive ISize  trait Integer  interface Iterator  primitive Less  struct MaybePointer  primitive None  type Number  interface OutStream  primitive Platform  struct Pointer  primitive PrefixDefault  type PrefixNumber  primitive PrefixSign  primitive PrefixSpace  trait PrefixSpec  interface ReadElement  interface ReadSeq  trait Real  interface Seq  type Signed  trait _SignedInteger  interface SourceLoc  actor StdStream  actor Stdin  interface StdinNotify  class String  class StringBytes  class StringRunes  interface Stringable  primitive _ToString  primitive U128  primitive U16  primitive U32  primitive U64  primitive U8  primitive ULong  primitive USize  type Unsigned  trait _UnsignedInteger", 
             "title": "Entities"
         }, 
         {
@@ -882,47 +882,22 @@
         }, 
         {
             "location": "/builtin-ByteSeq/", 
-            "text": "interface builtin/ByteSeq\n\n\nDefault capability\n: \nval\n\n\nAccept both a String and an Array[U8].\n\n\nPublic Functions\n\n\nfun box  \napply\n(i: \nUSize\n val): \nU8\n val ?\n\n\nfun box  \ncstring\n(): \nPointer\n[\nU8\n val] tag\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nfun box  \nspace\n(): \nUSize\n val", 
-            "title": "interface ByteSeq"
+            "text": "type builtin/ByteSeq is (\nString\n val | \nArray\n[\nU8\n val] val)\n\n\nNo doc string provided.", 
+            "title": "type ByteSeq"
         }, 
         {
-            "location": "/builtin-ByteSeq/#interface-builtinbyteseq", 
-            "text": "Default capability :  val  Accept both a String and an Array[U8].", 
-            "title": "interface builtin/ByteSeq"
-        }, 
-        {
-            "location": "/builtin-ByteSeq/#public-functions", 
-            "text": "", 
-            "title": "Public Functions"
-        }, 
-        {
-            "location": "/builtin-ByteSeq/#fun-box-applyi-usize-val-u8-val", 
-            "text": "", 
-            "title": "fun box  apply(i: USize val): U8 val ?"
-        }, 
-        {
-            "location": "/builtin-ByteSeq/#fun-box-cstring-pointer91u8-val93-tag", 
-            "text": "", 
-            "title": "fun box  cstring(): Pointer[U8 val] tag"
-        }, 
-        {
-            "location": "/builtin-ByteSeq/#fun-box-size-usize-val", 
-            "text": "", 
-            "title": "fun box  size(): USize val"
-        }, 
-        {
-            "location": "/builtin-ByteSeq/#fun-box-space-usize-val", 
-            "text": "", 
-            "title": "fun box  space(): USize val"
+            "location": "/builtin-ByteSeq/#type-builtinbyteseq-is-string-val-array91u8-val93-val", 
+            "text": "No doc string provided.", 
+            "title": "type builtin/ByteSeq is (String val | Array[U8 val] val)"
         }, 
         {
             "location": "/builtin-ByteSeqIter/", 
-            "text": "interface builtin/ByteSeqIter\n\n\nDefault capability\n: \nval\n\n\nAccept an iterable collection of String or Array[U8].\n\n\nPublic Functions\n\n\nfun box  \nvalues\n(): \nIterator\n[\nByteSeq\n val] ref", 
+            "text": "interface builtin/ByteSeqIter\n\n\nDefault capability\n: \nval\n\n\nAccept an iterable collection of String or Array[U8] val.\n\n\nPublic Functions\n\n\nfun box  \nvalues\n(): \nIterator\n[(this-\nString\n box | this-\nArray\n[\nU8\n val] box)] ref", 
             "title": "interface ByteSeqIter"
         }, 
         {
             "location": "/builtin-ByteSeqIter/#interface-builtinbyteseqiter", 
-            "text": "Default capability :  val  Accept an iterable collection of String or Array[U8].", 
+            "text": "Default capability :  val  Accept an iterable collection of String or Array[U8] val.", 
             "title": "interface builtin/ByteSeqIter"
         }, 
         {
@@ -931,9 +906,9 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/builtin-ByteSeqIter/#fun-box-values-iterator91byteseq-val93-ref", 
+            "location": "/builtin-ByteSeqIter/#fun-box-values-iterator91this-string-box-this-array91u8-val93-box93-ref", 
             "text": "", 
-            "title": "fun box  values(): Iterator[ByteSeq val] ref"
+            "title": "fun box  values(): Iterator[(this-&gt;String box | this-&gt;Array[U8 val] box)] ref"
         }, 
         {
             "location": "/builtin-Comparable/", 
@@ -5857,7 +5832,7 @@
         }, 
         {
             "location": "/builtin-OutStream/", 
-            "text": "interface builtin/OutStream\n\n\nDefault capability\n: \ntag\n\n\nAsnychronous access to some output stream.\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: \nByteSeq\n val)\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: \nByteSeq\n val)\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.", 
+            "text": "interface builtin/OutStream\n\n\nDefault capability\n: \ntag\n\n\nAsnychronous access to some output stream.\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.", 
             "title": "interface OutStream"
         }, 
         {
@@ -5871,9 +5846,9 @@
             "title": "Public Behaviours"
         }, 
         {
-            "location": "/builtin-OutStream/#be-printdata-byteseq-val", 
+            "location": "/builtin-OutStream/#be-printdata-string-val-array91u8-val93-val", 
             "text": "Print some bytes and insert a newline afterwards.", 
-            "title": "be print(data: ByteSeq val)"
+            "title": "be print(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/builtin-OutStream/#be-printvdata-byteseqiter-val", 
@@ -5881,9 +5856,9 @@
             "title": "be printv(data: ByteSeqIter val)"
         }, 
         {
-            "location": "/builtin-OutStream/#be-writedata-byteseq-val", 
+            "location": "/builtin-OutStream/#be-writedata-string-val-array91u8-val93-val", 
             "text": "Print some bytes without inserting a newline afterwards.", 
-            "title": "be write(data: ByteSeq val)"
+            "title": "be write(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/builtin-OutStream/#be-writevdata-byteseqiter-val", 
@@ -6907,7 +6882,7 @@
         }, 
         {
             "location": "/builtin-StdStream/", 
-            "text": "actor builtin/StdStream\n\n\nDefault capability\n: \ntag\n\n\nAsynchronous access to stdout and stderr. The constructors are private to\nensure that access is provided only via an environment.\n\n\nConstructors\n\n\nnew \n_err\n()\n\n\nCreate an async stream for stderr.\n\n\nnew \n_out\n()\n\n\nCreate an async stream for stdout.\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: \nByteSeq\n val)\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: \nByteSeq\n val)\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.\n\n\nPrivate Functions\n\n\nfun ref  \n_write\n(data: \nByteSeq\n val): \nNone\n val\n\n\nWrite the bytes without explicitly flushing.", 
+            "text": "actor builtin/StdStream\n\n\nDefault capability\n: \ntag\n\n\nAsynchronous access to stdout and stderr. The constructors are private to\nensure that access is provided only via an environment.\n\n\nConstructors\n\n\nnew \n_err\n()\n\n\nCreate an async stream for stderr.\n\n\nnew \n_out\n()\n\n\nCreate an async stream for stdout.\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.\n\n\nPrivate Functions\n\n\nfun ref  \n_write\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val\n\n\nWrite the bytes without explicitly flushing.", 
             "title": "actor StdStream"
         }, 
         {
@@ -6936,9 +6911,9 @@
             "title": "Public Behaviours"
         }, 
         {
-            "location": "/builtin-StdStream/#be-printdata-byteseq-val", 
+            "location": "/builtin-StdStream/#be-printdata-string-val-array91u8-val93-val", 
             "text": "Print some bytes and insert a newline afterwards.", 
-            "title": "be print(data: ByteSeq val)"
+            "title": "be print(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/builtin-StdStream/#be-printvdata-byteseqiter-val", 
@@ -6946,9 +6921,9 @@
             "title": "be printv(data: ByteSeqIter val)"
         }, 
         {
-            "location": "/builtin-StdStream/#be-writedata-byteseq-val", 
+            "location": "/builtin-StdStream/#be-writedata-string-val-array91u8-val93-val", 
             "text": "Print some bytes without inserting a newline afterwards.", 
-            "title": "be write(data: ByteSeq val)"
+            "title": "be write(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/builtin-StdStream/#be-writevdata-byteseqiter-val", 
@@ -6961,9 +6936,9 @@
             "title": "Private Functions"
         }, 
         {
-            "location": "/builtin-StdStream/#fun-ref-_writedata-byteseq-val-none-val", 
+            "location": "/builtin-StdStream/#fun-ref-_writedata-string-val-array91u8-val93-val-none-val", 
             "text": "Write the bytes without explicitly flushing.", 
-            "title": "fun ref  _write(data: ByteSeq val): None val"
+            "title": "fun ref  _write(data: (String val | Array[U8 val] val)): None val"
         }, 
         {
             "location": "/builtin-Stdin/", 
@@ -7067,7 +7042,7 @@
         }, 
         {
             "location": "/builtin-String/", 
-            "text": "class builtin/String is \nSeq\n[\nU8\n val] ref, \nComparable\n[\nString\n box] ref, \nStringable\n[\nFormatDefault\n val, \nPrefixDefault\n val] box\n\n\nDefault capability\n: \nval\n\n\nStrings don't specify an encoding.\n\n\nConstructors\n\n\nnew \ncopy_cstring\n(str: \nPointer\n[\nU8\n val] box, optional len: \nUSize\n val)\n\n\nIf the cstring is not null terminated and a length isn't specified, this\ncan crash. This will only occur if the C-FFI has been used to craft such\na pointer.\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nAn empty string. Enough space for len bytes is reserved.\n\n\nnew \nfrom_array\n(data: \nArray\n[\nU8\n val] val)\n\n\nCreate a string from an array, reusing the underlying data pointer if the\narray is null terminated, or copying the data if it is not.\n\n\nnew \nfrom_cstring\n(str: \nPointer\n[\nU8\n val] ref, optional len: \nUSize\n val)\n\n\nThe cstring is not copied. This must be done only with C-FFI functions that\nreturn null-terminated pony_alloc'd character arrays.\n\n\nnew \nfrom_utf32\n(value: \nU32\n val)\n\n\nCreate a UTF-8 string from a single UTF-32 code point.\n\n\nPublic Functions\n\n\nfun box  \nadd\n(that: \nString\n box): \nString\n val\n\n\nReturn a string that is a concatenation of this and that.\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[\nU8\n val] box | \nByteSeq\n box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun box  \napply\n(i: \nUSize\n val): \nU8\n val ?\n\n\nReturns the i-th byte. Raise an error if the index is out of bounds.\n\n\nfun val  \narray\n(): \nArray\n[\nU8\n val] val\n\n\nReturns an Array[U8] that that reuses the underlying data pointer.\n\n\nfun box  \nat\n(s: \nString\n box, optional offset: \nISize\n val): \nBool\n val\n\n\nReturns true if the substring s is present at the given offset.\n\n\nfun box  \nat_offset\n(offset: \nISize\n val): \nU8\n val ?\n\n\nReturns the byte at the given offset. Raise an error if the offset is out\nof bounds.\n\n\nfun box  \nbool\n(): \nBool\n val ?\n\n\nfun ref  \nclear\n(): \nString\n ref^\n\n\nTruncate the string to zero length.\n\n\nfun box  \nclone\n(): \nString\n iso^\n\n\nReturns a copy of the string.\n\n\nfun box  \ncodepoints\n(optional from: \nISize\n val, optional to: \nISize\n val): \nUSize\n val\n\n\nReturns the number of unicode code points in the string between the two\noffsets. Index range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun box  \ncompare\n(that: \nString\n box): ((\nLess\n val | \nEqual\n val) | \nGreater\n val)\n\n\nLexically compare two strings.\n\n\nfun box  \ncompare_sub\n(that: \nString\n box, n: \nUSize\n val, optional offset: \nISize\n val, optional that_offset: \nISize\n val, optional ignore_case: \nBool\n val): ((\nLess\n val | \nEqual\n val) | \nGreater\n val)\n\n\nStarting at this + offset, compare n bytes with that + offset.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[\nU8\n val] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nAdd len iterated bytes to the end of the string, starting from the given\noffset. The string is returned to allow call chaining.\n\n\nfun box  \ncount\n(s: \nString\n box, optional offset: \nISize\n val): \nUSize\n val\n\n\nCounts the non-overlapping occurrences of s in the string.\n\n\nfun box  \ncstring\n(): \nPointer\n[\nU8\n val] tag\n\n\nReturns a C compatible pointer to a null terminated string.\n\n\nfun box  \ncut\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n iso^\n\n\nReturns a version of the string with the given range deleted.\nIndex range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun ref  \ncut_in_place\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n ref^\n\n\nCuts the given range out of the string.\nIndex range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun ref  \ndelete\n(offset: \nISize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nDelete len bytes at the supplied offset, compacting the string in place.\n\n\nfun box  \neq\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if the two strings have the same contents.\n\n\nfun box  \nf32\n(optional offset: \nISize\n val): \nF32\n val\n\n\nfun box  \nf64\n(optional offset: \nISize\n val): \nF64\n val\n\n\nfun box  \nfind\n(s: \nString\n box, optional offset: \nISize\n val, optional nth: \nUSize\n val): \nISize\n val ?\n\n\nReturn the index of the n-th instance of s in the string starting from the\nbeginning. Raise an error if there is no n-th occurence of s or s is empty.\n\n\nfun box  \nge\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \ngt\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \nhash\n(): \nU64\n val\n\n\nfun box  \ni128\n(optional base: \nU8\n val): \nI128\n val ?\n\n\nfun box  \ni16\n(optional base: \nU8\n val): \nI16\n val ?\n\n\nfun box  \ni32\n(optional base: \nU8\n val): \nI32\n val ?\n\n\nfun box  \ni64\n(optional base: \nU8\n val): \nI64\n val ?\n\n\nfun box  \ni8\n(optional base: \nU8\n val): \nI8\n val ?\n\n\nfun box  \nilong\n(optional base: \nU8\n val): \nILong\n val ?\n\n\nfun box  \ninsert\n(offset: \nISize\n val, that: \nString\n val): \nString\n iso^\n\n\nReturns a version of the string with the given string inserted at the given\noffset.\n\n\nfun ref  \ninsert_byte\n(offset: \nISize\n val, value: \nU8\n val): \nString\n ref^\n\n\nInserts a byte at the given offset. Appends if the offset is out of bounds.\n\n\nfun ref  \ninsert_in_place\n(offset: \nISize\n val, that: \nString\n box): \nString\n ref^\n\n\nInserts the given string at the given offset. Appends the string if the\noffset is out of bounds.\n\n\nfun box  \nisize\n(optional base: \nU8\n val): \nISize\n val ?\n\n\nfun box  \njoin\n(data: \nReadSeq\n[\nStringable\n[\nFormatDefault\n val, \nPrefixDefault\n val] box] box): \nString\n iso^\n\n\nReturn a string that is a concatenation of the strings in data, using this\nas a separator.\n\n\nfun box  \nle\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if this is lexically less than or equal to that. Needs to be\nmade UTF-8 safe.\n\n\nfun box  \nlower\n(): \nString\n iso^\n\n\nReturns a lower case version of the string.\n\n\nfun ref  \nlower_in_place\n(): \nString\n ref^\n\n\nTransforms the string to lower case. Currently only knows ASCII case.\n\n\nfun ref  \nlstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all leading characters within the string that are in s. By default,\nleading whitespace is removed.\n\n\nfun box  \nlt\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if this is lexically less than that. Needs to be made UTF-8\nsafe.\n\n\nfun box  \nne\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \noffset_to_index\n(i: \nISize\n val): \nUSize\n val\n\n\nfun ref  \npop\n(): \nU8\n val ?\n\n\nRemove a byte from the end of the string.\n\n\nfun ref  \npush\n(value: \nU8\n val): \nString\n ref^\n\n\nAdd a byte to the end of the string.\n\n\nfun box  \nread_int\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](optional offset: \nISize\n val, optional base: \nU8\n val): (A val , \nUSize\n val) ?\n\n\nRead an integer from the specified location in this string. The integer\nvalue read and the number of characters consumed are reported.\nThe base parameter specifies the base to use, 0 indicates using the prefix,\nif any, to detect base 2, 10 or 16.\nIf no integer is found at the specified location, then (0, 0) is returned,\nsince no characters have been used.\nAn integer out of range for the target type throws an error.\nA leading minus is allowed for signed integer types.\nUnderscore characters are allowed throughout the integer and are ignored.\n\n\nfun ref  \nrecalc\n(): \nString\n ref^\n\n\nRecalculates the string length. This is only needed if the string is\nchanged via an FFI call. If the string is not null terminated at the\nallocated length, a null is added.\n\n\nfun ref  \nremove\n(s: \nString\n box): \nUSize\n val\n\n\nRemove all instances of s from the string. Returns the count of removed\ninstances.\n\n\nfun ref  \nreplace\n(from: \nString\n box, to: \nString\n box, optional n: \nUSize\n val): \nString\n ref^\n\n\nReplace up to n occurrences of \nfrom\n in \nthis\n with \nto\n. If n is 0, all\noccurrences will be replaced.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nString\n ref^\n\n\nReserve space for len bytes. An additional byte will be reserved for the\nnull terminator.\n\n\nfun box  \nreverse\n(): \nString\n iso^\n\n\nReturns a reversed version of the string.\n\n\nfun ref  \nreverse_in_place\n(): \nString\n ref^\n\n\nReverses the byte order in the string. This needs to be changed to handle\nUTF-8 correctly.\n\n\nfun box  \nrfind\n(s: \nString\n box, optional offset: \nISize\n val, optional nth: \nUSize\n val): \nISize\n val ?\n\n\nReturn the index of n-th instance of s in the string starting from the end.\nRaise an error if there is no n-th occurence of s or s is empty.\n\n\nfun ref  \nrstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all trailing characters within the string that are in s. By default,\ntrailing whitespace is removed.\n\n\nfun box  \nrunes\n(): \nStringRunes\n ref^\n\n\nReturn an iterator over the codepoints in the string.\n\n\nfun ref  \nshift\n(): \nU8\n val ?\n\n\nRemoves a byte from the beginning of the string.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the length of the string data in bytes.\n\n\nfun box  \nspace\n(): \nUSize\n val\n\n\nReturns the space available for data, not including the null terminator.\n\n\nfun box  \nsplit\n(optional delim: \nString\n val, optional n: \nUSize\n val): \nArray\n[\nString\n val] iso^\n\n\nSplit the string into an array of strings. Any character in the delimiter\nstring is accepted as a delimiter. If \nn \n 0\n, then the split count is\nlimited to n.\n\n\nAdjacent delimiters result in a zero length entry in the array. For\nexample, \n\"1,,2\".split(\",\") =\n [\"1\", \"\", \"2\"]\n.\n\n\nfun box  \nstring\n(optional fmt: \nFormatSettings\n[\nFormatDefault\n val, \nPrefixDefault\n val] box): \nString\n iso^\n\n\nfun ref  \nstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all leading and trailing characters from the string that are in s.\n\n\nfun box  \nsubstring\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n iso^\n\n\nReturns a substring. Index range [\nfrom\n .. \nto\n) is half-open.\nReturns an empty string if nothing is in the range.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nString\n ref^\n\n\nTruncates the string at the minimum of len and space. Ensures there is a\nnull terminator. Does not check for null terminators inside the string.\n\n\nfun box  \nu128\n(optional base: \nU8\n val): \nU128\n val ?\n\n\nfun box  \nu16\n(optional base: \nU8\n val): \nU16\n val ?\n\n\nfun box  \nu32\n(optional base: \nU8\n val): \nU32\n val ?\n\n\nfun box  \nu64\n(optional base: \nU8\n val): \nU64\n val ?\n\n\nfun box  \nu8\n(optional base: \nU8\n val): \nU8\n val ?\n\n\nfun box  \nulong\n(optional base: \nU8\n val): \nULong\n val ?\n\n\nfun ref  \nunshift\n(value: \nU8\n val): \nString\n ref^\n\n\nAdds a byte to the beginning of the string.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: \nU8\n val): \nU8\n val ?\n\n\nChange the i-th byte. Raise an error if the index is out of bounds.\n\n\nfun ref  \nupdate_offset\n(offset: \nISize\n val, value: \nU8\n val): \nU8\n val ?\n\n\nChanges a byte in the string, returning the previous byte at that offset.\nRaise an error if the offset is out of bounds.\n\n\nfun box  \nupper\n(): \nString\n iso^\n\n\nReturns an upper case version of the string. Currently only knows ASCII\ncase.\n\n\nfun ref  \nupper_in_place\n(): \nString\n ref^\n\n\nTransforms the string to upper case.\n\n\nfun box  \nusize\n(optional base: \nU8\n val): \nUSize\n val ?\n\n\nfun box  \nutf32\n(offset: \nISize\n val): (\nU32\n val , \nU8\n val) ?\n\n\nReturn a UTF32 representation of the character at the given offset and the\nnumber of bytes needed to encode that character. If the offset does not\npoint to the beginning of a valid UTF8 encoding, return 0xFFFD (the unicode\nreplacement character) and a length of one. Raise an error if the offset is\nout of bounds.\n\n\nfun box  \nvalues\n(): \nStringBytes\n ref^\n\n\nReturn an iterator over the bytes in the string.\n\n\nPrivate Functions\n\n\nfun iso  \n_append\n(s: \nString\n box): \nString\n iso^\n\n\nfun box  \n_cstring\n(): \nPointer\n[\nU8\n val] box\n\n\nReturns a C compatible pointer to a null terminated string.\n\n\nfun box  \nread\nint_base\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](base: \nU8\n val, index: \nUSize\n val): (A val , \nUSize\n val)\n\n\nDetermine the base of an integer starting at the specified index.\nIf a non-0 base is given use that. If given base is 0 read the base\nspecifying prefix, if any, to detect base 2 or 16.\nIf no base is specified and no prefix is found default to decimal.\nNote that a leading 0 does NOT imply octal.\nReport the base found and the number of characters in the prefix.\n\n\nfun ref  \n_set\n(i: \nUSize\n val, value: \nU8\n val): \nU8\n val\n\n\nUnsafe update, used internally.\n\n\nfun box  \nto\nint\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](base: \nU8\n val): A val ?\n\n\nConvert the \nwhole\n string to the specified type.\nIf there are any other characters in the string, or the integer found is\nout of range for the target type then an error is thrown.", 
+            "text": "class builtin/String is \nSeq\n[\nU8\n val] ref, \nComparable\n[\nString\n box] ref, \nStringable\n[\nFormatDefault\n val, \nPrefixDefault\n val] box\n\n\nDefault capability\n: \nval\n\n\nStrings don't specify an encoding.\n\n\nConstructors\n\n\nnew \ncopy_cstring\n(str: \nPointer\n[\nU8\n val] box, optional len: \nUSize\n val)\n\n\nIf the cstring is not null terminated and a length isn't specified, this\ncan crash. This will only occur if the C-FFI has been used to craft such\na pointer.\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nAn empty string. Enough space for len bytes is reserved.\n\n\nnew \nfrom_array\n(data: \nArray\n[\nU8\n val] val)\n\n\nCreate a string from an array, reusing the underlying data pointer if the\narray is null terminated, or copying the data if it is not.\n\n\nnew \nfrom_cstring\n(str: \nPointer\n[\nU8\n val] ref, optional len: \nUSize\n val)\n\n\nThe cstring is not copied. This must be done only with C-FFI functions that\nreturn null-terminated pony_alloc'd character arrays.\n\n\nnew \nfrom_utf32\n(value: \nU32\n val)\n\n\nCreate a UTF-8 string from a single UTF-32 code point.\n\n\nPublic Functions\n\n\nfun box  \nadd\n(that: \nString\n box): \nString\n val\n\n\nReturn a string that is a concatenation of this and that.\n\n\nfun ref  \nappend\n(seq: \nReadSeq\n[\nU8\n val] box, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nAppend the elements from a sequence, starting from the given offset.\n\n\nfun box  \napply\n(i: \nUSize\n val): \nU8\n val ?\n\n\nReturns the i-th byte. Raise an error if the index is out of bounds.\n\n\nfun val  \narray\n(): \nArray\n[\nU8\n val] val\n\n\nReturns an Array[U8] that that reuses the underlying data pointer.\n\n\nfun box  \nat\n(s: \nString\n box, optional offset: \nISize\n val): \nBool\n val\n\n\nReturns true if the substring s is present at the given offset.\n\n\nfun box  \nat_offset\n(offset: \nISize\n val): \nU8\n val ?\n\n\nReturns the byte at the given offset. Raise an error if the offset is out\nof bounds.\n\n\nfun box  \nbool\n(): \nBool\n val ?\n\n\nfun ref  \nclear\n(): \nString\n ref^\n\n\nTruncate the string to zero length.\n\n\nfun box  \nclone\n(): \nString\n iso^\n\n\nReturns a copy of the string.\n\n\nfun box  \ncodepoints\n(optional from: \nISize\n val, optional to: \nISize\n val): \nUSize\n val\n\n\nReturns the number of unicode code points in the string between the two\noffsets. Index range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun box  \ncompare\n(that: \nString\n box): ((\nLess\n val | \nEqual\n val) | \nGreater\n val)\n\n\nLexically compare two strings.\n\n\nfun box  \ncompare_sub\n(that: \nString\n box, n: \nUSize\n val, optional offset: \nISize\n val, optional that_offset: \nISize\n val, optional ignore_case: \nBool\n val): ((\nLess\n val | \nEqual\n val) | \nGreater\n val)\n\n\nStarting at this + offset, compare n bytes with that + offset.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[\nU8\n val] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nAdd len iterated bytes to the end of the string, starting from the given\noffset. The string is returned to allow call chaining.\n\n\nfun box  \ncount\n(s: \nString\n box, optional offset: \nISize\n val): \nUSize\n val\n\n\nCounts the non-overlapping occurrences of s in the string.\n\n\nfun box  \ncstring\n(): \nPointer\n[\nU8\n val] tag\n\n\nReturns a C compatible pointer to a null terminated string.\n\n\nfun box  \ncut\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n iso^\n\n\nReturns a version of the string with the given range deleted.\nIndex range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun ref  \ncut_in_place\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n ref^\n\n\nCuts the given range out of the string.\nIndex range [\nfrom\n .. \nto\n) is half-open.\n\n\nfun ref  \ndelete\n(offset: \nISize\n val, optional len: \nUSize\n val): \nString\n ref^\n\n\nDelete len bytes at the supplied offset, compacting the string in place.\n\n\nfun box  \neq\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if the two strings have the same contents.\n\n\nfun box  \nf32\n(optional offset: \nISize\n val): \nF32\n val\n\n\nfun box  \nf64\n(optional offset: \nISize\n val): \nF64\n val\n\n\nfun box  \nfind\n(s: \nString\n box, optional offset: \nISize\n val, optional nth: \nUSize\n val): \nISize\n val ?\n\n\nReturn the index of the n-th instance of s in the string starting from the\nbeginning. Raise an error if there is no n-th occurence of s or s is empty.\n\n\nfun box  \nge\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \ngt\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \nhash\n(): \nU64\n val\n\n\nfun box  \ni128\n(optional base: \nU8\n val): \nI128\n val ?\n\n\nfun box  \ni16\n(optional base: \nU8\n val): \nI16\n val ?\n\n\nfun box  \ni32\n(optional base: \nU8\n val): \nI32\n val ?\n\n\nfun box  \ni64\n(optional base: \nU8\n val): \nI64\n val ?\n\n\nfun box  \ni8\n(optional base: \nU8\n val): \nI8\n val ?\n\n\nfun box  \nilong\n(optional base: \nU8\n val): \nILong\n val ?\n\n\nfun box  \ninsert\n(offset: \nISize\n val, that: \nString\n val): \nString\n iso^\n\n\nReturns a version of the string with the given string inserted at the given\noffset.\n\n\nfun ref  \ninsert_byte\n(offset: \nISize\n val, value: \nU8\n val): \nString\n ref^\n\n\nInserts a byte at the given offset. Appends if the offset is out of bounds.\n\n\nfun ref  \ninsert_in_place\n(offset: \nISize\n val, that: \nString\n box): \nString\n ref^\n\n\nInserts the given string at the given offset. Appends the string if the\noffset is out of bounds.\n\n\nfun box  \nisize\n(optional base: \nU8\n val): \nISize\n val ?\n\n\nfun box  \njoin\n(data: \nReadSeq\n[\nStringable\n[\nFormatDefault\n val, \nPrefixDefault\n val] box] box): \nString\n iso^\n\n\nReturn a string that is a concatenation of the strings in data, using this\nas a separator.\n\n\nfun box  \nle\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if this is lexically less than or equal to that. Needs to be\nmade UTF-8 safe.\n\n\nfun box  \nlower\n(): \nString\n iso^\n\n\nReturns a lower case version of the string.\n\n\nfun ref  \nlower_in_place\n(): \nString\n ref^\n\n\nTransforms the string to lower case. Currently only knows ASCII case.\n\n\nfun ref  \nlstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all leading characters within the string that are in s. By default,\nleading whitespace is removed.\n\n\nfun box  \nlt\n(that: \nString\n box): \nBool\n val\n\n\nReturns true if this is lexically less than that. Needs to be made UTF-8\nsafe.\n\n\nfun box  \nne\n(that: \nString\n box): \nBool\n val\n\n\nfun box  \noffset_to_index\n(i: \nISize\n val): \nUSize\n val\n\n\nfun ref  \npop\n(): \nU8\n val ?\n\n\nRemove a byte from the end of the string.\n\n\nfun ref  \npush\n(value: \nU8\n val): \nString\n ref^\n\n\nAdd a byte to the end of the string.\n\n\nfun box  \nread_int\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](optional offset: \nISize\n val, optional base: \nU8\n val): (A val , \nUSize\n val) ?\n\n\nRead an integer from the specified location in this string. The integer\nvalue read and the number of characters consumed are reported.\nThe base parameter specifies the base to use, 0 indicates using the prefix,\nif any, to detect base 2, 10 or 16.\nIf no integer is found at the specified location, then (0, 0) is returned,\nsince no characters have been used.\nAn integer out of range for the target type throws an error.\nA leading minus is allowed for signed integer types.\nUnderscore characters are allowed throughout the integer and are ignored.\n\n\nfun ref  \nrecalc\n(): \nString\n ref^\n\n\nRecalculates the string length. This is only needed if the string is\nchanged via an FFI call. If the string is not null terminated at the\nallocated length, a null is added.\n\n\nfun ref  \nremove\n(s: \nString\n box): \nUSize\n val\n\n\nRemove all instances of s from the string. Returns the count of removed\ninstances.\n\n\nfun ref  \nreplace\n(from: \nString\n box, to: \nString\n box, optional n: \nUSize\n val): \nString\n ref^\n\n\nReplace up to n occurrences of \nfrom\n in \nthis\n with \nto\n. If n is 0, all\noccurrences will be replaced.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nString\n ref^\n\n\nReserve space for len bytes. An additional byte will be reserved for the\nnull terminator.\n\n\nfun box  \nreverse\n(): \nString\n iso^\n\n\nReturns a reversed version of the string.\n\n\nfun ref  \nreverse_in_place\n(): \nString\n ref^\n\n\nReverses the byte order in the string. This needs to be changed to handle\nUTF-8 correctly.\n\n\nfun box  \nrfind\n(s: \nString\n box, optional offset: \nISize\n val, optional nth: \nUSize\n val): \nISize\n val ?\n\n\nReturn the index of n-th instance of s in the string starting from the end.\nRaise an error if there is no n-th occurence of s or s is empty.\n\n\nfun ref  \nrstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all trailing characters within the string that are in s. By default,\ntrailing whitespace is removed.\n\n\nfun box  \nrunes\n(): \nStringRunes\n ref^\n\n\nReturn an iterator over the codepoints in the string.\n\n\nfun ref  \nshift\n(): \nU8\n val ?\n\n\nRemoves a byte from the beginning of the string.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the length of the string data in bytes.\n\n\nfun box  \nspace\n(): \nUSize\n val\n\n\nReturns the space available for data, not including the null terminator.\n\n\nfun box  \nsplit\n(optional delim: \nString\n val, optional n: \nUSize\n val): \nArray\n[\nString\n val] iso^\n\n\nSplit the string into an array of strings. Any character in the delimiter\nstring is accepted as a delimiter. If \nn \n 0\n, then the split count is\nlimited to n.\n\n\nAdjacent delimiters result in a zero length entry in the array. For\nexample, \n\"1,,2\".split(\",\") =\n [\"1\", \"\", \"2\"]\n.\n\n\nfun box  \nstring\n(optional fmt: \nFormatSettings\n[\nFormatDefault\n val, \nPrefixDefault\n val] box): \nString\n iso^\n\n\nfun ref  \nstrip\n(optional s: \nString\n box): \nString\n ref^\n\n\nRemove all leading and trailing characters from the string that are in s.\n\n\nfun box  \nsubstring\n(from: \nISize\n val, optional to: \nISize\n val): \nString\n iso^\n\n\nReturns a substring. Index range [\nfrom\n .. \nto\n) is half-open.\nReturns an empty string if nothing is in the range.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nString\n ref^\n\n\nTruncates the string at the minimum of len and space. Ensures there is a\nnull terminator. Does not check for null terminators inside the string.\n\n\nfun box  \nu128\n(optional base: \nU8\n val): \nU128\n val ?\n\n\nfun box  \nu16\n(optional base: \nU8\n val): \nU16\n val ?\n\n\nfun box  \nu32\n(optional base: \nU8\n val): \nU32\n val ?\n\n\nfun box  \nu64\n(optional base: \nU8\n val): \nU64\n val ?\n\n\nfun box  \nu8\n(optional base: \nU8\n val): \nU8\n val ?\n\n\nfun box  \nulong\n(optional base: \nU8\n val): \nULong\n val ?\n\n\nfun ref  \nunshift\n(value: \nU8\n val): \nString\n ref^\n\n\nAdds a byte to the beginning of the string.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: \nU8\n val): \nU8\n val ?\n\n\nChange the i-th byte. Raise an error if the index is out of bounds.\n\n\nfun ref  \nupdate_offset\n(offset: \nISize\n val, value: \nU8\n val): \nU8\n val ?\n\n\nChanges a byte in the string, returning the previous byte at that offset.\nRaise an error if the offset is out of bounds.\n\n\nfun box  \nupper\n(): \nString\n iso^\n\n\nReturns an upper case version of the string. Currently only knows ASCII\ncase.\n\n\nfun ref  \nupper_in_place\n(): \nString\n ref^\n\n\nTransforms the string to upper case.\n\n\nfun box  \nusize\n(optional base: \nU8\n val): \nUSize\n val ?\n\n\nfun box  \nutf32\n(offset: \nISize\n val): (\nU32\n val , \nU8\n val) ?\n\n\nReturn a UTF32 representation of the character at the given offset and the\nnumber of bytes needed to encode that character. If the offset does not\npoint to the beginning of a valid UTF8 encoding, return 0xFFFD (the unicode\nreplacement character) and a length of one. Raise an error if the offset is\nout of bounds.\n\n\nfun box  \nvalues\n(): \nStringBytes\n ref^\n\n\nReturn an iterator over the bytes in the string.\n\n\nPrivate Functions\n\n\nfun iso  \n_append\n(s: \nString\n box): \nString\n iso^\n\n\nfun box  \n_cstring\n(): \nPointer\n[\nU8\n val] box\n\n\nReturns a C compatible pointer to a null terminated string.\n\n\nfun box  \nread\nint_base\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](base: \nU8\n val, index: \nUSize\n val): (A val , \nUSize\n val)\n\n\nDetermine the base of an integer starting at the specified index.\nIf a non-0 base is given use that. If given base is 0 read the base\nspecifying prefix, if any, to detect base 2 or 16.\nIf no base is specified and no prefix is found default to decimal.\nNote that a leading 0 does NOT imply octal.\nReport the base found and the number of characters in the prefix.\n\n\nfun ref  \n_set\n(i: \nUSize\n val, value: \nU8\n val): \nU8\n val\n\n\nUnsafe update, used internally.\n\n\nfun box  \nto\nint\n[A: ((((((((\nI8\n val | \nI16\n val) | \nI32\n val) | \nI64\n val) | \nI128\n val) | \nILong\n val) | \nISize\n val) | ((((((\nU8\n val | \nU16\n val) | \nU32\n val) | \nU64\n val) | \nU128\n val) | \nULong\n val) | \nUSize\n val)) \n \nInteger\n[A val] val)](base: \nU8\n val): A val ?\n\n\nConvert the \nwhole\n string to the specified type.\nIf there are any other characters in the string, or the integer found is\nout of range for the target type then an error is thrown.", 
             "title": "class String"
         }, 
         {
@@ -7116,9 +7091,9 @@
             "title": "fun box  add(that: String box): String val"
         }, 
         {
-            "location": "/builtin-String/#fun-ref-appendseq-readseq91u8-val93-box-byteseq-box-optional-offset-usize-val-optional-len-usize-val-string-ref", 
+            "location": "/builtin-String/#fun-ref-appendseq-readseq91u8-val93-box-optional-offset-usize-val-optional-len-usize-val-string-ref", 
             "text": "Append the elements from a sequence, starting from the given offset.", 
-            "title": "fun ref  append(seq: (ReadSeq[U8 val] box | ByteSeq box), optional offset: USize val, optional len: USize val): String ref^"
+            "title": "fun ref  append(seq: ReadSeq[U8 val] box, optional offset: USize val, optional len: USize val): String ref^"
         }, 
         {
             "location": "/builtin-String/#fun-box-applyi-usize-val-u8-val", 
@@ -12622,7 +12597,7 @@
         }, 
         {
             "location": "/collections-HashByteSeq/", 
-            "text": "primitive collections/HashByteSeq\n\n\nDefault capability\n: \nval\n\n\nHash and equality functions for arbitrary ByteSeq.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \neq\n(x: \nByteSeq\n val, y: \nByteSeq\n val): \nBool\n val\n\n\nfun box  \nhash\n(x: \nByteSeq\n val): \nU64\n val\n\n\nfun box  \nne\n(that: \nHashByteSeq\n val): \nBool\n val", 
+            "text": "primitive collections/HashByteSeq\n\n\nDefault capability\n: \nval\n\n\nHash and equality functions for arbitrary ByteSeq.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \neq\n(x: (\nString\n box | \nArray\n[\nU8\n val] box), y: (\nString\n box | \nArray\n[\nU8\n val] box)): \nBool\n val\n\n\nfun box  \nhash\n(x: (\nString\n box | \nArray\n[\nU8\n val] box)): \nU64\n val\n\n\nfun box  \nne\n(that: \nHashByteSeq\n val): \nBool\n val", 
             "title": "primitive HashByteSeq"
         }, 
         {
@@ -12646,14 +12621,14 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/collections-HashByteSeq/#fun-box-eqx-byteseq-val-y-byteseq-val-bool-val", 
+            "location": "/collections-HashByteSeq/#fun-box-eqx-string-box-array91u8-val93-box-y-string-box-array91u8-val93-box-bool-val", 
             "text": "", 
-            "title": "fun box  eq(x: ByteSeq val, y: ByteSeq val): Bool val"
+            "title": "fun box  eq(x: (String box | Array[U8 val] box), y: (String box | Array[U8 val] box)): Bool val"
         }, 
         {
-            "location": "/collections-HashByteSeq/#fun-box-hashx-byteseq-val-u64-val", 
+            "location": "/collections-HashByteSeq/#fun-box-hashx-string-box-array91u8-val93-box-u64-val", 
             "text": "", 
-            "title": "fun box  hash(x: ByteSeq val): U64 val"
+            "title": "fun box  hash(x: (String box | Array[U8 val] box)): U64 val"
         }, 
         {
             "location": "/collections-HashByteSeq/#fun-box-nethat-hashbyteseq-val-bool-val", 
@@ -13087,7 +13062,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$56\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$59\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$50\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$47\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$53\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$44\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$62\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$68\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$57\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$60\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$51\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$48\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$54\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$43\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$46\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$37\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$34\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$40\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$31\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$49\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$55\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$47\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$38\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$35\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$41\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$32\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
             "title": "class List"
         }, 
         {
@@ -13166,29 +13141,29 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44391a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$56[A] box): Bool val"
+            "title": "fun box  every(f: $4$43[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45991a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44691a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$59[A] box): Bool val"
+            "title": "fun box  exists(f: $4$46[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-45091a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43791a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$50[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$37[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44791a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43491a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$47[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$34[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45391a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-44091a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$53[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$40[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13201,9 +13176,9 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44491a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-43191a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$44[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$31[A, B] box): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13211,9 +13186,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-46291a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44991a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$62[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$49[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13281,9 +13256,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46891a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45591a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$68[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$55[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -13321,29 +13296,29 @@
             "title": "fun ref  _decrement(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45791a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44491a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$57[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-46091a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44791a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$60[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$47[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-45191a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43891a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$51[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$38[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44891a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43591a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$48[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$35[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45491a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-44191a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$54[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$41[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-ref-_increment-none-val", 
@@ -13351,9 +13326,9 @@
             "title": "fun ref  _increment(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44591a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-43291a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$45[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$32[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref", 
@@ -14917,7 +14892,7 @@
         }, 
         {
             "location": "/encode-base64-Base64/", 
-            "text": "primitive encode/base64/Base64\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \ndecode\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nByteSeq\n box, optional at62: \nU8\n val, optional at63: \nU8\n val, optional pad: \nU8\n val): A iso^ ?\n\n\nConfigurable decoding. The defaults are for RFC 4648. Missing padding is\nnot an error. Non-base64 data, other than whitespace (which can appear at\nany time), is an error.\n\n\nfun box  \ndecode_url\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nByteSeq\n box): A iso^ ?\n\n\nDecode for URLs (RFC 4648).\n\n\nfun box  \nencode\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nByteSeq\n box, optional at62: \nU8\n val, optional at63: \nU8\n val, optional pad: \nU8\n val, optional linelen: \nUSize\n val, optional linesep: \nString\n val): A iso^\n\n\nConfigurable encoding. The defaults are for RFC 4648.\n\n\nfun box  \nencode_mime\n(data: \nByteSeq\n box): \nString\n iso^\n\n\nEncode for MIME (RFC 2045).\n\n\nfun box  \nencode_pem\n(data: \nByteSeq\n box): \nString\n iso^\n\n\nEncode for PEM (RFC 1421).\n\n\nfun box  \nencode_url\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nByteSeq\n box, optional pad: \nBool\n val): A iso^\n\n\nEncode for URLs (RFC 4648). Padding characters are stripped by default.\n\n\nfun box  \neq\n(that: \nBase64\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nBase64\n val): \nBool\n val\n\n\nPrivate Functions\n\n\nfun box  \nenc\nbyte\n(i: \nU8\n val, at62: \nU8\n val, at63: \nU8\n val): \nU8\n val ?\n\n\nEncode a single byte.", 
+            "text": "primitive encode/base64/Base64\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \ndecode\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nReadSeq\n[\nU8\n val] box, optional at62: \nU8\n val, optional at63: \nU8\n val, optional pad: \nU8\n val): A iso^ ?\n\n\nConfigurable decoding. The defaults are for RFC 4648. Missing padding is\nnot an error. Non-base64 data, other than whitespace (which can appear at\nany time), is an error.\n\n\nfun box  \ndecode_url\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nReadSeq\n[\nU8\n val] box): A iso^ ?\n\n\nDecode for URLs (RFC 4648).\n\n\nfun box  \nencode\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nReadSeq\n[\nU8\n val] box, optional at62: \nU8\n val, optional at63: \nU8\n val, optional pad: \nU8\n val, optional linelen: \nUSize\n val, optional linesep: \nString\n val): A iso^\n\n\nConfigurable encoding. The defaults are for RFC 4648.\n\n\nfun box  \nencode_mime\n(data: \nReadSeq\n[\nU8\n val] box): \nString\n iso^\n\n\nEncode for MIME (RFC 2045).\n\n\nfun box  \nencode_pem\n(data: \nReadSeq\n[\nU8\n val] box): \nString\n iso^\n\n\nEncode for PEM (RFC 1421).\n\n\nfun box  \nencode_url\n[optional A: \nSeq\n[\nU8\n val] iso](data: \nReadSeq\n[\nU8\n val] box, optional pad: \nBool\n val): A iso^\n\n\nEncode for URLs (RFC 4648). Padding characters are stripped by default.\n\n\nfun box  \neq\n(that: \nBase64\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nBase64\n val): \nBool\n val\n\n\nPrivate Functions\n\n\nfun box  \nenc\nbyte\n(i: \nU8\n val, at62: \nU8\n val, at63: \nU8\n val): \nU8\n val ?\n\n\nEncode a single byte.", 
             "title": "primitive Base64"
         }, 
         {
@@ -14941,34 +14916,34 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-decode91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-a-iso", 
+            "location": "/encode-base64-Base64/#fun-box-decode91optional-a-seq91u8-val93-iso93data-readseq91u8-val93-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-a-iso", 
             "text": "Configurable decoding. The defaults are for RFC 4648. Missing padding is\nnot an error. Non-base64 data, other than whitespace (which can appear at\nany time), is an error.", 
-            "title": "fun box  decode[optional A: Seq[U8 val] iso](data: ByteSeq box, optional at62: U8 val, optional at63: U8 val, optional pad: U8 val): A iso^ ?"
+            "title": "fun box  decode[optional A: Seq[U8 val] iso](data: ReadSeq[U8 val] box, optional at62: U8 val, optional at63: U8 val, optional pad: U8 val): A iso^ ?"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-decode_url91optional-a-seq91u8-val93-iso93data-byteseq-box-a-iso", 
+            "location": "/encode-base64-Base64/#fun-box-decode_url91optional-a-seq91u8-val93-iso93data-readseq91u8-val93-box-a-iso", 
             "text": "Decode for URLs (RFC 4648).", 
-            "title": "fun box  decode_url[optional A: Seq[U8 val] iso](data: ByteSeq box): A iso^ ?"
+            "title": "fun box  decode_url[optional A: Seq[U8 val] iso](data: ReadSeq[U8 val] box): A iso^ ?"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-encode91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-optional-linelen-usize-val-optional-linesep-string-val-a-iso", 
+            "location": "/encode-base64-Base64/#fun-box-encode91optional-a-seq91u8-val93-iso93data-readseq91u8-val93-box-optional-at62-u8-val-optional-at63-u8-val-optional-pad-u8-val-optional-linelen-usize-val-optional-linesep-string-val-a-iso", 
             "text": "Configurable encoding. The defaults are for RFC 4648.", 
-            "title": "fun box  encode[optional A: Seq[U8 val] iso](data: ByteSeq box, optional at62: U8 val, optional at63: U8 val, optional pad: U8 val, optional linelen: USize val, optional linesep: String val): A iso^"
+            "title": "fun box  encode[optional A: Seq[U8 val] iso](data: ReadSeq[U8 val] box, optional at62: U8 val, optional at63: U8 val, optional pad: U8 val, optional linelen: USize val, optional linesep: String val): A iso^"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-encode_mimedata-byteseq-box-string-iso", 
+            "location": "/encode-base64-Base64/#fun-box-encode_mimedata-readseq91u8-val93-box-string-iso", 
             "text": "Encode for MIME (RFC 2045).", 
-            "title": "fun box  encode_mime(data: ByteSeq box): String iso^"
+            "title": "fun box  encode_mime(data: ReadSeq[U8 val] box): String iso^"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-encode_pemdata-byteseq-box-string-iso", 
+            "location": "/encode-base64-Base64/#fun-box-encode_pemdata-readseq91u8-val93-box-string-iso", 
             "text": "Encode for PEM (RFC 1421).", 
-            "title": "fun box  encode_pem(data: ByteSeq box): String iso^"
+            "title": "fun box  encode_pem(data: ReadSeq[U8 val] box): String iso^"
         }, 
         {
-            "location": "/encode-base64-Base64/#fun-box-encode_url91optional-a-seq91u8-val93-iso93data-byteseq-box-optional-pad-bool-val-a-iso", 
+            "location": "/encode-base64-Base64/#fun-box-encode_url91optional-a-seq91u8-val93-iso93data-readseq91u8-val93-box-optional-pad-bool-val-a-iso", 
             "text": "Encode for URLs (RFC 4648). Padding characters are stripped by default.", 
-            "title": "fun box  encode_url[optional A: Seq[U8 val] iso](data: ByteSeq box, optional pad: Bool val): A iso^"
+            "title": "fun box  encode_url[optional A: Seq[U8 val] iso](data: ReadSeq[U8 val] box, optional pad: Bool val): A iso^"
         }, 
         {
             "location": "/encode-base64-Base64/#fun-box-eqthat-base64-val-bool-val", 
@@ -15487,7 +15462,7 @@
         }, 
         {
             "location": "/files-File/", 
-            "text": "class files/File\n\n\nDefault capability\n: \nref\n\n\nOperations on a file.\n\n\nPublic fields\n\n\n\n\nlet path: \nFilePath\n val\n\n\nlet writeable: \nBool\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n(from: \nFilePath\n val)\n\n\nnew \n_descriptor\n(fd: \nI32\n val, from: \nFilePath\n val) ?\n\n\nnew \nopen\n(from: \nFilePath\n val)\n\n\nPublic Functions\n\n\nfun box  \nchmod\n(mode: \nFileMode\n box): \nBool\n val\n\n\nSet the FileMode for this directory.\n\n\nfun box  \nchown\n(uid: \nU32\n val, gid: \nU32\n val): \nBool\n val\n\n\nSet the owner and group for this directory. Does nothing on Windows.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nClose the file. Future operations will do nothing.\n\n\nfun box  \nerrno\n(): (\nFileOK\n val | \nFileError\n val)\n\n\nReturns the last error code set for this File\n\n\nfun ref  \nflush\n(): \nFile\n ref\n\n\nFlush the file.\n\n\nfun box  \nget_fd\n(): \nI32\n val ?\n\n\nReturns the underlying file descriptor.\nRaises an error if the file is not currently open.\n\n\nfun box  \ninfo\n(): \nFileInfo\n val ?\n\n\nReturn a FileInfo for this directory. Raise an error if the fd is invalid\nor if we don't have FileStat permission.\n\n\nfun ref  \nline\n(): \nString\n iso^ ?\n\n\nReturns a line as a String. The newline is not included in the string. If\nthere is no more data, this raises an error.\n\n\nfun ref  \nlines\n(): \nFileLines\n ref\n\n\nReturns an iterator for reading lines from the file.\n\n\nfun box  \nposition\n(): \nUSize\n val\n\n\nReturn the current cursor position in the file.\n\n\nfun ref  \nprint\n(data: \nByteSeq\n box): \nBool\n val\n\n\nSame as write, buts adds a newline.\n\n\nfun ref  \nprintv\n(data: \nByteSeqIter\n box): \nBool\n val\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nfun ref  \nread\n(len: \nUSize\n val): \nArray\n[\nU8\n val] iso^\n\n\nReturns up to len bytes.\n\n\nfun ref  \nread_string\n(len: \nUSize\n val): \nString\n iso^\n\n\nReturns up to len bytes. The resulting string may have internal null\ncharacters.\n\n\nfun ref  \nseek\n(offset: \nISize\n val): \nFile\n ref\n\n\nMove the cursor position.\n\n\nfun ref  \nseek_end\n(offset: \nUSize\n val): \nFile\n ref\n\n\nSet the cursor position relative to the end of the file.\n\n\nfun ref  \nseek_start\n(offset: \nUSize\n val): \nFile\n ref\n\n\nSet the cursor position relative to the start of the file.\n\n\nfun ref  \nset_length\n(len: \nUSize\n val): \nBool\n val\n\n\nChange the file size. If it is made larger, the new contents are undefined.\n\n\nfun box  \nset_time\n(atime: (\nI64\n val , \nI64\n val), mtime: (\nI64\n val , \nI64\n val)): \nBool\n val\n\n\nSet the last access and modification times of the directory to the given\nvalues.\n\n\nfun ref  \nsize\n(): \nUSize\n val\n\n\nReturn the total length of the file.\n\n\nfun ref  \nsync\n(): \nFile\n ref\n\n\nSync the file contents to physical storage.\n\n\nfun box  \ntouch\n(): \nBool\n val\n\n\nSet the last access and modification times of the directory to now.\n\n\nfun box  \nvalid\n(): \nBool\n val\n\n\nReturns true if the file is currently open.\n\n\nfun ref  \nwrite\n(data: \nByteSeq\n box): \nBool\n val\n\n\nReturns false if the file wasn't opened with write permission.\nReturns false and closes the file if not all the bytes were written.\n\n\nfun ref  \nwritev\n(data: \nByteSeqIter\n box): \nBool\n val\n\n\nWrite an iterable collection of ByteSeqs.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nClose the file.\n\n\nfun tag  \nget\nfd\n(handle: \nPointer\n[\n_FileHandle\n val] ref): \nI32\n val\n\n\nGet the file descriptor associated with the file handle.\n\n\nfun ref  \n_seek\n(offset: \nISize\n val, base: \nI32\n val): \nNone\n val\n\n\nMove the cursor position.", 
+            "text": "class files/File\n\n\nDefault capability\n: \nref\n\n\nOperations on a file.\n\n\nPublic fields\n\n\n\n\nlet path: \nFilePath\n val\n\n\nlet writeable: \nBool\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n(from: \nFilePath\n val)\n\n\nnew \n_descriptor\n(fd: \nI32\n val, from: \nFilePath\n val) ?\n\n\nnew \nopen\n(from: \nFilePath\n val)\n\n\nPublic Functions\n\n\nfun box  \nchmod\n(mode: \nFileMode\n box): \nBool\n val\n\n\nSet the FileMode for this directory.\n\n\nfun box  \nchown\n(uid: \nU32\n val, gid: \nU32\n val): \nBool\n val\n\n\nSet the owner and group for this directory. Does nothing on Windows.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nClose the file. Future operations will do nothing.\n\n\nfun box  \nerrno\n(): (\nFileOK\n val | \nFileError\n val)\n\n\nReturns the last error code set for this File\n\n\nfun ref  \nflush\n(): \nFile\n ref\n\n\nFlush the file.\n\n\nfun box  \nget_fd\n(): \nI32\n val ?\n\n\nReturns the underlying file descriptor.\nRaises an error if the file is not currently open.\n\n\nfun box  \ninfo\n(): \nFileInfo\n val ?\n\n\nReturn a FileInfo for this directory. Raise an error if the fd is invalid\nor if we don't have FileStat permission.\n\n\nfun ref  \nline\n(): \nString\n iso^ ?\n\n\nReturns a line as a String. The newline is not included in the string. If\nthere is no more data, this raises an error.\n\n\nfun ref  \nlines\n(): \nFileLines\n ref\n\n\nReturns an iterator for reading lines from the file.\n\n\nfun box  \nposition\n(): \nUSize\n val\n\n\nReturn the current cursor position in the file.\n\n\nfun ref  \nprint\n(data: (\nString\n box | \nArray\n[\nU8\n val] box)): \nBool\n val\n\n\nSame as write, buts adds a newline.\n\n\nfun ref  \nprintv\n(data: \nByteSeqIter\n box): \nBool\n val\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nfun ref  \nread\n(len: \nUSize\n val): \nArray\n[\nU8\n val] iso^\n\n\nReturns up to len bytes.\n\n\nfun ref  \nread_string\n(len: \nUSize\n val): \nString\n iso^\n\n\nReturns up to len bytes. The resulting string may have internal null\ncharacters.\n\n\nfun ref  \nseek\n(offset: \nISize\n val): \nFile\n ref\n\n\nMove the cursor position.\n\n\nfun ref  \nseek_end\n(offset: \nUSize\n val): \nFile\n ref\n\n\nSet the cursor position relative to the end of the file.\n\n\nfun ref  \nseek_start\n(offset: \nUSize\n val): \nFile\n ref\n\n\nSet the cursor position relative to the start of the file.\n\n\nfun ref  \nset_length\n(len: \nUSize\n val): \nBool\n val\n\n\nChange the file size. If it is made larger, the new contents are undefined.\n\n\nfun box  \nset_time\n(atime: (\nI64\n val , \nI64\n val), mtime: (\nI64\n val , \nI64\n val)): \nBool\n val\n\n\nSet the last access and modification times of the directory to the given\nvalues.\n\n\nfun ref  \nsize\n(): \nUSize\n val\n\n\nReturn the total length of the file.\n\n\nfun ref  \nsync\n(): \nFile\n ref\n\n\nSync the file contents to physical storage.\n\n\nfun box  \ntouch\n(): \nBool\n val\n\n\nSet the last access and modification times of the directory to now.\n\n\nfun box  \nvalid\n(): \nBool\n val\n\n\nReturns true if the file is currently open.\n\n\nfun ref  \nwrite\n(data: (\nString\n box | \nArray\n[\nU8\n val] box)): \nBool\n val\n\n\nReturns false if the file wasn't opened with write permission.\nReturns false and closes the file if not all the bytes were written.\n\n\nfun ref  \nwritev\n(data: \nByteSeqIter\n box): \nBool\n val\n\n\nWrite an iterable collection of ByteSeqs.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nClose the file.\n\n\nfun tag  \nget\nfd\n(handle: \nPointer\n[\n_FileHandle\n val] ref): \nI32\n val\n\n\nGet the file descriptor associated with the file handle.\n\n\nfun ref  \n_seek\n(offset: \nISize\n val, base: \nI32\n val): \nNone\n val\n\n\nMove the cursor position.", 
             "title": "class File"
         }, 
         {
@@ -15576,9 +15551,9 @@
             "title": "fun box  position(): USize val"
         }, 
         {
-            "location": "/files-File/#fun-ref-printdata-byteseq-box-bool-val", 
+            "location": "/files-File/#fun-ref-printdata-string-box-array91u8-val93-box-bool-val", 
             "text": "Same as write, buts adds a newline.", 
-            "title": "fun ref  print(data: ByteSeq box): Bool val"
+            "title": "fun ref  print(data: (String box | Array[U8 val] box)): Bool val"
         }, 
         {
             "location": "/files-File/#fun-ref-printvdata-byteseqiter-box-bool-val", 
@@ -15641,9 +15616,9 @@
             "title": "fun box  valid(): Bool val"
         }, 
         {
-            "location": "/files-File/#fun-ref-writedata-byteseq-box-bool-val", 
+            "location": "/files-File/#fun-ref-writedata-string-box-array91u8-val93-box-bool-val", 
             "text": "Returns false if the file wasn't opened with write permission.\nReturns false and closes the file if not all the bytes were written.", 
-            "title": "fun ref  write(data: ByteSeq box): Bool val"
+            "title": "fun ref  write(data: (String box | Array[U8 val] box)): Bool val"
         }, 
         {
             "location": "/files-File/#fun-ref-writevdata-byteseqiter-box-bool-val", 
@@ -16567,7 +16542,7 @@
         }, 
         {
             "location": "/files-FileStream/", 
-            "text": "actor files/FileStream is \nOutStream\n tag\n\n\nDefault capability\n: \ntag\n\n\nAsynchronous access to a File object. Wraps file operations print, write,\nprintv and writev. The File will be disposed through File._final.\n\n\nConstructors\n\n\nnew \ncreate\n(file: \nFile\n iso)\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: \nByteSeq\n val)\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: \nByteSeq\n val)\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.", 
+            "text": "actor files/FileStream is \nOutStream\n tag\n\n\nDefault capability\n: \ntag\n\n\nAsynchronous access to a File object. Wraps file operations print, write,\nprintv and writev. The File will be disposed through File._final.\n\n\nConstructors\n\n\nnew \ncreate\n(file: \nFile\n iso)\n\n\nPublic Behaviours\n\n\nbe \nprint\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes and insert a newline afterwards.\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nPrint an iterable collection of ByteSeqs.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nPrint some bytes without inserting a newline afterwards.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite an iterable collection of ByteSeqs.", 
             "title": "actor FileStream"
         }, 
         {
@@ -16591,9 +16566,9 @@
             "title": "Public Behaviours"
         }, 
         {
-            "location": "/files-FileStream/#be-printdata-byteseq-val", 
+            "location": "/files-FileStream/#be-printdata-string-val-array91u8-val93-val", 
             "text": "Print some bytes and insert a newline afterwards.", 
-            "title": "be print(data: ByteSeq val)"
+            "title": "be print(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/files-FileStream/#be-printvdata-byteseqiter-val", 
@@ -16601,9 +16576,9 @@
             "title": "be printv(data: ByteSeqIter val)"
         }, 
         {
-            "location": "/files-FileStream/#be-writedata-byteseq-val", 
+            "location": "/files-FileStream/#be-writedata-string-val-array91u8-val93-val", 
             "text": "Print some bytes without inserting a newline afterwards.", 
-            "title": "be write(data: ByteSeq val)"
+            "title": "be write(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/files-FileStream/#be-writevdata-byteseqiter-val", 
@@ -19297,7 +19272,7 @@
         }, 
         {
             "location": "/net-TCPConnection/", 
-            "text": "actor net/TCPConnection\n\n\nDefault capability\n: \ntag\n\n\nA TCP connection. When connecting, the Happy Eyeballs algorithm is used.\n\n\nConstructors\n\n\nnew \n_accept\n(listen: \nTCPListener\n tag, notify: \nTCPConnectionNotify\n iso, fd: \nU32\n val)\n\n\nnew \ncreate\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip4\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip6\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nClose the connection gracefully once all writes are sent.\n\n\nbe \nset_notify\n(notify: \nTCPConnectionNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: \nByteSeq\n val)\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nPerform a graceful shutdown. Don't accept new writes, but don't finish\nclosing until we get a zero length read.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the local IP address.\n\n\nfun box  \nremote_address\n(): \nIPAddress\n val\n\n\nReturn the remote IP address.\n\n\nfun ref  \nset_keepalive\n(secs: \nU32\n val): \nNone\n val\n\n\nSets the TCP keepalive timeout to approximately secs seconds. Exact timing\nis OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive\nis disabled by default. This can only be set on a connected socket.\n\n\nfun ref  \nset_nodelay\n(state: \nBool\n val): \nNone\n val\n\n\nTurn Nagle on/off. Defaults to on. This can only be set on a connected\nsocket.\n\n\nfun ref  \nwrite_final\n(data: \nByteSeq\n val): \nNone\n val\n\n\nWrite as much as possible to the socket. Set _writeable to false if not\neverything was written. On an error, close the connection. This is for\ndata that has already been transformed by the notifier.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nHandle socket events.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \ncomplete\nwrites\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending writes have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nhard\nclose\n(): \nNone\n val\n\n\nWhen an error happens, do a non-graceful close.\n\n\nfun ref  \nnotify\nconnecting\n(): \nNone\n val\n\n\nInform the notifier that we're connecting.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \npending\nwrites\n(): \nNone\n val\n\n\nSend pending data. If any data can't be sent, keep it and mark as not\nwriteable. On an error, dispose of the connection.\n\n\nfun ref  \nqueue\nread\n(): \nNone\n val\n\n\nQueue an IOCP read on Windows.\n\n\nfun ref  \ntry\nshutdown\n(): \nNone\n val\n\n\nIf we have closed and we have no remaining writes or pending connections,\nthen shutdown.", 
+            "text": "actor net/TCPConnection\n\n\nDefault capability\n: \ntag\n\n\nA TCP connection. When connecting, the Happy Eyeballs algorithm is used.\n\n\nConstructors\n\n\nnew \n_accept\n(listen: \nTCPListener\n tag, notify: \nTCPConnectionNotify\n iso, fd: \nU32\n val)\n\n\nnew \ncreate\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip4\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip6\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nClose the connection gracefully once all writes are sent.\n\n\nbe \nset_notify\n(notify: \nTCPConnectionNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nPerform a graceful shutdown. Don't accept new writes, but don't finish\nclosing until we get a zero length read.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the local IP address.\n\n\nfun box  \nremote_address\n(): \nIPAddress\n val\n\n\nReturn the remote IP address.\n\n\nfun ref  \nset_keepalive\n(secs: \nU32\n val): \nNone\n val\n\n\nSets the TCP keepalive timeout to approximately secs seconds. Exact timing\nis OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive\nis disabled by default. This can only be set on a connected socket.\n\n\nfun ref  \nset_nodelay\n(state: \nBool\n val): \nNone\n val\n\n\nTurn Nagle on/off. Defaults to on. This can only be set on a connected\nsocket.\n\n\nfun ref  \nwrite_final\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val\n\n\nWrite as much as possible to the socket. Set _writeable to false if not\neverything was written. On an error, close the connection. This is for\ndata that has already been transformed by the notifier.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nHandle socket events.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \ncomplete\nwrites\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending writes have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nhard\nclose\n(): \nNone\n val\n\n\nWhen an error happens, do a non-graceful close.\n\n\nfun ref  \nnotify\nconnecting\n(): \nNone\n val\n\n\nInform the notifier that we're connecting.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \npending\nwrites\n(): \nNone\n val\n\n\nSend pending data. If any data can't be sent, keep it and mark as not\nwriteable. On an error, dispose of the connection.\n\n\nfun ref  \nqueue\nread\n(): \nNone\n val\n\n\nQueue an IOCP read on Windows.\n\n\nfun ref  \ntry\nshutdown\n(): \nNone\n val\n\n\nIf we have closed and we have no remaining writes or pending connections,\nthen shutdown.", 
             "title": "actor TCPConnection"
         }, 
         {
@@ -19346,9 +19321,9 @@
             "title": "be set_notify(notify: TCPConnectionNotify iso)"
         }, 
         {
-            "location": "/net-TCPConnection/#be-writedata-byteseq-val", 
+            "location": "/net-TCPConnection/#be-writedata-string-val-array91u8-val93-val", 
             "text": "Write a single sequence of bytes.", 
-            "title": "be write(data: ByteSeq val)"
+            "title": "be write(data: (String val | Array[U8 val] val))"
         }, 
         {
             "location": "/net-TCPConnection/#be-writevdata-byteseqiter-val", 
@@ -19386,9 +19361,9 @@
             "title": "fun ref  set_nodelay(state: Bool val): None val"
         }, 
         {
-            "location": "/net-TCPConnection/#fun-ref-write_finaldata-byteseq-val-none-val", 
+            "location": "/net-TCPConnection/#fun-ref-write_finaldata-string-val-array91u8-val93-val-none-val", 
             "text": "Write as much as possible to the socket. Set _writeable to false if not\neverything was written. On an error, close the connection. This is for\ndata that has already been transformed by the notifier.", 
-            "title": "fun ref  write_final(data: ByteSeq val): None val"
+            "title": "fun ref  write_final(data: (String val | Array[U8 val] val)): None val"
         }, 
         {
             "location": "/net-TCPConnection/#private-behaviours", 
@@ -19452,7 +19427,7 @@
         }, 
         {
             "location": "/net-TCPConnectionNotify/", 
-            "text": "interface net/TCPConnectionNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for TCP connections.\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when a TCPConnection is accepted by a TCPListener.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nA raw TCPConnection has no authentication mechanism. However, when\nprotocols are wrapped in other protocols, this can be used to report an\nauthentication failure in a lower level protocol (eg. SSL).\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when the connection is closed.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have failed to connect to all possible addresses for the\nserver. At this point, the connection will never be established.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have successfully connected to the server.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nCalled if name resolution succeeded for a TCPConnection and we are now\nwaiting for a connection to the server to succeed. The count is the number\nof connections we're trying. The notifier will be informed each time the\ncount changes, until a connection is made or connect_failed() is called.\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nCalled when new data is received on the connection.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: \nByteSeq\n val): \nByteSeq\n val ?\n\n\nCalled when data is sent on the connection. This gives the notifier an\nopportunity to modify sent data before it is written. The notifier can\nraise an error if the data is swallowed entirely.", 
+            "text": "interface net/TCPConnectionNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for TCP connections.\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when a TCPConnection is accepted by a TCPListener.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nA raw TCPConnection has no authentication mechanism. However, when\nprotocols are wrapped in other protocols, this can be used to report an\nauthentication failure in a lower level protocol (eg. SSL).\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when the connection is closed.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have failed to connect to all possible addresses for the\nserver. At this point, the connection will never be established.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have successfully connected to the server.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nCalled if name resolution succeeded for a TCPConnection and we are now\nwaiting for a connection to the server to succeed. The count is the number\nof connections we're trying. The notifier will be informed each time the\ncount changes, until a connection is made or connect_failed() is called.\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nCalled when new data is received on the connection.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\nCalled when data is sent on the connection. This gives the notifier an\nopportunity to modify sent data before it is written. The notifier can\nraise an error if the data is swallowed entirely.", 
             "title": "interface TCPConnectionNotify"
         }, 
         {
@@ -19501,9 +19476,9 @@
             "title": "fun ref  received(conn: TCPConnection ref, data: Array[U8 val] iso): None val"
         }, 
         {
-            "location": "/net-TCPConnectionNotify/#fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val", 
+            "location": "/net-TCPConnectionNotify/#fun-ref-sentconn-tcpconnection-ref-data-string-val-array91u8-val93-val-string-val-array91u8-val93-val", 
             "text": "Called when data is sent on the connection. This gives the notifier an\nopportunity to modify sent data before it is written. The notifier can\nraise an error if the data is swallowed entirely.", 
-            "title": "fun ref  sent(conn: TCPConnection ref, data: ByteSeq val): ByteSeq val ?"
+            "title": "fun ref  sent(conn: TCPConnection ref, data: (String val | Array[U8 val] val)): (String val | Array[U8 val] val) ?"
         }, 
         {
             "location": "/net-TCPListenNotify/", 
@@ -19907,7 +19882,7 @@
         }, 
         {
             "location": "/net-UDPSocket/", 
-            "text": "actor net/UDPSocket\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip4\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip6\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nmulticast_join\n(group: \nString\n val, optional to: \nString\n val)\n\n\nAdd a multicast group. This can be limited to packets arriving on a\nspecific interface.\n\n\nbe \nmulticast_leave\n(group: \nString\n val, optional to: \nString\n val)\n\n\nDrop a multicast group. This can be limited to packets arriving on a\nspecific interface. No attempt is made to check that this socket has\npreviously added this group.\n\n\nbe \nset_broadcast\n(state: \nBool\n val)\n\n\nEnable or disable broadcasting from this socket.\n\n\nbe \nset_multicast_interface\n(optional from: \nString\n val)\n\n\nBy default, the OS will choose which address is used to send packets bound\nfor multicast addresses. This can be used to force a specific interface. To\nrevert to allowing the OS to choose, call with an empty string.\n\n\nbe \nset_multicast_loopback\n(loopback: \nBool\n val)\n\n\nBy default, packets sent to a multicast address will be received by the\nsending system if it has subscribed to that address. Disabling loopback\nprevents this.\n\n\nbe \nset_multicast_ttl\n(ttl: \nU8\n val)\n\n\nSet the TTL for multicast sends. Defaults to 1.\n\n\nbe \nset_notify\n(notify: \nUDPNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: \nByteSeq\n val, to: \nIPAddress\n val)\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val, to: \nIPAddress\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \n_close\n(): \nNone\n val\n\n\nInform the notifier that we've closed.\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \nstart\nnext_read\n(): \nNone\n val\n\n\nStart our next receive.\nThis is used only with IOCP on Windows.\n\n\nfun ref  \n_write\n(data: \nByteSeq\n val, to: \nIPAddress\n val): \nNone\n val\n\n\nWrite the datagram to the socket.", 
+            "text": "actor net/UDPSocket\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip4\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip6\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nmulticast_join\n(group: \nString\n val, optional to: \nString\n val)\n\n\nAdd a multicast group. This can be limited to packets arriving on a\nspecific interface.\n\n\nbe \nmulticast_leave\n(group: \nString\n val, optional to: \nString\n val)\n\n\nDrop a multicast group. This can be limited to packets arriving on a\nspecific interface. No attempt is made to check that this socket has\npreviously added this group.\n\n\nbe \nset_broadcast\n(state: \nBool\n val)\n\n\nEnable or disable broadcasting from this socket.\n\n\nbe \nset_multicast_interface\n(optional from: \nString\n val)\n\n\nBy default, the OS will choose which address is used to send packets bound\nfor multicast addresses. This can be used to force a specific interface. To\nrevert to allowing the OS to choose, call with an empty string.\n\n\nbe \nset_multicast_loopback\n(loopback: \nBool\n val)\n\n\nBy default, packets sent to a multicast address will be received by the\nsending system if it has subscribed to that address. Disabling loopback\nprevents this.\n\n\nbe \nset_multicast_ttl\n(ttl: \nU8\n val)\n\n\nSet the TTL for multicast sends. Defaults to 1.\n\n\nbe \nset_notify\n(notify: \nUDPNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val)\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val, to: \nIPAddress\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \n_close\n(): \nNone\n val\n\n\nInform the notifier that we've closed.\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \nstart\nnext_read\n(): \nNone\n val\n\n\nStart our next receive.\nThis is used only with IOCP on Windows.\n\n\nfun ref  \n_write\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val): \nNone\n val\n\n\nWrite the datagram to the socket.", 
             "title": "actor UDPSocket"
         }, 
         {
@@ -19981,9 +19956,9 @@
             "title": "be set_notify(notify: UDPNotify iso)"
         }, 
         {
-            "location": "/net-UDPSocket/#be-writedata-byteseq-val-to-ipaddress-val", 
+            "location": "/net-UDPSocket/#be-writedata-string-val-array91u8-val93-val-to-ipaddress-val", 
             "text": "Write a single sequence of bytes.", 
-            "title": "be write(data: ByteSeq val, to: IPAddress val)"
+            "title": "be write(data: (String val | Array[U8 val] val), to: IPAddress val)"
         }, 
         {
             "location": "/net-UDPSocket/#be-writevdata-byteseqiter-val-to-ipaddress-val", 
@@ -20046,9 +20021,9 @@
             "title": "fun ref  startnext_read(): None val"
         }, 
         {
-            "location": "/net-UDPSocket/#fun-ref-_writedata-byteseq-val-to-ipaddress-val-none-val", 
+            "location": "/net-UDPSocket/#fun-ref-_writedata-string-val-array91u8-val93-val-to-ipaddress-val-none-val", 
             "text": "Write the datagram to the socket.", 
-            "title": "fun ref  _write(data: ByteSeq val, to: IPAddress val): None val"
+            "title": "fun ref  _write(data: (String val | Array[U8 val] val), to: IPAddress val): None val"
         }, 
         {
             "location": "/net-http--index/", 
@@ -21102,7 +21077,7 @@
         }, 
         {
             "location": "/net-http-Payload/", 
-            "text": "class net/http/Payload\n\n\nDefault capability\n: \niso\n\n\nAn HTTP payload. For a response, the method indicates the status text. For a\nrequest, the status is meaningless.\n\n\nPublic fields\n\n\n\n\nvar handler: (\nResponseHandler\n val | \nNone\n val)\n\n\nvar method: \nString\n val\n\n\nvar proto: \nString\n val\n\n\nvar status: \nU16\n val\n\n\nvar url: \nURL\n val\n\n\n\n\nConstructors\n\n\nnew \n_empty\n(optional response': \nBool\n val)\n\n\nnew \nrequest\n(optional method': \nString\n val, optional url': \nURL\n val, optional handler': (\nResponseHandler\n val | \nNone\n val))\n\n\nnew \nresponse\n(optional status': \nU16\n val, optional description: \nString\n val, optional handler': (\nResponseHandler\n val | \nNone\n val))\n\n\nPublic Functions\n\n\nfun ref  \nadd_chunk\n(data: \nByteSeq\n val): \nPayload\n ref^\n\n\nAdd a chunk to the body.\n\n\nfun box  \napply\n(key: \nString\n val): \nString\n val ?\n\n\nGet a header.\n\n\nfun box  \nbody\n(): this-\nArray\n[\nByteSeq\n val] ref\n\n\nGet the body.\n\n\nfun box  \nbody_size\n(): \nUSize\n val\n\n\nGet the total size of the body.\n\n\nfun iso  \nfail\n(): \nNone\n val\n\n\nTrigger the response handler with an error payload.\n\n\nfun box  \nheaders\n(): this-\nHashMap\n[\nString\n val, \nString\n val, \nHashEq\n[\nString\n val] val] ref\n\n\nGet the headers.\n\n\nfun iso  \nrespond\n(response': \nPayload\n iso): \nNone\n val\n\n\nTrigger the response handler.\n\n\nfun ref  \nupdate\n(key: \nString\n val, value: \nString\n val): \nPayload\n ref^\n\n\nSet a header. If we've already received the header, append the value as a\ncomma separated list, as per RFC 2616 section 4.2.\n\n\nPrivate Functions\n\n\nfun box  \nadd\nbody\n(list: \nArray\n[\nByteSeq\n val] iso): \nArray\n[\nByteSeq\n val] iso^\n\n\nAdd the body to the list.\nTODO: don't include the body for HEAD, 204, 304 or 1xx\n\n\nfun box  \nadd\nheaders\n(list: \nArray\n[\nByteSeq\n val] iso): \nArray\n[\nByteSeq\n val] iso^\n\n\nAdd the headers to the list.\n\n\nfun val  \nclient\nfail\n(): \nNone\n val\n\n\nTrigger the response handler with an error payload. This is private to\nprevent request handlers from responding to a request more than once.\n\n\nfun val  \nclient\nrespond\n(response': \nPayload\n iso): \nNone\n val\n\n\nTrigger the response handler. This is private to prevent request handlers\nfrom responding to a request more than once.\n\n\nfun box  \n_write\n(conn: \nTCPConnection\n tag, optional keepalive: \nBool\n val): \nNone\n val\n\n\nWrites the payload to a TCP connection.\n\n\nfun box  \nwrite\nrequest\n(conn: \nTCPConnection\n tag, keepalive: \nBool\n val): \nNone\n val\n\n\nWrites an an HTTP request.\n\n\nfun box  \nwrite\nresponse\n(conn: \nTCPConnection\n tag, keepalive: \nBool\n val): \nNone\n val\n\n\nWrite as an HTTP response.", 
+            "text": "class net/http/Payload\n\n\nDefault capability\n: \niso\n\n\nAn HTTP payload. For a response, the method indicates the status text. For a\nrequest, the status is meaningless.\n\n\nPublic fields\n\n\n\n\nvar handler: (\nResponseHandler\n val | \nNone\n val)\n\n\nvar method: \nString\n val\n\n\nvar proto: \nString\n val\n\n\nvar status: \nU16\n val\n\n\nvar url: \nURL\n val\n\n\n\n\nConstructors\n\n\nnew \n_empty\n(optional response': \nBool\n val)\n\n\nnew \nrequest\n(optional method': \nString\n val, optional url': \nURL\n val, optional handler': (\nResponseHandler\n val | \nNone\n val))\n\n\nnew \nresponse\n(optional status': \nU16\n val, optional description: \nString\n val, optional handler': (\nResponseHandler\n val | \nNone\n val))\n\n\nPublic Functions\n\n\nfun ref  \nadd_chunk\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nPayload\n ref^\n\n\nAdd a chunk to the body.\n\n\nfun box  \napply\n(key: \nString\n val): \nString\n val ?\n\n\nGet a header.\n\n\nfun box  \nbody\n(): this-\nArray\n[(\nString\n val | \nArray\n[\nU8\n val] val)] ref\n\n\nGet the body.\n\n\nfun box  \nbody_size\n(): \nUSize\n val\n\n\nGet the total size of the body.\n\n\nfun iso  \nfail\n(): \nNone\n val\n\n\nTrigger the response handler with an error payload.\n\n\nfun box  \nheaders\n(): this-\nHashMap\n[\nString\n val, \nString\n val, \nHashEq\n[\nString\n val] val] ref\n\n\nGet the headers.\n\n\nfun iso  \nrespond\n(response': \nPayload\n iso): \nNone\n val\n\n\nTrigger the response handler.\n\n\nfun ref  \nupdate\n(key: \nString\n val, value: \nString\n val): \nPayload\n ref^\n\n\nSet a header. If we've already received the header, append the value as a\ncomma separated list, as per RFC 2616 section 4.2.\n\n\nPrivate Functions\n\n\nfun box  \nadd\nbody\n(list: \nArray\n[(\nString\n val | \nArray\n[\nU8\n val] val)] iso): \nArray\n[(\nString\n val | \nArray\n[\nU8\n val] val)] iso^\n\n\nAdd the body to the list.\nTODO: don't include the body for HEAD, 204, 304 or 1xx\n\n\nfun box  \nadd\nheaders\n(list: \nArray\n[(\nString\n val | \nArray\n[\nU8\n val] val)] iso): \nArray\n[(\nString\n val | \nArray\n[\nU8\n val] val)] iso^\n\n\nAdd the headers to the list.\n\n\nfun val  \nclient\nfail\n(): \nNone\n val\n\n\nTrigger the response handler with an error payload. This is private to\nprevent request handlers from responding to a request more than once.\n\n\nfun val  \nclient\nrespond\n(response': \nPayload\n iso): \nNone\n val\n\n\nTrigger the response handler. This is private to prevent request handlers\nfrom responding to a request more than once.\n\n\nfun box  \n_write\n(conn: \nTCPConnection\n tag, optional keepalive: \nBool\n val): \nNone\n val\n\n\nWrites the payload to a TCP connection.\n\n\nfun box  \nwrite\nrequest\n(conn: \nTCPConnection\n tag, keepalive: \nBool\n val): \nNone\n val\n\n\nWrites an an HTTP request.\n\n\nfun box  \nwrite\nresponse\n(conn: \nTCPConnection\n tag, keepalive: \nBool\n val): \nNone\n val\n\n\nWrite as an HTTP response.", 
             "title": "class Payload"
         }, 
         {
@@ -21141,9 +21116,9 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/net-http-Payload/#fun-ref-add_chunkdata-byteseq-val-payload-ref", 
+            "location": "/net-http-Payload/#fun-ref-add_chunkdata-string-val-array91u8-val93-val-payload-ref", 
             "text": "Add a chunk to the body.", 
-            "title": "fun ref  add_chunk(data: ByteSeq val): Payload ref^"
+            "title": "fun ref  add_chunk(data: (String val | Array[U8 val] val)): Payload ref^"
         }, 
         {
             "location": "/net-http-Payload/#fun-box-applykey-string-val-string-val", 
@@ -21151,9 +21126,9 @@
             "title": "fun box  apply(key: String val): String val ?"
         }, 
         {
-            "location": "/net-http-Payload/#fun-box-body-this-array91byteseq-val93-ref", 
+            "location": "/net-http-Payload/#fun-box-body-this-array91string-val-array91u8-val93-val93-ref", 
             "text": "Get the body.", 
-            "title": "fun box  body(): this-&gt;Array[ByteSeq val] ref"
+            "title": "fun box  body(): this-&gt;Array[(String val | Array[U8 val] val)] ref"
         }, 
         {
             "location": "/net-http-Payload/#fun-box-body_size-usize-val", 
@@ -21186,14 +21161,14 @@
             "title": "Private Functions"
         }, 
         {
-            "location": "/net-http-Payload/#fun-box-addbodylist-array91byteseq-val93-iso-array91byteseq-val93-iso", 
+            "location": "/net-http-Payload/#fun-box-addbodylist-array91string-val-array91u8-val93-val93-iso-array91string-val-array91u8-val93-val93-iso", 
             "text": "Add the body to the list.\nTODO: don't include the body for HEAD, 204, 304 or 1xx", 
-            "title": "fun box  addbody(list: Array[ByteSeq val] iso): Array[ByteSeq val] iso^"
+            "title": "fun box  addbody(list: Array[(String val | Array[U8 val] val)] iso): Array[(String val | Array[U8 val] val)] iso^"
         }, 
         {
-            "location": "/net-http-Payload/#fun-box-addheaderslist-array91byteseq-val93-iso-array91byteseq-val93-iso", 
+            "location": "/net-http-Payload/#fun-box-addheaderslist-array91string-val-array91u8-val93-val93-iso-array91string-val-array91u8-val93-val93-iso", 
             "text": "Add the headers to the list.", 
-            "title": "fun box  addheaders(list: Array[ByteSeq val] iso): Array[ByteSeq val] iso^"
+            "title": "fun box  addheaders(list: Array[(String val | Array[U8 val] val)] iso): Array[(String val | Array[U8 val] val)] iso^"
         }, 
         {
             "location": "/net-http-Payload/#fun-val-clientfail-none-val", 
@@ -21672,7 +21647,7 @@
         }, 
         {
             "location": "/net-http-_RequestBuilder/", 
-            "text": "class net/http/_RequestBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a request payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(handler: \nRequestHandler\n val, logger: \nLogger\n val)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCreate a server connection to handle response ordering.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a request. When we have a whole request,\ndispatch it.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: \nByteSeq\n val): \nByteSeq\n val ?", 
+            "text": "class net/http/_RequestBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a request payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(handler: \nRequestHandler\n val, logger: \nLogger\n val)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCreate a server connection to handle response ordering.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a request. When we have a whole request,\ndispatch it.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?", 
             "title": "class _RequestBuilder"
         }, 
         {
@@ -21731,9 +21706,9 @@
             "title": "fun ref  received(conn: TCPConnection ref, data: Array[U8 val] iso): None val"
         }, 
         {
-            "location": "/net-http-_RequestBuilder/#fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val", 
+            "location": "/net-http-_RequestBuilder/#fun-ref-sentconn-tcpconnection-ref-data-string-val-array91u8-val93-val-string-val-array91u8-val93-val", 
             "text": "", 
-            "title": "fun ref  sent(conn: TCPConnection ref, data: ByteSeq val): ByteSeq val ?"
+            "title": "fun ref  sent(conn: TCPConnection ref, data: (String val | Array[U8 val] val)): (String val | Array[U8 val] val) ?"
         }, 
         {
             "location": "/net-http-RequestHandler/", 
@@ -21757,7 +21732,7 @@
         }, 
         {
             "location": "/net-http-_ResponseBuilder/", 
-            "text": "class net/http/_ResponseBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a response payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(client: \n_ClientConnection\n tag)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nSSL authentication failed. Tell the client not to proceed.\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nThe connection has closed, possibly prematurely.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nThe connection could not be established. Tell the client not to proceed.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nTell the client we have connected.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a response. When we have a whole response,\ngive it to the client and start a new one.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: \nByteSeq\n val): \nByteSeq\n val ?\n\n\nPrivate Functions\n\n\nfun ref  \n_dispatch\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nDispatch responses if we have any.", 
+            "text": "class net/http/_ResponseBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a response payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(client: \n_ClientConnection\n tag)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nSSL authentication failed. Tell the client not to proceed.\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nThe connection has closed, possibly prematurely.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nThe connection could not be established. Tell the client not to proceed.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nTell the client we have connected.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a response. When we have a whole response,\ngive it to the client and start a new one.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\nPrivate Functions\n\n\nfun ref  \n_dispatch\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nDispatch responses if we have any.", 
             "title": "class _ResponseBuilder"
         }, 
         {
@@ -21816,9 +21791,9 @@
             "title": "fun ref  received(conn: TCPConnection ref, data: Array[U8 val] iso): None val"
         }, 
         {
-            "location": "/net-http-_ResponseBuilder/#fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val", 
+            "location": "/net-http-_ResponseBuilder/#fun-ref-sentconn-tcpconnection-ref-data-string-val-array91u8-val93-val-string-val-array91u8-val93-val", 
             "text": "", 
-            "title": "fun ref  sent(conn: TCPConnection ref, data: ByteSeq val): ByteSeq val ?"
+            "title": "fun ref  sent(conn: TCPConnection ref, data: (String val | Array[U8 val] val)): (String val | Array[U8 val] val) ?"
         }, 
         {
             "location": "/net-http-_ResponseBuilder/#private-functions", 
@@ -22747,7 +22722,7 @@
         }, 
         {
             "location": "/net-ssl-SSL/", 
-            "text": "class net/ssl/SSL\n\n\nDefault capability\n: \nref\n\n\nAn SSL session manages handshakes, encryption and decryption. It is not tied\nto any transport layer.\n\n\nConstructors\n\n\nnew \n_create\n(ctx: \nPointer\n[\n_SSLContext\n val] tag, server: \nBool\n val, verify: \nBool\n val, optional hostname: \nString\n val) ?\n\n\nPublic Functions\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nDispose of the session.\n\n\nfun ref  \nread\n(): \nArray\n[\nU8\n val] iso^ ?\n\n\nReturns unencrypted bytes to be passed to the application. Raises an error\nif no data is available.\n\n\nfun ref  \nreceive\n(data: \nByteSeq\n val): \nNone\n val\n\n\nWhen data is received, add it to the SSL session.\n\n\nfun ref  \nsend\n(): \nArray\n[\nU8\n val] val ?\n\n\nReturns encrypted bytes to be passed to the destination. Raises an error\nif no data is available.\n\n\nfun box  \nstate\n(): (((\nSSLHandshake\n val | \nSSLAuthFail\n val) | \nSSLReady\n val) | \nSSLError\n val)\n\n\nReturns the SSL session state.\n\n\nfun ref  \nwrite\n(data: \nByteSeq\n val): \nNone\n val ?\n\n\nWhen application data is sent, add it to the SSL session. Raises an error\nif the handshake is not complete.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nDispose of the session.\n\n\nfun ref  \nverify\nhostname\n(): \nNone\n val\n\n\nVerify that the certificate is valid for the given hostname.", 
+            "text": "class net/ssl/SSL\n\n\nDefault capability\n: \nref\n\n\nAn SSL session manages handshakes, encryption and decryption. It is not tied\nto any transport layer.\n\n\nConstructors\n\n\nnew \n_create\n(ctx: \nPointer\n[\n_SSLContext\n val] tag, server: \nBool\n val, verify: \nBool\n val, optional hostname: \nString\n val) ?\n\n\nPublic Functions\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nDispose of the session.\n\n\nfun ref  \nread\n(): \nArray\n[\nU8\n val] iso^ ?\n\n\nReturns unencrypted bytes to be passed to the application. Raises an error\nif no data is available.\n\n\nfun ref  \nreceive\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val\n\n\nWhen data is received, add it to the SSL session.\n\n\nfun ref  \nsend\n(): \nArray\n[\nU8\n val] val ?\n\n\nReturns encrypted bytes to be passed to the destination. Raises an error\nif no data is available.\n\n\nfun box  \nstate\n(): (((\nSSLHandshake\n val | \nSSLAuthFail\n val) | \nSSLReady\n val) | \nSSLError\n val)\n\n\nReturns the SSL session state.\n\n\nfun ref  \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val ?\n\n\nWhen application data is sent, add it to the SSL session. Raises an error\nif the handshake is not complete.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nDispose of the session.\n\n\nfun ref  \nverify\nhostname\n(): \nNone\n val\n\n\nVerify that the certificate is valid for the given hostname.", 
             "title": "class SSL"
         }, 
         {
@@ -22781,9 +22756,9 @@
             "title": "fun ref  read(): Array[U8 val] iso^ ?"
         }, 
         {
-            "location": "/net-ssl-SSL/#fun-ref-receivedata-byteseq-val-none-val", 
+            "location": "/net-ssl-SSL/#fun-ref-receivedata-string-val-array91u8-val93-val-none-val", 
             "text": "When data is received, add it to the SSL session.", 
-            "title": "fun ref  receive(data: ByteSeq val): None val"
+            "title": "fun ref  receive(data: (String val | Array[U8 val] val)): None val"
         }, 
         {
             "location": "/net-ssl-SSL/#fun-ref-send-array91u8-val93-val", 
@@ -22796,9 +22771,9 @@
             "title": "fun box  state(): (((SSLHandshake val | SSLAuthFail val) | SSLReady val) | SSLError val)"
         }, 
         {
-            "location": "/net-ssl-SSL/#fun-ref-writedata-byteseq-val-none-val", 
+            "location": "/net-ssl-SSL/#fun-ref-writedata-string-val-array91u8-val93-val-none-val", 
             "text": "When application data is sent, add it to the SSL session. Raises an error\nif the handshake is not complete.", 
-            "title": "fun ref  write(data: ByteSeq val): None val ?"
+            "title": "fun ref  write(data: (String val | Array[U8 val] val)): None val ?"
         }, 
         {
             "location": "/net-ssl-SSL/#private-functions", 
@@ -22852,7 +22827,7 @@
         }, 
         {
             "location": "/net-ssl-SSLConnection/", 
-            "text": "class net/ssl/SSLConnection is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nWrap another protocol in an SSL connection.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nTCPConnectionNotify\n iso, ssl: \nSSL\n iso)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nSwallow this event until the handshake is complete.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nPass the data to the SSL session and check for both new application data\nand new destination data.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: \nByteSeq\n val): \nByteSeq\n val ?\n\n\nPass the data to the SSL session and check for both new application data\nand new destination data.\n\n\nPrivate Functions\n\n\nfun ref  \n_poll\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nChecks for both new application data and new destination data. Informs the\nwrapped protocol that is has connected when the handshake is complete.", 
+            "text": "class net/ssl/SSLConnection is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nWrap another protocol in an SSL connection.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nTCPConnectionNotify\n iso, ssl: \nSSL\n iso)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nSwallow this event until the handshake is complete.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nForward to the wrapped protocol.\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nPass the data to the SSL session and check for both new application data\nand new destination data.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\nPass the data to the SSL session and check for both new application data\nand new destination data.\n\n\nPrivate Functions\n\n\nfun ref  \n_poll\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nChecks for both new application data and new destination data. Informs the\nwrapped protocol that is has connected when the handshake is complete.", 
             "title": "class SSLConnection"
         }, 
         {
@@ -22911,9 +22886,9 @@
             "title": "fun ref  received(conn: TCPConnection ref, data: Array[U8 val] iso): None val"
         }, 
         {
-            "location": "/net-ssl-SSLConnection/#fun-ref-sentconn-tcpconnection-ref-data-byteseq-val-byteseq-val", 
+            "location": "/net-ssl-SSLConnection/#fun-ref-sentconn-tcpconnection-ref-data-string-val-array91u8-val93-val-string-val-array91u8-val93-val", 
             "text": "Pass the data to the SSL session and check for both new application data\nand new destination data.", 
-            "title": "fun ref  sent(conn: TCPConnection ref, data: ByteSeq val): ByteSeq val ?"
+            "title": "fun ref  sent(conn: TCPConnection ref, data: (String val | Array[U8 val] val)): (String val | Array[U8 val] val) ?"
         }, 
         {
             "location": "/net-ssl-SSLConnection/#private-functions", 
@@ -25457,7 +25432,7 @@
         }, 
         {
             "location": "/regex-Match/", 
-            "text": "class regex/Match\n\n\nDefault capability\n: \nref\n\n\nContains match data for a combination of a regex and a subject.\n\n\nConstructors\n\n\nnew \n_create\n(subject: \nByteSeq\n val, m: \nPointer\n[\n_Match\n val] ref)\n\n\nStore a match, a subject, and a size.\n\n\nPublic Functions\n\n\nfun box  \napply\n[optional A: (\nByteSeq\n iso \n \nSeq\n[\nU8\n val] iso)](i: \nU32\n val): A iso^ ?\n\n\nReturns a capture by number. Raises an error if the index is out of bounds.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \nend_pos\n(): \nUSize\n val\n\n\nReturns the character position of the last character in the match.\n\n\nfun box  \nfind\n[optional A: (\nByteSeq\n iso \n \nSeq\n[\nU8\n val] iso)](name: \nString\n box): A iso^ ?\n\n\nReturns a capture by name. Raises an error if the named capture does not\nexist.\n\n\nfun box  \ngroups\n(): \nArray\n[\nString\n val] iso^\n\n\nReturns all of the captured subgroups.  Groups that failed to capture\nanything will contain the empty string.\n\n\nfun box  \nsize\n(): \nU32\n val\n\n\nReturns the capture size of the match.\n\n\nfun box  \nstart_pos\n(): \nUSize\n val\n\n\nReturns the character position of the first character in the match.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.", 
+            "text": "class regex/Match\n\n\nDefault capability\n: \nref\n\n\nContains match data for a combination of a regex and a subject.\n\n\nConstructors\n\n\nnew \n_create\n(subject: (\nString\n val | \nArray\n[\nU8\n val] val), m: \nPointer\n[\n_Match\n val] ref)\n\n\nStore a match, a subject, and a size.\n\n\nPublic Functions\n\n\nfun box  \napply\n[optional A: ((\nString\n iso | \nArray\n[\nU8\n val] iso) \n \nSeq\n[\nU8\n val] iso)](i: \nU32\n val): A iso^ ?\n\n\nReturns a capture by number. Raises an error if the index is out of bounds.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \nend_pos\n(): \nUSize\n val\n\n\nReturns the character position of the last character in the match.\n\n\nfun box  \nfind\n[optional A: ((\nString\n iso | \nArray\n[\nU8\n val] iso) \n \nSeq\n[\nU8\n val] iso)](name: \nString\n box): A iso^ ?\n\n\nReturns a capture by name. Raises an error if the named capture does not\nexist.\n\n\nfun box  \ngroups\n(): \nArray\n[\nString\n val] iso^\n\n\nReturns all of the captured subgroups.  Groups that failed to capture\nanything will contain the empty string.\n\n\nfun box  \nsize\n(): \nU32\n val\n\n\nReturns the capture size of the match.\n\n\nfun box  \nstart_pos\n(): \nUSize\n val\n\n\nReturns the character position of the first character in the match.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.", 
             "title": "class Match"
         }, 
         {
@@ -25471,9 +25446,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/regex-Match/#new-_createsubject-byteseq-val-m-pointer91_match-val93-ref", 
+            "location": "/regex-Match/#new-_createsubject-string-val-array91u8-val93-val-m-pointer91_match-val93-ref", 
             "text": "Store a match, a subject, and a size.", 
-            "title": "new _create(subject: ByteSeq val, m: Pointer[_Match val] ref)"
+            "title": "new _create(subject: (String val | Array[U8 val] val), m: Pointer[_Match val] ref)"
         }, 
         {
             "location": "/regex-Match/#public-functions", 
@@ -25481,9 +25456,9 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/regex-Match/#fun-box-apply91optional-a-byteseq-iso-seq91u8-val93-iso93i-u32-val-a-iso", 
+            "location": "/regex-Match/#fun-box-apply91optional-a-string-iso-array91u8-val93-iso-seq91u8-val93-iso93i-u32-val-a-iso", 
             "text": "Returns a capture by number. Raises an error if the index is out of bounds.", 
-            "title": "fun box  apply[optional A: (ByteSeq iso &amp; Seq[U8 val] iso)](i: U32 val): A iso^ ?"
+            "title": "fun box  apply[optional A: ((String iso | Array[U8 val] iso) &amp; Seq[U8 val] iso)](i: U32 val): A iso^ ?"
         }, 
         {
             "location": "/regex-Match/#fun-ref-dispose-none-val", 
@@ -25496,9 +25471,9 @@
             "title": "fun box  end_pos(): USize val"
         }, 
         {
-            "location": "/regex-Match/#fun-box-find91optional-a-byteseq-iso-seq91u8-val93-iso93name-string-box-a-iso", 
+            "location": "/regex-Match/#fun-box-find91optional-a-string-iso-array91u8-val93-iso-seq91u8-val93-iso93name-string-box-a-iso", 
             "text": "Returns a capture by name. Raises an error if the named capture does not\nexist.", 
-            "title": "fun box  find[optional A: (ByteSeq iso &amp; Seq[U8 val] iso)](name: String box): A iso^ ?"
+            "title": "fun box  find[optional A: ((String iso | Array[U8 val] iso) &amp; Seq[U8 val] iso)](name: String box): A iso^ ?"
         }, 
         {
             "location": "/regex-Match/#fun-box-groups-array91string-val93-iso", 
@@ -25612,7 +25587,7 @@
         }, 
         {
             "location": "/regex-Regex/", 
-            "text": "class regex/Regex\n\n\nDefault capability\n: \nref\n\n\nA perl compatible regular expression. This uses the PCRE2 library, and\nattempts to enable JIT matching whenever possible.\n\n\nConstructors\n\n\nnew \ncreate\n(from: \nByteSeq\n box, optional jit: \nBool\n val) ?\n\n\nCompile a regular expression. Raises an error for an invalid expression.\n\n\nPublic Functions\n\n\nfun box  \napply\n(subject: \nByteSeq\n val, optional offset: \nUSize\n val): \nMatch\n ref^ ?\n\n\nMatch the supplied string, starting at the given offset. Returns a Match\nobject that can give precise match details. Raises an error if there is no\nmatch.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \neq\n(subject: \nByteSeq\n box): \nBool\n val\n\n\nReturn true on a successful match, false otherwise.\n\n\nfun box  \nindex\n(name: \nString\n box): \nUSize\n val ?\n\n\nReturns the index of a named capture. Raises an error if the named capture\ndoes not exist.\n\n\nfun box  \nne\n(subject: \nByteSeq\n box): \nBool\n val\n\n\nReturn false on a successful match, true otherwise.\n\n\nfun box  \nreplace\n[optional A: (\nSeq\n[\nU8\n val] iso \n \nByteSeq\n iso)](subject: \nByteSeq\n val, value: \nByteSeq\n box, optional offset: \nUSize\n val, optional global: \nBool\n val): A iso^ ?\n\n\nPerform a match on the subject, starting at the given offset, and create\na new string using the value as a replacement for what was matched. Raise\nan error if there is no match.\n\n\nfun box  \nsplit\n(subject: \nString\n val, optional offset: \nUSize\n val): \nArray\n[\nString\n val] iso^ ?\n\n\nSplit subject by non-empty occurrences of this pattern, returning a list\nof the substrings.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \n_match\n(subject: \nByteSeq\n box, offset: \nUSize\n val, options: \nU32\n val): \nPointer\n[\n_Match\n val] ref ?\n\n\nMatch the subject and keep the capture results. Raises an error if there\nis no match.", 
+            "text": "class regex/Regex\n\n\nDefault capability\n: \nref\n\n\nA perl compatible regular expression. This uses the PCRE2 library, and\nattempts to enable JIT matching whenever possible.\n\n\nConstructors\n\n\nnew \ncreate\n(from: (\nString\n box | \nArray\n[\nU8\n val] box), optional jit: \nBool\n val) ?\n\n\nCompile a regular expression. Raises an error for an invalid expression.\n\n\nPublic Functions\n\n\nfun box  \napply\n(subject: (\nString\n val | \nArray\n[\nU8\n val] val), optional offset: \nUSize\n val): \nMatch\n ref^ ?\n\n\nMatch the supplied string, starting at the given offset. Returns a Match\nobject that can give precise match details. Raises an error if there is no\nmatch.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \neq\n(subject: (\nString\n box | \nArray\n[\nU8\n val] box)): \nBool\n val\n\n\nReturn true on a successful match, false otherwise.\n\n\nfun box  \nindex\n(name: \nString\n box): \nUSize\n val ?\n\n\nReturns the index of a named capture. Raises an error if the named capture\ndoes not exist.\n\n\nfun box  \nne\n(subject: (\nString\n box | \nArray\n[\nU8\n val] box)): \nBool\n val\n\n\nReturn false on a successful match, true otherwise.\n\n\nfun box  \nreplace\n[optional A: (\nSeq\n[\nU8\n val] iso \n (\nString\n iso | \nArray\n[\nU8\n val] iso))](subject: (\nString\n val | \nArray\n[\nU8\n val] val), value: (\nString\n box | \nArray\n[\nU8\n val] box), optional offset: \nUSize\n val, optional global: \nBool\n val): A iso^ ?\n\n\nPerform a match on the subject, starting at the given offset, and create\na new string using the value as a replacement for what was matched. Raise\nan error if there is no match.\n\n\nfun box  \nsplit\n(subject: \nString\n val, optional offset: \nUSize\n val): \nArray\n[\nString\n val] iso^ ?\n\n\nSplit subject by non-empty occurrences of this pattern, returning a list\nof the substrings.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the underlying PCRE2 data.\n\n\nfun box  \n_match\n(subject: (\nString\n box | \nArray\n[\nU8\n val] box), offset: \nUSize\n val, options: \nU32\n val): \nPointer\n[\n_Match\n val] ref ?\n\n\nMatch the subject and keep the capture results. Raises an error if there\nis no match.", 
             "title": "class Regex"
         }, 
         {
@@ -25626,9 +25601,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/regex-Regex/#new-createfrom-byteseq-box-optional-jit-bool-val", 
+            "location": "/regex-Regex/#new-createfrom-string-box-array91u8-val93-box-optional-jit-bool-val", 
             "text": "Compile a regular expression. Raises an error for an invalid expression.", 
-            "title": "new create(from: ByteSeq box, optional jit: Bool val) ?"
+            "title": "new create(from: (String box | Array[U8 val] box), optional jit: Bool val) ?"
         }, 
         {
             "location": "/regex-Regex/#public-functions", 
@@ -25636,9 +25611,9 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/regex-Regex/#fun-box-applysubject-byteseq-val-optional-offset-usize-val-match-ref", 
+            "location": "/regex-Regex/#fun-box-applysubject-string-val-array91u8-val93-val-optional-offset-usize-val-match-ref", 
             "text": "Match the supplied string, starting at the given offset. Returns a Match\nobject that can give precise match details. Raises an error if there is no\nmatch.", 
-            "title": "fun box  apply(subject: ByteSeq val, optional offset: USize val): Match ref^ ?"
+            "title": "fun box  apply(subject: (String val | Array[U8 val] val), optional offset: USize val): Match ref^ ?"
         }, 
         {
             "location": "/regex-Regex/#fun-ref-dispose-none-val", 
@@ -25646,9 +25621,9 @@
             "title": "fun ref  dispose(): None val"
         }, 
         {
-            "location": "/regex-Regex/#fun-box-eqsubject-byteseq-box-bool-val", 
+            "location": "/regex-Regex/#fun-box-eqsubject-string-box-array91u8-val93-box-bool-val", 
             "text": "Return true on a successful match, false otherwise.", 
-            "title": "fun box  eq(subject: ByteSeq box): Bool val"
+            "title": "fun box  eq(subject: (String box | Array[U8 val] box)): Bool val"
         }, 
         {
             "location": "/regex-Regex/#fun-box-indexname-string-box-usize-val", 
@@ -25656,14 +25631,14 @@
             "title": "fun box  index(name: String box): USize val ?"
         }, 
         {
-            "location": "/regex-Regex/#fun-box-nesubject-byteseq-box-bool-val", 
+            "location": "/regex-Regex/#fun-box-nesubject-string-box-array91u8-val93-box-bool-val", 
             "text": "Return false on a successful match, true otherwise.", 
-            "title": "fun box  ne(subject: ByteSeq box): Bool val"
+            "title": "fun box  ne(subject: (String box | Array[U8 val] box)): Bool val"
         }, 
         {
-            "location": "/regex-Regex/#fun-box-replace91optional-a-seq91u8-val93-iso-byteseq-iso93subject-byteseq-val-value-byteseq-box-optional-offset-usize-val-optional-global-bool-val-a-iso", 
+            "location": "/regex-Regex/#fun-box-replace91optional-a-seq91u8-val93-iso-string-iso-array91u8-val93-iso93subject-string-val-array91u8-val93-val-value-string-box-array91u8-val93-box-optional-offset-usize-val-optional-global-bool-val-a-iso", 
             "text": "Perform a match on the subject, starting at the given offset, and create\na new string using the value as a replacement for what was matched. Raise\nan error if there is no match.", 
-            "title": "fun box  replace[optional A: (Seq[U8 val] iso &amp; ByteSeq iso)](subject: ByteSeq val, value: ByteSeq box, optional offset: USize val, optional global: Bool val): A iso^ ?"
+            "title": "fun box  replace[optional A: (Seq[U8 val] iso &amp; (String iso | Array[U8 val] iso))](subject: (String val | Array[U8 val] val), value: (String box | Array[U8 val] box), optional offset: USize val, optional global: Bool val): A iso^ ?"
         }, 
         {
             "location": "/regex-Regex/#fun-box-splitsubject-string-val-optional-offset-usize-val-array91string-val93-iso", 
@@ -25681,9 +25656,9 @@
             "title": "fun box  _final(): None val"
         }, 
         {
-            "location": "/regex-Regex/#fun-box-_matchsubject-byteseq-box-offset-usize-val-options-u32-val-pointer91_match-val93-ref", 
+            "location": "/regex-Regex/#fun-box-_matchsubject-string-box-array91u8-val93-box-offset-usize-val-options-u32-val-pointer91_match-val93-ref", 
             "text": "Match the subject and keep the capture results. Raises an error if there\nis no match.", 
-            "title": "fun box  _match(subject: ByteSeq box, offset: USize val, options: U32 val): Pointer[_Match val] ref ?"
+            "title": "fun box  _match(subject: (String box | Array[U8 val] box), offset: USize val, options: U32 val): Pointer[_Match val] ref ?"
         }, 
         {
             "location": "/regex-_TestApply/", 
