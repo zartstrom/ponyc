@@ -1536,7 +1536,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#entities">Entities</a></li>
+                <li class="toctree-l3"><a href="#base64-package">Base64 package</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-code">Example code</a></li>
+                
+                    <li><a class="toctree-l4" href="#entities">Entities</a></li>
                 
             
             </ul>
@@ -3679,7 +3683,22 @@
           <div role="main">
             <div class="section">
               
-                <p>No package doc string provided for encode/base64.</p>
+                <h1 id="base64-package">Base64 package</h1>
+<p>The Base64 package contains support for doing Base64 binary-to-text encodings.
+We currently have support 3 encodings: PEM, MIME and URL.</p>
+<p>To learn more about Base64, we suggest you check out the
+<a href="https://en.wikipedia.org/wiki/Base64">wikipedia entry</a>.</p>
+<h2 id="example-code">Example code</h2>
+<pre><code>use &quot;encode/base64&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    env.out.print(Base64.encode(&quot;foobar&quot;))
+    try
+      env.out.print(Base64.decode[String iso](&quot;Zm9vYmFy&quot;))
+    end
+</code></pre>
+
 <h2 id="entities">Entities</h2>
 <ul>
 <li><a href="../encode-base64-Base64/">primitive Base64</a></li>
