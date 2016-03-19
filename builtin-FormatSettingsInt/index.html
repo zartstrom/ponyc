@@ -1,4802 +1,3729 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
-    
-      
-        <title>type FormatSettingsInt - Pony Standard Library</title>
-      
-      
-      
-      
-    
-    <meta property="og:url" content="None">
-    <meta property="og:title" content="Pony Standard Library">
-    <meta property="og:image" content="None/../">
-    <meta name="apple-mobile-web-app-title" content="Pony Standard Library">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../assets/fonts/icon.eot?52m981');
-      	src: url('../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../assets/stylesheets/application-20d5debb47.css">
-    
-    
-      
-      
-      
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
-    
-    
-    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
-    
-  </head>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
   
-  <body class=" ">
+  <title>type FormatSettingsInt - stdlib</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "type FormatSettingsInt";
+    var mkdocs_page_input_path = "builtin-FormatSettingsInt.md";
+    var mkdocs_page_url = "/builtin-FormatSettingsInt/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
     
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
-            
-              
-                package builtin <i class="icon icon-link"></i>
-              
-            
-          </span>
-        
-        type FormatSettingsInt
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> stdlib</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
       </div>
-    </div>
-    
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
-  
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>Pony Standard Library </strong>
-        
-      </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
           
-            
-  <li>
-    <a class="" title="stdlib" href="..">
-      stdlib
-    </a>
-    
-  </li>
-
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">stdlib</a>
+        
+    </li>
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package packages/stdlib</span></li>
+
+        
             
-  <li>
-    <span class="section">package packages/stdlib</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../packages-stdlib--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../packages-stdlib--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Main" href="../packages-stdlib-Main/">
-      actor Main
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../packages-stdlib-Main/">actor Main</a>
+        
+    </li>
 
-      
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package assert</span></li>
+
+        
             
-  <li>
-    <span class="section">package assert</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../assert--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../assert--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Assert" href="../assert-Assert/">
-      primitive Assert
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assert-Assert/">primitive Assert</a>
         
-  <li>
-    <a class="" title="primitive Fact" href="../assert-Fact/">
-      primitive Fact
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assert-Fact/">primitive Fact</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package builtin</span></li>
+
+        
             
-  <li>
-    <span class="section">package builtin</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Package" href="../builtin--index/">
-      Package
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Align" href="../builtin-Align/">
-      type Align
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive AlignCenter" href="../builtin-AlignCenter/">
-      primitive AlignCenter
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive AlignLeft" href="../builtin-AlignLeft/">
-      primitive AlignLeft
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive AlignRight" href="../builtin-AlignRight/">
-      primitive AlignRight
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive AmbientAuth" href="../builtin-AmbientAuth/">
-      primitive AmbientAuth
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Any" href="../builtin-Any/">
-      interface Any
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait _ArithmeticConvertible" href="../builtin-_ArithmeticConvertible/">
-      trait _ArithmeticConvertible
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class Array" href="../builtin-Array/">
-      class Array
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class ArrayKeys" href="../builtin-ArrayKeys/">
-      class ArrayKeys
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class ArrayPairs" href="../builtin-ArrayPairs/">
-      class ArrayPairs
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class ArrayValues" href="../builtin-ArrayValues/">
-      class ArrayValues
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive AsioEvent" href="../builtin-AsioEvent/">
-      primitive AsioEvent
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type AsioEventID" href="../builtin-AsioEventID/">
-      type AsioEventID
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface AsioEventNotify" href="../builtin-AsioEventNotify/">
-      interface AsioEventNotify
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive Bool" href="../builtin-Bool/">
-      primitive Bool
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type ByteSeq" href="../builtin-ByteSeq/">
-      type ByteSeq
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface ByteSeqIter" href="../builtin-ByteSeqIter/">
-      interface ByteSeqIter
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Comparable" href="../builtin-Comparable/">
-      interface Comparable
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Compare" href="../builtin-Compare/">
-      type Compare
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Creatable" href="../builtin-Creatable/">
-      interface Creatable
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface DisposableActor" href="../builtin-DisposableActor/">
-      interface DisposableActor
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class Env" href="../builtin-Env/">
-      class Env
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive Equal" href="../builtin-Equal/">
-      primitive Equal
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Equatable" href="../builtin-Equatable/">
-      interface Equatable
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive F32" href="../builtin-F32/">
-      primitive F32
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive F64" href="../builtin-F64/">
-      primitive F64
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Float" href="../builtin-Float/">
-      type Float
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait FloatingPoint" href="../builtin-FloatingPoint/">
-      trait FloatingPoint
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatBinary" href="../builtin-FormatBinary/">
-      primitive FormatBinary
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatBinaryBare" href="../builtin-FormatBinaryBare/">
-      primitive FormatBinaryBare
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatDefault" href="../builtin-FormatDefault/">
-      primitive FormatDefault
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatDefaultNumber" href="../builtin-FormatDefaultNumber/">
-      primitive FormatDefaultNumber
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatExp" href="../builtin-FormatExp/">
-      primitive FormatExp
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatExpLarge" href="../builtin-FormatExpLarge/">
-      primitive FormatExpLarge
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatFix" href="../builtin-FormatFix/">
-      primitive FormatFix
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatFixLarge" href="../builtin-FormatFixLarge/">
-      primitive FormatFixLarge
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type FormatFloat" href="../builtin-FormatFloat/">
-      type FormatFloat
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatGeneral" href="../builtin-FormatGeneral/">
-      primitive FormatGeneral
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatGeneralLarge" href="../builtin-FormatGeneralLarge/">
-      primitive FormatGeneralLarge
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatHex" href="../builtin-FormatHex/">
-      primitive FormatHex
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatHexBare" href="../builtin-FormatHexBare/">
-      primitive FormatHexBare
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatHexSmall" href="../builtin-FormatHexSmall/">
-      primitive FormatHexSmall
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatHexSmallBare" href="../builtin-FormatHexSmallBare/">
-      primitive FormatHexSmallBare
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type FormatInt" href="../builtin-FormatInt/">
-      type FormatInt
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatOctal" href="../builtin-FormatOctal/">
-      primitive FormatOctal
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatOctalBare" href="../builtin-FormatOctalBare/">
-      primitive FormatOctalBare
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface FormatSettings" href="../builtin-FormatSettings/">
-      interface FormatSettings
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatSettingsDefault" href="../builtin-FormatSettingsDefault/">
-      primitive FormatSettingsDefault
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type FormatSettingsFloat" href="../builtin-FormatSettingsFloat/">
-      type FormatSettingsFloat
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class FormatSettingsHolder" href="../builtin-FormatSettingsHolder/">
-      class FormatSettingsHolder
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="current" title="type FormatSettingsInt" href="./">
-      type FormatSettingsInt
-    </a>
-    
-      
-        
-      
-      
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait FormatSpec" href="../builtin-FormatSpec/">
-      trait FormatSpec
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive FormatUTF32" href="../builtin-FormatUTF32/">
-      primitive FormatUTF32
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive Greater" href="../builtin-Greater/">
-      primitive Greater
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface HasEq" href="../builtin-HasEq/">
-      interface HasEq
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive I128" href="../builtin-I128/">
-      primitive I128
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive I16" href="../builtin-I16/">
-      primitive I16
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive I32" href="../builtin-I32/">
-      primitive I32
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive I64" href="../builtin-I64/">
-      primitive I64
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive I8" href="../builtin-I8/">
-      primitive I8
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive ILong" href="../builtin-ILong/">
-      primitive ILong
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive ISize" href="../builtin-ISize/">
-      primitive ISize
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait Integer" href="../builtin-Integer/">
-      trait Integer
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Iterator" href="../builtin-Iterator/">
-      interface Iterator
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive Less" href="../builtin-Less/">
-      primitive Less
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="struct MaybePointer" href="../builtin-MaybePointer/">
-      struct MaybePointer
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive None" href="../builtin-None/">
-      primitive None
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Number" href="../builtin-Number/">
-      type Number
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface OutStream" href="../builtin-OutStream/">
-      interface OutStream
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive Platform" href="../builtin-Platform/">
-      primitive Platform
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="struct Pointer" href="../builtin-Pointer/">
-      struct Pointer
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive PrefixDefault" href="../builtin-PrefixDefault/">
-      primitive PrefixDefault
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type PrefixNumber" href="../builtin-PrefixNumber/">
-      type PrefixNumber
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive PrefixSign" href="../builtin-PrefixSign/">
-      primitive PrefixSign
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive PrefixSpace" href="../builtin-PrefixSpace/">
-      primitive PrefixSpace
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait PrefixSpec" href="../builtin-PrefixSpec/">
-      trait PrefixSpec
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface ReadElement" href="../builtin-ReadElement/">
-      interface ReadElement
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface ReadSeq" href="../builtin-ReadSeq/">
-      interface ReadSeq
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait Real" href="../builtin-Real/">
-      trait Real
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Seq" href="../builtin-Seq/">
-      interface Seq
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Signed" href="../builtin-Signed/">
-      type Signed
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait _SignedInteger" href="../builtin-_SignedInteger/">
-      trait _SignedInteger
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface SourceLoc" href="../builtin-SourceLoc/">
-      interface SourceLoc
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="actor StdStream" href="../builtin-StdStream/">
-      actor StdStream
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="actor Stdin" href="../builtin-Stdin/">
-      actor Stdin
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface StdinNotify" href="../builtin-StdinNotify/">
-      interface StdinNotify
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class String" href="../builtin-String/">
-      class String
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class StringBytes" href="../builtin-StringBytes/">
-      class StringBytes
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="class StringRunes" href="../builtin-StringRunes/">
-      class StringRunes
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="interface Stringable" href="../builtin-Stringable/">
-      interface Stringable
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive _ToString" href="../builtin-_ToString/">
-      primitive _ToString
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive U128" href="../builtin-U128/">
-      primitive U128
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive U16" href="../builtin-U16/">
-      primitive U16
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive U32" href="../builtin-U32/">
-      primitive U32
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive U64" href="../builtin-U64/">
-      primitive U64
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive U8" href="../builtin-U8/">
-      primitive U8
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive ULong" href="../builtin-ULong/">
-      primitive ULong
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="primitive USize" href="../builtin-USize/">
-      primitive USize
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="type Unsigned" href="../builtin-Unsigned/">
-      type Unsigned
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="trait _UnsignedInteger" href="../builtin-_UnsignedInteger/">
-      trait _UnsignedInteger
-    </a>
-    
-  </li>
-
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin--index/">Package</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Align/">type Align</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AlignCenter/">primitive AlignCenter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AlignLeft/">primitive AlignLeft</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AlignRight/">primitive AlignRight</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AmbientAuth/">primitive AmbientAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Any/">interface Any</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-_ArithmeticConvertible/">trait _ArithmeticConvertible</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Array/">class Array</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ArrayKeys/">class ArrayKeys</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ArrayPairs/">class ArrayPairs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ArrayValues/">class ArrayValues</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AsioEvent/">primitive AsioEvent</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AsioEventID/">type AsioEventID</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-AsioEventNotify/">interface AsioEventNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Bool/">primitive Bool</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ByteSeq/">type ByteSeq</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ByteSeqIter/">interface ByteSeqIter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Comparable/">interface Comparable</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Compare/">type Compare</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Creatable/">interface Creatable</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-DisposableActor/">interface DisposableActor</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Env/">class Env</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Equal/">primitive Equal</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Equatable/">interface Equatable</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-F32/">primitive F32</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-F64/">primitive F64</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Float/">type Float</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FloatingPoint/">trait FloatingPoint</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatBinary/">primitive FormatBinary</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatBinaryBare/">primitive FormatBinaryBare</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatDefault/">primitive FormatDefault</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatDefaultNumber/">primitive FormatDefaultNumber</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatExp/">primitive FormatExp</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatExpLarge/">primitive FormatExpLarge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatFix/">primitive FormatFix</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatFixLarge/">primitive FormatFixLarge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatFloat/">type FormatFloat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatGeneral/">primitive FormatGeneral</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatGeneralLarge/">primitive FormatGeneralLarge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatHex/">primitive FormatHex</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatHexBare/">primitive FormatHexBare</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatHexSmall/">primitive FormatHexSmall</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatHexSmallBare/">primitive FormatHexSmallBare</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatInt/">type FormatInt</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatOctal/">primitive FormatOctal</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatOctalBare/">primitive FormatOctalBare</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatSettings/">interface FormatSettings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatSettingsDefault/">primitive FormatSettingsDefault</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatSettingsFloat/">type FormatSettingsFloat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatSettingsHolder/">class FormatSettingsHolder</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">type FormatSettingsInt</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#type-builtinformatsettingsint-is-formatsettingsholder91formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-prefixdefault-val-prefixspace-val-prefixsign-val-formatdefaultnumber-val93-ref">type builtin/FormatSettingsInt is FormatSettingsHolder[(((((((((FormatDefault val | FormatUTF32 val) | FormatBinary val) | FormatBinaryBare val) | FormatOctal val) | FormatOctalBare val) | FormatHex val) | FormatHexBare val) | FormatHexSmall val) | FormatHexSmallBare val), ((PrefixDefault val | PrefixSpace val) | PrefixSign val), FormatDefaultNumber val] ref</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatSpec/">trait FormatSpec</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-FormatUTF32/">primitive FormatUTF32</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Greater/">primitive Greater</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-HasEq/">interface HasEq</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-I128/">primitive I128</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-I16/">primitive I16</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-I32/">primitive I32</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-I64/">primitive I64</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-I8/">primitive I8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ILong/">primitive ILong</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ISize/">primitive ISize</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Integer/">trait Integer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Iterator/">interface Iterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Less/">primitive Less</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-MaybePointer/">struct MaybePointer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-None/">primitive None</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Number/">type Number</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-OutStream/">interface OutStream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Platform/">primitive Platform</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Pointer/">struct Pointer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-PrefixDefault/">primitive PrefixDefault</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-PrefixNumber/">type PrefixNumber</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-PrefixSign/">primitive PrefixSign</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-PrefixSpace/">primitive PrefixSpace</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-PrefixSpec/">trait PrefixSpec</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadElement/">interface ReadElement</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ReadSeq/">interface ReadSeq</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Real/">trait Real</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Seq/">interface Seq</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Signed/">type Signed</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-_SignedInteger/">trait _SignedInteger</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-SourceLoc/">interface SourceLoc</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-StdStream/">actor StdStream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Stdin/">actor Stdin</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-StdinNotify/">interface StdinNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-String/">class String</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-StringBytes/">class StringBytes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-StringRunes/">class StringRunes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Stringable/">interface Stringable</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-_ToString/">primitive _ToString</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-U128/">primitive U128</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-U16/">primitive U16</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-U32/">primitive U32</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-U64/">primitive U64</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-U8/">primitive U8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-ULong/">primitive ULong</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-USize/">primitive USize</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-Unsigned/">type Unsigned</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin-_UnsignedInteger/">trait _UnsignedInteger</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package builtin_test</span></li>
+
+        
             
-  <li>
-    <span class="section">package builtin_test</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../builtin_test--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Callback" href="../builtin_test-Callback/">
-      class Callback
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-Callback/">class Callback</a>
         
-  <li>
-    <a class="" title="actor Main" href="../builtin_test-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestAbs" href="../builtin_test-_TestAbs/">
-      class _TestAbs
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestArrayInsert" href="../builtin_test-_TestArrayInsert/">
-      class _TestArrayInsert
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestArraySlice" href="../builtin_test-_TestArraySlice/">
-      class _TestArraySlice
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestAbs/">class _TestAbs</a>
         
-  <li>
-    <a class="" title="class _TestCCallback" href="../builtin_test-_TestCCallback/">
-      class _TestCCallback
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestDivMod" href="../builtin_test-_TestDivMod/">
-      class _TestDivMod
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestArrayInsert/">class _TestArrayInsert</a>
         
-  <li>
-    <a class="" title="class _TestFloatToString" href="../builtin_test-_TestFloatToString/">
-      class _TestFloatToString
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestIntToString" href="../builtin_test-_TestIntToString/">
-      class _TestIntToString
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestArraySlice/">class _TestArraySlice</a>
         
-  <li>
-    <a class="" title="class _TestMath128" href="../builtin_test-_TestMath128/">
-      class _TestMath128
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestMaybePointer" href="../builtin_test-_TestMaybePointer/">
-      class _TestMaybePointer
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestCCallback/">class _TestCCallback</a>
         
-  <li>
-    <a class="" title="class _TestSpecialValuesF32" href="../builtin_test-_TestSpecialValuesF32/">
-      class _TestSpecialValuesF32
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestSpecialValuesF64" href="../builtin_test-_TestSpecialValuesF64/">
-      class _TestSpecialValuesF64
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestDivMod/">class _TestDivMod</a>
         
-  <li>
-    <a class="" title="class _TestStringCompare" href="../builtin_test-_TestStringCompare/">
-      class _TestStringCompare
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringCount" href="../builtin_test-_TestStringCount/">
-      class _TestStringCount
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestFloatToString/">class _TestFloatToString</a>
         
-  <li>
-    <a class="" title="class _TestStringCut" href="../builtin_test-_TestStringCut/">
-      class _TestStringCut
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringJoin" href="../builtin_test-_TestStringJoin/">
-      class _TestStringJoin
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestIntToString/">class _TestIntToString</a>
         
-  <li>
-    <a class="" title="class _TestStringLstrip" href="../builtin_test-_TestStringLstrip/">
-      class _TestStringLstrip
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringRemove" href="../builtin_test-_TestStringRemove/">
-      class _TestStringRemove
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestMath128/">class _TestMath128</a>
         
-  <li>
-    <a class="" title="class _TestStringReplace" href="../builtin_test-_TestStringReplace/">
-      class _TestStringReplace
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringRstrip" href="../builtin_test-_TestStringRstrip/">
-      class _TestStringRstrip
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestMaybePointer/">class _TestMaybePointer</a>
         
-  <li>
-    <a class="" title="class _TestStringRunes" href="../builtin_test-_TestStringRunes/">
-      class _TestStringRunes
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringSplit" href="../builtin_test-_TestStringSplit/">
-      class _TestStringSplit
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestSpecialValuesF32/">class _TestSpecialValuesF32</a>
         
-  <li>
-    <a class="" title="class _TestStringStrip" href="../builtin_test-_TestStringStrip/">
-      class _TestStringStrip
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringSubstring" href="../builtin_test-_TestStringSubstring/">
-      class _TestStringSubstring
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestSpecialValuesF64/">class _TestSpecialValuesF64</a>
         
-  <li>
-    <a class="" title="class _TestStringToBool" href="../builtin_test-_TestStringToBool/">
-      class _TestStringToBool
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringToFloat" href="../builtin_test-_TestStringToFloat/">
-      class _TestStringToFloat
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringCompare/">class _TestStringCompare</a>
         
-  <li>
-    <a class="" title="class _TestStringToI8" href="../builtin_test-_TestStringToI8/">
-      class _TestStringToI8
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringToIntLarge" href="../builtin_test-_TestStringToIntLarge/">
-      class _TestStringToIntLarge
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringCount/">class _TestStringCount</a>
         
-  <li>
-    <a class="" title="class _TestStringToU8" href="../builtin_test-_TestStringToU8/">
-      class _TestStringToU8
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="struct _TestStruct" href="../builtin_test-_TestStruct/">
-      struct _TestStruct
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringCut/">class _TestStringCut</a>
         
-  <li>
-    <a class="" title="class _TestValtrace" href="../builtin_test-_TestValtrace/">
-      class _TestValtrace
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor _Valtrace" href="../builtin_test-_Valtrace/">
-      actor _Valtrace
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringJoin/">class _TestStringJoin</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringLstrip/">class _TestStringLstrip</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringRemove/">class _TestStringRemove</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringReplace/">class _TestStringReplace</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringRstrip/">class _TestStringRstrip</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringRunes/">class _TestStringRunes</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringSplit/">class _TestStringSplit</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringStrip/">class _TestStringStrip</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringSubstring/">class _TestStringSubstring</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringToBool/">class _TestStringToBool</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringToFloat/">class _TestStringToFloat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringToI8/">class _TestStringToI8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringToIntLarge/">class _TestStringToIntLarge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStringToU8/">class _TestStringToU8</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestStruct/">struct _TestStruct</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestValtrace/">class _TestValtrace</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_Valtrace/">actor _Valtrace</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package bureaucracy</span></li>
+
+        
             
-  <li>
-    <span class="section">package bureaucracy</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../bureaucracy--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Custodian" href="../bureaucracy-Custodian/">
-      actor Custodian
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-Custodian/">actor Custodian</a>
         
-  <li>
-    <a class="" title="actor Main" href="../bureaucracy-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Registrar" href="../bureaucracy-Registrar/">
-      actor Registrar
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestCustodian" href="../bureaucracy-_TestCustodian/">
-      class _TestCustodian
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor _TestDisposable" href="../bureaucracy-_TestDisposable/">
-      actor _TestDisposable
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-Registrar/">actor Registrar</a>
         
-  <li>
-    <a class="" title="class _TestRegistrar" href="../bureaucracy-_TestRegistrar/">
-      class _TestRegistrar
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-_TestCustodian/">class _TestCustodian</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-_TestDisposable/">actor _TestDisposable</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../bureaucracy-_TestRegistrar/">class _TestRegistrar</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package capsicum</span></li>
+
+        
             
-  <li>
-    <span class="section">package capsicum</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../capsicum--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../capsicum--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Cap" href="../capsicum-Cap/">
-      primitive Cap
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../capsicum-Cap/">primitive Cap</a>
         
-  <li>
-    <a class="" title="type CapRights" href="../capsicum-CapRights/">
-      type CapRights
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class CapRights0" href="../capsicum-CapRights0/">
-      class CapRights0
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../capsicum-CapRights/">type CapRights</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../capsicum-CapRights0/">class CapRights0</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package collections</span></li>
+
+        
             
-  <li>
-    <span class="section">package collections</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../collections--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../collections--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface Flag" href="../collections-Flag/">
-      interface Flag
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Flag/">interface Flag</a>
         
-  <li>
-    <a class="" title="class Flags" href="../collections-Flags/">
-      class Flags
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive HashByteSeq" href="../collections-HashByteSeq/">
-      primitive HashByteSeq
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Flags/">class Flags</a>
         
-  <li>
-    <a class="" title="primitive HashEq" href="../collections-HashEq/">
-      primitive HashEq
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface HashFunction" href="../collections-HashFunction/">
-      interface HashFunction
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashByteSeq/">primitive HashByteSeq</a>
         
-  <li>
-    <a class="" title="primitive HashIs" href="../collections-HashIs/">
-      primitive HashIs
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class HashMap" href="../collections-HashMap/">
-      class HashMap
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashEq/">primitive HashEq</a>
         
-  <li>
-    <a class="" title="class HashSet" href="../collections-HashSet/">
-      class HashSet
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface Hashable" href="../collections-Hashable/">
-      interface Hashable
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashFunction/">interface HashFunction</a>
         
-  <li>
-    <a class="" title="class List" href="../collections-List/">
-      class List
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class ListNode" href="../collections-ListNode/">
-      class ListNode
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashIs/">primitive HashIs</a>
         
-  <li>
-    <a class="" title="class ListNodes" href="../collections-ListNodes/">
-      class ListNodes
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class ListValues" href="../collections-ListValues/">
-      class ListValues
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashMap/">class HashMap</a>
         
-  <li>
-    <a class="" title="actor Main" href="../collections-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type Map" href="../collections-Map/">
-      type Map
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-HashSet/">class HashSet</a>
         
-  <li>
-    <a class="" title="primitive _MapDeleted" href="../collections-_MapDeleted/">
-      primitive _MapDeleted
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _MapEmpty" href="../collections-_MapEmpty/">
-      primitive _MapEmpty
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Hashable/">interface Hashable</a>
         
-  <li>
-    <a class="" title="type MapIs" href="../collections-MapIs/">
-      type MapIs
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class MapKeys" href="../collections-MapKeys/">
-      class MapKeys
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-List/">class List</a>
         
-  <li>
-    <a class="" title="class MapPairs" href="../collections-MapPairs/">
-      class MapPairs
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class MapValues" href="../collections-MapValues/">
-      class MapValues
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-ListNode/">class ListNode</a>
         
-  <li>
-    <a class="" title="class Range" href="../collections-Range/">
-      class Range
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Reverse" href="../collections-Reverse/">
-      class Reverse
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-ListNodes/">class ListNodes</a>
         
-  <li>
-    <a class="" title="class RingBuffer" href="../collections-RingBuffer/">
-      class RingBuffer
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type Set" href="../collections-Set/">
-      type Set
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-ListValues/">class ListValues</a>
         
-  <li>
-    <a class="" title="type SetIs" href="../collections-SetIs/">
-      type SetIs
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class SetValues" href="../collections-SetValues/">
-      class SetValues
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestList" href="../collections-_TestList/">
-      class _TestList
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsContains" href="../collections-_TestListsContains/">
-      class _TestListsContains
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Map/">type Map</a>
         
-  <li>
-    <a class="" title="class _TestListsDrop" href="../collections-_TestListsDrop/">
-      class _TestListsDrop
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsEvery" href="../collections-_TestListsEvery/">
-      class _TestListsEvery
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_MapDeleted/">primitive _MapDeleted</a>
         
-  <li>
-    <a class="" title="class _TestListsExists" href="../collections-_TestListsExists/">
-      class _TestListsExists
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsFilter" href="../collections-_TestListsFilter/">
-      class _TestListsFilter
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_MapEmpty/">primitive _MapEmpty</a>
         
-  <li>
-    <a class="" title="class _TestListsFlatMap" href="../collections-_TestListsFlatMap/">
-      class _TestListsFlatMap
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsFold" href="../collections-_TestListsFold/">
-      class _TestListsFold
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-MapIs/">type MapIs</a>
         
-  <li>
-    <a class="" title="class _TestListsFrom" href="../collections-_TestListsFrom/">
-      class _TestListsFrom
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsMap" href="../collections-_TestListsMap/">
-      class _TestListsMap
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-MapKeys/">class MapKeys</a>
         
-  <li>
-    <a class="" title="class _TestListsPartition" href="../collections-_TestListsPartition/">
-      class _TestListsPartition
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsReverse" href="../collections-_TestListsReverse/">
-      class _TestListsReverse
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-MapPairs/">class MapPairs</a>
         
-  <li>
-    <a class="" title="class _TestListsTake" href="../collections-_TestListsTake/">
-      class _TestListsTake
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestListsTakeWhile" href="../collections-_TestListsTakeWhile/">
-      class _TestListsTakeWhile
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-MapValues/">class MapValues</a>
         
-  <li>
-    <a class="" title="class _TestMap" href="../collections-_TestMap/">
-      class _TestMap
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestRing" href="../collections-_TestRing/">
-      class _TestRing
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Range/">class Range</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Reverse/">class Reverse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-RingBuffer/">class RingBuffer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-Set/">type Set</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-SetIs/">type SetIs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-SetValues/">class SetValues</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestList/">class _TestList</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsContains/">class _TestListsContains</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsDrop/">class _TestListsDrop</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsEvery/">class _TestListsEvery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsExists/">class _TestListsExists</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsFilter/">class _TestListsFilter</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsFlatMap/">class _TestListsFlatMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsFold/">class _TestListsFold</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsFrom/">class _TestListsFrom</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsMap/">class _TestListsMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsPartition/">class _TestListsPartition</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsReverse/">class _TestListsReverse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsTake/">class _TestListsTake</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestListsTakeWhile/">class _TestListsTakeWhile</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestMap/">class _TestMap</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../collections-_TestRing/">class _TestRing</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package debug</span></li>
+
+        
             
-  <li>
-    <span class="section">package debug</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../debug--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../debug--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Debug" href="../debug-Debug/">
-      primitive Debug
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../debug-Debug/">primitive Debug</a>
         
-  <li>
-    <a class="" title="primitive DebugErr" href="../debug-DebugErr/">
-      primitive DebugErr
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive DebugOut" href="../debug-DebugOut/">
-      primitive DebugOut
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../debug-DebugErr/">primitive DebugErr</a>
         
-  <li>
-    <a class="" title="type DebugStream" href="../debug-DebugStream/">
-      type DebugStream
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../debug-DebugOut/">primitive DebugOut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../debug-DebugStream/">type DebugStream</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package encode/base64</span></li>
+
+        
             
-  <li>
-    <span class="section">package encode/base64</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../encode-base64--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Base64" href="../encode-base64-Base64/">
-      primitive Base64
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-Base64/">primitive Base64</a>
         
-  <li>
-    <a class="" title="actor Main" href="../encode-base64-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestBase64Decode" href="../encode-base64-_TestBase64Decode/">
-      class _TestBase64Decode
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestBase64Encode" href="../encode-base64-_TestBase64Encode/">
-      class _TestBase64Encode
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestBase64EncodeDecode" href="../encode-base64-_TestBase64EncodeDecode/">
-      class _TestBase64EncodeDecode
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-_TestBase64Decode/">class _TestBase64Decode</a>
         
-  <li>
-    <a class="" title="class _TestBase64Quote" href="../encode-base64-_TestBase64Quote/">
-      class _TestBase64Quote
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-_TestBase64Encode/">class _TestBase64Encode</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-_TestBase64EncodeDecode/">class _TestBase64EncodeDecode</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../encode-base64-_TestBase64Quote/">class _TestBase64Quote</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package files</span></li>
+
+        
             
-  <li>
-    <span class="section">package files</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../files--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../files--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive CreateFile" href="../files-CreateFile/">
-      primitive CreateFile
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-CreateFile/">primitive CreateFile</a>
         
-  <li>
-    <a class="" title="class Directory" href="../files-Directory/">
-      class Directory
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _DirectoryEntry" href="../files-_DirectoryEntry/">
-      primitive _DirectoryEntry
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-Directory/">class Directory</a>
         
-  <li>
-    <a class="" title="primitive _DirectoryHandle" href="../files-_DirectoryHandle/">
-      primitive _DirectoryHandle
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class File" href="../files-File/">
-      class File
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_DirectoryEntry/">primitive _DirectoryEntry</a>
         
-  <li>
-    <a class="" title="type FileCaps" href="../files-FileCaps/">
-      type FileCaps
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileChmod" href="../files-FileChmod/">
-      primitive FileChmod
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_DirectoryHandle/">primitive _DirectoryHandle</a>
         
-  <li>
-    <a class="" title="primitive FileChown" href="../files-FileChown/">
-      primitive FileChown
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileCreate" href="../files-FileCreate/">
-      primitive FileCreate
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-File/">class File</a>
         
-  <li>
-    <a class="" title="primitive _FileDes" href="../files-_FileDes/">
-      primitive _FileDes
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type FileErrNo" href="../files-FileErrNo/">
-      type FileErrNo
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileCaps/">type FileCaps</a>
         
-  <li>
-    <a class="" title="primitive FileError" href="../files-FileError/">
-      primitive FileError
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _FileHandle" href="../files-_FileHandle/">
-      primitive _FileHandle
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileChmod/">primitive FileChmod</a>
         
-  <li>
-    <a class="" title="primitive _FileHelper" href="../files-_FileHelper/">
-      primitive _FileHelper
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class FileInfo" href="../files-FileInfo/">
-      class FileInfo
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileChown/">primitive FileChown</a>
         
-  <li>
-    <a class="" title="class FileLines" href="../files-FileLines/">
-      class FileLines
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileLink" href="../files-FileLink/">
-      primitive FileLink
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileCreate/">primitive FileCreate</a>
         
-  <li>
-    <a class="" title="primitive FileLookup" href="../files-FileLookup/">
-      primitive FileLookup
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileMkdir" href="../files-FileMkdir/">
-      primitive FileMkdir
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_FileDes/">primitive _FileDes</a>
         
-  <li>
-    <a class="" title="class FileMode" href="../files-FileMode/">
-      class FileMode
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileOK" href="../files-FileOK/">
-      primitive FileOK
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileErrNo/">type FileErrNo</a>
         
-  <li>
-    <a class="" title="class FilePath" href="../files-FilePath/">
-      class FilePath
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileRead" href="../files-FileRead/">
-      primitive FileRead
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileError/">primitive FileError</a>
         
-  <li>
-    <a class="" title="primitive FileRemove" href="../files-FileRemove/">
-      primitive FileRemove
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileRename" href="../files-FileRename/">
-      primitive FileRename
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_FileHandle/">primitive _FileHandle</a>
         
-  <li>
-    <a class="" title="primitive FileSeek" href="../files-FileSeek/">
-      primitive FileSeek
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileStat" href="../files-FileStat/">
-      primitive FileStat
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_FileHelper/">primitive _FileHelper</a>
         
-  <li>
-    <a class="" title="actor FileStream" href="../files-FileStream/">
-      actor FileStream
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileSync" href="../files-FileSync/">
-      primitive FileSync
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileInfo/">class FileInfo</a>
         
-  <li>
-    <a class="" title="primitive FileTime" href="../files-FileTime/">
-      primitive FileTime
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive FileTruncate" href="../files-FileTruncate/">
-      primitive FileTruncate
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileLines/">class FileLines</a>
         
-  <li>
-    <a class="" title="primitive FileWrite" href="../files-FileWrite/">
-      primitive FileWrite
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Main" href="../files-Main/">
-      actor Main
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileLink/">primitive FileLink</a>
         
-  <li>
-    <a class="" title="primitive OpenFile" href="../files-OpenFile/">
-      primitive OpenFile
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Path" href="../files-Path/">
-      primitive Path
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileLookup/">primitive FileLookup</a>
         
-  <li>
-    <a class="" title="primitive _PathDot" href="../files-_PathDot/">
-      primitive _PathDot
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PathDot2" href="../files-_PathDot2/">
-      primitive _PathDot2
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileMkdir/">primitive FileMkdir</a>
         
-  <li>
-    <a class="" title="primitive _PathOther" href="../files-_PathOther/">
-      primitive _PathOther
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PathSep" href="../files-_PathSep/">
-      primitive _PathSep
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileMode/">class FileMode</a>
         
-  <li>
-    <a class="" title="type _PathState" href="../files-_PathState/">
-      type _PathState
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestDirectoryOpen" href="../files-_TestDirectoryOpen/">
-      class _TestDirectoryOpen
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileOK/">primitive FileOK</a>
         
-  <li>
-    <a class="" title="class _TestMkdtemp" href="../files-_TestMkdtemp/">
-      class _TestMkdtemp
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestWalk" href="../files-_TestWalk/">
-      class _TestWalk
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FilePath/">class FilePath</a>
         
-  <li>
-    <a class="" title="interface WalkHandler" href="../files-WalkHandler/">
-      interface WalkHandler
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileRead/">primitive FileRead</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileRemove/">primitive FileRemove</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileRename/">primitive FileRename</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileSeek/">primitive FileSeek</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileStat/">primitive FileStat</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileStream/">actor FileStream</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileSync/">primitive FileSync</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileTime/">primitive FileTime</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileTruncate/">primitive FileTruncate</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-FileWrite/">primitive FileWrite</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-Main/">actor Main</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-OpenFile/">primitive OpenFile</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-Path/">primitive Path</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_PathDot/">primitive _PathDot</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_PathDot2/">primitive _PathDot2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_PathOther/">primitive _PathOther</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_PathSep/">primitive _PathSep</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_PathState/">type _PathState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_TestDirectoryOpen/">class _TestDirectoryOpen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_TestMkdtemp/">class _TestMkdtemp</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-_TestWalk/">class _TestWalk</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../files-WalkHandler/">interface WalkHandler</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package glob</span></li>
+
+        
             
-  <li>
-    <span class="section">package glob</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../glob--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../glob--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _FileHelper" href="../glob-_FileHelper/">
-      primitive _FileHelper
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_FileHelper/">primitive _FileHelper</a>
         
-  <li>
-    <a class="" title="primitive Glob" href="../glob-Glob/">
-      primitive Glob
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface GlobHandler" href="../glob-GlobHandler/">
-      interface GlobHandler
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-Glob/">primitive Glob</a>
         
-  <li>
-    <a class="" title="actor Main" href="../glob-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestFilter" href="../glob-_TestFilter/">
-      class _TestFilter
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-GlobHandler/">interface GlobHandler</a>
         
-  <li>
-    <a class="" title="class _TestFnMatch" href="../glob-_TestFnMatch/">
-      class _TestFnMatch
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestFnMatchCase" href="../glob-_TestFnMatchCase/">
-      class _TestFnMatchCase
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestGlob" href="../glob-_TestGlob/">
-      class _TestGlob
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestIGlob" href="../glob-_TestIGlob/">
-      class _TestIGlob
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_TestFilter/">class _TestFilter</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_TestFnMatch/">class _TestFnMatch</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_TestFnMatchCase/">class _TestFnMatchCase</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_TestGlob/">class _TestGlob</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glob-_TestIGlob/">class _TestIGlob</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package ini</span></li>
+
+        
             
-  <li>
-    <span class="section">package ini</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../ini--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../ini--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Ini" href="../ini-Ini/">
-      primitive Ini
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-Ini/">primitive Ini</a>
         
-  <li>
-    <a class="" title="type IniError" href="../ini-IniError/">
-      type IniError
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive IniIncompleteSection" href="../ini-IniIncompleteSection/">
-      primitive IniIncompleteSection
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniError/">type IniError</a>
         
-  <li>
-    <a class="" title="type IniMap" href="../ini-IniMap/">
-      type IniMap
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive IniNoDelimeter" href="../ini-IniNoDelimeter/">
-      primitive IniNoDelimeter
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniIncompleteSection/">primitive IniIncompleteSection</a>
         
-  <li>
-    <a class="" title="interface IniNotify" href="../ini-IniNotify/">
-      interface IniNotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive IniParse" href="../ini-IniParse/">
-      primitive IniParse
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniMap/">type IniMap</a>
         
-  <li>
-    <a class="" title="actor Main" href="../ini-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestIniParse" href="../ini-_TestIniParse/">
-      class _TestIniParse
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniNoDelimeter/">primitive IniNoDelimeter</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniNotify/">interface IniNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-IniParse/">primitive IniParse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-Main/">actor Main</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ini-_TestIniParse/">class _TestIniParse</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package json</span></li>
+
+        
             
-  <li>
-    <span class="section">package json</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../json--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../json--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class JsonArray" href="../json-JsonArray/">
-      class JsonArray
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-JsonArray/">class JsonArray</a>
         
-  <li>
-    <a class="" title="class JsonDoc" href="../json-JsonDoc/">
-      class JsonDoc
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class JsonObject" href="../json-JsonObject/">
-      class JsonObject
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-JsonDoc/">class JsonDoc</a>
         
-  <li>
-    <a class="" title="primitive _JsonPrint" href="../json-_JsonPrint/">
-      primitive _JsonPrint
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type JsonType" href="../json-JsonType/">
-      type JsonType
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-JsonObject/">class JsonObject</a>
         
-  <li>
-    <a class="" title="actor Main" href="../json-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestParseArray" href="../json-_TestParseArray/">
-      class _TestParseArray
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_JsonPrint/">primitive _JsonPrint</a>
         
-  <li>
-    <a class="" title="class _TestParseBasic" href="../json-_TestParseBasic/">
-      class _TestParseBasic
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestParseKeyword" href="../json-_TestParseKeyword/">
-      class _TestParseKeyword
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-JsonType/">type JsonType</a>
         
-  <li>
-    <a class="" title="class _TestParseNumber" href="../json-_TestParseNumber/">
-      class _TestParseNumber
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestParseObject" href="../json-_TestParseObject/">
-      class _TestParseObject
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestParsePrint" href="../json-_TestParsePrint/">
-      class _TestParsePrint
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestParseRFC1" href="../json-_TestParseRFC1/">
-      class _TestParseRFC1
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseArray/">class _TestParseArray</a>
         
-  <li>
-    <a class="" title="class _TestParseRFC2" href="../json-_TestParseRFC2/">
-      class _TestParseRFC2
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestParseString" href="../json-_TestParseString/">
-      class _TestParseString
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseBasic/">class _TestParseBasic</a>
         
-  <li>
-    <a class="" title="class _TestPrintArray" href="../json-_TestPrintArray/">
-      class _TestPrintArray
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestPrintKeyword" href="../json-_TestPrintKeyword/">
-      class _TestPrintKeyword
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseKeyword/">class _TestParseKeyword</a>
         
-  <li>
-    <a class="" title="class _TestPrintNumber" href="../json-_TestPrintNumber/">
-      class _TestPrintNumber
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestPrintObject" href="../json-_TestPrintObject/">
-      class _TestPrintObject
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseNumber/">class _TestParseNumber</a>
         
-  <li>
-    <a class="" title="class _TestPrintString" href="../json-_TestPrintString/">
-      class _TestPrintString
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseObject/">class _TestParseObject</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParsePrint/">class _TestParsePrint</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseRFC1/">class _TestParseRFC1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseRFC2/">class _TestParseRFC2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestParseString/">class _TestParseString</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestPrintArray/">class _TestPrintArray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestPrintKeyword/">class _TestPrintKeyword</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestPrintNumber/">class _TestPrintNumber</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestPrintObject/">class _TestPrintObject</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../json-_TestPrintString/">class _TestPrintString</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package math</span></li>
+
+        
             
-  <li>
-    <span class="section">package math</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../math--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../math--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Fibonacci" href="../math-Fibonacci/">
-      class Fibonacci
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../math-Fibonacci/">class Fibonacci</a>
+        
+    </li>
 
-      
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package net</span></li>
+
+        
             
-  <li>
-    <span class="section">package net</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../net--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../net--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Buffer" href="../net-Buffer/">
-      class Buffer
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-Buffer/">class Buffer</a>
         
-  <li>
-    <a class="" title="primitive DNS" href="../net-DNS/">
-      primitive DNS
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class IPAddress" href="../net-IPAddress/">
-      class IPAddress
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNS/">primitive DNS</a>
         
-  <li>
-    <a class="" title="actor Main" href="../net-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor TCPConnection" href="../net-TCPConnection/">
-      actor TCPConnection
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-IPAddress/">class IPAddress</a>
         
-  <li>
-    <a class="" title="interface TCPConnectionNotify" href="../net-TCPConnectionNotify/">
-      interface TCPConnectionNotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface TCPListenNotify" href="../net-TCPListenNotify/">
-      interface TCPListenNotify
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="actor TCPListener" href="../net-TCPListener/">
-      actor TCPListener
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestBroadcast" href="../net-_TestBroadcast/">
-      class _TestBroadcast
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnection/">actor TCPConnection</a>
         
-  <li>
-    <a class="" title="actor _TestBroadcastMgr" href="../net-_TestBroadcastMgr/">
-      actor _TestBroadcastMgr
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestBuffer" href="../net-_TestBuffer/">
-      class _TestBuffer
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectionNotify/">interface TCPConnectionNotify</a>
         
-  <li>
-    <a class="" title="class _TestPing" href="../net-_TestPing/">
-      class _TestPing
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestPong" href="../net-_TestPong/">
-      class _TestPong
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenNotify/">interface TCPListenNotify</a>
         
-  <li>
-    <a class="" title="interface UDPNotify" href="../net-UDPNotify/">
-      interface UDPNotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor UDPSocket" href="../net-UDPSocket/">
-      actor UDPSocket
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListener/">actor TCPListener</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-_TestBroadcast/">class _TestBroadcast</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-_TestBroadcastMgr/">actor _TestBroadcastMgr</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-_TestBuffer/">class _TestBuffer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-_TestPing/">class _TestPing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-_TestPong/">class _TestPong</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPNotify/">interface UDPNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPSocket/">actor UDPSocket</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package net/http</span></li>
+
+        
             
-  <li>
-    <span class="section">package net/http</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../net-http--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _BuildBad" href="../net-http-_BuildBad/">
-      class _BuildBad
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_BuildBad/">class _BuildBad</a>
         
-  <li>
-    <a class="" title="class _BuildBasic" href="../net-http-_BuildBasic/">
-      class _BuildBasic
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _BuildMissingParts" href="../net-http-_BuildMissingParts/">
-      class _BuildMissingParts
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_BuildBasic/">class _BuildBasic</a>
         
-  <li>
-    <a class="" title="class _BuildNoEncoding" href="../net-http-_BuildNoEncoding/">
-      class _BuildNoEncoding
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _Check" href="../net-http-_Check/">
-      class _Check
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_BuildMissingParts/">class _BuildMissingParts</a>
         
-  <li>
-    <a class="" title="class _CheckBad" href="../net-http-_CheckBad/">
-      class _CheckBad
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _CheckIPv6" href="../net-http-_CheckIPv6/">
-      class _CheckIPv6
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_BuildNoEncoding/">class _BuildNoEncoding</a>
         
-  <li>
-    <a class="" title="class _CheckScheme" href="../net-http-_CheckScheme/">
-      class _CheckScheme
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Client" href="../net-http-Client/">
-      actor Client
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_Check/">class _Check</a>
         
-  <li>
-    <a class="" title="actor _ClientConnection" href="../net-http-_ClientConnection/">
-      actor _ClientConnection
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class CommonLog" href="../net-http-CommonLog/">
-      class CommonLog
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_CheckBad/">class _CheckBad</a>
         
-  <li>
-    <a class="" title="class ContentsLog" href="../net-http-ContentsLog/">
-      class ContentsLog
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _Decode" href="../net-http-_Decode/">
-      class _Decode
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_CheckIPv6/">class _CheckIPv6</a>
         
-  <li>
-    <a class="" title="class _DecodeBad" href="../net-http-_DecodeBad/">
-      class _DecodeBad
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive DiscardLog" href="../net-http-DiscardLog/">
-      primitive DiscardLog
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_CheckScheme/">class _CheckScheme</a>
         
-  <li>
-    <a class="" title="class _Encode" href="../net-http-_Encode/">
-      class _Encode
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _EncodeBad" href="../net-http-_EncodeBad/">
-      class _EncodeBad
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-Client/">actor Client</a>
         
-  <li>
-    <a class="" title="class _EncodeClean" href="../net-http-_EncodeClean/">
-      class _EncodeClean
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _EncodeIPv6" href="../net-http-_EncodeIPv6/">
-      class _EncodeIPv6
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_ClientConnection/">actor _ClientConnection</a>
         
-  <li>
-    <a class="" title="class _HostService" href="../net-http-_HostService/">
-      class _HostService
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface Logger" href="../net-http-Logger/">
-      interface Logger
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-CommonLog/">class CommonLog</a>
         
-  <li>
-    <a class="" title="actor Main" href="../net-http-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Payload" href="../net-http-Payload/">
-      class Payload
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-ContentsLog/">class ContentsLog</a>
         
-  <li>
-    <a class="" title="primitive _PayloadBody" href="../net-http-_PayloadBody/">
-      primitive _PayloadBody
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _PayloadBuilder" href="../net-http-_PayloadBuilder/">
-      class _PayloadBuilder
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_Decode/">class _Decode</a>
         
-  <li>
-    <a class="" title="primitive _PayloadChunk" href="../net-http-_PayloadChunk/">
-      primitive _PayloadChunk
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PayloadChunkEnd" href="../net-http-_PayloadChunkEnd/">
-      primitive _PayloadChunkEnd
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_DecodeBad/">class _DecodeBad</a>
         
-  <li>
-    <a class="" title="primitive _PayloadChunkStart" href="../net-http-_PayloadChunkStart/">
-      primitive _PayloadChunkStart
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PayloadContentLength" href="../net-http-_PayloadContentLength/">
-      primitive _PayloadContentLength
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-DiscardLog/">primitive DiscardLog</a>
         
-  <li>
-    <a class="" title="primitive _PayloadError" href="../net-http-_PayloadError/">
-      primitive _PayloadError
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PayloadHeaders" href="../net-http-_PayloadHeaders/">
-      primitive _PayloadHeaders
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_Encode/">class _Encode</a>
         
-  <li>
-    <a class="" title="primitive _PayloadReady" href="../net-http-_PayloadReady/">
-      primitive _PayloadReady
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _PayloadRequest" href="../net-http-_PayloadRequest/">
-      primitive _PayloadRequest
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_EncodeBad/">class _EncodeBad</a>
         
-  <li>
-    <a class="" title="primitive _PayloadResponse" href="../net-http-_PayloadResponse/">
-      primitive _PayloadResponse
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type _PayloadState" href="../net-http-_PayloadState/">
-      type _PayloadState
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_EncodeClean/">class _EncodeClean</a>
         
-  <li>
-    <a class="" title="class _RequestBuilder" href="../net-http-_RequestBuilder/">
-      class _RequestBuilder
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface RequestHandler" href="../net-http-RequestHandler/">
-      interface RequestHandler
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_EncodeIPv6/">class _EncodeIPv6</a>
         
-  <li>
-    <a class="" title="class _ResponseBuilder" href="../net-http-_ResponseBuilder/">
-      class _ResponseBuilder
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface ResponseHandler" href="../net-http-ResponseHandler/">
-      interface ResponseHandler
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_HostService/">class _HostService</a>
         
-  <li>
-    <a class="" title="actor Server" href="../net-http-Server/">
-      actor Server
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor _ServerConnection" href="../net-http-_ServerConnection/">
-      actor _ServerConnection
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-Logger/">interface Logger</a>
         
-  <li>
-    <a class="" title="class _ServerListener" href="../net-http-_ServerListener/">
-      class _ServerListener
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface ServerNotify" href="../net-http-ServerNotify/">
-      interface ServerNotify
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="primitive _Test" href="../net-http-_Test/">
-      primitive _Test
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _ToStringFun" href="../net-http-_ToStringFun/">
-      class _ToStringFun
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-Payload/">class Payload</a>
         
-  <li>
-    <a class="" title="class URL" href="../net-http-URL/">
-      class URL
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive URLEncode" href="../net-http-URLEncode/">
-      primitive URLEncode
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadBody/">primitive _PayloadBody</a>
         
-  <li>
-    <a class="" title="type URLPart" href="../net-http-URLPart/">
-      type URLPart
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive URLPartFragment" href="../net-http-URLPartFragment/">
-      primitive URLPartFragment
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadBuilder/">class _PayloadBuilder</a>
         
-  <li>
-    <a class="" title="primitive URLPartHost" href="../net-http-URLPartHost/">
-      primitive URLPartHost
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive URLPartPassword" href="../net-http-URLPartPassword/">
-      primitive URLPartPassword
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadChunk/">primitive _PayloadChunk</a>
         
-  <li>
-    <a class="" title="primitive URLPartPath" href="../net-http-URLPartPath/">
-      primitive URLPartPath
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive URLPartQuery" href="../net-http-URLPartQuery/">
-      primitive URLPartQuery
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadChunkEnd/">primitive _PayloadChunkEnd</a>
         
-  <li>
-    <a class="" title="primitive URLPartUser" href="../net-http-URLPartUser/">
-      primitive URLPartUser
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _Valid" href="../net-http-_Valid/">
-      class _Valid
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadChunkStart/">primitive _PayloadChunkStart</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadContentLength/">primitive _PayloadContentLength</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadError/">primitive _PayloadError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadHeaders/">primitive _PayloadHeaders</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadReady/">primitive _PayloadReady</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadRequest/">primitive _PayloadRequest</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadResponse/">primitive _PayloadResponse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_PayloadState/">type _PayloadState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_RequestBuilder/">class _RequestBuilder</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-RequestHandler/">interface RequestHandler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_ResponseBuilder/">class _ResponseBuilder</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-ResponseHandler/">interface ResponseHandler</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-Server/">actor Server</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_ServerConnection/">actor _ServerConnection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_ServerListener/">class _ServerListener</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-ServerNotify/">interface ServerNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_Test/">primitive _Test</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_ToStringFun/">class _ToStringFun</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URL/">class URL</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLEncode/">primitive URLEncode</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPart/">type URLPart</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartFragment/">primitive URLPartFragment</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartHost/">primitive URLPartHost</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartPassword/">primitive URLPartPassword</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartPath/">primitive URLPartPath</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartQuery/">primitive URLPartQuery</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-URLPartUser/">primitive URLPartUser</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-http-_Valid/">class _Valid</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package net/ssl</span></li>
+
+        
             
-  <li>
-    <span class="section">package net/ssl</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../net-ssl--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _BIO" href="../net-ssl-_BIO/">
-      primitive _BIO
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_BIO/">primitive _BIO</a>
         
-  <li>
-    <a class="" title="primitive _GeneralName" href="../net-ssl-_GeneralName/">
-      primitive _GeneralName
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _GeneralNameStack" href="../net-ssl-_GeneralNameStack/">
-      primitive _GeneralNameStack
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_GeneralName/">primitive _GeneralName</a>
         
-  <li>
-    <a class="" title="primitive _SSL" href="../net-ssl-_SSL/">
-      primitive _SSL
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class SSL" href="../net-ssl-SSL/">
-      class SSL
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_GeneralNameStack/">primitive _GeneralNameStack</a>
         
-  <li>
-    <a class="" title="primitive SSLAuthFail" href="../net-ssl-SSLAuthFail/">
-      primitive SSLAuthFail
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class SSLConnection" href="../net-ssl-SSLConnection/">
-      class SSLConnection
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_SSL/">primitive _SSL</a>
         
-  <li>
-    <a class="" title="primitive _SSLContext" href="../net-ssl-_SSLContext/">
-      primitive _SSLContext
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class SSLContext" href="../net-ssl-SSLContext/">
-      class SSLContext
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSL/">class SSL</a>
         
-  <li>
-    <a class="" title="primitive SSLError" href="../net-ssl-SSLError/">
-      primitive SSLError
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive SSLHandshake" href="../net-ssl-SSLHandshake/">
-      primitive SSLHandshake
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLAuthFail/">primitive SSLAuthFail</a>
         
-  <li>
-    <a class="" title="primitive _SSLInit" href="../net-ssl-_SSLInit/">
-      primitive _SSLInit
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive SSLReady" href="../net-ssl-SSLReady/">
-      primitive SSLReady
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLConnection/">class SSLConnection</a>
         
-  <li>
-    <a class="" title="type SSLState" href="../net-ssl-SSLState/">
-      type SSLState
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive X509" href="../net-ssl-X509/">
-      primitive X509
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_SSLContext/">primitive _SSLContext</a>
         
-  <li>
-    <a class="" title="primitive _X509Name" href="../net-ssl-_X509Name/">
-      primitive _X509Name
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLContext/">class SSLContext</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLError/">primitive SSLError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLHandshake/">primitive SSLHandshake</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_SSLInit/">primitive _SSLInit</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLReady/">primitive SSLReady</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-SSLState/">type SSLState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-X509/">primitive X509</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-ssl-_X509Name/">primitive _X509Name</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package options</span></li>
+
+        
             
-  <li>
-    <span class="section">package options</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../options--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../options--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive AmbiguousMatch" href="../options-AmbiguousMatch/">
-      primitive AmbiguousMatch
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-AmbiguousMatch/">primitive AmbiguousMatch</a>
         
-  <li>
-    <a class="" title="type ArgumentType" href="../options-ArgumentType/">
-      type ArgumentType
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive EnvVars" href="../options-EnvVars/">
-      primitive EnvVars
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-ArgumentType/">type ArgumentType</a>
         
-  <li>
-    <a class="" title="class _ErrorPrinter" href="../options-_ErrorPrinter/">
-      class _ErrorPrinter
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type ErrorReason" href="../options-ErrorReason/">
-      type ErrorReason
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-EnvVars/">primitive EnvVars</a>
         
-  <li>
-    <a class="" title="primitive F64Argument" href="../options-F64Argument/">
-      primitive F64Argument
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive I64Argument" href="../options-I64Argument/">
-      primitive I64Argument
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_ErrorPrinter/">class _ErrorPrinter</a>
         
-  <li>
-    <a class="" title="primitive InvalidArgument" href="../options-InvalidArgument/">
-      primitive InvalidArgument
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Main" href="../options-Main/">
-      actor Main
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-ErrorReason/">type ErrorReason</a>
         
-  <li>
-    <a class="" title="primitive MissingArgument" href="../options-MissingArgument/">
-      primitive MissingArgument
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _Option" href="../options-_Option/">
-      class _Option
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-F64Argument/">primitive F64Argument</a>
         
-  <li>
-    <a class="" title="primitive Optional" href="../options-Optional/">
-      primitive Optional
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Options" href="../options-Options/">
-      class Options
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-I64Argument/">primitive I64Argument</a>
         
-  <li>
-    <a class="" title="interface ParseError" href="../options-ParseError/">
-      interface ParseError
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type ParsedOption" href="../options-ParsedOption/">
-      type ParsedOption
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-InvalidArgument/">primitive InvalidArgument</a>
         
-  <li>
-    <a class="" title="primitive Required" href="../options-Required/">
-      primitive Required
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive StringArgument" href="../options-StringArgument/">
-      primitive StringArgument
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="class _TestArgLeadingDash" href="../options-_TestArgLeadingDash/">
-      class _TestArgLeadingDash
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestCombineShortArg" href="../options-_TestCombineShortArg/">
-      class _TestCombineShortArg
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-MissingArgument/">primitive MissingArgument</a>
         
-  <li>
-    <a class="" title="class _TestCombineShortOptions" href="../options-_TestCombineShortOptions/">
-      class _TestCombineShortOptions
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestLongOptions" href="../options-_TestLongOptions/">
-      class _TestLongOptions
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_Option/">class _Option</a>
         
-  <li>
-    <a class="" title="primitive TestOptions" href="../options-TestOptions/">
-      primitive TestOptions
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestShortOptions" href="../options-_TestShortOptions/">
-      class _TestShortOptions
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-Optional/">primitive Optional</a>
         
-  <li>
-    <a class="" title="primitive UnrecognisedOption" href="../options-UnrecognisedOption/">
-      primitive UnrecognisedOption
-    </a>
-    
-  </li>
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-Options/">class Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-ParseError/">interface ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-ParsedOption/">type ParsedOption</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-Required/">primitive Required</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-StringArgument/">primitive StringArgument</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_TestArgLeadingDash/">class _TestArgLeadingDash</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_TestCombineShortArg/">class _TestCombineShortArg</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_TestCombineShortOptions/">class _TestCombineShortOptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_TestLongOptions/">class _TestLongOptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-TestOptions/">primitive TestOptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-_TestShortOptions/">class _TestShortOptions</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../options-UnrecognisedOption/">primitive UnrecognisedOption</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package ponytest</span></li>
+
+        
             
-  <li>
-    <span class="section">package ponytest</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../ponytest--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _Color" href="../ponytest-_Color/">
-      primitive _Color
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_Color/">primitive _Color</a>
         
-  <li>
-    <a class="" title="actor _ExclusiveGroup" href="../ponytest-_ExclusiveGroup/">
-      actor _ExclusiveGroup
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="trait _Group" href="../ponytest-_Group/">
-      trait _Group
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_ExclusiveGroup/">actor _ExclusiveGroup</a>
         
-  <li>
-    <a class="" title="interface ITest" href="../ponytest-ITest/">
-      interface ITest
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor PonyTest" href="../ponytest-PonyTest/">
-      actor PonyTest
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_Group/">trait _Group</a>
         
-  <li>
-    <a class="" title="actor _SimultaneousGroup" href="../ponytest-_SimultaneousGroup/">
-      actor _SimultaneousGroup
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class TestHelper" href="../ponytest-TestHelper/">
-      class TestHelper
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-ITest/">interface ITest</a>
         
-  <li>
-    <a class="" title="trait TestList" href="../ponytest-TestList/">
-      trait TestList
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestRecord" href="../ponytest-_TestRecord/">
-      class _TestRecord
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-PonyTest/">actor PonyTest</a>
         
-  <li>
-    <a class="" title="actor _TestRunner" href="../ponytest-_TestRunner/">
-      actor _TestRunner
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="trait UnitTest" href="../ponytest-UnitTest/">
-      trait UnitTest
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_SimultaneousGroup/">actor _SimultaneousGroup</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-TestHelper/">class TestHelper</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-TestList/">trait TestList</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_TestRecord/">class _TestRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-_TestRunner/">actor _TestRunner</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ponytest-UnitTest/">trait UnitTest</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package promises</span></li>
+
+        
             
-  <li>
-    <span class="section">package promises</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../promises--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../promises--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface Fulfill" href="../promises-Fulfill/">
-      interface Fulfill
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-Fulfill/">interface Fulfill</a>
         
-  <li>
-    <a class="" title="class FulfillIdentity" href="../promises-FulfillIdentity/">
-      class FulfillIdentity
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface _IThen" href="../promises-_IThen/">
-      interface _IThen
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-FulfillIdentity/">class FulfillIdentity</a>
         
-  <li>
-    <a class="" title="primitive _Pending" href="../promises-_Pending/">
-      primitive _Pending
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Promise" href="../promises-Promise/">
-      actor Promise
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-_IThen/">interface _IThen</a>
         
-  <li>
-    <a class="" title="primitive _Reject" href="../promises-_Reject/">
-      primitive _Reject
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface Reject" href="../promises-Reject/">
-      interface Reject
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-_Pending/">primitive _Pending</a>
         
-  <li>
-    <a class="" title="class RejectAlways" href="../promises-RejectAlways/">
-      class RejectAlways
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _Then" href="../promises-_Then/">
-      class _Then
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-Promise/">actor Promise</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-_Reject/">primitive _Reject</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-Reject/">interface Reject</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-RejectAlways/">class RejectAlways</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../promises-_Then/">class _Then</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package random</span></li>
+
+        
             
-  <li>
-    <span class="section">package random</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../random--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../random--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Dice" href="../random-Dice/">
-      class Dice
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../random-Dice/">class Dice</a>
         
-  <li>
-    <a class="" title="class MT" href="../random-MT/">
-      class MT
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="trait Random" href="../random-Random/">
-      trait Random
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../random-MT/">class MT</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../random-Random/">trait Random</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package regex</span></li>
+
+        
             
-  <li>
-    <span class="section">package regex</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../regex--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../regex--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Main" href="../regex-Main/">
-      actor Main
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="primitive _Match" href="../regex-_Match/">
-      primitive _Match
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class Match" href="../regex-Match/">
-      class Match
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_Match/">primitive _Match</a>
         
-  <li>
-    <a class="" title="primitive _PCRE2" href="../regex-_PCRE2/">
-      primitive _PCRE2
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _Pattern" href="../regex-_Pattern/">
-      primitive _Pattern
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-Match/">class Match</a>
         
-  <li>
-    <a class="" title="class Regex" href="../regex-Regex/">
-      class Regex
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestApply" href="../regex-_TestApply/">
-      class _TestApply
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_PCRE2/">primitive _PCRE2</a>
         
-  <li>
-    <a class="" title="class _TestEq" href="../regex-_TestEq/">
-      class _TestEq
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestError" href="../regex-_TestError/">
-      class _TestError
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_Pattern/">primitive _Pattern</a>
         
-  <li>
-    <a class="" title="class _TestGroups" href="../regex-_TestGroups/">
-      class _TestGroups
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestSplit" href="../regex-_TestSplit/">
-      class _TestSplit
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-Regex/">class Regex</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_TestApply/">class _TestApply</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_TestEq/">class _TestEq</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_TestError/">class _TestError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_TestGroups/">class _TestGroups</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-_TestSplit/">class _TestSplit</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package signals</span></li>
+
+        
             
-  <li>
-    <span class="section">package signals</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../signals--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../signals--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor Main" href="../signals-Main/">
-      actor Main
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-Main/">actor Main</a>
         
-  <li>
-    <a class="" title="primitive Sig" href="../signals-Sig/">
-      primitive Sig
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor SignalHandler" href="../signals-SignalHandler/">
-      actor SignalHandler
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-Sig/">primitive Sig</a>
         
-  <li>
-    <a class="" title="interface SignalNotify" href="../signals-SignalNotify/">
-      interface SignalNotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive SignalRaise" href="../signals-SignalRaise/">
-      primitive SignalRaise
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-SignalHandler/">actor SignalHandler</a>
         
-  <li>
-    <a class="" title="class _TestSighupNotify" href="../signals-_TestSighupNotify/">
-      class _TestSighupNotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestSignalINT" href="../signals-_TestSignalINT/">
-      class _TestSignalINT
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-SignalNotify/">interface SignalNotify</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-SignalRaise/">primitive SignalRaise</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-_TestSighupNotify/">class _TestSighupNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../signals-_TestSignalINT/">class _TestSignalINT</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package strings</span></li>
+
+        
             
-  <li>
-    <span class="section">package strings</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../strings--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../strings--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive CommonPrefix" href="../strings-CommonPrefix/">
-      primitive CommonPrefix
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../strings-CommonPrefix/">primitive CommonPrefix</a>
         
-  <li>
-    <a class="" title="actor Main" href="../strings-Main/">
-      actor Main
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TestStringsCommonPrefix" href="../strings-_TestStringsCommonPrefix/">
-      class _TestStringsCommonPrefix
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../strings-Main/">actor Main</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../strings-_TestStringsCommonPrefix/">class _TestStringsCommonPrefix</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package term</span></li>
+
+        
             
-  <li>
-    <span class="section">package term</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../term--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../term--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive ANSI" href="../term-ANSI/">
-      primitive ANSI
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-ANSI/">primitive ANSI</a>
         
-  <li>
-    <a class="" title="interface ANSINotify" href="../term-ANSINotify/">
-      interface ANSINotify
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="actor ANSITerm" href="../term-ANSITerm/">
-      actor ANSITerm
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-ANSINotify/">interface ANSINotify</a>
         
-  <li>
-    <a class="" title="primitive _EscapeCSI" href="../term-_EscapeCSI/">
-      primitive _EscapeCSI
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _EscapeMod" href="../term-_EscapeMod/">
-      primitive _EscapeMod
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-ANSITerm/">actor ANSITerm</a>
         
-  <li>
-    <a class="" title="primitive _EscapeNone" href="../term-_EscapeNone/">
-      primitive _EscapeNone
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _EscapeSS3" href="../term-_EscapeSS3/">
-      primitive _EscapeSS3
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeCSI/">primitive _EscapeCSI</a>
         
-  <li>
-    <a class="" title="primitive _EscapeStart" href="../term-_EscapeStart/">
-      primitive _EscapeStart
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type _EscapeState" href="../term-_EscapeState/">
-      type _EscapeState
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeMod/">primitive _EscapeMod</a>
         
-  <li>
-    <a class="" title="class Readline" href="../term-Readline/">
-      class Readline
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface ReadlineNotify" href="../term-ReadlineNotify/">
-      interface ReadlineNotify
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeNone/">primitive _EscapeNone</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeSS3/">primitive _EscapeSS3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeStart/">primitive _EscapeStart</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-_EscapeState/">type _EscapeState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-Readline/">class Readline</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../term-ReadlineNotify/">interface ReadlineNotify</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
+            <li>
+    <ul class="subnav">
+    <li><span>package time</span></li>
+
+        
             
-  <li>
-    <span class="section">package time</span>
-    <ul>
-      
+    <li class="toctree-l1 ">
+        <a class="" href="../time--index/">Package</a>
         
-  <li>
-    <a class="" title="Package" href="../time--index/">
-      Package
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="type _Clock" href="../time-_Clock/">
-      type _Clock
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-_Clock/">type _Clock</a>
         
-  <li>
-    <a class="" title="primitive _ClockMonotonic" href="../time-_ClockMonotonic/">
-      primitive _ClockMonotonic
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive _ClockRealtime" href="../time-_ClockRealtime/">
-      primitive _ClockRealtime
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-_ClockMonotonic/">primitive _ClockMonotonic</a>
         
-  <li>
-    <a class="" title="class Date" href="../time-Date/">
-      class Date
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="primitive Time" href="../time-Time/">
-      primitive Time
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-_ClockRealtime/">primitive _ClockRealtime</a>
         
-  <li>
-    <a class="" title="class Timer" href="../time-Timer/">
-      class Timer
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="interface TimerNotify" href="../time-TimerNotify/">
-      interface TimerNotify
-    </a>
-    
-  </li>
-
-      
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-Date/">class Date</a>
         
-  <li>
-    <a class="" title="actor Timers" href="../time-Timers/">
-      actor Timers
-    </a>
-    
-  </li>
+    </li>
 
-      
         
-  <li>
-    <a class="" title="class _TimingWheel" href="../time-_TimingWheel/">
-      class _TimingWheel
-    </a>
-    
-  </li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-Time/">primitive Time</a>
+        
+    </li>
 
-      
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-Timer/">class Timer</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-TimerNotify/">interface TimerNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-Timers/">actor Timers</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../time-_TimingWheel/">class _TimingWheel</a>
+        
+    </li>
+
+        
     </ul>
-  </li>
-
+<li>
           
         </ul>
-        
       </div>
-    </div>
-  </div>
-</nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
-          
-          <h1 id="type-builtinformatsettingsint-is-formatsettingsholder91formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-prefixdefault-val-prefixspace-val-prefixsign-val-formatdefaultnumber-val93-ref">type builtin/FormatSettingsInt is <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val), <a href="../builtin-FormatDefaultNumber">FormatDefaultNumber</a> val] ref</h1>
-<p>Format holder for integers.</p>
-          <aside class="copyright" role="note">
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
-              
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
-      
-        <a href="../builtin-FormatSettingsHolder/" title="class FormatSettingsHolder">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
-            </div>
-            <div class="stretch">
-              <div class="title">
-                class FormatSettingsHolder
-              </div>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../builtin-FormatSpec/" title="trait FormatSpec">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                trait FormatSpec
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-  </nav>
+      &nbsp;
+    </nav>
 
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">stdlib</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>package builtin &raquo;</li>
+        
+      
+    
+    <li>type FormatSettingsInt</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="type-builtinformatsettingsint-is-formatsettingsholder91formatdefault-val-formatutf32-val-formatbinary-val-formatbinarybare-val-formatoctal-val-formatoctalbare-val-formathex-val-formathexbare-val-formathexsmall-val-formathexsmallbare-val-prefixdefault-val-prefixspace-val-prefixsign-val-formatdefaultnumber-val93-ref">type builtin/FormatSettingsInt is <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[(((((((((<a href="../builtin-FormatDefault">FormatDefault</a> val | <a href="../builtin-FormatUTF32">FormatUTF32</a> val) | <a href="../builtin-FormatBinary">FormatBinary</a> val) | <a href="../builtin-FormatBinaryBare">FormatBinaryBare</a> val) | <a href="../builtin-FormatOctal">FormatOctal</a> val) | <a href="../builtin-FormatOctalBare">FormatOctalBare</a> val) | <a href="../builtin-FormatHex">FormatHex</a> val) | <a href="../builtin-FormatHexBare">FormatHexBare</a> val) | <a href="../builtin-FormatHexSmall">FormatHexSmall</a> val) | <a href="../builtin-FormatHexSmallBare">FormatHexSmallBare</a> val), ((<a href="../builtin-PrefixDefault">PrefixDefault</a> val | <a href="../builtin-PrefixSpace">PrefixSpace</a> val) | <a href="../builtin-PrefixSign">PrefixSign</a> val), <a href="../builtin-FormatDefaultNumber">FormatDefaultNumber</a> val] ref</h1>
+<p>Format holder for integers.</p>
+              
+            </div>
           </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../builtin-FormatSpec/" class="btn btn-neutral float-right" title="trait FormatSpec">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../builtin-FormatSettingsHolder/" class="btn btn-neutral" title="class FormatSettingsHolder"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
         </div>
       </div>
-    </main>
-    <script>
-      var base_url = '..';
-      var repo_id  = '';
-    </script>
-    <script src="../assets/javascripts/application-997097ee0c.js"></script>
-    
-    
-  </body>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../builtin-FormatSettingsHolder/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../builtin-FormatSpec/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
 </html>
