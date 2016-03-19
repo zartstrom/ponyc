@@ -8,7 +8,7 @@
   
   
   
-  <title>Package - Pony Standard Library</title>
+  <title>Package - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3667,7 +3667,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3714,7 +3714,7 @@ can also indicate failure by raising an error in the test function.</p>
 tells the PonyTest object about the tests. Typically the TestList will be Main
 for the package.</p>
 <p>The following is a complete program with 2 trivial tests.</p>
-<pre><code>use &quot;ponytest&quot;
+<pre><code class="pony">use &quot;ponytest&quot;
 
 actor Main is TestList
   new create(env: Env) =&gt;
@@ -3760,7 +3760,7 @@ own unit tests it may be useful to run all tests for the bundle together.</p>
 <p>This can be achieved by writing an aggregate test list class, which calls the
 list function for each package. The following is an example that aggregates the
 tests from packages <code>foo</code> and <code>bar</code>.</p>
-<pre><code>use &quot;ponytest&quot;
+<pre><code class="pony">use &quot;ponytest&quot;
 use foo = &quot;foo&quot;
 use bar = &quot;bar&quot;
 
