@@ -17857,8 +17857,18 @@
         }, 
         {
             "location": "/ini--index/", 
-            "text": "No package doc string provided for ini.\n\n\nEntities\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimeter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\nactor Main\n\n\nclass _TestIniParse", 
+            "text": "Ini package\n\n\nThe Ini package provides support for parsing\n\nINI file\n formatted text.\n\n\n\n\nCurrently \ndoes not\n support multi-line entries.\n\n\nAny keys not in a section will be placed in the section \"\"\n\n\nEmpty sections are dropped\n\n\n\n\nExample code\n\n\n// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"\n\n\nactor Main\n  new create(env:Env) =\n\n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end\n\n\nEntities\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimeter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\nactor Main\n\n\nclass _TestIniParse", 
             "title": "Package"
+        }, 
+        {
+            "location": "/ini--index/#ini-package", 
+            "text": "The Ini package provides support for parsing INI file  formatted text.   Currently  does not  support multi-line entries.  Any keys not in a section will be placed in the section \"\"  Empty sections are dropped", 
+            "title": "Ini package"
+        }, 
+        {
+            "location": "/ini--index/#example-code", 
+            "text": "// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"  actor Main\n  new create(env:Env) = \n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end", 
+            "title": "Example code"
         }, 
         {
             "location": "/ini--index/#entities", 
