@@ -2896,10 +2896,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#ponyoptions-package">PonyOptions package</a></li>
+                <li class="toctree-l3"><a href="#options-package">Options package</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#entities">Entities</a></li>
+                    <li><a class="toctree-l4" href="#example-program">Example program</a></li>
+                
+                    <li><a class="toctree-l4" href="#entities">Entities</a></li>
                 
             
             </ul>
@@ -3682,7 +3683,60 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="ponyoptions-package">PonyOptions package</h2>
+                <h1 id="options-package">Options package</h1>
+<p>The Options package provides support for parsing command line arguments.</p>
+<h2 id="example-program">Example program</h2>
+<pre><code class="pony">use &quot;options&quot;
+
+actor Main
+  let _env: Env
+  // Some values we can set via command line options
+  var _a_string: String = &quot;default&quot;
+  var _a_number: USize = 0
+  var _a_float: Float = F64(0.0)
+
+  new create(env: Env) =&gt;
+    _env = env
+    try
+      arguments()
+    end
+
+    _env.out.print(&quot;The String is &quot; + _a_string)
+    _env.out.print(&quot;The Number is &quot; + _a_number.string())
+    _env.out.print(&quot;The Float is &quot; + _a_float.string())
+
+  fun ref arguments() ? =&gt;
+    var options = Options(_env)
+
+    options
+      .add(&quot;string&quot;, &quot;t&quot;, StringArgument)
+      .add(&quot;number&quot;, &quot;i&quot;, I64Argument)
+      .add(&quot;float&quot;, &quot;c&quot;, F64Argument)
+
+    for option in options do
+      match option
+      | (&quot;string&quot;, let arg: String) =&gt; _a_string = arg
+      | (&quot;number&quot;, let arg: I64) =&gt; _a_number = arg.usize()
+      | (&quot;float&quot;, let arg: F64) =&gt; _a_float = arg
+      | let err: ParseError =&gt; err.report(_env.out) ; usage() ; error
+      end
+    end
+
+  fun ref usage() =&gt;
+    // this exists inside a doc-string to create the docs you are reading
+    // in real code, we would use a single string literal for this but
+    // docstrings are themselves string literals and you can't put a
+    // string literal in a string literal. That would lead to total
+    // protonic reversal. In your own code, use a string literal instead
+    // of string concatenation for this.
+    _env.out.print(
+      &quot;program [OPTIONS]\n&quot; +
+      &quot;  --string      N   a string argument. Defaults to 'default'.\n&quot; +
+      &quot;  --number      N   a number argument. Defaults to 0.\n&quot; +
+      &quot;  --float       N   a floating point argument. Defaults to 0.0.\n&quot;
+      )
+</code></pre>
+
 <h2 id="entities">Entities</h2>
 <ul>
 <li><a href="../options-AmbiguousMatch/">primitive AmbiguousMatch</a></li>
