@@ -8,7 +8,7 @@
   
   
   
-  <title>Package - Pony Standard Library</title>
+  <title>Package - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3093,7 +3093,11 @@
                 
                     <li><a class="toctree-l4" href="#tear-down">Tear down</a></li>
                 
-                    <li><a class="toctree-l4" href="#entities">Entities</a></li>
+                    <li><a class="toctree-l4" href="#public-entities">Public Entities</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-entities">Private Entities</a></li>
+                
+                    <li><a class="toctree-l4" href="#test-entities">Test Entities</a></li>
                 
             
             </ul>
@@ -3667,7 +3671,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3827,19 +3831,25 @@ of the tests run. The next test in the exclusion group will not start until
 after tear_down() returns on the current test.</p>
 <p>The test's TestHelper is handed to tear_down() and it is permitted to log
 messages and call assert functions during tear down.</p>
-<h2 id="entities">Entities</h2>
+<h2 id="public-entities">Public Entities</h2>
+<ul>
+<li><a href="../ponytest-ITest/">interface ITest</a></li>
+<li><a href="../ponytest-PonyTest/">actor PonyTest</a></li>
+<li><a href="../ponytest-TestHelper/">class TestHelper</a></li>
+<li><a href="../ponytest-TestList/">trait TestList</a></li>
+<li><a href="../ponytest-UnitTest/">trait UnitTest</a></li>
+</ul>
+<h2 id="private-entities">Private Entities</h2>
 <ul>
 <li><a href="../ponytest-_Color/">primitive _Color</a></li>
 <li><a href="../ponytest-_ExclusiveGroup/">actor _ExclusiveGroup</a></li>
 <li><a href="../ponytest-_Group/">trait _Group</a></li>
-<li><a href="../ponytest-ITest/">interface ITest</a></li>
-<li><a href="../ponytest-PonyTest/">actor PonyTest</a></li>
 <li><a href="../ponytest-_SimultaneousGroup/">actor _SimultaneousGroup</a></li>
-<li><a href="../ponytest-TestHelper/">class TestHelper</a></li>
-<li><a href="../ponytest-TestList/">trait TestList</a></li>
+</ul>
+<h2 id="test-entities">Test Entities</h2>
+<ul>
 <li><a href="../ponytest-_TestRecord/">class _TestRecord</a></li>
 <li><a href="../ponytest-_TestRunner/">actor _TestRunner</a></li>
-<li><a href="../ponytest-UnitTest/">trait UnitTest</a></li>
 </ul>
               
             </div>

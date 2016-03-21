@@ -8,7 +8,7 @@
   
   
   
-  <title>Package - Pony Standard Library</title>
+  <title>Package - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2900,7 +2900,11 @@
                 
                     <li><a class="toctree-l4" href="#example-program">Example program</a></li>
                 
-                    <li><a class="toctree-l4" href="#entities">Entities</a></li>
+                    <li><a class="toctree-l4" href="#public-entities">Public Entities</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-entities">Private Entities</a></li>
+                
+                    <li><a class="toctree-l4" href="#test-entities">Test Entities</a></li>
                 
             
             </ul>
@@ -3657,7 +3661,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3737,32 +3741,38 @@ actor Main
       )
 </code></pre>
 
-<h2 id="entities">Entities</h2>
+<h2 id="public-entities">Public Entities</h2>
 <ul>
 <li><a href="../options-AmbiguousMatch/">primitive AmbiguousMatch</a></li>
 <li><a href="../options-ArgumentType/">type ArgumentType</a></li>
 <li><a href="../options-EnvVars/">primitive EnvVars</a></li>
-<li><a href="../options-_ErrorPrinter/">class _ErrorPrinter</a></li>
 <li><a href="../options-ErrorReason/">type ErrorReason</a></li>
 <li><a href="../options-F64Argument/">primitive F64Argument</a></li>
 <li><a href="../options-I64Argument/">primitive I64Argument</a></li>
 <li><a href="../options-InvalidArgument/">primitive InvalidArgument</a></li>
-<li><a href="../options-Main/">actor Main</a></li>
 <li><a href="../options-MissingArgument/">primitive MissingArgument</a></li>
-<li><a href="../options-_Option/">class _Option</a></li>
 <li><a href="../options-Optional/">primitive Optional</a></li>
 <li><a href="../options-Options/">class Options</a></li>
 <li><a href="../options-ParseError/">interface ParseError</a></li>
 <li><a href="../options-ParsedOption/">type ParsedOption</a></li>
 <li><a href="../options-Required/">primitive Required</a></li>
 <li><a href="../options-StringArgument/">primitive StringArgument</a></li>
+<li><a href="../options-TestOptions/">primitive TestOptions</a></li>
+<li><a href="../options-UnrecognisedOption/">primitive UnrecognisedOption</a></li>
+</ul>
+<h2 id="private-entities">Private Entities</h2>
+<ul>
+<li><a href="../options-_ErrorPrinter/">class _ErrorPrinter</a></li>
+<li><a href="../options-_Option/">class _Option</a></li>
+</ul>
+<h2 id="test-entities">Test Entities</h2>
+<ul>
+<li><a href="../options-Main/">actor Main</a></li>
 <li><a href="../options-_TestArgLeadingDash/">class _TestArgLeadingDash</a></li>
 <li><a href="../options-_TestCombineShortArg/">class _TestCombineShortArg</a></li>
 <li><a href="../options-_TestCombineShortOptions/">class _TestCombineShortOptions</a></li>
 <li><a href="../options-_TestLongOptions/">class _TestLongOptions</a></li>
-<li><a href="../options-TestOptions/">primitive TestOptions</a></li>
 <li><a href="../options-_TestShortOptions/">class _TestShortOptions</a></li>
-<li><a href="../options-UnrecognisedOption/">primitive UnrecognisedOption</a></li>
 </ul>
               
             </div>
