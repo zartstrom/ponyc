@@ -8,7 +8,7 @@
   
   
   
-  <title>Package - Pony Standard Library</title>
+  <title>Package - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3678,7 +3678,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3709,10 +3709,12 @@
 simple as possible to use, both for the unit test writer and the user running
 the tests.</p>
 <p>To help simplify test writing and distribution this package depends on as few
-other packages as possible. Currently the required packages are:
-  builtin
-  time
-  collections</p>
+other packages as possible. Currently the required packages are:</p>
+<ul>
+<li>builtin</li>
+<li>time</li>
+<li>collections</li>
+</ul>
 <p>Each unit test is a class, with a single test function. By default all tests
 run concurrently.</p>
 <p>Each test run is provided with a helper object. This provides logging and
