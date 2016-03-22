@@ -12912,7 +12912,7 @@
         }, 
         {
             "location": "/collections-HashMap/", 
-            "text": "class collections/HashMap[K: K, V: V, H: \nHashFunction\n[K] val]\n\n\nDefault capability\n: \nref\n\n\nA quadratic probing hash map. Resize occurs at a load factor of 0.75. A\nresized map has 2 times the space. The hash function can be plugged in to the\ntype to create different kinds of maps.\n\n\nConstructors\n\n\nnew \ncreate\n(optional prealloc: \nUSize\n val)\n\n\nPublic Functions\n\n\nfun box  \nadd\n[optional H2: \nHashFunction\n[this-\nK!] val](key: this-\nK!, value: this-\nV!): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nThis with the new (key, value) mapping.\n\n\nfun box  \napply\n(key: box-\nK!): this-\nV ?\n\n\nGets a value from the map. Raises an error if no such item exists.\n\n\nfun ref  \nclear\n(): \nHashMap\n[K, V, H val] ref^\n\n\nRemove all entries.\n\n\nfun box  \nclone\n[optional H2: \nHashFunction\n[this-\nK!] val](): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nCreate a clone. The key and value types may be different due to aliasing\nand viewpoint adaptation.\n\n\nfun ref  \ncompact\n(): \nHashMap\n[K, V, H val] ref^\n\n\nMinimise the memory used for the map.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[(K^ , V^)] ref): \nNone\n val\n\n\nAdd K, V pairs from the iterator to the map.\n\n\nfun box  \nindex\n(i: \nUSize\n val): (this-\nK , this-\nV) ?\n\n\nReturns the key and value at a given index.\nRaise an error if the index is not populated.\n\n\nfun ref  \ninsert\n(key: K, value: V): V ?\n\n\nSet a value in the map. Returns the new value, allowing reuse.\n\n\nfun box  \nkeys\n(): \nMapKeys\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the keys.\n\n\nfun box  \nnext_index\n(optional prev: \nUSize\n val): \nUSize\n val ?\n\n\nGiven an index, return the next index that has a populated key and value.\nRaise an error if there is no next populated index.\n\n\nfun box  \npairs\n(): \nMapPairs\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the keys and values.\n\n\nfun ref  \nremove\n(key: box-\nK!): (K^ , V^) ?\n\n\nDelete a value from the map and return it. Raises an error if there was no\nvalue for the given key.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nThe number of items in the map.\n\n\nfun box  \nspace\n(): \nUSize\n val\n\n\nThe available space in the map. Resize will happen when\nsize / space \n= 0.75.\n\n\nfun box  \nsub\n[optional H2: \nHashFunction\n[this-\nK!] val](key: this-\nK!, value: this-\nV!): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nThis without the given key.\n\n\nfun ref  \nupdate\n(key: K, value: V): (V^ | \nNone\n val)\n\n\nSets a value in the map. Returns the old value if there was one, otherwise\nreturns None. If there was no previous value, this may trigger a resize.\n\n\nfun box  \nvalues\n(): \nMapValues\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the values.\n\n\nPrivate Functions\n\n\nfun ref  \n_resize\n(len: \nUSize\n val): \nNone\n val\n\n\nChange the available space.\n\n\nfun box  \n_search\n(key: box-\nK!): (\nUSize\n val , \nBool\n val)\n\n\nReturn a slot number and whether or not it's currently occupied.", 
+            "text": "class collections/HashMap[K: K, V: V, H: \nHashFunction\n[K] val]\n\n\nDefault capability\n: \nref\n\n\nA quadratic probing hash map. Resize occurs at a load factor of 0.75. A\nresized map has 2 times the space. The hash function can be plugged in to the\ntype to create different kinds of maps.\n\n\nConstructors\n\n\nnew \ncreate\n(optional prealloc: \nUSize\n val)\n\n\nPublic Functions\n\n\nfun box  \nadd\n[optional H2: \nHashFunction\n[this-\nK!] val](key: this-\nK!, value: this-\nV!): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nThis with the new (key, value) mapping.\n\n\nfun box  \napply\n(key: box-\nK!): this-\nV ?\n\n\nGets a value from the map. Raises an error if no such item exists.\n\n\nfun ref  \nclear\n(): \nHashMap\n[K, V, H val] ref^\n\n\nRemove all entries.\n\n\nfun box  \nclone\n[optional H2: \nHashFunction\n[this-\nK!] val](): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nCreate a clone. The key and value types may be different due to aliasing\nand viewpoint adaptation.\n\n\nfun ref  \ncompact\n(): \nHashMap\n[K, V, H val] ref^\n\n\nMinimise the memory used for the map.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[(K^ , V^)] ref): \nNone\n val\n\n\nAdd K, V pairs from the iterator to the map.\n\n\nfun box  \ncontains\n(k: box-\nK!): \nBool\n val\n\n\nChecks whether the map contains the key k\n\n\nfun box  \nindex\n(i: \nUSize\n val): (this-\nK , this-\nV) ?\n\n\nReturns the key and value at a given index.\nRaise an error if the index is not populated.\n\n\nfun ref  \ninsert\n(key: K, value: V): V ?\n\n\nSet a value in the map. Returns the new value, allowing reuse.\n\n\nfun box  \nkeys\n(): \nMapKeys\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the keys.\n\n\nfun box  \nnext_index\n(optional prev: \nUSize\n val): \nUSize\n val ?\n\n\nGiven an index, return the next index that has a populated key and value.\nRaise an error if there is no next populated index.\n\n\nfun box  \npairs\n(): \nMapPairs\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the keys and values.\n\n\nfun ref  \nremove\n(key: box-\nK!): (K^ , V^) ?\n\n\nDelete a value from the map and return it. Raises an error if there was no\nvalue for the given key.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nThe number of items in the map.\n\n\nfun box  \nspace\n(): \nUSize\n val\n\n\nThe available space in the map. Resize will happen when\nsize / space \n= 0.75.\n\n\nfun box  \nsub\n[optional H2: \nHashFunction\n[this-\nK!] val](key: this-\nK!, value: this-\nV!): \nHashMap\n[this-\nK!, this-\nV!, H2 val] ref^\n\n\nThis without the given key.\n\n\nfun ref  \nupdate\n(key: K, value: V): (V^ | \nNone\n val)\n\n\nSets a value in the map. Returns the old value if there was one, otherwise\nreturns None. If there was no previous value, this may trigger a resize.\n\n\nfun box  \nvalues\n(): \nMapValues\n[K, V, H val, this-\nHashMap\n[K, V, H val] ref] ref^\n\n\nReturn an iterator over the values.\n\n\nPrivate Functions\n\n\nfun ref  \n_resize\n(len: \nUSize\n val): \nNone\n val\n\n\nChange the available space.\n\n\nfun box  \n_search\n(key: box-\nK!): (\nUSize\n val , \nBool\n val)\n\n\nReturn a slot number and whether or not it's currently occupied.", 
             "title": "class HashMap"
         }, 
         {
@@ -12964,6 +12964,11 @@
             "location": "/collections-HashMap/#fun-ref-concatiter-iterator91k-v93-ref-none-val", 
             "text": "Add K, V pairs from the iterator to the map.", 
             "title": "fun ref  concat(iter: Iterator[(K^ , V^)] ref): None val"
+        }, 
+        {
+            "location": "/collections-HashMap/#fun-box-containsk-box-k-bool-val", 
+            "text": "Checks whether the map contains the key k", 
+            "title": "fun box  contains(k: box-&gt;K!): Bool val"
         }, 
         {
             "location": "/collections-HashMap/#fun-box-indexi-usize-val-this-k-this-v", 
@@ -13222,7 +13227,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$53\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$56\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$47\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$44\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$50\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$41\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$59\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$65\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$54\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$57\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$48\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$51\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$40\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$43\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$34\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$31\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$37\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$28\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$46\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$52\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$41\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$35\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$32\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$38\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$29\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
             "title": "class List"
         }, 
         {
@@ -13301,29 +13306,29 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45391a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44091a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$53[A] box): Bool val"
+            "title": "fun box  every(f: $4$40[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44391a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$56[A] box): Bool val"
+            "title": "fun box  exists(f: $4$43[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43491a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$47[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$34[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44491a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43191a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$44[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$31[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45091a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43791a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$50[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$37[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13336,9 +13341,9 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44191a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42891a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$41[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$28[A, B] box): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13346,9 +13351,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-45991a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44691a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$59[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$46[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13416,9 +13421,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46591a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45291a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$65[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$52[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -13456,29 +13461,29 @@
             "title": "fun ref  _decrement(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45491a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44191a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$54[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45791a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44491a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$57[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-44891a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43591a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$48[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$35[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44591a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43291a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$45[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$32[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45191a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43891a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$51[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$38[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-ref-_increment-none-val", 
@@ -13486,9 +13491,9 @@
             "title": "fun ref  _increment(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44291a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-42991a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$42[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$29[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref", 
@@ -18022,12 +18027,12 @@
         }, 
         {
             "location": "/ini--index/", 
-            "text": "Ini package\n\n\nThe Ini package provides support for parsing\n\nINI file\n formatted text.\n\n\n\n\nCurrently \ndoes not\n support multi-line entries.\n\n\nAny keys not in a section will be placed in the section \"\"\n\n\nEmpty sections are dropped\n\n\n\n\nExample code\n\n\n// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"\n\n\nactor Main\n  new create(env:Env) =\n\n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end\n\n\nPublic Types\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimeter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestIniParse", 
+            "text": "Ini package\n\n\nThe Ini package provides support for parsing\n\nINI file\n formatted text.\n\n\n\n\nCurrently \ndoes not\n support multi-line entries.\n\n\nAny keys not in a section will be placed in the section \"\"\n\n\n\n\nExample code\n\n\n// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"\n\n\nactor Main\n  new create(env:Env) =\n\n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end\n\n\nPublic Types\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimiter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestIniParse", 
             "title": "Package"
         }, 
         {
             "location": "/ini--index/#ini-package", 
-            "text": "The Ini package provides support for parsing INI file  formatted text.   Currently  does not  support multi-line entries.  Any keys not in a section will be placed in the section \"\"  Empty sections are dropped", 
+            "text": "The Ini package provides support for parsing INI file  formatted text.   Currently  does not  support multi-line entries.  Any keys not in a section will be placed in the section \"\"", 
             "title": "Ini package"
         }, 
         {
@@ -18037,7 +18042,7 @@
         }, 
         {
             "location": "/ini--index/#public-types", 
-            "text": "primitive Ini  type IniError  primitive IniIncompleteSection  type IniMap  primitive IniNoDelimeter  interface IniNotify  primitive IniParse", 
+            "text": "primitive Ini  type IniError  primitive IniIncompleteSection  type IniMap  primitive IniNoDelimiter  interface IniNotify  primitive IniParse", 
             "title": "Public Types"
         }, 
         {
@@ -18052,7 +18057,7 @@
         }, 
         {
             "location": "/ini-Ini/", 
-            "text": "primitive ini/Ini\n\n\nDefault capability\n: \nval\n\n\nA streaming parser for INI formatted lines of test.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(lines: \nIterator\n[\nString\n box] ref, f: \nIniNotify\n ref): \nBool\n val\n\n\nThis accepts a string iterator and calls the IniNotify for each new entry.\nEmpty sections won't be reported. If any errors are encountered, this will\nreturn false. Otherwise, it returns true.\n\n\nfun box  \neq\n(that: \nIni\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nIni\n val): \nBool\n val", 
+            "text": "primitive ini/Ini\n\n\nDefault capability\n: \nval\n\n\nA streaming parser for INI formatted lines of test.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(lines: \nIterator\n[\nString\n box] ref, f: \nIniNotify\n ref): \nBool\n val\n\n\nThis accepts a string iterator and calls the IniNotify for each new entry.\nIf any errors are encountered, this will return false. Otherwise, it returns\ntrue.\n\n\nfun box  \neq\n(that: \nIni\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nIni\n val): \nBool\n val", 
             "title": "primitive Ini"
         }, 
         {
@@ -18077,7 +18082,7 @@
         }, 
         {
             "location": "/ini-Ini/#fun-box-applylines-iterator91string-box93-ref-f-ininotify-ref-bool-val", 
-            "text": "This accepts a string iterator and calls the IniNotify for each new entry.\nEmpty sections won't be reported. If any errors are encountered, this will\nreturn false. Otherwise, it returns true.", 
+            "text": "This accepts a string iterator and calls the IniNotify for each new entry.\nIf any errors are encountered, this will return false. Otherwise, it returns\ntrue.", 
             "title": "fun box  apply(lines: Iterator[String box] ref, f: IniNotify ref): Bool val"
         }, 
         {
@@ -18092,13 +18097,13 @@
         }, 
         {
             "location": "/ini-IniError/", 
-            "text": "type ini/IniError is (\nIniIncompleteSection\n val | \nIniNoDelimeter\n val)\n\n\nNo doc string provided.", 
+            "text": "type ini/IniError is (\nIniIncompleteSection\n val | \nIniNoDelimiter\n val)\n\n\nNo doc string provided.", 
             "title": "type IniError"
         }, 
         {
-            "location": "/ini-IniError/#type-iniinierror-is-iniincompletesection-val-ininodelimeter-val", 
+            "location": "/ini-IniError/#type-iniinierror-is-iniincompletesection-val-ininodelimiter-val", 
             "text": "No doc string provided.", 
-            "title": "type ini/IniError is (IniIncompleteSection val | IniNoDelimeter val)"
+            "title": "type ini/IniError is (IniIncompleteSection val | IniNoDelimiter val)"
         }, 
         {
             "location": "/ini-IniIncompleteSection/", 
@@ -18146,43 +18151,43 @@
             "title": "type ini/IniMap is HashMap[String val, HashMap[String val, String val, HashEq[String val] val] ref, HashEq[String val] val] ref"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/", 
-            "text": "primitive ini/IniNoDelimeter\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nIniNoDelimeter\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nIniNoDelimeter\n val): \nBool\n val", 
-            "title": "primitive IniNoDelimeter"
+            "location": "/ini-IniNoDelimiter/", 
+            "text": "primitive ini/IniNoDelimiter\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nIniNoDelimiter\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nIniNoDelimiter\n val): \nBool\n val", 
+            "title": "primitive IniNoDelimiter"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#primitive-iniininodelimeter", 
+            "location": "/ini-IniNoDelimiter/#primitive-iniininodelimiter", 
             "text": "Default capability :  val  No doc string provided.", 
-            "title": "primitive ini/IniNoDelimeter"
+            "title": "primitive ini/IniNoDelimiter"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#constructors", 
+            "location": "/ini-IniNoDelimiter/#constructors", 
             "text": "", 
             "title": "Constructors"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#new-create", 
+            "location": "/ini-IniNoDelimiter/#new-create", 
             "text": "", 
             "title": "new create()"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#public-functions", 
+            "location": "/ini-IniNoDelimiter/#public-functions", 
             "text": "", 
             "title": "Public Functions"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#fun-box-eqthat-ininodelimeter-val-bool-val", 
+            "location": "/ini-IniNoDelimiter/#fun-box-eqthat-ininodelimiter-val-bool-val", 
             "text": "", 
-            "title": "fun box  eq(that: IniNoDelimeter val): Bool val"
+            "title": "fun box  eq(that: IniNoDelimiter val): Bool val"
         }, 
         {
-            "location": "/ini-IniNoDelimeter/#fun-box-nethat-ininodelimeter-val-bool-val", 
+            "location": "/ini-IniNoDelimiter/#fun-box-nethat-ininodelimiter-val-bool-val", 
             "text": "", 
-            "title": "fun box  ne(that: IniNoDelimeter val): Bool val"
+            "title": "fun box  ne(that: IniNoDelimiter val): Bool val"
         }, 
         {
             "location": "/ini-IniNotify/", 
-            "text": "interface ini/IniNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for INI parsing.\n\n\nPublic Functions\n\n\nfun ref  \napply\n(section: \nString\n val, key: \nString\n val, value: \nString\n val): \nBool\n val\n\n\nThis is called for every valid entry in the INI file. If key/value pairs\noccur before a section name, the section can be an empty string. Return\nfalse to halt processing.\n\n\nfun ref  \nerrors\n(line: \nUSize\n val, err: (\nIniIncompleteSection\n val | \nIniNoDelimeter\n val)): \nBool\n val\n\n\nThis is called for each error encountered. Return false to halt processing.", 
+            "text": "interface ini/IniNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for INI parsing.\n\n\nPublic Functions\n\n\nfun ref  \nadd_section\n(section: \nString\n val): \nBool\n val\n\n\nThis is called for every valid section in the INI file. Return false\nto halt processing.\n\n\nfun ref  \napply\n(section: \nString\n val, key: \nString\n val, value: \nString\n val): \nBool\n val\n\n\nThis is called for every valid entry in the INI file. If key/value pairs\noccur before a section name, the section can be an empty string. Return\nfalse to halt processing.\n\n\nfun ref  \nerrors\n(line: \nUSize\n val, err: (\nIniIncompleteSection\n val | \nIniNoDelimiter\n val)): \nBool\n val\n\n\nThis is called for each error encountered. Return false to halt processing.", 
             "title": "interface IniNotify"
         }, 
         {
@@ -18196,14 +18201,19 @@
             "title": "Public Functions"
         }, 
         {
+            "location": "/ini-IniNotify/#fun-ref-add_sectionsection-string-val-bool-val", 
+            "text": "This is called for every valid section in the INI file. Return false\nto halt processing.", 
+            "title": "fun ref  add_section(section: String val): Bool val"
+        }, 
+        {
             "location": "/ini-IniNotify/#fun-ref-applysection-string-val-key-string-val-value-string-val-bool-val", 
             "text": "This is called for every valid entry in the INI file. If key/value pairs\noccur before a section name, the section can be an empty string. Return\nfalse to halt processing.", 
             "title": "fun ref  apply(section: String val, key: String val, value: String val): Bool val"
         }, 
         {
-            "location": "/ini-IniNotify/#fun-ref-errorsline-usize-val-err-iniincompletesection-val-ininodelimeter-val-bool-val", 
+            "location": "/ini-IniNotify/#fun-ref-errorsline-usize-val-err-iniincompletesection-val-ininodelimiter-val-bool-val", 
             "text": "This is called for each error encountered. Return false to halt processing.", 
-            "title": "fun ref  errors(line: USize val, err: (IniIncompleteSection val | IniNoDelimeter val)): Bool val"
+            "title": "fun ref  errors(line: USize val, err: (IniIncompleteSection val | IniNoDelimiter val)): Bool val"
         }, 
         {
             "location": "/ini-IniParse/", 
