@@ -8,7 +8,7 @@
   
   
   
-  <title>interface IniNotify - stdlib</title>
+  <title>interface IniNotify - Pony Standard Library</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> stdlib</a>
+        <a href=".." class="icon icon-home"> Pony Standard Library</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2032,7 +2032,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../ini-IniNoDelimiter/">primitive IniNoDelimiter</a>
+        <a class="" href="../ini-IniNoDelimeter/">primitive IniNoDelimeter</a>
         
     </li>
 
@@ -3662,7 +3662,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">stdlib</a>
+        <a href="..">Pony Standard Library</a>
       </nav>
 
       
@@ -3692,14 +3692,11 @@
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>Notifications for INI parsing.</p>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-ref-add_sectionsection-string-val-bool-val">fun ref  <strong>add_section</strong>(section: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<p>This is called for every valid section in the INI file. Return false
-to halt processing.</p>
 <h3 id="fun-ref-applysection-string-val-key-string-val-value-string-val-bool-val">fun ref  <strong>apply</strong>(section: <a href="../builtin-String">String</a> val, key: <a href="../builtin-String">String</a> val, value: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>This is called for every valid entry in the INI file. If key/value pairs
 occur before a section name, the section can be an empty string. Return
 false to halt processing.</p>
-<h3 id="fun-ref-errorsline-usize-val-err-iniincompletesection-val-ininodelimiter-val-bool-val">fun ref  <strong>errors</strong>(line: <a href="../builtin-USize">USize</a> val, err: (<a href="../ini-IniIncompleteSection">IniIncompleteSection</a> val | <a href="../ini-IniNoDelimiter">IniNoDelimiter</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-ref-errorsline-usize-val-err-iniincompletesection-val-ininodelimeter-val-bool-val">fun ref  <strong>errors</strong>(line: <a href="../builtin-USize">USize</a> val, err: (<a href="../ini-IniIncompleteSection">IniIncompleteSection</a> val | <a href="../ini-IniNoDelimeter">IniNoDelimeter</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>This is called for each error encountered. Return false to halt processing.</p>
               
             </div>
@@ -3711,7 +3708,7 @@ false to halt processing.</p>
         <a href="../ini-IniParse/" class="btn btn-neutral float-right" title="primitive IniParse">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ini-IniNoDelimiter/" class="btn btn-neutral" title="primitive IniNoDelimiter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ini-IniNoDelimeter/" class="btn btn-neutral" title="primitive IniNoDelimeter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -3737,7 +3734,7 @@ false to halt processing.</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ini-IniNoDelimiter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../ini-IniNoDelimeter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../ini-IniParse/" style="color: #fcfcfc">Next &raquo;</a></span>
