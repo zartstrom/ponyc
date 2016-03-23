@@ -8,7 +8,7 @@
   
   
   
-  <title>class String - Pony Standard Library</title>
+  <title>class String - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3666,7 +3666,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3735,7 +3735,18 @@ offsets. Index range [<code>from</code> .. <code>to</code>) is half-open.</p>
 <h3 id="fun-box-comparethat-string-box-less-val-equal-val-greater-val">fun box  <strong>compare</strong>(that: <a href="../builtin-String">String</a> box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
 <p>Lexically compare two strings.</p>
 <h3 id="fun-box-compare_subthat-string-box-n-usize-val-optional-offset-isize-val-optional-that_offset-isize-val-optional-ignore_case-bool-val-less-val-equal-val-greater-val">fun box  <strong>compare_sub</strong>(that: <a href="../builtin-String">String</a> box, n: <a href="../builtin-USize">USize</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val, optional that_offset: <a href="../builtin-ISize">ISize</a> val, optional ignore_case: <a href="../builtin-Bool">Bool</a> val): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
-<p>Starting at this + offset, compare n bytes with that + offset.</p>
+<p>Lexically compare at most <code>n</code> bytes of the substring of <code>this</code> starting at
+<code>offset</code> with the substring of <code>that</code> starting at <code>that_offset</code>. The
+comparison is case sensitive unless <code>ignore_case</code> is <code>true</code>.</p>
+<p>If the substring of <code>this</code> is a proper prefix of the substring of <code>that</code>,
+then <code>this</code> is <code>Less</code> than <code>that</code>. Likewise, if <code>that</code> is a proper prefix of
+<code>this</code>, then <code>this</code> is <code>Greater</code> than <code>that</code>.</p>
+<p>Both <code>offset</code> and <code>that_offset</code> can be negative, in which case the offsets
+are computed from the end of the string.</p>
+<p>If <code>n + offset</code> is greater than the length of <code>this</code>, or <code>n + that_offset</code>
+is greater than the length of <code>that</code>, then the number of positions compared
+will be reduced to the length of the longest substring.</p>
+<p>Needs to be made UTF-8 safe.</p>
 <h3 id="fun-ref-concatiter-iterator91u8-val93-ref-optional-offset-usize-val-optional-len-usize-val-string-ref">fun ref  <strong>concat</strong>(iter: <a href="../builtin-Iterator">Iterator</a>[<a href="../builtin-U8">U8</a> val] ref, optional offset: <a href="../builtin-USize">USize</a> val, optional len: <a href="../builtin-USize">USize</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Add len iterated bytes to the end of the string, starting from the given
 offset. The string is returned to allow call chaining.</p>
