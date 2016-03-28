@@ -13227,7 +13227,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$53\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$56\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$47\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$44\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$50\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$41\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$59\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$65\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$54\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$57\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$48\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$51\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$40\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$43\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$34\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$31\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$37\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$28\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$46\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$52\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$41\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$35\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$32\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$38\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$29\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
             "title": "class List"
         }, 
         {
@@ -13306,29 +13306,29 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45391a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44091a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$53[A] box): Bool val"
+            "title": "fun box  every(f: $4$40[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44391a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$56[A] box): Bool val"
+            "title": "fun box  exists(f: $4$43[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43491a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$47[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$34[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44491a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43191a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$44[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$31[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45091a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43791a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$50[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$37[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13341,9 +13341,9 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44191a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42891a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$41[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$28[A, B] box): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13351,9 +13351,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-45991a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44691a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$59[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$46[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13421,9 +13421,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46591a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45291a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$65[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$52[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -13461,29 +13461,29 @@
             "title": "fun ref  _decrement(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45491a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44191a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$54[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45791a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44491a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$57[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-44891a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43591a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$48[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$35[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44591a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43291a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$45[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$32[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45191a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43891a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$51[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$38[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-ref-_increment-none-val", 
@@ -13491,9 +13491,9 @@
             "title": "fun ref  _increment(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44291a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-42991a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$42[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$29[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref", 
@@ -16507,7 +16507,7 @@
         }, 
         {
             "location": "/files-FilePath/", 
-            "text": "class files/FilePath\n\n\nDefault capability\n: \nval\n\n\nA FilePath represents a capability to access a path. The path will be\nrepresented as an absolute path and a set of capabilities for operations on\nthat path.\n\n\nPublic fields\n\n\n\n\nlet caps: \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] ref\n\n\nlet path: \nString\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n(base: ((\nFilePath\n val | \nAmbientAuth\n val) | \nNone\n val), path': \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val) ?\n\n\nnew \n_create\n(path': \nString\n val, caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val)\n\n\nnew \nmkdtemp\n(base: ((\nFilePath\n val | \nAmbientAuth\n val) | \nNone\n val), optional prefix: \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val) ?\n\n\nPublic Functions\n\n\nfun val  \ncanonical\n(): \nFilePath\n val ?\n\n\nReturn the equivalent canonical absolute path. Raise an error if there\nisn't one.\n\n\nfun box  \nchmod\n(mode: \nFileMode\n box): \nBool\n val\n\n\nSet the FileMode for a path.\n\n\nfun box  \nchown\n(uid: \nU32\n val, gid: \nU32\n val): \nBool\n val\n\n\nSet the owner and group for a path. Does nothing on Windows.\n\n\nfun val  \nexists\n(): \nBool\n val\n\n\nReturns true if the path exists. Returns false for a broken symlink.\n\n\nfun val  \njoin\n(path': \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val): \nFilePath\n val ?\n\n\nReturn a new path relative to this one.\n\n\nfun val  \nmkdir\n(optional must_create: \nBool\n val): \nBool\n val\n\n\nCreates the directory. Will recursively create each element. Returns true\nif the directory exists when we're done, false if it does not. If we do not\nhave the FileStat permission, this will return false even if the directory\ndoes exist.\n\n\nfun val  \nremove\n(): \nBool\n val\n\n\nRemove the file or directory. The directory contents will be removed as\nwell, recursively. Symlinks will be removed but not traversed.\n\n\nfun box  \nrename\n(new_path: \nFilePath\n val): \nBool\n val\n\n\nRename a file or directory.\n\n\nfun box  \nset_time\n(atime: (\nI64\n val , \nI64\n val), mtime: (\nI64\n val , \nI64\n val)): \nBool\n val\n\n\nSet the last access and modification times of a path to the given values.\n\n\nfun box  \nsymlink\n(link_name: \nFilePath\n val): \nBool\n val\n\n\nCreate a symlink to a file or directory.\n\n\nfun box  \ntouch\n(): \nBool\n val\n\n\nSet the last access and modification times of a path to now.\n\n\nfun val  \nwalk\n(handler: \nWalkHandler\n ref, optional follow_links: \nBool\n val): \nNone\n val\n\n\nWalks a directory structure starting at this.\n\n\nhandler(dir_path, dir_entries)\n will be called for each directory\nstarting with this one.  The handler can control which subdirectories are\nexpanded by removing them from the \ndir_entries\n list.", 
+            "text": "class files/FilePath\n\n\nDefault capability\n: \nval\n\n\nA FilePath represents a capability to access a path. The path will be\nrepresented as an absolute path and a set of capabilities for operations on\nthat path.\n\n\nPublic fields\n\n\n\n\nlet caps: \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] ref\n\n\nlet path: \nString\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n(base: (\nFilePath\n val | \nAmbientAuth\n val), path': \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val) ?\n\n\nnew \n_create\n(path': \nString\n val, caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val)\n\n\nnew \nmkdtemp\n(base: (\nFilePath\n val | \nAmbientAuth\n val), optional prefix: \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val) ?\n\n\nPublic Functions\n\n\nfun val  \ncanonical\n(): \nFilePath\n val ?\n\n\nReturn the equivalent canonical absolute path. Raise an error if there\nisn't one.\n\n\nfun box  \nchmod\n(mode: \nFileMode\n box): \nBool\n val\n\n\nSet the FileMode for a path.\n\n\nfun box  \nchown\n(uid: \nU32\n val, gid: \nU32\n val): \nBool\n val\n\n\nSet the owner and group for a path. Does nothing on Windows.\n\n\nfun val  \nexists\n(): \nBool\n val\n\n\nReturns true if the path exists. Returns false for a broken symlink.\n\n\nfun val  \njoin\n(path': \nString\n val, optional caps': \nFlags\n[((((((((((((((\nFileCreate\n val | \nFileChmod\n val) | \nFileChown\n val) | \nFileLink\n val) | \nFileLookup\n val) | \nFileMkdir\n val) | \nFileRead\n val) | \nFileRemove\n val) | \nFileRename\n val) | \nFileSeek\n val) | \nFileStat\n val) | \nFileSync\n val) | \nFileTime\n val) | \nFileTruncate\n val) | \nFileWrite\n val), \nU32\n val] val): \nFilePath\n val ?\n\n\nReturn a new path relative to this one.\n\n\nfun val  \nmkdir\n(optional must_create: \nBool\n val): \nBool\n val\n\n\nCreates the directory. Will recursively create each element. Returns true\nif the directory exists when we're done, false if it does not. If we do not\nhave the FileStat permission, this will return false even if the directory\ndoes exist.\n\n\nfun val  \nremove\n(): \nBool\n val\n\n\nRemove the file or directory. The directory contents will be removed as\nwell, recursively. Symlinks will be removed but not traversed.\n\n\nfun box  \nrename\n(new_path: \nFilePath\n val): \nBool\n val\n\n\nRename a file or directory.\n\n\nfun box  \nset_time\n(atime: (\nI64\n val , \nI64\n val), mtime: (\nI64\n val , \nI64\n val)): \nBool\n val\n\n\nSet the last access and modification times of a path to the given values.\n\n\nfun box  \nsymlink\n(link_name: \nFilePath\n val): \nBool\n val\n\n\nCreate a symlink to a file or directory.\n\n\nfun box  \ntouch\n(): \nBool\n val\n\n\nSet the last access and modification times of a path to now.\n\n\nfun val  \nwalk\n(handler: \nWalkHandler\n ref, optional follow_links: \nBool\n val): \nNone\n val\n\n\nWalks a directory structure starting at this.\n\n\nhandler(dir_path, dir_entries)\n will be called for each directory\nstarting with this one.  The handler can control which subdirectories are\nexpanded by removing them from the \ndir_entries\n list.", 
             "title": "class FilePath"
         }, 
         {
@@ -16526,9 +16526,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/files-FilePath/#new-createbase-filepath-val-ambientauth-val-none-val-path-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val", 
+            "location": "/files-FilePath/#new-createbase-filepath-val-ambientauth-val-path-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val", 
             "text": "", 
-            "title": "new create(base: ((FilePath val | AmbientAuth val) | None val), path': String val, optional caps': Flags[((((((((((((((FileCreate val | FileChmod val) | FileChown val) | FileLink val) | FileLookup val) | FileMkdir val) | FileRead val) | FileRemove val) | FileRename val) | FileSeek val) | FileStat val) | FileSync val) | FileTime val) | FileTruncate val) | FileWrite val), U32 val] val) ?"
+            "title": "new create(base: (FilePath val | AmbientAuth val), path': String val, optional caps': Flags[((((((((((((((FileCreate val | FileChmod val) | FileChown val) | FileLink val) | FileLookup val) | FileMkdir val) | FileRead val) | FileRemove val) | FileRename val) | FileSeek val) | FileStat val) | FileSync val) | FileTime val) | FileTruncate val) | FileWrite val), U32 val] val) ?"
         }, 
         {
             "location": "/files-FilePath/#new-_createpath-string-val-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val", 
@@ -16536,9 +16536,9 @@
             "title": "new _create(path': String val, caps': Flags[((((((((((((((FileCreate val | FileChmod val) | FileChown val) | FileLink val) | FileLookup val) | FileMkdir val) | FileRead val) | FileRemove val) | FileRename val) | FileSeek val) | FileStat val) | FileSync val) | FileTime val) | FileTruncate val) | FileWrite val), U32 val] val)"
         }, 
         {
-            "location": "/files-FilePath/#new-mkdtempbase-filepath-val-ambientauth-val-none-val-optional-prefix-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val", 
+            "location": "/files-FilePath/#new-mkdtempbase-filepath-val-ambientauth-val-optional-prefix-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val", 
             "text": "", 
-            "title": "new mkdtemp(base: ((FilePath val | AmbientAuth val) | None val), optional prefix: String val, optional caps': Flags[((((((((((((((FileCreate val | FileChmod val) | FileChown val) | FileLink val) | FileLookup val) | FileMkdir val) | FileRead val) | FileRemove val) | FileRename val) | FileSeek val) | FileStat val) | FileSync val) | FileTime val) | FileTruncate val) | FileWrite val), U32 val] val) ?"
+            "title": "new mkdtemp(base: (FilePath val | AmbientAuth val), optional prefix: String val, optional caps': Flags[((((((((((((((FileCreate val | FileChmod val) | FileChown val) | FileLink val) | FileLookup val) | FileMkdir val) | FileRead val) | FileRemove val) | FileRename val) | FileSeek val) | FileStat val) | FileSync val) | FileTime val) | FileTruncate val) | FileWrite val), U32 val] val) ?"
         }, 
         {
             "location": "/files-FilePath/#public-functions", 
@@ -19427,12 +19427,12 @@
         }, 
         {
             "location": "/net--index/", 
-            "text": "No package doc string provided for net.\n\n\nPublic Types\n\n\n\n\nclass Buffer\n\n\nprimitive DNS\n\n\nclass IPAddress\n\n\nactor TCPConnection\n\n\ninterface TCPConnectionNotify\n\n\ninterface TCPListenNotify\n\n\nactor TCPListener\n\n\ninterface UDPNotify\n\n\nactor UDPSocket\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBroadcast\n\n\nactor _TestBroadcastMgr\n\n\nclass _TestBuffer\n\n\nclass _TestPing\n\n\nclass _TestPong", 
+            "text": "No package doc string provided for net.\n\n\nPublic Types\n\n\n\n\nclass Buffer\n\n\nprimitive DNS\n\n\nprimitive DNSAuth\n\n\ntype DNSLookupAuth\n\n\nclass IPAddress\n\n\nprimitive NetAuth\n\n\nprimitive TCPAuth\n\n\nprimitive TCPConnectAuth\n\n\nactor TCPConnection\n\n\ntype TCPConnectionAuth\n\n\ninterface TCPConnectionNotify\n\n\nprimitive TCPListenAuth\n\n\ninterface TCPListenNotify\n\n\nactor TCPListener\n\n\ntype TCPListenerAuth\n\n\nprimitive UDPAuth\n\n\ninterface UDPNotify\n\n\nactor UDPSocket\n\n\ntype UDPSocketAuth\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBroadcast\n\n\nactor _TestBroadcastMgr\n\n\nclass _TestBuffer\n\n\nclass _TestPing\n\n\nclass _TestPong", 
             "title": "Package"
         }, 
         {
             "location": "/net--index/#public-types", 
-            "text": "class Buffer  primitive DNS  class IPAddress  actor TCPConnection  interface TCPConnectionNotify  interface TCPListenNotify  actor TCPListener  interface UDPNotify  actor UDPSocket", 
+            "text": "class Buffer  primitive DNS  primitive DNSAuth  type DNSLookupAuth  class IPAddress  primitive NetAuth  primitive TCPAuth  primitive TCPConnectAuth  actor TCPConnection  type TCPConnectionAuth  interface TCPConnectionNotify  primitive TCPListenAuth  interface TCPListenNotify  actor TCPListener  type TCPListenerAuth  primitive UDPAuth  interface UDPNotify  actor UDPSocket  type UDPSocketAuth", 
             "title": "Public Types"
         }, 
         {
@@ -19742,7 +19742,7 @@
         }, 
         {
             "location": "/net-DNS/", 
-            "text": "primitive net/DNS\n\n\nDefault capability\n: \nval\n\n\nHelper functions for resolving DNS queries.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv4 and IPv6 addresses for a host and service.\n\n\nfun box  \nbroadcast_ip4\n(service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nLink-local IP4 broadcast address.\n\n\nfun box  \nbroadcast_ip6\n(service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nLink-local IP6 broadcast address.\n\n\nfun box  \neq\n(that: \nDNS\n val): \nBool\n val\n\n\nfun box  \nip4\n(host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv4 addresses for a host and service.\n\n\nfun box  \nip6\n(host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv6 addresses for a host and service.\n\n\nfun box  \nis_ip4\n(host: \nString\n val): \nBool\n val\n\n\nReturns true if the host is a literal IPv4 address.\n\n\nfun box  \nis_ip6\n(host: \nString\n val): \nBool\n val\n\n\nReturns true if the host is a literal IPv6 address.\n\n\nfun box  \nne\n(that: \nDNS\n val): \nBool\n val\n\n\nPrivate Functions\n\n\nfun box  \n_resolve\n(family: \nU32\n val, host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nTurns an addrinfo pointer into an array of addresses.", 
+            "text": "primitive net/DNS\n\n\nDefault capability\n: \nval\n\n\nHelper functions for resolving DNS queries.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv4 and IPv6 addresses for a host and service.\n\n\nfun box  \nbroadcast_ip4\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nLink-local IP4 broadcast address.\n\n\nfun box  \nbroadcast_ip6\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nLink-local IP6 broadcast address.\n\n\nfun box  \neq\n(that: \nDNS\n val): \nBool\n val\n\n\nfun box  \nip4\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv4 addresses for a host and service.\n\n\nfun box  \nip6\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nGets all IPv6 addresses for a host and service.\n\n\nfun box  \nis_ip4\n(host: \nString\n val): \nBool\n val\n\n\nReturns true if the host is a literal IPv4 address.\n\n\nfun box  \nis_ip6\n(host: \nString\n val): \nBool\n val\n\n\nReturns true if the host is a literal IPv6 address.\n\n\nfun box  \nne\n(that: \nDNS\n val): \nBool\n val\n\n\nPrivate Functions\n\n\nfun box  \n_resolve\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val), family: \nU32\n val, host: \nString\n val, service: \nString\n val): \nArray\n[\nIPAddress\n val] iso^\n\n\nTurns an addrinfo pointer into an array of addresses.", 
             "title": "primitive DNS"
         }, 
         {
@@ -19766,19 +19766,19 @@
             "title": "Public Functions"
         }, 
         {
-            "location": "/net-DNS/#fun-box-applyhost-string-val-service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-applyauth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Gets all IPv4 and IPv6 addresses for a host and service.", 
-            "title": "fun box  apply(host: String val, service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  apply(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), host: String val, service: String val): Array[IPAddress val] iso^"
         }, 
         {
-            "location": "/net-DNS/#fun-box-broadcast_ip4service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-broadcast_ip4auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Link-local IP4 broadcast address.", 
-            "title": "fun box  broadcast_ip4(service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  broadcast_ip4(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), service: String val): Array[IPAddress val] iso^"
         }, 
         {
-            "location": "/net-DNS/#fun-box-broadcast_ip6service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-broadcast_ip6auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Link-local IP6 broadcast address.", 
-            "title": "fun box  broadcast_ip6(service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  broadcast_ip6(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), service: String val): Array[IPAddress val] iso^"
         }, 
         {
             "location": "/net-DNS/#fun-box-eqthat-dns-val-bool-val", 
@@ -19786,14 +19786,14 @@
             "title": "fun box  eq(that: DNS val): Bool val"
         }, 
         {
-            "location": "/net-DNS/#fun-box-ip4host-string-val-service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-ip4auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Gets all IPv4 addresses for a host and service.", 
-            "title": "fun box  ip4(host: String val, service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  ip4(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), host: String val, service: String val): Array[IPAddress val] iso^"
         }, 
         {
-            "location": "/net-DNS/#fun-box-ip6host-string-val-service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-ip6auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Gets all IPv6 addresses for a host and service.", 
-            "title": "fun box  ip6(host: String val, service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  ip6(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), host: String val, service: String val): Array[IPAddress val] iso^"
         }, 
         {
             "location": "/net-DNS/#fun-box-is_ip4host-string-val-bool-val", 
@@ -19816,13 +19816,58 @@
             "title": "Private Functions"
         }, 
         {
-            "location": "/net-DNS/#fun-box-_resolvefamily-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso", 
+            "location": "/net-DNS/#fun-box-_resolveauth-ambientauth-val-netauth-val-dnsauth-val-family-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso", 
             "text": "Turns an addrinfo pointer into an array of addresses.", 
-            "title": "fun box  _resolve(family: U32 val, host: String val, service: String val): Array[IPAddress val] iso^"
+            "title": "fun box  _resolve(auth: ((AmbientAuth val | NetAuth val) | DNSAuth val), family: U32 val, host: String val, service: String val): Array[IPAddress val] iso^"
+        }, 
+        {
+            "location": "/net-DNSAuth/", 
+            "text": "primitive net/DNSAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: (\nAmbientAuth\n val | \nNetAuth\n val))\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nDNSAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nDNSAuth\n val): \nBool\n val", 
+            "title": "primitive DNSAuth"
+        }, 
+        {
+            "location": "/net-DNSAuth/#primitive-netdnsauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/DNSAuth"
+        }, 
+        {
+            "location": "/net-DNSAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-DNSAuth/#new-createfrom-ambientauth-val-netauth-val", 
+            "text": "", 
+            "title": "new create(from: (AmbientAuth val | NetAuth val))"
+        }, 
+        {
+            "location": "/net-DNSAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-DNSAuth/#fun-box-eqthat-dnsauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: DNSAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-DNSAuth/#fun-box-nethat-dnsauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: DNSAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-DNSLookupAuth/", 
+            "text": "type net/DNSLookupAuth is ((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val)\n\n\nNo doc string provided.", 
+            "title": "type DNSLookupAuth"
+        }, 
+        {
+            "location": "/net-DNSLookupAuth/#type-netdnslookupauth-is-ambientauth-val-netauth-val-dnsauth-val", 
+            "text": "No doc string provided.", 
+            "title": "type net/DNSLookupAuth is ((AmbientAuth val | NetAuth val) | DNSAuth val)"
         }, 
         {
             "location": "/net-IPAddress/", 
-            "text": "class net/IPAddress\n\n\nDefault capability\n: \nval\n\n\nRepresents an IPv4 or IPv6 address. The family field indicates the address\ntype. The addr field is either the IPv4 address or the IPv6 flow info. The\naddr1-4 fields are the IPv6 address, or invalid for an IPv4 address. The\nscope field is the IPv6 scope, or invalid for an IPv4 address.\n\n\nPublic fields\n\n\n\n\nlet addr: \nU32\n val\n\n\nlet addr1: \nU32\n val\n\n\nlet addr2: \nU32\n val\n\n\nlet addr3: \nU32\n val\n\n\nlet addr4: \nU32\n val\n\n\nlet family: \nU8\n val\n\n\nlet length: \nU8\n val\n\n\nlet port: \nU16\n val\n\n\nlet scope: \nU32\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \nip4\n(): \nBool\n val\n\n\nReturns true for an IPv4 address.\n\n\nfun box  \nip6\n(): \nBool\n val\n\n\nReturns true for an IPv6 address.\n\n\nfun box  \nname\n(optional reversedns: \nBool\n val, optional servicename: \nBool\n val): (\nString\n val , \nString\n val) ?\n\n\nReturn the host and service name.", 
+            "text": "class net/IPAddress\n\n\nDefault capability\n: \nval\n\n\nRepresents an IPv4 or IPv6 address. The family field indicates the address\ntype. The addr field is either the IPv4 address or the IPv6 flow info. The\naddr1-4 fields are the IPv6 address, or invalid for an IPv4 address. The\nscope field is the IPv6 scope, or invalid for an IPv4 address.\n\n\nPublic fields\n\n\n\n\nlet addr: \nU32\n val\n\n\nlet addr1: \nU32\n val\n\n\nlet addr2: \nU32\n val\n\n\nlet addr3: \nU32\n val\n\n\nlet addr4: \nU32\n val\n\n\nlet family: \nU8\n val\n\n\nlet length: \nU8\n val\n\n\nlet port: \nU16\n val\n\n\nlet scope: \nU32\n val\n\n\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \nip4\n(): \nBool\n val\n\n\nReturns true for an IPv4 address.\n\n\nfun box  \nip6\n(): \nBool\n val\n\n\nReturns true for an IPv6 address.\n\n\nfun box  \nname\n(optional reversedns: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val) | \nNone\n val), optional servicename: \nBool\n val): (\nString\n val , \nString\n val) ?\n\n\nReturn the host and service name.", 
             "title": "class IPAddress"
         }, 
         {
@@ -19861,9 +19906,9 @@
             "title": "fun box  ip6(): Bool val"
         }, 
         {
-            "location": "/net-IPAddress/#fun-box-nameoptional-reversedns-bool-val-optional-servicename-bool-val-string-val-string-val", 
+            "location": "/net-IPAddress/#fun-box-nameoptional-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val-optional-servicename-bool-val-string-val-string-val", 
             "text": "Return the host and service name.", 
-            "title": "fun box  name(optional reversedns: Bool val, optional servicename: Bool val): (String val , String val) ?"
+            "title": "fun box  name(optional reversedns: (((AmbientAuth val | NetAuth val) | DNSAuth val) | None val), optional servicename: Bool val): (String val , String val) ?"
         }, 
         {
             "location": "/net-Main/", 
@@ -19901,8 +19946,113 @@
             "title": "fun tag  tests(test: PonyTest tag): None val"
         }, 
         {
+            "location": "/net-NetAuth/", 
+            "text": "primitive net/NetAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: \nAmbientAuth\n val)\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nNetAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nNetAuth\n val): \nBool\n val", 
+            "title": "primitive NetAuth"
+        }, 
+        {
+            "location": "/net-NetAuth/#primitive-netnetauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/NetAuth"
+        }, 
+        {
+            "location": "/net-NetAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-NetAuth/#new-createfrom-ambientauth-val", 
+            "text": "", 
+            "title": "new create(from: AmbientAuth val)"
+        }, 
+        {
+            "location": "/net-NetAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-NetAuth/#fun-box-eqthat-netauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: NetAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-NetAuth/#fun-box-nethat-netauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: NetAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-TCPAuth/", 
+            "text": "primitive net/TCPAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: (\nAmbientAuth\n val | \nNetAuth\n val))\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nTCPAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nTCPAuth\n val): \nBool\n val", 
+            "title": "primitive TCPAuth"
+        }, 
+        {
+            "location": "/net-TCPAuth/#primitive-nettcpauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/TCPAuth"
+        }, 
+        {
+            "location": "/net-TCPAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-TCPAuth/#new-createfrom-ambientauth-val-netauth-val", 
+            "text": "", 
+            "title": "new create(from: (AmbientAuth val | NetAuth val))"
+        }, 
+        {
+            "location": "/net-TCPAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-TCPAuth/#fun-box-eqthat-tcpauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: TCPAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-TCPAuth/#fun-box-nethat-tcpauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: TCPAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/", 
+            "text": "primitive net/TCPConnectAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val))\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nTCPConnectAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nTCPConnectAuth\n val): \nBool\n val", 
+            "title": "primitive TCPConnectAuth"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#primitive-nettcpconnectauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/TCPConnectAuth"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#new-createfrom-ambientauth-val-netauth-val-tcpauth-val", 
+            "text": "", 
+            "title": "new create(from: ((AmbientAuth val | NetAuth val) | TCPAuth val))"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#fun-box-eqthat-tcpconnectauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: TCPConnectAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-TCPConnectAuth/#fun-box-nethat-tcpconnectauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: TCPConnectAuth val): Bool val"
+        }, 
+        {
             "location": "/net-TCPConnection/", 
-            "text": "actor net/TCPConnection\n\n\nDefault capability\n: \ntag\n\n\nA TCP connection. When connecting, the Happy Eyeballs algorithm is used.\n\n\nConstructors\n\n\nnew \n_accept\n(listen: \nTCPListener\n tag, notify: \nTCPConnectionNotify\n iso, fd: \nU32\n val)\n\n\nnew \ncreate\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip4\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip6\n(notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nClose the connection gracefully once all writes are sent.\n\n\nbe \nset_notify\n(notify: \nTCPConnectionNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nPerform a graceful shutdown. Don't accept new writes, but don't finish\nclosing until we get a zero length read.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the local IP address.\n\n\nfun box  \nremote_address\n(): \nIPAddress\n val\n\n\nReturn the remote IP address.\n\n\nfun ref  \nset_keepalive\n(secs: \nU32\n val): \nNone\n val\n\n\nSets the TCP keepalive timeout to approximately secs seconds. Exact timing\nis OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive\nis disabled by default. This can only be set on a connected socket.\n\n\nfun ref  \nset_nodelay\n(state: \nBool\n val): \nNone\n val\n\n\nTurn Nagle on/off. Defaults to on. This can only be set on a connected\nsocket.\n\n\nfun ref  \nwrite_final\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val\n\n\nWrite as much as possible to the socket. Set _writeable to false if not\neverything was written. On an error, close the connection. This is for\ndata that has already been transformed by the notifier.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nHandle socket events.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \ncomplete\nwrites\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending writes have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nhard\nclose\n(): \nNone\n val\n\n\nWhen an error happens, do a non-graceful close.\n\n\nfun ref  \nnotify\nconnecting\n(): \nNone\n val\n\n\nInform the notifier that we're connecting.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \npending\nwrites\n(): \nNone\n val\n\n\nSend pending data. If any data can't be sent, keep it and mark as not\nwriteable. On an error, dispose of the connection.\n\n\nfun ref  \nqueue\nread\n(): \nNone\n val\n\n\nQueue an IOCP read on Windows.\n\n\nfun ref  \ntry\nshutdown\n(): \nNone\n val\n\n\nIf we have closed and we have no remaining writes or pending connections,\nthen shutdown.", 
+            "text": "actor net/TCPConnection\n\n\nDefault capability\n: \ntag\n\n\nA TCP connection. When connecting, the Happy Eyeballs algorithm is used.\n\n\nConstructors\n\n\nnew \n_accept\n(listen: \nTCPListener\n tag, notify: \nTCPConnectionNotify\n iso, fd: \nU32\n val)\n\n\nnew \ncreate\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val), notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip4\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val), notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nnew \nip6\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val), notify: \nTCPConnectionNotify\n iso, host: \nString\n val, service: \nString\n val, optional from: \nString\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nClose the connection gracefully once all writes are sent.\n\n\nbe \nset_notify\n(notify: \nTCPConnectionNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nPerform a graceful shutdown. Don't accept new writes, but don't finish\nclosing until we get a zero length read.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the local IP address.\n\n\nfun box  \nremote_address\n(): \nIPAddress\n val\n\n\nReturn the remote IP address.\n\n\nfun ref  \nset_keepalive\n(secs: \nU32\n val): \nNone\n val\n\n\nSets the TCP keepalive timeout to approximately secs seconds. Exact timing\nis OS dependent. If secs is zero, TCP keepalive is disabled. TCP keepalive\nis disabled by default. This can only be set on a connected socket.\n\n\nfun ref  \nset_nodelay\n(state: \nBool\n val): \nNone\n val\n\n\nTurn Nagle on/off. Defaults to on. This can only be set on a connected\nsocket.\n\n\nfun ref  \nwrite_final\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val\n\n\nWrite as much as possible to the socket. Set _writeable to false if not\neverything was written. On an error, close the connection. This is for\ndata that has already been transformed by the notifier.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nHandle socket events.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \ncomplete\nwrites\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending writes have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nhard\nclose\n(): \nNone\n val\n\n\nWhen an error happens, do a non-graceful close.\n\n\nfun ref  \nnotify\nconnecting\n(): \nNone\n val\n\n\nInform the notifier that we're connecting.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \npending\nwrites\n(): \nNone\n val\n\n\nSend pending data. If any data can't be sent, keep it and mark as not\nwriteable. On an error, dispose of the connection.\n\n\nfun ref  \nqueue\nread\n(): \nNone\n val\n\n\nQueue an IOCP read on Windows.\n\n\nfun ref  \ntry\nshutdown\n(): \nNone\n val\n\n\nIf we have closed and we have no remaining writes or pending connections,\nthen shutdown.", 
             "title": "actor TCPConnection"
         }, 
         {
@@ -19921,19 +20071,19 @@
             "title": "new _accept(listen: TCPListener tag, notify: TCPConnectionNotify iso, fd: U32 val)"
         }, 
         {
-            "location": "/net-TCPConnection/#new-createnotify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
+            "location": "/net-TCPConnection/#new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
             "text": "", 
-            "title": "new create(notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
+            "title": "new create(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val), notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
         }, 
         {
-            "location": "/net-TCPConnection/#new-ip4notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
+            "location": "/net-TCPConnection/#new-ip4auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
             "text": "", 
-            "title": "new ip4(notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
+            "title": "new ip4(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val), notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
         }, 
         {
-            "location": "/net-TCPConnection/#new-ip6notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
+            "location": "/net-TCPConnection/#new-ip6auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val", 
             "text": "", 
-            "title": "new ip6(notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
+            "title": "new ip6(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val), notify: TCPConnectionNotify iso, host: String val, service: String val, optional from: String val)"
         }, 
         {
             "location": "/net-TCPConnection/#public-behaviours", 
@@ -20056,6 +20206,16 @@
             "title": "fun ref  tryshutdown(): None val"
         }, 
         {
+            "location": "/net-TCPConnectionAuth/", 
+            "text": "type net/TCPConnectionAuth is (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val)\n\n\nNo doc string provided.", 
+            "title": "type TCPConnectionAuth"
+        }, 
+        {
+            "location": "/net-TCPConnectionAuth/#type-nettcpconnectionauth-is-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val", 
+            "text": "No doc string provided.", 
+            "title": "type net/TCPConnectionAuth is (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val)"
+        }, 
+        {
             "location": "/net-TCPConnectionNotify/", 
             "text": "interface net/TCPConnectionNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for TCP connections.\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when a TCPConnection is accepted by a TCPListener.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nA raw TCPConnection has no authentication mechanism. However, when\nprotocols are wrapped in other protocols, this can be used to report an\nauthentication failure in a lower level protocol (eg. SSL).\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when the connection is closed.\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have failed to connect to all possible addresses for the\nserver. At this point, the connection will never be established.\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCalled when we have successfully connected to the server.\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nCalled if name resolution succeeded for a TCPConnection and we are now\nwaiting for a connection to the server to succeed. The count is the number\nof connections we're trying. The notifier will be informed each time the\ncount changes, until a connection is made or connect_failed() is called.\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nCalled when new data is received on the connection.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\nCalled when data is sent on the connection. This gives the notifier an\nopportunity to modify sent data before it is written. The notifier can\nraise an error if the data is swallowed entirely.", 
             "title": "interface TCPConnectionNotify"
@@ -20111,6 +20271,41 @@
             "title": "fun ref  sent(conn: TCPConnection ref, data: (String val | Array[U8 val] val)): (String val | Array[U8 val] val) ?"
         }, 
         {
+            "location": "/net-TCPListenAuth/", 
+            "text": "primitive net/TCPListenAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val))\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nTCPListenAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nTCPListenAuth\n val): \nBool\n val", 
+            "title": "primitive TCPListenAuth"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#primitive-nettcplistenauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/TCPListenAuth"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#new-createfrom-ambientauth-val-netauth-val-tcpauth-val", 
+            "text": "", 
+            "title": "new create(from: ((AmbientAuth val | NetAuth val) | TCPAuth val))"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#fun-box-eqthat-tcplistenauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: TCPListenAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-TCPListenAuth/#fun-box-nethat-tcplistenauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: TCPListenAuth val): Bool val"
+        }, 
+        {
             "location": "/net-TCPListenNotify/", 
             "text": "interface net/TCPListenNotify\n\n\nDefault capability\n: \nref\n\n\nNotifications for TCP listeners.\n\n\nPublic Functions\n\n\nfun ref  \nclosed\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nCalled when the listener is closed.\n\n\nfun ref  \nconnected\n(listen: \nTCPListener\n ref): \nTCPConnectionNotify\n iso^ ?\n\n\nCreate a new TCPConnectionNotify to attach to a new TCPConnection for a\nnewly established connection to the server.\n\n\nfun ref  \nlistening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nCalled when the listener has been bound to an address.\n\n\nfun ref  \nnot_listening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nCalled if it wasn't possible to bind the listener to an address.", 
             "title": "interface TCPListenNotify"
@@ -20147,7 +20342,7 @@
         }, 
         {
             "location": "/net-TCPListener/", 
-            "text": "actor net/TCPListener\n\n\nDefault capability\n: \ntag\n\n\nListens for new network connections.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nnew \nip4\n(notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nnew \nip6\n(notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nset_notify\n(notify: \nTCPListenNotify\n iso)\n\n\nChange the notifier.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nDispose of resources.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nconn\nclosed\n()\n\n\nAn accepted connection has closed. If we have dropped below the limit, try\nto accept new connections.\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nPrivate Functions\n\n\nfun ref  \n_accept\n(optional ns: \nU32\n val): \nNone\n val\n\n\nAccept connections as long as we have spawned fewer than our limit.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \n_spawn\n(ns: \nU32\n val): \nNone\n val\n\n\nSpawn a new connection.", 
+            "text": "actor net/TCPListener\n\n\nDefault capability\n: \ntag\n\n\nListens for new network connections.\n\n\nConstructors\n\n\nnew \ncreate\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPListenAuth\n val), notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nnew \nip4\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPListenAuth\n val), notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nnew \nip6\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPListenAuth\n val), notify: \nTCPListenNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nset_notify\n(notify: \nTCPListenNotify\n iso)\n\n\nChange the notifier.\n\n\nPublic Functions\n\n\nfun ref  \nclose\n(): \nNone\n val\n\n\nDispose of resources.\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nconn\nclosed\n()\n\n\nAn accepted connection has closed. If we have dropped below the limit, try\nto accept new connections.\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nPrivate Functions\n\n\nfun ref  \n_accept\n(optional ns: \nU32\n val): \nNone\n val\n\n\nAccept connections as long as we have spawned fewer than our limit.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \n_spawn\n(ns: \nU32\n val): \nNone\n val\n\n\nSpawn a new connection.", 
             "title": "actor TCPListener"
         }, 
         {
@@ -20161,19 +20356,19 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-TCPListener/#new-createnotify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
+            "location": "/net-TCPListener/#new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
             "text": "", 
-            "title": "new create(notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
+            "title": "new create(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPListenAuth val), notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
         }, 
         {
-            "location": "/net-TCPListener/#new-ip4notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
+            "location": "/net-TCPListener/#new-ip4auth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
             "text": "", 
-            "title": "new ip4(notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
+            "title": "new ip4(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPListenAuth val), notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
         }, 
         {
-            "location": "/net-TCPListener/#new-ip6notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
+            "location": "/net-TCPListener/#new-ip6auth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-tcplistennotify-iso-optional-host-string-val-optional-service-string-val-optional-limit-usize-val", 
             "text": "", 
-            "title": "new ip6(notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
+            "title": "new ip6(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPListenAuth val), notify: TCPListenNotify iso, optional host: String val, optional service: String val, optional limit: USize val)"
         }, 
         {
             "location": "/net-TCPListener/#public-behaviours", 
@@ -20239,6 +20434,16 @@
             "location": "/net-TCPListener/#fun-ref-_spawnns-u32-val-none-val", 
             "text": "Spawn a new connection.", 
             "title": "fun ref  _spawn(ns: U32 val): None val"
+        }, 
+        {
+            "location": "/net-TCPListenerAuth/", 
+            "text": "type net/TCPListenerAuth is (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPListenAuth\n val)\n\n\nNo doc string provided.", 
+            "title": "type TCPListenerAuth"
+        }, 
+        {
+            "location": "/net-TCPListenerAuth/#type-nettcplistenerauth-is-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val", 
+            "text": "No doc string provided.", 
+            "title": "type net/TCPListenerAuth is (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPListenAuth val)"
         }, 
         {
             "location": "/net-_TestBroadcast/", 
@@ -20471,6 +20676,41 @@
             "title": "fun ref  received(sock: UDPSocket ref, data: Array[U8 val] iso, from: IPAddress val): None val"
         }, 
         {
+            "location": "/net-UDPAuth/", 
+            "text": "primitive net/UDPAuth\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(from: (\nAmbientAuth\n val | \nNetAuth\n val))\n\n\nPublic Functions\n\n\nfun box  \neq\n(that: \nUDPAuth\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nUDPAuth\n val): \nBool\n val", 
+            "title": "primitive UDPAuth"
+        }, 
+        {
+            "location": "/net-UDPAuth/#primitive-netudpauth", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive net/UDPAuth"
+        }, 
+        {
+            "location": "/net-UDPAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/net-UDPAuth/#new-createfrom-ambientauth-val-netauth-val", 
+            "text": "", 
+            "title": "new create(from: (AmbientAuth val | NetAuth val))"
+        }, 
+        {
+            "location": "/net-UDPAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/net-UDPAuth/#fun-box-eqthat-udpauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: UDPAuth val): Bool val"
+        }, 
+        {
+            "location": "/net-UDPAuth/#fun-box-nethat-udpauth-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: UDPAuth val): Bool val"
+        }, 
+        {
             "location": "/net-UDPNotify/", 
             "text": "interface net/UDPNotify\n\n\nDefault capability\n: \nref\n\n\nNo doc string provided.\n\n\nPublic Functions\n\n\nfun ref  \nclosed\n(sock: \nUDPSocket\n ref): \nNone\n val\n\n\nCalled when the socket is closed.\n\n\nfun ref  \nlistening\n(sock: \nUDPSocket\n ref): \nNone\n val\n\n\nCalled when the socket has been bound to an address.\n\n\nfun ref  \nnot_listening\n(sock: \nUDPSocket\n ref): \nNone\n val\n\n\nCalled if it wasn't possible to bind the socket to an address.\n\n\nfun ref  \nreceived\n(sock: \nUDPSocket\n ref, data: \nArray\n[\nU8\n val] iso, from: \nIPAddress\n val): \nNone\n val\n\n\nCalled when new data is received on the socket.", 
             "title": "interface UDPNotify"
@@ -20507,7 +20747,7 @@
         }, 
         {
             "location": "/net-UDPSocket/", 
-            "text": "actor net/UDPSocket\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip4\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip6\n(notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nmulticast_join\n(group: \nString\n val, optional to: \nString\n val)\n\n\nAdd a multicast group. This can be limited to packets arriving on a\nspecific interface.\n\n\nbe \nmulticast_leave\n(group: \nString\n val, optional to: \nString\n val)\n\n\nDrop a multicast group. This can be limited to packets arriving on a\nspecific interface. No attempt is made to check that this socket has\npreviously added this group.\n\n\nbe \nset_broadcast\n(state: \nBool\n val)\n\n\nEnable or disable broadcasting from this socket.\n\n\nbe \nset_multicast_interface\n(optional from: \nString\n val)\n\n\nBy default, the OS will choose which address is used to send packets bound\nfor multicast addresses. This can be used to force a specific interface. To\nrevert to allowing the OS to choose, call with an empty string.\n\n\nbe \nset_multicast_loopback\n(loopback: \nBool\n val)\n\n\nBy default, packets sent to a multicast address will be received by the\nsending system if it has subscribed to that address. Disabling loopback\nprevents this.\n\n\nbe \nset_multicast_ttl\n(ttl: \nU8\n val)\n\n\nSet the TTL for multicast sends. Defaults to 1.\n\n\nbe \nset_notify\n(notify: \nUDPNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val)\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val, to: \nIPAddress\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \n_close\n(): \nNone\n val\n\n\nInform the notifier that we've closed.\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \nstart\nnext_read\n(): \nNone\n val\n\n\nStart our next receive.\nThis is used only with IOCP on Windows.\n\n\nfun ref  \n_write\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val): \nNone\n val\n\n\nWrite the datagram to the socket.", 
+            "text": "actor net/UDPSocket\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nUDPAuth\n val), notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip4\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nUDPAuth\n val), notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nnew \nip6\n(auth: ((\nAmbientAuth\n val | \nNetAuth\n val) | \nUDPAuth\n val), notify: \nUDPNotify\n iso, optional host: \nString\n val, optional service: \nString\n val, optional size: \nUSize\n val)\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nStop listening.\n\n\nbe \nmulticast_join\n(group: \nString\n val, optional to: \nString\n val)\n\n\nAdd a multicast group. This can be limited to packets arriving on a\nspecific interface.\n\n\nbe \nmulticast_leave\n(group: \nString\n val, optional to: \nString\n val)\n\n\nDrop a multicast group. This can be limited to packets arriving on a\nspecific interface. No attempt is made to check that this socket has\npreviously added this group.\n\n\nbe \nset_broadcast\n(state: \nBool\n val)\n\n\nEnable or disable broadcasting from this socket.\n\n\nbe \nset_multicast_interface\n(optional from: \nString\n val)\n\n\nBy default, the OS will choose which address is used to send packets bound\nfor multicast addresses. This can be used to force a specific interface. To\nrevert to allowing the OS to choose, call with an empty string.\n\n\nbe \nset_multicast_loopback\n(loopback: \nBool\n val)\n\n\nBy default, packets sent to a multicast address will be received by the\nsending system if it has subscribed to that address. Disabling loopback\nprevents this.\n\n\nbe \nset_multicast_ttl\n(ttl: \nU8\n val)\n\n\nSet the TTL for multicast sends. Defaults to 1.\n\n\nbe \nset_notify\n(notify: \nUDPNotify\n iso)\n\n\nChange the notifier.\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val)\n\n\nWrite a single sequence of bytes.\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val, to: \nIPAddress\n val)\n\n\nWrite a sequence of sequences of bytes.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturn the bound IP address.\n\n\nPrivate Behaviours\n\n\nbe \nevent\nnotify\n(event: \nPointer\n[\nAsioEvent\n val] tag, flags: \nU32\n val, arg: \nU32\n val)\n\n\nWhen we are readable, we accept new connections until none remain.\n\n\nbe \nread\nagain\n()\n\n\nResume reading.\n\n\nPrivate Functions\n\n\nfun ref  \n_close\n(): \nNone\n val\n\n\nInform the notifier that we've closed.\n\n\nfun ref  \ncomplete\nreads\n(len: \nU32\n val): \nNone\n val\n\n\nThe OS has informed as that len bytes of pending reads have completed.\nThis occurs only with IOCP on Windows.\n\n\nfun ref  \nnotify\nlistening\n(): \nNone\n val\n\n\nInform the notifier that we're listening.\n\n\nfun ref  \npending\nreads\n(): \nNone\n val\n\n\nRead while data is available, guessing the next packet length as we go. If\nwe read 4 kb of data, send ourself a resume message and stop reading, to\navoid starving other actors.\n\n\nfun ref  \nstart\nnext_read\n(): \nNone\n val\n\n\nStart our next receive.\nThis is used only with IOCP on Windows.\n\n\nfun ref  \n_write\n(data: (\nString\n val | \nArray\n[\nU8\n val] val), to: \nIPAddress\n val): \nNone\n val\n\n\nWrite the datagram to the socket.", 
             "title": "actor UDPSocket"
         }, 
         {
@@ -20521,19 +20761,19 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-UDPSocket/#new-createnotify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
+            "location": "/net-UDPSocket/#new-createauth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
             "text": "", 
-            "title": "new create(notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
+            "title": "new create(auth: ((AmbientAuth val | NetAuth val) | UDPAuth val), notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
         }, 
         {
-            "location": "/net-UDPSocket/#new-ip4notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
+            "location": "/net-UDPSocket/#new-ip4auth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
             "text": "", 
-            "title": "new ip4(notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
+            "title": "new ip4(auth: ((AmbientAuth val | NetAuth val) | UDPAuth val), notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
         }, 
         {
-            "location": "/net-UDPSocket/#new-ip6notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
+            "location": "/net-UDPSocket/#new-ip6auth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val", 
             "text": "", 
-            "title": "new ip6(notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
+            "title": "new ip6(auth: ((AmbientAuth val | NetAuth val) | UDPAuth val), notify: UDPNotify iso, optional host: String val, optional service: String val, optional size: USize val)"
         }, 
         {
             "location": "/net-UDPSocket/#public-behaviours", 
@@ -20649,6 +20889,16 @@
             "location": "/net-UDPSocket/#fun-ref-_writedata-string-val-array91u8-val93-val-to-ipaddress-val-none-val", 
             "text": "Write the datagram to the socket.", 
             "title": "fun ref  _write(data: (String val | Array[U8 val] val), to: IPAddress val): None val"
+        }, 
+        {
+            "location": "/net-UDPSocketAuth/", 
+            "text": "type net/UDPSocketAuth is ((\nAmbientAuth\n val | \nNetAuth\n val) | \nUDPAuth\n val)\n\n\nNo doc string provided.", 
+            "title": "type UDPSocketAuth"
+        }, 
+        {
+            "location": "/net-UDPSocketAuth/#type-netudpsocketauth-is-ambientauth-val-netauth-val-udpauth-val", 
+            "text": "No doc string provided.", 
+            "title": "type net/UDPSocketAuth is ((AmbientAuth val | NetAuth val) | UDPAuth val)"
         }, 
         {
             "location": "/net-http--index/", 
@@ -21072,7 +21322,7 @@
         }, 
         {
             "location": "/net-http-Client/", 
-            "text": "actor net/http/Client\n\n\nDefault capability\n: \ntag\n\n\nManages a collection of client connections.\n\n\nConstructors\n\n\nnew \ncreate\n(optional sslctx: (\nSSLContext\n val | \nNone\n val), optional pipeline: \nBool\n val)\n\n\nPublic Behaviours\n\n\nbe \napply\n(request: \nPayload\n val)\n\n\nSchedule a request.\n\n\nbe \ncancel\n(request: \nPayload\n val)\n\n\nCancel a request.\n\n\nPrivate Functions\n\n\nfun ref  \nget\nclient\n(url: \nURL\n val): \n_ClientConnection\n tag ?\n\n\nGets or creates a client for the given URL.", 
+            "text": "actor net/http/Client\n\n\nDefault capability\n: \ntag\n\n\nManages a collection of client connections.\n\n\nConstructors\n\n\nnew \ncreate\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val), optional sslctx: (\nSSLContext\n val | \nNone\n val), optional pipeline: \nBool\n val)\n\n\nPublic Behaviours\n\n\nbe \napply\n(request: \nPayload\n val)\n\n\nSchedule a request.\n\n\nbe \ncancel\n(request: \nPayload\n val)\n\n\nCancel a request.\n\n\nPrivate Functions\n\n\nfun ref  \nget\nclient\n(url: \nURL\n val): \n_ClientConnection\n tag ?\n\n\nGets or creates a client for the given URL.", 
             "title": "actor Client"
         }, 
         {
@@ -21086,9 +21336,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-http-Client/#new-createoptional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val", 
+            "location": "/net-http-Client/#new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val", 
             "text": "", 
-            "title": "new create(optional sslctx: (SSLContext val | None val), optional pipeline: Bool val)"
+            "title": "new create(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val), optional sslctx: (SSLContext val | None val), optional pipeline: Bool val)"
         }, 
         {
             "location": "/net-http-Client/#public-behaviours", 
@@ -21117,7 +21367,7 @@
         }, 
         {
             "location": "/net-http-_ClientConnection/", 
-            "text": "actor net/http/_ClientConnection\n\n\nDefault capability\n: \ntag\n\n\nManages a persistent and possibly pipelined TCP connection to an HTTP server.\n\n\nConstructors\n\n\nnew \ncreate\n(host: \nString\n val, service: \nString\n val, optional sslctx: (\nSSLContext\n val | \nNone\n val), optional pipeline: \nBool\n val)\n\n\nPublic Behaviours\n\n\nbe \napply\n(request: \nPayload\n val)\n\n\nSchedule a request.\n\n\nbe \ncancel\n(request: \nPayload\n tag)\n\n\nCancel a request.\n\n\nPrivate Behaviours\n\n\nbe \nauth\nfailed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection couldn't be authenticated. Cancel all pending requests.\n\n\nbe \n_closed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection to the server has closed prematurely. Cancel everything.\n\n\nbe \nconnect\nfailed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection couldn't be established. Cancel all pending requests.\n\n\nbe \n_connected\n(conn: \nTCPConnection\n tag)\n\n\nThe connection to the server has been established. Send pending requests.\n\n\nbe \n_response\n(response: \nPayload\n iso)\n\n\nCall the request's handler and supply the response.\n\n\nPrivate Functions\n\n\nfun ref  \ncancel\nall\n(): \nNone\n val\n\n\nCancel all pending requests.\n\n\nfun ref  \nnew\nconn\n(): \nNone\n val\n\n\nCreates a new connection.\n\n\nfun ref  \n_send\n(): \nNone\n val\n\n\nSend pending requests. If the connection is closed, open it. If we have\nnothing to send and we aren't waiting on any responses, close the\nconnection.", 
+            "text": "actor net/http/_ClientConnection\n\n\nDefault capability\n: \ntag\n\n\nManages a persistent and possibly pipelined TCP connection to an HTTP server.\n\n\nConstructors\n\n\nnew \ncreate\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPConnectAuth\n val), host: \nString\n val, service: \nString\n val, optional sslctx: (\nSSLContext\n val | \nNone\n val), optional pipeline: \nBool\n val)\n\n\nPublic Behaviours\n\n\nbe \napply\n(request: \nPayload\n val)\n\n\nSchedule a request.\n\n\nbe \ncancel\n(request: \nPayload\n tag)\n\n\nCancel a request.\n\n\nPrivate Behaviours\n\n\nbe \nauth\nfailed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection couldn't be authenticated. Cancel all pending requests.\n\n\nbe \n_closed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection to the server has closed prematurely. Cancel everything.\n\n\nbe \nconnect\nfailed\n(conn: \nTCPConnection\n tag)\n\n\nThe connection couldn't be established. Cancel all pending requests.\n\n\nbe \n_connected\n(conn: \nTCPConnection\n tag)\n\n\nThe connection to the server has been established. Send pending requests.\n\n\nbe \n_response\n(response: \nPayload\n iso)\n\n\nCall the request's handler and supply the response.\n\n\nPrivate Functions\n\n\nfun ref  \ncancel\nall\n(): \nNone\n val\n\n\nCancel all pending requests.\n\n\nfun ref  \nnew\nconn\n(): \nNone\n val\n\n\nCreates a new connection.\n\n\nfun ref  \n_send\n(): \nNone\n val\n\n\nSend pending requests. If the connection is closed, open it. If we have\nnothing to send and we aren't waiting on any responses, close the\nconnection.", 
             "title": "actor _ClientConnection"
         }, 
         {
@@ -21131,9 +21381,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-http-_ClientConnection/#new-createhost-string-val-service-string-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val", 
+            "location": "/net-http-_ClientConnection/#new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-host-string-val-service-string-val-optional-sslctx-sslcontext-val-none-val-optional-pipeline-bool-val", 
             "text": "", 
-            "title": "new create(host: String val, service: String val, optional sslctx: (SSLContext val | None val), optional pipeline: Bool val)"
+            "title": "new create(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPConnectAuth val), host: String val, service: String val, optional sslctx: (SSLContext val | None val), optional pipeline: Bool val)"
         }, 
         {
             "location": "/net-http-_ClientConnection/#public-behaviours", 
@@ -22282,7 +22532,7 @@
         }, 
         {
             "location": "/net-http-_RequestBuilder/", 
-            "text": "class net/http/_RequestBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a request payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(handler: \nRequestHandler\n val, logger: \nLogger\n val)\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCreate a server connection to handle response ordering.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a request. When we have a whole request,\ndispatch it.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?", 
+            "text": "class net/http/_RequestBuilder is \nTCPConnectionNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nThis builds a request payload using received chunks of data.\n\n\nConstructors\n\n\nnew \ncreate\n(handler: \nRequestHandler\n val, logger: \nLogger\n val, reversedns: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val) | \nNone\n val))\n\n\nPublic Functions\n\n\nfun ref  \naccepted\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nCreate a server connection to handle response ordering.\n\n\nfun ref  \nauth_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nclosed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnect_failed\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnected\n(conn: \nTCPConnection\n ref): \nNone\n val\n\n\nfun ref  \nconnecting\n(conn: \nTCPConnection\n ref, count: \nU32\n val): \nNone\n val\n\n\nfun ref  \nreceived\n(conn: \nTCPConnection\n ref, data: \nArray\n[\nU8\n val] iso): \nNone\n val\n\n\nAssemble chunks of data into a request. When we have a whole request,\ndispatch it.\n\n\nfun ref  \nsent\n(conn: \nTCPConnection\n ref, data: (\nString\n val | \nArray\n[\nU8\n val] val)): (\nString\n val | \nArray\n[\nU8\n val] val) ?", 
             "title": "class _RequestBuilder"
         }, 
         {
@@ -22296,9 +22546,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-http-_RequestBuilder/#new-createhandler-requesthandler-val-logger-logger-val", 
+            "location": "/net-http-_RequestBuilder/#new-createhandler-requesthandler-val-logger-logger-val-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val", 
             "text": "", 
-            "title": "new create(handler: RequestHandler val, logger: Logger val)"
+            "title": "new create(handler: RequestHandler val, logger: Logger val, reversedns: (((AmbientAuth val | NetAuth val) | DNSAuth val) | None val))"
         }, 
         {
             "location": "/net-http-_RequestBuilder/#public-functions", 
@@ -22462,7 +22712,7 @@
         }, 
         {
             "location": "/net-http-Server/", 
-            "text": "actor net/http/Server\n\n\nDefault capability\n: \ntag\n\n\nRuns an HTTP server. When routes are changed, the changes are only reflected\nfor new connections. Existing connections continue to use the old routes.\n\n\nConstructors\n\n\nnew \ncreate\n(notify: \nServerNotify\n iso, handler: \nRequestHandler\n val, optional logger: \nLogger\n val, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val, optional sslctx: (\nSSLContext\n val | \nNone\n val))\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nShut down the server.\n\n\nbe \nset_handler\n(handler: \nRequestHandler\n val)\n\n\nReplace the request handler.\n\n\nbe \nset_logger\n(logger: \nLogger\n val)\n\n\nReplace the logger.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturns the locally bound address.\n\n\nPrivate Behaviours\n\n\nbe \n_closed\n()\n\n\nCalled when we stop listening.\n\n\nbe \n_listening\n(address: \nIPAddress\n val)\n\n\nCalled when we are listening.\n\n\nbe \nnot\nlistening\n()\n\n\nCalled when we fail to listen.", 
+            "text": "actor net/http/Server\n\n\nDefault capability\n: \ntag\n\n\nRuns an HTTP server. When routes are changed, the changes are only reflected\nfor new connections. Existing connections continue to use the old routes.\n\n\nConstructors\n\n\nnew \ncreate\n(auth: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nTCPAuth\n val) | \nTCPListenAuth\n val), notify: \nServerNotify\n iso, handler: \nRequestHandler\n val, optional logger: \nLogger\n val, optional host: \nString\n val, optional service: \nString\n val, optional limit: \nUSize\n val, optional sslctx: (\nSSLContext\n val | \nNone\n val), optional reversedns: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val) | \nNone\n val))\n\n\nPublic Behaviours\n\n\nbe \ndispose\n()\n\n\nShut down the server.\n\n\nbe \nset_handler\n(handler: \nRequestHandler\n val)\n\n\nReplace the request handler.\n\n\nbe \nset_logger\n(logger: \nLogger\n val)\n\n\nReplace the logger.\n\n\nPublic Functions\n\n\nfun box  \nlocal_address\n(): \nIPAddress\n val\n\n\nReturns the locally bound address.\n\n\nPrivate Behaviours\n\n\nbe \n_closed\n()\n\n\nCalled when we stop listening.\n\n\nbe \n_listening\n(address: \nIPAddress\n val)\n\n\nCalled when we are listening.\n\n\nbe \nnot\nlistening\n()\n\n\nCalled when we fail to listen.", 
             "title": "actor Server"
         }, 
         {
@@ -22476,9 +22726,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-http-Server/#new-createnotify-servernotify-iso-handler-requesthandler-val-optional-logger-logger-val-optional-host-string-val-optional-service-string-val-optional-limit-usize-val-optional-sslctx-sslcontext-val-none-val", 
+            "location": "/net-http-Server/#new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-servernotify-iso-handler-requesthandler-val-optional-logger-logger-val-optional-host-string-val-optional-service-string-val-optional-limit-usize-val-optional-sslctx-sslcontext-val-none-val-optional-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val", 
             "text": "", 
-            "title": "new create(notify: ServerNotify iso, handler: RequestHandler val, optional logger: Logger val, optional host: String val, optional service: String val, optional limit: USize val, optional sslctx: (SSLContext val | None val))"
+            "title": "new create(auth: (((AmbientAuth val | NetAuth val) | TCPAuth val) | TCPListenAuth val), notify: ServerNotify iso, handler: RequestHandler val, optional logger: Logger val, optional host: String val, optional service: String val, optional limit: USize val, optional sslctx: (SSLContext val | None val), optional reversedns: (((AmbientAuth val | NetAuth val) | DNSAuth val) | None val))"
         }, 
         {
             "location": "/net-http-Server/#public-behaviours", 
@@ -22597,7 +22847,7 @@
         }, 
         {
             "location": "/net-http-_ServerListener/", 
-            "text": "class net/http/_ServerListener is \nTCPListenNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nManages the listening socket for an HTTP server.\n\n\nConstructors\n\n\nnew \ncreate\n(server: \nServer\n tag, sslctx: (\nSSLContext\n val | \nNone\n val), handler: \nRequestHandler\n val, logger: \nLogger\n val)\n\n\nCreates a new listening socket manager.\n\n\nPublic Functions\n\n\nfun ref  \nclosed\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server we have stopped listening.\n\n\nfun ref  \nconnected\n(listen: \nTCPListener\n ref): \nTCPConnectionNotify\n iso^\n\n\nCreate a notifier for a specific HTTP socket.\n\n\nfun ref  \nlistening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server of the bound IP address.\n\n\nfun ref  \nnot_listening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server we failed to listen.", 
+            "text": "class net/http/_ServerListener is \nTCPListenNotify\n ref\n\n\nDefault capability\n: \nref\n\n\nManages the listening socket for an HTTP server.\n\n\nConstructors\n\n\nnew \ncreate\n(server: \nServer\n tag, sslctx: (\nSSLContext\n val | \nNone\n val), handler: \nRequestHandler\n val, logger: \nLogger\n val, reversedns: (((\nAmbientAuth\n val | \nNetAuth\n val) | \nDNSAuth\n val) | \nNone\n val))\n\n\nCreates a new listening socket manager.\n\n\nPublic Functions\n\n\nfun ref  \nclosed\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server we have stopped listening.\n\n\nfun ref  \nconnected\n(listen: \nTCPListener\n ref): \nTCPConnectionNotify\n iso^\n\n\nCreate a notifier for a specific HTTP socket.\n\n\nfun ref  \nlistening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server of the bound IP address.\n\n\nfun ref  \nnot_listening\n(listen: \nTCPListener\n ref): \nNone\n val\n\n\nInform the server we failed to listen.", 
             "title": "class _ServerListener"
         }, 
         {
@@ -22611,9 +22861,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/net-http-_ServerListener/#new-createserver-server-tag-sslctx-sslcontext-val-none-val-handler-requesthandler-val-logger-logger-val", 
+            "location": "/net-http-_ServerListener/#new-createserver-server-tag-sslctx-sslcontext-val-none-val-handler-requesthandler-val-logger-logger-val-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val", 
             "text": "Creates a new listening socket manager.", 
-            "title": "new create(server: Server tag, sslctx: (SSLContext val | None val), handler: RequestHandler val, logger: Logger val)"
+            "title": "new create(server: Server tag, sslctx: (SSLContext val | None val), handler: RequestHandler val, logger: Logger val, reversedns: (((AmbientAuth val | NetAuth val) | DNSAuth val) | None val))"
         }, 
         {
             "location": "/net-http-_ServerListener/#public-functions", 
@@ -23582,7 +23832,7 @@
         }, 
         {
             "location": "/net-ssl-SSLContext/", 
-            "text": "class net/ssl/SSLContext\n\n\nDefault capability\n: \nval\n\n\nAn SSL context is used to create SSL sessions.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun ref  \nallow_tls_v1\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1. Defaults to true.\n\n\nfun ref  \nallow_tls_v1_1\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1.1. Defaults to true.\n\n\nfun ref  \nallow_tls_v1_2\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1.2. Defaults to true.\n\n\nfun box  \nclient\n(optional hostname: \nString\n val): \nSSL\n iso^ ?\n\n\nCreate a client-side SSL session. If a hostname is supplied, the server\nside certificate must be valid for that hostname.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the SSL context.\n\n\nfun box  \nserver\n(): \nSSL\n iso^ ?\n\n\nCreate a server-side SSL session.\n\n\nfun ref  \nset_authority\n(file: \nString\n val, optional path: \nString\n val): \nSSLContext\n ref^ ?\n\n\nUse a PEM file and/or a directory of PEM files to specify certificate\nauthorities. Clients must set this. For servers, it is optional. Use an\nempty string to indicate no file or no path. Raises an error if these\nverify locations aren't valid, or if both are empty strings.\n\n\nfun ref  \nset_cert\n(cert: \nString\n val, key: \nString\n val): \nSSLContext\n ref^ ?\n\n\nThe cert file is a PEM certificate chain. The key file is a private key.\nServers must set this. For clients, it is optional.\n\n\nfun ref  \nset_ciphers\n(ciphers: \nString\n val): \nSSLContext\n ref^ ?\n\n\nSet the accepted ciphers. This replaces the existing list. Raises an error\nif the cipher list is invalid.\n\n\nfun ref  \nset_client_verify\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nSet to true to require verification. Defaults to true.\n\n\nfun ref  \nset_server_verify\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nSet to true to require verification. Defaults to false.\n\n\nfun ref  \nset_verify_depth\n(depth: \nU32\n val): \nSSLContext\n ref^\n\n\nSet the verify depth. Defaults to 6.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the SSL context.", 
+            "text": "class net/ssl/SSLContext\n\n\nDefault capability\n: \nval\n\n\nAn SSL context is used to create SSL sessions.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun ref  \nallow_tls_v1\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1. Defaults to true.\n\n\nfun ref  \nallow_tls_v1_1\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1.1. Defaults to true.\n\n\nfun ref  \nallow_tls_v1_2\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nAllow TLS v1.2. Defaults to true.\n\n\nfun box  \nclient\n(optional hostname: \nString\n val): \nSSL\n iso^ ?\n\n\nCreate a client-side SSL session. If a hostname is supplied, the server\nside certificate must be valid for that hostname.\n\n\nfun ref  \ndispose\n(): \nNone\n val\n\n\nFree the SSL context.\n\n\nfun box  \nserver\n(): \nSSL\n iso^ ?\n\n\nCreate a server-side SSL session.\n\n\nfun ref  \nset_authority\n(file: (\nFilePath\n val | \nNone\n val), optional path: (\nFilePath\n val | \nNone\n val)): \nSSLContext\n ref^ ?\n\n\nUse a PEM file and/or a directory of PEM files to specify certificate\nauthorities. Clients must set this. For servers, it is optional. Use None\nto indicate no file or no path. Raises an error if these verify locations\naren't valid, or if both are None.\n\n\nfun ref  \nset_cert\n(cert: \nFilePath\n val, key: \nFilePath\n val): \nSSLContext\n ref^ ?\n\n\nThe cert file is a PEM certificate chain. The key file is a private key.\nServers must set this. For clients, it is optional.\n\n\nfun ref  \nset_ciphers\n(ciphers: \nString\n val): \nSSLContext\n ref^ ?\n\n\nSet the accepted ciphers. This replaces the existing list. Raises an error\nif the cipher list is invalid.\n\n\nfun ref  \nset_client_verify\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nSet to true to require verification. Defaults to true.\n\n\nfun ref  \nset_server_verify\n(state: \nBool\n val): \nSSLContext\n ref^\n\n\nSet to true to require verification. Defaults to false.\n\n\nfun ref  \nset_verify_depth\n(depth: \nU32\n val): \nSSLContext\n ref^\n\n\nSet the verify depth. Defaults to 6.\n\n\nPrivate Functions\n\n\nfun box  \n_final\n(): \nNone\n val\n\n\nFree the SSL context.", 
             "title": "class SSLContext"
         }, 
         {
@@ -23636,14 +23886,14 @@
             "title": "fun box  server(): SSL iso^ ?"
         }, 
         {
-            "location": "/net-ssl-SSLContext/#fun-ref-set_authorityfile-string-val-optional-path-string-val-sslcontext-ref", 
-            "text": "Use a PEM file and/or a directory of PEM files to specify certificate\nauthorities. Clients must set this. For servers, it is optional. Use an\nempty string to indicate no file or no path. Raises an error if these\nverify locations aren't valid, or if both are empty strings.", 
-            "title": "fun ref  set_authority(file: String val, optional path: String val): SSLContext ref^ ?"
+            "location": "/net-ssl-SSLContext/#fun-ref-set_authorityfile-filepath-val-none-val-optional-path-filepath-val-none-val-sslcontext-ref", 
+            "text": "Use a PEM file and/or a directory of PEM files to specify certificate\nauthorities. Clients must set this. For servers, it is optional. Use None\nto indicate no file or no path. Raises an error if these verify locations\naren't valid, or if both are None.", 
+            "title": "fun ref  set_authority(file: (FilePath val | None val), optional path: (FilePath val | None val)): SSLContext ref^ ?"
         }, 
         {
-            "location": "/net-ssl-SSLContext/#fun-ref-set_certcert-string-val-key-string-val-sslcontext-ref", 
+            "location": "/net-ssl-SSLContext/#fun-ref-set_certcert-filepath-val-key-filepath-val-sslcontext-ref", 
             "text": "The cert file is a PEM certificate chain. The key file is a private key.\nServers must set this. For clients, it is optional.", 
-            "title": "fun ref  set_cert(cert: String val, key: String val): SSLContext ref^ ?"
+            "title": "fun ref  set_cert(cert: FilePath val, key: FilePath val): SSLContext ref^ ?"
         }, 
         {
             "location": "/net-ssl-SSLContext/#fun-ref-set_ciphersciphers-string-val-sslcontext-ref", 

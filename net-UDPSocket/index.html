@@ -8,7 +8,7 @@
   
   
   
-  <title>actor UDPSocket - Pony Standard Library</title>
+  <title>actor UDPSocket - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2273,6 +2273,20 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-DNSAuth/">primitive DNSAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNSLookupAuth/">type DNSLookupAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-IPAddress/">class IPAddress</a>
         
     </li>
@@ -2287,6 +2301,27 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-NetAuth/">primitive NetAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPAuth/">primitive TCPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectAuth/">primitive TCPConnectAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnection/">actor TCPConnection</a>
         
     </li>
@@ -2294,7 +2329,21 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectionAuth/">type TCPConnectionAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnectionNotify/">interface TCPConnectionNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenAuth/">primitive TCPListenAuth</a>
         
     </li>
 
@@ -2309,6 +2358,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-TCPListener/">actor TCPListener</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenerAuth/">type TCPListenerAuth</a>
         
     </li>
 
@@ -2350,6 +2406,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-UDPAuth/">primitive UDPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-UDPNotify/">interface UDPNotify</a>
         
     </li>
@@ -2375,6 +2438,13 @@
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPSocketAuth/">type UDPSocketAuth</a>
         
     </li>
 
@@ -3670,7 +3740,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3700,9 +3770,9 @@
 <p><strong>Default capability</strong>: <em>tag</em></p>
 <p>No doc string provided.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createnotify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>create</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
-<h3 id="new-ip4notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip4</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
-<h3 id="new-ip6notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip6</strong>(notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-createauth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>create</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-UDPAuth">UDPAuth</a> val), notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip4auth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip4</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-UDPAuth">UDPAuth</a> val), notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip6auth-ambientauth-val-netauth-val-udpauth-val-notify-udpnotify-iso-optional-host-string-val-optional-service-string-val-optional-size-usize-val">new <strong>ip6</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-UDPAuth">UDPAuth</a> val), notify: <a href="../net-UDPNotify">UDPNotify</a> iso, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional size: <a href="../builtin-USize">USize</a> val)</h3>
 <h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Stop listening.</p>
@@ -3763,7 +3833,7 @@ This is used only with IOCP on Windows.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../net-http--index/" class="btn btn-neutral float-right" title="Package">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../net-UDPSocketAuth/" class="btn btn-neutral float-right" title="type UDPSocketAuth">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../net-UDPNotify/" class="btn btn-neutral" title="interface UDPNotify"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -3795,7 +3865,7 @@ This is used only with IOCP on Windows.</p>
         <span><a href="../net-UDPNotify/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../net-http--index/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../net-UDPSocketAuth/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

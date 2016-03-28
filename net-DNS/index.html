@@ -8,7 +8,7 @@
   
   
   
-  <title>primitive DNS - Pony Standard Library</title>
+  <title>primitive DNS - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2286,6 +2286,20 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-DNSAuth/">primitive DNSAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNSLookupAuth/">type DNSLookupAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-IPAddress/">class IPAddress</a>
         
     </li>
@@ -2300,6 +2314,27 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-NetAuth/">primitive NetAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPAuth/">primitive TCPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectAuth/">primitive TCPConnectAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnection/">actor TCPConnection</a>
         
     </li>
@@ -2307,7 +2342,21 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectionAuth/">type TCPConnectionAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnectionNotify/">interface TCPConnectionNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenAuth/">primitive TCPListenAuth</a>
         
     </li>
 
@@ -2322,6 +2371,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-TCPListener/">actor TCPListener</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenerAuth/">type TCPListenerAuth</a>
         
     </li>
 
@@ -2363,6 +2419,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-UDPAuth/">primitive UDPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-UDPNotify/">interface UDPNotify</a>
         
     </li>
@@ -2371,6 +2434,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-UDPSocket/">actor UDPSocket</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPSocketAuth/">type UDPSocketAuth</a>
         
     </li>
 
@@ -3666,7 +3736,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3698,16 +3768,16 @@
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-box-applyhost-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>apply</strong>(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-applyauth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>apply</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 and IPv6 addresses for a host and service.</p>
-<h3 id="fun-box-broadcast_ip4service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip4</strong>(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-broadcast_ip4auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip4</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP4 broadcast address.</p>
-<h3 id="fun-box-broadcast_ip6service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip6</strong>(service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-broadcast_ip6auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip6</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP6 broadcast address.</p>
 <h3 id="fun-box-eqthat-dns-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-ip4host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip4</strong>(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-ip4auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip4</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 addresses for a host and service.</p>
-<h3 id="fun-box-ip6host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip6</strong>(host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-ip6auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip6</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv6 addresses for a host and service.</p>
 <h3 id="fun-box-is_ip4host-string-val-bool-val">fun box  <strong>is_ip4</strong>(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the host is a literal IPv4 address.</p>
@@ -3715,7 +3785,7 @@
 <p>Returns true if the host is a literal IPv6 address.</p>
 <h3 id="fun-box-nethat-dns-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h2 id="private-functions">Private Functions</h2>
-<h3 id="fun-box-_resolvefamily-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>_resolve</strong>(family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-_resolveauth-ambientauth-val-netauth-val-dnsauth-val-family-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>_resolve</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Turns an addrinfo pointer into an array of addresses.</p>
               
             </div>
@@ -3724,7 +3794,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../net-IPAddress/" class="btn btn-neutral float-right" title="class IPAddress">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../net-DNSAuth/" class="btn btn-neutral float-right" title="primitive DNSAuth">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../net-Buffer/" class="btn btn-neutral" title="class Buffer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -3756,7 +3826,7 @@
         <span><a href="../net-Buffer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../net-IPAddress/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../net-DNSAuth/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

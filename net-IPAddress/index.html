@@ -8,7 +8,7 @@
   
   
   
-  <title>class IPAddress - Pony Standard Library</title>
+  <title>class IPAddress - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2272,6 +2272,20 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNSAuth/">primitive DNSAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNSLookupAuth/">type DNSLookupAuth</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">class IPAddress</a>
         
@@ -2300,6 +2314,27 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-NetAuth/">primitive NetAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPAuth/">primitive TCPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectAuth/">primitive TCPConnectAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnection/">actor TCPConnection</a>
         
     </li>
@@ -2307,7 +2342,21 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectionAuth/">type TCPConnectionAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnectionNotify/">interface TCPConnectionNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenAuth/">primitive TCPListenAuth</a>
         
     </li>
 
@@ -2322,6 +2371,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-TCPListener/">actor TCPListener</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenerAuth/">type TCPListenerAuth</a>
         
     </li>
 
@@ -2363,6 +2419,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-UDPAuth/">primitive UDPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-UDPNotify/">interface UDPNotify</a>
         
     </li>
@@ -2371,6 +2434,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-UDPSocket/">actor UDPSocket</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPSocketAuth/">type UDPSocketAuth</a>
         
     </li>
 
@@ -3666,7 +3736,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3717,7 +3787,7 @@ scope field is the IPv6 scope, or invalid for an IPv4 address.</p>
 <p>Returns true for an IPv4 address.</p>
 <h3 id="fun-box-ip6-bool-val">fun box  <strong>ip6</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true for an IPv6 address.</p>
-<h3 id="fun-box-nameoptional-reversedns-bool-val-optional-servicename-bool-val-string-val-string-val">fun box  <strong>name</strong>(optional reversedns: <a href="../builtin-Bool">Bool</a> val, optional servicename: <a href="../builtin-Bool">Bool</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val) ?</h3>
+<h3 id="fun-box-nameoptional-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val-optional-servicename-bool-val-string-val-string-val">fun box  <strong>name</strong>(optional reversedns: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val) | <a href="../builtin-None">None</a> val), optional servicename: <a href="../builtin-Bool">Bool</a> val): (<a href="../builtin-String">String</a> val , <a href="../builtin-String">String</a> val) ?</h3>
 <p>Return the host and service name.</p>
               
             </div>
@@ -3729,7 +3799,7 @@ scope field is the IPv6 scope, or invalid for an IPv4 address.</p>
         <a href="../net-Main/" class="btn btn-neutral float-right" title="actor Main">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../net-DNS/" class="btn btn-neutral" title="primitive DNS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../net-DNSLookupAuth/" class="btn btn-neutral" title="type DNSLookupAuth"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -3755,7 +3825,7 @@ scope field is the IPv6 scope, or invalid for an IPv4 address.</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../net-DNS/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../net-DNSLookupAuth/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../net-Main/" style="color: #fcfcfc">Next &raquo;</a></span>

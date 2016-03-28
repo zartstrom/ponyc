@@ -1862,6 +1862,18 @@
     </url>
         
     <url>
+     <loc>None/net-DNSAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-DNSLookupAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/net-IPAddress/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
@@ -1874,13 +1886,43 @@
     </url>
         
     <url>
+     <loc>None/net-NetAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-TCPAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-TCPConnectAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/net-TCPConnection/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+     <loc>None/net-TCPConnectionAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/net-TCPConnectionNotify/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-TCPListenAuth/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1893,6 +1935,12 @@
         
     <url>
      <loc>None/net-TCPListener/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-TCPListenerAuth/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -1928,6 +1976,12 @@
     </url>
         
     <url>
+     <loc>None/net-UDPAuth/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/net-UDPNotify/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
@@ -1935,6 +1989,12 @@
         
     <url>
      <loc>None/net-UDPSocket/</loc>
+     <lastmod>2016-03-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/net-UDPSocketAuth/</loc>
      <lastmod>2016-03-28</lastmod>
      <changefreq>daily</changefreq>
     </url>

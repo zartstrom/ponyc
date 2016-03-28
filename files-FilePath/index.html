@@ -8,7 +8,7 @@
   
   
   
-  <title>class FilePath - Pony Standard Library</title>
+  <title>class FilePath - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -2286,6 +2286,20 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-DNSAuth/">primitive DNSAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-DNSLookupAuth/">type DNSLookupAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-IPAddress/">class IPAddress</a>
         
     </li>
@@ -2300,6 +2314,27 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-NetAuth/">primitive NetAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPAuth/">primitive TCPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectAuth/">primitive TCPConnectAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnection/">actor TCPConnection</a>
         
     </li>
@@ -2307,7 +2342,21 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-TCPConnectionAuth/">type TCPConnectionAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-TCPConnectionNotify/">interface TCPConnectionNotify</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenAuth/">primitive TCPListenAuth</a>
         
     </li>
 
@@ -2322,6 +2371,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-TCPListener/">actor TCPListener</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-TCPListenerAuth/">type TCPListenerAuth</a>
         
     </li>
 
@@ -2363,6 +2419,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../net-UDPAuth/">primitive UDPAuth</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../net-UDPNotify/">interface UDPNotify</a>
         
     </li>
@@ -2371,6 +2434,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../net-UDPSocket/">actor UDPSocket</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../net-UDPSocketAuth/">type UDPSocketAuth</a>
         
     </li>
 
@@ -3666,7 +3736,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3703,9 +3773,9 @@ that path.</p>
 <li>let path: <a href="../builtin-String">String</a> val</li>
 </ul>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createbase-filepath-val-ambientauth-val-none-val-path-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val">new <strong>create</strong>(base: ((<a href="../files-FilePath">FilePath</a> val | <a href="../builtin-AmbientAuth">AmbientAuth</a> val) | <a href="../builtin-None">None</a> val), path': <a href="../builtin-String">String</a> val, optional caps': <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] val) ?</h3>
+<h3 id="new-createbase-filepath-val-ambientauth-val-path-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val">new <strong>create</strong>(base: (<a href="../files-FilePath">FilePath</a> val | <a href="../builtin-AmbientAuth">AmbientAuth</a> val), path': <a href="../builtin-String">String</a> val, optional caps': <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] val) ?</h3>
 <h3 id="new-_createpath-string-val-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val">new <strong>_create</strong>(path': <a href="../builtin-String">String</a> val, caps': <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] val)</h3>
-<h3 id="new-mkdtempbase-filepath-val-ambientauth-val-none-val-optional-prefix-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val">new <strong>mkdtemp</strong>(base: ((<a href="../files-FilePath">FilePath</a> val | <a href="../builtin-AmbientAuth">AmbientAuth</a> val) | <a href="../builtin-None">None</a> val), optional prefix: <a href="../builtin-String">String</a> val, optional caps': <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] val) ?</h3>
+<h3 id="new-mkdtempbase-filepath-val-ambientauth-val-optional-prefix-string-val-optional-caps-flags91filecreate-val-filechmod-val-filechown-val-filelink-val-filelookup-val-filemkdir-val-fileread-val-fileremove-val-filerename-val-fileseek-val-filestat-val-filesync-val-filetime-val-filetruncate-val-filewrite-val-u32-val93-val">new <strong>mkdtemp</strong>(base: (<a href="../files-FilePath">FilePath</a> val | <a href="../builtin-AmbientAuth">AmbientAuth</a> val), optional prefix: <a href="../builtin-String">String</a> val, optional caps': <a href="../collections-Flags">Flags</a>[((((((((((((((<a href="../files-FileCreate">FileCreate</a> val | <a href="../files-FileChmod">FileChmod</a> val) | <a href="../files-FileChown">FileChown</a> val) | <a href="../files-FileLink">FileLink</a> val) | <a href="../files-FileLookup">FileLookup</a> val) | <a href="../files-FileMkdir">FileMkdir</a> val) | <a href="../files-FileRead">FileRead</a> val) | <a href="../files-FileRemove">FileRemove</a> val) | <a href="../files-FileRename">FileRename</a> val) | <a href="../files-FileSeek">FileSeek</a> val) | <a href="../files-FileStat">FileStat</a> val) | <a href="../files-FileSync">FileSync</a> val) | <a href="../files-FileTime">FileTime</a> val) | <a href="../files-FileTruncate">FileTruncate</a> val) | <a href="../files-FileWrite">FileWrite</a> val), <a href="../builtin-U32">U32</a> val] val) ?</h3>
 <h2 id="public-functions">Public Functions</h2>
 <h3 id="fun-val-canonical-filepath-val">fun val  <strong>canonical</strong>(): <a href="../files-FilePath">FilePath</a> val ?</h3>
 <p>Return the equivalent canonical absolute path. Raise an error if there
