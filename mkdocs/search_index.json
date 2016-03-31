@@ -28337,7 +28337,7 @@
         }, 
         {
             "location": "/term-ReadlineNotify/", 
-            "text": "interface term/ReadlineNotify\n\n\nDefault capability\n: \nref\n\n\nNotifier for readline.\n\n\nPublic Functions\n\n\nfun ref  \napply\n(line: \nString\n val, prompt: \nPromise\n[\nString\n val] tag): \nNone\n val\n\n\nReceives finished lines. The returned string is the next prompt. This may\nbe called with an empty line to get the current prompt. If this raises an\nerror, readline will stop handling input.\n\n\nfun ref  \ntab\n(line: \nString\n val): \nSeq\n[\nString\n val] box\n\n\nReturn tab completion possibilities.", 
+            "text": "interface term/ReadlineNotify\n\n\nDefault capability\n: \nref\n\n\nNotifier for readline.\n\n\nPublic Functions\n\n\nfun ref  \napply\n(line: \nString\n val, prompt: \nPromise\n[\nString\n val] tag): \nNone\n val\n\n\nReceives finished lines. The next prompt is set by fulfilling the promise.\nIf the promise is rejected, readline will stop handling input.\n\n\nfun ref  \ntab\n(line: \nString\n val): \nSeq\n[\nString\n val] box\n\n\nReturn tab completion possibilities.", 
             "title": "interface ReadlineNotify"
         }, 
         {
@@ -28352,7 +28352,7 @@
         }, 
         {
             "location": "/term-ReadlineNotify/#fun-ref-applyline-string-val-prompt-promise91string-val93-tag-none-val", 
-            "text": "Receives finished lines. The returned string is the next prompt. This may\nbe called with an empty line to get the current prompt. If this raises an\nerror, readline will stop handling input.", 
+            "text": "Receives finished lines. The next prompt is set by fulfilling the promise.\nIf the promise is rejected, readline will stop handling input.", 
             "title": "fun ref  apply(line: String val, prompt: Promise[String val] tag): None val"
         }, 
         {
