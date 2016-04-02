@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Packages\n\n\n\n\npackages/stdlib\n\n\nassert\n\n\nbuiltin\n\n\nbuiltin_test\n\n\nbureaucracy\n\n\ncapsicum\n\n\ncollections\n\n\ndebug\n\n\nencode/base64\n\n\nfiles\n\n\nglob\n\n\nini\n\n\njson\n\n\nmath\n\n\nnet\n\n\nnet/http\n\n\nnet/ssl\n\n\noptions\n\n\nponytest\n\n\npromises\n\n\nrandom\n\n\nregex\n\n\nsignals\n\n\nstrings\n\n\nterm\n\n\ntime", 
+            "text": "Packages\n\n\n\n\npackages/stdlib\n\n\nassert\n\n\nbuiltin\n\n\nbuiltin_test\n\n\nbureaucracy\n\n\ncapsicum\n\n\ncollections\n\n\ndebug\n\n\nencode/base64\n\n\nfiles\n\n\nglob\n\n\nini\n\n\njson\n\n\nlogger\n\n\nmath\n\n\nnet\n\n\nnet/http\n\n\nnet/ssl\n\n\noptions\n\n\nponytest\n\n\npromises\n\n\nrandom\n\n\nregex\n\n\nsignals\n\n\nstrings\n\n\nterm\n\n\ntime", 
             "title": "stdlib"
         }, 
         {
@@ -13227,7 +13227,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$53\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$56\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$47\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$44\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$50\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$41\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$59\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$65\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$54\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$57\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$48\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$51\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$40\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$43\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$34\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$31\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$37\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$28\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$46\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$52\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$41\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$35\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$32\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$38\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$29\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
             "title": "class List"
         }, 
         {
@@ -13306,29 +13306,29 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45391a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44091a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$53[A] box): Bool val"
+            "title": "fun box  every(f: $4$40[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44391a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$56[A] box): Bool val"
+            "title": "fun box  exists(f: $4$43[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43491a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$47[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$34[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44491a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43191a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$44[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$31[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45091a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43791a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$50[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$37[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13341,9 +13341,9 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44191a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42891a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$41[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$28[A, B] box): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13351,9 +13351,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-45991a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44691a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$59[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$46[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13421,9 +13421,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46591a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45291a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$65[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$52[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -13461,29 +13461,29 @@
             "title": "fun ref  _decrement(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45491a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44191a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$54[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45791a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44491a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$57[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-44891a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43591a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$48[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$35[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44591a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43291a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$45[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$32[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45191a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43891a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$51[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$38[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-ref-_increment-none-val", 
@@ -13491,9 +13491,9 @@
             "title": "fun ref  _increment(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44291a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-42991a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$42[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$29[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref", 
@@ -19359,6 +19359,1036 @@
             "location": "/json-_TestPrintString/#fun-ref-timed_outh-testhelper-val-none-val", 
             "text": "", 
             "title": "fun ref  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger--index/", 
+            "text": "Logger package\n\n\nProvides basic logging facilities. For most use cases, the \nStringLogger\n class\nwill be used. On construction, it takes 2 parameters and a 3rd optional\nparameter:\n\n\n\n\nLogLevel below which no output will be logged\n\n\nOutStream to log to\n\n\nOptional LogFormatter\n\n\n\n\nIf you need to log arbitrary objects, take a look at \nObjectLogger[A]\n which\ncan log arbitrary objects so long as you provide it a lambda to covert from A\nto String.\n\n\nAPI Philosophy\n\n\nThe API for using Logger is an attempt to abide by the Pony philosophy of first,\nbe correct and secondly, aim for performance. One of the ways that logging can\nslow your system down is by having to evaluate expressions to be logged\nwhether they will be logged or not (based on the level of logging). For example:\n\n\nlogger.log(Warn, name + \": \" + reason)\n\n\nwill construct a new String regardless of whether we will end up logging the\nmessage or not.\n\n\nThe Logger API uses boolean short circuiting to avoid this.\n\n\nlogger(Warn) and logger.log(name + \": \" + reason)\n\n\nwill not evaluate the expression to be logged unless the log level Warn is at\nor above the overall log level for our logging. This is as close as we can get\nto zero cost for items that aren't going to end up being logged.\n\n\nExample programs\n\n\nString Logger\n\n\nThe following program will output 'my warn message' and 'my error message' to\nSTDOUT in the standard default log format.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = StringLogger(\n      Warn,\n      env.out)\n\n    logger(Fine) and logger.log(\nmy fine message\n)\n    logger(Info) and logger.log(\nmy info message\n)\n    logger(Warn) and logger.log(\nmy warn message\n)\n    logger(Error) and logger.log(\nmy error message\n)\n\n\n\n\nLogger[A]\n\n\nThe following program will output '42' to STDOUT in the standard default log\nformat.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = Logger[U64](Fine,\n    env.out,\n    lambda(a: U64): String =\n a.string() end)\n\n    logger(Error) and logger.log(U64(42))\n\n\n\n\nCustom formatting your logs\n\n\nThe Logger package provides an interface for formatting logs. If you wish to\noverride the standard formatting, you can create an object that implements:\n\n\ninterface val LogFormatter\n  fun apply(\n    msg: String,\n    file_name: String,\n    file_linenum: String,\n    file_linepos: String): String\n\n\n\n\nThis can either be a class or because the interface only has a single apply\nmethod, can also be a lambda.\n\n\nPublic Types\n\n\n\n\nprimitive DefaultLogFormatter\n\n\nprimitive Error\n\n\nprimitive Fine\n\n\nprimitive Info\n\n\ninterface LogFormatter\n\n\ntype LogLevel\n\n\nclass Logger\n\n\nprimitive StringLogger\n\n\nprimitive Warn\n\n\n\n\nPrivate Types\n\n\n\n\ntrait _LoggerTest\n\n\ntrait _StringLoggerTest\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestError\n\n\nclass _TestFine\n\n\nprimitive _TestFormatter\n\n\nclass _TestInfo\n\n\nclass _TestObjectLogging\n\n\nactor _TestStream\n\n\nclass _TestWarn", 
+            "title": "Package"
+        }, 
+        {
+            "location": "/logger--index/#logger-package", 
+            "text": "Provides basic logging facilities. For most use cases, the  StringLogger  class\nwill be used. On construction, it takes 2 parameters and a 3rd optional\nparameter:   LogLevel below which no output will be logged  OutStream to log to  Optional LogFormatter   If you need to log arbitrary objects, take a look at  ObjectLogger[A]  which\ncan log arbitrary objects so long as you provide it a lambda to covert from A\nto String.", 
+            "title": "Logger package"
+        }, 
+        {
+            "location": "/logger--index/#api-philosophy", 
+            "text": "The API for using Logger is an attempt to abide by the Pony philosophy of first,\nbe correct and secondly, aim for performance. One of the ways that logging can\nslow your system down is by having to evaluate expressions to be logged\nwhether they will be logged or not (based on the level of logging). For example:  logger.log(Warn, name + \": \" + reason)  will construct a new String regardless of whether we will end up logging the\nmessage or not.  The Logger API uses boolean short circuiting to avoid this.  logger(Warn) and logger.log(name + \": \" + reason)  will not evaluate the expression to be logged unless the log level Warn is at\nor above the overall log level for our logging. This is as close as we can get\nto zero cost for items that aren't going to end up being logged.", 
+            "title": "API Philosophy"
+        }, 
+        {
+            "location": "/logger--index/#example-programs", 
+            "text": "", 
+            "title": "Example programs"
+        }, 
+        {
+            "location": "/logger--index/#string-logger", 
+            "text": "The following program will output 'my warn message' and 'my error message' to\nSTDOUT in the standard default log format.  use  logger \n\nactor Main\n  new create(env: Env) = \n    let logger = StringLogger(\n      Warn,\n      env.out)\n\n    logger(Fine) and logger.log( my fine message )\n    logger(Info) and logger.log( my info message )\n    logger(Warn) and logger.log( my warn message )\n    logger(Error) and logger.log( my error message )", 
+            "title": "String Logger"
+        }, 
+        {
+            "location": "/logger--index/#loggera", 
+            "text": "The following program will output '42' to STDOUT in the standard default log\nformat.  use  logger \n\nactor Main\n  new create(env: Env) = \n    let logger = Logger[U64](Fine,\n    env.out,\n    lambda(a: U64): String =  a.string() end)\n\n    logger(Error) and logger.log(U64(42))", 
+            "title": "Logger[A]"
+        }, 
+        {
+            "location": "/logger--index/#custom-formatting-your-logs", 
+            "text": "The Logger package provides an interface for formatting logs. If you wish to\noverride the standard formatting, you can create an object that implements:  interface val LogFormatter\n  fun apply(\n    msg: String,\n    file_name: String,\n    file_linenum: String,\n    file_linepos: String): String  This can either be a class or because the interface only has a single apply\nmethod, can also be a lambda.", 
+            "title": "Custom formatting your logs"
+        }, 
+        {
+            "location": "/logger--index/#public-types", 
+            "text": "primitive DefaultLogFormatter  primitive Error  primitive Fine  primitive Info  interface LogFormatter  type LogLevel  class Logger  primitive StringLogger  primitive Warn", 
+            "title": "Public Types"
+        }, 
+        {
+            "location": "/logger--index/#private-types", 
+            "text": "trait _LoggerTest  trait _StringLoggerTest", 
+            "title": "Private Types"
+        }, 
+        {
+            "location": "/logger--index/#test-types", 
+            "text": "actor Main  class _TestError  class _TestFine  primitive _TestFormatter  class _TestInfo  class _TestObjectLogging  actor _TestStream  class _TestWarn", 
+            "title": "Test Types"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/", 
+            "text": "primitive logger/DefaultLogFormatter is \nLogFormatter\n val\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(msg: \nString\n val, loc: \nSourceLoc\n val): \nString\n val\n\n\nfun box  \neq\n(that: \nDefaultLogFormatter\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nDefaultLogFormatter\n val): \nBool\n val", 
+            "title": "primitive DefaultLogFormatter"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#primitive-loggerdefaultlogformatter-is-logformatter-val", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/DefaultLogFormatter is LogFormatter val"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#fun-box-applymsg-string-val-loc-sourceloc-val-string-val", 
+            "text": "", 
+            "title": "fun box  apply(msg: String val, loc: SourceLoc val): String val"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#fun-box-eqthat-defaultlogformatter-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: DefaultLogFormatter val): Bool val"
+        }, 
+        {
+            "location": "/logger-DefaultLogFormatter/#fun-box-nethat-defaultlogformatter-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: DefaultLogFormatter val): Bool val"
+        }, 
+        {
+            "location": "/logger-Error/", 
+            "text": "primitive logger/Error\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(): \nU32\n val\n\n\nfun box  \neq\n(that: \nError\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nError\n val): \nBool\n val", 
+            "title": "primitive Error"
+        }, 
+        {
+            "location": "/logger-Error/#primitive-loggererror", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/Error"
+        }, 
+        {
+            "location": "/logger-Error/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Error/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-Error/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Error/#fun-box-apply-u32-val", 
+            "text": "", 
+            "title": "fun box  apply(): U32 val"
+        }, 
+        {
+            "location": "/logger-Error/#fun-box-eqthat-error-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: Error val): Bool val"
+        }, 
+        {
+            "location": "/logger-Error/#fun-box-nethat-error-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: Error val): Bool val"
+        }, 
+        {
+            "location": "/logger-Fine/", 
+            "text": "primitive logger/Fine\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(): \nU32\n val\n\n\nfun box  \neq\n(that: \nFine\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nFine\n val): \nBool\n val", 
+            "title": "primitive Fine"
+        }, 
+        {
+            "location": "/logger-Fine/#primitive-loggerfine", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/Fine"
+        }, 
+        {
+            "location": "/logger-Fine/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Fine/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-Fine/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Fine/#fun-box-apply-u32-val", 
+            "text": "", 
+            "title": "fun box  apply(): U32 val"
+        }, 
+        {
+            "location": "/logger-Fine/#fun-box-eqthat-fine-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: Fine val): Bool val"
+        }, 
+        {
+            "location": "/logger-Fine/#fun-box-nethat-fine-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: Fine val): Bool val"
+        }, 
+        {
+            "location": "/logger-Info/", 
+            "text": "primitive logger/Info\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(): \nU32\n val\n\n\nfun box  \neq\n(that: \nInfo\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nInfo\n val): \nBool\n val", 
+            "title": "primitive Info"
+        }, 
+        {
+            "location": "/logger-Info/#primitive-loggerinfo", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/Info"
+        }, 
+        {
+            "location": "/logger-Info/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Info/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-Info/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Info/#fun-box-apply-u32-val", 
+            "text": "", 
+            "title": "fun box  apply(): U32 val"
+        }, 
+        {
+            "location": "/logger-Info/#fun-box-eqthat-info-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: Info val): Bool val"
+        }, 
+        {
+            "location": "/logger-Info/#fun-box-nethat-info-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: Info val): Bool val"
+        }, 
+        {
+            "location": "/logger-LogFormatter/", 
+            "text": "interface logger/LogFormatter\n\n\nDefault capability\n: \nval\n\n\nInterface required to implement custom log formatting.\n\n\n\n\nmsg\n is the logged message\n\n\nloc\n is the location log was called from\n\n\n\n\nSee \nDefaultLogFormatter\n for an example of how to implement a LogFormatter.\n\n\nPublic Functions\n\n\nfun box  \napply\n(msg: \nString\n val, loc: \nSourceLoc\n val): \nString\n val", 
+            "title": "interface LogFormatter"
+        }, 
+        {
+            "location": "/logger-LogFormatter/#interface-loggerlogformatter", 
+            "text": "Default capability :  val  Interface required to implement custom log formatting.   msg  is the logged message  loc  is the location log was called from   See  DefaultLogFormatter  for an example of how to implement a LogFormatter.", 
+            "title": "interface logger/LogFormatter"
+        }, 
+        {
+            "location": "/logger-LogFormatter/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-LogFormatter/#fun-box-applymsg-string-val-loc-sourceloc-val-string-val", 
+            "text": "", 
+            "title": "fun box  apply(msg: String val, loc: SourceLoc val): String val"
+        }, 
+        {
+            "location": "/logger-LogLevel/", 
+            "text": "type logger/LogLevel is (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nNo doc string provided.", 
+            "title": "type LogLevel"
+        }, 
+        {
+            "location": "/logger-LogLevel/#type-loggerloglevel-is-fine-val-info-val-warn-val-error-val", 
+            "text": "No doc string provided.", 
+            "title": "type logger/LogLevel is (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-Logger/", 
+            "text": "class logger/Logger[A: A]\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), out: \nOutStream\n tag, f: \n$20$1\n[A] val, optional formatter: \nLogFormatter\n val)\n\n\nPublic Functions\n\n\nfun box  \napply\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)): \nBool\n val\n\n\nfun box  \nlog\n(value: A, optional loc: \nSourceLoc\n val): \nBool\n val", 
+            "title": "class Logger"
+        }, 
+        {
+            "location": "/logger-Logger/#class-loggerlogger91a-a93", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "class logger/Logger[A: A]"
+        }, 
+        {
+            "location": "/logger-Logger/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Logger/#new-createlevel-fine-val-info-val-warn-val-error-val-out-outstream-tag-f-20191a93-val-optional-formatter-logformatter-val", 
+            "text": "", 
+            "title": "new create(level: (((Fine val | Info val) | Warn val) | Error val), out: OutStream tag, f: $20$1[A] val, optional formatter: LogFormatter val)"
+        }, 
+        {
+            "location": "/logger-Logger/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Logger/#fun-box-applylevel-fine-val-info-val-warn-val-error-val-bool-val", 
+            "text": "", 
+            "title": "fun box  apply(level: (((Fine val | Info val) | Warn val) | Error val)): Bool val"
+        }, 
+        {
+            "location": "/logger-Logger/#fun-box-logvalue-a-optional-loc-sourceloc-val-bool-val", 
+            "text": "", 
+            "title": "fun box  log(value: A, optional loc: SourceLoc val): Bool val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/", 
+            "text": "trait logger/_LoggerTest[A: A] is \nUnitTest\n ref\n\n\nDefault capability\n: \nref\n\n\nNo doc string provided.\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger': \nLogger\n[A] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[A] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "trait _LoggerTest"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#trait-logger_loggertest91a-a93-is-unittest-ref", 
+            "text": "Default capability :  ref  No doc string provided.", 
+            "title": "trait logger/_LoggerTest[A: A] is UnitTest ref"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-loglogger-logger91a93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger': Logger[A] val): None val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91a93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[A] val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_LoggerTest/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-Main/", 
+            "text": "actor logger/Main is \nTestList\n ref\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(env: \nEnv\n val)\n\n\nnew \nmake\n()\n\n\nPublic Functions\n\n\nfun tag  \ntests\n(test: \nPonyTest\n tag): \nNone\n val", 
+            "title": "actor Main"
+        }, 
+        {
+            "location": "/logger-Main/#actor-loggermain-is-testlist-ref", 
+            "text": "Default capability :  tag  No doc string provided.", 
+            "title": "actor logger/Main is TestList ref"
+        }, 
+        {
+            "location": "/logger-Main/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Main/#new-createenv-env-val", 
+            "text": "", 
+            "title": "new create(env: Env val)"
+        }, 
+        {
+            "location": "/logger-Main/#new-make", 
+            "text": "", 
+            "title": "new make()"
+        }, 
+        {
+            "location": "/logger-Main/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Main/#fun-tag-teststest-ponytest-tag-none-val", 
+            "text": "", 
+            "title": "fun tag  tests(test: PonyTest tag): None val"
+        }, 
+        {
+            "location": "/logger-StringLogger/", 
+            "text": "primitive logger/StringLogger\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), out: \nOutStream\n tag, optional formatter: \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \neq\n(that: \nStringLogger\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nStringLogger\n val): \nBool\n val", 
+            "title": "primitive StringLogger"
+        }, 
+        {
+            "location": "/logger-StringLogger/#primitive-loggerstringlogger", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/StringLogger"
+        }, 
+        {
+            "location": "/logger-StringLogger/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-StringLogger/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-StringLogger/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-StringLogger/#fun-box-applylevel-fine-val-info-val-warn-val-error-val-out-outstream-tag-optional-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  apply(level: (((Fine val | Info val) | Warn val) | Error val), out: OutStream tag, optional formatter: LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-StringLogger/#fun-box-eqthat-stringlogger-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: StringLogger val): Bool val"
+        }, 
+        {
+            "location": "/logger-StringLogger/#fun-box-nethat-stringlogger-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: StringLogger val): Bool val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/", 
+            "text": "trait logger/_StringLoggerTest is \n_LoggerTest\n[\nString\n val] ref\n\n\nDefault capability\n: \nref\n\n\nNo doc string provided.\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger': \nLogger\n[\nString\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "trait _StringLoggerTest"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#trait-logger_stringloggertest-is-_loggertest91string-val93-ref", 
+            "text": "Default capability :  ref  No doc string provided.", 
+            "title": "trait logger/_StringLoggerTest is _LoggerTest[String val] ref"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-loglogger-logger91string-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger': Logger[String val] val): None val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_StringLoggerTest/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-_TestError/", 
+            "text": "class logger/_TestError is \n_StringLoggerTest\n ref\n\n\nDefault capability\n: \niso\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger: \nLogger\n[\nString\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "class _TestError"
+        }, 
+        {
+            "location": "/logger-_TestError/#class-logger_testerror-is-_stringloggertest-ref", 
+            "text": "Default capability :  iso  No doc string provided.", 
+            "title": "class logger/_TestError is _StringLoggerTest ref"
+        }, 
+        {
+            "location": "/logger-_TestError/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestError/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestError/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-loglogger-logger91string-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger: Logger[String val] val): None val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestError/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestError/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-_TestFine/", 
+            "text": "class logger/_TestFine is \n_StringLoggerTest\n ref\n\n\nDefault capability\n: \niso\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger: \nLogger\n[\nString\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "class _TestFine"
+        }, 
+        {
+            "location": "/logger-_TestFine/#class-logger_testfine-is-_stringloggertest-ref", 
+            "text": "Default capability :  iso  No doc string provided.", 
+            "title": "class logger/_TestFine is _StringLoggerTest ref"
+        }, 
+        {
+            "location": "/logger-_TestFine/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestFine/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestFine/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-loglogger-logger91string-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger: Logger[String val] val): None val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestFine/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestFine/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/", 
+            "text": "primitive logger/_TestFormatter is \nLogFormatter\n val\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(msg: \nString\n val, loc: \nSourceLoc\n val): \nString\n val\n\n\nfun box  \neq\n(that: \n_TestFormatter\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \n_TestFormatter\n val): \nBool\n val", 
+            "title": "primitive _TestFormatter"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#primitive-logger_testformatter-is-logformatter-val", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/_TestFormatter is LogFormatter val"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#fun-box-applymsg-string-val-loc-sourceloc-val-string-val", 
+            "text": "", 
+            "title": "fun box  apply(msg: String val, loc: SourceLoc val): String val"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#fun-box-eqthat-_testformatter-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: _TestFormatter val): Bool val"
+        }, 
+        {
+            "location": "/logger-_TestFormatter/#fun-box-nethat-_testformatter-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: _TestFormatter val): Bool val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/", 
+            "text": "class logger/_TestInfo is \n_StringLoggerTest\n ref\n\n\nDefault capability\n: \niso\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger: \nLogger\n[\nString\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "class _TestInfo"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#class-logger_testinfo-is-_stringloggertest-ref", 
+            "text": "Default capability :  iso  No doc string provided.", 
+            "title": "class logger/_TestInfo is _StringLoggerTest ref"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-loglogger-logger91string-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger: Logger[String val] val): None val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestInfo/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/", 
+            "text": "class logger/_TestObjectLogging is \n_LoggerTest\n[\nU64\n val] ref\n\n\nDefault capability\n: \nref\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger': \nLogger\n[\nU64\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nU64\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "class _TestObjectLogging"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#class-logger_testobjectlogging-is-_loggertest91u64-val93-ref", 
+            "text": "Default capability :  ref  No doc string provided.", 
+            "title": "class logger/_TestObjectLogging is _LoggerTest[U64 val] ref"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-loglogger-logger91u64-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger': Logger[U64 val] val): None val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91u64-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[U64 val] val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestObjectLogging/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-_TestStream/", 
+            "text": "actor logger/_TestStream is \nOutStream\n tag\n\n\nDefault capability\n: \ntag\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(h: \nTestHelper\n val, promise: \nPromise\n[\nString\n val] tag)\n\n\nPublic Behaviours\n\n\nbe \nlogged\n()\n\n\nbe \nprint\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nbe \nprintv\n(data: \nByteSeqIter\n val)\n\n\nbe \nwrite\n(data: (\nString\n val | \nArray\n[\nU8\n val] val))\n\n\nbe \nwritev\n(data: \nByteSeqIter\n val)\n\n\nPrivate Functions\n\n\nfun ref  \n_collect\n(data: (\nString\n val | \nArray\n[\nU8\n val] val)): \nNone\n val", 
+            "title": "actor _TestStream"
+        }, 
+        {
+            "location": "/logger-_TestStream/#actor-logger_teststream-is-outstream-tag", 
+            "text": "Default capability :  tag  No doc string provided.", 
+            "title": "actor logger/_TestStream is OutStream tag"
+        }, 
+        {
+            "location": "/logger-_TestStream/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestStream/#new-createh-testhelper-val-promise-promise91string-val93-tag", 
+            "text": "", 
+            "title": "new create(h: TestHelper val, promise: Promise[String val] tag)"
+        }, 
+        {
+            "location": "/logger-_TestStream/#public-behaviours", 
+            "text": "", 
+            "title": "Public Behaviours"
+        }, 
+        {
+            "location": "/logger-_TestStream/#be-logged", 
+            "text": "", 
+            "title": "be logged()"
+        }, 
+        {
+            "location": "/logger-_TestStream/#be-printdata-string-val-array91u8-val93-val", 
+            "text": "", 
+            "title": "be print(data: (String val | Array[U8 val] val))"
+        }, 
+        {
+            "location": "/logger-_TestStream/#be-printvdata-byteseqiter-val", 
+            "text": "", 
+            "title": "be printv(data: ByteSeqIter val)"
+        }, 
+        {
+            "location": "/logger-_TestStream/#be-writedata-string-val-array91u8-val93-val", 
+            "text": "", 
+            "title": "be write(data: (String val | Array[U8 val] val))"
+        }, 
+        {
+            "location": "/logger-_TestStream/#be-writevdata-byteseqiter-val", 
+            "text": "", 
+            "title": "be writev(data: ByteSeqIter val)"
+        }, 
+        {
+            "location": "/logger-_TestStream/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestStream/#fun-ref-_collectdata-string-val-array91u8-val93-val-none-val", 
+            "text": "", 
+            "title": "fun ref  _collect(data: (String val | Array[U8 val] val)): None val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/", 
+            "text": "class logger/_TestWarn is \n_StringLoggerTest\n ref\n\n\nDefault capability\n: \niso\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \nexclusion_group\n(): \nString\n val\n\n\nfun tag  \nexpected\n(): \nString\n val\n\n\nfun box  \nlevel\n(): (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)\n\n\nfun box  \nlog\n(logger: \nLogger\n[\nString\n val] val): \nNone\n val\n\n\nfun box  \nlogger\n(level': (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), stream': \nOutStream\n tag, formatter': \nLogFormatter\n val): \nLogger\n[\nString\n val] val\n\n\nfun box  \nname\n(): \nString\n val\n\n\nfun ref  \ntear_down\n(h: \nTestHelper\n val): \nNone\n val\n\n\nfun box  \ntimed_out\n(h: \nTestHelper\n val): \nNone\n val\n\n\nPrivate Functions\n\n\nfun tag  \n_fulfill\n(h: \nTestHelper\n val, value: \nString\n val): \nString\n val", 
+            "title": "class _TestWarn"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#class-logger_testwarn-is-_stringloggertest-ref", 
+            "text": "Default capability :  iso  No doc string provided.", 
+            "title": "class logger/_TestWarn is _StringLoggerTest ref"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-applyh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  apply(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-exclusion_group-string-val", 
+            "text": "", 
+            "title": "fun box  exclusion_group(): String val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-tag-expected-string-val", 
+            "text": "", 
+            "title": "fun tag  expected(): String val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-level-fine-val-info-val-warn-val-error-val", 
+            "text": "", 
+            "title": "fun box  level(): (((Fine val | Info val) | Warn val) | Error val)"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-loglogger-logger91string-val93-val-none-val", 
+            "text": "", 
+            "title": "fun box  log(logger: Logger[String val] val): None val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-loggerlevel-fine-val-info-val-warn-val-error-val-stream-outstream-tag-formatter-logformatter-val-logger91string-val93-val", 
+            "text": "", 
+            "title": "fun box  logger(level': (((Fine val | Info val) | Warn val) | Error val), stream': OutStream tag, formatter': LogFormatter val): Logger[String val] val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-name-string-val", 
+            "text": "", 
+            "title": "fun box  name(): String val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-ref-tear_downh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun ref  tear_down(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-box-timed_outh-testhelper-val-none-val", 
+            "text": "", 
+            "title": "fun box  timed_out(h: TestHelper val): None val"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#private-functions", 
+            "text": "", 
+            "title": "Private Functions"
+        }, 
+        {
+            "location": "/logger-_TestWarn/#fun-tag-_fulfillh-testhelper-val-value-string-val-string-val", 
+            "text": "", 
+            "title": "fun tag  _fulfill(h: TestHelper val, value: String val): String val"
+        }, 
+        {
+            "location": "/logger-Warn/", 
+            "text": "primitive logger/Warn\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n()\n\n\nPublic Functions\n\n\nfun box  \napply\n(): \nU32\n val\n\n\nfun box  \neq\n(that: \nWarn\n val): \nBool\n val\n\n\nfun box  \nne\n(that: \nWarn\n val): \nBool\n val", 
+            "title": "primitive Warn"
+        }, 
+        {
+            "location": "/logger-Warn/#primitive-loggerwarn", 
+            "text": "Default capability :  val  No doc string provided.", 
+            "title": "primitive logger/Warn"
+        }, 
+        {
+            "location": "/logger-Warn/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/logger-Warn/#new-create", 
+            "text": "", 
+            "title": "new create()"
+        }, 
+        {
+            "location": "/logger-Warn/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/logger-Warn/#fun-box-apply-u32-val", 
+            "text": "", 
+            "title": "fun box  apply(): U32 val"
+        }, 
+        {
+            "location": "/logger-Warn/#fun-box-eqthat-warn-val-bool-val", 
+            "text": "", 
+            "title": "fun box  eq(that: Warn val): Bool val"
+        }, 
+        {
+            "location": "/logger-Warn/#fun-box-nethat-warn-val-bool-val", 
+            "text": "", 
+            "title": "fun box  ne(that: Warn val): Bool val"
         }, 
         {
             "location": "/math--index/", 
