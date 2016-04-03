@@ -7,23 +7,13 @@
         }, 
         {
             "location": "/packages-stdlib--index/", 
-            "text": "Pony Standard Library\n\n\nThis package represents the test suite for the Pony standard library.\n\n\nFor every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.\n\n\nAll tests can be run by compiling and running packages/stdlib.\n\n\nPublic Types\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main", 
+            "text": "Pony Standard Library\n\n\nThis package represents the test suite for the Pony standard library.\n\n\nFor every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.\n\n\nAll tests can be run by compiling and running packages/stdlib.\n\n\nTest Types\n\n\n\n\nactor Main", 
             "title": "Package"
         }, 
         {
             "location": "/packages-stdlib--index/#pony-standard-library", 
             "text": "This package represents the test suite for the Pony standard library.  For every new package, please add a Main actor and tests to the package in a\nfile called 'test.pony'. Then add a corresponding use directive and a line to\nthe main actor constructor of this package to invoke those tests.  All tests can be run by compiling and running packages/stdlib.", 
             "title": "Pony Standard Library"
-        }, 
-        {
-            "location": "/packages-stdlib--index/#public-types", 
-            "text": "", 
-            "title": "Public Types"
-        }, 
-        {
-            "location": "/packages-stdlib--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/packages-stdlib--index/#test-types", 
@@ -67,7 +57,7 @@
         }, 
         {
             "location": "/assert--index/", 
-            "text": "Assert package\n\n\nContains runtime assertions. If you are looking for assertion that only run\nwhen your code was compiled with the \ndebug\n flag, check out \nAssert\n. For\nassertions that are always enabled, check out \nFact\n.\n\n\nPublic Types\n\n\n\n\nprimitive Assert\n\n\nprimitive Fact\n\n\n\n\nPrivate Types\n\n\nTest Types", 
+            "text": "Assert package\n\n\nContains runtime assertions. If you are looking for assertion that only run\nwhen your code was compiled with the \ndebug\n flag, check out \nAssert\n. For\nassertions that are always enabled, check out \nFact\n.\n\n\nPublic Types\n\n\n\n\nprimitive Assert\n\n\nprimitive Fact", 
             "title": "Package"
         }, 
         {
@@ -79,16 +69,6 @@
             "location": "/assert--index/#public-types", 
             "text": "primitive Assert  primitive Fact", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/assert--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
-        }, 
-        {
-            "location": "/assert--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/assert-Assert/", 
@@ -172,7 +152,7 @@
         }, 
         {
             "location": "/builtin--index/", 
-            "text": "Builtin package\n\n\nThe builtin package is home to standard library members that require compiler\nsupport. For details on specific packages, see their individual entity entries.\n\n\nPublic Types\n\n\n\n\ntype Align\n\n\nprimitive AlignCenter\n\n\nprimitive AlignLeft\n\n\nprimitive AlignRight\n\n\nprimitive AmbientAuth\n\n\ninterface Any\n\n\nclass Array\n\n\nclass ArrayKeys\n\n\nclass ArrayPairs\n\n\nclass ArrayValues\n\n\nprimitive AsioEvent\n\n\ntype AsioEventID\n\n\ninterface AsioEventNotify\n\n\nprimitive Bool\n\n\ntype ByteSeq\n\n\ninterface ByteSeqIter\n\n\ninterface Comparable\n\n\ntype Compare\n\n\ninterface Creatable\n\n\ninterface DisposableActor\n\n\nclass Env\n\n\nprimitive Equal\n\n\ninterface Equatable\n\n\nprimitive F32\n\n\nprimitive F64\n\n\ntype Float\n\n\ntrait FloatingPoint\n\n\nprimitive FormatBinary\n\n\nprimitive FormatBinaryBare\n\n\nprimitive FormatDefault\n\n\nprimitive FormatDefaultNumber\n\n\nprimitive FormatExp\n\n\nprimitive FormatExpLarge\n\n\nprimitive FormatFix\n\n\nprimitive FormatFixLarge\n\n\ntype FormatFloat\n\n\nprimitive FormatGeneral\n\n\nprimitive FormatGeneralLarge\n\n\nprimitive FormatHex\n\n\nprimitive FormatHexBare\n\n\nprimitive FormatHexSmall\n\n\nprimitive FormatHexSmallBare\n\n\ntype FormatInt\n\n\nprimitive FormatOctal\n\n\nprimitive FormatOctalBare\n\n\ninterface FormatSettings\n\n\nprimitive FormatSettingsDefault\n\n\ntype FormatSettingsFloat\n\n\nclass FormatSettingsHolder\n\n\ntype FormatSettingsInt\n\n\ntrait FormatSpec\n\n\nprimitive FormatUTF32\n\n\nprimitive Greater\n\n\ninterface HasEq\n\n\nprimitive I128\n\n\nprimitive I16\n\n\nprimitive I32\n\n\nprimitive I64\n\n\nprimitive I8\n\n\nprimitive ILong\n\n\nprimitive ISize\n\n\ntrait Integer\n\n\ninterface Iterator\n\n\nprimitive Less\n\n\nstruct MaybePointer\n\n\nprimitive None\n\n\ntype Number\n\n\ninterface OutStream\n\n\nprimitive Platform\n\n\nstruct Pointer\n\n\nprimitive PrefixDefault\n\n\ntype PrefixNumber\n\n\nprimitive PrefixSign\n\n\nprimitive PrefixSpace\n\n\ntrait PrefixSpec\n\n\ninterface ReadElement\n\n\ninterface ReadSeq\n\n\ntrait Real\n\n\ninterface Seq\n\n\ntype Signed\n\n\ninterface SourceLoc\n\n\nactor StdStream\n\n\nactor Stdin\n\n\ninterface StdinNotify\n\n\nclass String\n\n\nclass StringBytes\n\n\nclass StringRunes\n\n\ninterface Stringable\n\n\nprimitive U128\n\n\nprimitive U16\n\n\nprimitive U32\n\n\nprimitive U64\n\n\nprimitive U8\n\n\nprimitive ULong\n\n\nprimitive USize\n\n\ntype Unsigned\n\n\n\n\nPrivate Types\n\n\n\n\ntrait _ArithmeticConvertible\n\n\ntrait _SignedInteger\n\n\nprimitive _ToString\n\n\ntrait _UnsignedInteger\n\n\n\n\nTest Types", 
+            "text": "Builtin package\n\n\nThe builtin package is home to standard library members that require compiler\nsupport. For details on specific packages, see their individual entity entries.\n\n\nPublic Types\n\n\n\n\ntype Align\n\n\nprimitive AlignCenter\n\n\nprimitive AlignLeft\n\n\nprimitive AlignRight\n\n\nprimitive AmbientAuth\n\n\ninterface Any\n\n\nclass Array\n\n\nclass ArrayKeys\n\n\nclass ArrayPairs\n\n\nclass ArrayValues\n\n\nprimitive AsioEvent\n\n\ntype AsioEventID\n\n\ninterface AsioEventNotify\n\n\nprimitive Bool\n\n\ntype ByteSeq\n\n\ninterface ByteSeqIter\n\n\ninterface Comparable\n\n\ntype Compare\n\n\ninterface Creatable\n\n\ninterface DisposableActor\n\n\nclass Env\n\n\nprimitive Equal\n\n\ninterface Equatable\n\n\nprimitive F32\n\n\nprimitive F64\n\n\ntype Float\n\n\ntrait FloatingPoint\n\n\nprimitive FormatBinary\n\n\nprimitive FormatBinaryBare\n\n\nprimitive FormatDefault\n\n\nprimitive FormatDefaultNumber\n\n\nprimitive FormatExp\n\n\nprimitive FormatExpLarge\n\n\nprimitive FormatFix\n\n\nprimitive FormatFixLarge\n\n\ntype FormatFloat\n\n\nprimitive FormatGeneral\n\n\nprimitive FormatGeneralLarge\n\n\nprimitive FormatHex\n\n\nprimitive FormatHexBare\n\n\nprimitive FormatHexSmall\n\n\nprimitive FormatHexSmallBare\n\n\ntype FormatInt\n\n\nprimitive FormatOctal\n\n\nprimitive FormatOctalBare\n\n\ninterface FormatSettings\n\n\nprimitive FormatSettingsDefault\n\n\ntype FormatSettingsFloat\n\n\nclass FormatSettingsHolder\n\n\ntype FormatSettingsInt\n\n\ntrait FormatSpec\n\n\nprimitive FormatUTF32\n\n\nprimitive Greater\n\n\ninterface HasEq\n\n\nprimitive I128\n\n\nprimitive I16\n\n\nprimitive I32\n\n\nprimitive I64\n\n\nprimitive I8\n\n\nprimitive ILong\n\n\nprimitive ISize\n\n\ntrait Integer\n\n\ninterface Iterator\n\n\nprimitive Less\n\n\nstruct MaybePointer\n\n\nprimitive None\n\n\ntype Number\n\n\ninterface OutStream\n\n\nprimitive Platform\n\n\nstruct Pointer\n\n\nprimitive PrefixDefault\n\n\ntype PrefixNumber\n\n\nprimitive PrefixSign\n\n\nprimitive PrefixSpace\n\n\ntrait PrefixSpec\n\n\ninterface ReadElement\n\n\ninterface ReadSeq\n\n\ntrait Real\n\n\ninterface Seq\n\n\ntype Signed\n\n\ninterface SourceLoc\n\n\nactor StdStream\n\n\nactor Stdin\n\n\ninterface StdinNotify\n\n\nclass String\n\n\nclass StringBytes\n\n\nclass StringRunes\n\n\ninterface Stringable\n\n\nprimitive U128\n\n\nprimitive U16\n\n\nprimitive U32\n\n\nprimitive U64\n\n\nprimitive U8\n\n\nprimitive ULong\n\n\nprimitive USize\n\n\ntype Unsigned\n\n\n\n\nPrivate Types\n\n\n\n\ntrait _ArithmeticConvertible\n\n\ntrait _SignedInteger\n\n\nprimitive _ToString\n\n\ntrait _UnsignedInteger", 
             "title": "Package"
         }, 
         {
@@ -189,11 +169,6 @@
             "location": "/builtin--index/#private-types", 
             "text": "trait _ArithmeticConvertible  trait _SignedInteger  primitive _ToString  trait _UnsignedInteger", 
             "title": "Private Types"
-        }, 
-        {
-            "location": "/builtin--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/builtin-Align/", 
@@ -11717,7 +11692,7 @@
         }, 
         {
             "location": "/bureaucracy--index/", 
-            "text": "Bureaucracy package\n\n\nIt happens to almost every program. It starts small, tiny if you will, like a\nvillage where every actor knows every other actor and shutdown is easy. One day\nyou realize your program is no longer a cute seaside hamlet, its a bustling\nmetropolis and you are doing way too much work to keep track of everything. What\ndo you do? Call for a little bureaucracy.\n\n\nThe bureaucracy contains objects designed to ease your bookkeeping burdens. Need\nto shutdown a number of actors together? Check out \nCustodian\n. Need to keep\ntrack of a lot of stuff and be able to look it up by name? Check out \nRegistrar\n.\n\n\nPut bureaucracy to use today and before long, you're sprawling metropolis of a\ncode base will be manageable again in no time.\n\n\nPublic Types\n\n\n\n\nactor Custodian\n\n\nactor Registrar\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestCustodian\n\n\nactor _TestDisposable\n\n\nclass _TestRegistrar", 
+            "text": "Bureaucracy package\n\n\nIt happens to almost every program. It starts small, tiny if you will, like a\nvillage where every actor knows every other actor and shutdown is easy. One day\nyou realize your program is no longer a cute seaside hamlet, its a bustling\nmetropolis and you are doing way too much work to keep track of everything. What\ndo you do? Call for a little bureaucracy.\n\n\nThe bureaucracy contains objects designed to ease your bookkeeping burdens. Need\nto shutdown a number of actors together? Check out \nCustodian\n. Need to keep\ntrack of a lot of stuff and be able to look it up by name? Check out \nRegistrar\n.\n\n\nPut bureaucracy to use today and before long, you're sprawling metropolis of a\ncode base will be manageable again in no time.\n\n\nPublic Types\n\n\n\n\nactor Custodian\n\n\nactor Registrar\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestCustodian\n\n\nactor _TestDisposable\n\n\nclass _TestRegistrar", 
             "title": "Package"
         }, 
         {
@@ -11729,11 +11704,6 @@
             "location": "/bureaucracy--index/#public-types", 
             "text": "actor Custodian  actor Registrar", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/bureaucracy--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/bureaucracy--index/#test-types", 
@@ -12007,23 +11977,13 @@
         }, 
         {
             "location": "/capsicum--index/", 
-            "text": "No package doc string provided for capsicum.\n\n\nPublic Types\n\n\n\n\nprimitive Cap\n\n\ntype CapRights\n\n\nclass CapRights0\n\n\n\n\nPrivate Types\n\n\nTest Types", 
+            "text": "No package doc string provided for capsicum.\n\n\nPublic Types\n\n\n\n\nprimitive Cap\n\n\ntype CapRights\n\n\nclass CapRights0", 
             "title": "Package"
         }, 
         {
             "location": "/capsicum--index/#public-types", 
             "text": "primitive Cap  type CapRights  class CapRights0", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/capsicum--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
-        }, 
-        {
-            "location": "/capsicum--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/capsicum-Cap/", 
@@ -13227,7 +13187,7 @@
         }, 
         {
             "location": "/collections-List/", 
-            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$53\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$56\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$47\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$44\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$50\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$41\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$59\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$65\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$54\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$57\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$48\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$45\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$51\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$42\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
+            "text": "class collections/List[A: A] is \nSeq\n[A] ref\n\n\nDefault capability\n: \nref\n\n\nA doubly linked list.\n\n\nConstructors\n\n\nnew \ncreate\n(optional len: \nUSize\n val)\n\n\nnew \nfrom\n(seq: \nArray\n[A^] ref)\n\n\nnew \nunit\n(a: A)\n\n\nPublic Functions\n\n\nfun ref  \nappend\n(seq: (\nReadSeq\n[A] box \n \nReadElement\n[A^] box), optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAppend len elements from a sequence, starting from the given offset.\n\n\nfun ref  \nappend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and append them to this.\n\n\nfun ref  \nappend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the tail of the list.\n\n\nfun box  \napply\n(optional i: \nUSize\n val): this-\nA ?\n\n\nGet the i-th element, raising an error if the index is out of bounds.\n\n\nfun ref  \nclear\n(): \nList\n[A] ref^\n\n\nEmpties the list.\n\n\nfun box  \nclone\n(): \nList\n[this-\nA!] ref^\n\n\nClone the list.\n\n\nfun ref  \nconcat\n(iter: \nIterator\n[A^] ref, optional offset: \nUSize\n val, optional len: \nUSize\n val): \nList\n[A] ref^\n\n\nAdd len iterated elements to the end of the list, starting from the given\noffset.\n\n\nfun box  \ncontains\n[optional B: (A \n \nHasEq\n[A!] #read)](a: box-\nB #read): \nBool\n val\n\n\nReturns true if the list contains the provided element, false otherwise.\n\n\nfun box  \ndrop\n(n: \nUSize\n val): \nList\n[this-\nA!] ref^\n\n\nBuilds a list by dropping the first n elements.\n\n\nfun box  \nevery\n(f: \n$4$40\n[A] box): \nBool\n val\n\n\nReturns true if every element satisfies the provided predicate, false\notherwise.\n\n\nfun box  \nexists\n(f: \n$4$43\n[A] box): \nBool\n val\n\n\nReturns true if at least one element satisfies the provided predicate,\nfalse otherwise.\n\n\nfun box  \nfilter\n(f: \n$4$34\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list with those elements that satisfy a provided predicate.\n\n\nfun box  \nflat_map\n[B: B](f: \n$4$31\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.\n\n\nfun box  \nfold\n[B: B](f: \n$4$37\n[A, B] box, acc: B): B\n\n\nFolds the elements of the list using the supplied function.\n\n\nfun box  \nhead\n(): this-\nListNode\n[A] ref ?\n\n\nGet the head of the list.\n\n\nfun box  \nindex\n(i: \nUSize\n val): this-\nListNode\n[A] ref ?\n\n\nGets the i-th node, raising an error if the index is out of bounds.\n\n\nfun box  \nmap\n[B: B](f: \n$4$28\n[A, B] box): \nList\n[B] ref^\n\n\nBuilds a new list by applying a function to every member of the list.\n\n\nfun box  \nnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \npartition\n(f: \n$4$46\n[A] box): (\nList\n[this-\nA!] ref^ , \nList\n[this-\nA!] ref^)\n\n\nBuilds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.\n\n\nfun ref  \npop\n(): A^ ?\n\n\nRemoves a value from the tail of the list.\n\n\nfun ref  \nprepend_list\n(that: \nList\n[A] ref): \nList\n[A] ref^\n\n\nRemove all nodes from that and prepend them to this.\n\n\nfun ref  \nprepend_node\n(node: \nListNode\n[A] ref): \nList\n[A] ref^\n\n\nAdds a node to the head of the list.\n\n\nfun ref  \npush\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the tail of the list.\n\n\nfun ref  \nremove\n(i: \nUSize\n val): \nList\n[A] ref^ ?\n\n\nRemove the i-th node, raising an error if the index is out of bounds.\n\n\nfun ref  \nreserve\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nDo nothing, but be compatible with Seq.\n\n\nfun box  \nreverse\n(): \nList\n[this-\nA!] ref^\n\n\nBuilds a new list by reversing the elements in the list.\n\n\nfun box  \nrnodes\n(): \nListNodes\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the nodes in the list.\n\n\nfun box  \nrvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nfun ref  \nshift\n(): A^ ?\n\n\nRemoves a value from the head of the list.\n\n\nfun box  \nsize\n(): \nUSize\n val\n\n\nReturns the number of items in the list.\n\n\nfun box  \ntail\n(): this-\nListNode\n[A] ref ?\n\n\nGet the tail of the list.\n\n\nfun box  \ntake\n(n: \nUSize\n val): \nList\n[this-\nA!] ref\n\n\nBuilds a list of the first n elements.\n\n\nfun box  \ntake_while\n(f: \n$4$52\n[A] box): \nList\n[this-\nA!] ref^\n\n\nBuilds a list of elements satisfying the provided predicate until one does\nnot.\n\n\nfun ref  \ntruncate\n(len: \nUSize\n val): \nList\n[A] ref^\n\n\nTruncate the list to the given length, discarding excess elements.\nIf the list is already smaller than len, do nothing.\n\n\nfun ref  \nunshift\n(a: A): \nList\n[A] ref^\n\n\nAdds a value to the head of the list.\n\n\nfun ref  \nupdate\n(i: \nUSize\n val, value: A): A^ ?\n\n\nChange the i-th element, raising an error if the index is out of bounds.\nReturns the previous value, which may be None if the node has been popped\nbut left on the list.\n\n\nfun box  \nvalues\n(): \nListValues\n[A, this-\nListNode\n[A] ref] ref^\n\n\nReturn an iterator on the values in the list.\n\n\nPrivate Functions\n\n\nfun box  \n_contains\n[optional B: (A \n \nHasEq\n[A!] #read)](ln: this-\nListNode\n[A] ref, a: box-\nB #read): \nBool\n val\n\n\nPrivate helper for contains, recursively working with ListNodes.\n\n\nfun ref  \n_decrement\n(): \nNone\n val\n\n\nfun box  \n_every\n(ln: this-\nListNode\n[A] ref, f: \n$4$41\n[A] box): \nBool\n val\n\n\nPrivate helper for every, recursively working with ListNodes.\n\n\nfun box  \n_exists\n(ln: this-\nListNode\n[A] ref, f: \n$4$44\n[A] box): \nBool\n val\n\n\nPrivate helper for exists, recursively working with ListNodes.\n\n\nfun box  \n_filter\n(ln: this-\nListNode\n[A] ref, f: \n$4$35\n[A] box, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref\n\n\nPrivate helper for filter, recursively working with ListNodes.\n\n\nfun box  \nflat\nmap\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$32\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for flat_map, recursively working with ListNodes.\n\n\nfun box  \n_fold\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$38\n[A, B] box, acc: B): B\n\n\nPrivate helper for fold, recursively working with ListNodes.\n\n\nfun ref  \n_increment\n(): \nNone\n val\n\n\nfun box  \n_map\n[B: B](ln: this-\nListNode\n[A] ref, f: \n$4$29\n[A, B] box, acc: \nList\n[B] ref): \nList\n[B] ref^\n\n\nPrivate helper for map, recursively working with ListNodes.\n\n\nfun box  \n_reverse\n(ln: this-\nListNode\n[A] ref, acc: \nList\n[this-\nA!] ref): \nList\n[this-\nA!] ref^\n\n\nPrivate helper for reverse, recursively working with ListNodes.\n\n\nfun ref  \nset\nboth\n(node: \nListNode\n[A] ref): \nNone\n val\n\n\nfun ref  \nset\nhead\n(head': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val\n\n\nfun ref  \nset\ntail\n(tail': (\nListNode\n[A] ref | \nNone\n val)): \nNone\n val", 
             "title": "class List"
         }, 
         {
@@ -13306,29 +13266,29 @@
             "title": "fun box  drop(n: USize val): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-everyf-45391a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-everyf-44091a93-box-bool-val", 
             "text": "Returns true if every element satisfies the provided predicate, false\notherwise.", 
-            "title": "fun box  every(f: $4$53[A] box): Bool val"
+            "title": "fun box  every(f: $4$40[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-existsf-45691a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-existsf-44391a93-box-bool-val", 
             "text": "Returns true if at least one element satisfies the provided predicate,\nfalse otherwise.", 
-            "title": "fun box  exists(f: $4$56[A] box): Bool val"
+            "title": "fun box  exists(f: $4$43[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-filterf-44791a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-filterf-43491a93-box-list91this-a93-ref", 
             "text": "Builds a new list with those elements that satisfy a provided predicate.", 
-            "title": "fun box  filter(f: $4$47[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  filter(f: $4$34[A] box): List[this-&gt;A!] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-flat_map91b-b93f-44491a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flat_map91b-b93f-43191a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list and\nusing the elements of the resulting lists.", 
-            "title": "fun box  flat_map[B: B](f: $4$44[A, B] box): List[B] ref^"
+            "title": "fun box  flat_map[B: B](f: $4$31[A, B] box): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-fold91b-b93f-45091a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-fold91b-b93f-43791a-b93-box-acc-b-b", 
             "text": "Folds the elements of the list using the supplied function.", 
-            "title": "fun box  fold[B: B](f: $4$50[A, B] box, acc: B): B"
+            "title": "fun box  fold[B: B](f: $4$37[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-box-head-this-listnode91a93-ref", 
@@ -13341,9 +13301,9 @@
             "title": "fun box  index(i: USize val): this-&gt;ListNode[A] ref ?"
         }, 
         {
-            "location": "/collections-List/#fun-box-map91b-b93f-44191a-b93-box-list91b93-ref", 
+            "location": "/collections-List/#fun-box-map91b-b93f-42891a-b93-box-list91b93-ref", 
             "text": "Builds a new list by applying a function to every member of the list.", 
-            "title": "fun box  map[B: B](f: $4$41[A, B] box): List[B] ref^"
+            "title": "fun box  map[B: B](f: $4$28[A, B] box): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-nodes-listnodes91a-this-listnode91a93-ref93-ref", 
@@ -13351,9 +13311,9 @@
             "title": "fun box  nodes(): ListNodes[A, this-&gt;ListNode[A] ref] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-partitionf-45991a93-box-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-partitionf-44691a93-box-list91this-a93-ref-list91this-a93-ref", 
             "text": "Builds a pair of lists, the first of which is made up of the elements\nsatisfying the supplied predicate and the second of which is made up of\nthose that do not.", 
-            "title": "fun box  partition(f: $4$59[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
+            "title": "fun box  partition(f: $4$46[A] box): (List[this-&gt;A!] ref^ , List[this-&gt;A!] ref^)"
         }, 
         {
             "location": "/collections-List/#fun-ref-pop-a", 
@@ -13421,9 +13381,9 @@
             "title": "fun box  take(n: USize val): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-take_whilef-46591a93-box-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-take_whilef-45291a93-box-list91this-a93-ref", 
             "text": "Builds a list of elements satisfying the provided predicate until one does\nnot.", 
-            "title": "fun box  take_while(f: $4$65[A] box): List[this-&gt;A!] ref^"
+            "title": "fun box  take_while(f: $4$52[A] box): List[this-&gt;A!] ref^"
         }, 
         {
             "location": "/collections-List/#fun-ref-truncatelen-usize-val-list91a93-ref", 
@@ -13461,29 +13421,29 @@
             "title": "fun ref  _decrement(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-45491a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_everyln-this-listnode91a93-ref-f-44191a93-box-bool-val", 
             "text": "Private helper for every, recursively working with ListNodes.", 
-            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$54[A] box): Bool val"
+            "title": "fun box  _every(ln: this-&gt;ListNode[A] ref, f: $4$41[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-45791a93-box-bool-val", 
+            "location": "/collections-List/#fun-box-_existsln-this-listnode91a93-ref-f-44491a93-box-bool-val", 
             "text": "Private helper for exists, recursively working with ListNodes.", 
-            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$57[A] box): Bool val"
+            "title": "fun box  _exists(ln: this-&gt;ListNode[A] ref, f: $4$44[A] box): Bool val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-44891a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
+            "location": "/collections-List/#fun-box-_filterln-this-listnode91a93-ref-f-43591a93-box-acc-list91this-a93-ref-list91this-a93-ref", 
             "text": "Private helper for filter, recursively working with ListNodes.", 
-            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$48[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
+            "title": "fun box  _filter(ln: this-&gt;ListNode[A] ref, f: $4$35[A] box, acc: List[this-&gt;A!] ref): List[this-&gt;A!] ref"
         }, 
         {
-            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-44591a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-flatmap91b-b93ln-this-listnode91a93-ref-f-43291a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for flat_map, recursively working with ListNodes.", 
-            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$45[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  flatmap[B: B](ln: this-&gt;ListNode[A] ref, f: $4$32[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
-            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-45191a-b93-box-acc-b-b", 
+            "location": "/collections-List/#fun-box-_fold91b-b93ln-this-listnode91a93-ref-f-43891a-b93-box-acc-b-b", 
             "text": "Private helper for fold, recursively working with ListNodes.", 
-            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$51[A, B] box, acc: B): B"
+            "title": "fun box  _fold[B: B](ln: this-&gt;ListNode[A] ref, f: $4$38[A, B] box, acc: B): B"
         }, 
         {
             "location": "/collections-List/#fun-ref-_increment-none-val", 
@@ -13491,9 +13451,9 @@
             "title": "fun ref  _increment(): None val"
         }, 
         {
-            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-44291a-b93-box-acc-list91b93-ref-list91b93-ref", 
+            "location": "/collections-List/#fun-box-_map91b-b93ln-this-listnode91a93-ref-f-42991a-b93-box-acc-list91b93-ref-list91b93-ref", 
             "text": "Private helper for map, recursively working with ListNodes.", 
-            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$42[A, B] box, acc: List[B] ref): List[B] ref^"
+            "title": "fun box  _map[B: B](ln: this-&gt;ListNode[A] ref, f: $4$29[A, B] box, acc: List[B] ref): List[B] ref^"
         }, 
         {
             "location": "/collections-List/#fun-box-_reverseln-this-listnode91a93-ref-acc-list91this-a93-ref-list91this-a93-ref", 
@@ -14942,7 +14902,7 @@
         }, 
         {
             "location": "/debug--index/", 
-            "text": "Debug package\n\n\nProvides facilities to create output to either \nSTDOUT\n or \nSTDERR\n that will\nonly appear when the platform is debug configured. To create a binary with\ndebug configured, pass the \n-d\n flag to \nponyc\n when compiling e.g.:\n\n\nponyc -d\n\n\nExample code\n\n\nactor Main\n  new create(env: Env) =\n\n    Debug.out(\nThis will only bee seen when configured for debug info\n)\n    env.out.print(\nThis will always be seen\n)\n\n\n\n\nPublic Types\n\n\n\n\nprimitive Debug\n\n\nprimitive DebugErr\n\n\nprimitive DebugOut\n\n\ntype DebugStream\n\n\n\n\nPrivate Types\n\n\nTest Types", 
+            "text": "Debug package\n\n\nProvides facilities to create output to either \nSTDOUT\n or \nSTDERR\n that will\nonly appear when the platform is debug configured. To create a binary with\ndebug configured, pass the \n-d\n flag to \nponyc\n when compiling e.g.:\n\n\nponyc -d\n\n\nExample code\n\n\nactor Main\n  new create(env: Env) =\n\n    Debug.out(\nThis will only bee seen when configured for debug info\n)\n    env.out.print(\nThis will always be seen\n)\n\n\n\n\nPublic Types\n\n\n\n\nprimitive Debug\n\n\nprimitive DebugErr\n\n\nprimitive DebugOut\n\n\ntype DebugStream", 
             "title": "Package"
         }, 
         {
@@ -14959,16 +14919,6 @@
             "location": "/debug--index/#public-types", 
             "text": "primitive Debug  primitive DebugErr  primitive DebugOut  type DebugStream", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/debug--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
-        }, 
-        {
-            "location": "/debug--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/debug-Debug/", 
@@ -15117,7 +15067,7 @@
         }, 
         {
             "location": "/encode-base64--index/", 
-            "text": "Base64 package\n\n\nThe Base64 package contains support for doing Base64 binary-to-text encodings.\nWe currently have support 3 encodings: PEM, MIME and URL.\n\n\nTo learn more about Base64, we suggest you check out the\n\nwikipedia entry\n.\n\n\nExample code\n\n\nuse \nencode/base64\n\n\nactor Main\n  new create(env: Env) =\n\n    env.out.print(Base64.encode(\nfoobar\n))\n    try\n      env.out.print(Base64.decode[String iso](\nZm9vYmFy\n))\n    end\n\n\n\n\nPublic Types\n\n\n\n\nprimitive Base64\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBase64Decode\n\n\nclass _TestBase64Encode\n\n\nclass _TestBase64EncodeDecode\n\n\nclass _TestBase64Quote", 
+            "text": "Base64 package\n\n\nThe Base64 package contains support for doing Base64 binary-to-text encodings.\nWe currently have support 3 encodings: PEM, MIME and URL.\n\n\nTo learn more about Base64, we suggest you check out the\n\nwikipedia entry\n.\n\n\nExample code\n\n\nuse \nencode/base64\n\n\nactor Main\n  new create(env: Env) =\n\n    env.out.print(Base64.encode(\nfoobar\n))\n    try\n      env.out.print(Base64.decode[String iso](\nZm9vYmFy\n))\n    end\n\n\n\n\nPublic Types\n\n\n\n\nprimitive Base64\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBase64Decode\n\n\nclass _TestBase64Encode\n\n\nclass _TestBase64EncodeDecode\n\n\nclass _TestBase64Quote", 
             "title": "Package"
         }, 
         {
@@ -15134,11 +15084,6 @@
             "location": "/encode-base64--index/#public-types", 
             "text": "primitive Base64", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/encode-base64--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/encode-base64--index/#test-types", 
@@ -18027,7 +17972,7 @@
         }, 
         {
             "location": "/ini--index/", 
-            "text": "Ini package\n\n\nThe Ini package provides support for parsing\n\nINI file\n formatted text.\n\n\n\n\nCurrently \ndoes not\n support multi-line entries.\n\n\nAny keys not in a section will be placed in the section \"\"\n\n\n\n\nExample code\n\n\n// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"\n\n\nactor Main\n  new create(env:Env) =\n\n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end\n\n\nPublic Types\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimiter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestIniParse", 
+            "text": "Ini package\n\n\nThe Ini package provides support for parsing\n\nINI file\n formatted text.\n\n\n\n\nCurrently \ndoes not\n support multi-line entries.\n\n\nAny keys not in a section will be placed in the section \"\"\n\n\n\n\nExample code\n\n\n// Parses the file 'example.ini' in the current working directory\n// Output all the content\nuse \"ini\"\nuse \"files\"\n\n\nactor Main\n  new create(env:Env) =\n\n    try\n      let ini_file = File(FilePath(env.root, \"example.ini\"))\n      let sections = IniParse(ini_file.lines())\n      for section in sections.keys() do\n        env.out.print(\"Section name is: \" + section)\n        for key in sections(section).keys() do\n          env.out.print(key + \" = \" + sections(section)(key))\n        end\n      end\n    end\n\n\nPublic Types\n\n\n\n\nprimitive Ini\n\n\ntype IniError\n\n\nprimitive IniIncompleteSection\n\n\ntype IniMap\n\n\nprimitive IniNoDelimiter\n\n\ninterface IniNotify\n\n\nprimitive IniParse\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestIniParse", 
             "title": "Package"
         }, 
         {
@@ -18044,11 +17989,6 @@
             "location": "/ini--index/#public-types", 
             "text": "primitive Ini  type IniError  primitive IniIncompleteSection  type IniMap  primitive IniNoDelimiter  interface IniNotify  primitive IniParse", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/ini--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/ini--index/#test-types", 
@@ -19362,7 +19302,7 @@
         }, 
         {
             "location": "/logger--index/", 
-            "text": "Logger package\n\n\nProvides basic logging facilities. For most use cases, the \nStringLogger\n class\nwill be used. On construction, it takes 2 parameters and a 3rd optional\nparameter:\n\n\n\n\nLogLevel below which no output will be logged\n\n\nOutStream to log to\n\n\nOptional LogFormatter\n\n\n\n\nIf you need to log arbitrary objects, take a look at \nObjectLogger[A]\n which\ncan log arbitrary objects so long as you provide it a lambda to covert from A\nto String.\n\n\nAPI Philosophy\n\n\nThe API for using Logger is an attempt to abide by the Pony philosophy of first,\nbe correct and secondly, aim for performance. One of the ways that logging can\nslow your system down is by having to evaluate expressions to be logged\nwhether they will be logged or not (based on the level of logging). For example:\n\n\nlogger.log(Warn, name + \": \" + reason)\n\n\nwill construct a new String regardless of whether we will end up logging the\nmessage or not.\n\n\nThe Logger API uses boolean short circuiting to avoid this.\n\n\nlogger(Warn) and logger.log(name + \": \" + reason)\n\n\nwill not evaluate the expression to be logged unless the log level Warn is at\nor above the overall log level for our logging. This is as close as we can get\nto zero cost for items that aren't going to end up being logged.\n\n\nExample programs\n\n\nString Logger\n\n\nThe following program will output 'my warn message' and 'my error message' to\nSTDOUT in the standard default log format.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = StringLogger(\n      Warn,\n      env.out)\n\n    logger(Fine) and logger.log(\nmy fine message\n)\n    logger(Info) and logger.log(\nmy info message\n)\n    logger(Warn) and logger.log(\nmy warn message\n)\n    logger(Error) and logger.log(\nmy error message\n)\n\n\n\n\nLogger[A]\n\n\nThe following program will output '42' to STDOUT in the standard default log\nformat.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = Logger[U64](Fine,\n    env.out,\n    lambda(a: U64): String =\n a.string() end)\n\n    logger(Error) and logger.log(U64(42))\n\n\n\n\nCustom formatting your logs\n\n\nThe Logger package provides an interface for formatting logs. If you wish to\noverride the standard formatting, you can create an object that implements:\n\n\ninterface val LogFormatter\n  fun apply(\n    msg: String,\n    file_name: String,\n    file_linenum: String,\n    file_linepos: String): String\n\n\n\n\nThis can either be a class or because the interface only has a single apply\nmethod, can also be a lambda.\n\n\nPublic Types\n\n\n\n\nprimitive DefaultLogFormatter\n\n\nprimitive Error\n\n\nprimitive Fine\n\n\nprimitive Info\n\n\ninterface LogFormatter\n\n\ntype LogLevel\n\n\nclass Logger\n\n\nprimitive StringLogger\n\n\nprimitive Warn\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\ntrait _LoggerTest\n\n\nactor Main\n\n\ntrait _StringLoggerTest\n\n\nclass _TestError\n\n\nclass _TestFine\n\n\nprimitive _TestFormatter\n\n\nclass _TestInfo\n\n\nclass _TestObjectLogging\n\n\nactor _TestStream\n\n\nclass _TestWarn", 
+            "text": "Logger package\n\n\nProvides basic logging facilities. For most use cases, the \nStringLogger\n class\nwill be used. On construction, it takes 2 parameters and a 3rd optional\nparameter:\n\n\n\n\nLogLevel below which no output will be logged\n\n\nOutStream to log to\n\n\nOptional LogFormatter\n\n\n\n\nIf you need to log arbitrary objects, take a look at \nObjectLogger[A]\n which\ncan log arbitrary objects so long as you provide it a lambda to covert from A\nto String.\n\n\nAPI Philosophy\n\n\nThe API for using Logger is an attempt to abide by the Pony philosophy of first,\nbe correct and secondly, aim for performance. One of the ways that logging can\nslow your system down is by having to evaluate expressions to be logged\nwhether they will be logged or not (based on the level of logging). For example:\n\n\nlogger.log(Warn, name + \": \" + reason)\n\n\nwill construct a new String regardless of whether we will end up logging the\nmessage or not.\n\n\nThe Logger API uses boolean short circuiting to avoid this.\n\n\nlogger(Warn) and logger.log(name + \": \" + reason)\n\n\nwill not evaluate the expression to be logged unless the log level Warn is at\nor above the overall log level for our logging. This is as close as we can get\nto zero cost for items that aren't going to end up being logged.\n\n\nExample programs\n\n\nString Logger\n\n\nThe following program will output 'my warn message' and 'my error message' to\nSTDOUT in the standard default log format.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = StringLogger(\n      Warn,\n      env.out)\n\n    logger(Fine) and logger.log(\nmy fine message\n)\n    logger(Info) and logger.log(\nmy info message\n)\n    logger(Warn) and logger.log(\nmy warn message\n)\n    logger(Error) and logger.log(\nmy error message\n)\n\n\n\n\nLogger[A]\n\n\nThe following program will output '42' to STDOUT in the standard default log\nformat.\n\n\nuse \nlogger\n\n\nactor Main\n  new create(env: Env) =\n\n    let logger = Logger[U64](Fine,\n    env.out,\n    lambda(a: U64): String =\n a.string() end)\n\n    logger(Error) and logger.log(U64(42))\n\n\n\n\nCustom formatting your logs\n\n\nThe Logger package provides an interface for formatting logs. If you wish to\noverride the standard formatting, you can create an object that implements:\n\n\ninterface val LogFormatter\n  fun apply(\n    msg: String,\n    file_name: String,\n    file_linenum: String,\n    file_linepos: String): String\n\n\n\n\nThis can either be a class or because the interface only has a single apply\nmethod, can also be a lambda.\n\n\nPublic Types\n\n\n\n\nprimitive DefaultLogFormatter\n\n\nprimitive Error\n\n\nprimitive Fine\n\n\nprimitive Info\n\n\ninterface LogFormatter\n\n\ntype LogLevel\n\n\nclass Logger\n\n\nprimitive StringLogger\n\n\nprimitive Warn\n\n\n\n\nTest Types\n\n\n\n\ntrait _LoggerTest\n\n\nactor Main\n\n\ntrait _StringLoggerTest\n\n\nclass _TestError\n\n\nclass _TestFine\n\n\nprimitive _TestFormatter\n\n\nclass _TestInfo\n\n\nclass _TestObjectLogging\n\n\nactor _TestStream\n\n\nclass _TestWarn", 
             "title": "Package"
         }, 
         {
@@ -19399,11 +19339,6 @@
             "location": "/logger--index/#public-types", 
             "text": "primitive DefaultLogFormatter  primitive Error  primitive Fine  primitive Info  interface LogFormatter  type LogLevel  class Logger  primitive StringLogger  primitive Warn", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/logger--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/logger--index/#test-types", 
@@ -19602,7 +19537,7 @@
         }, 
         {
             "location": "/logger-Logger/", 
-            "text": "class logger/Logger[A: A]\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), out: \nOutStream\n tag, f: \n$20$3\n[A] val, optional formatter: \nLogFormatter\n val)\n\n\nPublic Functions\n\n\nfun box  \napply\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)): \nBool\n val\n\n\nfun box  \nlog\n(value: A, optional loc: \nSourceLoc\n val): \nBool\n val", 
+            "text": "class logger/Logger[A: A]\n\n\nDefault capability\n: \nval\n\n\nNo doc string provided.\n\n\nConstructors\n\n\nnew \ncreate\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val), out: \nOutStream\n tag, f: \n$20$1\n[A] val, optional formatter: \nLogFormatter\n val)\n\n\nPublic Functions\n\n\nfun box  \napply\n(level: (((\nFine\n val | \nInfo\n val) | \nWarn\n val) | \nError\n val)): \nBool\n val\n\n\nfun box  \nlog\n(value: A, optional loc: \nSourceLoc\n val): \nBool\n val", 
             "title": "class Logger"
         }, 
         {
@@ -19616,9 +19551,9 @@
             "title": "Constructors"
         }, 
         {
-            "location": "/logger-Logger/#new-createlevel-fine-val-info-val-warn-val-error-val-out-outstream-tag-f-20391a93-val-optional-formatter-logformatter-val", 
+            "location": "/logger-Logger/#new-createlevel-fine-val-info-val-warn-val-error-val-out-outstream-tag-f-20191a93-val-optional-formatter-logformatter-val", 
             "text": "", 
-            "title": "new create(level: (((Fine val | Info val) | Warn val) | Error val), out: OutStream tag, f: $20$3[A] val, optional formatter: LogFormatter val)"
+            "title": "new create(level: (((Fine val | Info val) | Warn val) | Error val), out: OutStream tag, f: $20$1[A] val, optional formatter: LogFormatter val)"
         }, 
         {
             "location": "/logger-Logger/#public-functions", 
@@ -20392,7 +20327,7 @@
         }, 
         {
             "location": "/math--index/", 
-            "text": "Math package\n\n\nGiven the name \nMath\n for this package, you'd expect it have a broad and grand\nscope. Surprise! Not currently. However, we do have the most useful of all\nprogramming language math constructs: fibonacci!\n\n\nPeople like to make fun of fibonacci but let's face it, no fibonacci, no\nbenchmarks. We hear from some of our engineer friends that math is very\nimportant to programming, we call upon that particular class of engineer friends\nto help us fill out this package with more maths than you can shake a stick at.\nBtw, in case you are wondering, yes we can shake a stick at a lot of maths.\n\n\nPublic Types\n\n\n\n\nclass Fibonacci\n\n\n\n\nPrivate Types\n\n\nTest Types", 
+            "text": "Math package\n\n\nGiven the name \nMath\n for this package, you'd expect it have a broad and grand\nscope. Surprise! Not currently. However, we do have the most useful of all\nprogramming language math constructs: fibonacci!\n\n\nPeople like to make fun of fibonacci but let's face it, no fibonacci, no\nbenchmarks. We hear from some of our engineer friends that math is very\nimportant to programming, we call upon that particular class of engineer friends\nto help us fill out this package with more maths than you can shake a stick at.\nBtw, in case you are wondering, yes we can shake a stick at a lot of maths.\n\n\nPublic Types\n\n\n\n\nclass Fibonacci", 
             "title": "Package"
         }, 
         {
@@ -20404,16 +20339,6 @@
             "location": "/math--index/#public-types", 
             "text": "class Fibonacci", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/math--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
-        }, 
-        {
-            "location": "/math--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/math-Fibonacci/", 
@@ -20457,18 +20382,13 @@
         }, 
         {
             "location": "/net--index/", 
-            "text": "No package doc string provided for net.\n\n\nPublic Types\n\n\n\n\nclass Buffer\n\n\nprimitive DNS\n\n\nprimitive DNSAuth\n\n\ntype DNSLookupAuth\n\n\nclass IPAddress\n\n\nprimitive NetAuth\n\n\nprimitive TCPAuth\n\n\nprimitive TCPConnectAuth\n\n\nactor TCPConnection\n\n\ntype TCPConnectionAuth\n\n\ninterface TCPConnectionNotify\n\n\nprimitive TCPListenAuth\n\n\ninterface TCPListenNotify\n\n\nactor TCPListener\n\n\ntype TCPListenerAuth\n\n\nprimitive UDPAuth\n\n\ninterface UDPNotify\n\n\nactor UDPSocket\n\n\ntype UDPSocketAuth\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBroadcast\n\n\nactor _TestBroadcastMgr\n\n\nclass _TestBuffer\n\n\nclass _TestPing\n\n\nclass _TestPong", 
+            "text": "No package doc string provided for net.\n\n\nPublic Types\n\n\n\n\nclass Buffer\n\n\nprimitive DNS\n\n\nprimitive DNSAuth\n\n\ntype DNSLookupAuth\n\n\nclass IPAddress\n\n\nprimitive NetAuth\n\n\nprimitive TCPAuth\n\n\nprimitive TCPConnectAuth\n\n\nactor TCPConnection\n\n\ntype TCPConnectionAuth\n\n\ninterface TCPConnectionNotify\n\n\nprimitive TCPListenAuth\n\n\ninterface TCPListenNotify\n\n\nactor TCPListener\n\n\ntype TCPListenerAuth\n\n\nprimitive UDPAuth\n\n\ninterface UDPNotify\n\n\nactor UDPSocket\n\n\ntype UDPSocketAuth\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestBroadcast\n\n\nactor _TestBroadcastMgr\n\n\nclass _TestBuffer\n\n\nclass _TestPing\n\n\nclass _TestPong", 
             "title": "Package"
         }, 
         {
             "location": "/net--index/#public-types", 
             "text": "class Buffer  primitive DNS  primitive DNSAuth  type DNSLookupAuth  class IPAddress  primitive NetAuth  primitive TCPAuth  primitive TCPConnectAuth  actor TCPConnection  type TCPConnectionAuth  interface TCPConnectionNotify  primitive TCPListenAuth  interface TCPListenNotify  actor TCPListener  type TCPListenerAuth  primitive UDPAuth  interface UDPNotify  actor UDPSocket  type UDPSocketAuth", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/net--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/net--index/#test-types", 
@@ -24487,7 +24407,7 @@
         }, 
         {
             "location": "/net-ssl--index/", 
-            "text": "No package doc string provided for net/ssl.\n\n\nPublic Types\n\n\n\n\nclass SSL\n\n\nprimitive SSLAuthFail\n\n\nclass SSLConnection\n\n\nclass SSLContext\n\n\nprimitive SSLError\n\n\nprimitive SSLHandshake\n\n\nprimitive SSLReady\n\n\ntype SSLState\n\n\nprimitive X509\n\n\n\n\nPrivate Types\n\n\n\n\nprimitive _BIO\n\n\nprimitive _GeneralName\n\n\nprimitive _GeneralNameStack\n\n\nprimitive _SSL\n\n\nprimitive _SSLContext\n\n\nprimitive _SSLInit\n\n\nprimitive _X509Name\n\n\n\n\nTest Types", 
+            "text": "No package doc string provided for net/ssl.\n\n\nPublic Types\n\n\n\n\nclass SSL\n\n\nprimitive SSLAuthFail\n\n\nclass SSLConnection\n\n\nclass SSLContext\n\n\nprimitive SSLError\n\n\nprimitive SSLHandshake\n\n\nprimitive SSLReady\n\n\ntype SSLState\n\n\nprimitive X509\n\n\n\n\nPrivate Types\n\n\n\n\nprimitive _BIO\n\n\nprimitive _GeneralName\n\n\nprimitive _GeneralNameStack\n\n\nprimitive _SSL\n\n\nprimitive _SSLContext\n\n\nprimitive _SSLInit\n\n\nprimitive _X509Name", 
             "title": "Package"
         }, 
         {
@@ -24499,11 +24419,6 @@
             "location": "/net-ssl--index/#private-types", 
             "text": "primitive _BIO  primitive _GeneralName  primitive _GeneralNameStack  primitive _SSL  primitive _SSLContext  primitive _SSLInit  primitive _X509Name", 
             "title": "Private Types"
-        }, 
-        {
-            "location": "/net-ssl--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/net-ssl-_BIO/", 
@@ -26767,7 +26682,7 @@
         }, 
         {
             "location": "/promises--index/", 
-            "text": "No package doc string provided for promises.\n\n\nPublic Types\n\n\n\n\ninterface Fulfill\n\n\nclass FulfillIdentity\n\n\nactor Promise\n\n\ninterface Reject\n\n\nclass RejectAlways\n\n\n\n\nPrivate Types\n\n\n\n\ninterface _IThen\n\n\nprimitive _Pending\n\n\nprimitive _Reject\n\n\nclass _Then\n\n\n\n\nTest Types", 
+            "text": "No package doc string provided for promises.\n\n\nPublic Types\n\n\n\n\ninterface Fulfill\n\n\nclass FulfillIdentity\n\n\nactor Promise\n\n\ninterface Reject\n\n\nclass RejectAlways\n\n\n\n\nPrivate Types\n\n\n\n\ninterface _IThen\n\n\nprimitive _Pending\n\n\nprimitive _Reject\n\n\nclass _Then", 
             "title": "Package"
         }, 
         {
@@ -26779,11 +26694,6 @@
             "location": "/promises--index/#private-types", 
             "text": "interface _IThen  primitive _Pending  primitive _Reject  class _Then", 
             "title": "Private Types"
-        }, 
-        {
-            "location": "/promises--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/promises-Fulfill/", 
@@ -27077,7 +26987,7 @@
         }, 
         {
             "location": "/random--index/", 
-            "text": "Random package\n\n\nThe Random package provides support generating random numbers. The package\nprovides random number generators you can use in your code, a dice roller and\na trait for implementing your own random number generator.\n\n\nPublic Types\n\n\n\n\nclass Dice\n\n\nclass MT\n\n\ntrait Random\n\n\n\n\nPrivate Types\n\n\nTest Types", 
+            "text": "Random package\n\n\nThe Random package provides support generating random numbers. The package\nprovides random number generators you can use in your code, a dice roller and\na trait for implementing your own random number generator.\n\n\nPublic Types\n\n\n\n\nclass Dice\n\n\nclass MT\n\n\ntrait Random", 
             "title": "Package"
         }, 
         {
@@ -27089,16 +26999,6 @@
             "location": "/random--index/#public-types", 
             "text": "class Dice  class MT  trait Random", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/random--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
-        }, 
-        {
-            "location": "/random--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/random-Dice/", 
@@ -27897,7 +27797,7 @@
         }, 
         {
             "location": "/signals--index/", 
-            "text": "Signals package\n\n\nThe Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a \nSignalHandler\n\nand a corresponding \nSignalNotify\n object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding \nSignalNotify\n's\napply method.\n\n\nExample program\n\n\nThe following program will listen for the TERM signal and output a message to\nstandard out if it is received.\n\n\nuse \nsignals\n\n\nactor Main\n  new create(env: Env) =\n\n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) =\n\n    _env = env\n\n  fun ref apply(count: U32): Bool =\n\n    _env.out.print(\nTERM signal received\n)\n    true\n\n\n\n\nSignal portability\n\n\nThe \nSig\n primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.\n\n\nShutting down handlers\n\n\nUnlike a \nTCPConnection\n and other forms of input receiving, creating a\n\nSignalHandler\n will not keep your program running. As such, you are not\nrequired to call \ndispose\n on your signal handlers in order to shutdown your\nprogram.\n\n\nPublic Types\n\n\n\n\nprimitive Sig\n\n\nactor SignalHandler\n\n\ninterface SignalNotify\n\n\nprimitive SignalRaise\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestSighupNotify\n\n\nclass _TestSignalINT", 
+            "text": "Signals package\n\n\nThe Signals package provides support for handling Unix style signals.\nFor each signal that you want to handle, you need to create a \nSignalHandler\n\nand a corresponding \nSignalNotify\n object. Each SignalHandler runs as it own\nactor and upon receiving the signal will call its corresponding \nSignalNotify\n's\napply method.\n\n\nExample program\n\n\nThe following program will listen for the TERM signal and output a message to\nstandard out if it is received.\n\n\nuse \nsignals\n\n\nactor Main\n  new create(env: Env) =\n\n    // Create a TERM handler\n    let signal = SignalHandler(TermHandler(env), Sig.term())\n    // Raise TERM signal\n    signal.raise()\n\nclass TermHandler is SignalNotify\n  let _env: Env\n\n  new iso create(env: Env) =\n\n    _env = env\n\n  fun ref apply(count: U32): Bool =\n\n    _env.out.print(\nTERM signal received\n)\n    true\n\n\n\n\nSignal portability\n\n\nThe \nSig\n primitive provides support for portable signal handling across Linux,\nFreeBSD and OSX. Signals are not supported on Windows and attempting to use them\nwill cause a compilation error.\n\n\nShutting down handlers\n\n\nUnlike a \nTCPConnection\n and other forms of input receiving, creating a\n\nSignalHandler\n will not keep your program running. As such, you are not\nrequired to call \ndispose\n on your signal handlers in order to shutdown your\nprogram.\n\n\nPublic Types\n\n\n\n\nprimitive Sig\n\n\nactor SignalHandler\n\n\ninterface SignalNotify\n\n\nprimitive SignalRaise\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestSighupNotify\n\n\nclass _TestSignalINT", 
             "title": "Package"
         }, 
         {
@@ -27924,11 +27824,6 @@
             "location": "/signals--index/#public-types", 
             "text": "primitive Sig  actor SignalHandler  interface SignalNotify  primitive SignalRaise", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/signals--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/signals--index/#test-types", 
@@ -28382,18 +28277,13 @@
         }, 
         {
             "location": "/strings--index/", 
-            "text": "No package doc string provided for strings.\n\n\nPublic Types\n\n\n\n\nprimitive CommonPrefix\n\n\n\n\nPrivate Types\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestStringsCommonPrefix", 
+            "text": "No package doc string provided for strings.\n\n\nPublic Types\n\n\n\n\nprimitive CommonPrefix\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestStringsCommonPrefix", 
             "title": "Package"
         }, 
         {
             "location": "/strings--index/#public-types", 
             "text": "primitive CommonPrefix", 
             "title": "Public Types"
-        }, 
-        {
-            "location": "/strings--index/#private-types", 
-            "text": "", 
-            "title": "Private Types"
         }, 
         {
             "location": "/strings--index/#test-types", 
@@ -28527,7 +28417,7 @@
         }, 
         {
             "location": "/term--index/", 
-            "text": "No package doc string provided for term.\n\n\nPublic Types\n\n\n\n\nprimitive ANSI\n\n\ninterface ANSINotify\n\n\nactor ANSITerm\n\n\nclass Readline\n\n\ninterface ReadlineNotify\n\n\n\n\nPrivate Types\n\n\n\n\nprimitive _EscapeCSI\n\n\nprimitive _EscapeMod\n\n\nprimitive _EscapeNone\n\n\nprimitive _EscapeSS3\n\n\nprimitive _EscapeStart\n\n\ntype _EscapeState\n\n\n\n\nTest Types", 
+            "text": "No package doc string provided for term.\n\n\nPublic Types\n\n\n\n\nprimitive ANSI\n\n\ninterface ANSINotify\n\n\nactor ANSITerm\n\n\nclass Readline\n\n\ninterface ReadlineNotify\n\n\n\n\nPrivate Types\n\n\n\n\nprimitive _EscapeCSI\n\n\nprimitive _EscapeMod\n\n\nprimitive _EscapeNone\n\n\nprimitive _EscapeSS3\n\n\nprimitive _EscapeStart\n\n\ntype _EscapeState", 
             "title": "Package"
         }, 
         {
@@ -28539,11 +28429,6 @@
             "location": "/term--index/#private-types", 
             "text": "primitive _EscapeCSI  primitive _EscapeMod  primitive _EscapeNone  primitive _EscapeSS3  primitive _EscapeStart  type _EscapeState", 
             "title": "Private Types"
-        }, 
-        {
-            "location": "/term--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/term-ANSI/", 
@@ -29392,7 +29277,7 @@
         }, 
         {
             "location": "/time--index/", 
-            "text": "No package doc string provided for time.\n\n\nPublic Types\n\n\n\n\nclass Date\n\n\nprimitive Time\n\n\nclass Timer\n\n\ninterface TimerNotify\n\n\nactor Timers\n\n\n\n\nPrivate Types\n\n\n\n\ntype _Clock\n\n\nprimitive _ClockMonotonic\n\n\nprimitive _ClockRealtime\n\n\nclass _TimingWheel\n\n\n\n\nTest Types", 
+            "text": "No package doc string provided for time.\n\n\nPublic Types\n\n\n\n\nclass Date\n\n\nprimitive Time\n\n\nclass Timer\n\n\ninterface TimerNotify\n\n\nactor Timers\n\n\n\n\nPrivate Types\n\n\n\n\ntype _Clock\n\n\nprimitive _ClockMonotonic\n\n\nprimitive _ClockRealtime\n\n\nclass _TimingWheel", 
             "title": "Package"
         }, 
         {
@@ -29404,11 +29289,6 @@
             "location": "/time--index/#private-types", 
             "text": "type _Clock  primitive _ClockMonotonic  primitive _ClockRealtime  class _TimingWheel", 
             "title": "Private Types"
-        }, 
-        {
-            "location": "/time--index/#test-types", 
-            "text": "", 
-            "title": "Test Types"
         }, 
         {
             "location": "/time-_Clock/", 
