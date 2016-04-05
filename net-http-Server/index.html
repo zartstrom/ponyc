@@ -8,7 +8,7 @@
   
   
   
-  <title>actor Server - Pony Standard Library</title>
+  <title>actor Server - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3886,7 +3886,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3917,7 +3917,7 @@
 <p>Runs an HTTP server. When routes are changed, the changes are only reflected
 for new connections. Existing connections continue to use the old routes.</p>
 <h2 id="constructors">Constructors</h2>
-<h3 id="new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-servernotify-iso-handler-requesthandler-val-optional-logger-logger-val-optional-host-string-val-optional-service-string-val-optional-limit-usize-val-optional-sslctx-sslcontext-val-none-val-optional-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val">new <strong>create</strong>(auth: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-TCPAuth">TCPAuth</a> val) | <a href="../net-TCPListenAuth">TCPListenAuth</a> val), notify: <a href="../net-http-ServerNotify">ServerNotify</a> iso, handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, optional logger: <a href="../net-http-Logger">Logger</a> val, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional reversedns: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val) | <a href="../builtin-None">None</a> val))</h3>
+<h3 id="new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcplistenauth-val-notify-servernotify-iso-handler-requesthandler-val-optional-logger-logger-val-optional-host-string-val-optional-service-string-val-optional-limit-usize-val-optional-sslctx-sslcontext-val-none-val-optional-reversedns-ambientauth-val-netauth-val-dnsauth-val-none-val">new <strong>create</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-TCPAuth">TCPAuth</a> val | <a href="../net-TCPListenAuth">TCPListenAuth</a> val), notify: <a href="../net-http-ServerNotify">ServerNotify</a> iso, handler: <a href="../net-http-RequestHandler">RequestHandler</a> val, optional logger: <a href="../net-http-Logger">Logger</a> val, optional host: <a href="../builtin-String">String</a> val, optional service: <a href="../builtin-String">String</a> val, optional limit: <a href="../builtin-USize">USize</a> val, optional sslctx: (<a href="../net-ssl-SSLContext">SSLContext</a> val | <a href="../builtin-None">None</a> val), optional reversedns: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val | <a href="../builtin-None">None</a> val))</h3>
 <h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Shut down the server.</p>

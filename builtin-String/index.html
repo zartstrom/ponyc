@@ -8,7 +8,7 @@
   
   
   
-  <title>class String - Pony Standard Library</title>
+  <title>class String - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3950,9 +3950,9 @@ of bounds.</p>
 <h3 id="fun-box-codepointsoptional-from-isize-val-optional-to-isize-val-usize-val">fun box  <strong>codepoints</strong>(optional from: <a href="../builtin-ISize">ISize</a> val, optional to: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-USize">USize</a> val</h3>
 <p>Returns the number of unicode code points in the string between the two
 offsets. Index range [<code>from</code> .. <code>to</code>) is half-open.</p>
-<h3 id="fun-box-comparethat-string-box-less-val-equal-val-greater-val">fun box  <strong>compare</strong>(that: <a href="../builtin-String">String</a> box): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
+<h3 id="fun-box-comparethat-string-box-less-val-equal-val-greater-val">fun box  <strong>compare</strong>(that: <a href="../builtin-String">String</a> box): (<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val | <a href="../builtin-Greater">Greater</a> val)</h3>
 <p>Lexically compare two strings.</p>
-<h3 id="fun-box-compare_subthat-string-box-n-usize-val-optional-offset-isize-val-optional-that_offset-isize-val-optional-ignore_case-bool-val-less-val-equal-val-greater-val">fun box  <strong>compare_sub</strong>(that: <a href="../builtin-String">String</a> box, n: <a href="../builtin-USize">USize</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val, optional that_offset: <a href="../builtin-ISize">ISize</a> val, optional ignore_case: <a href="../builtin-Bool">Bool</a> val): ((<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val) | <a href="../builtin-Greater">Greater</a> val)</h3>
+<h3 id="fun-box-compare_subthat-string-box-n-usize-val-optional-offset-isize-val-optional-that_offset-isize-val-optional-ignore_case-bool-val-less-val-equal-val-greater-val">fun box  <strong>compare_sub</strong>(that: <a href="../builtin-String">String</a> box, n: <a href="../builtin-USize">USize</a> val, optional offset: <a href="../builtin-ISize">ISize</a> val, optional that_offset: <a href="../builtin-ISize">ISize</a> val, optional ignore_case: <a href="../builtin-Bool">Bool</a> val): (<a href="../builtin-Less">Less</a> val | <a href="../builtin-Equal">Equal</a> val | <a href="../builtin-Greater">Greater</a> val)</h3>
 <p>Lexically compare at most <code>n</code> bytes of the substring of <code>this</code> starting at
 <code>offset</code> with the substring of <code>that</code> starting at <code>that_offset</code>. The
 comparison is case sensitive unless <code>ignore_case</code> is <code>true</code>.</p>
@@ -4027,7 +4027,7 @@ safe.</p>
 <p>Remove a byte from the end of the string.</p>
 <h3 id="fun-ref-pushvalue-u8-val-string-ref">fun ref  <strong>push</strong>(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-String">String</a> ref^</h3>
 <p>Add a byte to the end of the string.</p>
-<h3 id="fun-box-read_int91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93optional-offset-isize-val-optional-base-u8-val-a-val-usize-val">fun box  <strong>read_int</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](optional offset: <a href="../builtin-ISize">ISize</a> val, optional base: <a href="../builtin-U8">U8</a> val): (A val , <a href="../builtin-USize">USize</a> val) ?</h3>
+<h3 id="fun-box-read_int91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93optional-offset-isize-val-optional-base-u8-val-a-val-usize-val">fun box  <strong>read_int</strong>[A: ((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val | <a href="../builtin-I32">I32</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-I128">I128</a> val | <a href="../builtin-ILong">ILong</a> val | <a href="../builtin-ISize">ISize</a> val | <a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val | <a href="../builtin-U32">U32</a> val | <a href="../builtin-U64">U64</a> val | <a href="../builtin-U128">U128</a> val | <a href="../builtin-ULong">ULong</a> val | <a href="../builtin-USize">USize</a> val) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](optional offset: <a href="../builtin-ISize">ISize</a> val, optional base: <a href="../builtin-U8">U8</a> val): (A val , <a href="../builtin-USize">USize</a> val) ?</h3>
 <p>Read an integer from the specified location in this string. The integer
 value read and the number of characters consumed are reported.
 The base parameter specifies the base to use, 0 indicates using the prefix,
@@ -4115,7 +4115,7 @@ out of bounds.</p>
 <h3 id="fun-iso-_appends-string-box-string-iso">fun iso  <strong>_append</strong>(s: <a href="../builtin-String">String</a> box): <a href="../builtin-String">String</a> iso^</h3>
 <h3 id="fun-box-_cstring-pointer91u8-val93-box">fun box  <strong>_cstring</strong>(): <a href="../builtin-Pointer">Pointer</a>[<a href="../builtin-U8">U8</a> val] box</h3>
 <p>Returns a C compatible pointer to a null terminated string.</p>
-<h3 id="fun-box-readint_base91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-index-usize-val-a-val-usize-val">fun box  <strong><em>read</em>int_base</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val, index: <a href="../builtin-USize">USize</a> val): (A val , <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="fun-box-readint_base91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-index-usize-val-a-val-usize-val">fun box  <strong><em>read</em>int_base</strong>[A: ((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val | <a href="../builtin-I32">I32</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-I128">I128</a> val | <a href="../builtin-ILong">ILong</a> val | <a href="../builtin-ISize">ISize</a> val | <a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val | <a href="../builtin-U32">U32</a> val | <a href="../builtin-U64">U64</a> val | <a href="../builtin-U128">U128</a> val | <a href="../builtin-ULong">ULong</a> val | <a href="../builtin-USize">USize</a> val) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val, index: <a href="../builtin-USize">USize</a> val): (A val , <a href="../builtin-USize">USize</a> val)</h3>
 <p>Determine the base of an integer starting at the specified index.
 If a non-0 base is given use that. If given base is 0 read the base
 specifying prefix, if any, to detect base 2 or 16.
@@ -4124,7 +4124,7 @@ Note that a leading 0 does NOT imply octal.
 Report the base found and the number of characters in the prefix.</p>
 <h3 id="fun-ref-_seti-usize-val-value-u8-val-u8-val">fun ref  <strong>_set</strong>(i: <a href="../builtin-USize">USize</a> val, value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val</h3>
 <p>Unsafe update, used internally.</p>
-<h3 id="fun-box-toint91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-a-val">fun box  <strong><em>to</em>int</strong>[A: ((((((((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val) | <a href="../builtin-I32">I32</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-I128">I128</a> val) | <a href="../builtin-ILong">ILong</a> val) | <a href="../builtin-ISize">ISize</a> val) | ((((((<a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val) | <a href="../builtin-U32">U32</a> val) | <a href="../builtin-U64">U64</a> val) | <a href="../builtin-U128">U128</a> val) | <a href="../builtin-ULong">ULong</a> val) | <a href="../builtin-USize">USize</a> val)) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val): A val ?</h3>
+<h3 id="fun-box-toint91a-i8-val-i16-val-i32-val-i64-val-i128-val-ilong-val-isize-val-u8-val-u16-val-u32-val-u64-val-u128-val-ulong-val-usize-val-integer91a-val93-val93base-u8-val-a-val">fun box  <strong><em>to</em>int</strong>[A: ((<a href="../builtin-I8">I8</a> val | <a href="../builtin-I16">I16</a> val | <a href="../builtin-I32">I32</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-I128">I128</a> val | <a href="../builtin-ILong">ILong</a> val | <a href="../builtin-ISize">ISize</a> val | <a href="../builtin-U8">U8</a> val | <a href="../builtin-U16">U16</a> val | <a href="../builtin-U32">U32</a> val | <a href="../builtin-U64">U64</a> val | <a href="../builtin-U128">U128</a> val | <a href="../builtin-ULong">ULong</a> val | <a href="../builtin-USize">USize</a> val) &amp; <a href="../builtin-Integer">Integer</a>[A val] val)](base: <a href="../builtin-U8">U8</a> val): A val ?</h3>
 <p>Convert the <em>whole</em> string to the specified type.
 If there are any other characters in the string, or the integer found is
 out of range for the target type then an error is thrown.</p>

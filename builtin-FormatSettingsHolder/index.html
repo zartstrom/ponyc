@@ -8,7 +8,7 @@
   
   
   
-  <title>class FormatSettingsHolder - Pony Standard Library</title>
+  <title>class FormatSettingsHolder - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3922,7 +3922,7 @@ aren't, defaults are specified by an instance of the <code>D</code> type paramet
 used. The write accessors return <code>this</code> to allow call chaining.</p>
 <h2 id="public-fields">Public fields</h2>
 <ul>
-<li>var align': ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</li>
+<li>var align': (<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val | <a href="../builtin-AlignCenter">AlignCenter</a> val)</li>
 <li>var fill': <a href="../builtin-U32">U32</a> val</li>
 <li>var format': (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</li>
 <li>var precision': <a href="../builtin-USize">USize</a> val</li>
@@ -3933,12 +3933,12 @@ used. The write accessors return <code>this</code> to allow call chaining.</p>
 <h3 id="new-createoptional-defaults-formatsettings91f-val-p-val93-box">new <strong>create</strong>(optional defaults: <a href="../builtin-FormatSettings">FormatSettings</a>[F val, P val] box)</h3>
 <p>Initialise fields using the given default source.</p>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-box-align-alignleft-val-alignright-val-aligncenter-val">fun box  <strong>align</strong>(): ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)</h3>
+<h3 id="fun-box-align-alignleft-val-alignright-val-aligncenter-val">fun box  <strong>align</strong>(): (<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val | <a href="../builtin-AlignCenter">AlignCenter</a> val)</h3>
 <h3 id="fun-box-fill-u32-val">fun box  <strong>fill</strong>(): <a href="../builtin-U32">U32</a> val</h3>
 <h3 id="fun-box-format-f-val-formatdefault-val">fun box  <strong>format</strong>(): (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)</h3>
 <h3 id="fun-box-precision-usize-val">fun box  <strong>precision</strong>(): <a href="../builtin-USize">USize</a> val</h3>
 <h3 id="fun-box-prefix-p-val-prefixdefault-val">fun box  <strong>prefix</strong>(): (P val | <a href="../builtin-PrefixDefault">PrefixDefault</a> val)</h3>
-<h3 id="fun-ref-set_aligna-alignleft-val-alignright-val-aligncenter-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  <strong>set_align</strong>(a: ((<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val) | <a href="../builtin-AlignCenter">AlignCenter</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
+<h3 id="fun-ref-set_aligna-alignleft-val-alignright-val-aligncenter-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  <strong>set_align</strong>(a: (<a href="../builtin-AlignLeft">AlignLeft</a> val | <a href="../builtin-AlignRight">AlignRight</a> val | <a href="../builtin-AlignCenter">AlignCenter</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
 <h3 id="fun-ref-set_fillf-u32-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  <strong>set_fill</strong>(f: <a href="../builtin-U32">U32</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
 <h3 id="fun-ref-set_formatf-f-val-formatdefault-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  <strong>set_format</strong>(f: (F val | <a href="../builtin-FormatDefault">FormatDefault</a> val)): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>
 <h3 id="fun-ref-set_precisionp-usize-val-formatsettingsholder91f-val-p-val-d-read93-ref">fun ref  <strong>set_precision</strong>(p: <a href="../builtin-USize">USize</a> val): <a href="../builtin-FormatSettingsHolder">FormatSettingsHolder</a>[F val, P val, D #read] ref</h3>

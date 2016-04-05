@@ -8,7 +8,7 @@
   
   
   
-  <title>class SSL - Pony Standard Library</title>
+  <title>class SSL - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3927,7 +3927,7 @@ if no data is available.</p>
 <h3 id="fun-ref-send-array91u8-val93-val">fun ref  <strong>send</strong>(): <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val ?</h3>
 <p>Returns encrypted bytes to be passed to the destination. Raises an error
 if no data is available.</p>
-<h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  <strong>state</strong>(): (((<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val) | <a href="../net-ssl-SSLReady">SSLReady</a> val) | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
+<h3 id="fun-box-state-sslhandshake-val-sslauthfail-val-sslready-val-sslerror-val">fun box  <strong>state</strong>(): (<a href="../net-ssl-SSLHandshake">SSLHandshake</a> val | <a href="../net-ssl-SSLAuthFail">SSLAuthFail</a> val | <a href="../net-ssl-SSLReady">SSLReady</a> val | <a href="../net-ssl-SSLError">SSLError</a> val)</h3>
 <p>Returns the SSL session state.</p>
 <h3 id="fun-ref-writedata-string-val-array91u8-val93-val-none-val">fun ref  <strong>write</strong>(data: (<a href="../builtin-String">String</a> val | <a href="../builtin-Array">Array</a>[<a href="../builtin-U8">U8</a> val] val)): <a href="../builtin-None">None</a> val ?</h3>
 <p>When application data is sent, add it to the SSL session. Raises an error

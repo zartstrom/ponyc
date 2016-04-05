@@ -8,7 +8,7 @@
   
   
   
-  <title>primitive DNS - Pony Standard Library</title>
+  <title>primitive DNS - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3916,16 +3916,16 @@
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-box-applyauth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>apply</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-applyauth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>apply</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 and IPv6 addresses for a host and service.</p>
-<h3 id="fun-box-broadcast_ip4auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip4</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-broadcast_ip4auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip4</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP4 broadcast address.</p>
-<h3 id="fun-box-broadcast_ip6auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip6</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-broadcast_ip6auth-ambientauth-val-netauth-val-dnsauth-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>broadcast_ip6</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Link-local IP6 broadcast address.</p>
 <h3 id="fun-box-eqthat-dns-val-bool-val">fun box  <strong>eq</strong>(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
-<h3 id="fun-box-ip4auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip4</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-ip4auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip4</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv4 addresses for a host and service.</p>
-<h3 id="fun-box-ip6auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip6</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-ip6auth-ambientauth-val-netauth-val-dnsauth-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>ip6</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Gets all IPv6 addresses for a host and service.</p>
 <h3 id="fun-box-is_ip4host-string-val-bool-val">fun box  <strong>is_ip4</strong>(host: <a href="../builtin-String">String</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Returns true if the host is a literal IPv4 address.</p>
@@ -3933,7 +3933,7 @@
 <p>Returns true if the host is a literal IPv6 address.</p>
 <h3 id="fun-box-nethat-dns-val-bool-val">fun box  <strong>ne</strong>(that: <a href="../net-DNS">DNS</a> val): <a href="../builtin-Bool">Bool</a> val</h3>
 <h2 id="private-functions">Private Functions</h2>
-<h3 id="fun-box-_resolveauth-ambientauth-val-netauth-val-dnsauth-val-family-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>_resolve</strong>(auth: ((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-DNSAuth">DNSAuth</a> val), family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
+<h3 id="fun-box-_resolveauth-ambientauth-val-netauth-val-dnsauth-val-family-u32-val-host-string-val-service-string-val-array91ipaddress-val93-iso">fun box  <strong>_resolve</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-DNSAuth">DNSAuth</a> val), family: <a href="../builtin-U32">U32</a> val, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val): <a href="../builtin-Array">Array</a>[<a href="../net-IPAddress">IPAddress</a> val] iso^</h3>
 <p>Turns an addrinfo pointer into an array of addresses.</p>
               
             </div>

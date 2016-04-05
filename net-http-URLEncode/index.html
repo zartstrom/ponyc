@@ -8,7 +8,7 @@
   
   
   
-  <title>primitive URLEncode - Pony Standard Library</title>
+  <title>primitive URLEncode - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3916,7 +3916,7 @@
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-create">new <strong>create</strong>()</h3>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-box-checkfrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong>check</strong>(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-checkfrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong>check</strong>(from: <a href="../builtin-String">String</a> val, part: (<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val | <a href="../net-http-URLPartHost">URLPartHost</a> val | <a href="../net-http-URLPartPath">URLPartPath</a> val | <a href="../net-http-URLPartQuery">URLPartQuery</a> val | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Check that the given string is valid to be the given URL part without
 further encoding.
 Canonical form is not checked for, merely validity.</p>
@@ -3924,7 +3924,7 @@ Canonical form is not checked for, merely validity.</p>
 <p>Check that the given string is a valid scheme.</p>
 <h3 id="fun-box-decodefrom-string-val-string-val">fun box  <strong>decode</strong>(from: <a href="../builtin-String">String</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>URL decode a string. Raise an error on invalid URL encoded.</p>
-<h3 id="fun-box-encodefrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-optional-percent_encoded-bool-val-string-val">fun box  <strong>encode</strong>(from: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val), optional percent_encoded: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> val ?</h3>
+<h3 id="fun-box-encodefrom-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-optional-percent_encoded-bool-val-string-val">fun box  <strong>encode</strong>(from: <a href="../builtin-String">String</a> val, part: (<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val | <a href="../net-http-URLPartHost">URLPartHost</a> val | <a href="../net-http-URLPartPath">URLPartPath</a> val | <a href="../net-http-URLPartQuery">URLPartQuery</a> val | <a href="../net-http-URLPartFragment">URLPartFragment</a> val), optional percent_encoded: <a href="../builtin-Bool">Bool</a> val): <a href="../builtin-String">String</a> val ?</h3>
 <p>URL encode and normilase the given string.
 The percent_encoded parameter indicates how '%' characters should be
 interpretted.
@@ -3938,16 +3938,16 @@ cannot be encoded.</p>
 <h2 id="private-functions">Private Functions</h2>
 <h3 id="fun-box-_hexvalue-u8-val-u8-val">fun box  <strong>_hex</strong>(value: <a href="../builtin-U8">U8</a> val): <a href="../builtin-U8">U8</a> val ?</h3>
 <p>Turn 4 bits into a hex value.</p>
-<h3 id="fun-box-ischar_legalvalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>is</em>char_legal</strong>(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-ischar_legalvalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>is</em>char_legal</strong>(value: <a href="../builtin-U8">U8</a> val, part: (<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val | <a href="../net-http-URLPartHost">URLPartHost</a> val | <a href="../net-http-URLPartPath">URLPartPath</a> val | <a href="../net-http-URLPartQuery">URLPartQuery</a> val | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine whether the given character is legal to appear in the specified
 URL part.</p>
-<h3 id="fun-box-ishost_ipv6host-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>is</em>host_ipv6</strong>(host: <a href="../builtin-String">String</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val ?</h3>
+<h3 id="fun-box-ishost_ipv6host-string-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>is</em>host_ipv6</strong>(host: <a href="../builtin-String">String</a> val, part: (<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val | <a href="../net-http-URLPartHost">URLPartHost</a> val | <a href="../net-http-URLPartPath">URLPartPath</a> val | <a href="../net-http-URLPartQuery">URLPartQuery</a> val | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val ?</h3>
 <p>Check whether the given string is a valid IPv6 format host.
 Returns:
   true if string is a valid IPv6 format host.
   false if string is not an IPv6 foramt host at all.
   Raises an error if string is an invalid IPv6 format host.</p>
-<h3 id="fun-box-normaldecodevalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>normal</em>decode</strong>(value: <a href="../builtin-U8">U8</a> val, part: (((((<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val) | <a href="../net-http-URLPartHost">URLPartHost</a> val) | <a href="../net-http-URLPartPath">URLPartPath</a> val) | <a href="../net-http-URLPartQuery">URLPartQuery</a> val) | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
+<h3 id="fun-box-normaldecodevalue-u8-val-part-urlpartuser-val-urlpartpassword-val-urlparthost-val-urlpartpath-val-urlpartquery-val-urlpartfragment-val-bool-val">fun box  <strong><em>normal</em>decode</strong>(value: <a href="../builtin-U8">U8</a> val, part: (<a href="../net-http-URLPartUser">URLPartUser</a> val | <a href="../net-http-URLPartPassword">URLPartPassword</a> val | <a href="../net-http-URLPartHost">URLPartHost</a> val | <a href="../net-http-URLPartPath">URLPartPath</a> val | <a href="../net-http-URLPartQuery">URLPartQuery</a> val | <a href="../net-http-URLPartFragment">URLPartFragment</a> val)): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Determine whether the given character should be decoded to give normal
 form.
 Some characters, such as sub-delims, are valid to have either in encoded or

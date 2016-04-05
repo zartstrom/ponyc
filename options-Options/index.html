@@ -8,7 +8,7 @@
   
   
   
-  <title>class Options - Pony Standard Library</title>
+  <title>class Options - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3212,7 +3212,7 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#class-optionsoptions-is-iterator91string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val93-ref">class options/Options is Iterator[(((String val , (((None val | String val) | I64 val) | F64 val)) | ParseError ref) | None val)] ref</a></li>
+                <li class="toctree-l3"><a href="#class-optionsoptions-is-iterator91string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val93-ref">class options/Options is Iterator[((String val , (None val | String val | I64 val | F64 val)) | ParseError ref | None val)] ref</a></li>
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
@@ -3884,7 +3884,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3910,18 +3910,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="class-optionsoptions-is-iterator91string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val93-ref">class options/Options is <a href="../builtin-Iterator">Iterator</a>[(((<a href="../builtin-String">String</a> val , (((<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref) | <a href="../builtin-None">None</a> val)] ref</h1>
+                <h1 id="class-optionsoptions-is-iterator91string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val93-ref">class options/Options is <a href="../builtin-Iterator">Iterator</a>[((<a href="../builtin-String">String</a> val , (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref | <a href="../builtin-None">None</a> val)] ref</h1>
 <p><strong>Default capability</strong>: <em>ref</em></p>
 <p>No doc string provided.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-createenv-env-val-optional-fatal-bool-val">new <strong>create</strong>(env: <a href="../builtin-Env">Env</a> val, optional fatal: <a href="../builtin-Bool">Bool</a> val)</h3>
 <h2 id="public-functions">Public Functions</h2>
-<h3 id="fun-ref-addlong-string-val-optional-short-none-val-string-val-optional-arg-none-val-stringargument-val-i64argument-val-f64argument-val-optional-mode-required-val-optional-val-options-ref">fun ref  <strong>add</strong>(long: <a href="../builtin-String">String</a> val, optional short: (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val), optional arg: (((<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val) | <a href="../options-I64Argument">I64Argument</a> val) | <a href="../options-F64Argument">F64Argument</a> val), optional mode: (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val)): <a href="../options-Options">Options</a> ref</h3>
+<h3 id="fun-ref-addlong-string-val-optional-short-none-val-string-val-optional-arg-none-val-stringargument-val-i64argument-val-f64argument-val-optional-mode-required-val-optional-val-options-ref">fun ref  <strong>add</strong>(long: <a href="../builtin-String">String</a> val, optional short: (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val), optional arg: (<a href="../builtin-None">None</a> val | <a href="../options-StringArgument">StringArgument</a> val | <a href="../options-I64Argument">I64Argument</a> val | <a href="../options-F64Argument">F64Argument</a> val), optional mode: (<a href="../options-Required">Required</a> val | <a href="../options-Optional">Optional</a> val)): <a href="../options-Options">Options</a> ref</h3>
 <p>Adds a new named option to the parser configuration.</p>
 <h3 id="fun-box-has_next-bool-val">fun box  <strong>has_next</strong>(): <a href="../builtin-Bool">Bool</a> val</h3>
 <p>Parsing options is done if either an error occurs and fatal error reporting
 is turned on, or if all command line arguments have been processed.</p>
-<h3 id="fun-ref-next-string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val">fun ref  <strong>next</strong>(): (((<a href="../builtin-String">String</a> val , (((<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref) | <a href="../builtin-None">None</a> val)</h3>
+<h3 id="fun-ref-next-string-val-none-val-string-val-i64-val-f64-val-parseerror-ref-none-val">fun ref  <strong>next</strong>(): ((<a href="../builtin-String">String</a> val , (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref | <a href="../builtin-None">None</a> val)</h3>
 <p>Skips all positional arguments and attemps to match named options. Returns
 a ParsedOption on success, a ParseError on error, or None if no named
 options are found.</p>
@@ -3938,7 +3938,7 @@ line argument.</p>
 otherwise.</p>
 <h3 id="fun-ref-_stripopt-_option-ref-matched-string-ref-start-isize-val-finish-isize-val-none-val">fun ref  <strong>_strip</strong>(opt: <a href="../options-_Option">_Option</a> ref, matched: <a href="../builtin-String">String</a> ref, start: <a href="../builtin-ISize">ISize</a> val, finish: <a href="../builtin-ISize">ISize</a> val): <a href="../builtin-None">None</a> val</h3>
 <p>Strips accepted options from the copied array of command line arguments.</p>
-<h3 id="fun-ref-_verifyopt-_option-ref-combined-bool-val-string-val-none-val-string-val-i64-val-f64-val-parseerror-ref">fun ref  <strong>_verify</strong>(opt: <a href="../options-_Option">_Option</a> ref, combined: <a href="../builtin-Bool">Bool</a> val): ((<a href="../builtin-String">String</a> val , (((<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val) | <a href="../builtin-I64">I64</a> val) | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref)</h3>
+<h3 id="fun-ref-_verifyopt-_option-ref-combined-bool-val-string-val-none-val-string-val-i64-val-f64-val-parseerror-ref">fun ref  <strong>_verify</strong>(opt: <a href="../options-_Option">_Option</a> ref, combined: <a href="../builtin-Bool">Bool</a> val): ((<a href="../builtin-String">String</a> val , (<a href="../builtin-None">None</a> val | <a href="../builtin-String">String</a> val | <a href="../builtin-I64">I64</a> val | <a href="../builtin-F64">F64</a> val)) | <a href="../options-ParseError">ParseError</a> ref)</h3>
 <p>Verifies whether a parsed option from the command line is well-formed. That
 is, checking whether required or optional arguments are supplied. Returns
 a ParsedOption on success, a ParseError otherwise.</p>

@@ -8,7 +8,7 @@
   
   
   
-  <title>actor TCPConnection - Pony Standard Library</title>
+  <title>actor TCPConnection - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -3888,7 +3888,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3919,9 +3919,9 @@
 <p>A TCP connection. When connecting, the Happy Eyeballs algorithm is used.</p>
 <h2 id="constructors">Constructors</h2>
 <h3 id="new-acceptlisten-tcplistener-tag-notify-tcpconnectionnotify-iso-fd-u32-val-optional-initsize-usize-val-optional-max_size-usize-val">new <em><strong>accept</strong>(listen: <a href="../net-TCPListener">TCPListener</a> tag, notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, fd: <a href="../builtin-U32">U32</a> val, optional init</em>size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
-<h3 id="new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>create</strong>(auth: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-TCPAuth">TCPAuth</a> val) | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
-<h3 id="new-ip4auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>ip4</strong>(auth: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-TCPAuth">TCPAuth</a> val) | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
-<h3 id="new-ip6auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>ip6</strong>(auth: (((<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val) | <a href="../net-TCPAuth">TCPAuth</a> val) | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-createauth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>create</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-TCPAuth">TCPAuth</a> val | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip4auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>ip4</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-TCPAuth">TCPAuth</a> val | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
+<h3 id="new-ip6auth-ambientauth-val-netauth-val-tcpauth-val-tcpconnectauth-val-notify-tcpconnectionnotify-iso-host-string-val-service-string-val-optional-from-string-val-optional-init_size-usize-val-optional-max_size-usize-val">new <strong>ip6</strong>(auth: (<a href="../builtin-AmbientAuth">AmbientAuth</a> val | <a href="../net-NetAuth">NetAuth</a> val | <a href="../net-TCPAuth">TCPAuth</a> val | <a href="../net-TCPConnectAuth">TCPConnectAuth</a> val), notify: <a href="../net-TCPConnectionNotify">TCPConnectionNotify</a> iso, host: <a href="../builtin-String">String</a> val, service: <a href="../builtin-String">String</a> val, optional from: <a href="../builtin-String">String</a> val, optional init_size: <a href="../builtin-USize">USize</a> val, optional max_size: <a href="../builtin-USize">USize</a> val)</h3>
 <h2 id="public-behaviours">Public Behaviours</h2>
 <h3 id="be-dispose">be <strong>dispose</strong>()</h3>
 <p>Close the connection gracefully once all writes are sent.</p>
