@@ -1,4 +1,4 @@
-interface Seq[A]
+interface Seq[A] is (ReadSeq[A] & WriteSeq[A])
   """
   A sequence of elements.
   """
