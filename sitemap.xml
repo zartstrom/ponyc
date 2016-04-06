@@ -696,6 +696,12 @@
     </url>
         
     <url>
+     <loc>None/builtin_test-_TestArrayValuesRewind/</loc>
+     <lastmod>2016-04-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/builtin_test-_TestCCallback/</loc>
      <lastmod>2016-04-06</lastmod>
      <changefreq>daily</changefreq>
