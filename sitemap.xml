@@ -672,6 +672,12 @@
     </url>
         
     <url>
+     <loc>None/builtin_test-_FindTestCls/</loc>
+     <lastmod>2016-04-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/builtin_test-Main/</loc>
      <lastmod>2016-04-06</lastmod>
      <changefreq>daily</changefreq>
@@ -679,6 +685,12 @@
         
     <url>
      <loc>None/builtin_test-_TestAbs/</loc>
+     <lastmod>2016-04-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/builtin_test-_TestArrayFind/</loc>
      <lastmod>2016-04-06</lastmod>
      <changefreq>daily</changefreq>
     </url>

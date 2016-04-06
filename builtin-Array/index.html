@@ -8,7 +8,7 @@
   
   
   
-  <title>class Array - Pony Standard Library</title>
+  <title>class Array - stdlib</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -43,7 +43,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Pony Standard Library</a>
+        <a href=".." class="icon icon-home"> stdlib</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -861,6 +861,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_FindTestCls/">class _FindTestCls</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../builtin_test-Main/">actor Main</a>
         
     </li>
@@ -869,6 +876,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../builtin_test-_TestAbs/">class _TestAbs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../builtin_test-_TestArrayFind/">class _TestArrayFind</a>
         
     </li>
 
@@ -3891,7 +3905,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Pony Standard Library</a>
+        <a href="..">stdlib</a>
       </nav>
 
       
@@ -3957,9 +3971,13 @@ The array is returned to allow call chaining.</p>
 index, compacting the array.
 An out of bounds index raises an error.
 The deleted element is returned.</p>
-<h3 id="fun-box-findvalue-a-optional-offset-usize-val-optional-nth-usize-val-usize-val">fun box  <strong>find</strong>(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?</h3>
-<p>Find the n-th appearance of value in the array, by identity. Return the
-index, or raise an error if value isn't present.</p>
+<h3 id="fun-box-findvalue-a-optional-offset-usize-val-optional-nth-usize-val-optional-predicate-0291a93-val-usize-val">fun box  <strong>find</strong>(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val, optional predicate: <a href="../builtin-$0$2">$0$2</a>[A] val): <a href="../builtin-USize">USize</a> val ?</h3>
+<p>Find the <code>nth</code> appearance of <code>value</code> from the beginning of the array,
+starting at <code>offset</code> and examining higher indices, and using the supplied
+<code>predicate</code> for comparisons. Returns the index of the value, or raise an
+error if the value isn't present.</p>
+<p>By default, the search starts at the first element of the array, returns the
+first instance of <code>value</code> found, and uses object identity for comparison.</p>
 <h3 id="fun-ref-inserti-usize-val-value-a-array91a93-ref">fun ref  <strong>insert</strong>(i: <a href="../builtin-USize">USize</a> val, value: A): <a href="../builtin-Array">Array</a>[A] ref^ ?</h3>
 <p>Insert an element into the array. Elements after this are moved up by one
 index, extending the array.
@@ -3993,8 +4011,13 @@ The new array contains references to the same elements that the old array
 contains, the elements themselves are not copied.</p>
 <h3 id="fun-ref-reverse_in_place-array91a93-ref">fun ref  <strong>reverse_in_place</strong>(): <a href="../builtin-Array">Array</a>[A] ref^</h3>
 <p>Reverse the array in place.</p>
-<h3 id="fun-box-rfindvalue-a-optional-offset-usize-val-optional-nth-usize-val-usize-val">fun box  <strong>rfind</strong>(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val): <a href="../builtin-USize">USize</a> val ?</h3>
-<p>As find, but search backwards in the array.</p>
+<h3 id="fun-box-rfindvalue-a-optional-offset-usize-val-optional-nth-usize-val-optional-predicate-0391a93-val-usize-val">fun box  <strong>rfind</strong>(value: A!, optional offset: <a href="../builtin-USize">USize</a> val, optional nth: <a href="../builtin-USize">USize</a> val, optional predicate: <a href="../builtin-$0$3">$0$3</a>[A] val): <a href="../builtin-USize">USize</a> val ?</h3>
+<p>Find the <code>nth</code> appearance of <code>value</code> from the end of the array, starting at
+<code>offset</code> and examining lower indices, and using the supplied <code>predicate</code> for
+comparisons. Returns the index of the value, or raise an error if the value
+isn't present.</p>
+<p>By default, the search starts at the last element of the array, returns the
+first instance of <code>value</code> found, and uses object identity for comparison.</p>
 <h3 id="fun-ref-shift-a">fun ref  <strong>shift</strong>(): A^ ?</h3>
 <p>Remove an element from the beginning of the array.
 The removed element is returned.</p>
