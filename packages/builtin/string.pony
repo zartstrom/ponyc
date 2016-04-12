@@ -937,6 +937,7 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     _size = s._size + _size
     consume this
 
+/*
   fun add(that: String box): String =>
     """
     Return a string that is a concatenation of this and that.
@@ -944,6 +945,14 @@ class val String is (Seq[U8] & Comparable[String box] & Stringable)
     let len = _size + that._size
     var s = recover String(len) end
     (consume s)._append(this)._append(that)
+*/
+
+  fun add(that: ReadSeq[U8] box): String^ =>
+    let len = _size + that.size()
+    let s = recover String(len) end
+    s.append(this)
+    s.append(that)
+    s
 
   fun join(data: ReadSeq[Stringable]): String iso^ =>
     """

@@ -6,6 +6,12 @@ class List[A] is Seq[A]
   var _tail: (ListNode[A] | None) = None
   var _size: USize = 0
 
+/*
+  fun add(that: Seq[A] box): List[A]^ =>
+    let len = _size + that._size
+    var s = recover List(len) end
+    (consume s)._append(this)._append(that)
+*/
   new create(len: USize = 0) =>
     """
     Do nothing, but be compatible with Seq.

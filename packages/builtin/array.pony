@@ -6,6 +6,13 @@ class Array[A] is Seq[A]
   var _alloc: USize
   var _ptr: Pointer[A]
 
+/*
+  fun add(that: Seq[A] box): Array[A]^ =>
+    let len = _size + that._size
+    var s = recover Array(len) end
+    (consume s)._append(this)._append(that)
+*/
+
   new create(len: USize = 0) =>
     """
     Create an array with zero elements, but space for len elements.

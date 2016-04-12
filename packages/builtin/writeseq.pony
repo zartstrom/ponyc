@@ -53,4 +53,3 @@ interface WriteSeq[A]
     If the sequence is already smaller than len, do nothing.
     """
 
-
