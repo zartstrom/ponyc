@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Packages\n\n\n\n\npackages/stdlib\n\n\nassert\n\n\nbuiltin\n\n\nbuiltin_test\n\n\nbureaucracy\n\n\ncapsicum\n\n\ncollections\n\n\ncollections/persistent\n\n\ndebug\n\n\nencode/base64\n\n\nfiles\n\n\nglob\n\n\nini\n\n\nitertools\n\n\njson\n\n\nlogger\n\n\nmath\n\n\nnet\n\n\nnet/http\n\n\nnet/ssl\n\n\noptions\n\n\nponytest\n\n\nprocess\n\n\npromises\n\n\nrandom\n\n\nregex\n\n\nsignals\n\n\nstrings\n\n\nterm\n\n\ntime", 
+            "text": "Packages\n\n\n\n\npackages/stdlib\n\n\nassert\n\n\nbuiltin\n\n\nbuiltin_test\n\n\nbureaucracy\n\n\ncapsicum\n\n\ncollections\n\n\ncollections/persistent\n\n\ndebug\n\n\nencode/base64\n\n\nfiles\n\n\nglob\n\n\nini\n\n\nitertools\n\n\njson\n\n\nlogger\n\n\nmath\n\n\nnet\n\n\nnet/http\n\n\nnet/ssl\n\n\noptions\n\n\nponytest\n\n\nprocess\n\n\npromises\n\n\nrandom\n\n\nregex\n\n\nserialise\n\n\nsignals\n\n\nstrings\n\n\nterm\n\n\ntime", 
             "title": "stdlib"
         }, 
         {
@@ -272,7 +272,7 @@
         }, 
         {
             "location": "/builtin-U8/", 
-            "text": "U8\n\n\nprimitive val U8 is\n  _UnsignedInteger[U8 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU8\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U8 val = 0)\n: U8 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU8\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU8\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[B: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[B val] val)]\n\n\nfun tag from[B: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[B val] val)](\n  a: B val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\na: B val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U8 val)\n: (U8 val , U8 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nU8\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U8 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "U8\n\n\nprimitive val U8 is\n  _UnsignedInteger[U8 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU8\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U8 val = 0)\n: U8 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU8\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU8\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[B: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[B val] val)]\n\n\nfun tag from[B: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[B val] val)](\n  a: B val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\na: B val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U8 val)\n: (U8 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U8 val)\n: (U8 val , U8 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU8\n val , \nU8\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U8 val)\n: U8 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U8 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U8 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU8\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive U8"
         }, 
         {
@@ -346,9 +346,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-U8/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: U8 val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-U8/#next_pow2", 
+            "text": "fun box next_pow2()\n: U8 val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-U8/#returns_4", 
@@ -997,7 +997,7 @@
         }, 
         {
             "location": "/builtin-U16/", 
-            "text": "U16\n\n\nprimitive val U16 is\n  _UnsignedInteger[U16 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU16\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U16 val = 0)\n: U16 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU16\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU16\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U16 val)\n: (U16 val , U16 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nU16\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U16 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "U16\n\n\nprimitive val U16 is\n  _UnsignedInteger[U16 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU16\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U16 val = 0)\n: U16 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU16\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU16\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U16 val)\n: (U16 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U16 val)\n: (U16 val , U16 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU16\n val , \nU16\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U16 val)\n: U16 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U16 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U16 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU16\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive U16"
         }, 
         {
@@ -1071,9 +1071,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-U16/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: U16 val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-U16/#next_pow2", 
+            "text": "fun box next_pow2()\n: U16 val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-U16/#returns_4", 
@@ -1722,7 +1722,7 @@
         }, 
         {
             "location": "/builtin-U32/", 
-            "text": "U32\n\n\nprimitive val U32 is\n  _UnsignedInteger[U32 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU32\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U32 val = 0)\n: U32 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU32\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU32\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U32 val)\n: (U32 val , U32 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nU32\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U32 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "U32\n\n\nprimitive val U32 is\n  _UnsignedInteger[U32 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU32\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U32 val = 0)\n: U32 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU32\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU32\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U32 val)\n: (U32 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U32 val)\n: (U32 val , U32 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU32\n val , \nU32\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U32 val)\n: U32 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U32 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U32 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive U32"
         }, 
         {
@@ -1796,9 +1796,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-U32/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: U32 val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-U32/#next_pow2", 
+            "text": "fun box next_pow2()\n: U32 val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-U32/#returns_4", 
@@ -2447,7 +2447,7 @@
         }, 
         {
             "location": "/builtin-U64/", 
-            "text": "U64\n\n\nprimitive val U64 is\n  _UnsignedInteger[U64 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU64\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U64 val = 0)\n: U64 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU64\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU64\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U64 val)\n: (U64 val , U64 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nU64\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U64 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "U64\n\n\nprimitive val U64 is\n  _UnsignedInteger[U64 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU64\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U64 val = 0)\n: U64 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU64\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU64\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: U64 val)\n: (U64 val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U64 val)\n: (U64 val , U64 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU64\n val , \nU64\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U64 val)\n: U64 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U64 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U64 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU64\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive U64"
         }, 
         {
@@ -2521,9 +2521,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-U64/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: U64 val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-U64/#next_pow2", 
+            "text": "fun box next_pow2()\n: U64 val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-U64/#returns_4", 
@@ -3172,7 +3172,7 @@
         }, 
         {
             "location": "/builtin-ULong/", 
-            "text": "ULong\n\n\nprimitive val ULong is\n  _UnsignedInteger[ULong val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nULong\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: ULong val = 0)\n: ULong val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nULong\n val = 0\n\n\n\n\nReturns\n\n\n\n\nULong\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: ULong val)\n: (ULong val , ULong val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nULong\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: ULong val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "ULong\n\n\nprimitive val ULong is\n  _UnsignedInteger[ULong val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nULong\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: ULong val = 0)\n: ULong val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nULong\n val = 0\n\n\n\n\nReturns\n\n\n\n\nULong\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: ULong val)\n: (ULong val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: ULong val)\n: (ULong val , ULong val)\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nULong\n val , \nULong\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: ULong val)\n: ULong val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: ULong val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: ULong val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nULong\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive ULong"
         }, 
         {
@@ -3246,9 +3246,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-ULong/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: ULong val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-ULong/#next_pow2", 
+            "text": "fun box next_pow2()\n: ULong val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-ULong/#returns_4", 
@@ -3897,7 +3897,7 @@
         }, 
         {
             "location": "/builtin-USize/", 
-            "text": "USize\n\n\nprimitive val USize is\n  _UnsignedInteger[USize val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nUSize\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: USize val = 0)\n: USize val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nUSize\n val = 0\n\n\n\n\nReturns\n\n\n\n\nUSize\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: USize val)\n: (USize val , USize val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nUSize\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: USize val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "USize\n\n\nprimitive val USize is\n  _UnsignedInteger[USize val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nUSize\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: USize val = 0)\n: USize val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nUSize\n val = 0\n\n\n\n\nReturns\n\n\n\n\nUSize\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\naddc\n\n\nfun box addc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nsubc\n\n\nfun box subc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nmulc\n\n\nfun box mulc(\n  y: USize val)\n: (USize val , Bool val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nBool\n val)\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: USize val)\n: (USize val , USize val)\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nUSize\n val , \nUSize\n val)\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: USize val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: USize val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive USize"
         }, 
         {
@@ -3971,9 +3971,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-USize/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: USize val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-USize/#next_pow2", 
+            "text": "fun box next_pow2()\n: USize val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-USize/#returns_4", 
@@ -4622,7 +4622,7 @@
         }, 
         {
             "location": "/builtin-U128/", 
-            "text": "U128\n\n\nprimitive val U128 is\n  _UnsignedInteger[U128 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU128\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U128 val = 0)\n: U128 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU128\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU128\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nponyint_next_pow2\n\n\nfun box ponyint_next_pow2()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U128 val)\n: (U128 val , U128 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU128\n val , \nU128\n val)\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U128 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
+            "text": "U128\n\n\nprimitive val U128 is\n  _UnsignedInteger[U128 val] val\n\n\n\n\nImplements\n\n\n\n\n_UnsignedInteger\n[\nU128\n val] val\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  value: U128 val = 0)\n: U128 val^\n\n\n\n\nParameters\n\n\n\n\nvalue: \nU128\n val = 0\n\n\n\n\nReturns\n\n\n\n\nU128\n val^\n\n\n\n\n\n\nPublic Functions\n\n\nfrom[A: ((\nI8\n val | \nI16\n val | \nI32\n val | \nI64\n val | \nI128\n val | \nILong\n val | \nISize\n val | \nU8\n val | \nU16\n val | \nU32\n val | \nU64\n val | \nU128\n val | \nULong\n val | \nUSize\n val | \nF32\n val | \nF64\n val) \n \nReal\n[A val] val)]\n\n\nfun tag from[A: ((I8 val | I16 val | I32 val | I64 val | I128 val | ILong val | ISize val | U8 val | U16 val | U32 val | U64 val | U128 val | ULong val | USize val | F32 val | F64 val) \n Real[A val] val)](\n  a: A val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\na: A val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmin_value\n\n\nfun tag min_value()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmax_value\n\n\nfun tag max_value()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nnext_pow2\n\n\nfun box next_pow2()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nabs\n\n\nfun box abs()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nbswap\n\n\nfun box bswap()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\npopcount\n\n\nfun box popcount()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nclz\n\n\nfun box clz()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nctz\n\n\nfun box ctz()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nbitwidth\n\n\nfun box bitwidth()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmin\n\n\nfun box min(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmax\n\n\nfun box max(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nhash\n\n\nfun box hash()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nstring\n\n\nfun box string(\n  fmt: FormatSettings[(FormatDefault val | FormatUTF32 val | FormatBinary val | FormatBinaryBare val | FormatOctal val | FormatOctalBare val | FormatHex val | FormatHexBare val | FormatHexSmall val | FormatHexSmallBare val), (PrefixDefault val | PrefixSpace val | PrefixSign val)] box = reference)\n: String iso^\n\n\n\n\nParameters\n\n\n\n\nfmt: \nFormatSettings\n[(\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val), (\nPrefixDefault\n val | \nPrefixSpace\n val | \nPrefixSign\n val)] box = reference\n\n\n\n\nReturns\n\n\n\n\nString\n iso^\n\n\n\n\n\n\nmul\n\n\nfun box mul(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\ndivmod\n\n\nfun box divmod(\n  y: U128 val)\n: (U128 val , U128 val)\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\n(\nU128\n val , \nU128\n val)\n\n\n\n\n\n\ndiv\n\n\nfun box div(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nmod\n\n\nfun box mod(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nf32\n\n\nfun box f32()\n: F32 val\n\n\n\n\nReturns\n\n\n\n\nF32\n val\n\n\n\n\n\n\nf64\n\n\nfun box f64()\n: F64 val\n\n\n\n\nReturns\n\n\n\n\nF64\n val\n\n\n\n\n\n\nop_and\n\n\nfun box op_and(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_or\n\n\nfun box op_or(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_xor\n\n\nfun box op_xor(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nop_not\n\n\nfun box op_not()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nshl\n\n\nfun box shl(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nshr\n\n\nfun box shr(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nrotl\n\n\nfun box rotl(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nrotr\n\n\nfun box rotr(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nadd\n\n\nfun box add(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nsub\n\n\nfun box sub(\n  y: U128 val)\n: U128 val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nneg\n\n\nfun box neg()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\neq\n\n\nfun box eq(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nlt\n\n\nfun box lt(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nle\n\n\nfun box le(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nge\n\n\nfun box ge(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ngt\n\n\nfun box gt(\n  y: U128 val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\ny: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\ni8\n\n\nfun box i8()\n: I8 val\n\n\n\n\nReturns\n\n\n\n\nI8\n val\n\n\n\n\n\n\ni16\n\n\nfun box i16()\n: I16 val\n\n\n\n\nReturns\n\n\n\n\nI16\n val\n\n\n\n\n\n\ni32\n\n\nfun box i32()\n: I32 val\n\n\n\n\nReturns\n\n\n\n\nI32\n val\n\n\n\n\n\n\ni64\n\n\nfun box i64()\n: I64 val\n\n\n\n\nReturns\n\n\n\n\nI64\n val\n\n\n\n\n\n\ni128\n\n\nfun box i128()\n: I128 val\n\n\n\n\nReturns\n\n\n\n\nI128\n val\n\n\n\n\n\n\nilong\n\n\nfun box ilong()\n: ILong val\n\n\n\n\nReturns\n\n\n\n\nILong\n val\n\n\n\n\n\n\nisize\n\n\nfun box isize()\n: ISize val\n\n\n\n\nReturns\n\n\n\n\nISize\n val\n\n\n\n\n\n\nu8\n\n\nfun box u8()\n: U8 val\n\n\n\n\nReturns\n\n\n\n\nU8\n val\n\n\n\n\n\n\nu16\n\n\nfun box u16()\n: U16 val\n\n\n\n\nReturns\n\n\n\n\nU16\n val\n\n\n\n\n\n\nu32\n\n\nfun box u32()\n: U32 val\n\n\n\n\nReturns\n\n\n\n\nU32\n val\n\n\n\n\n\n\nu64\n\n\nfun box u64()\n: U64 val\n\n\n\n\nReturns\n\n\n\n\nU64\n val\n\n\n\n\n\n\nu128\n\n\nfun box u128()\n: U128 val\n\n\n\n\nReturns\n\n\n\n\nU128\n val\n\n\n\n\n\n\nulong\n\n\nfun box ulong()\n: ULong val\n\n\n\n\nReturns\n\n\n\n\nULong\n val\n\n\n\n\n\n\nusize\n\n\nfun box usize()\n: USize val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\ncompare\n\n\nfun box compare(\n  that: U128 val)\n: (Less val | Equal val | Greater val)\n\n\n\n\nParameters\n\n\n\n\nthat: \nU128\n val\n\n\n\n\nReturns\n\n\n\n\n(\nLess\n val | \nEqual\n val | \nGreater\n val)", 
             "title": "primitive U128"
         }, 
         {
@@ -4696,9 +4696,9 @@
             "title": "Returns"
         }, 
         {
-            "location": "/builtin-U128/#ponyint_next_pow2", 
-            "text": "fun box ponyint_next_pow2()\n: U128 val", 
-            "title": "ponyint_next_pow2"
+            "location": "/builtin-U128/#next_pow2", 
+            "text": "fun box next_pow2()\n: U128 val", 
+            "title": "next_pow2"
         }, 
         {
             "location": "/builtin-U128/#returns_4", 
@@ -66193,6 +66193,971 @@
         {
             "location": "/regex-Match/#returns_8", 
             "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise--index/", 
+            "text": "Serialise package\n\n\nThis package provides support for serialising and deserialising arbitrary data\nstructures.\n\n\nThe API is designed to require capability tokens, as otherwise serialising\nwould leak the bit patterns of all private information in a type (since the\nresulting Array[U8] could be examined.\n\n\nDeserialisation is fundamentally unsafe currently: there isn't yet a\nverification pass to check that the resulting object graph maintains a\nwell-formed heap or that individual objects maintain any expected local\ninvariants. However, if only \"trusted\" data (i.e. data produced by Pony\nserialisation from the same binary) is deserialised, it will always maintain a\nwell-formed heap and all object invariants.\n\n\nNote that serialised data is not usable between different Pony binaries,\npossibly including recompilation of the same code. This is due to the use of\ntype identifiers rather than a heavy-weight self-describing serialisation\nschema. This also means it isn't safe to deserialise something serialised by\nthe same program compiled for a different platform.\n\n\nPublic Types\n\n\n\n\nprimitive SerialiseAuth\n\n\nprimitive DeserialiseAuth\n\n\nprimitive OutputSerialisedAuth\n\n\nprimitive InputSerialisedAuth\n\n\nclass Serialised\n\n\n\n\nPrivate Types\n\n\n\n\nclass _MachineWords\n\n\nclass _StructWords\n\n\nclass _Simple\n\n\nactor _EmptyActor\n\n\nclass _HasPointer\n\n\nclass _HasActor\n\n\n\n\nTest Types\n\n\n\n\nactor Main\n\n\nclass _TestSimple\n\n\nclass _TestArrays\n\n\nclass _TestFailures", 
+            "title": "Package"
+        }, 
+        {
+            "location": "/serialise--index/#serialise-package", 
+            "text": "This package provides support for serialising and deserialising arbitrary data\nstructures.  The API is designed to require capability tokens, as otherwise serialising\nwould leak the bit patterns of all private information in a type (since the\nresulting Array[U8] could be examined.  Deserialisation is fundamentally unsafe currently: there isn't yet a\nverification pass to check that the resulting object graph maintains a\nwell-formed heap or that individual objects maintain any expected local\ninvariants. However, if only \"trusted\" data (i.e. data produced by Pony\nserialisation from the same binary) is deserialised, it will always maintain a\nwell-formed heap and all object invariants.  Note that serialised data is not usable between different Pony binaries,\npossibly including recompilation of the same code. This is due to the use of\ntype identifiers rather than a heavy-weight self-describing serialisation\nschema. This also means it isn't safe to deserialise something serialised by\nthe same program compiled for a different platform.", 
+            "title": "Serialise package"
+        }, 
+        {
+            "location": "/serialise--index/#public-types", 
+            "text": "primitive SerialiseAuth  primitive DeserialiseAuth  primitive OutputSerialisedAuth  primitive InputSerialisedAuth  class Serialised", 
+            "title": "Public Types"
+        }, 
+        {
+            "location": "/serialise--index/#private-types", 
+            "text": "class _MachineWords  class _StructWords  class _Simple  actor _EmptyActor  class _HasPointer  class _HasActor", 
+            "title": "Private Types"
+        }, 
+        {
+            "location": "/serialise--index/#test-types", 
+            "text": "actor Main  class _TestSimple  class _TestArrays  class _TestFailures", 
+            "title": "Test Types"
+        }, 
+        {
+            "location": "/serialise-Main/", 
+            "text": "Main\n\n\nactor tag Main is\n  TestList ref\n\n\n\n\nImplements\n\n\n\n\nTestList\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew tag create(\n  env: Env val)\n: Main tag^\n\n\n\n\nParameters\n\n\n\n\nenv: \nEnv\n val\n\n\n\n\nReturns\n\n\n\n\nMain\n tag^\n\n\n\n\n\n\nmake\n\n\nnew tag make()\n: Main tag^\n\n\n\n\nReturns\n\n\n\n\nMain\n tag^\n\n\n\n\n\n\nPublic Functions\n\n\ntests\n\n\nfun tag tests(\n  test: PonyTest tag)\n: None val\n\n\n\n\nParameters\n\n\n\n\ntest: \nPonyTest\n tag\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
+            "title": "actor Main"
+        }, 
+        {
+            "location": "/serialise-Main/#main", 
+            "text": "actor tag Main is\n  TestList ref", 
+            "title": "Main"
+        }, 
+        {
+            "location": "/serialise-Main/#implements", 
+            "text": "TestList  ref", 
+            "title": "Implements"
+        }, 
+        {
+            "location": "/serialise-Main/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-Main/#create", 
+            "text": "new tag create(\n  env: Env val)\n: Main tag^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-Main/#parameters", 
+            "text": "env:  Env  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Main/#returns", 
+            "text": "Main  tag^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Main/#make", 
+            "text": "new tag make()\n: Main tag^", 
+            "title": "make"
+        }, 
+        {
+            "location": "/serialise-Main/#returns_1", 
+            "text": "Main  tag^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Main/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-Main/#tests", 
+            "text": "fun tag tests(\n  test: PonyTest tag)\n: None val", 
+            "title": "tests"
+        }, 
+        {
+            "location": "/serialise-Main/#parameters_1", 
+            "text": "test:  PonyTest  tag", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Main/#returns_2", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/", 
+            "text": "_MachineWords\n\n\nclass ref _MachineWords\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _MachineWords iso^\n\n\n\n\nReturns\n\n\n\n\n_MachineWords\n iso^\n\n\n\n\n\n\nPublic fields\n\n\n\n\nvar bool1: \nBool\n val\n\n\n\n\n\n\n\n\nvar bool2: \nBool\n val\n\n\n\n\n\n\n\n\nvar i8: \nI8\n val\n\n\n\n\n\n\n\n\nvar i16: \nI16\n val\n\n\n\n\n\n\n\n\nvar i32: \nI32\n val\n\n\n\n\n\n\n\n\nvar i64: \nI64\n val\n\n\n\n\n\n\n\n\nvar i128: \nI128\n val\n\n\n\n\n\n\n\n\nvar ilong: \nILong\n val\n\n\n\n\n\n\n\n\nvar isize: \nISize\n val\n\n\n\n\n\n\n\n\nvar f32: \nF32\n val\n\n\n\n\n\n\n\n\nvar f64: \nF64\n val\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: _MachineWords box)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \n_MachineWords\n box\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "class _MachineWords"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#_machinewords", 
+            "text": "class ref _MachineWords", 
+            "title": "_MachineWords"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#create", 
+            "text": "new iso create()\n: _MachineWords iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#returns", 
+            "text": "_MachineWords  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#public-fields", 
+            "text": "var bool1:  Bool  val     var bool2:  Bool  val     var i8:  I8  val     var i16:  I16  val     var i32:  I32  val     var i64:  I64  val     var i128:  I128  val     var ilong:  ILong  val     var isize:  ISize  val     var f32:  F32  val     var f64:  F64  val", 
+            "title": "Public fields"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#eq", 
+            "text": "fun box eq(\n  that: _MachineWords box)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#parameters", 
+            "text": "that:  _MachineWords  box", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_MachineWords/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_StructWords/", 
+            "text": "_StructWords\n\n\nclass ref _StructWords\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _StructWords iso^\n\n\n\n\nReturns\n\n\n\n\n_StructWords\n iso^\n\n\n\n\n\n\nPublic fields\n\n\n\n\nvar u8: \nU8\n val\n\n\n\n\n\n\n\n\nvar u16: \nU16\n val\n\n\n\n\n\n\n\n\nvar u32: \nU32\n val\n\n\n\n\n\n\n\n\nvar u64: \nU64\n val\n\n\n\n\n\n\n\n\nvar u128: \nU128\n val\n\n\n\n\n\n\n\n\nvar ulong: \nULong\n val\n\n\n\n\n\n\n\n\nvar usize: \nUSize\n val\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: _StructWords box)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \n_StructWords\n box\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "class _StructWords"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#_structwords", 
+            "text": "class ref _StructWords", 
+            "title": "_StructWords"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#create", 
+            "text": "new iso create()\n: _StructWords iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#returns", 
+            "text": "_StructWords  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#public-fields", 
+            "text": "var u8:  U8  val     var u16:  U16  val     var u32:  U32  val     var u64:  U64  val     var u128:  U128  val     var ulong:  ULong  val     var usize:  USize  val", 
+            "title": "Public fields"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#eq", 
+            "text": "fun box eq(\n  that: _StructWords box)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#parameters", 
+            "text": "that:  _StructWords  box", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_StructWords/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_Simple/", 
+            "text": "_Simple\n\n\nclass ref _Simple\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _Simple iso^\n\n\n\n\nReturns\n\n\n\n\n_Simple\n iso^\n\n\n\n\n\n\nPublic fields\n\n\n\n\nvar words1: \n_MachineWords\n ref\n\n\n\n\n\n\n\n\nembed words2: \n_MachineWords\n ref\n\n\n\n\n\n\n\n\nvar words3: \n_StructWords\n ref\n\n\n\n\n\n\n\n\nembed words4: \n_StructWords\n ref\n\n\n\n\n\n\n\n\nvar words5: (\nAny\n ref | \nNone\n val)\n\n\n\n\n\n\n\n\nvar words6: (\nAny\n ref | \nNone\n val)\n\n\n\n\n\n\n\n\nvar string: \nString\n val\n\n\n\n\n\n\n\n\nvar none: \nNone\n val\n\n\n\n\n\n\n\n\nvar fmt: (\nFormatDefault\n val | \nFormatUTF32\n val | \nFormatBinary\n val | \nFormatBinaryBare\n val | \nFormatOctal\n val | \nFormatOctalBare\n val | \nFormatHex\n val | \nFormatHexBare\n val | \nFormatHexSmall\n val | \nFormatHexSmallBare\n val)\n\n\n\n\n\n\n\n\nvar tuple: (\nU64\n val , \nString\n val)\n\n\n\n\n\n\n\n\nvar tuple2: ((\nU64\n val , \nString\n val) | \nNone\n val)\n\n\n\n\n\n\n\n\nvar a_tag: \n_MachineWords\n tag\n\n\n\n\n\n\n\n\nvar a_ref: \n_MachineWords\n ref\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: _Simple ref)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \n_Simple\n ref\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "class _Simple"
+        }, 
+        {
+            "location": "/serialise-_Simple/#_simple", 
+            "text": "class ref _Simple", 
+            "title": "_Simple"
+        }, 
+        {
+            "location": "/serialise-_Simple/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_Simple/#create", 
+            "text": "new iso create()\n: _Simple iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_Simple/#returns", 
+            "text": "_Simple  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_Simple/#public-fields", 
+            "text": "var words1:  _MachineWords  ref     embed words2:  _MachineWords  ref     var words3:  _StructWords  ref     embed words4:  _StructWords  ref     var words5: ( Any  ref |  None  val)     var words6: ( Any  ref |  None  val)     var string:  String  val     var none:  None  val     var fmt: ( FormatDefault  val |  FormatUTF32  val |  FormatBinary  val |  FormatBinaryBare  val |  FormatOctal  val |  FormatOctalBare  val |  FormatHex  val |  FormatHexBare  val |  FormatHexSmall  val |  FormatHexSmallBare  val)     var tuple: ( U64  val ,  String  val)     var tuple2: (( U64  val ,  String  val) |  None  val)     var a_tag:  _MachineWords  tag     var a_ref:  _MachineWords  ref", 
+            "title": "Public fields"
+        }, 
+        {
+            "location": "/serialise-_Simple/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_Simple/#eq", 
+            "text": "fun box eq(\n  that: _Simple ref)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-_Simple/#parameters", 
+            "text": "that:  _Simple  ref", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_Simple/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/", 
+            "text": "_TestSimple\n\n\nTest serialising simple fields.\n\n\nclass iso _TestSimple is\n  UnitTest ref\n\n\n\n\nImplements\n\n\n\n\nUnitTest\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _TestSimple iso^\n\n\n\n\nReturns\n\n\n\n\n_TestSimple\n iso^\n\n\n\n\n\n\nPublic Functions\n\n\nname\n\n\nfun box name()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\napply\n\n\nfun box apply(\n  h: TestHelper val)\n: None val ?\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val ?\n\n\n\n\n\n\nexclusion_group\n\n\nfun box exclusion_group()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\ntimed_out\n\n\nfun ref timed_out(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\ntear_down\n\n\nfun ref tear_down(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
+            "title": "class _TestSimple"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#_testsimple", 
+            "text": "Test serialising simple fields.  class iso _TestSimple is\n  UnitTest ref", 
+            "title": "_TestSimple"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#implements", 
+            "text": "UnitTest  ref", 
+            "title": "Implements"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#create", 
+            "text": "new iso create()\n: _TestSimple iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns", 
+            "text": "_TestSimple  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#name", 
+            "text": "fun box name()\n: String val", 
+            "title": "name"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns_1", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#apply", 
+            "text": "fun box apply(\n  h: TestHelper val)\n: None val ?", 
+            "title": "apply"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#parameters", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns_2", 
+            "text": "None  val ?", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#exclusion_group", 
+            "text": "fun box exclusion_group()\n: String val", 
+            "title": "exclusion_group"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns_3", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#timed_out", 
+            "text": "fun ref timed_out(\n  h: TestHelper val)\n: None val", 
+            "title": "timed_out"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#parameters_1", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns_4", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#tear_down", 
+            "text": "fun ref tear_down(\n  h: TestHelper val)\n: None val", 
+            "title": "tear_down"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#parameters_2", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestSimple/#returns_5", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/", 
+            "text": "_TestArrays\n\n\nTest serialising arrays.\n\n\nclass iso _TestArrays is\n  UnitTest ref\n\n\n\n\nImplements\n\n\n\n\nUnitTest\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _TestArrays iso^\n\n\n\n\nReturns\n\n\n\n\n_TestArrays\n iso^\n\n\n\n\n\n\nPublic Functions\n\n\nname\n\n\nfun box name()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\napply\n\n\nfun box apply(\n  h: TestHelper val)\n: None val ?\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val ?\n\n\n\n\n\n\nexclusion_group\n\n\nfun box exclusion_group()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\ntimed_out\n\n\nfun ref timed_out(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\ntear_down\n\n\nfun ref tear_down(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
+            "title": "class _TestArrays"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#_testarrays", 
+            "text": "Test serialising arrays.  class iso _TestArrays is\n  UnitTest ref", 
+            "title": "_TestArrays"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#implements", 
+            "text": "UnitTest  ref", 
+            "title": "Implements"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#create", 
+            "text": "new iso create()\n: _TestArrays iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns", 
+            "text": "_TestArrays  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#name", 
+            "text": "fun box name()\n: String val", 
+            "title": "name"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns_1", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#apply", 
+            "text": "fun box apply(\n  h: TestHelper val)\n: None val ?", 
+            "title": "apply"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#parameters", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns_2", 
+            "text": "None  val ?", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#exclusion_group", 
+            "text": "fun box exclusion_group()\n: String val", 
+            "title": "exclusion_group"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns_3", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#timed_out", 
+            "text": "fun ref timed_out(\n  h: TestHelper val)\n: None val", 
+            "title": "timed_out"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#parameters_1", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns_4", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#tear_down", 
+            "text": "fun ref tear_down(\n  h: TestHelper val)\n: None val", 
+            "title": "tear_down"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#parameters_2", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestArrays/#returns_5", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_EmptyActor/", 
+            "text": "_EmptyActor\n\n\nactor tag _EmptyActor\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew tag create()\n: _EmptyActor tag^\n\n\n\n\nReturns\n\n\n\n\n_EmptyActor\n tag^", 
+            "title": "actor _EmptyActor"
+        }, 
+        {
+            "location": "/serialise-_EmptyActor/#_emptyactor", 
+            "text": "actor tag _EmptyActor", 
+            "title": "_EmptyActor"
+        }, 
+        {
+            "location": "/serialise-_EmptyActor/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_EmptyActor/#create", 
+            "text": "new tag create()\n: _EmptyActor tag^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_EmptyActor/#returns", 
+            "text": "_EmptyActor  tag^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/", 
+            "text": "_HasPointer\n\n\nclass ref _HasPointer\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _HasPointer iso^\n\n\n\n\nReturns\n\n\n\n\n_HasPointer\n iso^\n\n\n\n\n\n\nPublic fields\n\n\n\n\nvar x: \nPointer\n[\nU8\n val] ref", 
+            "title": "class _HasPointer"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/#_haspointer", 
+            "text": "class ref _HasPointer", 
+            "title": "_HasPointer"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/#create", 
+            "text": "new iso create()\n: _HasPointer iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/#returns", 
+            "text": "_HasPointer  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_HasPointer/#public-fields", 
+            "text": "var x:  Pointer [ U8  val] ref", 
+            "title": "Public fields"
+        }, 
+        {
+            "location": "/serialise-_HasActor/", 
+            "text": "_HasActor\n\n\nclass ref _HasActor\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _HasActor iso^\n\n\n\n\nReturns\n\n\n\n\n_HasActor\n iso^\n\n\n\n\n\n\nPublic fields\n\n\n\n\nvar x: \n_EmptyActor\n tag", 
+            "title": "class _HasActor"
+        }, 
+        {
+            "location": "/serialise-_HasActor/#_hasactor", 
+            "text": "class ref _HasActor", 
+            "title": "_HasActor"
+        }, 
+        {
+            "location": "/serialise-_HasActor/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_HasActor/#create", 
+            "text": "new iso create()\n: _HasActor iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_HasActor/#returns", 
+            "text": "_HasActor  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_HasActor/#public-fields", 
+            "text": "var x:  _EmptyActor  tag", 
+            "title": "Public fields"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/", 
+            "text": "_TestFailures\n\n\nTest serialisation failures.\n\n\nclass iso _TestFailures is\n  UnitTest ref\n\n\n\n\nImplements\n\n\n\n\nUnitTest\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create()\n: _TestFailures iso^\n\n\n\n\nReturns\n\n\n\n\n_TestFailures\n iso^\n\n\n\n\n\n\nPublic Functions\n\n\nname\n\n\nfun box name()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\napply\n\n\nfun box apply(\n  h: TestHelper val)\n: None val ?\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val ?\n\n\n\n\n\n\nexclusion_group\n\n\nfun box exclusion_group()\n: String val\n\n\n\n\nReturns\n\n\n\n\nString\n val\n\n\n\n\n\n\ntimed_out\n\n\nfun ref timed_out(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\ntear_down\n\n\nfun ref tear_down(\n  h: TestHelper val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
+            "title": "class _TestFailures"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#_testfailures", 
+            "text": "Test serialisation failures.  class iso _TestFailures is\n  UnitTest ref", 
+            "title": "_TestFailures"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#implements", 
+            "text": "UnitTest  ref", 
+            "title": "Implements"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#create", 
+            "text": "new iso create()\n: _TestFailures iso^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns", 
+            "text": "_TestFailures  iso^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#name", 
+            "text": "fun box name()\n: String val", 
+            "title": "name"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns_1", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#apply", 
+            "text": "fun box apply(\n  h: TestHelper val)\n: None val ?", 
+            "title": "apply"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#parameters", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns_2", 
+            "text": "None  val ?", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#exclusion_group", 
+            "text": "fun box exclusion_group()\n: String val", 
+            "title": "exclusion_group"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns_3", 
+            "text": "String  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#timed_out", 
+            "text": "fun ref timed_out(\n  h: TestHelper val)\n: None val", 
+            "title": "timed_out"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#parameters_1", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns_4", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#tear_down", 
+            "text": "fun ref tear_down(\n  h: TestHelper val)\n: None val", 
+            "title": "tear_down"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#parameters_2", 
+            "text": "h:  TestHelper  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-_TestFailures/#returns_5", 
+            "text": "None  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/", 
+            "text": "SerialiseAuth\n\n\nThis is a capability that allows the holder to serialise objects. It does not\nallow the holder to examine serialised data or to deserialise objects.\n\n\nprimitive val SerialiseAuth\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  auth: AmbientAuth val)\n: SerialiseAuth val^\n\n\n\n\nParameters\n\n\n\n\nauth: \nAmbientAuth\n val\n\n\n\n\nReturns\n\n\n\n\nSerialiseAuth\n val^\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: SerialiseAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nSerialiseAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  that: SerialiseAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nSerialiseAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "primitive SerialiseAuth"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#serialiseauth", 
+            "text": "This is a capability that allows the holder to serialise objects. It does not\nallow the holder to examine serialised data or to deserialise objects.  primitive val SerialiseAuth", 
+            "title": "SerialiseAuth"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#create", 
+            "text": "new val create(\n  auth: AmbientAuth val)\n: SerialiseAuth val^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#parameters", 
+            "text": "auth:  AmbientAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#returns", 
+            "text": "SerialiseAuth  val^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#eq", 
+            "text": "fun box eq(\n  that: SerialiseAuth val)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#parameters_1", 
+            "text": "that:  SerialiseAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#ne", 
+            "text": "fun box ne(\n  that: SerialiseAuth val)\n: Bool val", 
+            "title": "ne"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#parameters_2", 
+            "text": "that:  SerialiseAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-SerialiseAuth/#returns_2", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/", 
+            "text": "DeserialiseAuth\n\n\nThis is a capability token that allows the holder to deserialise objects. It\ndoes not allow the holder to serialise objects or examine serialised.\n\n\nprimitive val DeserialiseAuth\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  auth: AmbientAuth val)\n: DeserialiseAuth val^\n\n\n\n\nParameters\n\n\n\n\nauth: \nAmbientAuth\n val\n\n\n\n\nReturns\n\n\n\n\nDeserialiseAuth\n val^\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: DeserialiseAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nDeserialiseAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  that: DeserialiseAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nDeserialiseAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "primitive DeserialiseAuth"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#deserialiseauth", 
+            "text": "This is a capability token that allows the holder to deserialise objects. It\ndoes not allow the holder to serialise objects or examine serialised.  primitive val DeserialiseAuth", 
+            "title": "DeserialiseAuth"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#create", 
+            "text": "new val create(\n  auth: AmbientAuth val)\n: DeserialiseAuth val^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#parameters", 
+            "text": "auth:  AmbientAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#returns", 
+            "text": "DeserialiseAuth  val^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#eq", 
+            "text": "fun box eq(\n  that: DeserialiseAuth val)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#parameters_1", 
+            "text": "that:  DeserialiseAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#ne", 
+            "text": "fun box ne(\n  that: DeserialiseAuth val)\n: Bool val", 
+            "title": "ne"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#parameters_2", 
+            "text": "that:  DeserialiseAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-DeserialiseAuth/#returns_2", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/", 
+            "text": "OutputSerialisedAuth\n\n\nThis is a capability token that allows the holder to examine serialised data.\nThis should only be provided to types that need to write serialised data to\nsome output stream, such as a file or socket. A type with the SerialiseAuth\ncapability should usually not also have OutputSerialisedAuth, as the\ncombination gives the holder the ability to examine the bitwise contents of\nany object it has a reference to.\n\n\nprimitive val OutputSerialisedAuth\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  auth: AmbientAuth val)\n: OutputSerialisedAuth val^\n\n\n\n\nParameters\n\n\n\n\nauth: \nAmbientAuth\n val\n\n\n\n\nReturns\n\n\n\n\nOutputSerialisedAuth\n val^\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: OutputSerialisedAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nOutputSerialisedAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  that: OutputSerialisedAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nOutputSerialisedAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "primitive OutputSerialisedAuth"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#outputserialisedauth", 
+            "text": "This is a capability token that allows the holder to examine serialised data.\nThis should only be provided to types that need to write serialised data to\nsome output stream, such as a file or socket. A type with the SerialiseAuth\ncapability should usually not also have OutputSerialisedAuth, as the\ncombination gives the holder the ability to examine the bitwise contents of\nany object it has a reference to.  primitive val OutputSerialisedAuth", 
+            "title": "OutputSerialisedAuth"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#create", 
+            "text": "new val create(\n  auth: AmbientAuth val)\n: OutputSerialisedAuth val^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#parameters", 
+            "text": "auth:  AmbientAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#returns", 
+            "text": "OutputSerialisedAuth  val^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#eq", 
+            "text": "fun box eq(\n  that: OutputSerialisedAuth val)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#parameters_1", 
+            "text": "that:  OutputSerialisedAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#ne", 
+            "text": "fun box ne(\n  that: OutputSerialisedAuth val)\n: Bool val", 
+            "title": "ne"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#parameters_2", 
+            "text": "that:  OutputSerialisedAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-OutputSerialisedAuth/#returns_2", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/", 
+            "text": "InputSerialisedAuth\n\n\nThis is a capability token that allows the holder to treat data arbitrary\nbytes as serialised data. This is the most dangerous capability, as currently\nit is possible for a malformed chunk of data to crash your program if it is\ndeserialised.\n\n\nprimitive val InputSerialisedAuth\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew val create(\n  auth: AmbientAuth val)\n: InputSerialisedAuth val^\n\n\n\n\nParameters\n\n\n\n\nauth: \nAmbientAuth\n val\n\n\n\n\nReturns\n\n\n\n\nInputSerialisedAuth\n val^\n\n\n\n\n\n\nPublic Functions\n\n\neq\n\n\nfun box eq(\n  that: InputSerialisedAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nInputSerialisedAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val\n\n\n\n\n\n\nne\n\n\nfun box ne(\n  that: InputSerialisedAuth val)\n: Bool val\n\n\n\n\nParameters\n\n\n\n\nthat: \nInputSerialisedAuth\n val\n\n\n\n\nReturns\n\n\n\n\nBool\n val", 
+            "title": "primitive InputSerialisedAuth"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#inputserialisedauth", 
+            "text": "This is a capability token that allows the holder to treat data arbitrary\nbytes as serialised data. This is the most dangerous capability, as currently\nit is possible for a malformed chunk of data to crash your program if it is\ndeserialised.  primitive val InputSerialisedAuth", 
+            "title": "InputSerialisedAuth"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#create", 
+            "text": "new val create(\n  auth: AmbientAuth val)\n: InputSerialisedAuth val^", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#parameters", 
+            "text": "auth:  AmbientAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#returns", 
+            "text": "InputSerialisedAuth  val^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#eq", 
+            "text": "fun box eq(\n  that: InputSerialisedAuth val)\n: Bool val", 
+            "title": "eq"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#parameters_1", 
+            "text": "that:  InputSerialisedAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#returns_1", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#ne", 
+            "text": "fun box ne(\n  that: InputSerialisedAuth val)\n: Bool val", 
+            "title": "ne"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#parameters_2", 
+            "text": "that:  InputSerialisedAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-InputSerialisedAuth/#returns_2", 
+            "text": "Bool  val", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Serialised/", 
+            "text": "Serialised\n\n\nThis represents serialised data. How it can be used depends on the other\ncapabilities a caller holds.\n\n\nclass val Serialised\n\n\n\n\nConstructors\n\n\ncreate\n\n\nA caller with SerialiseAuth can create serialised data from any object.\n\n\nnew ref create(\n  auth: SerialiseAuth val,\n  data: Any box)\n: Serialised ref^ ?\n\n\n\n\nParameters\n\n\n\n\nauth: \nSerialiseAuth\n val\n\n\ndata: \nAny\n box\n\n\n\n\nReturns\n\n\n\n\nSerialised\n ref^ ?\n\n\n\n\n\n\ninput\n\n\nA caller with InputSerialisedAuth can create serialised data from any\narbitrary set of bytes. It is the caller's responsibility to ensure that\nthe data is in fact well-formed serialised data. This is currently the most\ndangerous method, as there is currently no way to check validity at\nruntime.\n\n\nnew ref input(\n  auth: InputSerialisedAuth val,\n  data: Array[U8 val] val)\n: Serialised ref^\n\n\n\n\nParameters\n\n\n\n\nauth: \nInputSerialisedAuth\n val\n\n\ndata: \nArray\n[\nU8\n val] val\n\n\n\n\nReturns\n\n\n\n\nSerialised\n ref^\n\n\n\n\n\n\nPublic Functions\n\n\napply\n\n\nA caller with DeserialiseAuth can create an object graph from serialised\ndata.\n\n\nfun box apply(\n  auth: DeserialiseAuth val)\n: Any iso^ ?\n\n\n\n\nParameters\n\n\n\n\nauth: \nDeserialiseAuth\n val\n\n\n\n\nReturns\n\n\n\n\nAny\n iso^ ?\n\n\n\n\n\n\noutput\n\n\nA caller with OutputSerialisedAuth can gain access to the underlying bytes\nthat contain the serialised data. This can be used to write those bytes to,\nfor example, a file or socket.\n\n\nfun box output(\n  auth: OutputSerialisedAuth val)\n: Array[U8 val] val\n\n\n\n\nParameters\n\n\n\n\nauth: \nOutputSerialisedAuth\n val\n\n\n\n\nReturns\n\n\n\n\nArray\n[\nU8\n val] val", 
+            "title": "class Serialised"
+        }, 
+        {
+            "location": "/serialise-Serialised/#serialised", 
+            "text": "This represents serialised data. How it can be used depends on the other\ncapabilities a caller holds.  class val Serialised", 
+            "title": "Serialised"
+        }, 
+        {
+            "location": "/serialise-Serialised/#constructors", 
+            "text": "", 
+            "title": "Constructors"
+        }, 
+        {
+            "location": "/serialise-Serialised/#create", 
+            "text": "A caller with SerialiseAuth can create serialised data from any object.  new ref create(\n  auth: SerialiseAuth val,\n  data: Any box)\n: Serialised ref^ ?", 
+            "title": "create"
+        }, 
+        {
+            "location": "/serialise-Serialised/#parameters", 
+            "text": "auth:  SerialiseAuth  val  data:  Any  box", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Serialised/#returns", 
+            "text": "Serialised  ref^ ?", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Serialised/#input", 
+            "text": "A caller with InputSerialisedAuth can create serialised data from any\narbitrary set of bytes. It is the caller's responsibility to ensure that\nthe data is in fact well-formed serialised data. This is currently the most\ndangerous method, as there is currently no way to check validity at\nruntime.  new ref input(\n  auth: InputSerialisedAuth val,\n  data: Array[U8 val] val)\n: Serialised ref^", 
+            "title": "input"
+        }, 
+        {
+            "location": "/serialise-Serialised/#parameters_1", 
+            "text": "auth:  InputSerialisedAuth  val  data:  Array [ U8  val] val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Serialised/#returns_1", 
+            "text": "Serialised  ref^", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Serialised/#public-functions", 
+            "text": "", 
+            "title": "Public Functions"
+        }, 
+        {
+            "location": "/serialise-Serialised/#apply", 
+            "text": "A caller with DeserialiseAuth can create an object graph from serialised\ndata.  fun box apply(\n  auth: DeserialiseAuth val)\n: Any iso^ ?", 
+            "title": "apply"
+        }, 
+        {
+            "location": "/serialise-Serialised/#parameters_2", 
+            "text": "auth:  DeserialiseAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Serialised/#returns_2", 
+            "text": "Any  iso^ ?", 
+            "title": "Returns"
+        }, 
+        {
+            "location": "/serialise-Serialised/#output", 
+            "text": "A caller with OutputSerialisedAuth can gain access to the underlying bytes\nthat contain the serialised data. This can be used to write those bytes to,\nfor example, a file or socket.  fun box output(\n  auth: OutputSerialisedAuth val)\n: Array[U8 val] val", 
+            "title": "output"
+        }, 
+        {
+            "location": "/serialise-Serialised/#parameters_3", 
+            "text": "auth:  OutputSerialisedAuth  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/serialise-Serialised/#returns_3", 
+            "text": "Array [ U8  val] val", 
             "title": "Returns"
         }, 
         {

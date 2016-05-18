@@ -3548,6 +3548,106 @@
     
         
     <url>
+     <loc>None/serialise--index/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-Main/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_MachineWords/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_StructWords/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_Simple/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_TestSimple/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_TestArrays/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_EmptyActor/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_HasPointer/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_HasActor/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-_TestFailures/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-SerialiseAuth/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-DeserialiseAuth/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-OutputSerialisedAuth/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-InputSerialisedAuth/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/serialise-Serialised/</loc>
+     <lastmod>2016-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>None/signals--index/</loc>
      <lastmod>2016-05-18</lastmod>
      <changefreq>daily</changefreq>
