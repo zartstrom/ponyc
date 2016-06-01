@@ -49712,7 +49712,7 @@
         }, 
         {
             "location": "/net-_TestTCPExpectNotify/", 
-            "text": "_TestTCPExpectNotify\n\n\nclass ref _TestTCPExpectNotify is\n  TCPConnectionNotify ref\n\n\n\n\nImplements\n\n\n\n\nTCPConnectionNotify\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create(\n  h: TestHelper val,\n  server: Bool val)\n: _TestTCPExpectNotify iso^\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\nserver: \nBool\n val\n\n\n\n\nReturns\n\n\n\n\n_TestTCPExpectNotify\n iso^\n\n\n\n\n\n\nPublic Functions\n\n\naccepted\n\n\nfun ref accepted(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnect_failed\n\n\nfun ref connect_failed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnected\n\n\nfun ref connected(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nreceived\n\n\nfun ref received(\n  conn: TCPConnection ref,\n  data: Array[U8 val] val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nArray\n[\nU8\n val] val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnecting\n\n\nfun ref connecting(\n  conn: TCPConnection ref,\n  count: U32 val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ncount: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nauth_failed\n\n\nfun ref auth_failed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nsent\n\n\nfun ref sent(\n  conn: TCPConnection ref,\n  data: (String val | Array[U8 val] val))\n: (String val | Array[U8 val] val) ?\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: (\nString\n val | \nArray\n[\nU8\n val] val)\n\n\n\n\nReturns\n\n\n\n\n(\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\n\n\n\n\nsentv\n\n\nfun ref sentv(\n  conn: TCPConnection ref,\n  data: ByteSeqIter val)\n: ByteSeqIter val ?\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nByteSeqIter\n val\n\n\n\n\nReturns\n\n\n\n\nByteSeqIter\n val ?\n\n\n\n\n\n\nexpect\n\n\nfun ref expect(\n  conn: TCPConnection ref,\n  qty: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\nqty: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nclosed\n\n\nfun ref closed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nPrivate Functions\n\n\n_send\n\n\nfun ref _send(\n  conn: TCPConnection ref,\n  data: String val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nString\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
+            "text": "_TestTCPExpectNotify\n\n\nclass ref _TestTCPExpectNotify is\n  TCPConnectionNotify ref\n\n\n\n\nImplements\n\n\n\n\nTCPConnectionNotify\n ref\n\n\n\n\n\n\nConstructors\n\n\ncreate\n\n\nnew iso create(\n  h: TestHelper val,\n  server: Bool val)\n: _TestTCPExpectNotify iso^\n\n\n\n\nParameters\n\n\n\n\nh: \nTestHelper\n val\n\n\nserver: \nBool\n val\n\n\n\n\nReturns\n\n\n\n\n_TestTCPExpectNotify\n iso^\n\n\n\n\n\n\nPublic Functions\n\n\naccepted\n\n\nfun ref accepted(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnect_failed\n\n\nfun ref connect_failed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnected\n\n\nfun ref connected(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nexpect\n\n\nfun ref expect(\n  conn: TCPConnection ref,\n  qty: USize val)\n: USize val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\nqty: \nUSize\n val\n\n\n\n\nReturns\n\n\n\n\nUSize\n val\n\n\n\n\n\n\nreceived\n\n\nfun ref received(\n  conn: TCPConnection ref,\n  data: Array[U8 val] val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nArray\n[\nU8\n val] val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nconnecting\n\n\nfun ref connecting(\n  conn: TCPConnection ref,\n  count: U32 val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ncount: \nU32\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nauth_failed\n\n\nfun ref auth_failed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nsent\n\n\nfun ref sent(\n  conn: TCPConnection ref,\n  data: (String val | Array[U8 val] val))\n: (String val | Array[U8 val] val) ?\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: (\nString\n val | \nArray\n[\nU8\n val] val)\n\n\n\n\nReturns\n\n\n\n\n(\nString\n val | \nArray\n[\nU8\n val] val) ?\n\n\n\n\n\n\nsentv\n\n\nfun ref sentv(\n  conn: TCPConnection ref,\n  data: ByteSeqIter val)\n: ByteSeqIter val ?\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nByteSeqIter\n val\n\n\n\n\nReturns\n\n\n\n\nByteSeqIter\n val ?\n\n\n\n\n\n\nclosed\n\n\nfun ref closed(\n  conn: TCPConnection ref)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\n\n\nReturns\n\n\n\n\nNone\n val\n\n\n\n\n\n\nPrivate Functions\n\n\n_send\n\n\nfun ref _send(\n  conn: TCPConnection ref,\n  data: String val)\n: None val\n\n\n\n\nParameters\n\n\n\n\nconn: \nTCPConnection\n ref\n\n\ndata: \nString\n val\n\n\n\n\nReturns\n\n\n\n\nNone\n val", 
             "title": "class _TestTCPExpectNotify"
         }, 
         {
@@ -49796,17 +49796,32 @@
             "title": "Returns"
         }, 
         {
+            "location": "/net-_TestTCPExpectNotify/#expect", 
+            "text": "fun ref expect(\n  conn: TCPConnection ref,\n  qty: USize val)\n: USize val", 
+            "title": "expect"
+        }, 
+        {
+            "location": "/net-_TestTCPExpectNotify/#parameters_4", 
+            "text": "conn:  TCPConnection  ref  qty:  USize  val", 
+            "title": "Parameters"
+        }, 
+        {
+            "location": "/net-_TestTCPExpectNotify/#returns_4", 
+            "text": "USize  val", 
+            "title": "Returns"
+        }, 
+        {
             "location": "/net-_TestTCPExpectNotify/#received", 
             "text": "fun ref received(\n  conn: TCPConnection ref,\n  data: Array[U8 val] val)\n: None val", 
             "title": "received"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#parameters_4", 
+            "location": "/net-_TestTCPExpectNotify/#parameters_5", 
             "text": "conn:  TCPConnection  ref  data:  Array [ U8  val] val", 
             "title": "Parameters"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#returns_4", 
+            "location": "/net-_TestTCPExpectNotify/#returns_5", 
             "text": "None  val", 
             "title": "Returns"
         }, 
@@ -49816,12 +49831,12 @@
             "title": "connecting"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#parameters_5", 
+            "location": "/net-_TestTCPExpectNotify/#parameters_6", 
             "text": "conn:  TCPConnection  ref  count:  U32  val", 
             "title": "Parameters"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#returns_5", 
+            "location": "/net-_TestTCPExpectNotify/#returns_6", 
             "text": "None  val", 
             "title": "Returns"
         }, 
@@ -49831,12 +49846,12 @@
             "title": "auth_failed"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#parameters_6", 
+            "location": "/net-_TestTCPExpectNotify/#parameters_7", 
             "text": "conn:  TCPConnection  ref", 
             "title": "Parameters"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#returns_6", 
+            "location": "/net-_TestTCPExpectNotify/#returns_7", 
             "text": "None  val", 
             "title": "Returns"
         }, 
@@ -49846,12 +49861,12 @@
             "title": "sent"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#parameters_7", 
+            "location": "/net-_TestTCPExpectNotify/#parameters_8", 
             "text": "conn:  TCPConnection  ref  data: ( String  val |  Array [ U8  val] val)", 
             "title": "Parameters"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#returns_7", 
+            "location": "/net-_TestTCPExpectNotify/#returns_8", 
             "text": "( String  val |  Array [ U8  val] val) ?", 
             "title": "Returns"
         }, 
@@ -49861,28 +49876,13 @@
             "title": "sentv"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#parameters_8", 
+            "location": "/net-_TestTCPExpectNotify/#parameters_9", 
             "text": "conn:  TCPConnection  ref  data:  ByteSeqIter  val", 
             "title": "Parameters"
         }, 
         {
-            "location": "/net-_TestTCPExpectNotify/#returns_8", 
-            "text": "ByteSeqIter  val ?", 
-            "title": "Returns"
-        }, 
-        {
-            "location": "/net-_TestTCPExpectNotify/#expect", 
-            "text": "fun ref expect(\n  conn: TCPConnection ref,\n  qty: USize val)\n: USize val", 
-            "title": "expect"
-        }, 
-        {
-            "location": "/net-_TestTCPExpectNotify/#parameters_9", 
-            "text": "conn:  TCPConnection  ref  qty:  USize  val", 
-            "title": "Parameters"
-        }, 
-        {
             "location": "/net-_TestTCPExpectNotify/#returns_9", 
-            "text": "USize  val", 
+            "text": "ByteSeqIter  val ?", 
             "title": "Returns"
         }, 
         {
