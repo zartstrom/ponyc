@@ -1,25 +1,23 @@
 language: c
-sudo: required
-
-dist: trusty
-services:
-  - docker
 
 branches:
   only:
     - master
 
+dist: trusty
+sudo: required
+
 # addons:
 #   apt:
-#     sources:
+#     # sources:
 #       # - llvm-toolchain-trusty-3.7
 #       # - llvm-toolchain-trusty-3.8
-#       - ubuntu-toolchain-r-test
+#       # - ubuntu-toolchain-r-test
 #     packages:
 #       - gcc-4.9
 #       - g++-4.9
-#       - llvm-3.6
-#       - llvm-3.6-dev
+#       # - llvm-3.6
+#       # - llvm-3.6-dev
 #       # - llvm-3.7
 #       # - llvm-3.7-dev
 #       # - llvm-3.8
@@ -29,27 +27,27 @@ matrix:
   include:
     - os: linux
       env:
-        - LLVM_VERSION=3.8
+        - LLVM_VERSION="3.6.2"
         - config=debug
     # - os: linux
     #   env:
-    #     - LLVM_VERSION=3.8
+    #     - LLVM_VERSION="3.6.2"
     #     - config=release
     # - os: linux
     #   env:
-    #     - LLVM_VERSION=3.7
+    #     - LLVM_VERSION="3.7.1"
     #     - config=debug
     # - os: linux
     #   env:
-    #     - LLVM_VERSION=3.7
+    #     - LLVM_VERSION="3.7.1"
     #     - config=release
     # - os: linux
     #   env:
-    #     - LLVM_VERSION=3.8
+    #     - LLVM_VERSION="3.8.0"
     #     - config=release
     # - os: linux
     #   env:
-    #     - LLVM_VERSION=3.8
+    #     - LLVM_VERSION="3.8.0"
     #     - config=release
     # - os: osx
     #   env:
@@ -79,9 +77,16 @@ matrix:
 install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ];
     then
-      sudo docker run -d -e config=$config --name builder ponylang/llvm:${LLVM_VERSION} tail -f /dev/null;
-      sudo docker cp . builder:/tmp/work;
-      sudo docker exec builder make -C /tmp/work;
+      # export CC="gcc-4.9";
+      # export CXX="g++-4.9";
+      wget "http://llvm.org/releases/${LLVM_VERSION}/clang+llvm-${LLVM_VERSION}-x86_64-linux-gnu-ubuntu-14.04.tar.xz";
+      tar -xvf clang+llvm*;
+      cd clang+llvm* && sudo cp -r * /usr/local/;
+      cd -;
+      wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.21.tar.bz2;
+      tar -xjvf pcre2-10.21.tar.bz2;
+      cd pcre2-10.21 && ./configure --prefix=/usr && make && sudo make install;
+      cd -;
     fi;
   - if [ "${TRAVIS_OS_NAME}" = "osx" ];
     then
@@ -90,14 +95,7 @@ install:
     fi;
 
 script:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ];
-    then
-      sudo docker exec builder make -C /tmp/work test;
-    fi;
-  - if [ "${TRAVIS_OS_NAME}" = "osx" ];
-    then
-      make test;
-    fi;
+  - make test
 
 notifications:
   email:
