@@ -3752,6 +3752,8 @@
                 
                     <li><a class="toctree-l4" href="#exclusion-groups">Exclusion groups</a></li>
                 
+                    <li><a class="toctree-l4" href="#labels">Labels</a></li>
+                
                     <li><a class="toctree-l4" href="#tear-down">Tear down</a></li>
                 
                     <li><a class="toctree-l4" href="#public-types">Public Types</a></li>
@@ -4862,6 +4864,22 @@ concurrently with any other tests.</p>
 <p>The command line option "--sequential" prevents any tests from running
 concurrently, regardless of exclusion groups. This is intended for debugging
 rather than standard use.</p>
+<h2 id="labels">Labels</h2>
+<p>Test can have label. Labels are used to filter which tests are run, by setting
+command line argument <code>--label=[some custom label]</code>. It can be used to separate
+unit tests from integration tests.</p>
+<p>By default label is empty. You can set it up by overriding <code>label() : String</code>
+method in unit test.</p>
+<pre><code class="pony">use &quot;ponytest&quot;
+
+class iso _I8AddTest is UnitTest
+  fun name(): String =&gt; &quot;_I8AddTest&quot;
+  fun label(): String =&gt; &quot;simple&quot;
+  fun apply(h : TestHelper) =&gt;
+    h.assert_eq[I8](1, 1)
+
+</code></pre>
+
 <h2 id="tear-down">Tear down</h2>
 <p>Each unit test object may define a tear_down() function. This is called after
 the test has finished to allow tearing down of any complex environment that had
