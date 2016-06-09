@@ -1,88 +1,87 @@
 language: c
+sudo: required
+
+dist: trusty
+services:
+  - docker
 
 branches:
   only:
     - master
 
-dist: trusty
-sudo: required
-
-addons:
-  apt:
-    sources:
-      # - llvm-toolchain-trusty-3.7
-      # - llvm-toolchain-trusty-3.8
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-4.9
-      - g++-4.9
-      - llvm-3.6
-      - llvm-3.6-dev
-      # - llvm-3.7
-      # - llvm-3.7-dev
-      # - llvm-3.8
-      # - llvm-3.8-dev
+# addons:
+#   apt:
+#     sources:
+#       # - llvm-toolchain-trusty-3.7
+#       # - llvm-toolchain-trusty-3.8
+#       - ubuntu-toolchain-r-test
+#     packages:
+#       - gcc-4.9
+#       - g++-4.9
+#       - llvm-3.6
+#       - llvm-3.6-dev
+#       # - llvm-3.7
+#       # - llvm-3.7-dev
+#       # - llvm-3.8
+#       # - llvm-3.8-dev
 
 matrix:
   include:
     - os: linux
       env:
-        - LLVM_CONFIG="llvm-config-3.6"
+        - LLVM_VERSION=3.8
         - config=debug
-    - os: linux
-      env:
-        - LLVM_CONFIG="llvm-config-3.6"
-        - config=release
     # - os: linux
     #   env:
-    #     - LLVM_CONFIG="llvm-config-3.7"
+    #     - LLVM_VERSION=3.8
+    #     - config=release
+    # - os: linux
+    #   env:
+    #     - LLVM_VERSION=3.7
     #     - config=debug
     # - os: linux
     #   env:
+    #     - LLVM_VERSION=3.7
+    #     - config=release
+    # - os: linux
+    #   env:
+    #     - LLVM_VERSION=3.8
+    #     - config=release
+    # - os: linux
+    #   env:
+    #     - LLVM_VERSION=3.8
+    #     - config=release
+    # - os: osx
+    #   env:
+    #     - LLVM_CONFIG="llvm-config-3.6"
+    #     - config=debug
+    # - os: osx
+    #   env:
+    #     - LLVM_CONFIG="llvm-config-3.6"
+    #     - config=release
+    # - os: osx
+    #   env:
+    #     - LLVM_CONFIG="llvm-config-3.7"
+    #     - config=debug
+    # - os: osx
+    #   env:
     #     - LLVM_CONFIG="llvm-config-3.7"
     #     - config=release
-    # - os: linux
+    # - os: osx
+    #   env:
+    #     - LLVM_CONFIG="llvm-config-3.8"
+    #     - config=debug
+    # - os: osx
     #   env:
     #     - LLVM_CONFIG="llvm-config-3.8"
     #     - config=release
-    # - os: linux
-    #   env:
-    #     - LLVM_CONFIG="llvm-config-3.8"
-    #     - config=release
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.6"
-        - config=debug
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.6"
-        - config=release
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.7"
-        - config=debug
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.7"
-        - config=release
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.8"
-        - config=debug
-    - os: osx
-      env:
-        - LLVM_CONFIG="llvm-config-3.8"
-        - config=release
 
 install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ];
     then
-      export CC="gcc-4.9";
-      export CXX="g++-4.9";
-      wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.21.tar.bz2;
-      tar -xjvf pcre2-10.21.tar.bz2;
-      cd pcre2-10.21 && ./configure --prefix=/usr && make && sudo make install;
-      cd -;
+      sudo docker run -d -e config=$config --name builder ponylang/llvm:${LLVM_VERSION} tail -f /dev/null;
+      sudo docker cp . builder:/tmp/work;
+      sudo docker exec builder make -C /tmp/work;
     fi;
   - if [ "${TRAVIS_OS_NAME}" = "osx" ];
     then
@@ -91,7 +90,14 @@ install:
     fi;
 
 script:
-  - make test
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ];
+    then
+      sudo docker exec builder make -C /tmp/work test;
+    fi;
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ];
+    then
+      make test;
+    fi;
 
 notifications:
   email:
